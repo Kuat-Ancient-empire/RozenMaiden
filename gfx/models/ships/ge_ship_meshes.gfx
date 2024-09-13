@@ -23,25 +23,25 @@ objectTypes = {
 			shader = "PdxMeshShip"
 		}
 	}
-	pdxmesh = {
-		name = "ge_void_gungnir"
-		file = "gfx/models/ships/ge_gungnir.mesh"
-		scale = 1.3
-		meshsettings = {
-			name = "shipShape"
-			index = 0
-			#texture_diffuse = ""
-			#texture_normal = ""
-			#texture_specular = ""
-			shader = "PdxMeshShip"
-		}
+	# pdxmesh = {
+	# 	name = "ge_void_gungnir"
+	# 	file = "gfx/models/ships/ge_gungnir.mesh"
+	# 	scale = 1.3
+	# 	meshsettings = {
+	# 		name = "shipShape"
+	# 		index = 0
+	# 		#texture_diffuse = ""
+	# 		#texture_normal = ""
+	# 		#texture_specular = ""
+	# 		shader = "PdxMeshShip"
+	# 	}
 
-		# animation = { id = "idle"		type = "necroid_01_colossus_idle_animation" }
-		# animation = { id = "open"		type = "necroid_01_colossus_idle_animation" }
-		# animation = { id = "opening"	type = "necroid_01_colossus_idle_animation" }
-		# animation = { id = "closing"	type = "necroid_01_colossus_idle_animation" }
+	# 	# animation = { id = "idle"		type = "necroid_01_colossus_idle_animation" }
+	# 	# animation = { id = "open"		type = "necroid_01_colossus_idle_animation" }
+	# 	# animation = { id = "opening"	type = "necroid_01_colossus_idle_animation" }
+	# 	# animation = { id = "closing"	type = "necroid_01_colossus_idle_animation" }
 
-	}
+	# }
 
 	pdxmesh = {
 		name = "ge_gungnir_other"

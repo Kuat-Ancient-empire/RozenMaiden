@@ -1,7 +1,7 @@
 objectTypes = {
 	pdxmesh = {
 		name = "roz_FCR_mesh"
-		file = "output/FCR.mesh"
+		file = "gfx/models/ships/roz_ske/roz_FCR/FCR.mesh"
 		scale = 1.0
 		animation = { id = "idle" type = "FCR_idle_animation" }
 		meshsettings = {

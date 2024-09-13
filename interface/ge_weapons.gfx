@@ -1,9 +1,9 @@
 spriteTypes = {
 
-	spriteType = {
-        name = "GFX_ship_part_test_laser"
-        texturefile = "gfx/interface/icons/ship_parts/ship_part_test_laser.dds"
-    }
+	# spriteType = {
+    #     name = "GFX_ship_part_test_laser"
+    #     texturefile = "gfx/interface/icons/ship_parts/ship_part_test_laser.dds"
+    # }
 
 
   spriteType = {
