@@ -205,10 +205,8 @@ create_ge_suigintou_admiral = {
 			limit = { 
 				event_target:ge_suigintou_country@root = {
 					any_owned_leader = {
-						AND = {
-							leader_class = admiral
-							has_trait = leader_trait_ge_mercury_lamp
-						}				
+						leader_class = commander
+						has_trait = leader_trait_ge_mercury_lamp			
 					}
 				}
 			}
