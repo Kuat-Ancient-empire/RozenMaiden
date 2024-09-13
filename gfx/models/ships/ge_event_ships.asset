@@ -1,0 +1,371 @@
+
+
+###########################
+entity = {
+	name = "ge_003_entity"
+    pdxmesh = "ge_003"
+	scale = 0.4
+	
+	default_state = "idle"
+	game_data = { size = 34 }
+	state = { name = "idle" 		
+		animation = "idle" 
+		state_time = 5 
+		looping = yes
+		# event = { time = 0 node = "ball_l" particle = "avian_01_colossus_inner_core_effect" keep_particle = yes trigger_once = yes }
+		# event = { time = 0 node = "ball_r" particle = "avian_01_colossus_inner_core_effect" keep_particle = yes trigger_once = yes }
+		# event = { time = 0 node = "ball3" particle = "avian_01_colossus_inner_core_effect" keep_particle = yes trigger_once = yes }
+		# event = { time = 0 node = "ball4" particle = "avian_01_colossus_inner_core_effect" keep_particle = yes trigger_once = yes }
+		# event = { time = 0 node = "ball5" particle = "avian_01_colossus_inner_core_effect" keep_particle = yes trigger_once = yes }
+		# event = { time = 0 node = "ball6" particle = "avian_01_colossus_inner_core_effect" keep_particle = yes trigger_once = yes }
+		
+		#! engine_exhaust_line
+		event = { time = 0 node = "engine_large_01" particle = "generic_1_25_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_02" particle = "generic_1_25_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_03" particle = "generic_1_25_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_04" particle = "generic_1_25_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		
+		event = { time = 0 node = "engine_medium_01" particle = "generic_075_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "generic_075_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_03" particle = "generic_075_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_04" particle = "generic_075_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_05" particle = "generic_075_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_06" particle = "generic_075_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_07" particle = "generic_075_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_08" particle = "generic_075_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+	
+		event = { time = 0 node = "ship_engine_medium_01" particle = "generic_035_exhaust_circle_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_medium_02" particle = "generic_035_exhaust_circle_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_small_01" particle = "generic_025_exhaust_circle_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_small_02" particle = "generic_025_exhaust_circle_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_small_03" particle = "generic_025_exhaust_circle_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_small_04" particle = "generic_025_exhaust_circle_idle" trigger_once = yes keep_particle = yes }
+	
+
+
+		
+		
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_03" } }
+		event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+	}
+	state = { name = "moving" 
+				state_time = 5 
+				animation = "moving" 
+
+		#! engine_exhaust_line
+		event = { time = 0 node = "engine_large_01" particle = "necroid_01_350_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_02" particle = "necroid_01_350_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_03" particle = "necroid_01_350_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_04" particle = "necroid_01_350_ship_exhaust" trigger_once = yes keep_particle = yes }
+		
+		event = { time = 0 node = "engine_medium_01" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_03" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_04" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_05" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_06" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_07" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_08" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+	
+		event = { time = 0 node = "ship_engine_medium_01" particle = "generic_075_exhaust_circle_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_medium_02" particle = "generic_075_exhaust_circle_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_small_01" particle = "generic_05_exhaust_circle_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_small_02" particle = "generic_05_exhaust_circle_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_small_03" particle = "generic_05_exhaust_circle_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_small_04" particle = "generic_05_exhaust_circle_moving" trigger_once = yes keep_particle = yes }
+	
+
+
+
+
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_03" } }
+		event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+		event = { sound = { soundeffect = juggernaut_mammalian_move } }
+	}
+
+	state = {
+		name = "attack" looping = yes state_time = 1.2 animation = "attack"
+		#! engine_exhaust_line
+		event = { time = 0 node = "engine_large_01" particle = "necroid_01_350_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_02" particle = "necroid_01_350_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_03" particle = "necroid_01_350_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_04" particle = "necroid_01_350_ship_exhaust" trigger_once = yes keep_particle = yes }
+		
+		event = { time = 0 node = "engine_medium_01" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_03" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_04" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_05" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_06" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_07" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_08" particle = "necroid_01_250_ship_exhaust" trigger_once = yes keep_particle = yes }
+	
+		event = { time = 0 node = "ship_engine_medium_01" particle = "generic_075_exhaust_circle_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_medium_02" particle = "generic_075_exhaust_circle_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_small_01" particle = "generic_05_exhaust_circle_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_small_02" particle = "generic_05_exhaust_circle_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_small_03" particle = "generic_05_exhaust_circle_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "ship_engine_small_04" particle = "generic_05_exhaust_circle_moving" trigger_once = yes keep_particle = yes }
+	
+		#! wind_up_on_wing_side
+		event = { trigger_once = yes sound = { soundeffect = "wraith_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = WLM_Windup_01 particle = "ge_xl_windup_effect" }
+		event = { time = 0.1 use_parent_nodes = yes node = WLM_Windup_02 particle = "ge_xl_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = WLM_Windup_03 particle = "ge_xl_windup_effect" }
+		event = { time = 0.3 use_parent_nodes = yes node = WLM_Windup_04 particle = "ge_xl_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = WLM_Windup_05 particle = "ge_xl_windup_effect" }
+		event = { time = 0.5 use_parent_nodes = yes node = WLM_Windup_06 particle = "ge_xl_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = WLM_Windup_07 particle = "ge_xl_windup_effect" }
+		event = { time = 0.7 use_parent_nodes = yes node = WLM_Windup_08 particle = "ge_xl_windup_effect" }
+		event = { time = 0.8 use_parent_nodes = yes node = WLM_Windup_09 particle = "ge_xl_windup_effect" }
+		event = { time = 0.9 use_parent_nodes = yes node = WLM_Windup_10 particle = "ge_xl_windup_effect" }
+		event = { time = 1.0 use_parent_nodes = yes node = WLM_Windup_11 particle = "ge_xl_windup_effect" }
+		event = { time = 1.0 use_parent_nodes = yes node = wing_side_xl1 particle = "ge_xl_muzzle_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = WRM_Windup_01 particle = "ge_xl_windup_effect" }
+		event = { time = 0.1 use_parent_nodes = yes node = WRM_Windup_02 particle = "ge_xl_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = WRM_Windup_03 particle = "ge_xl_windup_effect" }
+		event = { time = 0.3 use_parent_nodes = yes node = WRM_Windup_04 particle = "ge_xl_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = WRM_Windup_05 particle = "ge_xl_windup_effect" }
+		event = { time = 0.5 use_parent_nodes = yes node = WRM_Windup_06 particle = "ge_xl_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = WRM_Windup_07 particle = "ge_xl_windup_effect" }
+		event = { time = 0.7 use_parent_nodes = yes node = WRM_Windup_08 particle = "ge_xl_windup_effect" }
+		event = { time = 0.8 use_parent_nodes = yes node = WRM_Windup_09 particle = "ge_xl_windup_effect" }
+		event = { time = 0.9 use_parent_nodes = yes node = WRM_Windup_10 particle = "ge_xl_windup_effect" }
+		event = { time = 1.0 use_parent_nodes = yes node = WRM_Windup_11 particle = "ge_xl_windup_effect" }
+		event = { time = 1.1 use_parent_nodes = yes node = wing_side_xl2 particle = "ge_xl_muzzle_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = WLU_Windup_01 particle = "ge_xl_windup_effect" }
+		event = { time = 0.1 use_parent_nodes = yes node = WLU_Windup_02 particle = "ge_xl_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = WLU_Windup_03 particle = "ge_xl_windup_effect" }
+		event = { time = 0.3 use_parent_nodes = yes node = WLU_Windup_04 particle = "ge_xl_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = WLU_Windup_05 particle = "ge_xl_windup_effect" }
+		event = { time = 0.5 use_parent_nodes = yes node = WLU_Windup_06 particle = "ge_xl_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = WLU_Windup_07 particle = "ge_xl_windup_effect" }
+		event = { time = 0.7 use_parent_nodes = yes node = WLU_Windup_08 particle = "ge_xl_windup_effect" }
+		event = { time = 0.8 use_parent_nodes = yes node = WLU_Windup_09 particle = "ge_xl_windup_effect" }
+		event = { time = 0.9 use_parent_nodes = yes node = WLU_Windup_10 particle = "ge_xl_windup_effect" }
+		event = { time = 1.0 use_parent_nodes = yes node = WLU_Windup_11 particle = "ge_xl_windup_effect" }
+		event = { time = 1.1 use_parent_nodes = yes node = WLU_Windup_12 particle = "ge_xl_windup_effect" }
+		event = { time = 1.0 use_parent_nodes = yes node = wing_side_xl3 particle = "ge_xl_muzzle_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = WRU_Windup_01 particle = "ge_xl_windup_effect" }
+		event = { time = 0.1 use_parent_nodes = yes node = WRU_Windup_02 particle = "ge_xl_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = WRU_Windup_03 particle = "ge_xl_windup_effect" }
+		event = { time = 0.3 use_parent_nodes = yes node = WRU_Windup_04 particle = "ge_xl_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = WRU_Windup_05 particle = "ge_xl_windup_effect" }
+		event = { time = 0.5 use_parent_nodes = yes node = WRU_Windup_06 particle = "ge_xl_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = WRU_Windup_07 particle = "ge_xl_windup_effect" }
+		event = { time = 0.7 use_parent_nodes = yes node = WRU_Windup_08 particle = "ge_xl_windup_effect" }
+		event = { time = 0.8 use_parent_nodes = yes node = WRU_Windup_09 particle = "ge_xl_windup_effect" }
+		event = { time = 0.9 use_parent_nodes = yes node = WRU_Windup_10 particle = "ge_xl_windup_effect" }
+		event = { time = 1.0 use_parent_nodes = yes node = WRU_Windup_11 particle = "ge_xl_windup_effect" }
+		event = { time = 1.1 use_parent_nodes = yes node = WRU_Windup_12 particle = "ge_xl_windup_effect" }
+		event = { time = 1.0 use_parent_nodes = yes node = wing_side_xl4 particle = "ge_xl_muzzle_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = WRD_Windup_01 particle = "ge_xl_windup_effect" }
+		event = { time = 0.1 use_parent_nodes = yes node = WRD_Windup_02 particle = "ge_xl_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = WRD_Windup_03 particle = "ge_xl_windup_effect" }
+		event = { time = 0.3 use_parent_nodes = yes node = WRD_Windup_04 particle = "ge_xl_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = WRD_Windup_05 particle = "ge_xl_windup_effect" }
+		event = { time = 0.5 use_parent_nodes = yes node = WRD_Windup_06 particle = "ge_xl_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = WRD_Windup_07 particle = "ge_xl_windup_effect" }
+		event = { time = 0.7 use_parent_nodes = yes node = WRD_Windup_08 particle = "ge_xl_windup_effect" }
+		event = { time = 0.8 use_parent_nodes = yes node = WRD_Windup_09 particle = "ge_xl_windup_effect" }
+		event = { time = 0.9 use_parent_nodes = yes node = WRD_Windup_10 particle = "ge_xl_windup_effect" }
+		event = { time = 1.0 use_parent_nodes = yes node = WRD_Windup_11 particle = "ge_xl_windup_effect" }
+		event = { time = 1.1 use_parent_nodes = yes node = WRD_Windup_12 particle = "ge_xl_windup_effect" }
+		event = { time = 1.2 use_parent_nodes = yes node = wing_side_xl5 particle = "ge_xl_muzzle_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = WLD_Windup_01 particle = "ge_xl_windup_effect" }
+		event = { time = 0.1 use_parent_nodes = yes node = WLD_Windup_02 particle = "ge_xl_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = WLD_Windup_03 particle = "ge_xl_windup_effect" }
+		event = { time = 0.3 use_parent_nodes = yes node = WLD_Windup_04 particle = "ge_xl_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = WLD_Windup_05 particle = "ge_xl_windup_effect" }
+		event = { time = 0.5 use_parent_nodes = yes node = WLD_Windup_06 particle = "ge_xl_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = WLD_Windup_07 particle = "ge_xl_windup_effect" }
+		event = { time = 0.7 use_parent_nodes = yes node = WLD_Windup_08 particle = "ge_xl_windup_effect" }
+		event = { time = 0.8 use_parent_nodes = yes node = WLD_Windup_09 particle = "ge_xl_windup_effect" }
+		event = { time = 0.9 use_parent_nodes = yes node = WLD_Windup_10 particle = "ge_xl_windup_effect" }
+		event = { time = 1.0 use_parent_nodes = yes node = WLD_Windup_11 particle = "ge_xl_windup_effect" }
+		event = { time = 1.1 use_parent_nodes = yes node = WLD_Windup_12 particle = "ge_xl_windup_effect" }
+		event = { time = 1.0 use_parent_nodes = yes node = wing_side_xl5 particle = "ge_xl_muzzle_windup_effect" }
+		
+
+
+
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_03" } }
+		event = { trigger_once = yes sound = { soundeffect = "wraith_windup" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_xl_arc_emitter_fire" }}
+	}
+	
+	state = { name = "death" state_time = 12.5  looping = no 
+		
+	}
+	#attach = { sphere2 = "necroid_01_colossus_core_effect_entity"}
+	#locator = { name = sphere1 position = { -12 0 0 } }
+	attach = { root = "ge_003_table&plane" }
+	attach = { root = "ge_003_wing" }
+	attach = { root = "ge_003_ship_board_entity" }
+	attach = { root = "ge_003_bow" }
+	attach = { root = "ge_003_stern" }
+	attach = { root = "ge_003_main" }
+	#attach = { root = "ge_003_shader" }
+	attach = { ball_l = "ge_003_lightball" }
+	attach = { ball_r = "ge_003_lightball" }
+	attach = { ball3 = "ge_003_lightball" }
+	attach = { ball4 = "ge_003_lightball" }
+	attach = { ball5 = "ge_003_lightball" }
+	attach = { ball6 = "ge_003_lightball" }
+	#attach = { root = "SSVL_Engine_Frame_entity" }
+
+}
+
+entity = {
+	name = "ge_003_table&plane"
+    pdxmesh = "ge_003_table&plane"
+	scale = 1.0
+	
+	default_state = "idle"
+
+	state = { name = "idle" 		
+		animation = "idle" 
+		
+		#start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_01" } }
+		#start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_02" } }
+		#start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_03" } }
+		#event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+	}	
+
+}
+
+entity = {
+	name = "ge_003_wing"
+    pdxmesh = "ge_003_wing"
+	scale = 1.0
+	
+	default_state = "idle"
+
+	state = { name = "idle" 		
+		animation = "idle" 
+		
+		#event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+	}	
+
+}
+
+entity = {
+	name = "ge_003_ship_board_entity"
+    pdxmesh = "ge_003_ship_board"
+	scale = 1.0
+	
+	default_state = "idle"
+
+	state = { name = "idle" 		
+		animation = "idle" 
+		
+		#event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+	}	
+
+}
+
+entity = {
+	name = "ge_003_bow"
+    pdxmesh = "ge_003_bow"
+	scale = 1.0
+	
+	default_state = "idle"
+
+	state = { name = "idle" 		
+		animation = "idle" 
+		
+		#event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+	}	
+
+}
+
+entity = {
+	name = "ge_003_stern"
+    pdxmesh = "ge_003_stern"
+	scale = 1.000
+	
+	default_state = "idle"
+
+	state = { name = "idle" 		
+		animation = "idle" 
+		
+		#event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+	}	
+
+}
+
+entity = {
+	name = "ge_003_main"
+    pdxmesh = "ge_003_main"
+	scale = 1.000
+	
+	default_state = "idle"
+
+	state = { name = "idle" 		
+		animation = "idle" 
+		
+		#event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+	}	
+
+}
+
+entity = {
+	name = "ge_003_shader"
+    pdxmesh = "ge_003_shader"
+	scale = 1.0
+	
+	default_state = "idle"
+
+	state = { name = "idle" 		
+		animation = "idle" 
+		
+		#event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+	}	
+
+}
+
+entity = {
+	name = "ge_003_lightball"
+    pdxmesh = necroid_01_science_core_effect_mesh
+	scale = 2
+	
+	default_state = "idle"
+
+	state = { name = "idle" 		
+		animation = "idle" 
+		state_time = 5 
+		looping = yes
+		event = { time = 0 node = "locator1" particle = "avian_01_colossus_inner_core_effect" keep_particle = yes trigger_once = yes }
+	}	
+	state = { name = moving 		
+		animation = moving
+		state_time = 5 
+		looping = yes
+		event = { time = 0 node = "locator1" particle = "avian_01_colossus_inner_core_effect" keep_particle = yes trigger_once = yes }
+	}	
+	state = { name = attack
+		animation = attack
+		state_time = 5 
+		looping = yes
+		event = { time = 0 node = "locator1" particle = "avian_01_colossus_inner_core_effect" keep_particle = yes trigger_once = yes }
+	}
+	locator = { name = locator1 position = { 0 0 -5 } }
+	game_data = {
+		bloom_factor			= 2.5
+		uv_animation_speed 		= 1
+		uv_animation_direction 	= { 0.1 0.50 }
+		}
+}
+

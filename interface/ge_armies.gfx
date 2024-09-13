@@ -1,0 +1,13 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_ge_army_Q_sgt"
+		textureFile = "gfx/interface/planetview/ge_army_Q_sgt.dds"
+		default_frame = 1
+	}
+}
+
+
+
+
+

@@ -1,0 +1,11 @@
+entity = {
+	name = "iqt_tur_entity"
+	pdxmesh = "iqt_tur_mesh"
+	scale = 12.0
+
+	state = { name = "idle"	}
+	#locator = { name = root position = { 0 0 -1 } rotation = { 0 0 0 } }
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}

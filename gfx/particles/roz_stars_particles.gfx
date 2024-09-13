@@ -1,0 +1,8 @@
+objectTypes = {
+    pdxparticle = {
+        name = "krks_star_effect"
+        type = "krks_star_effect_file"
+
+        scale = 100
+    }
+}

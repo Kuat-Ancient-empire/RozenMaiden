@@ -1,0 +1,123 @@
+﻿l_simp_chinese:
+
+####Shippart
+ge_titan_S_bow_T3X4H4P4:0 "超级泰坦-脊峰"
+ge_titan_S_mid_X2L12P6:0 "超级泰坦-中段"
+ge_titan_S_stern_L6H4P4:0 "超级泰坦-舰艉"
+ge_corvette_mid_L1M2S4G1P2:0 "大型护卫舰船体"
+ge_destroyer_bow_L3M2S2:0 "大型驱逐舰-舰艏"
+ge_destroyer_stern_M2G2P4:0 "大型驱逐舰-舰艉"
+ge_battleship_S_bow_T1X2L6P4:0 "重型战列舰-脊峰"
+ge_battleship_S_mid_L8P4:0 "重型战列舰-中段"
+ge_battleship_S_stern_L4G4:0 "重型战列舰-舰艉"
+ge_flagship_core:0 "虚空领舰舰体"
+Ge_Ragnarok_Core:0 "Odin（ban）"
+
+Ge_Ragnarok_Core_1:0 "永恒之枪"
+
+GE_COLOSSUS_SECTION_S:0 "重型巨像"
+ge_carrier_S_bow_G2P4H6:0 "顶部甲板"
+ge_carrier_S_mid_P6H8:0 "内部甲板"
+ge_carrier_S_stern_P2H4:0 "底层甲板"
+ge_cruiser_S_mid_L4M4G2:0 "大型巡洋舰-中段"
+ge_cruiser_S_bow_X1H1P2:0 "大型巡洋舰-脊峰"
+ge_cruiser_S_stern_L2S4P4:0 "大型巡洋舰-舰艉"
+
+GE_CONSTRUCTION_SECTION:0 "武装建设区段"
+GE_COLONIZATION_SECTION:0 "防卫区段"
+GE_TRANSPORT_SECTION:0 "武装区段"
+GE_SCIENCESHIP_SECTION:0 "武装探索区段"
+
+ge_aura_ship_core:0 "光环舰核心"
+ge_aura_ship_core_DESC:0 "首都航天工程院负责设计的一款专为战场支援的非作战舰艇。"
+
+ge_flagship_slot:0 "虚空领舰核心"
+ge_flagship_slot_DESC:0 "庞大的舰体赋予了无与伦比的火力和装甲，以及复杂而高效的辅助模块。"
+
+ge_sgt_ship_core: "罪与罚"
+ge_sgt_ship_core_DESC: "接受爱丽丝的制裁吧！"
+
+Ge_Vampirilis_Ortaam: "§M黑蔷薇的王座§!"
+NAME_sgt_flagship:0 "§M黑蔷薇的王座§!"
+ge_sgt_flagship: "奥塔姆"
+ ge_sgt_flagship_T:"权能"
+#ge_sgt_flagship_DESC: "Endless Space 2®"
+ge_sgt_flagship_white: "§Y白蔷薇的王座§!"
+ge_sgt_flagship_DESC: "Endless™ Space 2 Ortaam"
+ SHIP_GRAPHICS_GE_VAMPIRILIS_ORTAAM_DESC: "Endless™ Space 2 Ortaam"
+
+ Ge_Vampirilis_Letum: "§P黑天使的守卫§!"
+ roz_mass_produced_ship: "莱特姆"
+ SHIP_GRAPHICS_GE_VAMPIRILIS_LETUM_DESC: "Endless™ Space 2 Letum"
+ roz_mass_produced_ship_2:"基石"
+ Ge_Vampirilis_Ortaam_normal: "§Y量产版王座§!"
+ ge_sgt_flagship_white_normal: "奥塔姆(伪)"
+ ge_sgt_flagship_white_normal_2:"权柄"
+ Ge_Vampirilis_Ortaam_normal_plural: "奥塔姆(伪)"
+ SHIP_GRAPHICS_GE_VAMPIRILIS_ORTAAM_NORMAL_DESC: "Endless™ Space 2 Ortaam"
+
+
+ ROZ_ITQ: "§H日轮§!"
+ ROZ_ITQ_ship: "§C冰冷的太阳§!"
+SHIP_GRAPHICS_ROZ_ITQ_DESC: "§C冰冷的太阳§!"
+ ROZ_ITQ_plural: "§C冰冷的太阳§!"
+ roz_juggernaut_wanxiang:"§M万象装置§!"
+ roz_juggernaut_wanxiang_plural:"可在本土恒星系部署为巨构"
+ roz_juggernaut_wanxiang_section:"§R主宰之门§!"
+ roz_juggernaut_wanxiang_design:"§M万象§!"
+
+########shipclass
+ge_military_science:0 "武装科研船"
+ge_military_constructor:0 "武装工程船"
+ge_void_lord:0 "Y*%§R<数据错误>§!恒"
+ge_crime_and_punishment: "罪与罚"
+####Station
+GE_ION_CANNON_CORE:0 "星云区段"
+GE_MILITARY_STATION_SECTION_CARRIER:0 "星辉区段"
+GE_MILITARY_STATION_SECTION_Artillery:0 "星光区段"
+GE_MILITARY_mining_station:0 "武装采矿站"
+GE_MILITARY_research_station:0 "武装研究站"
+
+#####behavior
+gev_swarm_60:0 "§g中程冲击战术§!"
+gev_swarm_60_DESC:0 "舰船会推进到适中距离(§Y50§!)并尝试拦截目标的推进"
+gev_picket_90:0 ""
+gev_picket_90_DESC:0 "舰船会推进到较远距离(§Y80§!)并尝试拦截目标的推进"
+gev_line_120:0 ""
+gev_line_120_DESC:0 "舰船会推进到远距离(§Y160§!)保持阵型攻击目标"
+gev_artillery_150:0 ""
+gev_artillery_150_DESC:0 "舰船会停到极远距离(§Y220§!)使用远程武器攻击目标"
+gev_carrier_200:0 ""
+gev_carrier_200_DESC:0 "舰船会停到最远距离(§Y300§!)使用舰载机攻击目标"
+gev_platform:0 ""
+gev_platform_DESC:0 "防御平台将保持静止并向射程内的任何敌人发起攻击"
+
+
+
+#############ship_design
+ ROZ_ITQ_design:"§H日轮§!"
+ Ge_Vampirilis_Ortaam_normal_design:"§Y复刻王座§!"
+
+
+
+
+
+
+
+
+
+
+###字体颜色代码
+##§W W白色
+##§R R红色
+##§L L暗金
+##§S S土黄
+##§H H金黄
+##§Y Y黄色
+##§G G绿色
+##§E E青色
+##§B B深蓝
+##§M M紫色
+##§g g灰色
+##§P p粉红
+##§! 结束

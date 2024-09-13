@@ -1,0 +1,155 @@
+namespace = ge_modifier_evt
+
+country_event = {
+	id = ge_modifier_evt.100
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		#has_ge_component = yes
+		#has_ge_weapon = yes
+		has_country_flag = ge_buff_flag
+	}	
+	immediate = {
+		country_event = {
+			id = ge_modifier_evt.101
+		}
+	}
+
+}
+
+country_event = {
+	id = ge_modifier_evt.101
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_ge_component = yes
+		has_ge_weapon = yes
+		has_country_flag = ge_buff_flag
+		NOT = {
+			has_country_flag = ge_buff_battle_end_flag
+		}
+	}	
+	immediate = {
+		#set_update_modifiers_batch = begin
+		fromfrom = {
+			add_modifier = {
+				modifier = ge_buff_lv
+			}
+		}
+		#set_update_modifiers_batch = end
+		#country_event = {
+		##	id = ge_modifier_evt.101
+		#	days = 1
+		#}
+	}
+
+}
+
+
+country_event = {
+	id = ge_modifier_evt.1
+	#hide_window = yes
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		has_edict = ge_HTEP_edicts
+		has_country_flag = ge_就要在这里发电
+	}
+	immediate = {
+
+	}
+	after = {
+		if = {
+			limit = {
+				has_technology = tech_titans
+			}
+			clear_variable = ge_country_generatorship_var
+
+			every_owned_fleet = {
+				limit = {
+					any_owned_ship = {
+						has_component = ge_shippart_hyper_generator
+					}
+				}
+				export_trigger_value_to_variable = {
+					trigger = num_ships
+					variable = ge_fleet_generatorship_var
+				}
+				if = {
+					limit = {
+						any_owned_ship = {
+
+							OR = {
+								has_component_GE_REACTOR = yes
+							}
+						}
+					}
+					multiply_variable = {
+						which = ge_fleet_generatorship_var
+						value = 5
+					}
+				}
+				add_modifier = {
+					modifier = ge_generater_effect_debuff
+					days = 30
+				}
+				root = {
+					change_variable = {
+						which = ge_country_generatorship_var
+						value = prev.ge_fleet_generatorship_var
+					}
+					multiply_variable = {
+						which = ge_country_generatorship_var
+						value = 0.5
+					}
+					add_resource = {
+						energy = 1
+						mult = ge_country_generatorship_var
+					}
+				}
+				clear_variable = ge_fleet_generatorship_var
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = ge_modifier_evt.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		has_country_flag = ge_leader_suigintou_get
+		has_country_flag = roz_sgt_flagship_not_immune_tech_limit
+		has_country_flag = get_tech_ge_sgt_flagship_normal_flag
+		NOT = {
+			has_country_flag = ge_tech_reactor_get
+		}
+	}
+	immediate = {
+		every_owned_ship = {
+			limit = {
+				is_ship_size = Ge_Vampirilis_Letum
+				NOT = {
+					has_modifier = roz_sgt_flagship_gardian_none_tech_modifier
+				}
+
+			}
+			add_modifier = {
+				modifier = roz_sgt_flagship_gardian_none_tech_modifier
+				days = -1
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

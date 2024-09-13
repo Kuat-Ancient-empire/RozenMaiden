@@ -1,0 +1,387 @@
+ge_highest_reference_frame_edicts = {
+	length = -1
+	icon = GFX_edict_type_policy
+	potential = {
+		has_technology = GE_tech_reactor
+	}
+	resources = {
+		category = edicts
+		cost = {
+			energy = 3500
+			influence = 100
+		}
+		upkeep = {
+			influence = 1
+		}
+	}
+	modifier = {
+		all_technology_research_speed = 0.4
+		#megastructures_cost_mult = -0.1
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+roz_rosa_mystica_enhance_edicts = {
+	length = -1
+	icon = GFX_sgt_edit_icon_2
+	potential = {
+		#has_country_flag = ge_leader_suigintou_get
+		#OR = {
+		#	has_country_flag = q_sgt_army_get
+		#	has_country_flag = roz_kirakishou_get
+		#}
+		always = no
+	}
+	resources = {
+		category = edicts
+		cost = {
+			unity = 1000
+			sr_rosa_mystica = 1000
+		}
+		upkeep = {
+			sr_rosa_mystica = 5
+		}
+	}
+
+}
+
+ge_mozheng_edicts = {
+	length = -1
+	icon = GFX_edict_type_policy
+	potential = {
+		#has_technology = GE_tech_reactor
+		always = yes
+	}
+	resources = {
+		category = edicts
+		cost = {
+			energy = 0
+		}
+	}
+	effect = {
+		country_event = {
+			id = ge_event.1
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ge_restart_boost_plan_edicts = {
+	length = -1
+	icon = GFX_edict_type_policy
+	potential = {
+		has_country_flag = ge_wait_tech_dark_matter
+		NOT = {
+			has_country_flag = abandon_ge_research
+			has_technology = GE_tech_reactor
+		}
+		NOT = {
+			has_country_flag = ge_rbp_activity_flag
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			energy = 1000
+			influence = 10
+		}
+	}
+	effect = {
+		country_event = {
+			id = ge_event.470
+		}
+		set_country_flag = ge_rbp_activity_flag
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ge_site_edicts = {
+	length = -1
+	icon = GFX_edict_type_policy
+	potential = {
+		NOR = {
+			has_country_flag = ge_sgt_site_find_2_flag
+			has_country_flag = ge_leader_suigintou_get
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			influence = -100
+		}
+	}
+	effect = {
+		country_event = {
+			id = ge_sites.200
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+
+ge_civic_edicts = {
+	length = 1
+	icon = GFX_edict_type_policy
+	potential = {
+		has_country_flag = ge_leader_suigintou_get
+		has_ascension_perk = ap_ge_2
+		has_technology = GE_tech_reactor
+		has_country_flag = ge_ap2_complate	
+		NOR = {
+			has_civic = civic_cor_celestial_military
+			has_civic = civic_cor_time_honored
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			influence = -50
+		}
+	}
+	effect = {
+		force_remove_civic = civic_cor_celestial_military
+		force_remove_civic = civic_cor_time_honored
+		force_remove_civic = civic_cor_celestial_military
+
+		force_add_civic = civic_cor_celestial_military
+		force_add_civic = civic_cor_time_honored
+		force_add_civic = civic_cor_celestial_military
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ge_HTEP_edicts = {	#hyper_transmit_electricity_protocol
+	length = -1
+	icon = GFX_resource_energy
+	potential = {
+		has_country_flag = ge_jyzzlfd_flag
+		has_technology = tech_ge_HTEP
+	}
+	resources = {
+		category = edicts
+		cost = {
+			influence = 50
+		}
+		upkeep = {
+			influence = 1
+		}
+	}
+}
+
+get_suigintou_site_star_edicts = {
+	length = 1
+	icon = GFX_sgt_edit_icon_1
+	potential = {
+		NOR = {
+			has_country_flag = ge_leader_suigintou_get
+			has_country_flag = get_suigintou_site_star_edicts_used
+			any_owned_starbase = {
+				solar_system = {
+					has_star_flag = ge_suigintou_site_star_flag
+				}			
+			}
+		}
+		has_country_flag = ge_sgt_site_owner_flag_for_multiplayer
+	}
+	effect = {
+		country_event = {
+			id = ge_sites.3
+		}
+		hidden_effect = {
+			set_country_flag = get_suigintou_site_star_edicts_used
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			influence = -50
+		}
+	}
+}
+
+roz_mutiplayer_tech_edict = {
+	length = 1
+	icon = GFX_tech_gateway
+	#icon = GFX_sgt_edit_icon_1
+	potential = {
+		has_country_flag = ge_leader_suigintou_get
+		has_country_flag = ge_tech_reactor_get
+		is_multiplayer = yes
+	}
+	effect = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					NOT = {
+						has_country_flag = ge_tech_reactor_get
+					}
+				}
+				country_event = {
+					id = ge_test_event.100
+				}
+			}
+			
+
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			influence = -50
+			sr_void_core = 10
+		}
+	}
+}
+
+
+
+roz_lgate_disable_edict = {
+	length = 1
+	icon = GFX_tech_gateway
+	potential = {
+		is_ai = no
+		#host_has_dlc = "distant stars story pack"
+		has_country_flag = roz_lgate_spawn
+		has_country_flag = roz_lgate_enable
+		NOT = { has_country_flag = roz_lgate_disable }
+	}
+	effect = {
+		set_country_flag = roz_lgate_disable
+		remove_country_flag = roz_lgate_enable
+		every_system = {
+			limit = {
+				has_star_flag = lcluster1
+				has_star_flag = lcluster_lgate
+			}
+			every_system_megastructure = {
+				limit = {
+					is_megastructure_type = lgate_base
+				}
+				remove_megastructure = this
+			}
+
+			spawn_megastructure = {
+				type = lgate_base
+				orbit_angle = 225
+				orbit_distance = 360
+			}
+		}
+	}
+}
+
+roz_lgate_enable_edict = {
+	length = 1
+	icon = GFX_tech_gateway
+	potential = {
+		is_ai = no
+		#host_has_dlc = "distant stars story pack"
+		has_country_flag = roz_lgate_spawn
+		has_country_flag = roz_lgate_disable
+		NOT = { has_country_flag = roz_lgate_enable }
+	}
+	effect = {
+		set_country_flag = roz_lgate_enable
+		remove_country_flag = roz_lgate_disable
+		every_system = {
+			limit = {
+				has_star_flag = lcluster1
+				has_star_flag = lcluster_lgate
+			}
+			every_system_megastructure = {
+				limit = {
+					is_megastructure_type = lgate_base
+					NOT = { has_megastructure_flag = lgate_activated }
+				}
+				activate_gateway = this
+				set_megastructure_flag = lgate_activated
+			}
+		}
+	}
+}
+
+
+roz_graygoo_enable_edict = {
+	length = 30
+	icon = GFX_tech_gateway
+	potential = {
+		always = no
+		is_ai = no
+		OR = {
+			has_country_flag = roz_lgate_spawn
+			has_country_flag = encountered_first_lgate
+		}
+		has_global_flag = l_cluster_opened
+		has_global_flag = lgates_activated_globally
+		NOR = {
+			has_global_flag = gray_goo_crisis_set
+			has_global_flag = dragon_season
+			has_global_flag = gray_goo_empire_set
+		}
+		NOT = { has_country_flag = machine_age_nanites_studied }
+		NOT = { has_edict = roz_graygoo_enable_edict }
+		NOT = { event_target:gray_country = { exists = this } }
+	}
+
+	allow = {
+
+	}
+	effect = {
+		random_planet_within_border = {
+			limit = { is_planet_class = pc_gray_goo }
+			save_event_target_as = gray_homeworld
+		}
+		hidden_effect = {
+			country_event = {
+				id = graygoo.401
+			}
+		}
+	}
+}
+
+#@educ=3
+#research_edicts = {
+#	length = -1
+#	icon = GFX_edict_type_policy
+#	resources = {
+#		category = edicts
+#		cost = {
+#			unity = 100
+#			mult = value:edict_size_effect
+#		}
+#		upkeep = {
+#			unity = 100
+#			mult = value:edict_size_effect
+#		}
+#	}
+#	modifier = {
+#		all_technology_research_speed = 0.5
+#	}
+#	potential = {
+#		always = yes
+#	}
+#	allow = {
+#		always = yes
+#	}
+#	ai_weight = {
+#		weight = 500
+#	}
+#}
+
+
+
+
+
+
+

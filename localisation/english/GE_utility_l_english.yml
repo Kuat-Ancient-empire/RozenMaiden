@@ -1,0 +1,143 @@
+﻿l_english:0
+###############################S&A
+ SMALL_SF_ARMOR:0 "§MIron curtain of gravitation§!"
+ MEDIUM_SF_ARMOR:0 "§MIron curtain of gravitation§!"
+ LARGE_SF_ARMOR:0 "§MIron curtain of gravitation§!"
+ GE_SF_ARMOR:0 "§MIron curtain of gravitation§!"
+ GE_SF_ARMOR_DESC:0 "When we apply black hole armor piercing warhead to armor protection, we get the unbreakable armor."
+
+ SMALL_G_SHIELD:0 "§MSmall Gravitational Field§!"
+ MEDIUM_G_SHIELD:0 "§MMedium Gravitational Field§!"
+ LARGE_G_SHIELD:0 "§MLarge Gravitational Field§!"
+ GE_SHIELD:0 "§MGravitational Twisting Device"
+ GE_SHIELD_DESC:0 "Infinite energy supplies the gravitational twisting device to form an extremely strong shield, while the free void decay energy in space can erode the incoming attack."
+
+###############################COMPUTER
+ GE_COMBAT_COMPUTER_LINE:0 "§MParadox-LINE"
+ GE_COMBAT_COMPUTER_SWARM:0 "§MParadox-SWARM"
+ GE_COMBAT_COMPUTER_PICKET:0 "§MParadox-PICKET"
+ GE_COMBAT_COMPUTER_CARRIER:0 "§MParadox-CARRIER"
+ GE_COMBAT_COMPUTER_PLATFORM:0 "§MParadox-PLATFORM"
+ GE_COMBAT_COMPUTER_COLOSSUS:0 "§MParadox-COLOSSUS"
+ GE_COMBAT_COMPUTER_ARTILLERY:0 "§MParadox-ARTILLERY"
+ 
+ GE_COMBAT_COMPUTER_DESC:0 "太好了嬹?嬇谚+?関峻?我??B饙逐F嬒P?  渐婰$理$嬓婦$解蓧G了一墂切!,!..,?"
+
+###############################Thruster
+ CORVETTE_GE_THRUSTER:0 "§PSpatial shifter§!"
+ CORVETTE_GE_THRUSTER_DESC:0 "The new power device beyond the traditional working medium propeller can directly modify the spatial coordinate parameters and make some exaggerated maneuvers. As for the original nozzle, it is only a large RGB."
+ DESTROYER_GE_THRUSTER:0 "§PSpatial shifter§!"
+ DESTROYER_GE_THRUSTER_DESC:0 "The new power device beyond the traditional working medium propeller can directly modify the spatial coordinate parameters and make some exaggerated maneuvers. As for the original nozzle, it is only a large RGB."
+ CRUISER_GE_THRUSTER:0 "§PSpatial shifter§!"
+ CRUISER_GE_THRUSTER_DESC:0 "The new power device beyond the traditional working medium propeller can directly modify the spatial coordinate parameters and make some exaggerated maneuvers. As for the original nozzle, it is only a large RGB."
+ BATTLESHIP_GE_THRUSTER:0 "§PSpatial shifter§!"
+ BATTLESHIP_GE_THRUSTER_DESC:0 "The new power device beyond the traditional working medium propeller can directly modify the spatial coordinate parameters and make some exaggerated maneuvers. As for the original nozzle, it is only a large RGB."
+ TITAN_GE_THRUSTER:0 "§PSpatial shifter§!"
+ TITAN_GE_THRUSTER_DESC:0 "The new power device beyond the traditional working medium propeller can directly modify the spatial coordinate parameters and make some exaggerated maneuvers. As for the original nozzle, it is only a large RGB."
+ 
+GE_DEFAULT_THRUSTER:0 "Experimental propeller"
+GE_DEFAULT_THRUSTER_DESC:0 "Transitional products."
+
+###############################SENSOR
+ GE_SENSOR:0 "§PDimensional Information Matrix"
+ GE_SENSOR_DESC:0 "The new void sensor is not an antique. Our tentacles have extended to a higher dimension."
+
+###############################REACTOR
+ CORVETTE_GE_REACTOR:0 "§MAurora§!"
+ CORVETTE_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A"
+ DESTROYER_GE_REACTOR:0 "§MAurora§!"
+ DESTROYER_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A"
+ CRUISER_GE_REACTOR:0 "§MAurora§!"
+ CRUISER_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A"
+ BATTLESHIP_GE_REACTOR:0 "§MAurora§!"
+ BATTLESHIP_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A"
+ TITAN_GE_REACTOR:0 "§MAurora§!"
+ TITAN_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A"
+ COLOSSUS_GE_REACTOR:0 "§MAurora§!"
+ COLOSSUS_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A"
+ PLATFORM_GE_REACTOR:0 "§MAurora§!"
+ PLATFORM_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A"
+ ION_CANNON_GE_REACTOR:0 "§MAurora§!"
+ ION_CANNON_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A"
+ STARBASE_GE_REACTOR:0 "§MAurora§!"
+ STARBASE_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A"
+ 
+GE_DEFAULT_REACTOR:0 "Space station reactor"
+GE_DEFAULT_REACTOR_DESC:0 "The reactor used in the resource space station is designed with a large amount of redundant power in order to supply energy to the means of production."
+
+###############################AUX
+ GE_WARP_DRIVE:0 "§PPSC§!"
+ GE_WARP_DRIVE_DESC:0 "Programmable Space Controller"
+
+ GE_RDS:0 ""
+ GE_RDS_DESC:0 ""
+
+ GE_CB:0 "§R混沌超频器（小型）§!"
+ GE_CB_DESC:0 "§R将虚空反应堆的能量附加在舰载武器上，虽然这并不安全，但是能让我们的攻势无坚不摧"
+
+ GE_RDS_L:0 "§ERules Compatibility System§!"
+ GE_RDS_L_DESC:0 "Improve the compatibility of the rules of the multiverse of our ships. Even if we pass through other universes, we can avoid the exclusion of those."
+
+ GE_CB_L:0 "§RChaos Booster§!"
+ GE_CB_L_DESC:0 "§RAttaching the energy of the void reactor to shipborne weapons is not safe, but it can make our offensive invincible. "
+
+###############################Ship part#########Section_templates
+ ge_flagship_key:0 "Void Flagship"
+ ge_flagship:0 "Void Flagship"
+ ge_flagship_plural:0 "Void Flagship"
+ ge_carrier:0 "Heavy Carrier"
+ ge_carrier_plural:0 "Heavy Carrier"
+ Ge_Ragnarok:0 "Gungnir"
+ Ge_Ragnarok_key:0 "Gungnir"
+ Ge_Ragnarok_plural:0 "Gungnir"
+
+ ge_aura_ship:0 "Aura ship"
+ ge_aura_ship_key:0 "Aura ship"
+ ge_aura_ship_plural:0 "Aura ship"
+
+
+##############################Aura Aux
+ ge_shippart_titian_A:0 "Dimension §Rcollapse§! / Dimension §BSupport§!"
+ ge_shippart_titian_A_DESC:0 "范围性规则改写,这套系统的开发难度不在于如何实现，而在于战斗后怎么消弭不良影响。"
+ ge_shippart_titian_A_aura1_Debuff:0 "§R维度崩毁§!"
+ ge_shippart_titian_A_aura1_Buff:0 "§B维度加持§!"
+ 
+ ge_shippart_titian_B:0 "§M引力主宰§!"
+ ge_shippart_titian_B_DESC:0 "这是光的终结，亦是光的起点"
+ ge_shippart_Flagship_B:0 "§M“引力主宰”§!"
+ ge_shippart_Flagship_B_DESC:0 "“这是光的终结，亦是光的起点”"
+ ge_shippart_titian_B_aura1_Debuff:0 "§R黑洞囚牢§!"
+ ge_shippart_titian_B_aura1_Buff:0 "§B引力透镜§!"
+
+ ge_shippart_titian_C:0 "§MChaotic sea§!"
+ ge_shippart_titian_C_DESC:0 "§R大道无极，我们即将步入彼岸——真相就在眼前。……&*游*（……&￥%……￥%……！又￥%*￥%&#戈%……*）&*?!?!?!?!?!?!?"
+
+ ge_shippart_Flagship_C:0 "§M“Chaotic sea”§!"
+ ge_shippart_Flagship_C_DESC:0 "§R“大道无极，我们即将步入彼岸——真相就在眼前。……&*游*（……&￥%……￥%……！又￥%*￥%&#戈%……*）&*?!?!?!?!?!?!?”"
+
+ ge_shippart_time_freeze:0 "§BParadox engine§!"
+ ge_shippart_time_freeze_DESC:0 "§BTime is on our side!§!"
+ge_shippart_titian_time_freeze:0 "§BTime Freeze§!"
+
+ ge_shippart_titian_C_aura1_Debuff:0 "§W~§RRule manipulation§!§W~§!"
+ ge_shippart_titian_C_aura1_Buff:0 "§W~§BRule manipulation§!§W~§!"
+
+ge_shippart_peace_field:0 "§LPeace Field§!"
+ge_shippart_peace_field_DESC:0 "§L千乘为之轼庐，诸侯为之止戈。§!\n§H思路来源自RTS游戏红警3日冕中神州阵营的超级武器和群友的带孝女操作。§!\n§P这是一个特殊光环，可以完全停止对战双方舰队的所有输出，如果你不想搞些骚操作（刷经验或者卡对面舰队），请§R<<绝对>>§!§P不要装上这个玩意儿。§!"
+ge_shippart_titian_peace_field_hostile:0 "§PPeace Field(hostile)"
+ge_shippart_titian_peace_field_friendly:0 "§PPeace Field(friendly)"
+
+###字体颜色代码
+##§W W白色
+##§R R红色
+##§L L暗金
+##§S S土黄
+##§H H金黄
+##§Y Y黄色
+##§G G绿色
+##§E E青色
+##§B B深蓝
+##§M M紫色
+##§g g灰色
+##§P p粉红
+##§! 结束

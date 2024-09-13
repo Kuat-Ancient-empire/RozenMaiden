@@ -1,0 +1,53 @@
+﻿l_english:
+####Weapons
+ GE_GRAVITY_BURST:0 "§HChaotic Energy Starburst§!"
+ GE_GRAVITY_BURST_DESC:0 "发射一团外域概念干涉实体，瞬间使敌方护盾发生器过载，无视大部分装甲防护直击舰体结构。"
+ GE_PD:0 "§PVoid Point Defense§!"
+ GE_PD_DESC:0 "这种点防御武器能快速抹消来袭舰载机和弹头。"
+ GE_XL_BEAM:0 "§GChaotic Avulsion Beam§!"
+ GE_XL_BEAM_DESC:0 "狂暴的能量可以瞬间毁伤敌舰的装甲和船体结构（对精罗人士伤害提升395倍）"
+ GE_T_BEAM:0 "§RExtinction Beam§!"
+ GE_T_BEAM_DESC:0 "§R敢教日月换新天。§!"
+ GE_SMALL_LASER_CANNON:0 "§PEnergy-gathered Chaotic Laser§!"
+ GE_MEDIUM_LASER_CANNON:0 "§PEnergy-gathered Chaotic Laser§!"
+ GE_LARGE_LASER_CANNON:0 "§PEnergy-gathered Chaotic Laser§!"
+ GE_LASER_CANNON:0 "§PEnergy-gathered Chaotic Laser§!"
+ GE_LASER_CANNON_DESC:0 "混沌撕裂炮的轻量化版本，受出力问题，其输出能力有所下调。"
+ GE_SMALL_KINETIC_GUN:0 "§MVoid Trap Emitter§!"
+ GE_MEDIUM_KINETIC_GUN:0 "§MVoid Trap Emitter§!"
+ GE_LARGE_KINETIC_GUN:0 "§MVoid Trap Emitter§!"
+ GE_KINETIC_GUN:0 "§MVoid Trap Emitter§!"
+ GE_KINETIC_GUN_DESC:0 "发射前请检查虚空侵蚀指数。"
+ge_bhmissile:0 "§MBlack Hole Missile§!"
+ge_bhmissile_DESC:0 "黑洞打击是在常规宇宙空间作战中的优解"
+ge_wtorpedo:0 "§MWorld Torpedo§!"
+ge_wtorpedo_DESC:0 "天地乖离，开辟之星。(某灯：这是什么中二台词。)"
+ge_strike_craft_fighter:0 "§LKing Snake§!"
+ge_strike_craft_fighter_DESC:0 "这种歼击机搭载了重型虚空点防御炮，能抹除来袭舰载机和弹头。"
+ge_strike_craft_bomber:0 "§LLion Heart§!"
+ge_strike_craft_bomber_DESC:0 "这种轰炸机拥有大当量的虚空炸弹，能擦除敌方战舰的大量结构。"
+ge_strike_craft_xuefeng:0 "§LBattle Demon - Snow Wind§!"
+ge_strike_craft_xuefeng_DESC:0 "这些特种轰炸机虽然编队少，但是机动十分出色，搭载的虚空鱼雷能轻易抹杀敌方战舰。（この雪風様なのだ！）"
+
+
+
+
+PLANET_KILLER_Crasher:0 "§RDeath meteor"
+PLANET_KILLER_Crasher_DESC:0 "我们新式的死亡流星已经完全超越了老式的地爆天星！"
+PLANET_KILLER_Crasher_ACTION:0 "§RCrasher"
+FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_Crasher:0 "Preparing Crasher $PLANET|Y$"
+
+##字体颜色代码
+##§W W白色
+##§R R红色
+##§L L暗金
+##§S S土黄
+##§H H金黄
+##§Y Y黄色
+##§G G绿色
+##§E E青色
+##§B B深蓝
+##§M M紫色
+##§g g灰色
+##§! 结束
+

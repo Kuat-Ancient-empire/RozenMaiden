@@ -1,0 +1,123 @@
+namespace = roz_state_grid_crisis
+
+country_event = {
+    id = roz_state_grid_crisis.10
+    title = "roz_state_grid_crisis.10.title"
+    desc = "roz_state_grid_crisis.10.desc"
+    is_triggered_only = yes
+    picture = GFX_evt_archaeologists_escaping
+    show_sound = event_super_explosion
+    option = {
+        name = roz_state_grid_crisis.10.aa
+    }
+}
+
+country_event = {
+    id = roz_state_grid_crisis.11
+    title = "roz_state_grid_crisis.11.title"
+    desc = "roz_state_grid_crisis.11.desc"
+    is_triggered_only = yes
+    picture = GFX_evt_bribery
+    option = {
+        name = roz_state_grid_crisis.11.aa
+        add_resource = {
+            energy = 10000
+        }
+        custom_tooltip = roz_state_grid_crisis.11.aa.ct
+        hidden_effect = {
+            set_country_flag = roz_state_grid_crisis_selection_1_flag
+        }
+    }
+    option = {
+        name = roz_state_grid_crisis.11.bb
+        add_resource = {
+            energy = 10000
+        }
+        custom_tooltip = roz_state_grid_crisis.11.bb.ct
+        hidden_effect = {
+            set_country_flag = roz_state_grid_crisis_selection_2_flag
+        }
+    }
+    option = {
+        name = roz_state_grid_crisis.11.cc
+        add_resource = {
+            energy = 10000
+        }
+        custom_tooltip = roz_state_grid_crisis.11.cc.ct
+        hidden_effect = {
+            set_country_flag = roz_state_grid_crisis_selection_3_flag
+        }
+    }
+}
+
+
+country_event = {
+    id = roz_state_grid_crisis.12
+    title = "roz_state_grid_crisis.12.title"
+    desc = "roz_state_grid_crisis.12.desc"
+    is_triggered_only = yes
+    picture = GFX_evt_busy_spaceport
+    show_sound = event_spy_orb_build_start
+    option = {
+        name = roz_state_grid_crisis.12.aa
+    }
+}
+
+
+country_event = {
+    id = roz_state_grid_crisis.13
+    title = "roz_state_grid_crisis.13.title"
+    desc = "roz_state_grid_crisis.13.desc"
+    is_triggered_only = yes
+    picture = GFX_evt_overt_indoctrination
+    show_sound = event_airlock
+    option = {
+        name = roz_state_grid_crisis.13.aa
+    }
+    option = {
+        name = roz_state_grid_crisis.13.bb
+    }
+}
+
+country_event = {
+    id = roz_state_grid_crisis.14
+    title = "roz_state_grid_crisis.14.title"
+    desc = "roz_state_grid_crisis.14.desc"
+    is_triggered_only = yes
+    show_sound = event_celebration
+    picture = GFX_evt_crisis_defeated
+    option = {
+        name = roz_state_grid_crisis.14.aa
+        add_modifier = { modifier = roz_void_energy_revolution }
+        custom_tooltip = roz_state_grid_crisis.14.aa.ct
+        #sound = par_ui_agenda_01
+        sound = advisor_tutorial_agenda_available_01
+        #custom_tooltip = roz_state_grid_crisis.14.aa.ct
+        create_message = {
+            type = roz_agenda_void_core_boost_available
+            localization = roz_agenda_void_core_boost_available_desc
+            days = 10
+            target = home_planet
+            variable = {
+                type = name
+                localization = PLANET
+                scope = home_planet
+            }
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = { has_country_flag = roz_krks_dl_early_flag }
+                    has_country_flag = roz_krks_dl_normal_flag
+                }
+                country_event = {
+                    id = ge_event.1900
+                    days = 180
+                    random = 360
+                }
+            }
+        }
+    }
+}
+
+

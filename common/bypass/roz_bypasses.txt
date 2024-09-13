@@ -1,0 +1,32 @@
+roz_gateway = {
+	name = roz_gateway
+	is_pathfind = yes
+	uses_action = no
+	always_active = yes
+	windup_time = 0
+	winddown_time = 0
+	ftl_multiplier = 0
+	icon_frame = 30
+	remember_instances = no
+	galactic_map_tooltip_header = roz_gateway_name_header
+	galactic_map_tooltip_desc = roz_gateway_name_DESC
+	connection_type = scripted_connection
+	animation_time = 1
+	ftl_ship_effect = "gateway_ftl_ship_effect_entity"
+	ftl_bypass_effect = "gateway_ftl_bypass_effect_entity"
+
+	country_can_use = {
+		is_ai = no
+	}
+
+	scripted_connection = {
+
+		node = {
+			has_star_flag = roz_outland_star
+		}
+
+		nexus = {
+			has_star_flag = roz_outland_system
+		}
+	}
+}

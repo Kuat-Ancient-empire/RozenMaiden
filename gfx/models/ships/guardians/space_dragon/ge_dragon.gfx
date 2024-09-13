@@ -1,0 +1,65 @@
+objectTypes = {
+	pdxmesh = {
+		name = "ge_black_dragon_mesh"
+		file = "gfx/models/ships/guardians/space_dragon/ge_black_dragon.mesh"
+
+		animation = { id = "idle"			type = "aquatic_dragon_01_idle_animation" }
+		animation = { id = "moving"			type = "aquatic_dragon_01_moving_animation" }
+		animation = { id = "death"			type = "aquatic_dragon_01_death_animation" }
+		animation = { id = "attack"			type = "aquatic_dragon_01_attack_animation" }
+
+		meshsettings = {
+			name = "aquatic_dragon_01Shape"
+			index = 0
+			texture_diffuse = "aquatic_dragon_dr_diffuse.dds"
+			texture_normal = "aquatic_dragon_01_normal.dds"
+			texture_specular = "aquatic_dragon_01_specular.dds"
+			shader = "PdxMeshShipDiffuseEmissive"
+		}
+
+		meshsettings = {
+			name = "aquatic_dragon_01Shape"
+			index = 1
+			texture_diffuse = "aquatic_dragon_dr_diffuse.dds"
+			texture_normal = "aquatic_dragon_01_normal.dds"
+			texture_specular = "aquatic_dragon_01_specular.dds"
+			shader = "PdxMeshAlphaAdditive"
+		}
+	}
+
+	pdxmesh = {
+		name = "ge_black_dragon_floater_1_mesh"
+		file = "gfx/models/ships/guardians/space_dragon/ge_black_dragon_floater_1.mesh"
+
+		animation = { id = "idle"			type = "aquatic_dragon_floater_01_idle_animation" }
+		animation = { id = "moving"			type = "aquatic_dragon_floater_01_moving_animation" }
+		animation = { id = "death"			type = "aquatic_dragon_floater_01_death_animation" }
+		animation = { id = "attack"			type = "aquatic_dragon_floater_01_attack_animation" }
+
+		meshsettings = {
+			index = 0
+			texture_diffuse = "aquatic_dragon_dr_diffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+	
+	pdxmesh = {
+		name = "ge_black_dragon_floater_2_mesh"
+		file = "gfx/models/ships/guardians/space_dragon/aquatic_dragon_floater_03.mesh"
+
+		animation = { id = "idle"			type = "aquatic_dragon_floater_03_idle_animation" }
+		animation = { id = "moving"			type = "aquatic_dragon_floater_03_moving_animation" }
+		animation = { id = "death"			type = "aquatic_dragon_floater_03_death_animation" }
+		animation = { id = "attack"			type = "aquatic_dragon_floater_03_attack_animation" }
+
+		meshsettings = {
+			index = 0
+			texture_diffuse = "aquatic_dragon_dr_diffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+}

@@ -1,0 +1,85 @@
+﻿l_english:
+
+##   :0 ""
+##   _desc:0 ""
+
+##########species
+trait_cor_great_culture:0 "Great Culture"
+trait_cor_great_culture_desc:0 ""
+
+trait_cor_dragon_totem:0 "Dragon Totem"
+trait_cor_dragon_totem_desc:0 ""
+
+trait_cor_transpierce:0 "Penetration"
+trait_cor_transpierce_desc:0 ""
+
+trait_cor_ingenios:0 "Ingenios"
+trait_cor_ingenios_desc:0 ""
+
+trait_cor_grand_wisdom:0 "Grand Wisdom"
+trait_cor_grand_wisdom_desc:0 ""
+
+########leader
+##################################
+
+############### 统治者 ###############
+
+leader_trait_ge_ruler_star_light:0 "Star light"
+leader_trait_ge_ruler_star_light_desc:0 ""
+
+leader_trait_ge_ruler_bond:0 "Ruler bond"
+leader_trait_ge_ruler_bond_desc:0 ""
+
+
+############### 总督 ###############
+
+leader_trait_ge_dominator:0 "Dominator"
+leader_trait_ge_dominator_desc:0 ""
+
+
+
+
+
+############### 舰队司令 ###############
+leader_trait_ge_cor_admiral:0 "Celestial Will"
+leader_trait_ge_cor_admiral_desc:0 "We are bond by the Celestial!"
+
+leader_trait_ge_time_freeze:0 "§BTime Freeze§!"
+leader_trait_ge_time_freeze_desc:0 "§RShut down enemy fleets in 30 days. §!\n§B“Time is on our side.”§!"
+
+leader_trait_ge_mercury_lamp:0 "§MMercury Lamp§!"
+leader_trait_ge_mercury_lamp_desc:0 "The First doll of Rozen Maiden, Once fought resolutely with the rest of the other rozen maiden in order to become Alice. Mercury Lamp is good at covering the enemy with mobile fire, but her accuracy is Unsatisfactory."
+leader_trait_ge_Blackwinged_Dragon:0 "Blackwinged Dragon"
+leader_trait_ge_Blackwinged_Dragon_desc:0 "§BAt the beginning of the battle, the ships fire rate §R-50%§B, Weapon damage +75%，Weapon range +25%, for 10 days, cooling down in 20 days, it can be triggered circularly."
+leader_trait_ge_azoth:0 "Azoth"
+leader_trait_ge_azoth_desc:0 "§BAt the beginning of the battle, ships armor penetration and shield penetration +100%, hull damage +25%, for 40 days."
+leader_trait_ge_N_field:0 "N-Field"
+leader_trait_ge_N_field_desc:0 "With the unreal space connected with the real world and mutual inside and outside, the rose girls will improve their fighting ability in their N-field. \n§BAt the beginning of the battle, our ships armor and shield regen 0.5% per day, hull regen 0.25% per day.\n§RAt the beginning of the battle, enemy ships armor and shield regen -0.5% per day, tracking and accuracy -5, disengage chance -100%, shield and armor reduction 10%."
+
+leader_trait_ge_meimei:0 "Meimei"
+leader_trait_ge_meimei_desc:0 ""
+
+
+############### 陆军司令 ###############
+
+leader_trait_cor_baikun_power_network:0 "Baikun Grid"
+leader_trait_cor_baikun_power_network_desc:0 ""
+
+leader_trait_ge_cor_general:0 "Integration"
+leader_trait_ge_cor_general_desc:0 ""
+
+############### 科学家 ###############
+
+leader_trait_ge_cor_scientist:0 "ALL IN ONE"
+leader_trait_ge_cor_scientist_desc:0 ""
+
+leader_trait_ge_mercury_lamp_scientist:0 "§MMercury Lamp§!"
+leader_trait_ge_mercury_lamp_scientist_desc:0 "The First doll of Rozen Maiden, Once fought resolutely with the rest of the other rozen maiden in order to become Alice. Although it seems that she is only a teenager, she is actually a very ancient existence. The knowledge she has accumulated over the years can help us overcome difficulties in the field of scientific exploration.\n\n§BWhen the Mercury Lamp conducts sociological research, After researching a sociological technology, you will get the progress of randomly selectable sociological technology.There is §H50%§!§B chance to gain §H35%§!§B progress; §H25%§!§B chance to gain §H60%§!§B progress；§H15%§!§B chance to gain §H80%§!§B progress，§H10%§!§B chance to gain §H99%§!§B progress。§!"
+
+leader_trait_ge_N_field_scientist:0 "N-Field"
+leader_trait_ge_N_field_scientist_desc:0 "Connected with the real world and an imaginary space inside and outside each other, Mercury Lamp can use her N-field to enhance the performance of scientific research ships and teleport alien local products through the N-field portal. Although this is a little time-consuming, these strange and diverse indigenous production capacity displayed at the science and technology exhibition has boosted the people's enthusiasm for space exploration.\n\n§BWhen Mercury Lamp surveyed one planet, will gain 3*N unity and 0.2*N minor artifacts. §G(The coefficient N is the number of planets that Mercury Lamp has surveyed)"
+
+leader_trait_ge_meimei_scientist:0 "Meimei"
+leader_trait_ge_meimei_scientist_desc:0 "Artistic spirit exists like a demon, and they are indispensable helpers for Rozen maiden."
+
+

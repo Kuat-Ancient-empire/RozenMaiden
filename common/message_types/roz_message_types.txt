@@ -1,0 +1,71 @@
+
+message_type = {
+    key = "roz_time_freeze_activity"
+    icon = "GFX_roz_time_freeze"
+    icon_frame = 1
+
+    #sound = "discovery"
+    name = "roz_time_freeze_activity_title"
+    sound = roz_time_freeze_activited
+    #sound_is_advisor = yes
+    ping = "ping_notification_red"
+    #auto_opens = all
+
+    default_toast = yes
+
+    category = planets
+}
+
+message_type = {
+    key = "roz_agenda_void_core_boost_available"
+    icon = GFX_council_agenda_void_core_boost_available
+    icon_frame = 1
+
+    name = "roz_agenda_void_core_boost_available_title"
+    sound = roz_agenda_void_core_boost_available
+    #sound_is_advisor = yes
+    ping = ping_notification_green
+    #auto_opens = all
+    default_toast = yes
+    category = government
+}
+
+message_type = {
+    key = "ROZ_sgt_gal_MESSAGE_TYPE"
+    icon = GFX_message_ROZ_GAL_SGT
+    icon_frame = 1
+    name = ROZ_sgt_gal_MESSAGE
+    sound = "notification"
+    ping = "ping_notification_green"
+}
+
+message_type = {
+    key = "ROZ_krks_gal_MESSAGE_TYPE"
+    icon = GFX_message_ROZ_GAL_KRKS
+    icon_frame = 1
+    name = ROZ_krks_gal_MESSAGE
+    sound = "notification"
+    ping = "ping_notification_green"
+}
+
+message_type = {
+    key = "STORM_CHRONOS_STORM_VISIBLE"
+    icon = "GFX_message_storm_nexus_visible"
+    icon_frame = 1
+
+    name = "MESSAGE_CHRONOS_STORM_COSMIC_STORM_SPOTTED_TITLE"
+    sound = "event_red_alert"
+    ping = "ping_notification_yellow"
+
+    default_toast = no
+    auto_opens = others
+    category = cosmic_storm
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+ambient_object = {
+	name = ROZ_SSVL_AO
+	entity = SSVL_entity
+	selectable = yes
+	show_name = yes
+	tooltip = ROZ_SSVL_AO_tooltip
+	description = ROZ_SSVL_AO_object_desc
+}
+
+ambient_object = {
+	name = "chronos_storm"
+	entity = "chronos_storm_entity"
+	selectable = no
+	show_name = no
+}

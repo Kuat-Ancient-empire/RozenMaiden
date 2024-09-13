@@ -1,0 +1,414 @@
+namespace = ge_communication
+
+
+#########################################
+#########################################
+#########################################
+###换装
+
+country_event = {   ###换装
+    id = ge_communication.11000
+    is_triggered_only = yes
+    title = "ge_communication.110.name"
+    desc = "ge_communication.110.desc"
+    diplomatic = yes
+    picture_event_data = {
+        #portrait = ge_suigintou_6
+        portrait = event_target:ge_leader
+        room = ge_sgt_main_room
+    }
+    trigger = {
+        has_country_flag = sgt_changing_skin_flag
+        #防止连点
+        NOT = { has_country_flag = sgt_changing_skin_note_flag }
+        any_owned_leader = {
+            has_leader_flag = ge_suigintou_flag
+        }
+    }
+    immediate = {
+        set_country_flag = sgt_changing_skin_note_flag
+
+        get_ge_leader_target = {
+            flag = ge_suigintou_flag
+
+        }
+    }
+     after = {
+     	hidden_effect = {
+            remove_country_flag = sgt_changing_skin_note_flag
+            remove_country_flag = sgt_changing_skin_flag
+        }
+     }
+    option = {
+        #退出换装
+        name = "ge_communication.110.00"
+        default_hide_option = yes
+        hidden_effect = {
+            #remove_country_flag = suigintou_diplomacy_activated
+        }
+    }
+    option = {
+        name = "ge_communication.110.aa"
+        response_text = "ge_sgd_portrait_change_desc.20th.response"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = sgt
+                portrait = ge_suigintou
+                flag = ge_sgt_portrait_change
+                leader_flag = ge_suigintou_flag
+                portrait_key = ge_suigintou_20th
+            }
+        }
+    }
+    option = {
+        name = "ge_communication.110.ab"
+        response_text = "ge_sgd_portrait_change_desc.3.response"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = sgt
+                portrait = ge_suigintou
+                flag = ge_sgt_portrait_change
+                leader_flag = ge_suigintou_flag
+                portrait_key = ge_suigintou_20
+            }
+        }
+    }
+    option = {
+        name = "ge_communication.110.a11"
+        response_text = "ge_sgd_portrait_change_desc.a11.response"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = sgt
+                portrait = ge_suigintou
+                flag = ge_sgt_portrait_change
+                leader_flag = ge_suigintou_flag
+                portrait_key = ge_suigintou_21
+            }
+        }
+    }
+    option = {
+        name = "ge_communication.110.a22"
+        response_text = "ge_sgd_portrait_change_desc.a12.response"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = sgt
+                portrait = ge_suigintou
+                flag = ge_sgt_portrait_change
+                leader_flag = ge_suigintou_flag
+                portrait_key = ge_suigintou_22
+            }
+        }
+    }
+    #option = {
+    #    name = "ge_communication.110.ac"
+    #    response_text = "ge_sgd_portrait_change_desc.1.response"
+    #    response_text = "ge_sgd_portrait_change_desc.2.response"
+    #    is_dialog_only = yes
+    #    hidden_effect = {
+    #        if = {
+    #            limit = {
+    #                any_owned_leader = {
+    #                    has_leader_flag = ge_suigintou_flag
+    #                    is_event_leader = yes
+    #                }
+    #            }
+    #        }
+    #        every_owned_leader = {
+    #            limit = {
+    #                has_leader_flag = ge_suigintou_flag
+    #            }
+    #            change_leader_portrait = ge_suigintou_3
+    #        }
+    #    }
+    #}
+    option = {
+        name = "ge_communication.110.ad"
+        response_text = "ge_sgd_portrait_change_desc.1.response"
+        response_text = "ge_sgd_portrait_change_desc.2.response"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = sgt
+                portrait = ge_suigintou
+                flag = ge_sgt_portrait_change
+                leader_flag = ge_suigintou_flag
+                portrait_key = ge_suigintou_4
+            }
+        }
+    }
+    #option = {
+    #    name = "ge_communication.110.a5"
+    #    response_text = "ge_sgd_portrait_change_desc.1.response"
+    #    response_text = "ge_sgd_portrait_change_desc.2.response"
+    #    is_dialog_only = yes
+    #    hidden_effect = {
+    #        if = {
+    #            limit = {
+    #                any_owned_leader = {
+    #                    has_leader_flag = ge_suigintou_flag
+    #                    is_event_leader = yes
+    #                }
+    #            }
+    #        }
+    #        every_owned_leader = {
+    #            limit = {
+    #                has_leader_flag = ge_suigintou_flag
+    #            }
+    #            change_leader_portrait = ge_suigintou_5
+    #        }
+    #    }
+    #}
+    option = {
+        name = "ge_communication.110.a6"
+        response_text = "ge_sgd_portrait_change_desc.1.response"
+        response_text = "ge_sgd_portrait_change_desc.2.response"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = sgt
+                portrait = ge_suigintou
+                flag = ge_sgt_portrait_change
+                leader_flag = ge_suigintou_flag
+                portrait_key = ge_suigintou_6
+            }
+        }
+    }
+    option = {
+        name = "ge_communication.110.a61"
+        response_text = "ge_sgd_portrait_change_desc.1.response"
+        response_text = "ge_sgd_portrait_change_desc.2.response"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = sgt
+                portrait = ge_suigintou
+                flag = ge_sgt_portrait_change
+                leader_flag = ge_suigintou_flag
+                portrait_key = ge_suigintou_61
+            }
+        }
+    }
+    #option = {
+    #    name = "ge_communication.110.a7"
+    #    response_text = "ge_sgd_portrait_change_desc.1.response"
+    #    response_text = "ge_sgd_portrait_change_desc.2.response"
+    #
+    #    is_dialog_only = yes
+    #    hidden_effect = {
+    #        if = {
+    #            limit = {
+    #                any_owned_leader = {
+    #                    has_leader_flag = ge_suigintou_flag
+    #                    is_event_leader = yes
+    #                }
+    #            }
+    #        }
+    #        every_owned_leader = {
+    #            limit = {
+    #                has_leader_flag = ge_suigintou_flag
+    #            }
+    #            change_leader_portrait = ge_suigintou_7
+    #        }
+    #    }
+    #}
+    option = {
+        name = "ge_communication.110.a8"
+        response_text = "ge_sgd_portrait_change_desc.1.response"
+        response_text = "ge_sgd_portrait_change_desc.2.response"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = sgt
+                portrait = ge_suigintou
+                flag = ge_sgt_portrait_change
+                leader_flag = ge_suigintou_flag
+                portrait_key = ge_suigintou_8
+            }
+        }
+    }
+    #option = {
+    #    name = "ge_communication.110.a9"
+    #    response_text = "ge_sgd_portrait_change_desc.1.response"
+    #    response_text = "ge_sgd_portrait_change_desc.2.response"
+    #    is_dialog_only = yes
+    #    hidden_effect = {
+    #        if = {
+    #            limit = {
+    #                any_owned_leader = {
+    #                    has_leader_flag = ge_suigintou_flag
+    #                    is_event_leader = yes
+    #                }
+    #            }
+    #        }
+    #        every_owned_leader = {
+    #            limit = {
+    #                has_leader_flag = ge_suigintou_flag
+    #            }
+    #            change_leader_portrait = ge_suigintou_9
+    #        }
+    #    }
+    #}
+    option = {
+        name = "ge_communication.110.a10"
+        response_text = "ge_sgd_portrait_change_desc.1.response"
+        response_text = "ge_sgd_portrait_change_desc.2.response"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = sgt
+                portrait = ge_suigintou
+                flag = ge_sgt_portrait_change
+                leader_flag = ge_suigintou_flag
+                portrait_key = ge_suigintou_10
+            }
+        }
+    }
+
+    #option = {
+    #    name = "ge_communication.110.a12"
+    #    response_text = "ge_sgd_portrait_change_desc.1.response"
+    #    response_text = "ge_sgd_portrait_change_desc.2.response"
+    #    is_dialog_only = yes
+    #    hidden_effect = {
+    #        if = {
+    #            limit = {
+    #                any_owned_leader = {
+    #                    has_leader_flag = ge_suigintou_flag
+    #                    is_event_leader = yes
+    #                }
+    #            }
+    #        }
+    #        every_owned_leader = {
+    #            limit = {
+    #                has_leader_flag = ge_suigintou_flag
+    #            }
+    #            change_leader_portrait = ge_suigintou_12
+    #        }
+    #    }
+    #}
+    #option = {
+    #    name = "ge_communication.110.a13"
+    #    response_text = "ge_sgd_portrait_change_desc.1.response"
+    #    response_text = "ge_sgd_portrait_change_desc.2.response"
+    #    is_dialog_only = yes
+    #    hidden_effect = {
+    #        if = {
+    #            limit = {
+    #                any_owned_leader = {
+    #                    has_leader_flag = ge_suigintou_flag
+    #                    is_event_leader = yes
+    #                }
+    #            }
+    #        }
+    #        every_owned_leader = {
+    #            limit = {
+    #                has_leader_flag = ge_suigintou_flag
+    #            }
+    #            change_leader_portrait = ge_suigintou_13
+    #        }
+    #    }
+    #}
+
+    option = {
+        name = "ge_communication.110.a15"
+        response_text = "ge_sgd_portrait_change_desc.1.response"
+        response_text = "ge_sgd_portrait_change_desc.2.response"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = sgt
+                portrait = ge_suigintou
+                flag = ge_sgt_portrait_change
+                leader_flag = ge_suigintou_flag
+                portrait_key = ge_suigintou_15
+            }
+        }
+    }
+    option = {
+        name = "ge_communication.110.s1"
+        response_text = "ge_sgd_portrait_change_desc.1.response"
+        response_text = "ge_sgd_portrait_change_desc.2.response"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = sgt
+                portrait = ge_suigintou
+                flag = ge_sgt_portrait_change
+                leader_flag = ge_suigintou_flag
+                portrait_key = ge_suigintou_14
+            }
+        }
+    }
+    option = {
+        name = "ge_communication.110.sp1"
+        response_text = "ge_sgd_portrait_change_desc.sp1.response"
+        default_hide_option = yes
+        is_dialog_only = yes
+        trigger = {
+            OR = {
+                check_variable = {
+                    which = ge_leader_aft_sgt
+                    value > 90
+                }
+                has_country_flag = ge_suigintou_sp1_event
+            }
+        }
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = sgt
+                portrait = ge_suigintou
+                flag = ge_sgt_portrait_change
+                leader_flag = ge_suigintou_flag
+                portrait_key = ge_suigintou_sp1
+            }
+        }
+    }
+    option = {	#婚纱
+        name = "ge_communication.110.sp2"
+        response_text = "ge_sgd_portrait_change_desc.sp2.response"
+        default_hide_option = yes
+        is_dialog_only = yes
+        trigger = {
+            check_variable = {
+                which = ge_leader_aft_sgt
+                value > 90
+            }
+            #always = no
+        }
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = sgt
+                portrait = ge_suigintou
+                flag = ge_sgt_portrait_change
+                leader_flag = ge_suigintou_flag
+                portrait_key = ge_suigintou_sp2
+            }
+        }
+    }
+    option = {
+        #退出换装
+        name = "ge_communication.110.00"
+        default_hide_option = yes
+        hidden_effect = {
+           #remove_country_flag = suigintou_diplomacy_activated
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

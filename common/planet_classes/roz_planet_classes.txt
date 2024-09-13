@@ -1,0 +1,90 @@
+# 
+pc_roz_YS_planet = {
+	entity = "shroud_planet"
+	entity_scale = 6
+	fixed_entity_scale = yes
+	icon = GFX_planet_type_shrouded
+	#picture = "pc_roz_YS_planet_sky"
+	atmosphere_color		= hsv { 0.0 0.9 0.45	}		#DONE
+	atmosphere_intensity	= 0.5
+	atmosphere_width		= 1.5
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_tropical.dds"
+
+	modifier = {
+		habitability_ceil_add = 1
+		habitability_floor_add = 1
+		planet_jobs_produces_mult = 0.25
+		biological_pop_happiness = -0.25
+		#planet_stability_high = 0.65
+		planet_stability_add = -20
+	}
+
+	#min_distance_from_sun = 60
+	#max_distance_from_sun = 95
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	can_be_moon = no
+	#chance_of_ring = 0.2
+
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	#moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
+	colonizable = yes
+	district_set = standard
+	#ideal = yes
+	starting_planet = no
+	carry_cap_per_free_district = 25
+	#uses_alternative_skies_for_moons = no
+	#uses_alternative_skies_if_has_orbital_ring = no
+
+}
+
+pc_roz_YS_planet_cant_colony = {
+	entity = "shroud_planet"
+	entity_scale = 6
+	fixed_entity_scale = yes
+	icon = GFX_planet_type_shrouded
+	#picture = "pc_roz_YS_planet_sky"
+	atmosphere_color		= hsv { 0.0 0.9 0.45	}		#DONE
+	atmosphere_intensity	= 0.5
+	atmosphere_width		= 1.5
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_tropical.dds"
+
+	#modifier = {
+	#	habitability_ceil_add = 1
+	#	habitability_floor_add = 1
+	#	planet_jobs_produces_mult = 0.10
+	#	biological_pop_happiness = -0.25
+	#	lithoid_pop_happiness = -0.25
+	#	#planet_stability_high = 0.65
+	#	planet_stability_add = -20
+	#}
+
+	#min_distance_from_sun = 60
+	#max_distance_from_sun = 95
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	can_be_moon = no
+	#chance_of_ring = 0.2
+
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	#moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
+	colonizable = no
+	#district_set = standard
+	#ideal = yes
+	starting_planet = no
+	#carry_cap_per_free_district = 25
+	#uses_alternative_skies_for_moons = no
+	#uses_alternative_skies_if_has_orbital_ring = no
+
+}
+
+
+

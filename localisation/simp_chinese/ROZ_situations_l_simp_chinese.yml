@@ -1,0 +1,192 @@
+﻿l_simp_chinese:
+
+#################
+#################situations
+ ##krks invasion
+ kirakishou_planet_invasion_situation_type: "[Target.GetName]的异动"
+ kirakishou_planet_invasion_situation: "[Target.GetName]的异动"
+ krks_pi_situ_ges: "前线基地人员向N之领域误发射的那段强烈的脉冲信号像是打开了潘多拉魔盒，我们似乎引来了个神秘之客。（纸屑没有人权的.jpg）"
+ krks_pi_situ_standard: "前线基地人员向N之领域误发射的那段强烈的脉冲信号像是打开了潘多拉魔盒，我们似乎引来了个神秘之客。"
+ krks_pi_situ_early: "前段时间N之领域中侦测到的奇怪新号似乎是某位神秘之客来临的预兆，但她似乎不是带着友好来的……"
+ krks_pis_complete_ct: "[Target.GetName]的稳定将受到挑战。"
+ krks_pis_fail_ct: "由雪华绮晶造成的异常事件将平息。获得修正：星球凝聚力产出 £unity£ §B+25%§!"
+
+ kr_defcon_5: "谣言鹊起"
+ stage_ct_kr_defcon_5: "此时平平无奇？"
+
+ kr_defcon_4: "风声鹤唳"
+ stage_ct_kr_defcon_4: "和一帮虫豸在一起怎么处理得好突发事件呢。"
+
+ kr_defcon_3: "失控开端"
+ stage_ct_kr_defcon_3: "很明显，雪华绮晶就是罪魁祸首，她已经开始侵蚀现实世界了。"
+
+ kr_defcon_2: "威胁扩散"
+ stage_ct_kr_defcon_2: "雪华绮晶似乎对[Target.GetName]的民众释放了一种精神瘟疫，使得他们变得异常躁动。"
+
+ kr_defcon_1: "最高戒备"
+ stage_ct_kr_defcon_1: "我们必须时刻防备雪华绮晶对[Target.GetName]的全面进攻"
+
+ kr_before_the_storm: "风暴前夕"
+ stage_ct_kr_before_the_storm: "屋漏偏逢连夜雨，船迟又遇打头风。别的殖民地也开始出现某种入侵征兆了……"
+
+ krks_pis_mp_lv1: "DEFCON5"
+ krks_pis_mp_lv2: "DEFCON4"
+ krks_pis_mp_lv3: "DEFCON3"
+ krks_pis_mp_lv4: "DEFCON2"
+ krks_pis_mp_lv5: "DEFCON1"
+ krks_pis_mp_lvMAX: "暴动"
+
+ krks_pis_mp_purge: "基层治理遭遇严峻挑战……"
+
+ krks_pi_approach_block_message: "封锁消息"
+ krks_pi_approach_block_message_ct: "当一个社会舆论爆发的时候，如果我们没有掌握实际情报和真实信息（即使掌握了），先把舆论消息封锁并压低社会讨论热度不失为一种有效办法。只是一手难遮两耳风，以长期角度考虑这并不是一个稳妥的方案。"
+ krks_pi_approach_keep_order: "维持基本治安"
+ krks_pi_approach_keep_order_ct: "事态的发展有些超出预计，我们很快就得面对即将到来的社会动荡了。"
+ kirakishou_planet_invasion_situation_monthly_change_tooltip: ""
+
+ ###battle
+
+ krks_bf_situation_desc: "这里是雪华绮晶决战的信息界面"
+ kirakishou_battle_field_situation_type: "BOSS战 - §P雪华绮晶§!"
+ kirakishou_battle_field_situation: "BOSS战 - §P雪华绮晶§!"
+ krks_bf_lose_ct: ""
+
+ kr_bf_stage_5: "一阶段"
+ kr_bf_stage_4: "二阶段"
+ kr_bf_stage_3: "三阶段"
+ #kr_bf_stage_2: "四阶段"
+ kr_bf_stage_1: "四阶段"
+
+ krks_bf_approach_1: "竭尽"
+ krks_bf_approach_2: "全力"
+
+ ####sgt flagship situ
+ sgt_flagship_exploration_situation: "诡异暗影"
+ sgt_flagship_exploration_situation_text: "这艘神秘舰船毫不起眼的漆黑外貌与灯火通明的内部环境给探索队留下了深刻的反差印象，使得她被队员们调侃为“害羞的姑娘”. 初期的探索表明这艘舰船的科技含量远超现有水平，尤其是那个广场中央的蓝水晶十字架，探索队初步猜测这是某种庞大的标志性建筑. 后续线索还待更多的发掘。"
+
+ sgt_flagship_stage_1: "全舰探索度20%"
+ sgt_flagship_stage_1_ct: "探索队已经探索了这艘庞大战舰20%的区域了。"
+ sgt_flagship_stage_2: "全舰探索度40%"
+ sgt_flagship_stage_2_ct: "探索队已经探索了这艘庞大战舰40%的区域了。"
+ sgt_flagship_stage_3: "全舰探索度60%"
+ sgt_flagship_stage_3_ct: "探索队已经探索了这艘庞大战舰60%的区域了。"
+ sgt_flagship_stage_4: "全舰探索度80%"
+ sgt_flagship_stage_4_ct: "这艘庞大战舰80%的区域已经探索完毕，我们很快就可以揭开这艘舰船的秘密了。"
+ sgt_flagship_stage_5: "全舰探索度100%"
+ sgt_flagship_stage_5_ct: "我们已经将这艘船完全探索完毕了。"
+
+ sgt_flagship_exploration_situation_complete_ct: ""
+ sgt_flagship_exploration_situation_fail_ct: "这种没什么危险性的探索任务怎么可能还会失败呢？"
+ sgt_flagship_exploration_situation_monthly_change_tooltip: ""
+ roz_increse_of_budget_for_the_situation: "为探索队调拨预算"
+ roz_increse_of_budget_for_the_situation_onsel_ct: "想让探索队996吗？得加钱！"
+ roz_increse_of_budget_approach: "“我才不想整天在这里跟这堆完全看不懂的仪器大眼瞪小眼！但是他们给的太多了……”"
+ roz_assign_suigintou_to_unknowship_site: "指派水银灯协助探索"
+ roz_assign_suigintou_to_unknowship_site_tooltip: "水银灯了解到这个神秘飞船的探索项目后提出了协助请求. 按照她的说法，这艘飞船有种让她十分熟悉的感觉。"
+ roz_assign_suigintou_to_unknowship_site_approach: "§M“这艘船使用的能源形式让我感到熟悉……但是她的外观风格不对啊，就应该长成棺材的样子！”§!"
+
+ roz_unknowship_sgt_base_approach: ""
+ roz_unknowship_site_abort: "暂停探索任务"
+ roz_unknowship_site_abort_tooltip: "暂时别管这里了，反正也没有什么进展……"
+ roz_unknowship_site_abort_approach: "“大本钟下寄快递，上面摆下面寄~”"
+
+ ####state grid crisis
+
+ roz_ves_state_grid_shock_situation: "§R燃眉之急：重建能源中枢§!"
+ roz_ves_state_grid_crisis_hard_situation_text: "为了给零点反应堆供能，国家电网的输电中心和能源总管道遭受了巨大冲击，这次的能量输送已经明显超过了它们的设计上限。能源中枢的严重损坏给国内的经济生产造成了极大影响，而首都星球更是史无前例的陷入严重的能源危机之中，了我们应当立即组织开展应急行动。"
+ roz_ves_state_grid_crisis_normal_situation_text: "为了给暗物质反应堆供能，国家电网的输电中心和能源总管道遭受了冲击，所幸损失还在可接受范围内。现在能源中枢的部分失能还未对全国能源线路造成范围性影响，我们应当尽快开展恢复工作。"
+
+ roz_ves_state_grid_shock_situation_complete_ct: "我们终于完成了能源中枢的恢复工作，并且顺利兼容了我们的虚空反应堆，如今我们的社会将步入蒸蒸日上的道路。"
+ roz_ves_state_grid_shock_situation_fail_ct: "看来我们将在相当长一段时间里都要过着能源短缺的日子了……"
+
+ roz_grid_crisis_stage_1: "前期准备工作"
+ roz_grid_crisis_stage_2: "重建能源调度中心"
+ roz_grid_crisis_stage_3: "重建能源传输总线"
+ roz_grid_crisis_stage_4: "虚空反应堆并网"
+
+ roz_grid_crisis_stage_1_ct: "前期准备工作"
+ roz_grid_crisis_stage_2_ct: "重建能源调度中心"
+ roz_grid_crisis_stage_3_ct: "重建能源传输总线"
+ roz_grid_crisis_stage_4_ct: "虚空反应堆并网"
+
+ roz_invest_more_in_resources: "科学院协助"
+ roz_roz_invest_more_in_resources_ct: "能源中枢的重建和对虚空反应堆的兼容离不开国家科学院的协助"
+ roz_invest_more_in_resources_approach: "这都是值得的"
+
+ roz_sgc_stability_over_all: ""
+ roz_sgc_stability_over_all_ct: ""
+ roz_sgc_stability_over_all_approach: ""
+
+ roz_sgc_abort: "搁置计划"
+ roz_sgc_abort_tooltip: "我们现在还有更重要的事情要做，已经没有余力再调拨额外资源来重建电网了……"
+ roz_sgc_abort_approach: "“再苦一苦老百姓”"
+
+ roz_sgc_dm_approach: "受损程度尚在可控范围内"
+ roz_sgc_selection_1: "Time waits for no man."
+ roz_sgc_selection_2: "Time is on our side."
+ roz_sgc_selection_3: "All in!"
+
+roz_ves_state_grid_shock_situation_monthly_change_tooltip:""
+roz_ves_state_grid_shock_situaiton_type:"能源危机的负面影响"
+ mod_roz_ves_state_grid_shock_situaiton_type:"能源危机的负面影响"
+
+#######局势：制作真红
+ roz_shuukan_shoujonotsukurikata_situation:"周刊——少女的制作方法"
+ roz_shuukan_shoujonotsukurikata_situation_type:"周刊——少女的制作方法"
+ roz_shuukan_shoujonotsukurikata_text:"虽然写的是周刊，但每次送来的时间都不统一，或许寄件地的时间流速和我们的不一样？"
+ roz_shuukan_shoujonotsukurikata_situation_complete_ct:"请不要对她做什么失礼的事情哦，小心被拍脸~"
+ roz_shuukan_shoujonotsukurikata_situation_fail_ct:"您是把周刊弄丢了吗？"
+
+ roz_shuukan_stage_1: "第一期"
+ roz_shuukan_stage_1_ct: "创刊纪念"
+ roz_shuukan_stage_2: "第二期"
+ roz_shuukan_stage_2_ct: "特别附录"
+ roz_shuukan_stage_3: "第三期"
+ roz_shuukan_stage_3_ct: "グウスアイにこだわる"
+ roz_shuukan_stage_4: "第四期"
+ roz_shuukan_stage_4_ct: "ツールの数々"
+ roz_shuukan_stage_5: "第五期"
+ roz_shuukan_stage_5_ct: "コスメティック"
+ roz_shuukan_stage_6: "第六期"
+ roz_shuukan_stage_6_ct: "レース　糸の織りなす魔力"
+ roz_shuukan_stage_7: "第七期"
+ roz_shuukan_stage_7_ct: "ドリワースのすべて"
+ roz_shuukan_stage_8: "第八期"
+ roz_shuukan_stage_8_ct: "“ウィック”の秘密"
+ roz_shuukan_stage_9: "第？期"
+ roz_shuukan_stage_9_ct: "アクセ……"
+ roz_shuukan_stage_10: "？？？"
+ roz_shuukan_stage_10_ct: ""
+
+ roz_shuukan_approach:"订阅周刊"
+ roz_shuukan_approach_onselect_ct:""
+
+#############真红的苏醒
+###########局势：解析蔷薇圣母
+ roz_awaken_of_shinku_1_acknowledge_border:"解析蔷薇圣母"
+ roz_awaken_of_shinku_1_acknowledge_border_desc:"我们不可能将蔷薇少女的真品蔷薇圣母提取出来以供研究，科研团队退而求其次，选择水银灯女士引进的炼金人偶技术线上批量生产的赝品蔷薇圣母作为研究对象，并结合樱田纯给出的蔷薇圣母相关技术资料，尝试进行技术解析；另外，N之领域探险队也已整装待发，随时奔赴新的未知世界......谁也不知道技术黑箱中究竟能掏出什么东西，也许上帝并不掷骰子，祂抽卡池。\n\n\n§C注：该局势进行时，每月获取一次研究成果，并根据阶段调整奖励池概率。§!"
+ roz_awaken_of_shinku_1_acknowledge_border_1_approach:"细翻深耕"
+ roz_roz_awaken_of_shinku_1_acknowledge_border_1_approach_onselect_ct:"时间、资源和待遇都不是问题，慢工出细活，任何琐碎的发现都不放过！"
+ roz_awaken_of_shinku_1_acknowledge_border_2_approach: "正常研究"
+ roz_roz_awaken_of_shinku_1_acknowledge_border_2_approach_onselect_ct: "按部就班，合理推进，不过研究总得有个轻重缓急，有些不重要的就搁置了吧。"
+ roz_awaken_of_shinku_1_acknowledge_border_3_approach: "囫囵吞枣"
+ roz_roz_awaken_of_shinku_1_acknowledge_border_3_approach_onselect_ct: "时间是最宝贵的资源，我们应该加快速度，直奔核心问题。"
+ roz_awaken_of_shinku_1_acknowledge_border_4_approach: "暂停项目"
+ roz_roz_awaken_of_shinku_1_acknowledge_border_4_approach_onselect_ct: "暂停计划也是计划的一部分，当然产出也跟着暂停了。"
+
+ roz_awaken_of_shinku_1_acknowledge_border_stage_1_ct:"基本的研究框架和理论模型已经建立，这将是后续工作的基础。降低月度报告中负面事件的概率。"
+ roz_awaken_of_shinku_1_acknowledge_border_stage_2_ct:"科研团队确定了几个值得研究的大方向，我们的资源可以得到更加有效的使用。降低月度报告中无事件的概率。"
+ roz_awaken_of_shinku_1_acknowledge_border_stage_3_ct:"在几个方向的努力都成果喜人，现在我们需要的是融会贯通。提高月度报告中各种正面事件的概率。"
+ roz_awaken_of_shinku_1_acknowledge_border_stage_4_ct:"我们已经取得许多突破性进展，更加广阔的前景等待着我们。进一步提高月度报告中各种正面事件的概率。"
+ roz_awaken_of_shinku_1_acknowledge_border_stage_end_ct:"无人知晓道路的尽头究竟会有怎样的机遇与危机。"
+
+ roz_awaken_of_shinku_1_acknowledge_border_rosa_analysis_negative_flag:"学术不端"
+
+
+
+
+
+
+
+
+

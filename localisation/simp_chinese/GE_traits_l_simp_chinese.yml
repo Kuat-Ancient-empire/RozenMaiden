@@ -1,0 +1,187 @@
+﻿l_simp_chinese:
+
+##   :0 ""
+##   _desc:0 ""
+
+##########species
+trait_cor_great_culture:0 "博大文化"
+trait_cor_great_culture_desc:0 ""
+
+trait_cor_dragon_totem:0 "升腾者"
+trait_cor_dragon_totem_desc:0 ""
+
+trait_cor_transpierce:0 "彻甲惊雷"
+trait_cor_transpierce_desc:0 ""
+
+trait_cor_ingenios:0 "巧夺天工"
+trait_cor_ingenios_desc:0 ""
+
+trait_cor_grand_wisdom:0 "天智"
+trait_cor_grand_wisdom_desc:0 ""
+
+########leader
+##################################
+
+############### 统治者 ###############
+
+leader_trait_ge_ruler_star_light:0 "星耀之光"
+leader_trait_ge_ruler_star_light_desc:0 "传奇魔法师职位——星耀之光"
+
+leader_trait_ge_ruler_bond:0 "升腾者"
+leader_trait_ge_ruler_bond_desc:0 ""
+
+leader_trait_ge_ruler_Black_Rose:0 "黑蔷薇"
+leader_trait_ge_ruler_Black_Rose_desc:0 ""
+
+############### 总督 ###############
+
+leader_trait_ge_dominator:0 "首长负责制"
+leader_trait_ge_dominator_desc:0 "各级政府及其部门的首长在民主讨论的基础上，对本行政组织所管辖的重要事务具有最后决策权，并对此全面负责。"
+
+
+
+
+
+############### 舰队司令 ###############
+leader_trait_ge_cor_admiral:0 "神州意志"
+leader_trait_ge_cor_admiral_desc:0 "神州的意志连接着我们！"
+
+leader_trait_ge_time_freeze:0 "§B时间静止§!"
+leader_trait_ge_time_freeze_desc:0 "§R舰队接敌时会静止敌方舰队一切活动（除了光环buff），关闭其护盾发生器，装甲减成50%，时间持续30天。§!\n§B“Time is on our side.”§!"
+
+leader_trait_ge_mercury_lamp:0 "§M水银灯§!"
+leader_trait_ge_mercury_lamp_desc:0 "\n\n\n\n\n£roz_traits_pic_suigintou_1£\n\n\n\n\n\n蔷薇少女第一人偶，曾为了成为爱丽丝而坚决地与其余人偶进行战斗。水银灯是一位卓越的统帅，她擅长对敌进行机动火力覆盖，但是准头有些捉急。\n§g技能：战斗开始时，舰队命中和追踪-15，持续1天§!"
+leader_trait_ge_Blackwinged_Dragon:0 "黑羽龙"
+leader_trait_ge_Blackwinged_Dragon_desc:0 "§B战斗开始时，舰队§!§R射速-50%§B，武器伤害提高75%，射程提高25%，§!\n技能：战斗中每20天触发一次，每次持续10天，。"
+leader_trait_ge_azoth:0 "水银剑"
+leader_trait_ge_azoth_desc:0 "§B技能：战斗开始时，舰队获得双穿+100%（武器有穿透效果的才有效）、船体伤害+25%的增益，持续40天。§!"
+leader_trait_ge_N_field:0 "N之领域"
+leader_trait_ge_N_field_desc:0 "与现实世界连接且互为表里的虚幻空间，在这里，蔷薇少女们掌握着近似创造的权柄，同时她们在自己的N之领域中战斗能力将得到提升。\n§B技能：战斗开始时，我方舰队每日装甲和护盾回复1%，船体回复0.5%。§!\n§R战斗开始时，敌方舰队每日装甲护盾减成15%且回复-1%，精度和追踪-15，舰队脱离几率-75%。§!\n§G效果持续120天。§!"
+
+leader_trait_ge_meimei:0 "人工精灵：冥冥"
+leader_trait_ge_meimei_desc:0 ""
+
+ ######################
+ #雪华绮晶
+ leader_trait_roz_kirakishou_main: "§P雪华绮晶§!"
+ leader_trait_roz_kirakishou_main_desc: "蔷薇少女第七人偶。\n雪华绮晶是一个可怜的孩子，作为蔷薇少女中最特殊的人偶，原本的她在诞生之初便是不完整的——只有灵魂没有身体，这也导致了她性格上的扭曲与偏执，她渴望能有一具属于她的身体，她渴望能像其他的蔷薇少女那样生活在现实中，她渴望能被关爱……雪华绮晶的身世导致她曾经犯下不少过错，但如今命运的轨迹开始转折，她再次获得了新的媒介……以及新的开始。\n由于雪华绮晶的蔷薇圣母在先天上的缺陷以及本身过高的位格，她仍需要大量进食众生的灵魂力量来对抗饥饿感. 对于雪华绮晶来说把一个生物的灵魂吃干抹净完全不会产生什么心理负担，这个有些骇人的行为就像吃面包一样……"
+ leader_trait_kirakishou_gov_tt: "雪华绮晶目前的职位是行政官"
+ leader_trait_kirakishou_gen_tt:　"雪华绮晶目前的职位是指挥官"
+ #leader_trait_kirakishou_adm_tt:　"雪华绮晶目前的职位是舰队司令"
+
+ leader_trait_roz_kirakishou_nightmare: "§R纯白梦魇§!"
+ leader_trait_roz_kirakishou_nightmare_desc: "雪华绮晶有着无与伦比的心灵天赋，她通过入梦或催眠的方式侵入目标的精神世界，篡改目标潜意识，读取目标的想法，支配目标的意志……甚至直接将目标拖入梦境迷宫中，借由潜意识大海淹没目标的心智，摧毁目标的灵性，致使目标失控癫狂。§R唯一的缺点就是会使自己的心理状态受到些许不成气候的影响，然而这一状况却在她被堕落星神污染后加重了……§!\n"
+
+ leader_trait_ge_mind_drain: "§H广域精神榨取§!"
+ leader_trait_ge_mind_drain_desc: "§W技能：战斗开始后，该恒星系内除了己方外的所有舰船的(包括盟友和中立单位)§!§R命中和追踪将无效化§!，效果将持续§P20天§!. §!\n\n雪华绮晶能通过N之领域影响潜意识大海，将自身指定的精神污染化成心灵风暴，不断冲击敌人的意识岛屿，有效地摧毁心灵屏障，这不仅使得她可以伤害敌人的灵体，强烈的灵能干扰还能影响舰载设备和人工智能的正常运作。然而雪华绮晶的眼中只有你和她的姐姐们，能劝说她来庇护我方舰队已经是极限了，因此她毫不在意我们的盟友和那些无辜的围观人员是否会躺着中枪……"
+
+ ############### 陆军司令 ###############
+
+leader_trait_cor_baikun_power_plant:0 "白坤电网"
+leader_trait_cor_baikun_power_plant_desc:0 ""
+
+leader_trait_ge_cor_general:0 "一体化联合作战"
+leader_trait_ge_cor_general_desc:0 "除了常规的行星登陆作战，这位将领还拥有调度太空舰队进行轨道炮击支援的权限"
+
+############### 科学家 ###############
+
+leader_trait_ge_cor_scientist:0 "十项全能"
+leader_trait_ge_cor_scientist_desc:0 ""
+
+leader_trait_ge_mercury_lamp_scientist:0 "§M水银灯§!"
+leader_trait_ge_mercury_lamp_scientist_desc:0 "\n\n\n\n\n£roz_traits_pic_suigintou_1£\n\n\n\n\n\n蔷薇少女第一人偶。\n虽然看上去她只有十几岁，但是实际上是十分古老的存在，她在漫长岁月中积累下来的见识能帮助我们在科学探索领域攻坚克难。\n\n当水银灯位于内阁中时，每§B5年§!可研究完成§B1~3项§!科技，获得科技数量与水银灯当前探索过的星球数量挂钩，当探索量§H小于等于50§!时，每次获得§H1项§!新科技;当探索量§H小于等于100§!时，每次获得§H2项§!新科技;当探索量§H大于100§!时，每次获得§H3项§!新科技。当研究完所有可研究科技时，转为获得循环科技。若当前研究的科技为其他mod科技则增加一定的科研点数。"
+#其中§H31%§!概率获得§GT2科技§!的§H15%§!进度；§H21%§!的概率获得§BT3科技§!的§H15%进度；§H11%§!的概率获得§MT4科技§!的§H15%§!进度，§H2%§!的概率获得§RT5科技§!§H15%§!的进度。§!§R35%的概率将不会获得额外进度。§!
+
+leader_trait_ge_N_field_scientist:0 "N之领域"
+leader_trait_ge_N_field_scientist_desc:0 "与现实世界连接且互为表里的虚幻空间，这里优秀的实验环境给国家科研机构带来了极大的便利. 同时水银灯可以利用自己的N之领域增强科研船性能的同时通过N之领域传送门来瞬移外星土特产. 虽然这有些费时，但是在科技展览会展出的这些千奇百态的土特产能提振国民的对太空探索的热情. \n§B当水银灯进行星系探索时，每探索完一个星球，都将获得3xN点凝聚力和0.2xN单位的稀有文物。§!§c（系数N为水银灯已经探索的星球的数量）§!\n\n§Y水银灯至今已探索[event_target:ge_suigintou_owner0.ge_sgt_survey_count]个星球.§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+leader_trait_ge_meimei_scientist:0 "人工精灵：冥冥"
+leader_trait_ge_meimei_scientist_desc:0 "人工精灵如同使魔一般的存在，它们是蔷薇少女不可或缺的帮手。"
+
+ leader_trait_roz_battered: "心理阴影"
+ leader_trait_roz_battered_desc: "这位科学家曾遭遇极为可怕的变故，这使得他宁愿走马观花也不愿意去接触任何异常事件了。"
+
+
+
+
+
+
+
+###############################
+#######      好感度     ########
+###############################
+
+###舰队司令
+leader_trait_ge_admiral_a_strangeness:0 "陌生"
+leader_trait_ge_admiral_a_strangeness_desc:0 "她初来乍到，对我们还不太熟悉。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+leader_trait_ge_admiral_a_friendly:0 "友好"
+leader_trait_ge_admiral_a_friendly_desc:0 "她逐渐认可了你，并把你视作好朋友。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+leader_trait_ge_admiral_a_like:0 "喜欢"
+leader_trait_ge_admiral_a_like_desc:0 "你们之间的关系逐渐加深，现在她只要待在你身边就会觉得很开心。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+leader_trait_ge_admiral_a_love:0 "爱意"
+leader_trait_ge_admiral_a_love_desc:0 "对蔷薇少女们来说，哪怕是死亡也无法动摇她们与你的感情。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+###科学家
+leader_trait_ge_scientist_a_strangeness:0 "陌生"
+leader_trait_ge_scientist_a_strangeness_desc:0 "她初来乍到，对我们还不太熟悉。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+leader_trait_ge_scientist_a_friendly:0 "友好"
+leader_trait_ge_scientist_a_friendly_desc:0 "她逐渐认可了你，并把你视作好朋友。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+leader_trait_ge_scientist_a_like:0 "喜欢"
+leader_trait_ge_scientist_a_like_desc:0 "你们之间的关系逐渐加深，现在她只要待在你身边就会觉得很开心。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+leader_trait_ge_scientist_a_love:0 "爱意"
+leader_trait_ge_scientist_a_love_desc:0 "对蔷薇少女们来说，哪怕是死亡也无法动摇她们与你的感情。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+ ################################################
+ ##########雪华绮晶
+ ###总督
+ leader_trait_krks_governor_a_like:0 "喜欢"
+ leader_trait_krks_governor_a_like_desc:0 "猛烈而深刻爱并不是所有人都可以承受的。\n\n§d目前雪华绮晶的好感度为: [event_target:ge_suigintou_owner0.roz_leader_aft_krks_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+ leader_trait_krks_governor_a_love:0 "爱意"
+ leader_trait_krks_governor_a_love_desc:0 "§R病名为爱§!\n\n§d目前雪华绮晶的好感度为: [event_target:ge_suigintou_owner0.roz_leader_aft_krks_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+ ###将军
+ leader_trait_krks_general_a_like:0 "喜欢"
+ leader_trait_krks_general_a_like_desc:0 "猛烈而深刻爱并不是所有人都可以承受的。\n\n§d目前雪华绮晶的好感度为: [event_target:ge_suigintou_owner0.roz_leader_aft_krks_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+ leader_trait_krks_general_a_love:0 "爱意"
+ leader_trait_krks_general_a_love_desc:0 "§R病名为爱§!\n\n§d目前雪华绮晶的好感度为: [event_target:ge_suigintou_owner0.roz_leader_aft_krks_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+############################################
+
+ suigintou_leader_trait:1 "§M命定特质§!"
+ suigintou_admiral_trait:1 "§M命定特质§!\n£admiral£§c舰队司令类别§!"
+ suigintou_scientist_trait:1 "§M命定特质§!\n£scientist£§c科学家类别§!"
+
+ leader_trait_suigintou_1_tt:0 "$THIS_LEADER_TXT$：§L\n$t$$mod_species_leader_exp_gain$：§V+35%§!§!\n$roz_adventurous_spirit_not_on_council$"
+ roz_adventurous_spirit_not_on_council:0 "$t$§R目前水银灯不在内阁中，这个特质的一些效果会无效。§!"
+ leader_trait_suigintou_2_tt: "$THIS_LEADER_TXT$：§L \n$t$$mod_leaders_upkeep_mult$：§V-50%§! \n$t$$MOD_SHIP_ARCHAEOLOGICAL_SITE_EXCAVATION_SPEED_MULT$：§V+30%§! \n$t$$MOD_SHIP_ARCHAEOLOGICAL_SITE_CLUES_ADD$：§V+3§!  §!\n$roz_adventurous_spirit_on_council$"
+ roz_adventurous_spirit_on_council:0 "$t$§R目前水银灯身居内阁，这个特质的一些效果会无效。§!"
+
+ leader_trait_suigintou_adm_1_tt: "$THIS_LEADER_TXT$：§L \n$t$$MOD_SHIP_TRACKING_ADD$：§V-15§! \n$t$$MOD_SHIP_ACCURACY_ADD$：§V-15§! \n$t$$MOD_SHIP_FIRE_RATE_MULT$：§V+25§! §!\n$roz_adventurous_spirit_on_council$"
+
+
+##############vanilla
+
+ councilor_trait:1 "§c领袖特质§!\n£council£理事会" # [LocEditor:ForFutureBatchExport]
+ leader_trait:0 "§c领袖特质§!"
+ admiral_trait:1 "§c领袖特质§!\n£admiral£舰队司令类别"
+ general_trait:1 "§c领袖特质§!\n£general£陆军将领类别"
+ scientist_trait:1 "§c领袖特质§!\n£scientist£科学家类别"
+ governor_trait:1 "§c领袖特质§!\n£governor£总督类别"
+ ruler_trait:0 "统治者特质"
+
+
+########################
+
+ leader_trait_ge_mercury_lamp_title:0 "§r命定特质§!（£council£）"
+
+
+
+
+
+

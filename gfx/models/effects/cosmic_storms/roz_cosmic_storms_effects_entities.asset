@@ -1,0 +1,132 @@
+entity = {
+    name = "chronos_storm_entity"
+    locator = { name = "core" position = { 0 -5 0 }}
+    scale = 35
+    attach = { "core" = "chronos_lightning_entity" }
+    attach = { "core" = "chronos_storm_mesh_entity" }
+    attach = { "core" = "chronos_wisp1_entity" }
+    attach = { "core" = "chronos_wisp2_entity" }
+
+
+    default_state = "idle"
+    state = { name = "idle" 		state_time = 5
+        event = { time = 0 node = "core" particle = "nexus_storm_1_effect" keep_particle = yes trigger_once = yes }
+        start_event = {
+            trigger_once = yes
+            sound = { soundeffect = "sfx_amb_nexus_storm" }
+        }
+    }
+
+    cull_radius = 20000
+}
+entity = {
+    name = "chronos_lightning_entity"
+    pdxmesh = "chronos_lightning_mesh"
+    locator = { name = "root" position = { 0 -45 0 }}
+
+
+    game_data = {
+
+        bloom_factor			= .8
+        uv_animation_speed 		= .365
+        uv_animation_direction 	= { -1 .04 }
+    }
+
+
+    scale = 1
+    erosion_in = 2
+    erosion_out = 2
+
+    default_state = "idle"
+
+
+    cull_radius = 20000
+}
+
+entity = {
+    name = "chronos_storm_mesh_entity"
+    pdxmesh = "chronos_storm_mesh"
+    locator = { name = "root" position = { 0 0 0 }}
+
+    game_data = {
+        shader_type = VFX
+
+        bloom_factor			= .6
+        uv_animation_speed 		= .02
+        uv_animation_direction 	= { 1 .5 }
+
+        wpo_animation_speed = 0.04
+        wpo_animation_direction = { 0.2 1.0 }
+        wpo_animation_scale = 1.0
+        wpo_animation_big_scale = .5
+        wpo_animation_offset_strength = 8
+    }
+
+    scale = .8
+    erosion_in = 2
+    erosion_out = 2
+
+    default_state = "idle"
+
+    cull_radius = 20000
+}
+
+entity = {
+    name = "chronos_wisp1_entity"
+    pdxmesh = "chronos_wisp1_mesh"
+    locator = { name = "root" position = { 0 -55 0 }}
+
+
+    game_data = {
+
+        shader_type = VFX
+
+        bloom_factor			= .8
+        uv_animation_speed 		= .006
+        uv_animation_direction 	= { -1 0 }
+
+        wpo_animation_speed = 0.06
+        wpo_animation_direction = { 0.2 1.0 }
+        wpo_animation_scale = 1.0
+        wpo_animation_big_scale = 1
+        wpo_animation_offset_strength = 10
+    }
+
+    scale = .8
+    erosion_in = 2
+    erosion_out = 2
+
+    default_state = "idle"
+
+    cull_radius = 20000
+}
+
+entity = {
+    name = "chronos_wisp2_entity"
+    pdxmesh = "chronos_wisp2_mesh"
+    locator = { name = "root" position = { 0 -55 0 }}
+
+
+    game_data = {
+
+        shader_type = VFX
+
+        bloom_factor			= .8
+        uv_animation_speed 		= .006
+        uv_animation_direction 	= { -1 0 }
+
+        wpo_animation_speed = 0.06
+        wpo_animation_direction = { 0.2 1.0 }
+        wpo_animation_scale = 1.0
+        wpo_animation_big_scale = 1
+        wpo_animation_offset_strength = 10
+    }
+
+    scale = .8
+    erosion_in = 2
+    erosion_out = 2
+
+    default_state = "idle"
+
+    cull_radius = 20000
+}

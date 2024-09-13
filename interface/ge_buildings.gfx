@@ -1,0 +1,12 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "building_ge_paradox_origin"
+	  	texturefile = "gfx/interface/icons/buildings/building_ge_paradox_origin.dds"
+	}
+	spriteType = {
+		name = "building_roz_power_core"
+		texturefile = "gfx/interface/icons/buildings/building_roz_power_core.dds"
+	}
+
+}

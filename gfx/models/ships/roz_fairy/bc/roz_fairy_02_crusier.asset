@@ -1,0 +1,101 @@
+###################################################################################
+###																				###
+###									ship										###
+###																				###
+###################################################################################
+
+############################ship#######################################3
+entity = {
+	name = "roz_fairy_battlecrusier_frame_entity"
+	pdxmesh = "roz_fairy_battlecrusier_frame_mesh"
+	scale = 2.25
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_battleship_hum" } }
+		start_event = { node = "Engine_01" particle = "generic_1_25_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		start_event = { node = "Engine_02" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		start_event = { node = "Engine_03" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		start_event = { node = "Engine_04" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		start_event = { node = "Engine_05" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		start_event = { node = "Engine_06" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		start_event = { node = "Engine_07" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+
+	}
+	state = { name = "moving" 
+		event = { trigger_once = yes sound = { soundeffect = "moving_out_battleship" } }
+		start_event = { node = "Engine_01" particle = "generic_1_25_exhaust_circle_long_moving" keep_particle = yes trigger_once = yes}
+		start_event = { node = "Engine_02" particle = "generic_075_exhaust_circle_long_moving" keep_particle = yes trigger_once = yes}
+		start_event = { node = "Engine_03" particle = "generic_075_exhaust_circle_long_moving" keep_particle = yes trigger_once = yes}
+		start_event = { node = "Engine_04" particle = "generic_075_exhaust_circle_long_moving" keep_particle = yes trigger_once = yes}
+		start_event = { node = "Engine_05" particle = "generic_075_exhaust_circle_long_moving" keep_particle = yes trigger_once = yes}
+		start_event = { node = "Engine_06" particle = "generic_075_exhaust_circle_long_moving" keep_particle = yes trigger_once = yes}
+		start_event = { node = "Engine_07" particle = "generic_075_exhaust_circle_long_moving" keep_particle = yes trigger_once = yes}
+
+	}
+	state = { name = "death" chance = 1 looping = no
+		event = { time = 3.4 node = "part1_locator" particle = "ship_explosion_particle" }
+		event = { time = 3.4 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 3.4 node = "part1_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 8.0 node = "part2_back_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 3.4 node = "part2_front_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 8.0 node = "part2_back_locator" particle = "ship_burn_particle" }
+		event = { time = 3.4 node = "part2_front_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 8.0 node = "part3_locator" particle = "ship_burn_particle" }
+		event = { time = 8.0 node = "part3_locator" particle = "ship_explosion_particle" }
+		event = { time = 8.0 node = "part3_locator" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 0.0 node = "root" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" chance = 1 looping = no
+		event = { time = 5.16 node = "part1_locator" particle = "ship_explosion_particle" }
+		event = { time = 5.16 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 5.16 node = "part1_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 5.16 node = "part2_front_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 5.16 node = "part2_front_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 11.9 node = "part2_back_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 11.9 node = "part2_back_locator" particle = "ship_burn_particle" }
+		event = { time = 11.9 node = "part2_back_locator" particle = "ship_explosion_particle" }
+	
+		event = { time = 11.9 node = "part3_explosion_locator" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 0.0 node = "root" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" chance = 1 looping = no
+		event = { time = 1.7 node = "explosion_locator1" particle = "ship_burn_particle" }
+		event = { time = 1.7 node = "explosion_locator1" particle = "ship_explosion_particle" }
+	
+		event = { time = 2.16 node = "explosion_locator2" particle = "ship_burn_particle" }
+		event = { time = 2.16 node = "explosion_locator2" particle = "ship_explosion_particle" }
+	
+		event = { time = 3.9 node = "explosion_locator3" particle = "ship_burn_particle" }
+		event = { time = 3.9 node = "explosion_locator3" particle = "ship_explosion_particle" }
+		
+		event = { time = 7.5 node = "explosion_locator4" particle = "ship_burn_particle" }
+		event = { time = 7.5 node = "explosion_locator4" particle = "ship_explosion_particle" }
+	
+		event = { time = 4.9 node = "explosion_locator5" particle = "ship_burn_particle" }
+		event = { time = 4.9 node = "explosion_locator5" particle = "ship_explosion_particle" }
+	
+		event = { time = 0.0 node = "root" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	game_data = {
+		#size = 32
+		emissive_recolor_crunch = 1.0
+	}
+
+	locator = { name = 1 position = { 1 1 1 } }
+
+	attach = { root = roz_fairy_battlecrusier_entity }
+}
+
+entity = {
+	name = "roz_fairy_battlecrusier_entity"
+	pdxmesh = "roz_fairy_battlecrusier_mesh"
+
+	default_state = "idle"
+
+}

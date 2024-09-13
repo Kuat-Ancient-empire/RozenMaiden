@@ -1,0 +1,129 @@
+namespace = roz_anomaly_event
+
+ship_event = {
+    id = roz_anomaly_event.100
+    is_triggered_only = yes
+    title = "roz_anomaly_event.100.title"
+    desc = "roz_anomaly_event.100.desc"
+    picture = GFX_evt_roz_san_check_1
+    show_sound = event_screams
+    location = this
+    trigger = {
+        owner = {
+            is_ai = no
+        }
+    }
+    option = {
+        name = "roz_anomaly_event.100.aa"
+        ship_event = {
+            id = roz_anomaly_event.101
+            days = 2
+        }
+        custom_tooltip = roz_anomaly_event.100.ct
+        leader = {
+            add_experience = 100
+        }
+    }
+}
+
+ship_event = {
+    id = roz_anomaly_event.101
+    is_triggered_only = yes
+    title = "roz_anomaly_event.101.title"
+    desc = "roz_anomaly_event.101.desc"
+    #picture = GFX_evt_ship_under_attack
+    picture = GFX_evt_roz_san_check_2
+    location = this
+    show_sound = event_death_cult
+    trigger = {
+        owner = {
+            is_ai = no
+        }
+    }
+    immediate = {
+        fleet = {
+            set_event_locked = yes
+        }
+    }
+    option = {
+        name = "roz_anomaly_event.101.aa"
+        trigger = {
+            is_ship_size = science
+            OR = {
+                has_component = CORVETTE_FISSION_REACTOR
+                has_component = CORVETTE_FUSION_REACTOR
+            }
+        }
+        leader = {
+            add_experience = 500
+        }
+        custom_tooltip = roz_anomaly_event.101.aa.ct
+        hidden_effect = {
+            random_list = {
+                6 = {
+                    fleet = {
+                        set_event_locked = no
+                    }
+                    leader = {
+                        if = {
+                            limit = {
+                                NOT = { has_leader_flag = ge_suigintou_flag }
+                            }
+                            add_trait = leader_trait_roz_battered
+                        }
+
+                    }
+                    unassign_leader = this
+                    destroy_ship = this
+                }
+                4 = {
+                    reduce_hp_percent = 80
+                    fleet = {
+                        set_event_locked = no
+                    }
+                    leader = {
+                        if = {
+                            limit = {
+                                NOT = { has_leader_flag = ge_suigintou_flag }
+                            }
+                            add_trait = leader_trait_roz_battered
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    option = {
+        name = "roz_anomaly_event.101.bb"
+        custom_tooltip = roz_anomaly_event.101.bb.ct
+        trigger = {
+                NOR = {
+                    has_component = CORVETTE_FISSION_REACTOR
+                    has_component = CORVETTE_FUSION_REACTOR
+            }
+        }
+        hidden_effect = {
+            reduce_hp_percent = 80
+            fleet = {
+                set_event_locked = no
+            }
+            leader = {
+                if = {
+                    limit = {
+                        NOT = { has_leader_flag = ge_suigintou_flag }
+                    }
+                    add_trait = leader_trait_roz_battered
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

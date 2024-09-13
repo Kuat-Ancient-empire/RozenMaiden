@@ -1,0 +1,84 @@
+﻿l_simp_chinese:
+
+###Weapons
+ tech_ge_pd:0 "§E虚空能聚焦点防御"
+ tech_ge_pd_desc:0 "这种点防御武器能快速抹消来袭舰载机和弹头。"
+ tech_ge_xl_beam:0 "§E混沌撕裂炮"
+ tech_ge_xl_beam_desc:0 "在所有已知的能量种类中，虚空能量可以说是最不讲理的存在。利用它们产生的各种效应，我们的武器可以瞬间毁伤敌舰的装甲和船体结构（对精罗人士伤害提升395倍）"
+ tech_ge_t_beam:0 "§E重塑混沌"
+ tech_ge_t_beam_desc:0 "完全取消虚空反应堆出力限制，将浩瀚的能量禁锢于狭小的引力场中，其中蕴含的毁灭性力量足以开天辟地。"
+ tech_ge_laser_cannon:0 "§E混沌聚能光束"
+ tech_ge_laser_cannon_desc:0 "混沌撕裂炮的轻量化版本，受出力问题，其输出能力有所下调。"
+ tech_ge_kinetic_gun:0 "§E虚空阱发射器"
+ tech_ge_kinetic_gun_desc:0 "发射前请检查虚空侵蚀指数。"
+ tech_ge_energy_torpedo:0 "混沌能星爆"
+ tech_ge_energy_torpedo_desc:0 "发射一团外域概念干涉实体，瞬间使敌方护盾发生器过载，无视大部分装甲防护直击舰体结构。"
+tech_ge_strike_craft_bomber:0 "§L狮心王轰炸机§!"
+tech_ge_strike_craft_bomber_desc:0 "这种轰炸机载有大当量的虚空炸弹，相比于老式的通用高级舰载机，狮心王拥有更出色的机动性和防御力。"
+tech_ge_strike_craft_fighter:0 "§L王蛇歼击机§!"
+tech_ge_strike_craft_fighter_desc:0 "这种歼击机搭载了轻型虚空点防御炮，能抹除来袭舰载机和弹头。"
+tech_ge_strike_craft_xuefeng:0 "§L战斗妖精-雪风§!"
+tech_ge_strike_craft_xuefeng_desc:0 "这些特种轰炸机虽然编队少，但其搭载的虚空鱼雷是任何船只的梦魇，这种毁灭性弹头的破坏力几乎是狮心王航弹的3倍。。"
+tech_ge_bhmissile:0 "§M奇点导弹§!"
+tech_ge_bhmissile_desc:0 "黑洞打击是在常规宇宙空间作战中的优解"
+tech_ge_wtorpedo:0 "§M“开天”导弹§!"
+tech_ge_wtorpedo_desc:0 "天地乖离，开辟之星。"
+tech_ge_planet_killer:0 "§R死亡流星§!"
+tech_ge_planet_killer_desc:0 "死亡即是怜悯。\n§R=====这件武器不受任何条款制约=====§!"
+
+
+###utility
+ GE_tech_reactor:0 "§E虚空反应堆§!"
+ GE_tech_reactor_desc:0 "§B启发自对N之领域的研究探索，这座反应堆是我们打破位面限制的接口，严格意义上来说它不是虚空引擎，而应该叫虚空衰变引擎，不过中央科学院对此并无异议。我们通过它就可以利用§R虚无混沌虚无混沌虚混沌无氵-》*￥%！&*#……&*§!"
+ tech_ge_sf_armor:0 "§E引力铁幕§!"
+ tech_ge_sf_armor_desc:0 "项目总工程师：“继续加力！在这玩意儿的没坍缩成黑洞之前给我往死里压缩！”"
+ tech_ge_shield:0 "§E引力扭曲系统§!"
+ tech_ge_shield_desc:0 "无限的能源供应着引力折射器形成极其坚韧的立场护盾，同时空间中游离的虚空衰变能量可以侵蚀来袭的攻击。"
+ tech_ge_warp_drive:0 "§E次元折跃引擎§!"
+ tech_ge_warp_drive_desc:0 "宇宙空间编辑器。"
+ tech_ge_thruster:0 "§E空间移位器§!"
+ tech_ge_thruster_desc:0 "我们已经可以抛弃传统的工质推进器了，直接操控空间坐标参数就可实现亚光速移动，至于原来的喷口只是大型RGB而已。（ps：超过1.644光年距离的位移有概率使时空撕裂发生在船体内，最严重的会导致船员掉入时空乱流而彻底迷失。因此总设计师建议最好不要拿这玩意儿来当FTL用）"
+ tech_ge_computer:0 "§E悖论增幅§!"
+ tech_ge_computer_desc:0 "§R逻辑失效，正在尝试返回备份时间节点。§!"
+ tech_ge_rds:0 "§E法则兼容系统§!"
+ tech_ge_rds_desc:0 "改善我们舰船的多元宇宙法则兼容性，即使是乱入其他位面我们也能避免该宇宙本源的排斥。"
+ tech_ge_sensor:0 "§E超维信息矩阵§!"
+ tech_ge_sensor_desc:0 "新型的虚空传感器不再是以前的古董货，我们探知的触角已经伸向了更高维度。"
+ tech_ge_cb:0 "§R混沌增幅§!"
+ tech_ge_cb_desc:0 "§R将虚空反应堆的能量直接附加在舰载武器上，虽然这并不安全，但是能让我们的攻势无坚不摧。§!"
+ tech_ge_shippart_titian_aura:0 "§R多元宇宙的理解§!"
+ tech_ge_shippart_titian_aura_desc:0 "我们摆脱了热寂，本宇宙已经无法限制我们的征途。"
+ 
+
+
+ 
+###tech
+GE_tech_default_reactor:0 "空间站反应堆"
+GE_tech_default_reactor_desc:0 "用于资源空间站的定制反应堆，为了给太空生产设施供能，反应堆设计了大量冗余电力。"
+
+tech_ge_HTEP: "超空间输电技术"
+tech_ge_HTEP_desc: "某灯：这个东西的原理十分简单——在巨型舰船上安装一个用以传输整个舰队能源的无线能源传输器，再通过N之领域把能源送进电网就完事了~"
+
+tech_ge_sgt_flagship: "§B希灵的馈赠§!"
+tech_ge_sgt_flagship_desc: "命运的馈赠早已在暗中标好了价码……"
+ tech_ge_sgt_flagship_normal: "§B王座守卫§!"
+ tech_ge_sgt_flagship_normal_desc: "在完全掌握虚空能量之前，我们还难以发挥这些希灵星舰的真正实力……"
+###building
+ tech_roz_power_core: "§P虚空能量反应塔§!"
+ tech_roz_power_core_desc: "我们的设计师自从验证了这个建筑构想后便彻底看不上失落帝国的四级奇点了。"
+ 
+
+###Doff
+
+#####section
+tech_ge_section:0 "次世代舰船区段"
+tech_ge_section_desc:0 "虚空反应堆的夸张能量输出，使得我们的设计师终于可以放开手脚来对现有的太空设施和舰船进行大刀阔斧的革新了，新世代的护卫舰火力甚至达到了老式巡洋舰的水平！同时，我们的设计师们还为太空军准备了一个终极礼物——永恒之枪，相信那些舰队司令们肯定是要乐开花了。"
+
+
+# = :0 ""
+#_desc = :0 ""
+
+
+
+
+

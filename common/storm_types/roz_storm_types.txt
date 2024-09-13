@@ -1,0 +1,74 @@
+# Nexus Storm Type
+
+chronos_storm = {
+	inline_script = {
+		script = "cosmic_storms/StormConfig"
+		MIN_RADIUS = 25
+		MAX_RADIUS = 50
+		MIN_RANGE = value:storm_range_min
+		MAX_RANGE = value:storm_range_max
+		STORM_SPEED = 0.05
+		ACTIVATION_PERIOD_IN_MONTHS = 10
+		MONTHLY_ADDED_DEVASTATION = 1.2
+	}
+	affect_hp_regen = yes
+	affect_armor_regen = yes
+	affect_shield_regen = yes
+
+	spawn_weight = 0
+	description = chronos_storm_lore_description
+
+	triggered_fleet_modifier = {
+		potential = {
+			always = yes
+		}
+		nexus_storm_modifier = 1
+		custom_tooltip = chronos_storm_fleet_tt
+		show_only_custom_tooltip = no
+	}
+
+	on_start = {
+		every_system_within_storm = {
+			added_to_storm_base_effect = yes
+			chronos_storm_add = yes
+		}
+	}
+
+	on_finished = {
+		every_system_within_storm = {
+			removed_from_storm_base_effect = yes
+			chronos_storm_remove = yes
+		}
+	}
+
+	on_moved = {
+		every_system_added_to_storm = {
+			added_to_storm_base_effect = yes
+			chronos_storm_add = yes
+		}
+
+		every_system_removed_from_storm = {
+			removed_from_storm_base_effect = yes
+			chronos_storm_remove = yes
+		}
+	}
+
+	cosmic_storm_texture_path = "gfx/map/storms/NebulaOpacity.dds"
+	cosmic_storm_texture_color_path = "gfx/map/storms/chronos_storm_color.dds"
+	cosmic_storm_event_sprite = "GFX_evt_chronos_storm"
+	icon = GFX_planetview_storm_chronos_modifier_frame
+
+	cosmic_storm_texture_lightning_paths = {
+		"gfx/map/storms/lightning/lightning_big_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_big_storm_02.dds"
+		"gfx/map/storms/lightning/lightning_mid_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_mid_storm_02.dds"
+	}
+
+	cosmic_storm_galaxy_lightning_time = 5.0
+	cosmic_storm_galaxy_max_opacity = 0.4
+
+	show_notification = {
+		#NOT = { has_country_flag = is_nexus_spawner }
+	}
+}

@@ -1,0 +1,11 @@
+layer = {
+    icon = "GFX_trait_glow_cor_dragon_totem"
+    color = "trait_rarity_destiny"
+}
+
+layer = {
+    icon = "GFX_trait_frame_suigintou"
+    color = "trait_rarity_destiny"
+}
+
+

@@ -1,0 +1,238 @@
+component_set = {
+	key = "GE_REACTOR"
+
+	icon = "GFX_ship_part_ge_reactor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_WARP_DRIVE"
+
+	icon = "GFX_ship_part_ge_warp_drive"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_THRUSTER"
+
+	icon = "GFX_ship_part_ge_thruster"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_SENSOR"
+
+	icon = "GFX_ship_part_ge_sensor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_RDS"
+
+	icon = "GFX_ship_part_reinforcement_defense_system"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_SF_ARMOR"
+
+	icon = "GFX_ship_part_ge_sf_armor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_SHIELD"
+
+	icon = "GFX_ship_part_ge_shield"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_XL_BEAM"
+
+	icon = "GFX_ship_part_ge_xl_beam"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_T_BEAM"
+
+	icon = "GFX_ship_part_ge_t_beam"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_LASER_CANNON"
+
+	icon = "GFX_ship_part_ge_laser_cannon"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_KINETIC_GUN"
+
+	icon = "GFX_ship_part_ge_kinetic_gun"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_PD"
+
+	icon = "GFX_ship_part_ge_pd"
+	icon_frame = 1
+}
+
+
+component_set = {
+	key = "test_laser"
+
+	icon = "GFX_ship_part_test_laser"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_GRAVITY_BURST"
+
+	icon = "GFX_ship_part_ge_gravity_burst"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_CB"
+
+	icon = "GFX_ship_part_ge_chaos_booster"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_CB_L"
+
+	icon = "GFX_ship_part_ge_chaos_booster"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GE_RDS_L"
+
+	icon = "GFX_ship_part_reinforcement_defense_system"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_strike_craft_bomber"
+
+	icon = "GFX_ge_strike_craft_bomber"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_strike_craft_fighter"
+	icon = "GFX_ge_strike_craft_fighter"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_strike_craft_xuefeng"
+	icon = "GFX_ge_strike_craft_xuefeng"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_wtorpedo"
+	icon = "GFX_ge_wtorpedo"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_bhmissile"
+	icon = "GFX_ge_bhmissile"
+	icon_frame = 1
+}
+
+component_set = {
+	key = ""
+	icon = ""
+	icon_frame = 1
+}
+
+component_set = { 
+	key = "GE_PLANET_KILLER_Crasher"
+
+	icon = "GFX_ship_part_ge_planet_killer"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "roz_juggernaut_wanxiang_deployer"
+
+	icon = "GFX_ship_part_reinforcement_defense_system_2"
+	icon_frame = 1
+}
+
+component_set = { # World Cracker
+	key = "GE_PLANET_KILLER_CRACKER"
+
+	icon = "GFX_ship_part_world_cracker"
+	icon_frame = 1
+}
+
+component_set = { # Pacifier
+	key = "GE_PLANET_KILLER_SHIELDER"
+
+	icon = "GFX_ship_part_global_pacifier"
+	icon_frame = 1
+}
+
+component_set = { # Neutron Beam
+	key = "GE_PLANET_KILLER_NEUTRON"
+
+	icon = "GFX_ship_part_neutron_sweep"
+	icon_frame = 1
+}
+
+component_set = { # God Ray
+	key = "GE_PLANET_KILLER_GODRAY"
+
+	icon = "GFX_ship_part_divine_enforcer"
+	icon_frame = 1
+}
+
+component_set = { # Nanobot Assimilation
+	key = "GE_PLANET_KILLER_NANOBOTS"
+
+	icon = "GFX_ship_part_nanobot_diffuser"
+	icon_frame = 1
+}
+
+component_set = { # Toxifier of the Toxic God
+	key = "GE_PLANET_KILLER_TOXIFIER"
+
+	icon = "GFX_ship_part_deluge"
+	icon_frame = 1
+}
+
+component_set = { # Deluge
+	key = "GE_PLANET_KILLER_DELUGE"
+
+	icon = "GFX_ship_part_deluge"
+	icon_frame = 1
+}
+
+component_set = { # Devolving Beam
+	key = "GE_PLANET_KILLER_DEVOLVER"
+
+	icon = "GFX_ship_part_devolution_beam"
+	icon_frame = 1
+}
+
+
+
+
+
+
+
+
+
+
+
+

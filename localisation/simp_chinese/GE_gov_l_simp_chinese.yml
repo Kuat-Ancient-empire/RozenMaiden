@@ -1,0 +1,147 @@
+﻿l_simp_chinese:
+###############################
+##   :0 ""§§
+##   _desc:0 ""
+
+mod_planet_jobs_consumer_goods_upkeep_mult: "岗位消费品维护"
+
+############### 法令 ###############
+
+edict_ge_highest_reference_frame_edicts:0 "最高参考系"
+edict_ge_highest_reference_frame_edicts_desc:0 "这又不是缸中之脑，为什么会有最高参考系这种东西？"
+
+ge_test_edicts:0 "research_all_technologies"
+ge_test_edicts_desc:0 "§R~§!"
+
+edict_ge_mozheng_edicts:0 "MOD全局设置：§R魔怔人的本愿§!"
+edict_ge_mozheng_edicts_desc:0 "这里是水银灯MOD的设置界面"
+
+edict_ge_restart_boost_plan_edicts:0 "辅助功能：§B重启虚空计划§!"
+edict_ge_restart_boost_plan_edicts_desc:0 "我们不能再等待所谓的暗物质反应堆了，就用零点反应堆来放手一搏吧！"
+
+edict_ge_site_edicts:0 "辅助功能：§R孤立星系刷坟§!"
+edict_ge_site_edicts_desc:0 "水银灯mod：如果是孤立星系开局没有坟刷出来，请用这个。§R警告，如果没有需求用到这个法令请绝对！绝对！！绝对！！！不要点。§!(嘛，如果刷了坟再点也不会发生什么事情就是了~)"
+
+edict_ge_civic_edicts:0 "辅助功能：国民性添加"
+edict_ge_civic_edicts_desc:0 "以解决蠢驴本身硬编码问题，如果飞升国民性被刷没了，请用这个"
+
+edict_ge_HTEP_edicts: "超空间输电协议"
+edict_ge_HTEP_edicts_desc: "激活该协议后，位于帝国本土的舰队中只要有安装光环部件：$ge_shippart_hyper_generator$的舰船，就可以源源不断的为国家电网输送电力。\n根据舰船数量，每艘船每个月都会产出一定的能量币。具体每个月的能量币产出可以去问水银灯。\n§R不过，需要注意的是这个设备会导致负责发电的舰队护盾值-75%，伤害和射速-50%、舰队航速与闪避-25%。§!因此，请谨慎选择用作发电的舰队。"
+
+edict_get_suigintou_site_star_edicts: "辅助功能：获得考古遗迹所在星系的控制权"
+edict_get_suigintou_site_star_edicts_desc: "如果不想水银灯被ai牛了请用这个~"
+
+edict_roz_mutiplayer_tech_edict: "辅助功能：客机玩家获得虚空科技"
+edict_roz_mutiplayer_tech_edict_desc: "我们联合!"
+
+ edict_roz_rosa_mystica_enhance_edicts:0 "淑女们的\"§M下午茶§!\""
+ edict_roz_rosa_mystica_enhance_edicts_desc:0 "虽然我们仿制出来的蔷薇圣母遥遥落后于罗真弄出的真货，但它们那相似的性质却能作为蔷薇少女们的优质补品，大幅增强蔷薇圣母的活性。\n\n§B该法令加大幅增强所有蔷薇少女（水银灯、雪华绮晶）的特质属性。§!"
+
+ edict_roz_lgate_disable_edict:"封锁L星门"
+ edict_roz_lgate_disable_edict_desc:"我们可以通过关闭L星门来断绝L星团与银河系的联系，这里将成为我们的秘密花园。直至我们主动解封L星门"
+ edict_roz_lgate_enable_edict:"启用L星门"
+ edict_roz_lgate_enable_edict_desc:"是时候让L星团如闪电般归来了（"
+ edict_roz_graygoo_enable_edict:"召唤灰风"
+ edict_roz_graygoo_enable_edict_desc:""
+
+############### 公民性 ###############
+
+civic_ge_military_strategist:0 "兵者诡道"
+civic_ge_military_strategist_desc:0 ""
+
+civic_ge_glorious_aristocracy:0 "柱国"
+civic_ge_glorious_aristocracy_desc:0 ""
+
+civic_ge_enlightened:0 "古老文化的启迪"
+civic_ge_enlightened_desc:0 ""
+
+civic_cor_celestial_empire:0 "天朝上国"
+civic_cor_celestial_empire_desc:0 ""
+
+civic_cor_time_honored:0 "飞升的启迪"
+civic_cor_time_honored_desc:0 ""
+
+civic_cor_celestial_military:0 "天军行阵"
+civic_cor_celestial_military_desc:0 ""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

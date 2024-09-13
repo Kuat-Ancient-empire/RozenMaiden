@@ -1,0 +1,223 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_trait_glow_suigintou"
+        #texturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny.dds"
+        texturefile = "gfx/interface/icons/traits/leader_trait_ge_mercury_lamp_dt.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_mask.dds"
+            animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_animated_texture.dds"  	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 7				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    SpriteType = {
+        name = "GFX_trait_glow_roz_meimei"
+        texturefile = "gfx/interface/icons/traits/leader_trait_ge_meimei_dt.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_mask.dds"
+            #animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_animated_texture.dds"  	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 7				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    SpriteType = {
+        name = "GFX_trait_glow_roz_N_field"
+        texturefile = "gfx/interface/icons/traits/leader_trait_ge_N_field_dt.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_mask.dds"
+            #animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_animated_texture.dds"  	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 7				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    SpriteType = {
+        name = "GFX_trait_glow_roz_Blackwinged_Dragon"
+        texturefile = "gfx/interface/icons/traits/leader_trait_ge_Blackwinged_Dragon_dt.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_mask.dds"
+            #animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_animated_texture.dds"  	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 7				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    SpriteType = {
+        name = "GFX_trait_glow_roz_azoth"
+        texturefile = "gfx/interface/icons/traits/leader_trait_ge_azoth_dt.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_mask.dds"
+            #animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_animated_texture.dds"  	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 7				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    SpriteType = {
+        name = "GFX_trait_glow_cor_dragon_totem"
+        texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_cor_dragon_totem_dt.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_mask.dds"
+            animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_animated_texture.dds"  	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 7				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    SpriteType = {
+        name = "GFX_trait_glow_kirakishou"
+        texturefile = "gfx/interface/icons/traits/leader_trait_roz_krks_md_dt.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_mask.dds"
+            animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_animated_texture.dds"  	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 7				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    SpriteType = {
+        name = "GFX_trait_glow_krks_nightmare"
+        texturefile = "gfx/interface/icons/traits/leader_trait_white_rozen_dt.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_mask.dds"
+            animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_animated_texture.dds"  	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 7				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    SpriteType = {
+        name = "GFX_trait_glow_krks_mind_drain"
+        texturefile = "gfx/interface/icons/traits/leader_trait_ge_mind_drain.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_mask.dds"
+            animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_animated_texture.dds"  	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 7				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    spriteType = {
+        name = "GFX_trait_frame_suigintou"
+        texturefile = "gfx/interface/icons/traits/leader_traits/trait_rarity_destiny.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_leader_trait_roz_battered"
+        texturefile = "gfx/interface/icons/traits/leader_trait_icons/traumatized.dds"
+    }
+
+    spriteType = {
+        name = "trait_rarity_suigintou"
+        texturefile = "gfx/interface/icons/traits/leader_traits/trait_rarity_destiny.dds"
+    }
+
+    spriteType = {
+        name = "GFX_leader_trait_ge_a_strangeness_dt"
+        texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_ge_a_strangeness_dt.dds"
+    }
+
+    spriteType = {
+        name = "GFX_leader_trait_ge_a_friendly_dt"
+        texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_ge_a_friendly_dt.dds"
+    }
+
+
+    spriteType = {
+        name = "GFX_leader_trait_ge_a_like_dt"
+        texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_ge_a_like_dt.dds"
+    }
+
+
+    spriteType = {
+        name = "GFX_leader_trait_ge_a_love_dt"
+        texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_ge_a_love_dt.dds"
+    }
+
+    spriteType = {
+        name = "GFX_leader_trait_blank"
+        texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_roz_blank.dds"
+    }
+
+    ###本地化图片
+    spriteType = {
+        name = "GFX_text_roz_traits_pic_suigintou_1"
+        texturefile = "gfx/interface/icons/text_icons/roz_traits_pic_suigintou_1.dds"
+    }
+
+
+}

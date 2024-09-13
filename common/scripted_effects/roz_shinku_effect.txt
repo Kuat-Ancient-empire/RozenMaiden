@@ -1,0 +1,172 @@
+
+roz_junn_country_create = {
+    create_country = {
+        name = "NAME_nfield_junn"
+        type = ge_N_Field
+        flag = {
+            icon = {
+                category = "nfield_junn"
+                file = "flag_roz_junn.dds"
+            }
+            background = {
+                category = "backgrounds"
+                file = "inverted_v.dds"
+            }
+            colors = {
+                "black"
+                "black"
+                "null"
+                "null"
+            }
+        }
+        effect = {
+            save_global_event_target_as = roz_junn_global_country@root
+            set_country_flag = roz_junn_country
+        }
+    }
+    last_created_country = {
+        establish_communications_no_message = root
+    }
+    event_target:roz_junn_global_country@root = {
+        owner = {
+
+        }
+    }
+}
+
+roz_hinaichigo_country_create = {
+    create_country = {
+        name = "NAME_nfield_hinaichigo"
+        type = ge_N_Field
+        flag = {
+            icon = {
+                category = "nfield_hinaichigo"
+                file = "flag_roz_hinaichigo.dds"
+            }
+            background = {
+                category = "backgrounds"
+                file = "inverted_v.dds"
+            }
+            colors = {
+                "black"
+                "black"
+                "null"
+                "null"
+            }
+        }
+        effect = {
+            save_global_event_target_as = roz_hinaichigo_global_country@root
+            set_country_flag = roz_hinaichigo_country
+        }
+    }
+    last_created_country = { establish_communications_no_message = root }
+    set_country_flag = roz_hinaichigo_arrive
+}
+
+roz_madgod_country_initiate = {
+    create_country = {
+        name = NAME_madgod_force_country
+        type = enclave
+        authority = "auth_oligarchic"
+        civics = {
+            civic = civic_ancient_preservers
+        }
+        origin = "origin_default"
+        species = last_created_species
+        flag = {
+            icon = {
+                category = special
+                file = "shroudwalkers.dds"
+            }
+            background = {
+                category = "backgrounds"
+                file = "vertical.dds"
+            }
+            colors = {
+                "red"
+                "red"
+                "null"
+                "null"
+            }
+        }
+        ethos = {
+            ethic = ethic_fanatic_militarist
+        }
+        ignore_initial_colony_error = yes
+    }
+    last_created_country = {
+        set_country_flag = roz_madgod_force_country_flag
+        set_graphical_culture = necroid_01
+        save_global_event_target_as = roz_madgod_force_country@root
+        set_hostile = root
+        establish_communications_no_message = root
+    }
+}
+
+roz_madgod_fleet_jtcl_create_direct = {
+    #方案一
+    event_target:roz_madgod_force_country@root = {
+        create_fleet = {
+            name = "NAME_roz_krks_zakko"
+            settings = {
+                spawn_debris = no
+                is_boss = yes
+            }
+            effect = {
+                set_fleet_flag = roz_madgod_jtcl_fleet
+                while = {
+                    count = 12
+                    create_ship = {
+                        name = "NAME_EDDY_ROZ"
+                        design = "NAME_Corrupted_Avatar"
+                        effect = { }
+                    }
+                    set_location = event_target:roz_n_field_site_target@root
+                    set_fleet_stance = aggressive
+                    set_aggro_range_measure_from = return_point
+                    set_aggro_range = 300
+                    add_modifier = {
+                        modifier = roz_krks_bf_stage1_HK_buff
+                        mult = 0.75
+                    }
+                }
+            }
+        }
+    }
+}
+
+roz_madgod_fleet_jtcl_create_decoy = {
+    #方案二
+    event_target:roz_madgod_force_country@root = {
+        create_fleet = {
+            name = "NAME_roz_krks_zakko"
+            settings = {
+                spawn_debris = no
+                is_boss = yes
+            }
+            effect = {
+                set_fleet_flag = roz_madgod_jtcl_fleet
+                while = {
+                    count = 8
+                    create_ship = {
+                        name = "NAME_EDDY_ROZ"
+                        design = "NAME_Corrupted_Avatar"
+                        effect = { }
+                    }
+                    set_location = event_target:roz_n_field_site_target@root
+                    set_fleet_stance = aggressive
+                    set_aggro_range_measure_from = return_point
+                    set_aggro_range = 300
+                    add_modifier = {
+                        modifier = roz_krks_bf_stage1_HK_buff
+                        mult = 0.5
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

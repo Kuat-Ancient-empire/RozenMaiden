@@ -1,0 +1,248 @@
+ge_sgt_site = {		###水银灯
+	desc = ge_sgt_site_desc
+	picture = GFX_ge_sgt_site
+	stages = 5
+	max_instances = 30	#坟的全局数量限制，影响重复刷坟
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	on_visible = {
+		root = {
+			if = {
+				limit = { 
+					has_country_flag = ge_sgt_site_find_2_flag
+				}
+				country_event = {
+					id = ge_sites.201
+					days = 1
+				}
+			}
+			else_if = {
+				limit = { 
+					is_ai = no
+				}
+				country_event = { id = ge_sites.10 days = 1 }
+			}
+			
+		}
+		
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_ge_sgt_site_D1
+		event = ge_sites.11
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_ge_sgt_site_D2
+		event = ge_sites.12
+	}
+	stage = {
+		difficulty = 1
+		icon = GFX_ge_sgt_site_D3
+		event = ge_sites.13
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_ge_sgt_site_D4
+		event = ge_sites.14
+	}
+	stage = {
+		difficulty = 1
+		icon = GFX_ge_sgt_site_D5
+		event = ge_sites.15
+	}
+	stage = {
+		difficulty = 1
+		icon = GFX_ge_sgt_site_D6
+		event = ge_sites.16
+	}	
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+
+
+roz_the_fields_of_growth_site = {
+	###生长区
+	desc = roz_tfog_site_desc
+	picture = GFX_roz_tfog_site
+	stages = 4
+	max_instances = 30    #坟的全局数量限制，影响重复刷坟
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		custom_tooltip = a
+		leader = {
+			has_leader_flag = ge_suigintou_flag
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	on_visible = {
+		root = {
+
+		}
+
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_ge_sgt_site_D1
+		event = ge_sites.11
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+
+
+roz_relic_of_eras_site = {
+	desc = roz_relic_of_eras_site_desc
+	picture = GFX_evt_roz_evt_monumental
+	stages = 7
+	#max_instances = 1
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	on_visible = {
+		root = {
+				country_event = {
+					id = ge_sites.400
+				}
+		}
+
+	}
+	stage = {
+		difficulty = 1
+		icon = GFX_roz_roe_site_D1
+		event = ge_sites.401
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_roz_roe_site_2
+		event = ge_sites.402
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_roz_roe_site_3
+		event = ge_sites.403
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_roz_roe_site_4
+		event = ge_sites.404
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_roz_roe_site_5
+		event = ge_sites.405
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_roz_roe_site_6
+		event = ge_sites.406
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_roz_roe_site_7
+		event = ge_sites.407
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+###
+#坟：被欺诈的种族灭绝
+
+
+
+###破败神国坟
+#
+roz_ruined_paradise_site = {
+	desc = roz_ruined_paradise_site_desc
+	picture = GFX_evt_roz_evt_monumental
+	stages = 5
+	#max_instances = 1
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			NOT = { has_relic = r_roz_Chronos_Label }
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	on_visible = {
+		root = {
+			country_event = {
+				id = ge_sites.501
+				days = 3
+			}
+		}
+
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_roz_roe_site_D1
+		event = ge_sites.511
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_roz_roe_site_2
+		event = ge_sites.512
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_roz_roe_site_3
+		event = ge_sites.513
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_roz_roe_site_4
+		event = ge_sites.514
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_roz_roe_site_5
+		event = ge_sites.515
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+
+
+
+
+
+

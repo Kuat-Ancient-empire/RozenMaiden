@@ -1,0 +1,3470 @@
+namespace = ge_event
+#invasion
+#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!
+#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!
+#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!!#!#!#!#!#
+#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!
+#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#
+#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#
+
+
+country_event = {
+    id = ge_event.1900
+    title =  ge_event.20051.title
+    desc =  ge_event.20051.desc
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = roz_krks_dl_normal_flag
+        NOT = { has_country_flag = roz_krks_dl_early_flag }
+        NOT = { has_country_flag = roz_kirakishou_get }
+        NOT = { has_country_flag = roz_krks_dl_normal_flag_begin }
+    }
+    picture = GFX_roz_evt_lpls_letter
+    immediate = {
+        set_country_flag = roz_krks_dl_normal_flag_begin
+        country_event = {
+            id = ge_event.1950
+            days = 60
+        }
+    }
+    option = {
+        name = ge_event.20051.aa
+    }
+    option = {
+        name = ge_event.20051.bb
+    }
+    option = {
+        name = ge_event.20051.cc
+    }
+
+}
+
+
+country_event = {
+    id = ge_event.1950
+    title = "ge_event.1950.name"
+    desc = "ge_event.1950.desc"
+    is_triggered_only = yes
+    #fire_only_once = yes
+    picture = GFX_roz_evt_Nfield_military_base_project
+    trigger = {
+        has_country_flag = roz_krks_dl_normal_flag
+        NOT = { has_country_flag = roz_krks_dl_early_flag }
+        has_rozen_leader = yes
+        any_system = {
+            solar_system = {
+                #is_owned_by = root
+                any_system_planet = {
+                    AND = {
+                        has_deposit = ge_site_sgt_deposit
+                        has_deposit = ge_site_vc_deposit
+                        has_planet_flag = ge_planet_flag_sgt@root
+                    }
+                }
+            }
+        }
+        NOT = { has_country_flag = roz_kirakishou_get }
+
+    }
+    immediate = {
+        set_country_flag = ge_nfield_develop_flag
+        ##后续再改吧……这个多此一举的event target
+        event_target:roz_n_field_site_target@root = {
+            save_event_target_as = Nfield_black_hole_target
+        }
+    }
+    option = {
+        name = ge_event.1950.aa
+        add_resource = {
+            energy = -5000
+            alloys = -2500
+        }
+        custom_tooltip = ge_event.1950.aa.ct
+        if = {
+            limit = {
+                #any_planet_within_border = {}
+                has_country_flag = roz_krks_dl_normal_flag
+                NOT = { has_country_flag = roz_krks_dl_early_flag }
+            }
+            enable_special_project = {
+                name = roz_N_field_great_development_plan
+                owner = root
+                location = event_target:Nfield_black_hole_target
+            }
+        }
+    }
+}
+country_event = {
+    id = ge_event.1951
+    title = "ge_event.1951.name"
+    desc = "ge_event.1951.desc"
+    is_triggered_only = yes
+    picture = GFX_roz_evt_Nfield_military_base_project_complete
+    trigger = {
+        NOT = { has_country_flag = roz_kirakishou_get }
+    }
+    option = {
+        name = ge_event.1951.aa
+        custom_tooltip = ge_event.1951.aa.ct
+        remove_modifier = ge_gravity_knowledge
+        add_modifier = {
+            modifier = ge_gravity_knowledge_plus
+        }
+        set_country_flag = roz_great_development_of_Nfield
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = { has_country_flag = roz_krks_dl_early_flag }
+
+                }
+                country_event = {
+                    id = ge_event.1952
+                    days = 30
+                }
+            }
+        }
+    }
+}
+country_event = {
+    id = ge_event.1952
+    title = "ge_event.1952.name"
+    desc = "ge_event.1952.desc"
+    is_triggered_only = yes
+    picture = GFX_evt_night_raid
+    show_sound = event_mysterious_signal
+    trigger = {
+        NOT = { has_country_flag = roz_kirakishou_get }
+    }
+    option = {
+        name = ge_event.1952.aa
+        add_resource = {
+            energy = -100
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_event.2000
+                days = 360
+            }
+            random_galaxy_planet = {
+                limit = {
+                    has_planet_flag = ge_planet_flag_sgt@root
+                }
+                set_planet_flag = roz_sgt_site_krksevtc_flag
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+#####
+#####
+#####
+#####
+#####
+#####此为区分事件
+country_event = {
+    id = ge_event.2000
+    title = "ge_event.2000.t"
+    desc = "ge_event.2000.d"
+    is_triggered_only = yes
+    show_sound = event_worrying_signal
+    picture = GFX_evt_mysterious_signal
+    #can triggered by ge_affection.1 or ge_event.1952
+    trigger = {
+        NOT = {
+            has_country_flag = roz_krks_story_begin_flag
+        }
+        NOT = { has_country_flag = roz_kirakishou_get }
+    }
+    immediate = {
+        set_country_flag = roz_krks_story_begin_flag
+    }
+    option = {
+        name = ge_event.2000.aa
+        trigger = {
+            has_country_flag = roz_krks_dl_normal_flag
+            NOT = {
+                has_country_flag = roz_krks_dl_early_flag
+            }
+        }
+        add_resource = {
+            engineering_research = 3000
+            physics_research = 3000
+            society_research = 3000
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_event.2001
+                days = 1
+            }
+        }
+    }
+    option = {
+        name = ge_event.2000.aa
+        trigger = {
+            has_country_flag = roz_krks_dl_early_flag
+            NOT = {
+                has_country_flag = roz_krks_dl_normal_flag
+            }
+        }
+        add_resource = {
+            engineering_research = 3000
+            physics_research = 3000
+            society_research = 3000
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_event.2001
+                days = 1
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+country_event = {
+    id = ge_event.2001
+    title = "ge_event.2001.name"
+    desc = "ge_event.2001.desc"
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_main_room
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = ge_suigintou_flag
+        }
+    }
+    option = {
+        name = ge_event.2001.aa
+        #default_hide_option = yes
+        country_event = {
+            id = ge_event.2002
+        }
+    }
+}
+
+country_event = { #分支对话，不影响后续
+    id = ge_event.2002
+    title = "ge_event.2001.name"
+    desc = "ge_event.2002.desc"
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_main_room
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = ge_suigintou_flag
+        }
+    }
+    option = {
+        name = ge_event.2002.aa
+        custom_tooltip = ge_communication.2512.ct
+        hidden_effect = {
+            country_event = {
+                id = ge_event.2003
+            }
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 0.2
+                }
+            }
+        }
+
+    }
+    #option = {
+    #    name = ge_event.2002.bb
+    #    custom_tooltip = ge_communication.2512.ct
+    #    hidden_effect = {
+    #        hidden_effect = {
+    #            country_event = {
+    #                id = ge_event.2004
+    #            }
+    #        }
+    #    }
+    #}
+}
+
+country_event = {	#good choice
+    id = ge_event.2003
+    title = "ge_event.2001.name"
+    desc = "ge_event.2003.desc"
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_main_room
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = ge_suigintou_flag
+        }
+    }
+    option = {
+        name = ge_event.2003.aa
+        custom_tooltip = ge_communication.2512.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 0.2
+                }
+            }
+        }
+        hidden_effect = {
+            set_country_flag = ge_event.2003.1.flag
+        }
+        allow = {
+            hidden_trigger = {
+                NOT = {
+                    has_country_flag = ge_event.2003.1.flag
+                }
+            }
+        }
+        is_dialog_only = yes
+        response_text = ge_event.2005.desc.a
+        #country_event = {
+        #    id = ge_event.2005
+        #}
+    }
+
+    option = {
+        name = ge_event.2005.aa
+        custom_tooltip = ge_communication.2512.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 0.2
+                }
+            }
+        }
+        hidden_effect = {
+            set_country_flag = ge_event.2003.2.flag
+        }
+        allow = {
+            hidden_trigger = {
+            NOT = {
+                has_country_flag = ge_event.2003.2.flag
+            }
+            }
+        }
+        is_dialog_only = yes
+        response_text = ge_event.2010.desc
+    }
+
+    option = {
+        name = ge_event.2010.aa
+        custom_tooltip = ge_communication.2512.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 0.2
+                }
+            }
+        }
+        hidden_effect = {
+            set_country_flag = ge_event.2003.3.flag
+        }
+        allow = {
+            hidden_trigger = {
+            NOT = {
+                has_country_flag = ge_event.2003.3.flag
+            }
+            }
+        }
+        is_dialog_only = yes
+        response_text = ge_event.2011.desc
+    }
+
+    option = {
+        name = ge_event.2011.aa
+        custom_tooltip = ge_communication.2512.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 0.2
+                }
+            }
+        }
+        hidden_effect = {
+                set_country_flag = ge_event.2003.4.flag
+        }
+        allow = {
+            hidden_trigger = {
+                NOT = {
+                    has_country_flag = ge_event.2003.4.flag
+                }
+            }
+        }
+        is_dialog_only = yes
+        response_text = ge_event.2012.desc
+    }
+
+    option = {
+        name = ge_event.2012.aa
+        custom_tooltip = ge_communication.2512.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 0.2
+                }
+            }
+        }
+        hidden_effect = {
+            set_country_flag = ge_event.2003.5.flag
+        }
+        allow = {
+            hidden_trigger = {
+            NOT = {
+                has_country_flag = ge_event.2003.5.flag
+            }
+            }
+        }
+        is_dialog_only = yes
+        response_text = ge_event.2013.desc
+    }
+
+    option = {
+        name = ge_event.2013.aa
+        custom_tooltip = ge_communication.2512.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 0.2
+                }
+            }
+        }
+        hidden_effect = {
+            set_country_flag = ge_event.2003.6.flag
+        }
+        allow = {
+            hidden_trigger = {
+                NOT = {
+                    has_country_flag = ge_event.2003.6.flag
+                }
+            }
+        }
+        is_dialog_only = yes
+        response_text = ge_event.2014.desc
+    }
+
+    option = {
+        name = ge_event.2014.aa
+        custom_tooltip = ge_communication.2512.ct2
+        hidden_effect = {
+            country_event = {
+                id = ge_event.2015
+                days = 360
+            }
+            remove_country_flag = ge_event.2003.1.flag
+            remove_country_flag = ge_event.2003.2.flag
+            remove_country_flag = ge_event.2003.3.flag
+            remove_country_flag = ge_event.2003.4.flag
+            remove_country_flag = ge_event.2003.5.flag
+            remove_country_flag = ge_event.2003.6.flag
+        }
+    }
+
+
+}
+
+
+
+#
+#country_event = {	#normal choice
+#    id = ge_event.2004
+#    title = "ge_event.2001.name"
+#    desc = "ge_event.2004.desc"
+#    is_triggered_only = yes
+#    diplomatic = yes
+#    picture_event_data = {
+#        portrait = event_target:ge_leader
+#        room = ge_sgt_main_room
+#    }
+#    option = {
+#        name = ge_event.2003.aa
+#        custom_tooltip = ge_communication.2512.ct
+#        hidden_effect = {
+#            every_owned_leader = {
+#                limit = {
+#                    has_leader_flag = ge_suigintou_flag
+#                }
+#                change_variable = {
+#                    which = ge_leader_affection
+#                    value = 0.5
+#                }
+#            }
+#        }
+#        country_event = {
+#            id = ge_event.2005
+#        }
+#    }
+#}
+
+
+
+
+#country_event = {
+#    id = ge_event.2005
+#    title = "ge_event.2001.name"
+#    desc = {
+#        text = "ge_event.2005.desc.a"
+#        trigger = {
+#            any_owned_leader = {
+#                has_leader_flag = ge_suigintou_flag
+#                leader_class = scientist
+#            }
+#        }
+#    }
+#    desc = {
+#        text = "ge_event.2005.desc.b"
+#        trigger = {
+#            any_owned_leader = {
+#                has_leader_flag = ge_suigintou_flag
+#                leader_class = admiral
+#            }
+#        }
+#    }
+#    is_triggered_only = yes
+#    diplomatic = yes
+#    picture_event_data = {
+#        portrait = event_target:ge_leader
+#        room = ge_sgt_main_room
+#    }
+#    option = {
+#        name = ge_event.2005.aa
+#        custom_tooltip = ge_communication.2512.ct
+#        hidden_effect = {
+#            every_owned_leader = {
+#                limit = {
+#                    has_leader_flag = ge_suigintou_flag
+#                }
+#                change_variable = {
+#                    which = ge_leader_affection
+#                    value = 0.5
+#                }
+#            }
+#        }
+#        country_event = {
+#            id = ge_event.2010
+#        }
+#    }
+#}
+
+#country_event = {
+#    id = ge_event.2010
+#    title = "ge_event.2001.name"
+#    is_triggered_only = yes
+#    diplomatic = yes
+#    picture_event_data = {
+#        portrait = event_target:ge_leader
+#        room = ge_sgt_main_room
+#    }
+#    desc = "ge_event.2010.desc"
+#    option = {
+#        name = "ge_event.2010.aa"
+#        custom_tooltip = ge_communication.2512.ct
+#        hidden_effect = {
+#            every_owned_leader = {
+#                limit = {
+#                    has_leader_flag = ge_suigintou_flag
+#                }
+#                change_variable = {
+#                    which = ge_leader_affection
+#                    value = 0.5
+#                }
+#            }
+#        }
+#        country_event = {
+#            id = ge_event.2011
+#        }
+#    }
+#}
+#
+#country_event = {	#暗算？
+#    id = ge_event.2011
+#    title = "ge_event.2001.name"
+#    is_triggered_only = yes
+#    diplomatic = yes
+#    picture_event_data = {
+#        portrait = event_target:ge_leader
+#        room = ge_sgt_main_room
+#    }
+#    desc = "ge_event.2011.desc"
+#    option = {
+#        name = "ge_event.2011.aa"
+#        custom_tooltip = ge_communication.2512.ct
+#        hidden_effect = {
+#            every_owned_leader = {
+#                limit = {
+#                    has_leader_flag = ge_suigintou_flag
+#                }
+#                change_variable = {
+#                    which = ge_leader_affection
+#                    value = 0.5
+#                }
+#            }
+#        }
+#        country_event = {
+#            id = ge_event.2012
+#        }
+#    }
+#}
+#
+#country_event = {	#越想越气
+#    id = ge_event.2012
+#    title = "ge_event.2001.name"
+#    is_triggered_only = yes
+#    diplomatic = yes
+#    picture_event_data = {
+#        portrait = event_target:ge_leader
+#        room = ge_sgt_main_room
+#    }
+#    desc = "ge_event.2012.desc"
+#    option = {
+#        name = "ge_event.2012.aa"
+#        custom_tooltip = ge_communication.2512.ct
+#        hidden_effect = {
+#            every_owned_leader = {
+#                limit = {
+#                    has_leader_flag = ge_suigintou_flag
+#                }
+#                change_variable = {
+#                    which = ge_leader_affection
+#                    value = 0.5
+#                }
+#            }
+#        }
+#        country_event = {
+#            id = ge_event.2013
+#        }
+#    }
+#}
+
+#country_event = {	#此事平平无奇
+#    id = ge_event.2013
+#    title = "ge_event.2001.name"
+#    is_triggered_only = yes
+#    diplomatic = yes
+#    picture_event_data = {
+#        portrait = event_target:ge_leader
+#        room = ge_sgt_main_room
+#    }
+#    desc = "ge_event.2013.desc"
+#    option = {
+#        name = "ge_event.2013.aa"
+#        custom_tooltip = ge_communication.2512.ct
+#        hidden_effect = {
+#            every_owned_leader = {
+#                limit = {
+#                    has_leader_flag = ge_suigintou_flag
+#                }
+#                change_variable = {
+#                    which = ge_leader_affection
+#                    value = 0.5
+#                }
+#            }
+#        }
+#        country_event = {
+#            id = ge_event.2014
+#        }
+#    }
+#}
+
+#country_event = {	#善
+#    id = ge_event.2014
+#    title = "ge_event.2001.name"
+#    is_triggered_only = yes
+#    diplomatic = yes
+#    picture_event_data = {
+#        portrait = event_target:ge_leader
+#        room = ge_sgt_main_room
+#    }
+#    desc = "ge_event.2014.desc"
+#    option = {
+#        name = "ge_event.2014.aa"
+#        custom_tooltip = ge_communication.2512.ct
+#        hidden_effect = {
+#            every_owned_leader = {
+#                limit = {
+#                    has_leader_flag = ge_suigintou_flag
+#                }
+#                change_variable = {
+#                    which = ge_leader_affection
+#                    value = 0.5
+#                }
+#            }
+#        }
+#        country_event = {
+#            id = ge_event.2015
+#            days = 180
+#        }
+#    }
+#}
+
+
+
+
+
+
+
+
+#####星球事件
+country_event = {	#谣言
+    id = ge_event.2015
+    is_triggered_only = yes
+    picture = GFX_evt_conclave
+    show_sound = event_cityscape
+    title = "ge_event.2015.name"
+    desc = "ge_event.2015.desc"
+    immediate = {
+        capital_scope = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_planet_flag = ge_krks_pi_cap_flag
+                    }
+                }
+                set_planet_flag = ge_krks_pi_cap_flag
+            }
+        }
+    }
+    option = {
+        name = "ge_event.2015.aa"
+
+        start_situation = {
+            type = kirakishou_planet_invasion_situation
+            target = capital_scope
+        }
+    }
+}
+
+# country_event = {	#发酵
+# 	id = ge_event.2016
+# 	is_triggered_only = yes
+# 	picture = GFX_
+# 	title = "ge_event.2016.name"
+# 	desc = "ge_event.2016.desc"
+# 	immediate = {
+# 		capital_scope = {
+# 				add_modifier = {
+# 				modifier = ge_kirakishou_invasion_lv1
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = "ge_event.2016.aa"
+# 		country_event = {
+# 			id = ge_event.2017
+# 			days = 4
+# 		}
+# 	}
+# 	option = {
+# 		name = "ge_event.2016.bb"
+# 		country_event = {
+# 			id = ge_event.2018
+# 			days = 4
+# 		}
+# 	}
+# }
+
+
+situation_event = {	#发酵
+    id = ge_event.20161
+    is_triggered_only = yes
+    picture = GFX_evt_infiltration_neutral
+    show_sound = event_mind_over_matter
+    title = "ge_event.2016.name"
+    desc = "ge_event.2016.desc"
+    immediate = {
+        owner = {
+            capital_scope = {
+                if = {
+                    limit = {
+                        owner = {
+                            has_country_flag = roz_krks_dl_normal_flag
+                        }
+                    }
+                    add_modifier = {
+                        modifier = ge_kirakishou_invasion_lv1
+                    }
+                }
+                else_if = {
+                    limit = {
+                        owner = {
+                            has_country_flag = roz_krks_dl_early_flag
+                        }
+                    }
+                    add_modifier = {
+                        modifier = ge_kirakishou_invasion_lv1
+                        mult = 0
+                    }
+                }
+            }
+            set_country_flag = krks_pis_stage_flag_2
+        }
+    }
+    option = {
+        name = "ge_event.2016.aa"
+        add_situation_progress = 5
+        #custom_tooltip = ge_event.2016.aa.ct
+        hidden_effect = {
+
+        }
+    }
+    option = {
+        name = "ge_event.2016.bb"
+        add_situation_progress = 4
+        custom_tooltip = ge_event.2016.aa.ct
+        hidden_effect = {
+            owner = {
+                set_country_flag = krks_pis_stage_flag
+            }
+        }
+    }
+}
+
+
+# country_event = {	#满城风雨
+# 	id = ge_event.2017
+# 	is_triggered_only = yes
+# 	picture = GFX_
+# 	title = "ge_event.2017.name"
+# 	desc = "ge_event.2017.desc"
+# 	immediate = {
+# 		capital_scope = {
+# 				add_modifier = {
+# 				modifier = ge_kirakishou_invasion_lv2.5
+# 			}
+# 			remove_modifier = ge_kirakishou_invasion_lv1
+# 		}
+# 	}
+# 	option = {
+# 		name = "ge_event.2017.aa"
+# 		country_event = {
+# 			id = ge_event.2019
+# 			days = 10
+# 		}
+# 	}
+# }
+
+# country_event = {	#愈演愈烈
+# 	id = ge_event.2018
+# 	is_triggered_only = yes
+# 	picture = GFX_
+# 	title = "ge_event.2018.name"
+# 	desc = "ge_event.2018.desc"
+# 	immediate = {
+# 		capital_scope = {
+# 				add_modifier = {
+# 				modifier = ge_kirakishou_invasion_lv2
+# 			}
+# 			remove_modifier = ge_kirakishou_invasion_lv1
+# 		}
+# 	}
+# 	option = {
+# 		name = "ge_event.2018.aa"
+# 		country_event = {
+# 			id = ge_event.2019
+# 			days = 10
+# 		}
+# 	}
+# }
+
+
+situation_event = {	#满城风雨
+    id = ge_event.20171
+    is_triggered_only = yes
+    picture = GFX_roz_evt_uproar
+    show_sound = event_evolution_mastery
+    title = "ge_event.2017.name"
+    desc = "ge_event.2017.desc"
+    trigger = {
+
+    }
+    immediate = {
+        owner = {
+            capital_scope = {
+                if = {
+                    limit = {
+                        owner = {
+                            has_country_flag = roz_krks_dl_normal_flag
+                        }
+                    }
+                    add_modifier = {
+                        modifier = ge_kirakishou_invasion_lv2
+                        mult = 1.5
+                    }
+                }
+                else_if = {
+                    limit = {
+                        owner = {
+                            has_country_flag = roz_krks_dl_early_flag
+                        }
+                    }
+                    add_modifier = {
+                        modifier = ge_kirakishou_invasion_lv2
+                        mult = 0.5
+                    }
+                }
+                remove_modifier = ge_kirakishou_invasion_lv1
+            }
+        }
+    }
+    option = {
+        name = "ge_event.2017.aa"
+        add_situation_progress = 5
+    }
+}
+
+situation_event = {	#愈演愈烈
+    id = ge_event.20181
+    is_triggered_only = yes
+    picture = GFX_roz_evt_uproar_2
+    title = "ge_event.2018.name"
+    desc = "ge_event.2018.desc"
+    show_sound = event_public_unrest
+    trigger = {
+
+    }
+    immediate = {
+        owner = {
+            capital_scope = {
+                add_modifier = {
+                    modifier = ge_kirakishou_invasion_lv2
+                    mult = 2.0
+                }
+                remove_modifier = ge_kirakishou_invasion_lv1
+            }
+        }
+
+    }
+    option = {
+        name = "ge_event.2018.aa"
+        add_situation_progress = 5
+    }
+}
+
+
+# country_event = {	#失控开端
+# 	id = ge_event.2019
+# 	is_triggered_only = yes
+# 	picture = GFX_
+# 	title = "ge_event.2019.name"
+# 	desc = "ge_event.2019.desc"
+# 	immediate = {
+# 		capital_scope = {
+# 				add_modifier = {
+# 				modifier = ge_kirakishou_invasion_lv3
+# 			}
+# 			remove_modifier = ge_kirakishou_invasion_lv2.5
+# 			remove_modifier = ge_kirakishou_invasion_lv2
+# 		}
+# 	}
+# 	option = {
+# 		name = "ge_event.2019.aa"
+# 		custom_tooltip = ge_event.2019.aa.ct
+# 		country_event = {
+# 			id = ge_event.2020
+# 			days = 30
+# 		}
+# 	}
+# }
+
+situation_event = {	#失控开端 defcon3
+    id = ge_event.20191
+    is_triggered_only = yes
+    picture = GFX_evt_smear_campaign
+    title = "ge_event.2019.name"
+    desc = "ge_event.2019.desc"
+    show_sound = event_encrypted_comms
+    immediate = {
+        owner = {
+            capital_scope = {
+                if = {
+                    limit = {
+                        owner = {
+                            has_country_flag = roz_krks_dl_normal_flag
+                        }
+                    }
+                    add_modifier = {
+                        modifier = ge_kirakishou_invasion_lv3
+                        mult = 2.5
+                    }
+                }
+                else_if = {
+                    limit = {
+                        owner = {
+                            has_country_flag = roz_krks_dl_early_flag
+                        }
+                    }
+                    add_modifier = {
+                        modifier = ge_kirakishou_invasion_lv3
+                        mult = 1
+                    }
+                }
+                remove_modifier = ge_kirakishou_invasion_lv2.5
+                remove_modifier = ge_kirakishou_invasion_lv2
+            }
+        }
+
+    }
+    option = {
+        name = "ge_event.2019.aa"
+        custom_tooltip = ge_event.2019.aa.ct
+        owner = {
+            country_event = {
+                id = ge_event.2020
+                days = 30
+            }
+        }
+
+        add_situation_progress = 5
+    }
+}
+
+country_event = {
+    id = ge_event.2020	#地方紧急报告
+    title = "ge_event.2020.name"
+    is_triggered_only = yes
+    picture = GFX_evt_worrying_signal
+    show_sound = event_planetary_riot
+    desc = "ge_event.2020.desc"
+
+    option = {
+        name = "ge_event.2020.aa"
+        allow = {
+            NOR = {
+                has_ethic = ethic_spiritualist
+                has_ethic = ethic_fanatic_spiritualist
+            }
+        }
+        country_event = {
+            id = ge_event.2021
+            days = 30
+        }
+    }
+    option = {
+        name = "ge_event.2020.bb"
+        allow = {
+            OR = {
+                has_ethic = ethic_spiritualist
+                has_ethic = ethic_fanatic_spiritualist
+            }
+        }
+        country_event = {
+            id = ge_event.2022
+            days = 15
+        }
+    }
+}
+
+country_event = {	#疑难重重 也是defcon3
+    id = ge_event.2021
+    title = "ge_event.2021.name"
+    is_triggered_only = yes
+    picture = GFX_evt_decryption
+    desc = "ge_event.2021.desc"
+    show_sound = event_airlock
+    option = {
+        name = "ge_event.2021.aa"
+        capital_scope = {
+            if = {
+                limit = {
+                    owner = {
+                        has_country_flag = roz_krks_dl_normal_flag
+                    }
+                }
+                add_modifier = {
+                    modifier = ge_kirakishou_invasion_lv4
+                    mult = 4.5
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        has_country_flag = roz_krks_dl_early_flag
+                    }
+                }
+                add_modifier = {
+                    modifier = ge_kirakishou_invasion_lv4
+                    mult = 1.5
+                }
+            }
+            remove_modifier = ge_kirakishou_invasion_lv3
+        }
+        country_event = {
+            id = ge_event.2025
+        }
+        hidden_effect = {
+
+        }
+    }
+}
+
+country_event = {	#诡异 也是defcon3
+    id = ge_event.2022
+    title = "ge_event.2022.name"
+    is_triggered_only = yes
+    picture = GFX_evt_decryption
+    desc = "ge_event.2022.desc"
+    show_sound = event_psionic
+    immediate = {
+        capital_scope = {
+            if = {
+                limit = {
+                    owner = {
+                        has_country_flag = roz_krks_dl_normal_flag
+                    }
+                }
+                add_modifier = {
+                    modifier = ge_kirakishou_invasion_lv4
+                    mult = 4.0
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        has_country_flag = roz_krks_dl_early_flag
+                    }
+                }
+                add_modifier = {
+                    modifier = ge_kirakishou_invasion_lv4
+                    mult = 1.25
+                }
+            }
+            remove_modifier = ge_kirakishou_invasion_lv3
+        }
+    }
+    option = {
+        name = "ge_event.2022.aa"
+        country_event = {
+            id = ge_event.2025
+        }
+        hidden_effect = {
+
+        }
+    }
+}
+
+
+
+country_event = {
+    id = ge_event.2025
+    title = "ge_event.2025.name"
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_main_room
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = ge_suigintou_flag
+        }
+    }
+    desc = "ge_event.2025.desc"
+
+    option = {
+        name = "ge_event.2025.aa"
+        is_dialog_only = yes
+        response_text = ge_event.2026.desc
+    }
+
+    option = {
+        name = "ge_event.2026.aa"
+        is_dialog_only = yes
+        response_text = ge_event.2027.desc
+    }
+
+    option = {
+        name = "ge_event.2027.aa"
+        country_event = {
+            id = ge_event.2028
+        }
+    }
+
+}
+
+#country_event = {
+#    id = ge_event.2026
+#    title = "ge_event.2026.name"
+#    is_triggered_only = yes
+#    diplomatic = yes
+#    picture_event_data = {
+#        portrait = event_target:ge_leader
+#        room = ge_sgt_main_room
+#    }
+#    immediate = {
+#        get_ge_leader_target = {
+#            flag = ge_suigintou_flag
+#        }
+#    }
+#    desc = "ge_event.2026.desc"
+#    option = {
+#        name = "ge_event.2026.aa"
+#        country_event = {
+#            id = ge_event.2027
+#        }
+#    }
+#}
+
+#country_event = {
+#    id = ge_event.2027
+#    title = "ge_event.2026.name"
+#    is_triggered_only = yes
+#    diplomatic = yes
+#    picture_event_data = {
+#        portrait = event_target:ge_leader
+#        room = ge_sgt_main_room
+#    }
+#    immediate = {
+#        get_ge_leader_target = {
+#            flag = ge_suigintou_flag
+#        }
+#    }
+#    desc = "ge_event.2027.desc"
+#    option = {
+#        name = "ge_event.2027.aa"
+#        country_event = {
+#            id = ge_event.2028
+#        }
+#    }
+#}
+
+country_event = {
+    id = ge_event.2028
+    title = "ge_event.2026.name"
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_main_room
+    }
+    desc = "ge_event.2028.desc"
+    #option = {
+    #    name = "ge_event.2028.aa"
+    #    custom_tooltip = ge_event.2028.aa.ct
+    #    allow = {
+    #        resource_stockpile_compare = {
+    #            resource = alloys
+    #            value > 2000
+    #        }
+    #    }
+    #    add_resource = {
+    #        alloys = -2000
+    #    }
+    #    hidden_effect = {
+    #        change_variable = {
+    #            which = ge_defense_fleet_count
+    #            value = 1
+    #        }
+    #    }
+    #}
+    #option = {
+    #    name = "ge_event.2028.bb"
+    #    custom_tooltip = ge_event.2028.bb.ct
+    #    allow = {
+    #        resource_stockpile_compare = {
+    #            resource = alloys
+    #            value > 4000
+    #        }
+    #    }
+    #    add_resource = {
+    #        alloys = -4000
+    #    }
+    #    hidden_effect = {
+    #        change_variable = {
+    #            which = ge_defense_fleet_count
+    #            value = 2
+    #        }
+    #    }
+    #}
+    option = {
+        name = "ge_event.2028.cc"
+        custom_tooltip = ge_event.2028.cc.ct
+        allow = {
+            resource_stockpile_compare = {
+                resource = alloys
+                value > 3000
+            }
+        }
+        add_resource = {
+            alloys = -3000
+        }
+        hidden_effect = {
+            change_variable = {
+                which = ge_defense_fleet_count
+                value = 3
+            }
+        }
+        default_hide_option = yes
+    }
+    option = {
+        name = "ge_event.2028.dd"
+        custom_tooltip = ge_event.2028.dd.ct
+        add_resource = {
+            influence = 100
+        }
+    }
+}
+
+# country_event = {	#首都星中央政府7号急件
+# 	id = ge_event.2030
+# 	title = "ge_event.2026.name"
+# 	is_triggered_only = yes
+# 	diplomatic = yes
+# 	picture_event_data = {
+# 		portrait = event_target:ge_leader
+# 		room = ge_sgt_main_room
+# 	}
+# 	desc = "ge_event.2030.desc"
+# 	option = {
+# 		name = "ge_event.2030.aa"
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = ge_event.2031
+# 				days = 30
+# 			}
+# 		}
+
+# 		capital_scope = {
+# 			add_modifier = {
+# 				modifier = ge_kirakishou_invasion_lvMAX
+# 			}
+# 			remove_modifier = ge_kirakishou_invasion_lv5
+# 		}
+# 		add_resource = {
+# 			influence = 100
+# 		}
+# 	}
+# 	option = {
+# 		name = "ge_event.2030.bb"
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = ge_event.2031
+# 				days = 30
+# 			}
+# 		}
+
+# 		capital_scope = {
+# 			add_modifier = {
+# 				modifier = ge_kirakishou_invasion_lvMAX
+# 			}
+# 			remove_modifier = ge_kirakishou_invasion_lv5
+# 		}
+# 		add_resource = {
+# 			influence = 100
+# 		}
+# 	}
+# }
+
+situation_event = {	#首都星中央政府7号急件 defcon_2
+    id = ge_event.20301
+    title = "ge_event.2026.name"
+    is_triggered_only = yes
+    picture = GFX_evt_open_revolt
+    desc = "ge_event.2030.desc"
+    immediate = {
+        hidden_effect = {
+            owner = {
+                set_country_flag = krks_pis_stage_flag_3
+            }
+        }
+    }
+    option = {
+        name = "ge_event.2030.aa"
+        hidden_effect = {
+            owner =  {
+                country_event = {
+                    id = ge_event.2031
+                    days = 30
+                }
+            }
+
+        }
+        owner = {
+            capital_scope = {
+                if = {
+                    limit = {
+                        owner = {
+                            has_country_flag = roz_krks_dl_normal_flag
+                        }
+                    }
+                    add_modifier = {
+                        modifier = ge_kirakishou_invasion_lvMAX
+                        mult = 3.0
+                    }
+                }
+                else_if = {
+                    limit = {
+                        owner = {
+                            has_country_flag = roz_krks_dl_early_flag
+                        }
+                    }
+                    add_modifier = {
+                        modifier = ge_kirakishou_invasion_lvMAX
+                        mult = 1.5
+                    }
+                }
+                remove_modifier = ge_kirakishou_invasion_lv4
+            }
+            add_resource = {
+                influence = 100
+            }
+        }
+
+    }
+    #option = {
+    #    name = "ge_event.2030.bb"
+    #    hidden_effect = {
+    #        owner =  {
+    #            country_event = {
+    #                id = ge_event.2031
+    #                days = 30
+    #            }
+    #        }
+    #
+    #    }
+    #    owner = {
+    #        capital_scope = {
+    #            add_modifier = {
+    #                modifier = ge_kirakishou_invasion_lvMAX
+    #            }
+    #            remove_modifier = ge_kirakishou_invasion_lv4
+    #        }
+    #        add_resource = {
+    #            influence = 100
+    #        }
+    #    }
+    #}
+}
+
+
+situation_event = {	#defcon1
+    id = ge_event.20302
+    title = "ge_event.20302.name"
+    is_triggered_only = yes
+    picture = GFX_evt_open_revolt
+    show_sound = event_yellow_alert
+    desc = "ge_event.20302.desc"
+    option = {
+        name = "ge_event.20302.aa"
+        owner = {
+            capital_scope = {
+                random_list = {
+                    10 = {
+                        while = {
+                            count = 3
+                            create_army = {
+                                owner = root.owner
+                                type = defense_army
+                                species = root.owner.species
+                            }
+                        }
+                    }
+                    10 = {
+                        while = {
+                            count = 4
+                            create_army = {
+                                owner = root.owner
+                                type = defense_army
+                                species = root.owner.species
+                            }
+                        }
+                    }
+                    10 = {
+                        while = {
+                            count = 5
+                            create_army = {
+                                owner = root.owner
+                                type = defense_army
+                                species = root.owner.species
+                            }
+                        }
+                    }
+                    10 = {
+                        while = {
+                            count = 6
+                            create_army = {
+                                owner = root.owner
+                                type = defense_army
+                                species = root.owner.species
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+situation_event = {	#山雨欲来风满楼
+    id = ge_event.20303
+    title = "ge_event.20303.name"
+    is_triggered_only = yes
+    picture = GFX_evt_black_market
+    desc = "ge_event.20303.desc"
+    show_sound = event_red_alert
+    option = {
+        name = "ge_event.20303.aa"
+        custom_tooltip = ge_event.20303.ct
+    }
+}
+
+###星球事件结束
+
+#########################
+#####继续黑洞之门部分
+
+
+country_event = {	#坏消息
+    id = ge_event.2031
+    title = "ge_event.2031.name"
+    is_triggered_only = yes
+    picture = GFX_evt_mysterious_signal
+    desc = "ge_event.2031.desc"
+    show_sound = event_ghost_town
+    option = {
+        name = "ge_event.2031.aa"
+        country_event = {
+            id = ge_event.2032
+            days = 30
+        }
+    }
+}
+
+country_event = {	#回归？
+    id = ge_event.2032
+    title = "ge_event.2032.name"
+    is_triggered_only = yes
+    picture = GFX_roz_evt_hostile_UVA_approaching
+    desc = "ge_event.2032.desc"
+    show_sound = event_worrying_signal
+    option = {
+        name = "ge_event.2032.aa"
+        custom_tooltip = ge_event.2032.ct
+        hidden_effect = {
+            #every_owned_fleet = {
+            #    limit = {
+            #        leader = {
+            #            has_leader_flag = ge_suigintou_flag
+            #        }
+            #    }
+            #    unassign_leader = this.leader
+            #}
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                save_global_event_target_as = roz_suigintou_bwg_leader_target@root
+                unassign_leader = this
+                exile_leader_as = this
+            }
+            set_country_flag = ge_sgt_busy
+        }
+        country_event = {
+            id = ge_event.2033
+            days = 10
+        }
+    }
+}
+
+country_event = {	#紧急通讯联络
+    id = ge_event.2033
+    title = "ge_event.2033.name"
+    desc = "ge_event.2033.desc"
+    is_triggered_only = yes
+    diplomatic = yes
+
+    picture_event_data = {
+        portrait = ge_suigintou_20
+        room = ge_sgt_main_room
+    }
+    option = {
+        name = "ge_event.2033.aa"
+        #custom_tooltip = ge_event.2033.aa.ct
+        country_event = {
+            id = ge_event.2034
+            days = 1
+        }
+    }
+}
+
+country_event = {	#赴汤蹈火
+    id = ge_event.2034
+    title = "ge_event.2034.name"
+    is_triggered_only = yes
+    picture = GFX_evt_interior_battle
+    show_sound = event_ground_battle
+    desc = "ge_event.2034.desc"
+    option = {
+        name = "ge_event.2034.aa"
+        country_event = {
+            id = ge_event.2035
+            #days = 1
+        }
+    }
+}
+
+country_event = {	#保险失效
+    id = ge_event.2035
+    title = "ge_event.2035.name"
+    is_triggered_only = yes
+    picture = GFX_roz_evt_Nfeild_lost
+    desc = "ge_event.2035.desc"
+    show_sound = event_red_alert
+    option = {
+        name = "ge_event.2035.aa"
+        if = {
+            limit = {
+                has_country_flag = roz_krks_dl_normal_flag
+            }
+            add_modifier = {
+                modifier = disable_ap_ge_0
+            }
+            if = {
+                limit = { has_ascension_perk = ap_ge_1 }
+                add_modifier = {
+                    modifier = disable_ap_ge_1
+                }
+            }
+        }
+        add_resource = {
+            influence = -25
+        }
+        country_event = {
+            id = ge_event.2036
+            days = 5
+        }
+    }
+}
+
+country_event = {	#血舞
+    id = ge_event.2036
+    title = "ge_event.2036.name"
+    is_triggered_only = yes
+    picture = GFX_roz_evt_krks_chaos
+    desc = "ge_event.2036.desc"
+    show_sound = event_red_alert
+    show_sound = event_ship_thrusters
+     option = {
+     	name = "ge_event.2036.aa"
+         trigger = {
+             check_variable = {
+                 which = ge_defense_fleet_count
+                 value = 0
+             }
+         }
+     	hidden_effect = {
+            country_event = {
+                id = ge_event.2037
+                days = 30
+            }
+        }
+     }
+
+    option = {	#后备舰队	evt.28
+        name = "ge_event.2036.bb"
+        custom_tooltip = ge_event.2036.ct
+        trigger = {
+            check_variable = {
+                which = ge_defense_fleet_count
+                value != 0
+            }
+
+        }
+        hidden_effect = {
+            event_target:roz_n_field_site_target@root = {
+                save_event_target_as = ge_site_sgt_target
+                solar_system = {
+                    create_ge_defense_fleet = yes
+                }
+            }
+            last_created_fleet = {
+                set_fleet_flag = kirakishou_effected_fleet_flag
+            }
+        }
+        country_event = {
+            id = ge_event.2037
+            days = 30
+        }
+    }
+}
+
+country_event = {	#陷落 #局势开始
+    id = ge_event.2037
+    title = "ge_event.2037.name"
+    desc = "ge_event.2037.desc"
+    is_triggered_only = yes
+    picture = GFX_evt_small_space_battle
+    show_sound = event_space_battle
+    immediate = {
+        every_owned_planet = {
+            limit = { is_under_colonization = no }
+            while = {
+                count = 10
+                limit = {
+                    NOT = { has_planet_flag = roz_krks_inv_zakko_fleet_planet }
+                }
+                set_planet_flag = roz_krks_inv_zakko_fleet_planet
+            }
+        }
+    }
+    option = {
+        name = "ge_event.2037.aa"
+        remove_modifier = ge_gravity_knowledge_plus
+        remove_modifier = ge_gravity_knowledge
+        hidden_effect = {
+            event_target:roz_n_field_site_target@root = {
+                save_event_target_as = ge_site_sgt_target
+                create_ge_kirakishou_hostile_ship = yes
+                last_created_country = {
+                    last_created_fleet = {
+                        #set_fleet_flag = kirakishou_hostile_fleet_flag
+                    }
+                }
+            }
+            every_owned_planet = { #雪华绮晶的杂兵
+                limit = {
+                    is_under_colonization = no
+                    has_planet_flag = roz_krks_inv_zakko_fleet_planet
+                }
+                create_fleet = {
+                    name = "NAME_roz_krks_zakko"
+                    settings = {
+                        spawn_debris = no
+                        is_boss = no
+
+                    }
+                    effect = {
+
+                        set_owner = last_created_country
+                        if = {
+                            limit = {
+                                root = {
+                                    has_country_flag = roz_krks_dl_normal_flag
+                                }
+                            }
+                            while = {
+                                count = 9
+                                create_ship = {
+                                    name = "NAME_Corrupted_Avatar_ROZ"
+                                    design = "NAME_Corrupted_Avatar"
+                                    effect = {
+                                        #set_timed_ship_flag = { #
+                                        #    flag = invincible
+                                        #    days = 3
+                                        #}
+                                    }
+                                }
+                                set_location = Prev.system_star
+                                set_fleet_stance = passive
+                                set_aggro_range_measure_from = return_point
+                                set_aggro_range = 300
+
+                                add_modifier = {
+                                    modifier = roz_krks_bf_stage1_HK_buff
+                                    mult = 0.3
+                                }
+                            }
+                        }
+
+                            else_if = {
+                                limit = {
+                                    root = {
+                                        has_country_flag = roz_krks_dl_early_flag
+                                    }
+                                }
+                                while = {
+                                    count = 3
+                                    create_ship = {
+                                        name = "NAME_Corrupted_Avatar"
+                                        design = "NAME_Corrupted_Avatar"
+                                        effect = {
+                                            #set_timed_ship_flag = { #如果你开了
+                                            #    flag = invincible
+                                            #    days = 3
+                                            #}
+                                        }
+                                    }
+                                    set_location = Prev.system_star
+                                    set_fleet_stance = passive
+                                    set_aggro_range_measure_from = return_point
+                                    set_aggro_range = 300
+
+                                }
+                                add_modifier = {
+                                    modifier = roz_krks_bf_HK_debuff
+                                }
+                            }
+
+                    }
+                }
+
+            }
+        }
+        start_situation = {
+            type = kirakishou_battle_field_situation
+            target = event_target:kirakishou_hostile_country@root
+        }
+        country_event = {
+            id = ge_event.2040
+            days = 2
+        }
+    }
+}
+
+
+
+
+country_event = {	#对话
+    id = ge_event.2040
+    title = "ge_event.2040.name"
+    desc = "ge_event.2040.desc"
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = roz_kirakishou_default
+        room = ge_sgt_main_2_room
+    }
+    trigger = {
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            OR = {
+                current_stage = kr_bf_stage_1
+                current_stage = kr_bf_stage_3
+                current_stage = kr_bf_stage_4
+                current_stage = kr_bf_stage_5
+            }
+        }
+    }
+    option = {
+        name = "ge_event.2040.bb"
+        country_event = {
+            id = ge_event.2041
+            #days = 1
+        }
+    }
+    option = {
+        name = "ge_event.2040.aa"
+        is_dialog_only = yes
+        response_text = ge_event.2040.aa.res
+    }
+
+
+}
+
+country_event = {	#对话
+    id = ge_event.2041
+    title = "ge_event.2040.name"
+    desc = "ge_event.2041.desc"
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = roz_kirakishou_default
+        room = ge_sgt_main_2_room
+    }
+    trigger = {
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            OR = {
+                current_stage = kr_bf_stage_1
+                current_stage = kr_bf_stage_3
+                current_stage = kr_bf_stage_4
+                current_stage = kr_bf_stage_5
+            }
+        }
+    }
+    option = {
+        name = "ge_event.2041.aa"
+        country_event = {
+            id = ge_event.2042
+            #days = 1
+        }
+    }
+}
+
+country_event = {	#对话
+    id = ge_event.2042
+    title = "ge_event.2040.name"
+    desc = "ge_event.2042.desc"
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = roz_kirakishou_default
+        room = ge_sgt_main_2_room
+    }
+    trigger = {
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            OR = {
+                current_stage = kr_bf_stage_1
+                current_stage = kr_bf_stage_3
+                current_stage = kr_bf_stage_4
+                current_stage = kr_bf_stage_5
+            }
+        }
+    }
+    option = {
+        name = "ge_event.2042.aa"
+        country_event = {
+            id = ge_event.2046
+            days = 1
+        }
+        #custom_tooltip = ge_event.2042.aa.ct
+    }
+}
+
+country_event = {	#成龙.jpg
+    id = ge_event.2046
+    title = "ge_event.2046.name"
+    desc = "ge_event.2046.desc"
+    is_triggered_only = yes
+    picture = GFX_roz_evt_black_dragon
+    show_sound = space_dragon_death
+    trigger = {
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            OR = {
+                current_stage = kr_bf_stage_1
+                current_stage = kr_bf_stage_3
+                current_stage = kr_bf_stage_4
+                current_stage = kr_bf_stage_5
+            }
+        }
+    }
+    immediate = {
+        #暂时禁用汞灯
+        #remove_country_flag = ge_leader_suigintou_get
+        #remove_country_flag = ge_suigintou_scientist_active
+        #remove_country_flag = ge_suigintou_admiral_active
+        every_owned_leader = {
+            limit = {
+                has_leader_flag = ge_suigintou_flag
+            }
+            unassign_leader = this
+            #exile_leader_as = this
+        }
+        ####幽默save，不过懒得改了
+        event_target:roz_n_field_site_target@root = {
+            save_event_target_as = ge_site_sgt_target
+        }
+        create_ge_stg_bwd_ship = yes
+        #让水银灯指挥刚召唤的黑羽龙
+        #owner = {
+        #    create_leader = {
+        #        class = admiral
+        #        name = "NAME_Suigintou"
+        #        skill = 1
+        #        gender = female
+        #        species = owner_main_species
+        #        immortal = yes
+        #        event_leader = yes
+        #        set_age = 17
+        #        traits = {
+        #        }
+        #        randomize_traits = no
+        #        skip_background_generation = yes
+        #        custom_catch_phrase = suigintou_sci_catch_phrase
+        #        custom_description = suigintou_backstory
+        #
+        #        effect = {
+        #            add_skill_without_trait_selection = 1
+        #            change_leader_portrait = ge_suigintou_6
+        #        }
+        #    }
+        #}
+        #last_created_leader = {
+        #    #set_leader_flag = ge_suigintou_flag
+        #    #set_leader_flag = legendary_leader
+        #    #set_leader_flag = immune_to_negative_traits
+        #    #unassign_leader = this
+        #    #set_variable = {
+        #    #    which = ge_leader_affection
+        #    #    value = root.ge_leader_aft_sgt
+        #    #}
+        #    #add_trait = leader_trait_ge_mercury_lamp
+        #    #add_trait = leader_trait_ge_Blackwinged_Dragon
+        #    #add_trait = leader_trait_ge_azoth
+        #    #add_trait = leader_trait_ge_N_field
+        #    #random_list = {
+        #    #    1 = {
+        #    #        add_trait = leader_trait_supreme_admiral
+        #    #
+        #    #    }
+        #    #    1 = {
+        #    #        add_trait = leader_trait_armorer
+        #    #
+        #    #    }
+        #    #    1 = {
+        #    #        add_trait = leader_trait_master_gunner
+        #    #
+        #    #    }
+        #    #    2 = {
+        #    #        add_trait = leader_trait_guerilla_tactics
+        #    #
+        #    #    }
+        #    #}
+        #}
+        last_created_fleet = {
+            #assign_leader = last_created_leader
+            set_leader = event_target:roz_suigintou_bwg_leader_target@root
+        }
+    }
+    option = {
+        name = "ge_event.2046.aa"
+        hidden_effect = {
+
+
+        }
+
+    }
+    after = {
+        hidden_effect = {
+            #remove_country_flag = ge_suigintou_admiral_active
+            #remove_country_flag = ge_suigintou_scientist_active
+            country_event = {
+                id = ge_event.2047
+                days = 4
+            }
+        }
+    }
+}
+
+country_event = {	#开局时停
+    id = ge_event.2047
+    title = "ge_event.2047.name"
+    desc = "ge_event.2047.desc"
+    is_triggered_only = yes
+    picture = GFX_roz_evt_krks_time_freeze
+    show_sound = roz_the_world_available
+    trigger = {
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            OR = {
+                current_stage = kr_bf_stage_1
+                current_stage = kr_bf_stage_3
+                current_stage = kr_bf_stage_4
+                current_stage = kr_bf_stage_5
+            }
+        }
+    }
+    immediate = {
+        every_owned_fleet = {
+            limit = {
+                is_in_combat = yes
+                #has_fleet_flag = kirakishou_effected_fleet_flag
+                NOT = {
+                    leader = {
+                        has_leader_flag = ge_suigintou_flag
+                    }
+                }
+                NOT = {
+                    any_owned_ship = {
+                        is_ship_size = ge_black_dragon
+                    }
+                }
+                solar_system = {
+                    has_star_flag = ge_suigintou_site_star_flag
+                }
+
+            }
+            add_modifier = {
+                modifier =  ge_modifier_time_freeze
+                days = 10
+            }
+        }
+        set_country_flag = ge_krks_time_freeze_loop_start_flag
+        country_event = {
+            id = ge_event.20471
+            days = 30
+        }
+    }
+    option = {
+        name = "ge_event.2047.aa"
+    }
+}
+
+country_event = {
+    id = ge_event.20471
+    is_triggered_only = yes
+    hide_window = yes
+    trigger = {
+        has_country_flag = ge_krks_time_freeze_loop_start_flag
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            OR = {
+                current_stage = kr_bf_stage_1
+                current_stage = kr_bf_stage_3
+                current_stage = kr_bf_stage_4
+                current_stage = kr_bf_stage_5
+            }
+        }
+    }
+    immediate = {
+        every_owned_fleet = {
+            limit = {
+                solar_system = {
+                    any_system_planet = {
+                        has_planet_flag = ge_planet_flag_sgt@root
+                    }
+                }
+                NOT = {
+                    any_owned_ship = {
+                        is_ship_size = ge_black_dragon
+                    }
+                }
+                #has_fleet_flag = kirakishou_effected_fleet_flag
+            }
+            add_modifier = {
+                modifier =  ge_modifier_time_freeze
+                days = 5
+            }
+        }
+        country_event = {
+            id = ge_event.20471
+            days = 30
+        }
+    }
+}
+
+###后接2048
+#country_event = {	#插旗
+#    id = ge_event.2038
+#    hide_window = yes
+#    is_triggered_only = yes
+#    trigger = {
+#        fromfromfrom = {
+#            has_fleet_flag = kirakishou_hostile_fleet_flag
+#        }
+#        has_country_flag = ge_krks_time_freeze_loop_start_flag
+#    }
+#    immediate = {
+#        fromfrom = {
+#
+#            set_fleet_flag = kirakishou_effected_fleet_flag
+#        }
+#
+#    }
+#}
+#
+#country_event = {	#此时此刻正乃极致之时，on action
+#    id = ge_event.2048
+#    hide_window = yes
+#    is_triggered_only = yes
+#    trigger = {
+#        fromfrom = {
+#            has_fleet_flag = kirakishou_effected_fleet_flag
+#            NOT = {
+#                leader = {
+#                    has_leader_flag = ge_suigintou_flag
+#                }
+#            }
+#        }
+#        fromfromfrom = {
+#            has_fleet_flag = kirakishou_hostile_fleet_flag
+#        }
+#        has_country_flag = ge_krks_time_freeze_loop_start_flag
+#    }
+#    immediate = {
+#        if = {
+#            limit = {
+#                fromfrom = {
+#                    NOT = {
+#                        has_modifier = ge_modifier_time_freeze
+#                    }
+#                }
+#            }
+#            fromfrom = {
+#                add_modifier = {
+#                    modifier = ge_modifier_time_freeze
+#                    days = 6
+#                }
+#                fleet_event = {
+#                    id = ge_event.20481
+#                    days = 40
+#                }
+#            }
+#        }
+#
+#    }
+#}
+
+#fleet_event = {
+#    id = ge_event.20481
+#    is_triggered_only = yes
+#    title = "ge_event.20481.name"
+#    desc = "ge_event.20481.desc"
+#    picture = GFX
+#
+#    hide_window = yes
+#
+#    trigger = {
+#        has_fleet_flag =  kirakishou_effected_fleet_flag
+#    }
+#    immediate = {
+#        add_modifier = {
+#            modifier = ge_modifier_time_freeze
+#            days = 9
+#        }
+#        fleet_event = {
+#            id = ge_event.20481
+#            days = 40
+#        }
+#    }
+#}
+
+
+###############################################
+country_event = {	#防御舰队被消灭
+    id = ge_event.3049
+    is_triggered_only = yes
+    fire_only_once = yes
+    picture = GFX_evt_exploding_ship
+    trigger = {
+        fromfrom = {
+            has_fleet_flag = ge_nf_defense_fleet_flag
+        }
+    }
+    title = "ge_event.3049.title"
+    desc = "ge_event.3049.desc"
+    option = {
+        name = ge_event.3049.aa
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###################################################
+#2阶段开始 #scope：雪华绮晶country
+
+country_event = {   #月检一阶段是否击破，防卡事件链
+    id = ge_event.30501
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        event_target:kirakishou_hostile_country@root = {
+            NOT = {
+                any_owned_fleet = {
+                    has_fleet_flag = kirakishou_Avatar_fleet_flag
+                }
+            }
+        }
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            current_stage = kr_bf_stage_5
+        }
+    }
+    immediate = {
+        event_target:kirakishou_hostile_country@root = {
+            country_event = {
+                id = ge_event.3051
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ge_event.3050
+    hide_window = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        has_country_flag = kirakishou_hostile_country
+        fromfrom = {
+            has_fleet_flag = kirakishou_Avatar_fleet_flag
+        }
+    }
+    immediate = {
+        from = {
+            country_event = {
+                id = ge_event.3051
+                days = 1
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ge_event.3051
+    title = "ge_event.3051.title"
+    desc = "ge_event.3051.desc"
+    picture = GFX_roz_evt_krks_horror
+    is_triggered_only = yes
+    #fire_only_once = yes
+    trigger = {
+        #防止多次触发
+        NOT = { has_country_flag = roz_bf_stage2_flag }
+    }
+    immediate = {
+        set_country_flag = roz_bf_stage2_flag
+        event_target:krks_bf_situation_target@root = {
+            add_situation_progress = -25
+        }
+        from = {
+
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = ge_krks_time_freeze_loop_start_flag }
+            }
+            set_country_flag = ge_krks_time_freeze_loop_start_flag
+            country_event = {
+                id  = ge_event.20471
+            }
+        }
+    }
+    option = {
+        name = ge_event.3051.aa
+        hidden_effect = {
+            ##唉
+            event_target:roz_n_field_site_target@root = {
+                save_event_target_as = ge_site_sgt_target
+            }
+            event_target:kirakishou_hostile_country@root = {
+                create_ge_kirakishou_hostile_ship_stage2 = yes
+            }
+        }
+    }
+}
+
+
+
+
+##################################################
+
+#3阶段 #scope：雪华绮晶country
+
+country_event = {   #月检二阶段是否击破，防卡事件链
+    id = ge_event.30601
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        event_target:kirakishou_hostile_country@root = {
+            NOT = {
+                any_owned_fleet = {
+                    has_fleet_flag = kirakishou_dh_fleet_flag
+                }
+            }
+        }
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            current_stage = kr_bf_stage_4
+        }
+    }
+    immediate = {
+        event_target:kirakishou_hostile_country@root = {
+            country_event = {
+                id = ge_event.3061
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ge_event.3060
+    hide_window = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        has_country_flag = kirakishou_hostile_country
+        fromfrom = {
+            has_fleet_flag = kirakishou_dh_fleet_flag
+        }
+    }
+    immediate = {
+        from = {
+            country_event = {
+                id = ge_event.3061
+                days = 1
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ge_event.3061
+    title = "ge_event.3061.title"
+    desc = "ge_event.3061.desc"
+    is_triggered_only = yes
+    #fire_only_once = yes
+    picture = GFX_roz_evt_krks_tiyanki
+    trigger = {
+        NOT = {
+            has_country_flag = roz_bf_stage3_flag
+        }
+    }
+    immediate = {
+        if = {
+            limit = {
+                NOT = { has_country_flag = ge_krks_time_freeze_loop_start_flag }
+            }
+            set_country_flag = ge_krks_time_freeze_loop_start_flag
+            country_event = {
+                id  = ge_event.20471
+            }
+        }
+
+    }
+    option = {
+        name = ge_event.3061.aa
+        default_hide_option = yes
+        hidden_effect = {
+            set_country_flag = roz_bf_stage3_flag
+            event_target:roz_n_field_site_target@root = {
+                save_event_target_as = ge_site_sgt_target
+            }
+            event_target:kirakishou_hostile_country@root = {
+                create_ge_kirakishou_hostile_ship_stage3 = yes
+                event_target:krks_bf_situation_target@root = {
+                    add_situation_progress = -25
+                }
+            }
+        }
+    }
+}
+
+###########################
+#4阶段开始 #scope：雪华绮晶country
+
+country_event = {   #月检三阶段是否击破，防卡事件链
+    id = ge_event.30701
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        event_target:kirakishou_hostile_country@root = {
+            NOT = {
+                any_owned_fleet = {
+                    has_fleet_flag = kirakishou_et_fleet_flag
+                }
+            }
+        }
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            current_stage = kr_bf_stage_3
+        }
+    }
+    immediate = {
+        event_target:kirakishou_hostile_country@root = {
+            country_event = {
+                id = ge_event.3061
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ge_event.3070
+    hide_window = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        has_country_flag = kirakishou_hostile_country
+        fromfrom = {
+            has_fleet_flag = kirakishou_et_fleet_flag
+        }
+    }
+    immediate = {
+        from = {
+            country_event = {
+                id = ge_event.3071
+                days = 1
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ge_event.3071
+    title = "ge_event.3071.title"
+    desc = "ge_event.3071.desc"
+    is_triggered_only = yes
+    #fire_only_once = yes
+    picture = GFX_roz_evt_krks_tiyanki
+    trigger = {
+        NOT = {
+            has_country_flag = roz_bf_stage4_flag
+        }
+    }
+    immediate = {
+        set_country_flag = roz_bf_stage4_flag
+        event_target:roz_n_field_site_target@root = {
+            save_event_target_as = ge_site_sgt_target
+        }
+        event_target:kirakishou_hostile_country@root = {
+            create_ge_kirakishou_hostile_ship_stage4 = yes
+            event_target:krks_bf_situation_target@root = {
+                add_situation_progress = -25
+            }
+        }
+        event_target:kirakishou_hostile_country@root = {
+            every_owned_fleet = {
+                add_modifier = {
+                    modifier = ge_modifier_time_freeze
+                    days = 25
+                }
+            }
+        }
+        event_target:ge_suigintou_owner@root = {
+            every_controlled_fleet = {
+                add_modifier = {
+                    modifier = ge_modifier_time_freeze
+                    days = 25
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = { has_country_flag = ge_krks_time_freeze_loop_start_flag }
+            }
+            set_country_flag = ge_krks_time_freeze_loop_start_flag
+            country_event = {
+                id  = ge_event.20471
+            }
+        }
+    }
+    option = {
+        name = ge_event.3071.aa
+        default_hide_option = yes
+    }
+    option = {
+        name = ge_event.3071.bb
+        custom_tooltip = ge_event.3071.bb.ct
+    }
+    after = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    any_situation = {
+                        is_situation_type = kirakishou_battle_field_situation
+                        current_stage = kr_bf_stage_1
+                    }
+                    NOT = {
+                        event_target:kirakishou_hostile_country@root = {
+                            NOT = {
+                                any_owned_fleet = {
+                                    has_fleet_flag = kirakishou_hostile_fleet_flag
+                                }
+                            }
+                        }
+                    }
+                }
+                country_event = { id = ge_event.3082 days = 2 }
+            }
+        }
+
+    }
+}
+
+country_event = {
+    id =  ge_event.3082
+    title = ge_event.3082.title
+    desc = ge_event.3082.desc
+    diplomatic = yes
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_sgt_bwg_room
+        portrait = event_target:ge_leader
+    }
+    trigger = {
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            current_stage = kr_bf_stage_1
+        }
+        NOT = {
+            event_target:kirakishou_hostile_country@root = {
+                NOT = {
+                    any_owned_fleet = {
+                        has_fleet_flag = kirakishou_hostile_fleet_flag
+                    }
+                }
+            }
+        }
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = ge_suigintou_flag
+        }
+    }
+    option = {
+        name = ge_event.3083.dd
+        default_hide_option = yes
+        response_text = ge_event.3083.dd.res
+        hidden_effect = {
+            if = {
+                limit = {
+                    any_situation = {
+                        is_situation_type = kirakishou_battle_field_situation
+                        current_stage = kr_bf_stage_1
+                    }
+                    event_target:kirakishou_hostile_country@root = {
+                        any_owned_fleet = {
+                            has_fleet_flag = kirakishou_hostile_fleet_flag
+                        }
+                    }
+                }
+                country_event = {
+                    id = ge_event.30841
+                    days = 2
+                }
+            }
+        }
+    }
+    option = {
+        name = ge_event.3082.aa
+        is_dialog_only = yes
+        response_text = ge_event.3082.aa.res
+        add_resource = {
+            unity = 1000
+        }
+    }
+    option = {
+        name = ge_event.3082.bb
+        is_dialog_only = yes
+        response_text = ge_event.3082.bb.res
+        add_resource = {
+            influence = 10
+        }
+    }
+    option = {
+        name = ge_event.3082.cc
+        is_dialog_only = yes
+        response_text = ge_event.3082.cc.res
+        add_resource = {
+            unity = 1000
+        }
+    }
+    option = {
+        name = ge_event.3082.dd
+        is_dialog_only = yes
+        response_text = ge_event.3082.dd.res
+        add_resource = {
+            unity = 1000
+        }
+    }
+    option = {
+        name = ge_event.3083.bb
+        is_dialog_only = yes
+        response_text = ge_event.3083.bb.res
+        add_resource = {
+            influence = 10
+        }
+    }
+
+    after = {
+
+    }
+}
+
+country_event = {
+    id = ge_event.30841
+    title =  ge_event.30841.name
+    desc =  ge_event.30841.desc
+    is_triggered_only = yes
+    picture = GFX_ge_lple_run
+    trigger = {
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            current_stage = kr_bf_stage_1
+        }
+        event_target:kirakishou_hostile_country@root = {
+            any_owned_fleet = {
+                has_fleet_flag = kirakishou_hostile_fleet_flag
+            }
+        }
+    }
+    option = {
+        name = ge_event.30841.aa
+        hidden_effect = {
+            if = {
+                limit = {
+                    any_situation = {
+                        is_situation_type = kirakishou_battle_field_situation
+                        current_stage = kr_bf_stage_1
+                    }
+                    event_target:kirakishou_hostile_country@root = {
+                        any_owned_fleet = {
+                            has_fleet_flag = kirakishou_hostile_fleet_flag
+                        }
+                    }
+                }
+                country_event = { id =  ge_event.3084 days = 1 }
+            }
+        }
+
+    }
+}
+
+country_event = {
+    id =  ge_event.3084
+    title = ge_event.3084.title
+    desc = ge_event.3084.desc
+    diplomatic = yes
+    is_triggered_only = yes
+    picture_event_data = {
+        room = ge_lple_2_room
+    }
+    trigger = {
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            current_stage = kr_bf_stage_1
+        }
+        event_target:kirakishou_hostile_country@root = {
+            any_owned_fleet = {
+                has_fleet_flag = kirakishou_hostile_fleet_flag
+            }
+        }
+    }
+    immediate = {
+
+    }
+    option = {
+        name = ge_event.3084.ee
+        response_text = ge_event.3084.ee.res
+        default_hide_option = yes
+        HIDDEN_EFFECT = {
+            country_event = { id = ge_event.2060 days = 1 }
+        }
+    }
+    option = {
+        name = ge_event.3084.aa
+        is_dialog_only = yes
+        response_text = ge_event.3084.aa.res
+        add_resource = {
+            influence = 10
+        }
+    }
+    option = {
+        name = ge_event.3084.bb
+        is_dialog_only = yes
+        response_text = ge_event.3084.bb.res
+        add_resource = {
+           physics_research = 1000
+        }
+    }
+    option = {
+        name = ge_event.3084.cc
+        is_dialog_only = yes
+        response_text = ge_event.3084.cc.res
+        add_resource = {
+            engineering_research = 1000
+        }
+    }
+    option = {
+        name = ge_event.3084.dd
+        is_dialog_only = yes
+        response_text = ge_event.3084.dd.res
+        add_resource = {
+            society_research = 1000
+        }
+    }
+
+    after = {
+
+    }
+}
+
+# country_event = {
+# 	id = ge_event.2050
+# 	title = "ge_event.2050.name"
+# 	desc = "ge_event.2050.desc"
+# 	is_triggered_only = yes
+# 	diplomatic = yes
+# 	picture_event_data = {
+# 		#portrait = ge_suigintou_6
+# 		#room = ge_sgt_main_room
+# 	}
+# 	option = {
+# 		name = "ge_event.2050.aa"
+# 		country_event = {
+# 			id = ge_event.2051
+# 			#days = 2
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = ge_event.2051
+# 	title = "ge_event.2051.name"
+# 	desc = "ge_event.2051.desc"
+# 	is_triggered_only = yes
+# 	diplomatic = yes
+# 	picture_event_data = {
+# 		portrait = ge_suigintou_6
+# 		room = ge_sgt_main_room
+# 	}
+# 	option = {
+# 		name = "ge_event.2051.aa"
+# 		country_event = {
+# 			id = ge_event.2052
+# 			days = 2
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = ge_event.2052
+# 	title = "ge_event.2052.name"
+# 	desc = "ge_event.2052.desc"
+# 	is_triggered_only = yes
+# 	diplomatic = yes
+# 	picture_event_data = {
+# 		portrait = event_target
+# 		room = ge_
+# 	}
+# 	option = {
+# 		name = "ge_event.2052.aa"
+# 		country_event = {
+# 			id = ge_event.2053
+# 			#days = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = ge_event.2053
+# 	title = "ge_event.2053.name"
+# 	desc = "ge_event.2053.desc"
+# 	is_triggered_only = yes
+# 	picture = GFX_
+# 	option = {
+# 		name = "ge_event.2053.aa"
+# 		country_event = {
+# 			id = ge_event.20530
+# 			#days = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = ge_event.20530
+# 	title = "ge_event.20530.name"
+# 	desc = "ge_event.20530.desc"
+# 	is_triggered_only = yes
+# 	picture = GFX_
+# 	immediate = {
+# 		every_system = {
+# 			limit = {
+# 				has_star_flag = ge_suigintou_site_star_flag
+# 			}
+# 			hidden_effect = {
+# 				create_ge_kirakishou_neutral_ship = yes
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = "ge_event.20530.aa"
+# 		country_event = {
+# 			id = ge_event.20531
+# 			#days = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = ge_event.20531
+# 	title = "ge_event.20531.name"
+# 	desc = "ge_event.20531.desc"
+# 	is_triggered_only = yes
+# 	diplomatic = yes
+# 	picture_event_data = {
+# 		portrait = event_target
+# 		room = ge_
+# 	}
+# 	option = {
+# 		name = "ge_event.20531.aa"
+# 		custom_tooltip = ge_event.20531.aa.ct
+# 		country_event = {
+# 			id = ge_event.2054
+# 			#days = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = ge_event.2054
+# 	title = "ge_event.2054.name"
+# 	desc = "ge_event.2054.desc"
+# 	is_triggered_only = yes
+# 	diplomatic = yes
+# 	picture_event_data = {
+# 		portrait = event_target
+# 		room = ge_
+# 	}
+# 	option = {
+# 		name = "ge_event.2054.aa"
+# 		custom_tooltip = ge_event.2054.aa.ct
+# 		country_event = {
+# 			id = ge_event.2055
+# 			#days = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = ge_event.2055
+# 	title = "ge_event.2055.name"
+# 	desc = "ge_event.2055.desc"
+# 	is_triggered_only = yes
+# 	diplomatic = yes
+# 	picture_event_data = {
+# 		portrait = event_target
+# 		room = ge_
+# 	}
+# 	option = {
+# 		name = "ge_event.2055.aa"
+# 		country_event = {
+# 			id = ge_event.2056
+# 			#days = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = ge_event.2056
+# 	title = "ge_event.2056.name"
+# 	desc = "ge_event.2056.desc"
+# 	is_triggered_only = yes
+# 	picture = GFX_
+# 	option = {
+# 		name = "ge_event.2056.aa"
+# 		country_event = {
+# 			id = ge_event.2057
+# 			#days = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = ge_event.2057
+# 	title = "ge_event.2057.name"
+# 	desc = "ge_event.2057.desc"
+# 	is_triggered_only = yes
+# 	diplomatic = yes
+# 	picture_event_data = {
+# 		portrait = event_target
+# 		room = ge_
+# 	}
+# 	option = {
+# 		name = "ge_event.2057.aa"
+# 		country_event = {
+# 			id = ge_event.2058
+# 			days = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = ge_event.2058
+# 	title = "ge_event.2058.name"
+# 	desc = "ge_event.2058.desc"
+# 	is_triggered_only = yes
+# 	diplomatic = yes
+# 	picture_event_data = {
+# 		portrait = event_target
+# 		room = ge_
+# 	}
+# 	option = {
+# 		name = "ge_event.2058.aa"
+# 		country_event = {
+# 			id = ge_event.2059
+# 			#days = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = ge_event.2059
+# 	title = "ge_event.2059.name"
+# 	desc = "ge_event.2059.desc"
+# 	is_triggered_only = yes
+# 	diplomatic = yes
+# 	picture_event_data = {
+# 		portrait = event_target
+# 		room = ge_
+# 	}
+# 	option = {
+# 		name = "ge_event.2059.aa"
+# 		country_event = {
+# 			id = ge_event.2060
+# 			#days = 1
+# 		}
+# 	}
+# }
+
+country_event = {
+    id = ge_event.2060
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        NOT = {
+            has_country_flag = roz_loop_temp_flag
+        }
+    }
+    immediate = {
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = roz_loop_temp_flag
+                }
+                has_country_flag = roz_krks_bf_nearly_end
+            }
+            set_country_flag = roz_loop_temp_flag
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = roz_loop_temp_flag
+                }
+            }
+            country_event = { id = ge_event.2060 days = 1 }
+        }
+
+        country_event = { id = ge_event.20601 }
+    }
+}
+
+country_event = {
+    id = ge_event.20601
+    hide_window = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        OR = {
+            event_target:kirakishou_Avatar_fleet@root = {
+                has_hp < 10
+            }
+            event_target:kirakishou_hostile_country@root = {
+                NOT = {
+                    any_owned_fleet = {
+                        has_fleet_flag = kirakishou_hostile_fleet_flag
+                    }
+                }
+            }
+        }
+
+    }
+    immediate = {
+        set_country_flag = roz_krks_bf_nearly_end
+        country_event = {
+            id = ge_event.2061
+        }
+    }
+}
+
+country_event = {	#自爆
+    id = ge_event.2061
+    title = "ge_event.2061.name"
+    desc = "ge_event.2061.desc"
+    is_triggered_only = yes
+    picture = GFX_roz_evt_Nfeild_lost
+    trigger = {
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            current_stage = kr_bf_stage_1
+        }
+    }
+    option = {
+        name = "ge_event.2061.aa"
+        #country_event = {
+        #    id = ge_event.2062
+        #    days = 1
+        #}
+    }
+}
+
+#country_event = {   #月检二阶段是否击破，防卡事件链
+#    id = ge_event.30601
+#    hide_window = yes
+#    is_triggered_only = yes
+#    trigger = {
+#        event_target:kirakishou_hostile_country@root = {
+#            NOT = {
+#                any_owned_fleet = {
+#                    has_fleet_flag = kirakishou_dh_fleet_flag
+#                }
+#            }
+#        }
+#        any_situation = {
+#            is_situation_type = kirakishou_battle_field_situation
+#            current_stage = kr_bf_stage_4
+#        }
+#    }
+#    immediate = {
+#        event_target:kirakishou_hostile_country@root = {
+#            country_event = {
+#                id = ge_event.3061
+#            }
+#        }
+#    }
+#}
+
+country_event = {
+    id = ge_event.20621
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            current_stage = kr_bf_stage_1
+        }
+    }
+    immediate = {
+        if = {
+            limit = {
+                NOT = {
+                    event_target:kirakishou_hostile_country@root = {
+                        NOT = {
+                            any_owned_fleet = {
+                                has_fleet_flag = kirakishou_hostile_fleet_flag
+                            }
+                        }
+                    }
+                }
+            }
+            country_event = {
+                id  = ge_event.20621
+                days = 2
+            }
+        }
+        else_if = {
+            limit = {
+                event_target:kirakishou_hostile_country@root = {
+                    NOT = {
+                        any_owned_fleet = {
+                            has_fleet_flag = kirakishou_hostile_fleet_flag
+                        }
+                    }
+                }
+                OR = {
+                    has_modifier = disable_ap_ge_0
+                    has_modifier = disable_ap_ge_1
+                }
+
+            }
+            roz_krks_inv_end_loop_effect = yes
+            break = yes
+        }
+    }
+}
+
+country_event = {	#战斗结束
+    id = ge_event.2062
+    title = "ge_event.2062.name"
+    desc = "ge_event.2062.desc"
+    is_triggered_only = yes
+    trigger = {
+
+        any_situation = {
+            is_situation_type = kirakishou_battle_field_situation
+            current_stage = kr_bf_stage_1
+        }
+        OR = {
+            AND = {
+                From = {
+                    is_same_empire = event_target:kirakishou_hostile_country@root
+                }
+                FromFromFrom = {
+                    has_fleet_flag = kirakishou_everything_fleet_flag
+                }
+            }
+            event_target:kirakishou_hostile_country@root = {
+                NOT = {
+                    any_owned_fleet = {
+                        has_fleet_flag = kirakishou_hostile_fleet_flag
+                    }
+                }
+            }
+        }
+    }
+    immediate = {
+        #every_owned_leader = {
+        #    limit = {
+        #        has_leader_flag = ge_suigintou_flag
+        #    }
+        #    #owner = {
+        #    #    set_variable = {
+        #    #        which = ge_leader_affection_temp
+        #    #        value = prev.ge_leader_affection
+        #    #    }
+        #    #}
+        #    #save_global_event_target_as = roz_sgt_leader_target_temp
+        #    exile_leader_as = this
+        #}
+        every_owned_fleet = {
+            limit = {
+                is_ship_size = ge_black_dragon
+            }
+            solar_system = {
+                create_ambient_object = {
+                    type = "star_explosion"
+                    duration = 5
+                    #play_animation_once = yes
+                    entity_scale_to_size = no
+                    use_3d_location = yes
+                    entity_offset = { min = 0 max = 0 }
+                    entity_offset_angle = { min = 0 max = 0 }
+                    entity_offset_height = { min = 0 max = 0 }
+                    scale = 4
+                    location = this
+                }
+                create_ambient_object = {
+                    type = nebula_1
+                    duration = 30
+                    #play_animation_once = yes
+                    entity_scale_to_size = no
+                    use_3d_location = yes
+                    entity_offset = { min = 0 max = 0 }
+                    entity_offset_angle = { min = 0 max = 0 }
+                    entity_offset_height = { min = 0 max = 0 }
+                    scale = 2
+                    location = this
+                }
+            }
+            unassign_leader = event_target:roz_suigintou_bwg_leader_target@root
+            exile_leader_as = this.leader
+            destroy_fleet = this
+        }
+        event_target:roz_suigintou_bwg_leader_target@root = {
+            unassign_leader = this
+            exile_leader_as = this
+        }
+        #清理全局目标,以及flag
+        event_target:kirakishou_hostile_country@root = {
+            destroy_country = yes
+        }
+        clear_global_event_target = kirakishou_hostile_country
+        clear_global_event_target = kirakishou_Avatar_fleet
+        remove_country_flag = roz_bf_stage2_flag
+        remove_country_flag = roz_bf_stage3_flag
+        remove_country_flag = roz_bf_stage4_flag
+        remove_country_flag = roz_krks_dl_early_flag
+        remove_country_flag = roz_krks_story_begin_flag
+
+        event_target:krks_bf_situation_target@root = {
+            add_situation_progress = -25
+        }
+        every_situation = { limit = { is_situation_type = kirakishou_battle_field_situation } destroy_situation = this }
+    }
+    picture = GFX_evt_large_explosion
+    option = {
+        name = "ge_event.2062.aa"
+        country_event = {
+            id = ge_event.2063
+            #days = 1
+        }
+
+        every_situation = {
+            limit = {
+                is_situation_type = kirakishou_planet_invasion_situation
+            }
+            destroy_situation = this
+        }
+        add_modifier = {
+            modifier = roz_krks_battle_win_modifier
+            years = 3
+        }
+        remove_modifier = disable_ap_ge_0
+        remove_modifier = disable_ap_ge_1
+        remove_country_flag = ge_krks_time_freeze_loop_start_flag
+        if = {
+            limit = {
+                has_country_flag = roz_krks_dl_normal_flag
+            }
+            add_modifier = {
+                modifier = ge_gravity_knowledge_plus
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = roz_krks_dl_early_flag
+            }
+            add_modifier = {
+                modifier = ge_gravity_knowledge
+            }
+        }
+        capital_scope = {
+            switch = {
+                trigger = has_modifier
+                ge_kirakishou_invasion_lv1 = {
+                    remove_modifier = ge_kirakishou_invasion_lv1
+                }
+                ge_kirakishou_invasion_lv2 = {
+                    remove_modifier = ge_kirakishou_invasion_lv2
+                }
+                ge_kirakishou_invasion_lv2.5 = {
+                    remove_modifier = ge_kirakishou_invasion_lv2.5
+                }
+                ge_kirakishou_invasion_lv3 = {
+                    remove_modifier = ge_kirakishou_invasion_lv3
+                }
+                ge_kirakishou_invasion_lv4 = {
+                    remove_modifier = ge_kirakishou_invasion_lv4
+                }
+                ge_kirakishou_invasion_lv5 = {
+                    remove_modifier = ge_kirakishou_invasion_lv5
+                }
+                ge_kirakishou_invasion_lvMAX = {
+                    remove_modifier = ge_kirakishou_invasion_lvMAX
+                }
+            }
+        }
+        break = yes
+    }
+}
+
+country_event = {	#搜寻
+    id = ge_event.2063
+    title = "ge_event.2063.name"
+    desc = "ge_event.2063.desc"
+    is_triggered_only = yes
+    picture = GFX_evt_federation_fleet
+    option = {
+        name = "ge_event.2063.aa"
+        country_event = {
+            id = ge_event.2064
+            days = 10
+        }
+    }
+}
+
+country_event = {	#回收
+    id = ge_event.2064
+    title = "ge_event.2064.name"
+    desc = "ge_event.2064.desc"
+    is_triggered_only = yes
+    picture = GFX_evt_ice_asteroids
+    option = {
+        name = "ge_event.2064.aa"
+        country_event = {
+            id = ge_event.2066
+            days = 3
+        }
+    }
+}
+
+#country_event = {	#给
+#    id = ge_event.2065
+#    title = "ge_event.2065.name"
+#    desc = "ge_event.2065.desc"
+#    is_triggered_only = yes
+#    picture = GFX_
+#    option = {
+#        name = "ge_event.2065.bb"
+#        country_event = {
+#            id = ge_event.2066
+#            #days = 1
+#        }
+#    }
+#}
+
+country_event = {	#雪华绮晶苏醒
+    id = ge_event.2066
+    title = "ge_event.2066.name"
+    desc = "ge_event.2066.desc"
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = ge_sgt_main_2_room
+        portrait = roz_kirakishou_default
+    }
+    option = {
+        name = "ge_event.2066.aa"
+        is_dialog_only = yes
+        response_text = ge_event.2066.aa.res
+    }
+    option = {
+        name = "ge_event.2066.bb"
+        is_dialog_only = yes
+        response_text = ge_event.2066.bb.res
+    }
+    option = {
+        name = "ge_event.2066.cc"
+        is_dialog_only = yes
+        response_text = ge_event.2066.cc.res
+    }
+    option = {
+        name = "ge_event.2066.dd"
+        is_dialog_only = yes
+        response_text = ge_event.2066.dd.res
+    }
+    option = {
+        name = "ge_event.2066.ee"
+        response_text = ge_event.2066.ee.res
+        country_event = {
+            id = roz_krks_leader_evt.10
+            days = 2
+        }
+
+    }
+}
+
+
+
+
+#####

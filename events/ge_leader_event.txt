@@ -1,0 +1,417 @@
+namespace = ge_leader_event
+###水银灯创建
+country_event = {
+	id = ge_leader_event.1
+	is_triggered_only = yes
+	picture = GFX_ge_sgt_wake
+	#picture_event_data = {  }
+	title = "ge_leader_event.1.name"
+	desc = "ge_leader_event.1.desc"
+	trigger = {
+		is_ai = no
+		NOR = {
+			has_country_flag = ge_leader_suigintou_get
+			any_owned_leader = {
+				has_leader_flag = ge_suigintou_flag
+			}
+		}
+	}
+	immediate = {
+		set_variable = {
+			which = ge_sgt_survey_count
+			value = 0
+		}
+	}
+	option = {
+		name = "ge_leader_event.1.aa"
+	}
+	after = {
+		hidden_effect = {
+			set_country_flag = ge_suigintou_admiral_active
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ge_leader_suigintou_get
+					}
+				}
+				set_country_flag = ge_leader_suigintou_get
+				create_leader = {
+					class = admiral
+					name = "NAME_Suigintou"
+					skill = 1
+					gender = female
+					species = owner_main_species
+					immortal = yes
+					event_leader = yes
+					set_age = 17
+					traits = {
+					}
+					randomize_traits = no
+					skip_background_generation = yes
+					custom_catch_phrase = suigintou_sci_catch_phrase
+					custom_description = suigintou_backstory
+					effect = {
+						roz_leader_name_set_effect = {
+							who_jp = Suigintou
+							who_sc = shuiyindeng
+						}
+					}
+				}
+				last_created_leader = {
+					set_leader_flag = ge_suigintou_flag
+					set_leader_flag = legendary_leader
+					set_leader_flag = immune_to_negative_traits
+					save_global_event_target_as = ge_leader_suigintou_global_target@root
+					unassign_leader = this
+					set_variable = {
+						##好感度初始化
+						which = ge_leader_affection
+						value = 0
+					}
+					add_trait = leader_trait_ge_mercury_lamp
+					add_trait = leader_trait_ge_Blackwinged_Dragon
+					add_trait = leader_trait_ge_azoth
+					add_trait = leader_trait_ge_N_field
+					random_list = {
+						1 = {
+							add_trait = leader_trait_armorer
+						}
+						2 = {
+							add_trait = leader_trait_military_overseer
+						}
+						1 = {
+							add_trait = leader_trait_master_gunner
+						}
+						1 = {
+							add_trait = leader_trait_destiny_engineer
+						}
+						2 = {
+							add_trait = leader_trait_guerilla_tactics
+						}
+						1 = {
+							add_trait = leader_trait_survivalist
+						}
+						1 = {
+							add_trait = leader_trait_maven_of_war
+						}
+						1 = {
+							add_trait = leader_trait_peacekeeper
+						}
+					}
+					freeze_leader_age = yes
+				}
+				roz_leader_change_skin_set_flag_effect = {
+					who = sgt
+					portrait = ge_suigintou
+					flag = ge_sgt_portrait_change
+					leader_flag = ge_suigintou_flag
+					portrait_key = ge_suigintou_6
+				}
+			}
+			country_event = {
+				id = ge_communication.0
+			}
+			country_event = {
+				id = ge_affection.11
+			}
+			#country_event = {
+			#	id = ge_leader_event.21
+			#	days = 1080
+			#	random = 720
+			#}
+		}
+	}
+
+}
+
+country_event = {
+	id = ge_leader_event.2
+	title = ge_leader_event.2.t
+	desc = ge_leader_event.2.d
+	picture = GFX_ge_sgt_army2
+	is_triggered_only = yes
+	option = {
+		name = ge_leader_event.2.aa
+		custom_tooltip = ge_leader_event.2.ctm
+		hidden_effect = {
+			country_event = {
+				id = ge_leader_event.3
+			}
+		}
+	}
+}
+
+country_event = {
+	####水银灯军团
+	id = ge_leader_event.3
+	#title = ge_leader_event.2.t
+	#desc = ge_leader_event.2.d
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		# resource_stockpile_compare = {
+		# 	resource = sr_rosa_mystica
+		# 	value >= 1
+		# }
+		has_country_flag = ge_leader_suigintou_get
+	}
+	immediate = {
+		set_country_flag = q_sgt_army_get
+		add_modifier = {
+			modifier = ge_sgt_Q_dolls
+		}
+		add_modifier = {
+			modifier = ge_rm_fake_prod
+		}
+	}
+}
+
+country_event = {
+	id = ge_leader_event.21
+	title = ge_leader_event.21.title
+	desc = ge_leader_event.21.desc
+	is_triggered_only = yes
+	picture = GFX_roz_evt_dolls_evtchain_2
+	option = {
+		name = ge_leader_event.21.aa
+		hidden_effect = {
+			country_event = {
+				id = ge_leader_event.22
+				days = 180
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ge_leader_event.22
+	title = ge_leader_event.22.title
+	desc = ge_leader_event.22.desc
+	is_triggered_only = yes
+	picture = GFX_roz_evt_dolls_evtchain_1
+	option = {
+		name = ge_leader_event.22.aa
+		hidden_effect = {
+			country_event = {
+				id = ge_leader_event.23
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ge_leader_event.23
+	title = ge_leader_event.23.title
+	desc = ge_leader_event.23.desc
+	is_triggered_only = yes
+	picture = GFX_roz_evt_dolls_evtchain_3
+	option = {
+		name = ge_leader_event.23.aa
+	}
+}
+###########################################
+###皮肤(废弃)
+# country_event = {
+# 	id = ge_leader_event.333
+# 	is_triggered_only = yes
+# 	title = "ge_leader_event.333.name"
+# 	desc = "ge_leader_event.333.desc"
+# 	diplomatic = yes
+# 	picture_event_data = {
+# 		#portrait = ge_suigintou_6
+#         portrait = event_target:ge_leader
+# 		room = enclave_curator_room
+# 	}
+# 	trigger = {
+# 		is_ai = no
+# 		from = {
+# 			has_leader_flag = ge_suigintou_flag
+# 			is_country_type = ge_N_Field
+# 		}
+# 	}
+# 	immediate = {
+# 		set_country_flag = suigintou_diplomacy_activated
+# 		get_ge_leader_target = {
+# 			flag = ge_suigintou_flag
+# 		}
+# 	}
+# 	# after = {
+# 	# 	hidden_effect = { remove_country_flag = suigintou_diplomacy_activated }
+# 	# }
+# 	option = {
+# 		name = "ge_leader_event.333.aa"
+# 		response_text = "ge_portrait_change_desc"
+# 		is_dialog_only = yes
+# 		hidden_effect = {
+#             if = {
+# 				limit = {
+# 					any_owned_leader = {
+# 						has_leader_flag = ge_suigintou_flag
+# 						is_event_leader = yes
+# 					}
+# 				}
+# 			}
+# 			every_owned_leader = {
+# 				limit = {
+# 					has_leader_flag = ge_suigintou_flag
+# 				}
+# 				change_leader_portrait = ge_suigintou_default
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = "ge_leader_event.333.ab"
+# 		response_text = "ge_portrait_change_desc"
+# 		is_dialog_only = yes
+# 		hidden_effect = {
+#             if = {
+# 				limit = {
+# 					any_owned_leader = {
+# 						has_leader_flag = ge_suigintou_flag
+# 						is_event_leader = yes
+# 					}
+# 				}
+# 			}
+# 			every_owned_leader = {
+# 				limit = {
+# 					has_leader_flag = ge_suigintou_flag
+# 				}
+# 				change_leader_portrait = ge_suigintou_2
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = "ge_leader_event.333.ac"
+# 		response_text = "ge_portrait_change_desc"
+# 		is_dialog_only = yes
+# 		hidden_effect = {
+#             if = {
+# 				limit = {
+# 					any_owned_leader = {
+# 						has_leader_flag = ge_suigintou_flag
+# 						is_event_leader = yes
+# 					}
+# 				}
+# 			}
+# 			every_owned_leader = {
+# 				limit = {
+# 					has_leader_flag = ge_suigintou_flag
+# 				}
+# 				change_leader_portrait = ge_suigintou_333
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = "ge_leader_event.333.ad"
+# 		response_text = "ge_portrait_change_desc"
+# 		is_dialog_only = yes
+# 		hidden_effect = {
+# 			if = {
+# 				limit = {
+# 					any_owned_leader = {
+# 						has_leader_flag = ge_suigintou_flag
+# 						is_event_leader = yes
+# 					}
+# 				}
+# 			}
+# 			every_owned_leader = {
+# 				limit = {
+# 					has_leader_flag = ge_suigintou_flag
+# 				}
+# 				change_leader_portrait = ge_suigintou_4
+# 			}
+# 		}
+# 	}
+#     option = {
+# 		name = "ge_leader_event.333.a5"
+# 		response_text = "ge_portrait_change_desc"
+# 		is_dialog_only = yes
+# 		hidden_effect = {
+# 			if = {
+# 				limit = {
+# 					any_owned_leader = {
+# 						has_leader_flag = ge_suigintou_flag
+# 						is_event_leader = yes
+# 					}
+# 				}
+# 			}
+# 			every_owned_leader = {
+# 				limit = {
+# 					has_leader_flag = ge_suigintou_flag
+# 				}
+# 				change_leader_portrait = ge_suigintou_5
+# 			}
+# 		}
+# 	}
+#     option = {
+# 		name = "ge_leader_event.333.a6"
+# 		response_text = "ge_portrait_change_desc"
+# 		is_dialog_only = yes
+# 		hidden_effect = {
+# 			if = {
+# 				limit = {
+# 					any_owned_leader = {
+# 						has_leader_flag = ge_suigintou_flag
+# 						is_event_leader = yes
+# 					}
+# 				}
+# 			}
+# 			every_owned_leader = {
+# 				limit = {
+# 					has_leader_flag = ge_suigintou_flag
+# 				}
+# 				change_leader_portrait = ge_suigintou_6
+# 			}
+# 		}
+# 	}
+#     option = {
+# 		name = "ge_leader_event.333.a7"
+# 		response_text = "ge_portrait_change_desc"
+# 		is_dialog_only = yes
+# 		hidden_effect = {
+# 			if = {
+# 				limit = {
+# 					any_owned_leader = {
+# 						has_leader_flag = ge_suigintou_flag
+# 						is_event_leader = yes
+# 					}
+# 				}
+# 			}
+# 			every_owned_leader = {
+# 				limit = {
+# 					has_leader_flag = ge_suigintou_flag
+# 				}
+# 				change_leader_portrait = ge_suigintou_7
+# 			}
+# 		}
+# 	}
+#     option = {
+# 		name = "ge_leader_event.333.a8"
+# 		response_text = "ge_portrait_change_desc"
+# 		is_dialog_only = yes
+# 		hidden_effect = {
+# 			if = {
+# 				limit = {
+# 					any_owned_leader = {
+# 						has_leader_flag = ge_suigintou_flag
+# 						is_event_leader = yes
+# 					}
+# 				}
+# 			}
+# 			every_owned_leader = {
+# 				limit = {
+# 					has_leader_flag = ge_suigintou_flag
+# 				}
+# 				change_leader_portrait = ge_suigintou_8
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		#退出
+# 		name = "ge_leader_event.333.00"
+# 		default_hide_option = yes
+# 		hidden_effect = {
+# 			remove_country_flag = suigintou_diplomacy_activated
+# 		}
+# 	}
+# }

@@ -1,0 +1,14 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_chronos_storm"
+        textureFile = "gfx/map/storms/chronos_storm_color.dds"
+    }
+    spriteType = {
+        name = "GFX_evt_chronos_storm"
+        textureFile = "gfx/event_pictures/evt_roz_chronos_storm.dds"
+    }
+    spriteType = {
+        name = "GFX_planetview_storm_chronos_modifier_frame"
+        textureFile = "gfx/interface/icons/planet_modifiers/pm_chronos_storm.dds"
+    }
+}

@@ -1,0 +1,839 @@
+####雪华绮晶职业切换
+create_roz_kirakishou_governor = {
+    ###雪华绮晶-做总督
+    optimize_memory
+    set_country_flag = roz_kirakishou_governor_active
+
+    #缓存国家目标领袖更新替换
+    event_target:roz_kirakishou_global_country@root = { #去掉全局国家的缓存雪华绮晶
+        every_owned_leader = {
+            limit = {
+                leader_class = commander
+                has_leader_flag = roz_kirakishou_flag
+            }
+        }
+        kill_leader = {
+            show_notification = no
+        }
+    }
+    clone_leader = { #替换当前的雪华绮晶（指挥官）到全局国家
+        target = event_target:roz_leader_kirakishou_global_target@root
+        effect = {
+            save_global_event_target_as = roz_kirakishou_admiral_inactive_temp@root
+            unassign_leader = this
+            set_owner = event_target:roz_kirakishou_global_country@root
+            freeze_leader_age = yes
+            roz_leader_name_set_effect = {
+                who_jp = Kirakishou
+                who_sc = xuehuaqijing
+            }
+        }
+    }
+
+    event_target:roz_leader_kirakishou_global_target@root = {
+        kill_leader = { show_notification = no }
+    }
+
+    if = {
+        limit = {
+            event_target:roz_kirakishou_global_country@root = {
+                any_owned_leader = {
+                    AND = {
+                        leader_class = official
+                        has_trait = leader_trait_roz_kirakishou_main
+                    }
+                }
+            }
+            #exists = event_target:roz_kirakishou_governor_inactive_temp@root
+        }
+        clone_leader = {
+            target = event_target:roz_kirakishou_governor_inactive_temp@root
+            custom_catch_phrase = kirakishou_gov_catch_phrase
+            custom_description = kirakishou_backstory
+            effect = {
+                roz_leader_name_set_effect = {
+                    who_jp = Kirakishou
+                    who_sc = xuehuaqijing
+                }
+                freeze_leader_age = yes
+                set_owner = event_target:ge_suigintou_owner@root
+            }
+        }
+    }
+    last_created_leader = {
+        save_global_event_target_as = roz_leader_kirakishou_global_target@root
+        set_leader_flag = roz_kirakishou_flag
+        set_leader_flag = legendary_leader
+        set_leader_flag = immune_to_negative_traits
+        set_variable = {
+            which = roz_kirakishou_affection
+            value = root.roz_leader_aft_krks
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = roz_kirakishou_affection
+                    value >= 90
+                }
+            }
+            add_trait = leader_trait_krks_governor_a_love
+        }
+        else_if = {
+            limit = { }
+            add_trait = leader_trait_krks_governor_a_like
+        }
+    }
+    #roz_leader_change_skin_set_flag_effect = {
+    #    who = krks
+    #    portrait = roz_kirakishou
+    #    flag = ge_krks_portrait_change
+    #    leader_flag = roz_kirakishou_flag
+    #    portrait_key = roz_kirakishou_default
+    #}
+    roz_leader_change_skin_reset_kirakisho_effect = yes
+    remove_country_flag = roz_kirakishou_admiral_active
+}
+
+
+
+
+####指挥官
+create_roz_kirakishou_admiral = {
+    ###雪华绮晶-做指挥官
+    optimize_memory
+    set_country_flag = roz_kirakishou_admiral_active
+    #缓存国家目标领袖更新替换
+    event_target:roz_kirakishou_global_country@root = { #去掉全局国家的缓存雪华绮晶
+        every_owned_leader = {
+            limit = {
+                leader_class = official
+                has_leader_flag = roz_kirakishou_flag
+            }
+            kill_leader = {
+                show_notification = no
+            }
+        }
+    }
+    clone_leader = { #替换当前的雪华绮晶到全局国家
+        target = event_target:roz_leader_kirakishou_global_target@root
+        effect = {
+            save_global_event_target_as = roz_kirakishou_governor_inactive_temp@root
+            unassign_leader = this
+            set_owner = event_target:roz_kirakishou_global_country@root
+            freeze_leader_age = yes
+            roz_leader_name_set_effect = {
+                who_jp = Kirakishou
+                who_sc = xuehuaqijing
+            }
+        }
+    }
+
+    event_target:roz_leader_kirakishou_global_target@root = {
+        kill_leader = { show_notification = no }
+    }
+
+    owner = {
+        if = {
+            limit = {
+                exists = event_target:roz_kirakishou_admiral_inactive_temp@root
+            }
+            clone_leader = {
+                target = event_target:roz_kirakishou_admiral_inactive_temp@root
+                custom_catch_phrase = kirakishou_gov_catch_phrase
+                custom_description = kirakishou_backstory
+                effect = {
+                    freeze_leader_age = yes
+                    #set_name = NAME_Kirakishou
+                    roz_leader_name_set_effect = {
+                        who_jp = Kirakishou
+                        who_sc = xuehuaqijing
+                    }
+                    set_owner = event_target:ge_suigintou_owner@root
+                }
+            }
+        }
+    }
+    last_created_leader = {
+        save_global_event_target_as = roz_leader_kirakishou_global_target@root
+        set_leader_flag = roz_kirakishou_flag
+        set_leader_flag = legendary_leader
+        set_leader_flag = immune_to_negative_traits
+        set_variable = {
+            which = roz_kirakishou_affection
+            value = root.roz_leader_aft_krks
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = roz_kirakishou_affection
+                    value >= 90
+                }
+            }
+            add_trait = leader_trait_krks_general_a_love
+        }
+        else_if = {
+            limit = { }
+            add_trait = leader_trait_krks_general_a_like
+        }
+    }
+    #roz_leader_change_skin_set_flag_effect = {
+    #    who = krks
+    #    portrait = roz_kirakishou
+    #    flag = ge_krks_portrait_change
+    #    leader_flag = roz_kirakishou_flag
+    #    portrait_key = roz_kirakishou_default
+    #}
+    roz_leader_change_skin_reset_kirakisho_effect = yes
+    remove_country_flag = roz_kirakishou_governor_active
+}
+
+
+####陆军将领
+#create_roz_kirakishou_general = {
+#    ###雪华绮晶-做舰队司令
+#    optimize_memory
+#    set_country_flag = roz_kirakishou_general_active
+#
+#    #缓存国家目标领袖更新替换
+#
+#    #若当前在做总督
+#    if = {
+#        limit = {
+#            any_owned_leader = {
+#                leader_class = governor
+#                has_leader_flag = roz_kirakishou_flag
+#            }
+#        }
+#        event_target:roz_kirakishou_governor_inactive_temp@root = { #去掉全局国家的缓存雪华绮晶
+#            kill_leader = {
+#                show_notification = no
+#            }
+#        }
+#        clone_leader = { #替换当前的雪华绮晶（adm）到全局国家
+#            target = event_target:roz_leader_kirakishou_global_target@root
+#            effect = {
+#                save_global_event_target_as = roz_kirakishou_governor_inactive_temp@root
+#                if = {
+#                    limit = {
+#                        NOT = { has_leader_flag = roz_kirakishou_flag }
+#                    }
+#                    set_leader_flag = roz_kirakishou_flag
+#                }
+#                unassign_leader = this
+#                set_owner = event_target:roz_kirakishou_global_country@root
+#                freeze_leader_age = yes
+#                #set_name = NAME_Kirakishou
+#                roz_leader_name_set_effect = {
+#                    who_jp = Kirakishou
+#                    who_sc = xuehuaqijing
+#                }
+#            }
+#        }
+#    }
+#    else_if = { #若是舰队司令
+#        limit = {
+#            any_owned_leader = {
+#                leader_class = admiral
+#                has_leader_flag = roz_kirakishou_flag
+#                has_trait = subclass_commander_admiral
+#            }
+#        }
+#        event_target:roz_kirakishou_admiral_inactive_temp@root = { #去掉全局国家的缓存雪华绮晶
+#            kill_leader = {
+#                show_notification = no
+#            }
+#        }
+#        clone_leader = { #替换当前的雪华绮晶（gen）到全局国家
+#            target = event_target:roz_leader_kirakishou_global_target@root
+#            effect = {
+#                save_global_event_target_as = roz_kirakishou_admiral_inactive_temp@root
+#                if = {
+#                    limit = {
+#                        NOT = {
+#                            has_leader_flag = roz_kirakishou_flag
+#                        }
+#                    }
+#                    set_leader_flag = roz_kirakishou_flag
+#                }
+#                unassign_leader = this
+#                set_owner = event_target:roz_kirakishou_global_country@root
+#                freeze_leader_age = yes
+#                #set_name = NAME_Kirakishou
+#                roz_leader_name_set_effect = {
+#                    who_jp = Kirakishou
+#                    who_sc = xuehuaqijing
+#                }
+#            }
+#        }
+#    }
+#    ####
+#    #event_target:ge_leader = {	#当前为雪华绮晶
+#    #    kill_leader = {
+#    #        show_notification = no
+#    #    }
+#    #}
+#    every_owned_leader = {
+#        limit = { has_leader_flag = roz_kirakishou_flag }
+#        kill_leader = { show_notification = no }
+#    }
+#    owner = {
+#        if = {
+#            limit = {
+#                event_target:roz_kirakishou_global_country@root = {
+#                    any_owned_leader = {
+#                        AND = {
+#                            leader_class = general
+#                            has_trait = leader_trait_roz_kirakishou_main
+#                        }
+#                    }
+#                }
+#            }
+#            clone_leader = {
+#                target = event_target:roz_kirakishou_general_inactive_temp@root
+#                effect = {
+#                    freeze_leader_age = yes
+#                    #set_name = NAME_Kirakishou
+#                    roz_leader_name_set_effect = {
+#                        who_jp = Kirakishou
+#                        who_sc = xuehuaqijing
+#                    }
+#                }
+#            }
+#        }
+#        else_if = {
+#            limit = { }
+#            create_leader = {
+#                class = commander
+#                name = "NAME_Kirakishou"
+#                skill = 8
+#                gender = female
+#                species = owner_main_species
+#                immortal = yes
+#                event_leader = yes
+#                set_age = 0
+#                traits = {  }
+#                #randomize_traits = no
+#                hide_age = yes
+#                skip_background_generation = yes
+#                custom_catch_phrase = kirakishou_gov_catch_phrase
+#                custom_description = kirakishou_backstory
+#                effect = {
+#                    add_skill_without_trait_selection = 1
+#                    remove_all_traits = yes
+#                    change_leader_portrait = roz_kirakishou_default
+#                    #set_variable = {
+#                    #    which = ge_leader_affection
+#                    #    value = owner.ge_leader_aft_sgt
+#                    #}
+#                    roz_leader_name_set_effect = {
+#                        who_jp = Kirakishou
+#                        who_sc = xuehuaqijing
+#                    }
+#                }
+#            }
+#            last_created_leader = {
+#                save_global_event_target_as = roz_leader_kirakishou_global_target@root
+#                unassign_leader = this
+#                set_variable = {
+#                    ##好感状态初始化
+#                    which = roz_kirakishou_affection
+#                    value = 60
+#                }
+#                add_trait = leader_trait_roz_kirakishou_main
+#                add_trait = leader_trait_roz_kirakishou_nightmare
+#                add_trait = leader_trait_supreme_organizer
+#                add_trait = subclass_commander_general
+#                random_list = {
+#                    1 = {
+#                        add_trait = leader_trait_taskmaster
+#                    }
+#                    1 = {
+#                        add_trait = leader_trait_fortress_cracker
+#                    }
+#                    3 = {
+#                        add_trait = leader_trait_chainbreaker
+#                    }
+#                    1 = {
+#                        add_trait = leader_trait_chainbreaker
+#                    }
+#                    1 = {
+#                        add_trait = leader_trait_honored_warmaster
+#                    }
+#                    1 = {
+#                        add_trait = leader_trait_academia_recruiter
+#                    }
+#                    #1 = {
+#                    #    add_trait = leader_trait_pilferer
+#                    #}
+#                    1 = {
+#                        add_trait = leader_trait_supreme_warrior
+#                    }
+#                    1 = {
+#                        add_trait = leader_trait_spymaster
+#                    }
+#                    1 = {
+#                        add_trait = leader_trait_totalitarian
+#                    }
+#                    1 = {
+#                        add_trait = leader_trait_bellicose
+#                    }
+#                }
+#                freeze_leader_age = yes
+#            }
+#        }
+#
+#    }
+#    last_created_leader = {
+#        set_leader_flag = roz_kirakishou_flag
+#        set_leader_flag = legendary_leader
+#        set_leader_flag = immune_to_negative_traits
+#        set_variable = {
+#            which = roz_kirakishou_affection
+#            value = root.roz_leader_aft_krks
+#        }
+#        if = {
+#            limit = {
+#                check_variable = {
+#                    which = roz_kirakishou_affection
+#                    value >= 90
+#                }
+#            }
+#            add_trait = leader_trait_krks_general_a_love
+#        }
+#        else_if = {
+#            limit = { }
+#            add_trait = leader_trait_krks_general_a_like
+#        }
+#
+#        freeze_leader_age = yes
+#
+#    }
+#    roz_leader_change_skin_set_flag_effect = {
+#        who = krks
+#        portrait = roz_kirakishou
+#        flag = ge_krks_portrait_change
+#        leader_flag = roz_kirakishou_flag
+#        portrait_key = roz_kirakishou_default
+#    }
+#    remove_country_flag = roz_kirakishou_governor_active
+#    remove_country_flag = roz_kirakishou_admiral_active
+#}
+
+
+roz_leader_change_skin_reset_kirakisho_effect = {
+    switch = {
+        trigger = has_country_flag
+        ge_krks_portrait_change_roz_kirakishou_20th = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                portrait_key = roz_kirakishou_20th
+                leader_flag = roz_kirakishou_flag
+            }
+        }
+        ge_krks_portrait_change_roz_kirakishou_default = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                portrait_key = roz_kirakishou_default
+                leader_flag = roz_kirakishou_flag
+            }
+        }
+        ge_krks_portrait_change_roz_kirakishou_1 = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                portrait_key = roz_kirakishou_1
+                leader_flag = roz_kirakishou_flag
+            }
+        }
+        ge_krks_portrait_change_roz_kirakishou_2 = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                portrait_key = roz_kirakishou_2
+                leader_flag = roz_kirakishou_flag
+            }
+        }
+        ge_krks_portrait_change_roz_kirakishou_3 = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                portrait_key = roz_kirakishou_3
+                leader_flag = roz_kirakishou_flag
+            }
+        }
+        ge_krks_portrait_change_roz_kirakishou_4 = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                portrait_key = roz_kirakishou_4
+                leader_flag = roz_kirakishou_flag
+            }
+        }
+        ge_krks_portrait_change_roz_kirakishou_5 = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                portrait_key = roz_kirakishou_5
+                leader_flag = roz_kirakishou_flag
+            }
+        }
+        ge_krks_portrait_change_roz_kirakishou_6 = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                portrait_key = roz_kirakishou_6
+                leader_flag = roz_kirakishou_flag
+            }
+        }
+    }
+}
+
+
+roz_krks_commander_backup = {
+    if = {
+        limit = {
+            event_target:roz_leader_kirakishou_global_target@root = {
+                leader_class = commander
+                has_leader_flag = roz_kirakishou_flag
+            }
+        }
+        event_target:roz_kirakishou_admiral_inactive_temp@root = { #去掉全局国家的缓存雪华绮晶
+            kill_leader = {
+                show_notification = no
+            }
+        }
+        clear_global_event_target = roz_kirakishou_admiral_inactive_temp@root
+        clone_leader = { #替换当前的雪华绮晶（指挥官）到全局国家
+            target = event_target:roz_leader_kirakishou_global_target@root
+            custom_catch_phrase = kirakishou_gov_catch_phrase
+            custom_description = kirakishou_backstory
+            effect = {
+                save_global_event_target_as = roz_kirakishou_admiral_inactive_temp@root
+                if = {
+                    limit = {
+                        NOT = { has_leader_flag = roz_kirakishou_flag }
+                    }
+                    set_leader_flag = roz_kirakishou_flag
+                }
+                unassign_leader = this
+                set_owner = event_target:roz_kirakishou_global_country@root
+                freeze_leader_age = yes
+                roz_leader_name_set_effect = {
+                    who_jp = Kirakishou
+                    who_sc = xuehuaqijing
+                }
+            }
+        }
+    }
+}
+
+roz_krks_official_backup = {
+    if = {
+        limit = {
+            event_target:roz_leader_kirakishou_global_target@root = {
+                leader_class = official
+                has_leader_flag = roz_kirakishou_flag
+            }
+        }
+        event_target:roz_kirakishou_governor_inactive_temp@root = { #去掉全局国家的缓存雪华绮晶
+            kill_leader = {
+                show_notification = no
+            }
+        }
+        clear_global_event_target = roz_kirakishou_governor_inactive_temp@root
+        clone_leader = { #替换当前的雪华绮晶到全局国家
+            target = event_target:roz_leader_kirakishou_global_target@root
+            custom_catch_phrase = kirakishou_gov_catch_phrase
+            custom_description = kirakishou_backstory
+            effect = {
+                save_global_event_target_as = roz_kirakishou_governor_inactive_temp@root
+                if = {
+                    limit = {
+                        NOT = { has_leader_flag = roz_kirakishou_flag }
+                    }
+                    set_leader_flag = roz_kirakishou_flag
+                }
+                unassign_leader = this
+                set_owner = event_target:roz_kirakishou_global_country@root
+                freeze_leader_age = yes
+                roz_leader_name_set_effect = {
+                    who_jp = Kirakishou
+                    who_sc = xuehuaqijing
+                }
+            }
+        }
+    }
+}
+
+roz_kirakishou_revive_reset_offcial = {
+    if = {
+        limit = {
+            exists = event_target:roz_kirakishou_governor_inactive_temp@root
+        }
+        clone_leader = {
+            target = event_target:roz_kirakishou_governor_inactive_temp@root
+            effect = {
+                roz_leader_name_set_effect = {
+                    who_jp = Kirakishou
+                    who_sc = xuehuaqijing
+                }
+                #freeze_leader_age = yes
+                save_global_event_target_as = roz_leader_kirakishou_global_target@root
+            }
+        }
+    }
+    else_if = {
+        limit = { }
+        create_leader = {
+            class = official
+            name = "NAME_Kirakishou"
+            skill = 2
+            gender = female
+            species = owner_main_species
+            immortal = yes
+            event_leader = yes
+            set_age = 0
+            traits = {  }
+            #randomize_traits = no
+            hide_age = yes
+            skip_background_generation = yes
+            custom_catch_phrase = kirakishou_gov_catch_phrase
+            custom_description = kirakishou_backstory
+            effect = {
+                add_skill_without_trait_selection = 1
+                remove_all_traits = yes
+                roz_leader_name_set_effect = {
+                    who_jp = Kirakishou
+                    who_sc = xuehuaqijing
+                }
+            }
+        }
+        last_created_leader = {
+            save_global_event_target_as = roz_leader_kirakishou_global_target@root
+            unassign_leader = this
+            set_variable = {
+                ##好感状态初始化
+                which = roz_kirakishou_affection
+                value = 60
+            }
+            add_trait = leader_trait_roz_kirakishou_main
+            add_trait = leader_trait_roz_kirakishou_nightmare
+            add_trait = leader_trait_supreme_organizer
+            random_list = {
+                1 = {
+                    add_trait = leader_trait_efficient
+                }
+                1 = {
+                    add_trait = leader_trait_arbiter
+                }
+                1 = {
+                    add_trait = leader_trait_utopian_idealist
+                }
+                1 = {
+                    add_trait = leader_trait_mediator
+                }
+                1 = {
+                    add_trait = leader_trait_shroud_preacher
+                }
+                1 = {
+                    add_trait = leader_trait_master_diplomat
+                }
+                1 = {
+                    add_trait = leader_trait_galvanizer
+                }
+            }
+            freeze_leader_age = yes
+        }
+    }
+    last_created_leader = {
+        set_leader_flag = roz_kirakishou_flag
+        set_leader_flag = legendary_leader
+        set_leader_flag = immune_to_negative_traits
+        set_variable = {
+            which = roz_kirakishou_affection
+            value = root.roz_leader_aft_krks
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = roz_kirakishou_affection
+                    value >= 90
+                }
+            }
+            add_trait = leader_trait_krks_governor_a_love
+        }
+        else_if = {
+            limit = { }
+            add_trait = leader_trait_krks_governor_a_like
+        }
+    }
+    roz_leader_change_skin_set_flag_effect = {
+        who = krks
+        portrait = roz_kirakishou
+        flag = ge_krks_portrait_change
+        leader_flag = roz_kirakishou_flag
+        portrait_key = roz_kirakishou_default
+    }
+}
+
+roz_kirakishou_revive_reset_commander = {
+    if = {
+        limit = {
+            exists = event_target:roz_kirakishou_admiral_inactive_temp@root
+        }
+        clone_leader = {
+            target = event_target:roz_kirakishou_admiral_inactive_temp@root
+            effect = {
+                save_global_event_target_as = roz_leader_kirakishou_global_target@root
+                #freeze_leader_age = yes
+                roz_leader_name_set_effect = {
+                    who_jp = Kirakishou
+                    who_sc = xuehuaqijing
+                }
+            }
+        }
+    }
+    else_if = {
+        limit = { }
+        create_leader = {
+            class = commander
+            name = "NAME_Kirakishou"
+            skill = 2
+            gender = female
+            species = owner_main_species
+            immortal = yes
+            event_leader = yes
+            set_age = 0
+            traits = {  }
+            #randomize_traits = no
+            hide_age = yes
+            skip_background_generation = yes
+            custom_catch_phrase = kirakishou_gov_catch_phrase
+            custom_description = kirakishou_backstory
+            effect = {
+                add_skill_without_trait_selection = 1
+                remove_all_traits = yes
+                roz_leader_name_set_effect = {
+                    who_jp = Kirakishou
+                    who_sc = xuehuaqijing
+                }
+            }
+        }
+        last_created_leader = {
+            save_global_event_target_as = roz_leader_kirakishou_global_target@root
+            unassign_leader = this
+            set_variable = {
+                ##好感状态初始化
+                which = roz_kirakishou_affection
+                value = 60
+            }
+            add_trait = leader_trait_roz_kirakishou_main
+            add_trait = leader_trait_roz_kirakishou_nightmare
+            add_trait = leader_trait_ge_mind_drain
+            add_trait = leader_trait_supreme_organizer
+            random_list = {
+                1 = {
+                    add_trait = leader_trait_armorer
+                }
+                1 = {
+                    add_trait = leader_trait_military_overseer
+                }
+                1 = {
+                    add_trait = leader_trait_master_gunner
+                }
+                1 = {
+                    add_trait = leader_trait_destiny_engineer
+                }
+                2 = {
+                    add_trait = leader_trait_guerilla_tactics
+                }
+                1 = {
+                    add_trait = leader_trait_survivalist
+                }
+                1 = {
+                    add_trait = leader_trait_maven_of_war
+                }
+                1 = {
+                    add_trait = leader_trait_peacekeeper
+                }
+            }
+            random_list = {
+                1 = {
+                    add_trait = leader_trait_taskmaster
+                }
+                1 = {
+                    add_trait = leader_trait_fortress_cracker
+                }
+                3 = {
+                    add_trait = leader_trait_chainbreaker
+                }
+                1 = {
+                    add_trait = leader_trait_chainbreaker
+                }
+                1 = {
+                    add_trait = leader_trait_honored_warmaster
+                }
+                1 = {
+                    add_trait = leader_trait_academia_recruiter
+                }
+                1 = {
+                    add_trait = leader_trait_supreme_warrior
+                }
+                1 = {
+                    add_trait = leader_trait_spymaster
+                }
+                1 = {
+                    add_trait = leader_trait_totalitarian
+                }
+                1 = {
+                    add_trait = leader_trait_bellicose
+                }
+            }
+            freeze_leader_age = yes
+        }
+    }
+    last_created_leader = {
+        set_leader_flag = roz_kirakishou_flag
+        set_leader_flag = legendary_leader
+        set_leader_flag = immune_to_negative_traits
+        set_variable = {
+            which = roz_kirakishou_affection
+            value = root.roz_leader_aft_krks
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = roz_kirakishou_affection
+                    value >= 90
+                }
+            }
+            add_trait = leader_trait_krks_general_a_love
+        }
+        else_if = {
+            limit = { }
+            add_trait = leader_trait_krks_general_a_like
+        }
+    }
+    roz_leader_change_skin_set_flag_effect = {
+        who = krks
+        portrait = roz_kirakishou
+        flag = ge_krks_portrait_change
+        leader_flag = roz_kirakishou_flag
+        portrait_key = roz_kirakishou_default
+    }
+}
+
+
+
+
+

@@ -1,0 +1,103 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_icon_councilor_celestial_military"
+        texturefile = "gfx/interface/council_view/councilor_celestial_military.dds"
+    }
+
+    spriteType = {
+        name = "GFX_icon_councilor_time_honored"
+        texturefile = "gfx/interface/council_view/councilor_time_honored.dds"
+    }
+
+    ###agenda
+    spriteType = {
+        name = "GFX_council_agenda_icon_agenda_void_core_boost"
+        texturefile = "gfx/interface/icons/agenda_icons/agenda_void_core_boost.dds"
+    }
+
+    ###megastructure
+    spriteType = {
+        name = "GFX_roz_mega_wanxiangtianyin"
+        texturefile = "gfx/interface/planetview/roz_mega_wanxiangtianyin.dds"
+    }
+    spriteType = {
+        name = "GFX_evt_roz_mega_wanxiangtianyin"
+        texturefile = "gfx/event_pictures/evt_roz_mega_wanxiangtianyin.dds"
+    }
+
+    ###ship_size
+    spriteType = {
+        name = "GFX_roz_ship_sizes"
+        textureFile = "gfx/interface/icons/ship_parts/roz_ship_sizes.dds"
+        noOfFrames = 2
+    }
+    spriteType = {
+        name = "GFX_roz_ship_sizes_top"
+        textureFile = "gfx/interface/icons/ship_parts/roz_ship_sizes_top.dds"
+        noOfFrames = 6
+    }
+
+    spriteType = {
+        name = "GFX_roz_ship_sizes_1"
+        sprite_sheet_sprite_type = "GFX_roz_ship_sizes"
+        default_frame = 2
+    }
+    spriteType = {
+        name = "GFX_roz_ship_sizes_2"
+        sprite_sheet_sprite_type = "GFX_roz_ship_sizes"
+        default_frame = 2
+    }
+    spriteType = {
+        name = "GFX_roz_ship_sizes_3"
+        sprite_sheet_sprite_type = "GFX_roz_ship_sizes"
+        default_frame = 2
+    }
+    spriteType = {
+        name = "GFX_roz_ship_sizes_4"
+        sprite_sheet_sprite_type = "GFX_roz_ship_sizes"
+        default_frame = 1
+    }
+    spriteType = {
+        name = "GFX_roz_ship_sizes_5"
+        sprite_sheet_sprite_type = "GFX_roz_ship_sizes"
+        default_frame = 2
+    }
+    spriteType = {
+        name = "GFX_roz_ship_sizes_6"
+        sprite_sheet_sprite_type = "GFX_roz_ship_sizes"
+        default_frame = 2
+    }
+
+    spriteType = {
+        name = "GFX_roz_ship_sizes_1_top"
+        sprite_sheet_sprite_type = "GFX_roz_ship_sizes_top"
+        default_frame = 1
+    }
+    spriteType = {
+        name = "GFX_roz_ship_sizes_2_top"
+        sprite_sheet_sprite_type = "GFX_roz_ship_sizes_top"
+        default_frame = 2
+    }
+    spriteType = {
+        name = "GFX_roz_ship_sizes_3_top"
+        sprite_sheet_sprite_type = "GFX_roz_ship_sizes_top"
+        default_frame = 3
+    }
+    spriteType = {
+        name = "GFX_roz_ship_sizes_4_top"
+        sprite_sheet_sprite_type = "GFX_roz_ship_sizes_top"
+        default_frame = 4
+    }
+    spriteType = {
+        name = "GFX_roz_ship_sizes_5_top"
+        sprite_sheet_sprite_type = "GFX_roz_ship_sizes_top"
+        default_frame = 5
+    }
+    spriteType = {
+        name = "GFX_roz_ship_sizes_6_top"
+        sprite_sheet_sprite_type = "GFX_roz_ship_sizes_top"
+        default_frame = 6
+    }
+
+
+}

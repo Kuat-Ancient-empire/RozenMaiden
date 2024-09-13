@@ -1,0 +1,726 @@
+spriteTypes = {
+
+	spriteType = {
+        name = "GFX_ship_part_test_laser"
+        texturefile = "gfx/interface/icons/ship_parts/ship_part_test_laser.dds"
+    }
+
+
+  spriteType = {
+		name = "GFX_ship_part_ge_reactor"
+    texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_reactor.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_reactor.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+		  animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 4				# in seconds
+		  animationdelay = 0			# in seconds
+		  animationblendmode = add       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+    }
+
+  spriteType = {
+		name = "GFX_ship_part_ge_warp_drive"
+    texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_warp_drive.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_warp_drive.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+		  animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 3				# in seconds
+		  animationdelay = 0			# in seconds
+		  animationblendmode = overlay       #add, multiply, overlay
+		  animationtype = pulsing    #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+    }
+
+  spriteType = {
+		name = "GFX_ship_part_ge_thruster"
+    texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_thruster.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_thruster.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+		  animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 3				# in seconds
+		  animationdelay = 0			# in seconds
+		  animationblendmode = overlay       #add, multiply, overlay
+		  animationtype = pulsing     #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+    }
+
+  spriteType = {
+		name = "GFX_ship_part_ge_sensor"
+    texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_sensor.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_sensor.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+		  animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 3				# in seconds
+		  animationdelay = 0			# in seconds
+		  animationblendmode = overlay       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+    }
+
+  spriteType = {
+		name = "GFX_ship_part_ge_sf_armor"
+    texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_sf_armor.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_sf_armor.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+		  animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+    }
+
+  spriteType = {
+		name = "GFX_ship_part_ge_shield"
+    texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_shield.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_shield.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+		  animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+    }
+
+  spriteType = {
+		name = "GFX_ship_part_ge_gravity_burst"
+    texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_gravity_burst_1.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_gravity_burst_1.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+		  animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+    }
+
+  spriteType = {
+		name = "GFX_ship_part_ge_pd"
+    texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_pd_2.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_pd_2.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+    }
+
+  spriteType = {
+		name = "GFX_ship_part_ge_xl_beam"
+    texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_xl_beam.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_xl_beam.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+    }
+
+  spriteType = {
+		name = "GFX_ship_part_ge_t_beam"
+    texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_t_beam.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_t_beam.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+    }
+
+  spriteType = {
+		name = "GFX_ship_part_ge_laser_cannon"
+    texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_laser_cannon_2.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_laser_cannon_2.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+    }
+
+  spriteType = {
+		name = "GFX_ship_part_ge_kinetic_gun"
+    texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_kinetic_gun.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_kinetic_gun.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+    }
+
+
+
+	###############################
+  spriteType = {
+		name = "GFX_ship_part_ge_swarm_computer"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_ge.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_ge.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ship_part_ge_picket_computer"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_ge.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_ge.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ship_part_ge_line_computer"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_line_ge.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_ge.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ship_part_ge_artillery_computer"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_artillery_ge.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_ge.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ship_part_ge_carrier_computer"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_carrier_ge.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_ge.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ship_part_ge_platform_computer"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_platform_ge.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_ge.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ship_part_ge_default_computer"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_platform_ge.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_ge.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ship_part_reinforcement_defense_system"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_reinforcement_defense_system.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_reinforcement_defense_system.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+		  animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_reinforcement_defense_system_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_reinforcement_defense_system2.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_reinforcement_defense_system2.dds"
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.2				# in seconds
+			animationdelay = 6			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = pulsing      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+  spriteType = {
+		name = "GFX_ship_part_ge_chaos_booster"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_chaos_booster.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_chaos_booster.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+		  animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ge_bhmissile"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_bhmissile_1.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_bhmissile_1.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ge_wtorpedo"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_wtorpedo.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_wtorpedo.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ge_shippart_titian_A"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_shippart_titian_A.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_shippart_titian_A.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = scrolling      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ge_shippart_titian_B"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_shippart_titian_B.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_shippart_titian_B.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = scrolling      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ge_shippart_titian_C"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_shippart_titian_C.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_shippart_titian_C.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = scrolling      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+
+  spriteType = {
+		name = "GFX_ge_time_freeze"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_time_freeze.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_time_freeze.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+		  animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ge_strike_craft_fighter"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_strike_craft_fighter.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_strike_craft_fighter.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ge_strike_craft_bomber"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_strike_craft_bomber.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_strike_craft_bomber.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+  spriteType = {
+		name = "GFX_ship_part_ge_planet_killer"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_planet_killer.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_planet_killer.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+	
+  spriteType = {
+		name = "GFX_ge_strike_craft_xuefeng"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_strike_craft_xuefeng.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_strike_craft_xuefeng.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+		  animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.2				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = pulsing      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}
+
+
+  spriteType = {
+		name = "GFX_ge_zhigelichang"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_zhigelichang.dds"
+	  animation = {
+		  animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_zhigelichang.dds"
+		  animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+		  animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+		  animationlooping = yes			# yes or no ;)
+		  animationtime = 1.15				# in seconds
+		  animationdelay = 6			# in seconds
+		  animationblendmode = "add"       #add, multiply, overlay
+		  animationtype = "scrolling"      #scrolling, rotating, pulsing
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+	}	
+
+  spriteType = {
+		name = "GFX_ge_shippart_hyper_generator"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_reactor2.dds"
+	}
+
+
+
+
+
+	#############################
+
+	spriteType = {
+		name = "GFX_ge_shippart_roz_sgt_feather"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_roz_sgt_feather.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_roz_sgt_feather.dds"
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.15				# in seconds
+			animationdelay = 6			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_ge_ship_part_normal_main_beam"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_normal_main_beam.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_normal_main_beam.dds"
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.15				# in seconds
+			animationdelay = 6			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_ge_ship_part_normal_medium_laser"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_normal_medium_laser.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_ge_normal_medium_laser.dds"
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.15				# in seconds
+			animationdelay = 6			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_ge_ship_part_genesis_lake"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_roz_genesis_lake .dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_roz_genesis_lake .dds"
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.15				# in seconds
+			animationdelay = 6			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_roz_wx_aura_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_roz_wx_aura_1.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_roz_wx_aura_1.dds"
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.15				# in seconds
+			animationdelay = 6			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_ship_part_roz_wx_aura_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_roz_wx_aura_2.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_roz_wx_aura_2.dds"
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.15				# in seconds
+			animationdelay = 6			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_ship_part_roz_wx_aura_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_roz_wx_aura_3.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_roz_wx_aura_3.dds"
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.15				# in seconds
+			animationdelay = 6			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_ge_ship_part_iqt_gun"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_roz_iqt_gun.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_roz_iqt_gun.dds"
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.15				# in seconds
+			animationdelay = 6			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+  }
+
+
+
+
+    

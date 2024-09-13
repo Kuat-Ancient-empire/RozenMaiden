@@ -1,0 +1,16 @@
+objectTypes = {
+	pdxmesh = {
+		name = "roz_FCR_mesh"
+		file = "output/FCR.mesh"
+		scale = 1.0
+		animation = { id = "idle" type = "FCR_idle_animation" }
+		meshsettings = {
+			name = "SQShape"
+			index = 0
+			texture_diffuse = "fusion_core_ring_default.dds"
+			texture_normal = "fusion_core_ring_normal.dds"
+			texture_specular = "fusion_core_ring_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

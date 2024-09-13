@@ -1,0 +1,56 @@
+component_set = {
+	key = "ge_sgt_main_beam"
+
+	icon = "GFX_ship_part_ge_vn_main_beam"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_sgt_main_beam_1"
+
+	icon = "GFX_ship_part_ge_vn_main_beam"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_medium_stg_laser"
+
+	icon = "GFX_ge_shippart_roz_sgt_feather"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_sgt_torpedo"
+
+	icon = "GFX_ship_part_ge_vn_torpedo"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_sgt_pd"
+
+	icon = "GFX_ship_part_ge_vn_pd"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_sgt_normal_beam"
+
+	icon = "GFX_ge_ship_part_normal_main_beam"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_normal_medium_laser"
+
+	icon = "GFX_ge_ship_part_normal_medium_laser"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_normal_pd"
+
+	icon = "GFX_ship_part_ge_vn_pd"
+	icon_frame = 1
+}
+

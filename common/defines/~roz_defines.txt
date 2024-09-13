@@ -1,0 +1,12 @@
+
+#NShip = {
+#    FLEET_BASE_FORMATION_SCALE	= 8    #队形密度
+#    FLEET_BASE_FORMATION_DIV	= 60   #队形前后长
+#}
+#
+#NGraphics = {
+#    SHIP_RANDOM_HEIGHT_OFFSET = 50             #队形高
+#    SHIP_MOVEMENT_LENGTH_CONSIDERED_ZERO = 0.1    # 低于此值时，将使用船只实际旋转，否则将使用矢量转向
+#
+#    STRIKE_CRAFT_HEIGHT_RANDOM	= 5.0
+#}

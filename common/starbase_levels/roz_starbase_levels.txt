@@ -1,0 +1,9 @@
+starbase_level_roz_juggernaut_wanxiang = {
+    ship_size = roz_juggernaut_wanxiang
+    potential_home_base = yes
+    show_in_outliner = no
+    collects_trade = no
+}
+
+
+

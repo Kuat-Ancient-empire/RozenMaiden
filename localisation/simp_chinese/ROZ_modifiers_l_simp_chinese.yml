@@ -1,0 +1,212 @@
+﻿l_simp_chinese:
+
+#
+ #####modifiers
+
+ roz_ap_slot_add_1:"额外的飞升槽"
+ roz_ap_slot_add_1_desc:"额外的飞升槽"
+ ge_modifier_time_freeze:0 "The Paradox Engine：Time Freeze Ready!"
+
+ ge_engine_boost_zp:0 "零点反应堆超载"
+ ge_engine_boost_zp_desc:0 "零点反应堆超载"
+
+ ge_engine_boost_dm:0 "暗物质反应堆超载"
+ ge_engine_boost_dm_desc:0 "暗物质反应堆超载"
+
+ ge_power_grid_Shock_zp:0 "国家电网严重受损"
+ ge_power_grid_Shock_zp_desc:0 "为了给零点反应堆供能，国家电网的输电中心和能源总管道遭受了巨大冲击，这次的能量输送已经明显超过了它们的设计上限。我们需要些时间来重建电网。"
+
+ ge_power_grid_Shock_dm:0 "国家电网受损"
+ ge_power_grid_Shock_dm_desc:0 "为了给暗物质反应堆供能，国家电网的输电中心和能源总管道遭受了冲击，所幸损失还在可接受范围内。我们需要些时间来重建电网。"
+
+ ge_gravity_knowledge:0 "引力启发"
+ ge_gravity_knowledge_desc:0 "我们的物理学家对N之领域入口的引力现象十分感兴趣，帝国科学院已经在那里建起了大型的研究机构来探索引力的奥秘。"
+
+ ge_gravity_knowledge_plus: "多元宇宙的启发"
+ ge_gravity_knowledge_plus_desc:0 "N之领域就是一片无尽的宝藏，这里不仅能为我们生产虚空核心，还能通过异世界开发为我们产出基础资源……甚至是人口"
+
+ ge_sgt_Q_dolls:0 "炼金生物"
+ ge_sgt_Q_dolls_desc:0 "这些Q版水银灯军团可以作为高效的辅助单位，提升我军在防御战中的战斗水平。"
+
+ ge_rm_fake_prod:0 "水银灯的炼金工坊"
+ ge_rm_fake_prod_desc:0 "这里可以生产Q版水银灯军团的重要构成部分——蔷薇圣母（赝品）。"
+
+ roz_resource_stoke_add:"\"门\"之仓库"
+ roz_resource_stoke_add_desc:"我们在N之领域内开辟了一片能存储巨量资源的超级仓库。"
+
+ mod_country_base_consumer_goods_produces_add:0 "每月£consumer_goods£ 消费品"
+ mod_country_base_alloys_produces_add:0 "每月£alloys£ 合金"
+ mod_country_base_minor_artifacts_produces_add:0 "每月£minor_artifacts£ 稀有文物"
+ mod_country_base_physics_research_produces_add:0 "每月物理学"
+ mod_country_base_society_research_produces_add:0 "每月社会学"
+ mod_country_base_engineering_research_produces_add:0 "每月工程学"
+ mod_country_sr_rosa_mystica_produces_add:0 "每月£sr_rosa_mystica£蔷薇圣母（赝品）"
+ mod_country_base_sr_rosa_mystica_produces_add:0 "每月£sr_rosa_mystica£蔷薇圣母（赝品）"
+ mod_leader_commanders_sr_zro_produces_add:"$mod_country_sr_rosa_mystica_produces_add$"
+ mod_leader_admirals_sr_rosa_mystica_produces_add: "$mod_country_sr_rosa_mystica_produces_add$"
+ mod_leader_generals_sr_rosa_mystica_produces_add: "$mod_country_sr_rosa_mystica_produces_add$"
+ mod_leader_admirals_alloys_upkeep_add: "£alloys£ 合金 维护费"
+ mod_leader_governors_society_research_produces_add:"$mod_country_society_research_produces_mult$"
+ mod_leader_governors_influence_produces_add:"$country_base_influence_produces_add$"
+ mod_leader_commanders_sr_rosa_mystica_produces_add:"$mod_country_sr_rosa_mystica_produces_add$"
+
+
+ mod_leader_scientists_sr_void_core_produces_add: "每月£sr_void_core£§Y虚空核心§!"
+ mod_leader_admirals_sr_zro_produces_add: "每月£sr_zro£§Y泽洛§!"
+ mod_country_sr_void_core_produces_mult: "每月£sr_void_core£§Y虚空核心§!"
+
+
+ mod_leader_scientists_time_produces_add: "每月£time£时间"
+
+ mod_country_resource_max_alloys_add:"£alloys£资源存储上限"
+ mod_country_resource_max_energy_add:"£energy£资源存储上限"
+
+ roz_ge_event_50_aa_modifier: "非我族类"
+ roz_ge_event_50_bb_modifier: "求同存异"
+ roz_ge_event_50_cc_modifier: "和平至上"
+ roz_ge_event_50_dd_modifier: "铁血军魂"
+ roz_ge_event_50_ee_modifier: "自由平等"
+ roz_ge_event_50_ff_modifier: "星海制霸"
+ roz_ge_event_50_gg_modifier: "我在故我思"
+ roz_ge_event_50_hh_modifier: "我思故我在"
+ roz_ge_event_50_zz_modifier: "旅途起点"
+ roz_ge_event_50_aa_modifier_desc: "非我族类"
+ roz_ge_event_50_bb_modifier_desc: "求同存异"
+ roz_ge_event_50_cc_modifier_desc: "和平至上"
+ roz_ge_event_50_dd_modifier_desc: "铁血军魂"
+ roz_ge_event_50_ee_modifier_desc: "自由平等"
+ roz_ge_event_50_ff_modifier_desc: "星海制霸"
+ roz_ge_event_50_gg_modifier_desc: "我在故我思"
+ roz_ge_event_50_hh_modifier_desc: "我思故我在"
+ roz_ge_event_50_zz_modifier_desc: "旅途起点"
+
+ roz_anti_Stealth_suppress_to_fallen_empire:"反隐形探测压制"
+ roz_anti_Stealth_suppress_to_fallen_empire_desc:"反隐形探测压制"
+ roz_FallenGod_invasion_prepare:"深渊备战"
+
+
+ roz_situation_sgt_flagship_bridge_databank_modifier:0 "神秘传感链路"
+ mod_roz_situation_sgt_flagship_bridge_databank_modifier:0 "神秘传感链路"
+ mod_roz_situation_sgt_flagship_bridge_databank_modifier_desc:0 "截获自诡异暗影的特殊传感信号，似乎是在和什么未知的传感阵列通讯。我们可以初步利用这段信号来增强星球传感器的探测范围——在暗影的身份地址刷新前。"
+
+ roz_sgt_flagship_completed_buff: "希灵帝国基层指挥链路（残缺）"
+ roz_sgt_flagship_completed_buff_desc: "黑蔷薇王座上的舰载AI为我们提供了一套兼容的指挥链路体系，这可以使得王座号可以与我们的舰队编制完美对接，不会对作战指挥体系造成多余负担。（其实是因为蠢驴的3.8版本更新导致舰容超过指挥上限的船所在的舰队会不停地变名字……）"
+
+
+ roz_void_energy_revolution: "虚空能源革命"
+ roz_void_energy_revolution_desc: "能源革命，即是以能源技术变革为基础，对社会能源开发和利用系统的变革。当然，社会生产力的发展和生活水平的提高是一个正反馈的过程，二者处于相对平衡才是良好的状态，虽然我们有取之不尽的能源，但是我们所消耗的成本在一般文明看来也是惊人的天文数字……"
+
+
+ roz_zp_pre-research: "零点反应堆预研"
+ roz_zp_pre-research_desc: "零点反应堆预研"
+
+ roz_stc_zp_homeplanet_debuff: "首都能源危机"
+ roz_stc_zp_homeplanet_debuff_desc: "这是否是r的预演？"
+
+ agenda_void_core_boost_finish: "§R能源泄洪§!"
+ agenda_void_core_boost_finish_desc: "随心所欲地浪费真香啊.jpg"
+
+ ######
+ roz_chronos_label_planet_effect_stability:"恐慌"
+ roz_chronos_label_planet_effect_stability_desc:"这场时空灾变使我们的民众惊恐万分"
+ roz_chronos_label_planet_effect_product:"生产中断"
+ roz_chronos_label_planet_effect_product_desc:"生产中断"
+ #############
+ roz_outland_planet_inspire:"时空折叠结构的启发"
+ roz_outland_planet_inspire_desc:"时空折叠结构的启发"
+ roz_outland_planet_emergency_rescue:"紧急救援响应"
+ roz_outland_planet_emergency_rescue_desc:"紧急救援响应"
+ ##############
+ roz_rosa_analysis_industrial:"财富之泉"
+ roz_rosa_analysis_industrial_desc:"我们的炼金成果结合N之领域探险队的寻获，成功设计出一种能够改善创新我国经济产业结构的生产资料，并在实践中证明了其推广价值。"
+ roz_rosa_analysis_research:"炼金理论大成"
+ roz_rosa_analysis_research_desc:"我们的炼金团队在理论探索、复杂实验和信息共享中确立了一种新的范式，其被证明具有在整个科学界推广开来的普适价值。"
+ roz_rosa_analysis_military:"炼金军事科技"
+ roz_rosa_analysis_military_desc:"我们的炼金团队在类蔷薇圣母中发掘出强力的能量输出模式，结合N之领域探险队在探险报告中提及的新材料和新战术，这些研究结果的运用将会加强我们的军事能力。"
+ roz_rosa_analysis_temporary:"有利条件"
+ roz_rosa_analysis_temporary_desc:"有利条件"
+ roz_rosa_analysis_research_fault:"激进的代价"
+ roz_rosa_analysis_research_fault_desc:"我们的团队错误地认为一种新技术理念的推广将有利于提高学界的科研效率，实践证明它并未取到预期效果，重新归档和回收它所造成的低效和混乱需要耗费不少精力和时间。"
+
+ #####
+
+ roz_product_modifier_test: "测试：产出-20%"
+ roz_product_modifier_test_desc: "测试：产出-20%"
+ roz_ap_slot_add: "测试：飞升槽+20"
+ roz_ap_slot_add_desc: "飞升槽位+1"
+
+ #!#原一段飞升，现在换成修正
+ roz_ap_ge_0: "N之领域的财富"
+ roz_ap_ge_0_desc: "N之领域使我们证实并坚信多元宇宙的存在，无数的门连接着无数的世界，蔷薇少女便是打开那些门的钥匙，无穷的资源与无尽的知识似乎正在向我们招手...不过一切都还待我们的后续开发。"
+
+ roz_planetary_defense_buff: "安乐天使已启动"
+ roz_planetary_defense_buff_desc: "那个由特纳雄联合会制造的行星护盾已经生效了，这将大幅增强我们首都的防御能力"
+
+#_desc:""
+ ###茶会
+ roz_2nd_tp_modifier:"极品红茶"
+ roz_2nd_tp_modifier_desc:"N之领域探险队偶然寻获的大吉岭红茶，在人偶们的茶会上首次亮相后便迅速推广至了众多重要社交场合"
+
+ roz_tp_101_modifier:"可口甜点"
+ roz_tp_101_modifier_desc:"可口甜点"
+
+ roz_tp_102_modifier:"§M乳酸菌饮料§!"
+ roz_tp_102_modifier_desc:""
+
+ roz_tp_random_modifier_1:"改善的生产"
+ roz_tp_random_modifier_1_desc:""
+
+ roz_tp_random_modifier_2:"进军"
+ roz_tp_random_modifier_2_desc:""
+
+ roz_tp_random_modifier_3:"超光"
+ roz_tp_random_modifier_3_desc:""
+
+ roz_tp_random_modifier_4:"时间加速"
+ roz_tp_random_modifier_4_desc:""
+
+ roz_tp_random_modifier_5:"思想开放"
+ roz_tp_random_modifier_5_desc:""
+
+ roz_tp_random_modifier_6:"稳定超导"
+ roz_tp_random_modifier_6_desc:""
+
+ roz_tp_random_modifier_7:"强化教育"
+ roz_tp_random_modifier_7_desc:""
+
+ roz_tp_random_modifier_8:"过度生长"
+ roz_tp_random_modifier_8_desc:""
+
+ roz_tp_random_modifier_9:"改进舰队后勤"
+ roz_tp_random_modifier_9_desc:"提升效率的作用绝对不容小视：优化船坞的产出，我们的扩张将会因此变得更加迅捷。"
+
+ roz_tp_random_modifier_10:"技术进步"
+ roz_tp_random_modifier_10_desc:"每一个技术研发领域都取得了巨大的进展。"
+
+ roz_tp_random_modifier_11:"万众之音"
+ roz_tp_random_modifier_11_desc:""
+
+ roz_tp_random_modifier_12:"多元激励"
+ roz_tp_random_modifier_12_desc:""
+
+ roz_tp_random_modifier_13:"时髦的玩具"
+ roz_tp_random_modifier_13_desc:""
+
+
+################
+#scripted modifiers
+################
+ mod_roz_timefreeze_modifier_tooltip:"§R时空畸变率(激活时)§!"
+
+
+ #############################
+ ####特殊计划：卷土重来
+ roz_unholy_invasion_defproj_1_defender_buff:"§G作战指令：守株待兔§!"
+ roz_unholy_invasion_defproj_1_defender_buff_desc:""
+
+ roz_stare_into_the_abyss_debuff:"§R直视深渊§!"
+ roz_stare_into_the_abyss_debuff_desc:""
+
+ roz_SK_ec_boundaries_of_science_frustrated:"在科学的边界碰壁"
+ roz_SK_ec_boundaries_of_science_frustrated_desc:"解析的结果告诉我们，“唯一性”是目前的科学界无法突破的限制。\n至少我们还不行……"
+

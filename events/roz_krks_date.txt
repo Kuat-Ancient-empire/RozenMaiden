@@ -1,0 +1,534 @@
+namespace = roz_krks_leader_evt
+
+country_event = {
+    id = roz_krks_leader_evt.400
+    title = roz_krks_leader_evt.400.title
+    desc = {
+        trigger = {
+            check_variable = {
+                which = roz_leader_aft_krks_reduced_score
+                value > 0
+            }
+        }
+        text = roz_krks_leader_evt.400.desc_1
+    }
+    desc = {
+        trigger = {
+            check_variable = {
+                which = roz_leader_aft_krks_reduced_score
+                value > 0
+            }
+        }
+        text = roz_krks_leader_evt.400.desc_2
+    }
+    desc = {
+        trigger = {
+            check_variable = {
+                which = roz_leader_aft_krks_reduced_score
+                value > 0
+            }
+        }
+        text = roz_krks_leader_evt.400.desc_3
+    }
+    desc = {
+        trigger = {
+            check_variable = {
+                which = roz_leader_aft_krks_reduced_score
+                value > 60
+            }
+        }
+        text = roz_krks_leader_evt.400.desc_1x
+    }
+    desc = {
+        trigger = {
+            check_variable = {
+                which = roz_leader_aft_krks_reduced_score
+                value > 60
+            }
+        }
+        text = roz_krks_leader_evt.400.desc_2x
+    }
+    desc = {
+        trigger = {
+            check_variable = {
+                which = roz_leader_aft_krks_reduced_score
+                value > 60
+            }
+        }
+        text = roz_krks_leader_evt.400.desc_3x
+    }
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = ge_sgt_main_room
+        portrait = event_target:ge_leader
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = roz_kirakishou_flag
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.400.aa
+        hidden_effect = {
+            random_list = {
+                1 = { country_event = { id = roz_krks_leader_evt.401 } }
+                1 = { country_event = { id = roz_krks_leader_evt.402 } }
+                1 = { country_event = { id = roz_krks_leader_evt.403 } }
+                1 = { country_event = { id = roz_krks_leader_evt.404 } }
+                1 = { country_event = { id = roz_krks_leader_evt.405 } }
+                1 = { country_event = { id = roz_krks_leader_evt.406 } }
+                1 = { country_event = { id = roz_krks_leader_evt.407 } }
+                1 = { country_event = { id = roz_krks_leader_evt.408 } }
+            }
+        }
+    }
+    after = {
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = roz_krks_date_cd
+                days = 60
+            }
+            country_event = {
+                id = roz_krks_leader_evt.499
+                days = 60
+            }
+        }
+    }
+}
+
+
+###事件池
+country_event = {
+    id = roz_krks_leader_evt.401
+    title = roz_krks_leader_evt.401.title
+    desc = roz_krks_leader_evt.401.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = roz_krks_date_masquerade_room
+        portrait = event_target:ge_leader
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = roz_kirakishou_flag
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.401.aa
+        custom_tooltip = roz_krks_leader_evt.401.aa.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.401.bb
+        custom_tooltip = roz_krks_leader_evt.401.bb.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.402
+    title = roz_krks_leader_evt.402.title
+    desc = roz_krks_leader_evt.402.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = roz_krks_date_odds_room
+        portrait = event_target:ge_leader
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = roz_kirakishou_flag
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.402.aa
+        #custom_tooltip = roz_krks_leader_evt.402.aa.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.402.bb
+        #custom_tooltip = roz_krks_leader_evt.402.bb.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.403
+    title = roz_krks_leader_evt.403.title
+    desc = roz_krks_leader_evt.403.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = roz_krks_date_nier_room
+        portrait = event_target:ge_leader
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = roz_kirakishou_flag
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.403.aa
+        custom_tooltip = roz_krks_leader_evt.403.aa.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.403.bb
+        custom_tooltip = roz_krks_leader_evt.403.bb.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.404
+    title = roz_krks_leader_evt.404.title
+    desc = roz_krks_leader_evt.404.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = roz_krks_date_time_capsule_room
+        portrait = event_target:ge_leader
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = roz_kirakishou_flag
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.404.aa
+        custom_tooltip = roz_krks_leader_evt.404.aa.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.404.bb
+        custom_tooltip = roz_krks_leader_evt.404.bb.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.405
+    title = roz_krks_leader_evt.405.title
+    desc = roz_krks_leader_evt.405.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = roz_krks_date_CityOnAHill_room
+        portrait = event_target:ge_leader
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = roz_kirakishou_flag
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.405.aa
+        hidden_effect = {
+            country_event = {
+                id = roz_krks_leader_evt.4051
+            }
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.405.bb
+        hidden_effect = {
+            country_event = {
+                id = roz_krks_leader_evt.4051
+            }
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.4051
+    title = roz_krks_leader_evt.4051.title
+    desc = roz_krks_leader_evt.4051.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = roz_krks_date_CityOnAHill_2_room
+        portrait = event_target:ge_leader
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = roz_kirakishou_flag
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.4051.aa
+        custom_tooltip = roz_krks_leader_evt.4051.aa.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.4051.bb
+        custom_tooltip = roz_krks_leader_evt.4051.bb.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.406
+    title = roz_krks_leader_evt.406.title
+    desc = roz_krks_leader_evt.406.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = roz_krks_date_vir_room
+        portrait = event_target:ge_leader
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = roz_kirakishou_flag
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.406.aa
+        custom_tooltip = roz_krks_leader_evt.406.aa.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.406.bb
+        custom_tooltip = roz_krks_leader_evt.406.bb.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+        add_resource = {
+            minerals = 2
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.407
+    title = roz_krks_leader_evt.407.title
+    desc = roz_krks_leader_evt.407.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = roz_krks_date_Antarctica_room
+        portrait = event_target:ge_leader
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = roz_kirakishou_flag
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.407.aa
+        custom_tooltip = roz_krks_leader_evt.407.aa.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.407.bb
+        custom_tooltip = roz_krks_leader_evt.407.bb.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.408
+    title = roz_krks_leader_evt.408.title
+    desc = roz_krks_leader_evt.408.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = roz_krks_date_TheLittlePrince_room
+        portrait = event_target:ge_leader
+    }
+    immediate = {
+        get_ge_leader_target = {
+            flag = roz_kirakishou_flag
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.408.aa
+        custom_tooltip = roz_krks_leader_evt.408.aa.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.408.bb
+        custom_tooltip = roz_krks_leader_evt.408.bb.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.408.cc
+        custom_tooltip = roz_krks_leader_evt.408.cc.ct
+        custom_tooltip = roz_krks_leader_evt.add_aft_1
+        hidden_effect = {
+            every_owned_leader = {
+                limit = { has_leader_flag = roz_kirakishou_flag }
+                change_variable = {
+                    which = roz_kirakishou_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+country_event = {
+    id = roz_krks_leader_evt.499
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        create_message = {
+            type = ROZ_krks_gal_MESSAGE_TYPE
+            localization = ROZ_krks_gal_MESSAGE_desc
+            days = 15
+            target = event_target:ge_site_sgt_target@root
+        }
+    }
+}
+
+
+
+
+
+

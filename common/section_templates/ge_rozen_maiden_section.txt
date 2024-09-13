@@ -1,0 +1,435 @@
+###################################
+ship_section_template = {
+	key = "ge_sgt_ship_core"
+
+	ship_size = ge_crime_and_punishment
+	fits_on_slot = "core"
+	entity = roz_fairy_battlecrusier_frame_entity
+	component_slot = {
+		name = xl_gun_01
+		template = invisible_titanic_fixed
+		locatorname = xl_gun_01
+	}
+
+	#left large
+	component_slot = {
+		name = large_gun_1
+		template = roz_large_1_turret
+		locatorname = large_gun_1
+	}
+	component_slot = {
+		name = large_gun_2
+		template = roz_large_1_turret
+		locatorname = large_gun_2
+	}
+	component_slot = {
+		name = large_gun_3
+		template = roz_large_1_turret
+		locatorname = large_gun_3
+	}
+
+	#right large
+	component_slot = {
+		name = large_gun_10
+		template = roz_large_1_turret
+		locatorname = large_gun_10
+	}
+	component_slot = {
+		name = large_gun_11
+		template = roz_large_1_turret
+		locatorname = large_gun_11
+	}
+	component_slot = {
+		name = large_gun_12
+		template = roz_large_1_turret
+		locatorname = large_gun_12
+	}
+
+	#point defense
+	component_slot = {
+		name = small_gun_1
+		template = roz_pd_1_turret
+		locatorname = small_gun_1
+	}
+	component_slot = {
+		name = small_gun_2
+		template = roz_pd_1_turret
+		locatorname = small_gun_2
+	}
+	component_slot = {
+		name = small_gun_5
+		template = roz_pd_1_turret
+		locatorname = small_gun_5
+	}
+	component_slot = {
+		name = small_gun_6
+		template = roz_pd_1_turret
+		locatorname = small_gun_6
+	}
+	component_slot = {
+		name = small_gun_9
+		template = roz_pd_1_turret
+		locatorname = small_gun_9
+	}
+	component_slot = {
+		name = small_gun_10
+		template = roz_pd_1_turret
+		locatorname = small_gun_10
+	}
+
+
+	large_utility_slots = 60
+	aux_utility_slots = 15
+}
+
+ship_section_template = {
+	key = "ge_black_dragon_core"
+	ship_size = ge_black_dragon
+	fits_on_slot = "core"
+	entity = ge_black_dragon_section_entity
+	component_slot = {
+		name = xl_gun_01
+		template = extra_large_turret
+		locatorname = xl_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_01
+		template = invisible_large_turret
+		locatorname = xl_gun_01_1_r
+	}
+	component_slot = {
+		name = LARGE_GUN_02
+		template = invisible_large_turret
+		locatorname = xl_gun_01_1_l
+	}
+	component_slot = {
+		name = LARGE_GUN_03
+		template = invisible_large_turret
+		locatorname = xl_gun_01_2_r
+	}
+	component_slot = {
+		name = LARGE_GUN_04
+		template = invisible_large_turret
+		locatorname = xl_gun_01_2_l
+	}
+	component_slot = {
+		name = pd_01
+		template = invisible_point_defence_turret
+		locatorname = xl_gun_01_1_r
+	}
+	component_slot = {
+		name = pd_02
+		template = invisible_point_defence_turret
+		locatorname = xl_gun_01_1_l
+	}
+	component_slot = {
+		name = pd_03
+		template = invisible_point_defence_turret
+		locatorname = xl_gun_01_2_r
+	}
+	component_slot = {
+		name = pd_04
+		template = invisible_point_defence_turret
+		locatorname = xl_gun_01_2_l
+	}
+}
+
+
+ship_section_template = {
+	key = "ge_kirakishou_hostile_ship"
+	ship_size = ge_kirakishou_avatar
+	fits_on_slot = mid
+	entity = kirakishou_shroud_entity
+	component_slot = {
+		name = LARGE_GUN_01
+		template = invisible_large_turret
+		locatorname = root
+	}
+	component_slot = {
+		name = LARGE_GUN_02
+		template = invisible_large_turret
+		locatorname = root
+	}
+	component_slot = {
+		name = LARGE_GUN_03
+		template = invisible_large_turret
+		locatorname = root
+	}
+	component_slot = {
+		name = LARGE_GUN_04
+		template = invisible_large_turret
+		locatorname = root
+	}
+	component_slot = {
+		name = MEDIUM_GUN_01
+		template = invisible_large_turret
+		locatorname = root
+	}
+	component_slot = {
+		name = MEDIUM_GUN_02
+		template = invisible_large_turret
+		locatorname = root
+	}
+	component_slot = {
+		name = MEDIUM_GUN_03
+		template = invisible_large_turret
+		locatorname = root
+	}
+	component_slot = {
+		name = MEDIUM_GUN_04
+		template = invisible_large_turret
+		locatorname = root
+	}
+	component_slot = {
+		name = pd_01
+		template = invisible_point_defence_turret
+		locatorname = root
+	}
+	component_slot = {
+		name = pd_02
+		template = invisible_point_defence_turret
+		locatorname = root
+	}
+	component_slot = {
+		name = pd_03
+		template = invisible_point_defence_turret
+		locatorname = root
+	}
+	component_slot = {
+		name = pd_04
+		template = invisible_point_defence_turret
+		locatorname = root
+	}
+	large_utility_slots = 10
+	aux_utility_slots = 4
+}
+
+ship_section_template = {
+	key = "ge_kirakishou_hostile_ship_dh"
+	ship_size = ge_kirakishou_avatar
+	fits_on_slot = mid
+	entity = dimensional_horror_hull_krks_entity
+	component_slot = {
+		name = LARGE_GUN_01
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_02
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_03
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_04
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = MEDIUM_GUN_01
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = MEDIUM_GUN_02
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = MEDIUM_GUN_03
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = MEDIUM_GUN_04
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = pd_01
+		template = invisible_point_defence_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = pd_02
+		template = invisible_point_defence_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = pd_03
+		template = invisible_point_defence_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = pd_04
+		template = invisible_point_defence_turret
+		locatorname = large_gun_01
+	}
+	large_utility_slots = 10
+	aux_utility_slots = 4
+}
+
+ship_section_template = {
+	key = "ge_kirakishou_hostile_ship_et"
+	ship_size = ge_kirakishou_avatar
+	fits_on_slot = mid
+	entity = krks_elder_tiyanki_section_entity
+	component_slot = {
+		name = LARGE_GUN_01
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_02
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_03
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_04
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = MEDIUM_GUN_01
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = MEDIUM_GUN_02
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = MEDIUM_GUN_03
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = MEDIUM_GUN_04
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = pd_01
+		template = invisible_point_defence_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = pd_02
+		template = invisible_point_defence_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = pd_03
+		template = invisible_point_defence_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = pd_04
+		template = invisible_point_defence_turret
+		locatorname = large_gun_01
+	}
+	large_utility_slots = 16
+	aux_utility_slots = 6
+}
+
+ship_section_template = {
+	key = "ge_kirakishou_hostile_ship_everything"
+	ship_size = ge_kirakishou_avatar
+	fits_on_slot = mid
+
+	entity = roz_chimera_hull_krks_entity
+
+	component_slot = {
+		name = LARGE_GUN_01
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_02
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_03
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_04
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_05
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_06
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_07
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = LARGE_GUN_08
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = MEDIUM_GUN_01
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = MEDIUM_GUN_02
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = MEDIUM_GUN_03
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = MEDIUM_GUN_04
+		template = invisible_large_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = pd_01
+		template = invisible_point_defence_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = pd_02
+		template = invisible_point_defence_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = pd_03
+		template = invisible_point_defence_turret
+		locatorname = large_gun_01
+	}
+	component_slot = {
+		name = pd_04
+		template = invisible_point_defence_turret
+		locatorname = large_gun_01
+	}
+	large_utility_slots = 24
+	aux_utility_slots = 6
+}
+

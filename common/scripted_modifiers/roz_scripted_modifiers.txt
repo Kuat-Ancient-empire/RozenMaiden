@@ -1,0 +1,14 @@
+
+roz_timefreeze_modifier_tooltip = {
+    icon = mod_planet_clear_blocker_time_mult
+    percentage = yes
+    good = no
+    category = ship
+    max_decimals = 6
+}
+
+
+
+
+
+

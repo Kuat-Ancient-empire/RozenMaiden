@@ -1,0 +1,941 @@
+namespace = ge_event
+
+
+country_event = {
+    id = ge_event.1
+    title = "ge_event.1.t"
+    desc = ge_event.1.d1
+    is_triggered_only = yes
+    picture = GFX_ge_rz_start2
+    immediate = {
+        if = {
+            limit = {
+                has_modifier = ge_mozheng1
+            }
+            remove_modifier = ge_mozheng1
+        }
+        if = {
+            limit = {
+                has_modifier = ge_mozheng2
+            }
+            remove_modifier = ge_mozheng2
+        }
+        if = {
+            limit = {
+                has_modifier = ge_mozheng3
+            }
+            remove_modifier = ge_mozheng3
+        }
+        if = {
+            limit = {
+                NOR = {
+                    has_country_flag = roz_krks_dl_early_flag
+                    has_country_flag = roz_krks_dl_normal_flag
+                }
+            }
+            set_country_flag = roz_krks_dl_normal_flag
+        }
+
+
+    }
+    after = {
+        #hidden_effect = {
+        #    if = {
+        #        limit = {
+        #            NOT = { has_country_flag = roz_krks_dl_done_flag }
+        #        }
+        #    }
+        #    set_country_flag = roz_krks_dl_done_flag
+        #}
+    }
+    option = {		####finish
+        name = ge_event.1.zz
+        #default_hide_option = yes
+        trigger = {
+            #always = yes
+            has_country_flag = roz_krks_dl_normal_flag
+        }
+        custom_tooltip = ge_event.1.ct1
+        default_hide_option = yes
+        #set_update_modifiers_batch = begin
+        add_modifier = {
+            modifier = ge_mozheng1
+            multiplier = ge_buff_count
+        }
+        add_modifier = {
+            modifier = ge_mozheng2
+            multiplier = ge_buff_count_fr
+        }
+        add_modifier = {
+            modifier = ge_mozheng3
+            multiplier = ge_buff_fire_range_count
+        }
+        #set_update_modifiers_batch = end
+
+    }
+    option = {		####finish
+        name = ge_event.1.zz2
+        #default_hide_option = yes
+        trigger = {
+            #always = yes
+            has_country_flag = roz_krks_dl_early_flag
+        }
+        custom_tooltip = ge_event.1.ct2
+        default_hide_option = yes
+        #set_update_modifiers_batch = begin
+        add_modifier = {
+            modifier = ge_mozheng1
+            multiplier = ge_buff_count
+        }
+        add_modifier = {
+            modifier = ge_mozheng2
+            multiplier = ge_buff_count_fr
+        }
+        add_modifier = {
+            modifier = ge_mozheng3
+            multiplier = ge_buff_fire_range_count
+        }
+        #set_update_modifiers_batch = end
+
+    }
+    option = {
+        name = ge_event.1.krks.difficulty_levels
+        trigger = {
+            NOR = {
+                has_country_flag = roz_krks_story_begin_flag
+                has_country_flag = roz_kirakishou_get
+                has_country_flag = ge_nfield_develop_flag
+            }
+        }
+        hidden_effect = {
+            country_event = { id = ge_event.5 }
+        }
+    }
+    option = {
+        name = ge_event.1.dm
+        trigger = {
+            always = yes
+        }
+        #custom_tooltip = ""
+        hidden_effect = {
+            country_event = {
+                id = ge_event.2
+            }
+        }
+    }
+    option = {
+        name = ge_event.1.fr
+        trigger = {
+            always = yes
+        }
+        #custom_tooltip = ""
+        hidden_effect = {
+            country_event = {
+                id = ge_event.3
+            }
+        }
+    }
+    option = {
+        name = ge_event.1.range
+        trigger = {
+            always = yes
+        }
+        #custom_tooltip = ""
+        hidden_effect = {
+            country_event = {
+                id = ge_event.4
+            }
+        }
+    }
+    option = {
+        name = ge_event.1.im1
+        custom_tooltip = "ge_event.1.01.ct"
+        trigger = {
+            NOT = {
+                has_country_flag = roz_sgt_flagship_not_immune_tech_limit
+            }
+        }
+        hidden_effect = {
+            set_country_flag = roz_sgt_flagship_not_immune_tech_limit
+
+            every_owned_ship = {
+                limit = {
+                    is_ship_size = Ge_Vampirilis_Ortaam
+                    NOT = {
+                        has_modifier = roz_sgt_flagship_none_tech_modifier
+                    }
+                }
+                add_modifier = {
+                    modifier = roz_sgt_flagship_none_tech_modifier
+                    days = -1
+                }
+            }
+
+            every_owned_ship = {
+                limit = {
+                    is_ship_size = Ge_Vampirilis_Letum
+                    NOT = {
+                        has_modifier = roz_sgt_flagship_gardian_none_tech_modifier
+                    }
+                }
+                add_modifier = {
+                    modifier = roz_sgt_flagship_gardian_none_tech_modifier
+                    days = -1
+                }
+            }
+
+            country_event = {
+                id = ge_event.1
+            }
+        }
+    }
+    option = {
+        name = ge_event.1.im2
+        custom_tooltip = "ge_event.1.02.ct"
+        trigger = {
+            has_country_flag = roz_sgt_flagship_not_immune_tech_limit
+        }
+        hidden_effect = {
+            remove_country_flag = roz_sgt_flagship_not_immune_tech_limit
+            every_owned_ship = {
+                limit = {
+                    is_ship_size = Ge_Vampirilis_Ortaam
+                }
+                remove_modifier = roz_sgt_flagship_none_tech_modifier
+            }
+            every_owned_ship = {
+                limit = {
+                    is_ship_size = Ge_Vampirilis_Letum
+                }
+                remove_modifier = roz_sgt_flagship_gardian_none_tech_modifier
+            }
+
+            country_event = {
+                id = ge_event.1
+            }
+        }
+    }
+    option = {
+        name = ge_event.1.leader_name_jp
+        trigger = {
+            NOT = { has_country_flag = roz_leader_name_jp_flag }
+        }
+        custom_tooltip = ge_event.1.leader_name_jp_ct
+        hidden_effect = {
+            set_country_flag = roz_leader_name_jp_flag
+            remove_country_flag = roz_leader_name_sc_flag
+            country_event = { id = ge_event.1 }
+        }
+    }
+    option = {
+        name = ge_event.1.leader_name_sc
+        trigger = {
+            NOT = { has_country_flag = roz_leader_name_sc_flag }
+        }
+        custom_tooltip = ge_event.1.leader_name_sc_ct
+        hidden_effect = {
+            set_country_flag = roz_leader_name_sc_flag
+            remove_country_flag = roz_leader_name_jp_flag
+            country_event = { id = ge_event.1 }
+        }
+    }
+    option = {
+        name = ge_event.1.lgate
+        custom_tooltip = ge_event.1.lgate_ct
+        allow = {
+            custom_tooltip = {
+                NOT = { is_multiplayer = yes }
+                fail_text = ge_event.1.lgate_ct_1
+            }
+            custom_tooltip = {
+                NOT = { has_global_flag = l_cluster_opened }
+                fail_text = ge_event.1.lgate_ct_2
+            }
+        }
+        hidden_effect = {
+            country_event = { id = ge_test_event.200 }
+            country_event = { id = ge_event.1 }
+        }
+    }
+}
+
+event = {
+    id = ge_event.2
+    title = "ge_event.2.t"
+    picture = GFX_evt_roz_sgt_start_settings
+    is_triggered_only = yes
+    desc = {
+        text = "ge_event.2.d1"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count
+                value = 0
+
+            }
+
+        }
+    }
+    desc = {
+        text = "ge_event.2.da2"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count
+                value > 0
+            }
+            check_variable = {
+                which = ge_buff_count
+                value <= 100
+            }
+        }
+    }
+    desc = {
+        text = "ge_event.2.da3"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count
+                value > 100
+            }
+            check_variable = {
+                which = ge_buff_count
+                value < 400
+            }
+        }
+    }
+    desc = {
+        text = "ge_event.2.da4"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count
+                value >= 400
+            }
+            check_variable = {
+                which = ge_buff_count
+                value < 5000
+            }
+        }
+    }
+
+    desc = {
+        text = "ge_event.2.da5"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count
+                value >= 5000
+            }
+        }
+    }
+
+    desc = {
+        text = "ge_event.2.db1"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count
+                value < 0
+            }
+            check_variable = {
+                which = ge_buff_count
+                value >= -100
+            }
+        }
+    }
+    desc = {
+        text = "ge_event.2.db2"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count
+                value < -100
+            }
+            check_variable = {
+                which = ge_buff_count
+                value >= -200
+            }
+        }
+    }
+    desc = {
+        text = "ge_event.2.db3"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count
+                value < -200
+            }
+            check_variable = {
+                which = ge_buff_count
+                value >= -300
+            }
+        }
+    }
+    desc = {
+        text = "ge_event.2.db4"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count
+                value < -300
+            }
+        }
+    }
+
+
+    option = {
+        name = ge_event.2.fr0
+        trigger = {
+            always = yes
+        }
+        country_event = {
+            id = ge_event.1
+        }
+    }
+
+    option = {
+        name = ge_event.2.00
+        #default_hide_option = yes
+        hidden_effect = {
+            set_variable = {
+                which = ge_buff_count
+                value = 0
+            }
+            country_event = {
+                id = ge_event.2
+            }
+        }
+
+    }
+    option = {  ####1x
+        name = ge_event.2.aa
+        trigger = {
+            always = yes
+        }
+        #is_dialog_only = yes
+        #custom_tooltip = ""
+        hidden_effect = {
+            change_variable = {
+                which = ge_buff_count
+                value = 10
+            }
+            country_event = {
+                id = ge_event.2
+            }
+        }
+    }
+    option = {  ####10x
+        name = ge_event.2.bb
+        trigger = {
+            always = yes
+        }
+        #is_dialog_only = yes
+        #custom_tooltip = ""
+        hidden_effect = {
+            multiply_variable = {
+                which = ge_buff_count
+                value = 2
+            }
+            country_event = {
+                id = ge_event.2
+            }
+        }
+    }
+    option = {  ####100x
+        name = ge_event.2.cc
+        trigger = {
+            always = yes
+        }
+        #is_dialog_only = yes
+        #custom_tooltip = ""
+        hidden_effect = {
+            multiply_variable = {
+                which = ge_buff_count
+                value = 10
+            }
+            country_event = {
+                id = ge_event.2
+            }
+        }
+    }
+
+    option = {  ####-1x
+        name = ge_event.2.dd
+        trigger = {
+            always = yes
+        }
+        #is_dialog_only = yes
+        #custom_tooltip = ""
+        hidden_effect = {
+            subtract_variable = {
+                which = ge_buff_count
+                value = 10
+            }
+            country_event = {
+                id = ge_event.2
+            }
+        }
+    }
+    option = {  ####-10x
+        name = ge_event.2.ee
+        trigger = {
+            always = yes
+        }
+        #is_dialog_only = yes
+        #custom_tooltip = ""
+        hidden_effect = {
+            divide_variable = {
+                which = ge_buff_count
+                value = 2
+            }
+            country_event = {
+                id = ge_event.2
+            }
+        }
+    }
+    option = {  ####-100x
+        name = ge_event.2.ff
+        trigger = {
+            always = yes
+        }
+        #is_dialog_only = yes
+        #custom_tooltip = ""
+        hidden_effect = {
+            divide_variable = {
+                which = ge_buff_count
+                value = 10
+            }
+            country_event = {
+                id = ge_event.2
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = ge_event.3
+    title = ge_event.3.t
+    trigger = {
+    }
+    picture = GFX_evt_roz_sgt_start_settings
+    is_triggered_only = yes
+    desc = {
+        text = "ge_event.3.d"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count_fr
+                value = 0
+            }
+
+        }
+    }
+    desc = {
+        text = "ge_event.3.da2"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count_fr
+                value > 0
+            }
+            check_variable = {
+                which = ge_buff_count_fr
+                value <= 100
+            }
+        }
+    }
+    desc = {
+        text = "ge_event.3.da3"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count_fr
+                value > 100
+            }
+            check_variable = {
+                which = ge_buff_count_fr
+                value < 300
+            }
+        }
+    }
+    desc = {
+        text = "ge_event.3.da4"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count_fr
+                value >= 300
+            }
+            check_variable = {
+                which = ge_buff_count_fr
+                value < 500
+            }
+        }
+    }
+
+    desc = {
+        text = "ge_event.3.da5"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count_fr
+                value >= 500
+            }
+        }
+    }
+
+    desc = {
+        text = "ge_event.3.db1"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count_fr
+                value < 0
+            }
+            check_variable = {
+                which = ge_buff_count_fr
+                value >= -50
+            }
+        }
+    }
+    desc = {
+        text = "ge_event.3.db2"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count_fr
+                value < -50
+            }
+            check_variable = {
+                which = ge_buff_count_fr
+                value >= -100
+            }
+        }
+    }
+    desc = {
+        text = "ge_event.3.db3"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count_fr
+                value < -100
+            }
+            check_variable = {
+                which = ge_buff_count_fr
+                value >= -150
+            }
+        }
+    }
+    desc = {
+        text = "ge_event.3.db4"
+        trigger = {
+            check_variable = {
+                which = ge_buff_count_fr
+                value < -150
+            }
+        }
+    }
+
+
+    option = {
+        name = ge_event.3.fr0
+        trigger = {
+            always = yes
+        }
+        country_event = {
+            id = ge_event.1
+        }
+    }
+
+    option = {
+        name = ge_event.3.00
+        #default_hide_option = yes
+        hidden_effect = {
+            set_variable = {
+                which = ge_buff_count_fr
+                value = 0
+            }
+            country_event = {
+                id = ge_event.3
+            }
+        }
+
+    }
+    option = {  ####1x
+        name = ge_event.3.aa
+        trigger = {
+            always = yes
+        }
+        #is_dialog_only = yes
+        #custom_tooltip = ""
+        hidden_effect = {
+            change_variable = {
+                which = ge_buff_count_fr
+                value = 10
+            }
+            country_event = {
+                id = ge_event.3
+            }
+        }
+    }
+    option = {  ####10x
+        name = ge_event.3.bb
+        trigger = {
+            always = yes
+        }
+        #is_dialog_only = yes
+        #custom_tooltip = ""
+        hidden_effect = {
+            multiply_variable = {
+                which = ge_buff_count_fr
+                value = 2
+            }
+            country_event = {
+                id = ge_event.3
+            }
+        }
+    }
+    option = {  ####100x
+        name = ge_event.3.cc
+        trigger = {
+            always = yes
+        }
+        #is_dialog_only = yes
+        #custom_tooltip = ""
+        hidden_effect = {
+            multiply_variable = {
+                which = ge_buff_count_fr
+                value = 10
+            }
+            country_event = {
+                id = ge_event.3
+            }
+        }
+    }
+
+    option = {  ####-1x
+        name = ge_event.3.dd
+        trigger = {
+            always = yes
+        }
+        #is_dialog_only = yes
+        #custom_tooltip = ""
+        hidden_effect = {
+            subtract_variable = {
+                which = ge_buff_count_fr
+                value = 10
+            }
+            country_event = {
+                id = ge_event.3
+            }
+        }
+    }
+    option = {  ####-10x
+        name = ge_event.3.ee
+        trigger = {
+            always = yes
+        }
+        #is_dialog_only = yes
+        #custom_tooltip = ""
+        hidden_effect = {
+            divide_variable = {
+                which = ge_buff_count_fr
+                value = 2
+            }
+            country_event = {
+                id = ge_event.3
+            }
+        }
+    }
+    option = {  ####-100x
+        name = ge_event.3.ff
+        trigger = {
+            always = yes
+        }
+        #is_dialog_only = yes
+        #custom_tooltip = ""
+        hidden_effect = {
+            divide_variable = {
+                which = ge_buff_count_fr
+                value = 10
+            }
+            country_event = {
+                id = ge_event.3
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = ge_event.4
+    is_triggered_only = yes
+    title = "ge_event.4.t"
+    desc = ge_event.4.d
+
+    picture = GFX_evt_roz_sgt_start_settings
+
+    option = {
+        name = ge_event.4.fr0
+        trigger = {
+            always = yes
+        }
+        #custom_tooltip = ""
+        hidden_effect = {
+            country_event = {
+                id = ge_event.1
+            }
+        }
+    }
+    option = {
+        name = ge_event.4.00
+        trigger = {
+            always = yes
+        }
+        #custom_tooltip = ""
+        hidden_effect = {
+            set_variable = {
+                which = ge_buff_fire_range_count
+                value = 0
+            }
+            country_event = {
+                id = ge_event.4
+            }
+        }
+    }
+    option = {
+        name = ge_event.4.aa
+        trigger = {
+            always = yes
+        }
+        #custom_tooltip = ""
+        hidden_effect = {
+            change_variable = {
+                which = ge_buff_fire_range_count
+                value = 5
+            }
+            country_event = {
+                id = ge_event.4
+            }
+        }
+    }
+    option = {
+        name = ge_event.4.bb
+        trigger = {
+            always = yes
+        }
+        #custom_tooltip = ""
+        hidden_effect = {
+            multiply_variable = {
+                which = ge_buff_fire_range_count
+                value = 2
+            }
+            country_event = {
+                id = ge_event.4
+            }
+        }
+    }
+    option = {
+        name = ge_event.4.cc
+        trigger = {
+            always = yes
+        }
+        #custom_tooltip = ""
+        hidden_effect = {
+            multiply_variable = {
+                which = ge_buff_fire_range_count
+                value = 5
+            }
+            country_event = {
+                id = ge_event.4
+            }
+        }
+    }
+
+
+
+
+    option = {
+        name = ge_event.4.dd
+        trigger = {
+            always = yes
+        }
+        #custom_tooltip = ""
+        hidden_effect = {
+            subtract_variable  = {
+                which = ge_buff_fire_range_count
+                value = 5
+            }
+            country_event = {
+                id = ge_event.4
+            }
+        }
+    }
+    option = {
+        name = ge_event.4.ee
+        trigger = {
+            always = yes
+        }
+        #custom_tooltip = ""
+        hidden_effect = {
+            divide_variable  = {
+                which = ge_buff_fire_range_count
+                value = 2
+            }
+            country_event = {
+                id = ge_event.4
+            }
+        }
+    }
+    option = {
+        name = ge_event.4.ff
+        trigger = {
+            always = yes
+        }
+        #custom_tooltip = ""
+        hidden_effect = {
+            divide_variable = {
+                which = ge_buff_fire_range_count
+                value = 5
+            }
+            country_event = {
+                id = ge_event.4
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = ge_event.5
+    is_triggered_only = yes
+    title = ge_event.5.title
+    desc = ge_event.5.desc
+    picture = GFX_roz_evt_krks_dl_select
+    immediate = {
+        remove_country_flag = roz_krks_dl_normal_flag
+        remove_country_flag =roz_krks_dl_early_flag
+    }
+    option = {
+        name = ge_event.5.default
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = { has_country_flag = roz_krks_dl_normal_flag }
+                }
+                set_country_flag = roz_krks_dl_normal_flag
+            }
+            remove_country_flag = roz_krks_dl_early_flag
+            country_event = {
+                id = ge_event.1
+            }
+        }
+    }
+    option = {
+        name = ge_event.5.early
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = { has_country_flag = roz_krks_dl_early_flag }
+                }
+                set_country_flag = roz_krks_dl_early_flag
+            }
+            remove_country_flag = roz_krks_dl_normal_flag
+            country_event = {
+                id = ge_event.1
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

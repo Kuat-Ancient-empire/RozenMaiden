@@ -1,0 +1,1651 @@
+namespace = ge_communication
+
+
+###约会
+country_event = {
+    id = ge_communication.250
+    title = "ge_communication.250.title"
+    desc = {
+        trigger = {
+            any_owned_leader = {
+                is_rozen_leader = yes
+                check_variable = {
+                    which = ge_leader_affection
+                    value > 0
+                }
+            }
+        }
+        text = "ge_communication.250.desc"
+    }
+    desc = {
+        trigger = {
+            any_owned_leader = {
+                is_rozen_leader = yes
+                check_variable = {
+                    which = ge_leader_affection
+                    value > 60
+                }
+            }
+        }
+        text = "ge_communication.250a.desc"
+    }
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_main_room
+    }
+    trigger = {
+        NOT = {
+            has_country_flag = ge_sgt_date_cd
+        }
+    }
+    immediate = {
+        set_timed_country_flag = {
+            flag = ge_sgt_date_cd
+            days = 90
+        }
+        get_ge_leader_target = { flag = ge_suigintou_flag }
+
+    }
+    after = {
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.289
+                days = 90
+            }
+        }
+    }
+    option = {	###N之领域，乱入警告
+        name = "ge_communication.250.aa"
+        custom_tooltip = ge_communication.250.aa.ct
+        hidden_effect = {
+            random_list = {
+
+                10 = {
+                    reroll_random = yes
+                    modifier = {
+                        factor = 2
+                        AND = {
+                            has_country_flag = roz_date_ld_flag
+                            has_country_flag = roz_date_tg_flag
+                            has_country_flag = roz_date_nibiru_flag
+                            has_country_flag = roz_date_uhive_flag
+                            has_country_flag = roz_date_thive_flag
+                        }
+                    }
+                    country_event = {
+                        id = ge_communication.2510
+                        days = 1
+                    }
+                }
+                10 = {
+                    reroll_random = yes
+                    modifier = {
+                        factor = 0
+                        has_country_flag = roz_date_ld_flag
+                    }
+                    if = {
+                        limit = {
+                            NOT = { has_country_flag = roz_date_ld_flag }
+                        }
+                        country_event = {
+                            id = ge_communication.2501
+                            days = 1
+                        }
+                    }
+                }
+                10 = {
+                    reroll_random = yes
+                    modifier = {
+                        factor = 0
+                        has_country_flag = roz_date_tg_flag
+                    }
+                    if = {
+                        limit = {
+                            NOT = { has_country_flag = roz_date_tg_flag }
+                        }
+                        country_event = {
+                            id = ge_communication.2502
+                            days = 1
+                        }
+                    }
+                }
+                10 = {
+                    reroll_random = yes
+                    modifier = {
+                        factor = 0
+                        has_country_flag = roz_date_nibiru_flag
+                    }
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_country_flag = roz_date_nibiru_flag
+                            }
+                        }
+                        country_event = {
+                            id = ge_communication.2503
+                            days = 1
+                        }
+                    }
+                }
+                10 = {
+                    reroll_random = yes
+                    modifier = {
+                        factor = 0
+                        has_country_flag = roz_date_fe_opinion_flag
+                        #any_country = {
+                        #    is_fallen_empire = yes
+                        #    has_opinion_modifier = {
+                        #        who = root
+                        #        modifier = opinion_roz_date_dip_dissatisfied
+                        #        #is_reverse = yes
+                        #    }
+                        #}
+                    }
+                    #modifier = {
+                    #    factor = 0
+                    #    any_country = {
+                    #        is_fallen_empire = no
+                    #    }
+                    #}
+                    #modifier = {
+                    #    factor = 0.5
+                    #    OR = {
+                    #        has_country_flag = roz_date_ld_flag
+                    #        has_country_flag = roz_date_tg_flag
+                    #        has_country_flag = roz_date_nibiru_flag
+                    #        has_country_flag = roz_date_uhive_flag
+                    #        has_country_flag = roz_date_thive_flag
+                    #    }
+                    #}
+                    country_event = {
+                        id = ge_communication.2504
+                        days = 1
+                    }
+
+                }
+                10 = {
+                    reroll_random = yes
+                    modifier = {
+                        factor = 0
+                        has_country_flag = roz_date_uhive_flag
+                    }
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_country_flag = roz_date_uhive_flag
+                            }
+                        }
+                        country_event = {
+                            id = ge_communication.2505
+                            days = 1
+                        }
+                    }
+                }
+                10 = {
+                    reroll_random = yes
+                    modifier = {
+                        factor = 0
+                        has_country_flag = roz_date_thive_flag
+                    }
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_country_flag = roz_date_thive_flag
+                            }
+                        }
+                        country_event = {
+                            id = ge_communication.2506
+                            days = 1
+                        }
+                    }
+                }
+                1 = {
+                    reroll_random = yes
+                    modifier = {
+                        factor = 0
+                        has_country_flag = roz_date_kyj_flag
+                    }
+                    country_event = {
+                        id = ge_communication.2507
+                        days = 1
+                    }
+                }
+            }
+
+        }
+    }
+    #option = {	###先驱者纪念碑
+    #    name = "ge_communication.250.bb"
+    #    custom_tooltip = "ge_communication.250.ct"
+    #    allow = {
+    #        hidden_trigger = {
+    #            has_country_flag = ge_sgt_date_undo
+    #        }
+    #    }
+    #}
+    #option = {	###采矿区
+    #    name = "ge_communication.250.dd"
+    #    custom_tooltip = "ge_communication.250.ct"
+    #    allow = {
+    #        hidden_trigger = {
+    #            has_country_flag = ge_sgt_date_undo
+    #        }
+    #    }
+    #}
+    #option = {	###农业区
+    #    name = "ge_communication.250.ee"
+    #    custom_tooltip = "ge_communication.250.ct"
+    #    allow = {
+    #        hidden_trigger = {
+    #            has_country_flag = ge_sgt_date_undo
+    #        }
+    #    }
+    #}
+    #option = {	###蔷薇圣母炼金工坊
+    #    name = "ge_communication.250.gg"
+    #    custom_tooltip = "ge_communication.250.ct"
+    #    allow = {
+    #        hidden_trigger = {
+    #            has_country_flag = ge_sgt_date_undo
+    #        }
+    #    }
+    #}
+    #option = {	###黑洞之门研究站
+    #    name = "ge_communication.250.ii"
+    #    custom_tooltip = "ge_communication.250.ct"
+    #    allow = {
+    #        hidden_trigger = {
+    #            has_country_flag = ge_sgt_date_undo
+    #        }
+    #    }
+    #}
+}
+
+
+country_event = {
+    id = ge_communication.2501
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = roz_date_ld_room
+    }
+    #show_sound =
+    title = "ge_communication.2501.title"
+    desc = "ge_communication.2501.desc"
+    option = {
+        name = ge_communication.2501.aa
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.25011
+            }
+            set_country_flag = roz_date_ld_flag
+        }
+    }
+}
+country_event = {
+    id = ge_communication.25011
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = roz_date_ld_room
+    }
+    #show_sound =
+    title = "ge_communication.2501.title"
+    desc = "ge_communication.25011.desc"
+    option = {
+        name = ge_communication.25011.aa
+        custom_tooltip = ge_communication.aft1.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+        }
+    }
+    option = {
+        name = ge_communication.25011.bb
+        custom_tooltip = ge_communication.aft1.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ge_communication.2502
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = roz_date_tg_room
+    }
+    #show_sound =
+    title = "ge_communication.2502.title"
+    desc = "ge_communication.2502.desc"
+    option = {
+        name = ge_communication.2502.aa
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.25021
+            }
+            set_country_flag = roz_date_tg_flag
+        }
+    }
+}
+country_event = {
+    id = ge_communication.25021
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = roz_date_tg_room
+    }
+    #show_sound =
+    title = "ge_communication.2502.title"
+    desc = "ge_communication.25021.desc"
+    option = {
+        name = ge_communication.25021.aa
+        custom_tooltip = ge_communication.aft1.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+        }
+    }
+    option = {
+        name = ge_communication.25021.bb
+        custom_tooltip = ge_communication.aft1.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = ge_communication.2503
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = roz_date_st_nibiru_room
+    }
+    #show_sound =
+    title = "ge_communication.2503.title"
+    desc = "ge_communication.2503.desc"
+    option = {
+        name = ge_communication.2503.aa
+        custom_tooltip = ge_communication.aft1.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+            set_country_flag = roz_date_nibiru_flag
+        }
+    }
+}
+
+#失落帝国
+country_event = {
+    id = ge_communication.2504
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_room
+    }
+    #show_sound =
+    title = "ge_communication.2504.title"
+    desc = "ge_communication.2504.desc"
+    trigger = {
+        any_country = {
+            is_fallen_empire = yes
+
+        }
+    }
+    immediate = {
+        random_country = {
+            limit = {
+                is_fallen_empire = yes
+            }
+            save_event_target_as = roz_date_fallen_empire
+            establish_communications_no_message = root
+        }
+    }
+    option = {
+        name = ge_communication.2504.aa
+        custom_tooltip = ge_communication.aft1.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+            if = {
+                limit = {
+                    event_target:roz_date_fallen_empire = {
+                        is_gestalt = no
+                    }
+                }
+                country_event = {
+                    id = ge_communication.25041
+                    days = 10
+                }
+            }
+            set_timed_country_flag = {
+                flag = roz_date_fe_opinion_flag
+                years = 2
+            }
+        }
+    }
+}
+country_event = {
+    id = ge_communication.25041
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:roz_date_fallen_empire
+        room = event_target:roz_date_fallen_empire
+    }
+    #show_sound =
+    title = "ge_communication.25041.title"
+    desc = "ge_communication.25041.desc"
+    trigger = {
+        #event_target:roz_date_fallen_empire = {
+        #    NOT = { has_ethic = ethic_fanatic_xenophobe }
+        #}
+    }
+    option = { 
+        name = ge_communication.25041.aa
+        add_resource = {
+            influence = -25
+        }
+    }
+    option = {
+        name = ge_communication.25041.cc
+        event_target:roz_date_fallen_empire = {
+            add_opinion_modifier = {
+                who = root
+                modifier = opinion_roz_date_dip_dissatisfied
+            }
+        }
+        add_resource = {
+            unity = 1500
+            influence = 25
+        }
+    }
+    option = {
+        name = ge_communication.25041.bb
+        event_target:roz_date_fallen_empire = {
+            add_opinion_modifier = {
+                who = root
+                modifier = opinion_roz_date_dip_dissatisfied
+            }
+            add_opinion_modifier = {
+                who = root
+                modifier = opinion_roz_date_dip_dissatisfied
+            }
+        }
+        add_resource = {
+            unity = 3000
+            influence = 50
+        }
+    }
+    option = {
+        name = ge_communication.25041.dd
+        event_target:roz_date_fallen_empire = {
+            add_opinion_modifier = {
+                who = root
+                modifier = opinion_roz_date_dip_dissatisfied
+            }
+            add_opinion_modifier = {
+                who = root
+                modifier = opinion_roz_date_dip_dissatisfied
+            }
+            add_opinion_modifier = {
+                who = root
+                modifier = opinion_roz_date_dip_dissatisfied
+            }
+        }
+        add_resource = {
+            unity = 5000
+            influence = 100
+        }
+    }
+}
+
+country_event = {
+    id = ge_communication.2505
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = roz_date_uhive_room
+    }
+    #show_sound =
+    title = "ge_communication.2505.title"
+    desc = "ge_communication.2505.desc"
+    option = {
+        name = ge_communication.2505.aa
+        custom_tooltip = ge_communication.aft1.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+            set_country_flag = roz_date_uhive_flag
+        }
+    }
+}
+country_event = {
+    id = ge_communication.2506
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = roz_date_thive_room
+    }
+    #show_sound =
+    title = "ge_communication.2506.title"
+    desc = "ge_communication.2506.desc"
+    option = {
+        name = ge_communication.2506.aa
+        custom_tooltip = ge_communication.aft1.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+            set_country_flag = roz_date_thive_flag
+        }
+    }
+    option = {
+        name = ge_communication.2506.bb
+        custom_tooltip = ge_communication.aft1.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+            set_country_flag = roz_date_thive_flag
+        }
+    }
+}
+
+country_event = {
+    id = ge_communication.2507
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = roz_date_kyj_room
+    }
+    #show_sound =
+    title = "ge_communication.2507.title"
+    desc = "ge_communication.2507.desc"
+    option = {
+        name = ge_communication.2507.zz
+        #custom_tooltip = ge_communication.aft1.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+            set_country_flag = roz_date_kyj_flag
+        }
+        add_resource = {
+            time = 1921
+        }
+    }
+    option = {
+        name = ge_communication.2507.aa
+        #custom_tooltip = ge_communication.aft1.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+            set_country_flag = roz_date_kyj_flag
+        }
+        #add_resource = {
+        #    society_research = 1949
+        #}
+    }
+    option = {
+        name = ge_communication.2507.dd
+        custom_tooltip = ge_communication.2507.dd.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+            set_country_flag = roz_date_kyj_flag
+        }
+    }
+    option = {
+        name = ge_communication.2507.cc
+        custom_tooltip = ge_communication.2507.cc.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+            set_country_flag = roz_date_kyj_flag
+        }
+    }
+    option = {
+        name = ge_communication.2507.bb
+        #custom_tooltip = ge_communication.aft1.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+            set_country_flag = roz_date_kyj_flag
+        }
+        add_resource = {
+            minor_artifacts = 1
+        }
+    }
+
+}
+
+
+
+######################################
+country_event = {
+    id = ge_communication.2510
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_room
+    }
+    title = "ge_communication.251.title"
+    desc = "ge_communication.2510.desc"
+    option = {
+        name = ge_communication.2510.opt1
+        #is_dialog_only = yes
+        #response_text = ge_communication.2510.opt1.res
+        trigger = {
+            NOT = {
+                has_country_flag = roz_date_temporary_flag
+            }
+        }
+        custom_tooltip = ge_communication.2510.opt1.ct
+        hidden_effect = {
+            set_country_flag = roz_date_temporary_flag
+            random_list = {
+                1 = {
+                    set_country_flag = roz_date_temp_random_MV_乡村爱情故事
+                }
+                1 = {
+                    set_country_flag = roz_date_temp_random_MV_小时代
+                }
+                1 = {
+                    set_country_flag = roz_date_temp_random_MV_君の名は
+                }
+                1 = {
+                    set_country_flag = roz_date_temp_random_MV_上甘岭
+                }
+                1 = {
+                    set_country_flag = roz_date_temp_random_MV_让子弹飞
+                }
+                1 = {
+                    set_country_flag = roz_date_temp_random_MV_流浪地球2
+                }
+                1 = {
+                    set_country_flag = roz_date_temp_random_MV_fullriverred
+                }
+                1 = {
+                    set_country_flag = roz_date_temp_random_MV_doctorstange
+                }
+                1 = {
+                    set_country_flag = roz_date_temp_random_MV_greenbook
+                }
+                1 = {
+                    set_country_flag = roz_date_temp_random_MV_waterloobridge
+                }
+
+
+                1 = {
+                    set_country_flag = roz_date_temp_random_GM_YGGDRASIL
+                }
+                1 = {
+                    set_country_flag = roz_date_temp_random_GM_BANGDREAM
+                }
+                1 = {
+                    set_country_flag = roz_date_temp_random_GM_KOF
+                }
+
+
+                1 = {
+                    set_country_flag = roz_date_temp_random_Shopping
+                }
+            }
+
+            country_event = {
+                id = ge_communication.251
+            }
+        }
+    }
+}
+
+country_event = {	###极乐广场
+    id = ge_communication.251
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_room
+    }
+    title = "ge_communication.251.title"
+    desc = "ge_communication.251.desc.a"
+    desc = "ge_communication.251.desc.b"
+    desc = "ge_communication.251.desc.c"
+    desc = "ge_communication.251.desc.d"
+    desc = "ge_communication.251.desc.e"
+    after = {
+        remove_country_flag = roz_date_temporary_flag
+    }
+    #随机
+
+
+    option = {
+        name = ge_communication.251.aa
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_MV_乡村爱情故事
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2511
+            }
+            remove_country_flag = roz_date_temp_random_MV_乡村爱情故事
+        }
+    }
+
+    option = {
+        name = ge_communication.251.bb
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_MV_小时代
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2512
+            }
+            remove_country_flag = roz_date_temp_random_MV_小时代
+        }
+    }
+
+    option = {
+        name = ge_communication.251.cc
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_MV_君の名は
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2513
+            }
+            remove_country_flag = roz_date_temp_random_MV_君の名は
+        }
+    }
+
+    option = {
+        name = ge_communication.251.dd
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_MV_上甘岭
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2514
+            }
+            remove_country_flag = roz_date_temp_random_MV_上甘岭
+        }
+    }
+
+    option = {
+        name = ge_communication.251.hh
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_MV_让子弹飞
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2518
+            }
+            remove_country_flag = roz_date_temp_random_MV_让子弹飞
+        }
+    }
+
+    option = {
+        name = ge_communication.251.ll
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_MV_流浪地球2
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2515
+            }
+            remove_country_flag = roz_date_temp_random_MV_流浪地球2
+        }
+    }
+
+    option = {
+        name = ge_communication.251.nn
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_MV_fullriverred
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2516
+            }
+            remove_country_flag = roz_date_temp_random_MV_fullriverred
+        }
+    }
+
+    option = {
+        name = ge_communication.251.ii
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_MV_doctorstange
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2519
+            }
+            remove_country_flag = roz_date_temp_random_MV_doctorstange
+        }
+    }
+    option = {
+        name = ge_communication.251.jj
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_MV_greenbook
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.3611
+            }
+            remove_country_flag = roz_date_temp_random_MV_greenbook
+        }
+    }
+    option = {
+        name = ge_communication.251.kk
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_MV_waterloobridge
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.3612
+            }
+            remove_country_flag = roz_date_temp_random_MV_waterloobridge
+        }
+    }
+
+
+
+    option = {
+        name = ge_communication.251.GM.aa
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_GM_YGGDRASIL
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2711
+            }
+            remove_country_flag = roz_date_temp_random_GM_YGGDRASIL
+        }
+    }
+    option = {
+        name = ge_communication.251.GM.bb
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_GM_BANGDREAM
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2712
+            }
+            remove_country_flag = roz_date_temp_random_GM_BANGDREAM
+        }
+    }
+    option = {
+        name = ge_communication.251.GM.cc
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_GM_KOF
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2713
+            }
+            remove_country_flag = roz_date_temp_random_GM_KOF
+        }
+    }
+
+
+
+    option = {
+        name = ge_communication.251.SP.aa
+        trigger = {
+            has_country_flag = roz_date_temporary_flag
+            has_country_flag = roz_date_temp_random_Shopping
+        }
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.281
+            }
+            remove_country_flag = roz_date_temp_random_Shopping
+        }
+    }
+
+}
+
+country_event = {
+    id = ge_communication.252
+    is_triggered_only = yes
+    #diplomatic = yes
+    #picture_event_data = {
+    #	portrait = event_target:ge_leader
+    #	room = ge_sgt_date_mov_room
+    #}
+    #title = ""
+    #desc = ""
+    hide_window = yes
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+
+
+    }
+}
+
+#country_event = {	###vr影院
+#	id = ge_communication.261
+#	is_triggered_only = yes
+#	diplomatic = yes
+#	picture_event_data = {
+#		portrait = event_target:ge_leader
+#		room = ge_sgt_date_mov_room
+#	}
+#	title = "ge_communication.261.title"
+#	desc = "ge_communication.261.desc"
+#
+#
+#}
+###
+country_event = {	##X村爱情故事
+    id = ge_communication.2511
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_xcaqgs_room
+    }
+    title = "ge_communication.251.title"
+    desc = "ge_communication.2511.desc"
+    option = {
+        custom_tooltip = "ge_communication.2511.ct"
+        name = ge_communication.2511.aa
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+country_event = {	###小S代
+    id = ge_communication.2512
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_xsd_room
+    }
+    title = "ge_communication.251.title"
+    desc = "ge_communication.2512.desc"
+    option = {
+        custom_tooltip = "ge_communication.2512.ct"
+        name = ge_communication.2512.aa
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 0.5
+                }
+            }
+        }
+    }
+}
+country_event = {	##君の名は。
+    id = ge_communication.2513
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_ndmz_room
+    }
+    title = "ge_communication.251.title"
+    desc = "ge_communication.2513.desc"
+    option = {
+        custom_tooltip = "ge_communication.2513.ct"
+        name = ge_communication.2513.aa
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+country_event = {	##S甘岭
+    id = ge_communication.2514
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_sgl_room
+    }
+    title = "ge_communication.251.title"
+    desc = "ge_communication.2514.desc"
+    option = {
+        custom_tooltip = "ge_communication.2514.ct"
+        name = ge_communication.2514.aa
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1.5
+                }
+            }
+        }
+    }
+}
+
+country_event = {	##流浪地球2
+    id = ge_communication.2515
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = roz_date_we2_room
+    }
+    title = "ge_communication.251.title"
+    desc = "ge_communication.2515.desc"
+    option = {
+        custom_tooltip = "ge_communication.2515.ct"
+        name = ge_communication.2515.aa
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1.0
+                }
+            }
+        }
+    }
+}
+
+country_event = {	##满江红
+    id = ge_communication.2516
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = roz_date_frr_room
+    }
+    title = "ge_communication.251.title"
+    desc = "ge_communication.2516.desc"
+    option = {
+        custom_tooltip = "ge_communication.2516.ct"
+        name = ge_communication.2516.aa
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1.0
+                }
+            }
+        }
+    }
+}
+
+country_event = {	###让子弹F
+    id = ge_communication.2518
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_rzdf_room
+    }
+    title = "ge_communication.251.title"
+    desc = "ge_communication.2518.desc"
+    option = {
+        custom_tooltip = "ge_communication.2518.ct"
+        name = ge_communication.2518.aa
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+country_event = {	##奇Y博士2
+    id = ge_communication.2519
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_qybs2_room
+    }
+    title = "ge_communication.251.title"
+    desc = "ge_communication.2519.desc"
+    option = {
+        custom_tooltip = "ge_communication.2519.ct"
+        name = ge_communication.2519.aa
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+country_event = {	###绿P书
+    id = ge_communication.3611
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_lps_room
+    }
+    title = "ge_communication.251.title"
+    desc = "ge_communication.3611.desc"
+    option = {
+        custom_tooltip = "ge_communication.3611.ct"
+        name = ge_communication.3611.aa
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+country_event = {	###魂断L桥
+    id = ge_communication.3612
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_hdlq_room
+    }
+    title = "ge_communication.251.title"
+    desc = "ge_communication.3612.desc"
+    option = {
+        name = ge_communication.3612.cc
+        allow = {
+            hidden_trigger = {
+                has_country_flag = ge_sgt_date_undo
+            }
+        }
+    }
+    option = {
+        name = ge_communication.3612.bb
+        allow = {
+            hidden_trigger = {
+                has_country_flag = ge_sgt_date_undo
+            }
+        }
+    }
+    option = {
+        name = ge_communication.3612.aa
+        custom_tooltip = ge_communication.3612.aa.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 5
+                }
+            }
+        }
+    }
+}
+
+
+
+country_event = {	##虚拟游戏厅
+    id = ge_communication.271
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_game_room
+    }
+    title = "ge_communication.271.title"
+    desc = "ge_communication.271.desc"
+    option = {
+        name = ge_communication.271.aa
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2711
+            }
+        }
+    }
+    option = {
+        name = ge_communication.271.bb
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2712
+            }
+        }
+    }
+    option = {
+        name = ge_communication.271.cc
+        hidden_effect = {
+            country_event = {
+                id = ge_communication.2713
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ge_communication.2711
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_ol_room
+    }
+    title = "ge_communication.271.title"
+    desc = "ge_communication.2711.desc"
+    option = {
+        name = ge_communication.2711.aa
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+country_event = {
+    id = ge_communication.2712
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_bgd_room
+    }
+    title = "ge_communication.271.title"
+    desc = "ge_communication.2712.desc"
+    option = {
+        name = ge_communication.2712.aa
+        custom_tooltip = "ge_communication.2518.ct"
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+country_event = {
+    id = ge_communication.2713
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        #portrait = event_target:ge_leader
+        room = ge_sgt_date_kof_room
+    }
+    title = "ge_communication.271.title"
+    desc = "ge_communication.2713.desc"
+    option = {
+        name = ge_communication.2713.aa
+    }
+    after = {
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = ge_communication.2714
+                    }
+                }
+                8 = {
+                    country_event = {
+                        id = ge_communication.2715
+                    }
+                }
+            }
+        }
+    }
+}
+country_event = {
+    id = ge_communication.2714
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_kof_room
+    }
+    title = "ge_communication.2714.title"
+    desc = "ge_communication.2714.desc"
+    option = {
+        name = ge_communication.2714.aa
+        custom_tooltip = ge_communication.2714.aa.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+country_event = {
+    id = ge_communication.2715
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_kof_room
+    }
+    title = "ge_communication.2715.title"
+    desc = "ge_communication.2715.desc"
+    option = {
+        name = ge_communication.2715.aa
+        custom_tooltip = ge_communication.2715.aa.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1.5
+                }
+            }
+        }
+    }
+}
+
+
+
+country_event = {
+    id = ge_communication.281
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_date_shop_room
+    }
+    title = "ge_communication.281.title"
+    desc = "ge_communication.281.desc"
+    option = {
+        name = ge_communication.281.aa
+        custom_tooltip = ge_communication.281.aa.ct
+        hidden_effect = {
+            every_owned_leader = {
+                limit = {
+                    has_leader_flag = ge_suigintou_flag
+                }
+                change_variable = {
+                    which = ge_leader_affection
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ge_communication.289
+    is_triggered_only = yes
+    hide_window = yes
+    immediate = {
+        create_message = {
+            type = ROZ_sgt_gal_MESSAGE_TYPE
+            localization = ROZ_sgt_gal_MESSAGE_desc
+            days = 15
+            target = event_target:ge_site_sgt_target@root
+        }
+    }
+}
+
+
+#
+#country_event = {	###
+#    id = ge_communication.300
+#    is_triggered_only = yes
+#    #diplomatic = yes
+#    # picture_event_data = {
+#    # 	portrait = event_target:ge_leader
+#    # 	room = ge_sgt_date_
+#    # }
+#    picture = GFX_
+#    title = "ge_communication.300.title"
+#    desc = "ge_communication.300.desc"
+#    trigger = {
+#        has_technology = GE_tech_reactor
+#        NOT = {
+#            has_country_flag = ge_dft_evt_npc
+#        }
+#    }
+#    immediate = {
+#        set_country_flag = ge_dft_evt_npc
+#    }
+#    option = {
+#        name = ge_communication.301.aa
+#        hidden_effect = {
+#            country_event = {
+#                id = ge_communication.302
+#            }
+#        }
+#    }
+#    option = {
+#        name = ge_communication.301.bb
+#        hidden_effect = {
+#            country_event = {
+#                id = ge_communication.303
+#            }
+#        }
+#    }
+#}
+#
+#country_event = {	###国家电力中心
+#    id = ge_communication.301
+#    is_triggered_only = yes
+#    diplomatic = yes
+#    picture_event_data = {
+#        portrait = event_target:ge_leader
+#        room = ge_sgt_date_
+#    }
+#    title = "ge_communication.301.title"
+#    desc = "ge_communication.301.desc"
+#    trigger = {
+#        has_technology = GE_tech_reactor
+#        NOT = {
+#            has_country_flag = ge_dft_evt_npc
+#        }
+#    }
+#    # immediate = {
+#    # 	set_country_flag = ge_dft_evt_npc
+#    # }
+#    option = {
+#        name = ge_communication.301.aa
+#        hidden_effect = {
+#            country_event = {
+#                id = ge_communication.302
+#            }
+#        }
+#    }
+#    option = {
+#        name = ge_communication.301.bb
+#        hidden_effect = {
+#            country_event = {
+#                id = ge_communication.303
+#            }
+#        }
+#    }
+#}
+#
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,248 @@
+building_llk_paradox_origin = { 
+    base_buildtime = 10    			#基础建造时间，单位为天
+    capital = no     				#是否是首都建筑
+    can_build = yes    				#是否可修建
+    can_demolish = no 				#是否可被拆除
+    can_be_ruined = no    			#能否被废弃
+    can_be_disabled = no      		#能否被停止运作
+	position_priority = 1			#位置优先级
+	base_cap_amount = 1				#建造数量
+    icon = building_ge_paradox_origin
+    #icon = building_roz_power_core
+    category = research     		#分类，可以让玩家更好的找到该建筑
+    allow = {       				#允许，满足下列条件，则该建筑可以被允许建造
+        OR = {
+            has_building = building_ancient_palace
+            has_building = building_ancient_control_center
+            has_building = building_hab_fe_capital
+            has_building = building_hab_capital
+            has_building = building_hab_major_capital
+            has_upgraded_capital = yes
+            num_pops >= 20
+        }
+    }
+    potential = {
+
+    }
+    on_queued = {
+
+    }
+    prerequisites = {
+        GE_tech_reactor
+    }
+	planet_modifier = { 
+        planet_jobs_produces_mult = 0.15
+		planet_jobs_upkeep_mult = 0.02
+		planet_max_buildings_add = 5
+		planet_housing_add = 5
+		planet_amenities_add = 5
+        job_llk_over_dimension_add = 3
+     } 				#星球范围内的修正
+    country_modifier = {
+        ships_upkeep_mult = -0.02
+        society_tech_cost_mult = -0.01
+    } 				#国家范围内的修正。
+     triggered_planet_modifier = {   	#条件触发的修正器，不满足条件则无法获得修正
+         potential = {   #条件，需要全部满足
+             exists = owner      				#是否存在建筑所有者
+             owner = {
+                 has_country_flag = roz_great_development_of_Nfield
+             }
+         }
+         modifier = {    						#修正
+             job_llk_over_dimension_add = 3  			#job_<职业ID>_per_pop = xxx 每1/xxx人口提供一个职业
+         }
+     }
+    resources = {   #资源相关
+        category = planet_buildings #类型
+        produces = {
+            sr_void_core = 5
+        }
+        cost = {    #一次性花费
+            minerals = 395
+            alloys = 476
+            energy = 1453
+            influence = 200
+        }
+        upkeep = {  #维持，为每月多少
+            energy = 35
+            sr_rosa_mystica = 1
+        }
+    }
+	on_built = {
+
+    }
+    ai_weight = {   #AI的建造权重
+        weight = 0  
+        modifier = {    
+            factor = 0
+            num_buildings = { type = building_research_lab_1 value >= 2 }
+        }
+    modifier = {
+            factor = 0
+            free_jobs > 0 
+        }
+    }
+}
+
+building_roz_power_core = {
+    base_buildtime = 180    			#基础建造时间，单位为天
+    capital = no     				#是否是首都建筑
+    can_build = yes    				#是否可修建
+    can_demolish = no 				#是否可被拆除
+    can_be_ruined = no    			#能否被废弃
+    can_be_disabled = no      		#能否被停止运作
+    position_priority = 2			#位置优先级
+    base_cap_amount = 1		        #建造数量
+
+    icon = building_roz_power_core
+    category = resource     		#分类，可以让玩家更好的找到该建筑
+    #allow = {       				#允许，满足下列条件，则该建筑可以被允许建造
+    #    has_upgraded_capital = yes
+    #}
+    potential = {
+        exists = planet
+        planet = { is_capital = yes }
+    }
+    prerequisites = {
+        tech_roz_power_core
+    }
+    planet_modifier = {
+        planet_max_buildings_add = 1
+    } 				#星球范围内的修正
+    country_modifier = {
+        weapon_type_energy_weapon_damage_mult = 0.10
+        planet_jobs_energy_upkeep_mult = -0.15
+    } 				#国家范围内的修正。
+     triggered_planet_modifier = {   	#条件触发的修正器，不满足条件则无法获得修正
+         potential = {       			#条件，需要全部满足
+             has_building = building_llk_paradox_origin
+         }
+
+         modifier = {    						#修正
+             planet_jobs_energy_produces_mult = 0.15
+         }
+     }
+    resources = {   #资源相关
+        category = planet_buildings #类型
+        produces = {
+            energy = 395
+        }
+        cost = {    #一次性花费
+            sr_void_core = 25
+            alloys = 1204
+            energy = 1644
+            influence = 250
+
+        }
+        upkeep = {  #维持，为每月多少
+            sr_void_core = 2
+        }
+    }
+    #ai_resource_production = { }
+    #destroy_trigger = { owner = { NOT = { has_technology = GE_tech_reactor } } }
+    ai_weight = {   #AI的建造权重
+        weight = 0
+    }
+}
+
+building_roz_dolls_factory = {
+    base_buildtime = 90    			#基础建造时间，单位为天
+    capital = no     				#是否是首都建筑
+    can_build = yes    				#是否可修建
+    can_demolish = yes 				#是否可被拆除
+    can_be_ruined = no    			#能否被废弃
+    can_be_disabled = yes      		#能否被停止运作
+    position_priority = 4			#位置优先级
+    base_cap_amount = 1		        #建造数量
+
+    icon = building_roz_dolls_factory
+    category = resource     		#分类，可以让玩家更好的找到该建筑
+    #allow = {       				#允许，满足下列条件，则该建筑可以被允许建造
+    #    has_upgraded_capital = yes
+    #}
+    potential = {
+        exists = planet
+        #planet = { is_capital = yes }
+        owner = {
+            OR = {
+                has_country_flag = q_sgt_army_get
+                has_country_flag = roz_kirakishou_get
+            }
+        }
+
+    }
+    #prerequisites = {
+    #    tech_roz_power_core
+    #}
+    planet_modifier = {
+        planet_amenities_no_happiness_add = 10
+        biological_pop_growth_speed = 0.15
+    } 				#星球范围内的修正
+    country_modifier = {
+
+    } 				#国家范围内的修正。
+    triggered_planet_modifier = {   	#条件触发的修正器，不满足条件则无法获得修正
+
+    }
+    resources = {   #资源相关
+        category = planet_buildings #类型
+        produces = {
+            consumer_goods = 40
+            sr_rosa_mystica = 1.5
+            engineering_research = 10
+            society_research = 5
+        }
+        cost = {    #一次性花费
+           minerals = 2000
+            energy = 1000
+            influence = 250
+        }
+        upkeep = {  #维持，为每月多少
+            energy = 5
+            minerals = 20
+            unity = 5
+        }
+    }
+    #ai_resource_production = { }
+    destroy_trigger = {
+        NOT = {
+            owner = {
+                OR = {
+                    has_country_flag = q_sgt_army_get
+                    has_country_flag = roz_kirakishou_get
+                }
+            }
+        }
+    }
+    ai_weight = {   #AI的建造权重
+        weight = 0
+    }
+}
+
+
+
+
+######真红手办工厂
+#building_roz_shinku_dolls_factory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

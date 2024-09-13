@@ -1,0 +1,621 @@
+#####################################
+#####################################实验级幽能武器/不可建造
+
+weapon_component_template = {
+	key = "ge_vn_main_beam"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_ship_part_ge_vn_main_beam"
+	icon_frame = 1
+	#hidden = yes
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 2500
+			energy = 7500
+			sr_void_core = 10
+		}
+		# upkeep = {
+		# 	energy = 10
+		# }
+	}
+	firing_arc = 30.0
+	min_range = 1.0
+	static_rotation = no
+	use_ship_kill_target = no
+	tags = { weapon_type_ge_void_energy }
+	projectile_gfx = "ge_vn_t_beam_projectile"
+	component_set = "ge_vn_main_beam"
+	power = -30000
+	damage = { min = 30440 max = 50520 }
+	windup = { min = 95.0 max = 105.0 }	
+	total_fire_time = 100
+	range = 360.0
+	accuracy = 1.0
+	tracking = 1.0
+
+	shield_penetration = 2.0
+	armor_penetration = 2.0
+	shield_damage = 3.5
+	armor_damage = 3.75
+	hull_damage = 3.25
+	size_damage_factor = 1
+
+	ai_tags = { weapon_role_artillery }	
+	ai_tag_weight = 0
+
+	size_restriction = { Ge_Ragnarok }
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000
+			is_ship_size = Ge_Ragnarok
+		}
+	}
+
+}
+
+weapon_component_template = {
+	key = "ge_vn_secondary_beam"
+	size = extra_large
+	type = instant
+	
+	icon = "GFX_ship_part_ge_vn_secondary_beam"
+	icon_frame = 1
+	#hidden = yes
+	
+	firing_arc = 30
+	min_range = 1.0
+	static_rotation = no
+	use_ship_kill_target = no
+	power = -8000
+	component_set = "ge_vn_secondary_beam"
+	projectile_gfx = "ge_vn_xl_beam_projectile"
+	tags = { weapon_type_ge_void_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 2000
+			energy = 5000
+			sr_void_core = 5
+		}		
+		upkeep = {
+			#energy = 10
+		}
+	}
+
+	damage = { min = 8860.0 max = 28860.0 }
+	windup = { min = 70.0 max = 100.0 }	
+	total_fire_time = 70
+
+	
+	size_damage_factor = 1
+	range = 300.0
+	accuracy = 1.0
+	tracking = 1.0
+	
+	shield_penetration = 1.5
+	armor_penetration = 1.5
+	shield_damage = 3.0
+	armor_damage = 2.5
+	hull_damage = 2.25
+
+	size_restriction = { Ge_Ragnarok }
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000
+			is_ship_size = Ge_Ragnarok
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "ge_small_vn_laser"
+	size = small
+	entity = "small_laser_gun_entity"
+	type = instant
+
+	icon = "GFX_ship_part_ge_vn_laser_s"
+	icon_frame = 1
+	#hidden = yes
+
+    power = -750
+	component_set = "ge_vn_laser"
+	projectile_gfx = "ge_vn_laser_s_projectile"
+
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		weapon_role_anti_hull
+	}
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 600
+			energy = 1800
+		}
+		upkeep = {
+			#energy = 10
+		}
+	}
+
+    damage = { min = 1350.0 max = 1950.0 }
+	windup = { min = 25.0 max = 35.0 }
+
+	total_fire_time = 20
+
+	range = 170.00
+	accuracy = 1.00
+	tracking = 1.00
+
+	shield_penetration = 1.25
+	armor_penetration = 1.25
+	shield_damage = 2.00
+	armor_damage = 2.00
+	hull_damage = 1.75
+
+    tags = { weapon_type_ge_void_energy }
+	size_restriction = { Ge_Ragnarok }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000
+			is_ship_size = Ge_Ragnarok
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "ge_medium_vn_laser"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	type = instant
+
+	icon = "GFX_ship_part_ge_vn_laser_m"
+	icon_frame = 1
+	#hidden = yes
+
+    power = -1500
+	component_set = "ge_vn_laser"
+	projectile_gfx = "ge_vn_laser_m_projectile"
+
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		weapon_role_anti_hull
+	}
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1000
+			energy = 3000
+		}
+		upkeep = {
+			#energy = 10
+		}
+	}
+
+    damage = { min = 1550.0 max = 3550.0 }
+	windup = { min = 25.0 max = 35.0 }
+
+	total_fire_time = 20
+
+	range = 210.00
+	accuracy = 1.00
+	tracking = 1.00
+
+	shield_penetration = 1.25
+	armor_penetration = 1.25
+	shield_damage = 2.00
+	armor_damage = 2.00
+	hull_damage = 1.75
+
+    tags = { weapon_type_ge_void_energy }
+	size_restriction = { Ge_Ragnarok }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000
+			is_ship_size = Ge_Ragnarok
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "ge_large_vn_laser"
+	size = large
+	#entity = "large_laser_gun_entity"
+	entity = roz_fairy_three-gun_turret_1_entity
+
+	type = instant
+
+	icon = "GFX_ship_part_ge_vn_laser"
+	icon_frame = 1
+	#hidden = yes
+
+    power = -3000
+	component_set = "ge_vn_laser"
+	projectile_gfx = "ge_vn_laser_l_projectile"
+
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		weapon_role_anti_hull
+	}
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1500
+			energy = 4500
+		}
+		upkeep = {
+			#energy = 10
+		}
+	}
+
+    damage = { min = 2950.0 max = 3950.0 }
+	windup = { min = 25.0 max = 35.0 }
+
+	total_fire_time = 20
+
+	range = 250.00
+	accuracy = 1.00
+	tracking = 1.00
+
+	shield_penetration = 1.25
+	armor_penetration = 1.25
+	shield_damage = 2.00
+	armor_damage = 2.00
+	hull_damage = 1.75
+
+    tags = { weapon_type_ge_void_energy }
+	size_restriction = { Ge_Ragnarok }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000
+			is_ship_size = Ge_Ragnarok
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "ge_vn_torpedo"
+	size = torpedo
+	type = missile
+	entity = "turret_torpedo_entity"
+	icon = "GFX_ship_part_ge_vn_torpedo"
+	icon_frame = 1
+	#hidden = yes
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 800
+			energy = 2400
+			sr_void_core = 3
+		}
+		upkeep = {
+			#energy = 10
+		}
+	}
+	size_damage_factor = 1.5
+	power = -4000
+	damage = { min = 17900 max = 19400 }
+	windup = { min = 140 max = 160 }
+	total_fire_time = 150
+	hull_damage = 4.0
+	armor_damage = 2.5
+	shield_penetration = 2.0
+	tracking = 1.00
+	range = 280.00
+	accuracy = 1.00
+	missile_health = 5900
+	missile_shield = 3200
+	missile_armor = 3200
+	missile_evasion = 0.9
+	missile_retarget_range = 150
+	missile_speed = 40
+
+	component_set = "ge_vn_torpedo"
+	projectile_gfx = "ge_vn_torpedo_projectile"
+	tags = { weapon_type_ge_void_energy }
+
+	size_restriction = { Ge_Ragnarok }
+
+	ai_tags = { weapon_role_anti_shield }
+	ai_tag_weight = 0
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000
+			is_ship_size = Ge_Ragnarok
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "ge_vn_pd"
+	size = point_defence
+	#entity = "turret_point_defence_entity"
+	entity = roz_fairy_point_defense_turret_1_entity
+
+	type = instant
+
+	icon = "GFX_ship_part_ge_vn_pd"
+	icon_frame = 1
+	#hidden = yes
+
+    power = -350
+	component_set = "ge_vn_pd"
+	projectile_gfx = "ge_vn_pd_projectile"
+
+	ai_tags = { weapon_role_point_defense }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 500
+			energy = 2000
+
+		}
+		upkeep = {
+			#energy = 5
+		}
+	}
+
+	#ship_modifier = {
+	#	weapon_type_ge_void_energy_weapon_damage_mult = 0.05
+	#}
+	#modifier = {
+	#
+	#}
+
+    damage = { min = 35.0 max = 85.0 }
+	windup = { min = 2.0 max = 4.0 }
+
+	total_fire_time = 2
+
+	range = 120.00
+	accuracy = 1.00
+	tracking = 1.00
+
+	hull_damage = 1.75
+	shield_damage = 1.5
+	armor_damage = 1.5
+	shield_penetration = 1.50
+	armor_penetration = 1.50
+
+    tags = { weapon_type_ge_void_energy }
+
+	size_restriction = { Ge_Ragnarok }
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000
+			is_ship_size = Ge_Ragnarok
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "ge_vn_strike_craft_bomber"
+	size = LARGE
+	icon = GFX_ship_part_ge_vn_strike_craft_bomber
+	entity = "bomber_entity"
+
+	power = -2500
+	resources = {
+		category = ship_components
+		cost = {
+			energy = 3000
+			alloys = 1000
+			sr_void_core = 5
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	count = 1
+	regeneration_per_day = 0.5
+	launch_time = 1
+
+	damage = { min = 0 max = 25500 }
+	cooldown = 10
+	range = 50
+	engagement_range = 500
+	accuracy = 0.50
+	tracking = 0.80
+
+	health = 5040
+	armor = 6300
+	shield = 6300
+	evasion = 0.95
+
+	speed = 1250
+	rotation_speed = 0.70
+	acceleration = 1.35
+
+	hull_damage = 1.750
+	armor_damage = 2.50
+	shield_penetration = 1.25
+	armor_penetration = 1.25
+
+	ship_behavior = "bombers_behavior"
+
+	weapon_type = instant
+
+	projectile_gfx = "plasma_cannon_s"
+	icon_frame = 1
+	component_set = "ge_vn_strike_craft_bomber"
+
+	size_restriction = { Ge_Ragnarok }
+
+	tags = { weapon_type_strike_craft weapon_type_ge_void_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000
+			is_ship_size = Ge_Ragnarok
+		}
+	}
+}
+
+####aux
+
+utility_component_template = {
+	key = "ge_vn_shield"
+	size = large
+	icon = "GFX_ship_part_ge_vn_shield"
+	icon_frame = 1
+	#hidden = yes
+	power = -1000
+	component_set = "ge_vn_shield"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = 2400
+			alloys = 800
+			sr_void_core = 3
+		}
+		upkeep = {
+			#energy = -10
+		}
+	}
+	modifier = {
+		ship_hull_add = 924000
+		ship_armor_add = 972000
+		ship_shield_add = 1083000
+		ship_hull_regen_add_static = 9240
+		ship_armor_regen_add_static = 9720
+		ship_shield_regen_add_static = 10830
+		ship_armor_mult = -0.005
+		ship_hull_mult = -0.005
+		ship_shield_mult = -0.005
+	}
+
+	size_restriction = { Ge_Ragnarok }
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000
+			is_ship_size = Ge_Ragnarok
+		}
+	}
+}
+
+utility_component_template = {
+	key = "ge_vn_aux"
+	size = aux
+	icon = "GFX_ship_part_ge_vn_aux"
+	icon_frame = 1
+	#hidden = yes
+	power = 4000
+	component_set = "ge_vn_aux"
+	resources = {
+		category = ship_components
+		cost = {
+			energy = 4500
+			alloys = 1500
+			sr_void_core = 10
+		}
+		upkeep = {
+			#energy = -10
+		}
+	}
+	modifier = {
+		ship_shield_hardening_add = 0.20
+		ship_armor_hardening_add = 0.20
+		ship_armor_regen_add_static = 5000
+		ship_shield_regen_add_static = 5000
+		ship_hull_regen_add_static = 5000
+		ship_disengage_chance_mult = 5.0
+		ship_emergency_ftl_min_days_mult = -5.0
+		weapon_type_ge_void_energy_weapon_damage_mult = 2.5
+		weapon_type_ge_void_energy_weapon_fire_rate_mult = 2.5
+		ship_shield_penetration_mult = 1.0
+		ship_armor_penetration_mult = 1.0
+		ship_armor_penetration_add = 1.0
+		ship_shield_penetration_add = 1.0
+	}
+
+	size_restriction = { Ge_Ragnarok }
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000
+			is_ship_size = Ge_Ragnarok
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "roz_iqt_gun"
+	size = large
+	entity = "iqt_tur_entity"
+	type = instant
+
+	icon = "GFX_ge_ship_part_iqt_gun"
+	icon_frame = 1
+	#hidden = yes
+
+	power = -1500
+	component_set = "roz_iqt_gun"
+	projectile_gfx = "ge_vn_laser_m_projectile"
+
+	ai_tags = {
+		weapon_role_anti_shield
+		weapon_role_anti_hull
+	}
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 600
+			energy = 2400
+			sr_void_core = 1
+		}
+		upkeep = {
+			#energy = 10
+		}
+	}
+
+	damage = { min = 1450.0 max = 4250.0 }
+	windup = { min = 40.0 max = 80.0 }
+
+	total_fire_time = 30
+
+	range = 230.00
+	accuracy = 1.0
+	tracking = 0.5
+
+	armor_penetration = 1.50
+	shield_penetration = 0.50
+	shield_damage = 3.0
+	hull_damage = 2.00
+
+	tags = { weapon_type_ge_void_energy }
+	size_restriction = { ROZ_ITQ }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000
+			is_ship_size = ROZ_ITQ
+		}
+	}
+}
+

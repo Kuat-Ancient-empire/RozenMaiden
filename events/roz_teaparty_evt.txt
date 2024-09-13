@@ -1,0 +1,559 @@
+namespace = roz_teaparty_evt
+
+#这里是茶会循环事件池，前两次茶会写在roz_kirakishou_leader_evt.txt
+
+country_event = {
+    id = roz_teaparty_evt.10
+    title = "roz_teaparty_evt.10.title"
+    #desc = "roz_teaparty_evt.10.desc"
+    is_triggered_only = yes
+    desc = {
+        text = roz_teaparty_evt.10.desc.180d
+        trigger = {
+            has_country_flag = roz_teaparty_holding_180days
+        }
+    }
+    desc = {
+        text = roz_teaparty_evt.10.desc.1y
+        trigger = {
+            has_country_flag = roz_teaparty_holding_1year
+        }
+    }
+    desc = {
+        text = roz_teaparty_evt.10.desc.2y
+        trigger = {
+            has_country_flag = roz_teaparty_holding_2year
+        }
+    }
+    desc = {
+        text = roz_teaparty_evt.10.desc.3y
+        trigger = {
+            has_country_flag = roz_teaparty_holding_3year
+        }
+    }
+    desc = {
+        text = roz_teaparty_evt.10.desc.5y
+        trigger = {
+            has_country_flag = roz_teaparty_holding_5year
+        }
+    }
+    desc = {
+        text = roz_teaparty_evt.10.desc.disable
+        trigger = {
+            has_country_flag = roz_teaparty_discontinuance
+        }
+    }
+    picture = GFX_roz_evt_tea_party_invitation
+    immediate = {
+        set_country_flag = roz_teaparty_setting_falg
+    }
+
+    option = {
+        name = roz_teaparty_evt.10.zz
+        hidden_effect = {
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.10.aa
+        hidden_effect = {
+            set_country_flag = roz_teaparty_holding_180days
+            remove_country_flag = roz_teaparty_holding_1year
+            remove_country_flag = roz_teaparty_holding_2year
+            remove_country_flag = roz_teaparty_holding_3year
+            remove_country_flag = roz_teaparty_holding_5year
+            remove_country_flag = roz_teaparty_discontinuance
+            remove_country_flag = roz_teaparty_loop_cd
+            set_timed_country_flag = {
+                flag = roz_teaparty_loop_cd
+                days = 180
+            }
+            set_variable = {   #unit:year
+                which = roz_teaparty_loop_cd_time
+                value = 0.5
+            }
+            set_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = roz_teaparty_loop_cd_time
+            }
+            multiply_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = 2
+            }
+        }
+        country_event = {
+            id = roz_teaparty_evt.10
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.10.bb
+        hidden_effect = {
+            set_country_flag = roz_teaparty_holding_1year
+            remove_country_flag = roz_teaparty_holding_180days
+            remove_country_flag = roz_teaparty_holding_2year
+            remove_country_flag = roz_teaparty_holding_3year
+            remove_country_flag = roz_teaparty_holding_5year
+            remove_country_flag = roz_teaparty_discontinuance
+            remove_country_flag = roz_teaparty_loop_cd
+            set_timed_country_flag = {
+                flag = roz_teaparty_loop_cd
+                years = 1
+            }
+            set_variable = {   #unit:year
+                which = roz_teaparty_loop_cd_time
+                value = 1
+            }
+            set_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = roz_teaparty_loop_cd_time
+            }
+            multiply_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = 2
+            }
+        }
+        country_event = {
+            id = roz_teaparty_evt.10
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.10.cc
+        hidden_effect = {
+            set_country_flag = roz_teaparty_holding_2year
+            remove_country_flag = roz_teaparty_holding_180days
+            remove_country_flag = roz_teaparty_holding_1year
+            remove_country_flag = roz_teaparty_holding_3year
+            remove_country_flag = roz_teaparty_holding_5year
+            remove_country_flag = roz_teaparty_discontinuance
+            remove_country_flag = roz_teaparty_loop_cd
+            set_timed_country_flag = {
+                flag = roz_teaparty_loop_cd
+                years = 2
+            }
+            set_variable = {   #unit:year
+                which = roz_teaparty_loop_cd_time
+                value = 2
+            }
+            set_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = roz_teaparty_loop_cd_time
+            }
+            multiply_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = 2
+            }
+        }
+        country_event = {
+            id = roz_teaparty_evt.10
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.10.dd
+        hidden_effect = {
+            set_country_flag = roz_teaparty_holding_3year
+            remove_country_flag = roz_teaparty_holding_1year
+            remove_country_flag = roz_teaparty_holding_2year
+            remove_country_flag = roz_teaparty_holding_180days
+            remove_country_flag = roz_teaparty_holding_5year
+            remove_country_flag = roz_teaparty_discontinuance
+            remove_country_flag = roz_teaparty_loop_cd
+            set_timed_country_flag = {
+                flag = roz_teaparty_loop_cd
+                years = 3
+            }
+            set_variable = {   #unit:year
+                which = roz_teaparty_loop_cd_time
+                value = 3
+            }
+            set_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = roz_teaparty_loop_cd_time
+            }
+            multiply_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = 2
+            }
+        }
+        country_event = {
+            id = roz_teaparty_evt.10
+        }
+
+    }
+    option = {
+        name = roz_teaparty_evt.10.ee
+        hidden_effect = {
+            set_country_flag = roz_teaparty_holding_5year
+            remove_country_flag = roz_teaparty_holding_1year
+            remove_country_flag = roz_teaparty_holding_2year
+            remove_country_flag = roz_teaparty_holding_3year
+            remove_country_flag = roz_teaparty_holding_180days
+            remove_country_flag = roz_teaparty_discontinuance
+            remove_country_flag = roz_teaparty_loop_cd
+            set_timed_country_flag = {
+                flag = roz_teaparty_loop_cd
+                years = 5
+            }
+            set_variable = {   #unit:year
+                which = roz_teaparty_loop_cd_time
+                value = 5
+            }
+
+            set_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = roz_teaparty_loop_cd_time
+            }
+            multiply_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = 2
+            }
+        }
+        country_event = {
+            id = roz_teaparty_evt.10
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.10.ff
+        hidden_effect = {
+            set_country_flag = roz_teaparty_discontinuance
+            remove_country_flag = roz_teaparty_holding_1year
+            remove_country_flag = roz_teaparty_holding_2year
+            remove_country_flag = roz_teaparty_holding_3year
+            remove_country_flag = roz_teaparty_holding_5year
+            remove_country_flag = roz_teaparty_holding_180days
+            set_variable = {   #unit:year
+                which = roz_teaparty_loop_cd_time
+                value = 0
+            }
+            set_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = roz_teaparty_loop_cd_time
+            }
+            multiply_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = 2
+            }
+        }
+        country_event = {
+            id = roz_teaparty_evt.10
+        }
+    }
+
+
+    after = {
+        hidden_effect = {
+            remove_country_flag = roz_teaparty_setting_falg
+        }
+    }
+}
+
+
+country_event = {
+    id = roz_teaparty_evt.11
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        OR = {
+            has_country_flag = roz_teaparty_holding_180days
+            has_country_flag = roz_teaparty_holding_1year
+            has_country_flag = roz_teaparty_holding_2year
+            has_country_flag = roz_teaparty_holding_3year
+            has_country_flag = roz_teaparty_holding_5year
+        }
+        NOT = {
+            has_country_flag = roz_teaparty_discontinuance
+        }
+        NOT = {
+            has_country_flag = roz_teaparty_loop_cd
+        }
+        has_country_flag = ge_leader_suigintou_get
+        has_country_flag = roz_kirakishou_get
+        has_country_flag = roz_teaparty_loop_begin
+    }
+    immediate = {
+        switch = {
+            trigger = has_country_flag
+            roz_teaparty_holding_180days = { set_timed_country_flag = { flag = roz_teaparty_loop_cd days = 180 } }
+            roz_teaparty_holding_1year= { set_timed_country_flag = { flag = roz_teaparty_loop_cd years = 1 } }
+            roz_teaparty_holding_2year= { set_timed_country_flag = { flag = roz_teaparty_loop_cd years = 2 } }
+            roz_teaparty_holding_3year= { set_timed_country_flag = { flag = roz_teaparty_loop_cd years = 3 } }
+            roz_teaparty_holding_5year= { set_timed_country_flag = { flag = roz_teaparty_loop_cd years = 5 } }
+        }
+        random_list = {
+            1 = { country_event = { id = roz_teaparty_evt.101 } }
+            1 = { country_event = { id = roz_teaparty_evt.102 } }
+            1 = { country_event = { id = roz_teaparty_evt.103 } }
+            1 = { country_event = { id = roz_teaparty_evt.104 } }
+            1 = { country_event = { id = roz_teaparty_evt.105 } }
+            1 = { country_event = { id = roz_teaparty_evt.106 } }
+            1 = {
+                modifier = {
+                    factor = 0
+                    has_relic = r_roz_orgel
+                }
+                country_event = { id = roz_teaparty_evt.107 }
+            }
+            1 = { country_event = { id = roz_teaparty_evt.108 } }
+        }
+        #roz_teaparty_loop_random = yes
+    }
+}
+
+
+country_event = {
+    id = roz_teaparty_evt.101
+    title = roz_teaparty_evt.101.title
+    desc = roz_teaparty_evt.101.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_teaparty_pocky_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_country_flag = roz_teaparty_evt_101
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_101
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.101.aa
+        custom_tooltip = roz_teaparty_evt.101.aa.ct
+        add_modifier = {
+            modifier = roz_tp_101_modifier
+            days = 180
+        }
+        add_resource = {
+            unity = 1500
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.101.bb
+        custom_tooltip = roz_teaparty_evt.101.bb.ct
+        add_modifier = {
+            modifier = roz_tp_101_modifier
+            days = 180
+        }
+        add_resource = {
+            unity = 1500
+        }
+        add_resource = {
+            food = -1
+        }
+    }
+}
+
+country_event = {
+    id = roz_teaparty_evt.102
+    title = roz_teaparty_evt.102.title
+    desc = roz_teaparty_evt.102.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_teaparty_milk_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_country_flag = roz_teaparty_evt_102
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_102
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.102.aa
+        custom_tooltip = roz_teaparty_evt.102.aa.ct
+        add_modifier = {
+            modifier = roz_tp_102_modifier
+            days = 180
+        }
+        add_resource = {
+            sr_rosa_mystica = 1
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.102.bb
+        custom_tooltip = roz_teaparty_evt.102.bb.ct
+        add_modifier = {
+            modifier = roz_tp_102_modifier
+            days = 180
+        }
+        add_resource = {
+            sr_rosa_mystica = 1
+        }
+    }
+}
+
+country_event = {
+    id = roz_teaparty_evt.103
+    title = roz_teaparty_evt.103.title
+    desc = roz_teaparty_evt.103.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_teaparty_kuku_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_country_flag = roz_teaparty_evt_103
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_103
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.103.aa
+        custom_tooltip = roz_teaparty_evt.103.aa.ct
+        add_modifier = {
+            modifier = roz_tp_random_modifier_13
+            days = 180
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.103.bb
+        custom_tooltip = roz_teaparty_evt.103.bb.ct
+        add_modifier = {
+            modifier = roz_tp_random_modifier_13
+            days = 180
+        }
+    }
+}
+
+country_event = {
+    id = roz_teaparty_evt.104
+    title = roz_teaparty_evt.104.title
+    desc = roz_teaparty_evt.104.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_teaparty_baol_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_country_flag = roz_teaparty_evt_104
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_104
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.104.aa
+        custom_tooltip = roz_teaparty_evt.104.aa.ct
+        roz_teaparty_random_modifier_list = yes
+    }
+    option = {
+        name = roz_teaparty_evt.104.bb
+        custom_tooltip = roz_teaparty_evt.104.bb.ct
+        roz_teaparty_random_modifier_list = yes
+    }
+}
+
+country_event = {
+    id = roz_teaparty_evt.105
+    title = roz_teaparty_evt.105.title
+    desc = roz_teaparty_evt.105.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_teaparty_dollsmaking_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_country_flag = roz_teaparty_evt_105
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_105
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.105.aa
+        custom_tooltip = roz_teaparty_evt.105.aa.ct
+        roz_teaparty_random_modifier_list = yes
+    }
+    option = {
+        name = roz_teaparty_evt.105.bb
+        custom_tooltip = roz_teaparty_evt.105.bb.ct
+        roz_teaparty_random_modifier_list = yes
+    }
+}
+
+country_event = {
+    id = roz_teaparty_evt.106
+    title = roz_teaparty_evt.106.title
+    desc = roz_teaparty_evt.106.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_teaparty_unmeinostage_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_country_flag = roz_teaparty_evt_106
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_106
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.106.aa
+        custom_tooltip = roz_teaparty_evt.106.aa.ct
+        roz_teaparty_random_modifier_list = yes
+    }
+    option = {
+        name = roz_teaparty_evt.106.bb
+        custom_tooltip = roz_teaparty_evt.106.bb.ct
+        roz_teaparty_random_modifier_list = yes
+    }
+}
+
+country_event = {
+    id = roz_teaparty_evt.107
+    title = roz_teaparty_evt.107.title
+    desc = roz_teaparty_evt.107.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_teaparty_orugooru_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_country_flag = roz_teaparty_evt_107
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_107
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.107.aa
+        custom_tooltip = roz_teaparty_evt.107.aa.ct
+        add_relic = r_roz_orgel
+    }
+    option = {
+        name = roz_teaparty_evt.107.bb
+        custom_tooltip = roz_teaparty_evt.107.bb.ct
+        add_relic = r_roz_orgel
+    }
+}
+
+
+country_event = {
+    id = roz_teaparty_evt.108
+    title = roz_teaparty_evt.108.title
+    desc = roz_teaparty_evt.108.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_teaparty_normal_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_108
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.108.aa
+        custom_tooltip = roz_teaparty_evt.108.aa.ct
+        roz_teaparty_random_modifier_list = yes
+    }
+    option = {
+        name = roz_teaparty_evt.108.bb
+        custom_tooltip = roz_teaparty_evt.108.bb.ct
+        roz_teaparty_random_modifier_list = yes
+    }
+}
+
+
+

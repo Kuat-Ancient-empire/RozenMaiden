@@ -1,0 +1,710 @@
+ge_modifier_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.1
+}
+
+ge_gravity_knowledge = {
+	icon = "gfx/interface/icons/modifiers/ge_gravity_knowledge.dds"
+	icon_frame = 1
+	category_field_manipulation_research_speed_mult = 0.40
+	country_leader_cap_add = 1
+	external_leader_pool_add = 1
+	#country_food_produces_mult = 1
+}
+
+ge_gravity_knowledge_plus = {
+	icon = "gfx/interface/icons/modifiers/ge_gravity_knowledge.dds"
+	icon_frame = 1
+	all_technology_research_speed = 0.20
+	country_produces_mult = 0.10
+	country_leader_cap_add = 3
+	external_leader_pool_add = 3
+}
+
+ge_engine_boost_zp = {
+	icon = "gfx/interface/icons/modifiers/ge_engine_boost_zp.dds"
+	icon_frame = 1
+	country_energy_produces_mult = -10
+}
+
+ge_engine_boost_dm = {
+	icon = "gfx/interface/icons/modifiers/ge_engine_boost_dm.dds"
+	icon_frame = 1
+	country_energy_produces_mult = -1.0
+}
+
+ge_power_grid_Shock_zp = {
+	icon = "gfx/interface/icons/modifiers/mod_menace_perk_mobilebulwark copy.dds"
+	icon_frame = 1
+	country_energy_produces_mult = -0.80
+	planet_jobs_produces_mult = -0.15
+	weapon_type_ge_void_energy_weapon_damage_mult = -2.0
+}
+
+ge_power_grid_Shock_dm = {
+	icon = "gfx/interface/icons/modifiers/mod_menace_perk_mobilebulwark copy.dds"
+	icon_frame = 1
+	country_energy_produces_mult = -0.10
+	planet_jobs_produces_mult = -0.05
+	weapon_type_ge_void_energy_weapon_damage_mult = -1.0
+}
+
+roz_stc_zp_homeplanet_debuff = {
+	icon = gfx/interface/icons/modifiers/mod_planet_crime_no_happiness_mult.dds
+	planet_stability_add = -10
+	planet_crime_add = 10
+	planet_jobs_energy_produces_mult = -0.20
+}
+
+roz_zp_pre-research = {
+	icon = gfx/interface/icons/technologies/categories/category_particles.dds
+	category_particles_research_speed_mult = 0.40
+}
+
+roz_void_energy_revolution = {
+	icon = gfx/interface/icons/modifiers/mod_resource_energy_add.dds
+	planet_jobs_energy_upkeep_mult = -0.10
+	planet_jobs_energy_produces_mult = 0.10
+}
+
+
+#################
+#planet modifier
+
+ge_kirakishou_invasion_lv1 = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_crime_add.dds"
+	icon_frame = 1
+	planet_stability_add = -1
+}
+
+ge_kirakishou_invasion_lv2 = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_crime_add.dds"
+	icon_frame = 1
+	planet_stability_add = -5
+}
+
+ge_kirakishou_invasion_lv2.5 = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_crime_add.dds"
+	icon_frame = 1
+	planet_stability_add = -10
+}
+
+ge_kirakishou_invasion_lv3 = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_crime_add.dds"
+	icon_frame = 1
+	planet_stability_add = -10
+}
+
+ge_kirakishou_invasion_lv4 = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_crime_add.dds"
+	icon_frame = 1
+	planet_stability_add = -10
+}
+
+ge_kirakishou_invasion_lv5 = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_crime_add.dds"
+	icon_frame = 1
+	planet_stability_add = -10
+}
+
+ge_kirakishou_invasion_lvMAX = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_crime_add.dds"
+	icon_frame = 1
+	planet_stability_add = -10
+}
+
+
+ge_kirakishou_invasion_in_country = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_crime_add.dds"
+	icon_frame = 1
+	planet_stability_add = -5
+	#@kskr_pi
+}
+
+######################
+
+roz_krks_bf_stage1_HK_buff = {
+	ship_weapon_damage = 2
+	ship_fire_rate_mult = 1.5
+	ship_weapon_range_mult = 1.5
+	ship_hull_add = 777777
+	ship_armor_add = 777777
+	ship_shield_add = 7777777
+
+	ship_hull_regen_add_static = 7777
+	ship_armor_regen_add_static = 7777
+	ship_shield_regen_add_static = 777777
+
+	#ship_shield_hardening_add = 1
+	ship_armor_hardening_add = 1
+}
+
+roz_krks_bf_stage2_HK_buff = {
+	ship_weapon_damage = 4
+	ship_fire_rate_mult = 2.5
+	ship_weapon_range_mult = 2.5
+	ship_hull_add = 1000000
+	ship_armor_add = 1000000
+	ship_shield_add = 10000000
+
+	ship_hull_regen_add_static = 10000
+	ship_armor_regen_add_static = 10000
+	ship_shield_regen_add_static = 100000
+
+	#ship_shield_hardening_add = 1
+	ship_armor_hardening_add = 1
+}
+
+roz_krks_bf_stage3_HK_buff = {
+	ship_weapon_damage = 8
+	ship_fire_rate_mult = 5
+	ship_weapon_range_mult = 5
+	ship_hull_add = 2000000
+	ship_armor_add = 2000000
+	ship_shield_add = 2000000
+	ship_hull_regen_add_static = 20000
+	ship_armor_regen_add_static = 20000
+	ship_shield_regen_add_static = 20000
+
+	#ship_shield_hardening_add = 1
+	ship_armor_hardening_add = 1
+}
+
+roz_krks_bf_stage4_HK_buff = {
+	ship_weapon_damage = 12
+	ship_fire_rate_mult = 8
+	ship_weapon_range_mult = 5
+	ship_hull_add = 6000000
+	ship_armor_add = 6000000
+	ship_shield_add = 6000000
+
+	ship_hull_regen_add_static = 60000
+	ship_armor_regen_add_static = 60000
+	ship_shield_regen_add_static = 60000
+
+	#ship_shield_hardening_add = 10
+	ship_armor_hardening_add = 10
+}
+
+roz_krks_bf_HK_debuff = {
+	ship_weapon_damage = -0.5
+	ship_fire_rate_mult = -0.5
+	ship_weapon_range_mult = -0.5
+	ship_hull_add = -12000
+	ship_shield_add = -65000
+}
+
+####################
+
+roz_krks_battle_win_modifier = {
+	icon = "gfx/interface/icons/modifiers/mod_unity_gain_mult.dds"
+	country_unity_produces_mult = 0.25
+}
+
+########################
+
+
+
+
+
+
+#################
+#ap buff
+roz_ap_ge_0 = {
+	icon = "gfx/interface/icons/ascension_perks/ap_ge_0.dds"
+	icon_frame = 1
+	country_base_unity_produces_add = 25
+	country_base_energy_produces_add = 30
+	country_base_minerals_produces_add = 30
+	country_base_food_produces_add = 30
+	country_base_alloys_produces_add = 10
+	country_base_consumer_goods_produces_add = 10
+	country_base_minor_artifacts_produces_add = 1
+	country_base_exotic_gases_produces_add = 1
+	country_base_rare_crystals_produces_add = 1
+	country_base_volatile_motes_produces_add = 1	
+}
+
+#################
+#disable ap buff
+
+disable_ap_ge_0 = {
+	icon = "gfx/interface/icons/ascension_perks/ap_ge_0_disable.dds"
+	icon_frame = 1
+	country_base_unity_produces_add = -25
+		country_base_energy_produces_add = -30
+		country_base_minerals_produces_add = -30
+		country_base_food_produces_add = -30
+		country_base_alloys_produces_add = -10
+		country_base_consumer_goods_produces_add = -10
+		country_base_minor_artifacts_produces_add = -1
+		country_base_exotic_gases_produces_add = -1
+		country_base_rare_crystals_produces_add = -1
+		country_base_volatile_motes_produces_add = -1
+}
+
+disable_ap_ge_1 = {
+	icon = "gfx/interface/icons/ascension_perks/ap_ge_1_disable.dds"
+	icon_frame = 1
+	tech_cost_empire_size_mult = +0.10
+		all_technology_research_speed = -0.05
+		country_base_physics_research_produces_add = -55
+		country_base_society_research_produces_add = -55
+		country_base_engineering_research_produces_add = -55
+		country_resource_max_add = -100000
+		planet_amenities_mult = -0.25
+}
+
+
+#################
+
+ge_sgt_Q_dolls = {
+	icon = "gfx/interface/icons/Q_dolls.dds"
+	icon_frame = 1
+	army_defense_damage_mult = 0.10
+	army_defense_health_mult = 0.10
+	army_defense_morale_mult = 0.20
+}
+
+ge_rm_fake_prod = {
+	icon = "gfx/interface/icons/resources/sr_rosa_mystica.dds"
+	icon_frame = 1
+	country_base_sr_rosa_mystica_produces_add = 1.5
+}
+
+
+
+
+#################
+####平衡性buff
+
+roz_sgt_flagship_none_tech_modifier = {
+	ship_weapon_damage = -0.75
+	ship_armor_add = -40000
+	ship_shield_add = -50000
+	ship_hull_add = -30000
+
+	ship_shield_regen_add_static = -180
+	ship_armor_regen_add_static = -180
+	ship_hull_regen_add_static = -250
+}
+
+roz_sgt_flagship_gardian_none_tech_modifier = {
+	ship_weapon_damage = -0.5
+	ship_armor_add = -1000
+	ship_shield_add = -1000
+	ship_hull_add = -9000
+}
+
+
+
+
+
+ge_modifier_time_freeze = {		###Commander, we`re listening.
+	#icon = "gfx/interface/icons/"
+	#icon_frame = 1
+	ship_evasion_add = -10000
+	ship_evasion_mult = -1000
+	ship_fire_rate_mult = -1000
+	ship_weapon_range_mult = -1000
+	ship_speed_mult = -1000
+	ship_speed_reduction = 3
+	ship_windup_mult = 1000
+	ship_emergency_ftl_min_days_mult = 1000
+	ship_disengage_chance_mult = -1000
+	ship_shield_reduction = 10
+	ship_armor_reduction = 0.5
+	ship_armor_penetration_mult = -1.0
+	ship_shield_penetration_mult = -1.0
+	ship_shield_hardening_add = -1.0
+	ship_armor_hardening_add = -1.0
+	weapon_type_strike_craft_weapon_damage_mult = -1000
+	weapon_type_strike_craft_weapon_fire_rate_mult = -1000
+	weapon_type_strike_craft_speed_mult = -1000
+	weapon_type_point_defense_weapon_damage_mult = -1000.0
+	weapon_type_explosive_speed_mult = -1000
+	weapon_type_kinetic_speed_mult = -1000
+	weapon_type_energy_speed_mult = -1000
+}
+
+ge_modifier_test = {
+	#icon = "gfx/interface/icons/"
+	#icon_frame = 1
+	ship_tracking_add = -10
+	ship_accuracy_add = -10
+}
+
+roz_product_modifier_test = {
+	#icon = "gfx/interface/icons/"
+	#icon_frame = 1
+	country_produces_mult = -1.0
+}
+
+ge_modifier_bwg = {
+	ship_weapon_damage = 0.75
+	ship_weapon_range_mult = 0.25
+	ship_fire_rate_mult = -0.5
+}
+
+ge_modifier_azoth = {
+	ship_armor_penetration_add = 1.0
+	ship_shield_penetration_add = 1.0
+	ship_hull_damage_mult = 0.25
+}
+
+ge_modifier_nfield_friendly = {
+	ship_armor_regen_add_perc = 1.0
+	ship_shield_regen_add_perc = 1.0
+	ship_hull_regen_add_perc = 0.5
+}
+
+ge_modifier_nfield_hostile = {
+	ship_shield_regen_add_perc = -1.0
+	ship_armor_regen_add_perc = -1.0
+	ship_tracking_add = -15
+	ship_accuracy_add = -15
+	ship_shield_reduction = 0.15
+	ship_armor_reduction = 0.15
+	ship_disengage_chance_mult = -0.75
+}
+
+###因为不做成常驻debuff，所以就先废弃
+ge_modifier_nfield_hostile_off = {
+	ship_disengage_chance_mult = 1
+	ship_shield_regen_add_static = 20
+	ship_armor_regen_add_static = 20
+	ship_tracking_add = 20
+	ship_accuracy_add = 20
+}
+
+roz_chronos_label_planet_effect_stability = {
+	icon = gfx/interface/icons/modifiers/mod_planet_stability_mult_negative.dds
+	planet_stability_add = -100
+}
+
+roz_chronos_label_planet_effect_product = {
+	icon = gfx/interface/icons/modifiers/mod_influence_negative.dds
+	planet_jobs_produces_mult = -1
+}
+
+ge_sgt_debuff_01 = {	#减命中追踪
+	ship_accuracy_add = -15
+	ship_tracking_add = -15
+}
+#################################
+ge_krks_hos_buff_01 = {	
+	ship_hull_regen_add_perc = 1
+}
+
+########雪华绮晶技能
+
+ge_krks_skill_ad_1 = {
+	ship_accuracy_mult = -0.20
+	ship_tracking_mult = -0.20
+	ship_rank_elite = -1
+}
+ge_krks_skill_ad_2 = {
+	
+}
+
+
+#################################
+
+
+ge_mozheng1 = {
+	#ship_rank_elite = 0.001
+	weapon_type_ge_void_energy_weapon_damage_mult = 0.010
+	#ship_weapon_damage = 1.0
+}
+
+ge_mozheng2 = {
+	#ship_rank_elite = 0.001
+	#ship_fire_rate_mult = 1.0
+	weapon_type_ge_void_energy_weapon_damage_mult = 0.010
+}
+
+ge_mozheng3 = {
+	ship_weapon_range_mult = 0.01
+}
+
+#################################
+
+roz_outland_planet_inspire = {
+	category_field_manipulation_research_speed_mult = 0.30
+	category_voidcraft_research_speed_mult = 0.25
+}
+
+roz_outland_planet_emergency_rescue = {
+	ship_archaeological_site_excavation_speed_mult = 0.30   # 考古速度
+	ship_archaeological_site_clues_add = 2
+}
+
+#########################
+
+roz_rosa_analysis_industrial = {
+	icon = gfx/interface/icons/modifiers/mod_job_odd_factory_drone_add.dds
+	country_consumer_goods_produces_mult = 0.05
+	country_alloys_produces_mult = 0.05
+	country_rare_crystals_produces_mult = 0.1
+	country_exotic_gases_produces_mult = 0.1
+	country_volatile_motes_produces_mult = 0.1
+}
+
+roz_rosa_analysis_research = {
+	icon = gfx/interface/icons/modifiers/mod_assist_research_mult.dds
+	country_physics_research_produces_mult = 0.1
+	country_society_research_produces_mult = 0.1
+	country_engineering_tech_research_speed = 0.1
+}
+
+roz_rosa_analysis_military = {
+	icon = gfx/interface/icons/modifiers/mod_cat_military.dds
+	ship_weapon_damage = 0.15
+	ship_fire_rate_mult = 0.15
+}
+
+roz_rosa_analysis_temporary = {
+	icon = gfx/interface/icons/modifiers/mod_produces_mult.dds
+	country_produces_mult = 0.05
+}
+roz_rosa_analysis_research_fault = {
+	icon = gfx/interface/icons/modifiers/mod_assist_research_mult.dds
+	country_physics_tech_research_speed = -0.10
+	country_society_tech_research_speed = -0.05
+	country_engineering_tech_research_speed = -0.15
+}
+
+
+
+###########################
+
+#ge_mozheng3 = {
+#	ship_rank_elite = 0.5
+#	weapon_type_ge_void_energy_weapon_damage_mult = 5
+#	weapon_type_ge_void_energy_weapon_fire_rate_mult = 5
+#}
+#ge_mozheng4 = {
+#	ship_rank_elite = 1
+#	weapon_type_ge_void_energy_weapon_damage_mult = 10
+#	weapon_type_ge_void_energy_weapon_fire_rate_mult = 10
+#}
+
+
+###########狡猾宇宙少女
+#iep_basic_ship_shield_penetration_mult = { ship_shield_penetration_mult = -1 }
+#iep_basic_ship_armor_penetration_mult = { ship_armor_penetration_mult = -1 }
+#iep_basic_ship_armor_damage_mult = { ship_armor_damage_mult = -1 }
+#iep_basic_ship_shield_damage_mult = { ship_shield_damage_mult = -1 }
+#iep_basic_ship_hull_damage_mult = { ship_hull_damage_mult = -1 }
+#iep_basic_ship_tracking_mult = { ship_tracking_mult = -1 }
+#iep_basic_ship_accuracy_mult = { ship_accuracy_mult = -1 }
+#iep_basic_ship_weapon_damage = { ship_weapon_damage = -1 }
+#iep_basic_ship_hull_regen_add_perc = { ship_hull_regen_add_perc = -1 }
+#iep_basic_ship_armor_regen_add_perc = { ship_armor_regen_add_perc = -1 }
+#iep_basic_ship_shield_regen_add_perc = { ship_shield_regen_add_perc = -1 }
+#ep_basic_ship_hull_mult = { ship_hull_mult = -1 }
+#iep_basic_ship_armor_mult = { ship_armor_mult = -1 }
+#iep_basic_ship_shield_mult = { ship_shield_mult = -1 }
+#iep_basic_ship_shield_reduction = { ship_shield_reduction = -1 }
+##iep_basic_ship_armor_reduction = { ship_armor_reduction = -1 }
+#iep_basic_ship_weapon_range_mult = { ship_weapon_range_mult = -1 }
+#iep_basic_ship_fire_rate_mult = { ship_fire_rate_mult = -1 }
+#iep_basic_weapon_type_energy_weapon_damage_mult = { weapon_type_energy_weapon_damage_mult = -1 }
+#iep_basic_weapon_type_kinetic_weapon_damage_mult = { weapon_type_kinetic_weapon_damage_mult = -1 }
+#iep_basic_weapon_type_explosive_weapon_damage_mult = { weapon_type_explosive_weapon_damage_mult = -1 }
+#iep_basic_weapon_type_energy_weapon_fire_rate_mult = { weapon_type_energy_weapon_fire_rate_mult = -1 }
+#iep_basic_weapon_type_kinetic_weapon_fire_rate_mult = { weapon_type_kinetic_weapon_fire_rate_mult = -1 }
+#iep_basic_weapon_type_explosive_weapon_fire_rate_mult = { weapon_type_explosive_weapon_fire_rate_mult = -1 }
+#iep_basic_ship_tracking_add = { ship_tracking_add = -1 }
+#iep_basic_ship_accuracy_add = { ship_accuracy_add = -1 }
+#iep_basic_ship_armor_add = { ship_armor_add = -1 }
+#iep_basic_ship_shield_add = { ship_shield_add = -1 }
+
+################################
+
+ge_basic_ship_shield_penetration_mult = { ship_shield_penetration_mult = -1 }
+ge_basic_ship_armor_penetration_mult = { ship_armor_penetration_mult = -1 }
+ge_basic_ship_armor_damage_mult = { ship_armor_damage_mult = -1 }
+ge_basic_ship_shield_damage_mult = { ship_shield_damage_mult = -1 }
+ge_basic_ship_hull_damage_mult = { ship_hull_damage_mult = -1 }
+ge_basic_ship_tracking_mult = { ship_tracking_mult = -1 }
+ge_basic_ship_accuracy_mult = { ship_accuracy_mult = -1 }
+
+ge_basic_ship_weapon_damage = { ship_weapon_damage = -1 }
+
+ge_basic_ship_hull_regen_add_perc = { ship_hull_regen_add_perc = -1 }
+ge_basic_ship_armor_regen_add_perc = { ship_armor_regen_add_perc = -1 }
+ge_basic_ship_shield_regen_add_perc = { ship_shield_regen_add_perc = -1 }
+ge_basic_ship_hull_mult = { ship_hull_mult = -1 }
+ge_basic_ship_armor_mult = { ship_armor_mult = -1 }
+ge_basic_ship_shield_mult = { ship_shield_mult = -1 }
+ge_basic_ship_shield_reduction = { ship_shield_reduction = -1 }
+ge_basic_ship_armor_reduction = { ship_armor_reduction = -1 }
+ge_basic_ship_weapon_range_mult = { ship_weapon_range_mult = -1 }
+ge_basic_ship_fire_rate_mult = { ship_fire_rate_mult = -1 }
+ge_basic_weapon_type_energy_weapon_damage_mult = { weapon_type_energy_weapon_damage_mult = -1 }
+ge_basic_weapon_type_kinetic_weapon_damage_mult = { weapon_type_kinetic_weapon_damage_mult = -1 }
+ge_basic_weapon_type_explosive_weapon_damage_mult = { weapon_type_explosive_weapon_damage_mult = -1 }
+ge_basic_weapon_type_energy_weapon_fire_rate_mult = { weapon_type_energy_weapon_fire_rate_mult = -1 }
+ge_basic_weapon_type_kinetic_weapon_fire_rate_mult = { weapon_type_kinetic_weapon_fire_rate_mult = -1 }
+ge_basic_weapon_type_explosive_weapon_fire_rate_mult = { weapon_type_explosive_weapon_fire_rate_mult = -1 }
+ge_basic_ship_tracking_add = { ship_tracking_add = -10 }
+ge_basic_ship_accuracy_add = { ship_accuracy_add = -10 }
+ge_basic_ship_armor_add = { ship_armor_add = -1 }
+ge_basic_ship_shield_add = { ship_shield_add = -1 }
+
+ge_basic_weapon_type_ge_void_energy_weapon_fire_rate_mult = { weapon_type_ge_void_energy_weapon_damage_mult = -1 }
+ge_basic_weapon_type_ge_void_energy_weapon_fire_rate_mult = { weapon_type_ge_void_energy_weapon_fire_rate_mult = -1 }
+##
+ge_krks_skill_accuracy_track_mult = { ship_accuracy_add = 100 ship_tracking_add = 100 }
+##
+#######
+
+sr_rozen_mystica_deficit = {
+
+}
+
+#####
+roz_resource_stoke_add = {
+	country_resource_max_add = 100000
+	country_resource_max_alloys_add = 100000
+	country_resource_max_energy_add = 200000
+}
+#####
+
+sr_void_core_deficit = {
+	weapon_type_ge_void_energy_weapon_damage_mult = -1.0
+	weapon_type_ge_void_energy_weapon_fire_rate_mult = -1.0
+}
+
+
+##############
+
+ge_buff_lv = {
+	weapon_type_ge_void_energy_weapon_damage_mult = 1.0
+	weapon_type_ge_void_energy_weapon_fire_rate_mult = 1.0
+}
+
+
+###############
+
+ge_generater_effect_debuff = {
+	ship_weapon_damage = -0.5
+	ship_fire_rate_mult = -0.5
+	ship_speed_mult = -0.25
+	ship_evasion_mult = -0.25
+	ship_shield_mult = -0.75
+}
+
+####################
+
+ge_instant_damage_effect_50 = {
+	ship_shield_regen_add_perc = -100
+	ship_armor_regen_add_perc = -90
+	ship_hull_regen_add_perc = -70
+}
+
+ge_instant_damage_effect_40 = {
+	ship_shield_regen_add_perc = -100
+	ship_armor_regen_add_perc = -20
+	ship_hull_regen_add_perc = -20
+}
+
+
+
+###################################################################
+##################situation sgt flagship
+roz_situation_sgt_flagship_bridge_databank_modifier = {
+
+	planet_sensor_range_add = 4
+	planet_hyperlane_range_add = 10
+	ship_sensor_range_add = 2
+	ship_hyperlane_range_add = 4
+}
+
+
+roz_sgt_flagship_completed_buff = {
+	icon = "gfx/interface/icons/modifiers/mod_command_limit_add.dds"
+	command_limit_add = 32
+	country_naval_cap_add = 32
+}
+
+
+
+#########################
+roz_ap_slot_add = {
+	icon = "gfx/interface/icons/modifiers/ge_gravity_knowledge.dds"
+	icon_frame = 1
+	ascension_perks_add = 20
+
+}
+
+roz_ap_slot_add_1 = {
+	icon = "gfx/interface/icons/modifiers/ge_gravity_knowledge.dds"
+	icon_frame = 1
+	ascension_perks_add = 1
+}
+
+################################################################
+##relics
+roz_planetary_defense_buff = {
+	icon = "gfx/interface/icons/modifiers/mod_army_defense_morale_mult.dds"
+	armies_upkeep_mult = -0.15
+	pop_defense_armies_add = 3
+	army_defense_damage_mult = 0.20
+	army_defense_health_mult = 0.20
+	planet_orbital_bombardment_damage = -1.0
+}
+
+
+
+
+######################
+
+########agenda_modifier
+
+#######################
+
+agenda_void_core_boost_finish = {
+	diplo_weight_mult = 0.15
+	diplo_action_acceptance_add = 50
+	pop_happiness = 0.25
+	country_base_energy_produces_add = 500
+	weapon_type_ge_void_energy_weapon_damage_mult = 1.0
+}
+
+#####
+roz_anti_Stealth_suppress_to_fallen_empire = {
+	ship_cloaking_detection_add = -999
+}
+
+###
+roz_FallenGod_invasion_prepare = {
+	all_technology_research_speed = 0.1
+	shipclass_military_build_cost_mult = -0.1
+}
+
+roz_SK_ec_boundaries_of_science_frustrated = {
+	all_technology_research_speed = -0.1
+	country_produces_mult = 0.05
+}
+
+
+#############################
+####特殊计划：卷土重来
+roz_unholy_invasion_defproj_1_defender_buff = {
+	icon = gfx/interface/icons/modifiers/mod_weapon_damage_mult.dds
+	ship_weapon_damage = 0.15
+	ship_fire_rate_mult = 0.15
+	ship_shield_mult = 0.15
+}
+##特殊项目：凝视深渊 完成事件
+roz_stare_into_the_abyss_debuff = {
+	icon = gfx/interface/icons/modifiers/mod_negative_traits.dds
+	all_technology_research_speed = -0.20
+}
+
+
+
+

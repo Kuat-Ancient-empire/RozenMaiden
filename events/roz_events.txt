@@ -1,0 +1,1751 @@
+namespace = ge_event
+country_event = {
+	#开局
+	id = ge_event.0
+	title = ge_event.0.name
+	desc = ge_event.0.desc
+	picture = GFX_ge_rz_start3
+	location = root
+	show_sound = select_click
+	#fire_only_once = yes 
+	is_triggered_only = yes
+	# mean_time_to_happen = {
+	#   months = 3
+	#   modifier = {
+	#       factor = 2
+	#       has_civic = civic_agrarian_idyll
+	#   }
+	# }
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		#set_global_flag = ge_global_flag
+		#set_global_flag = ge_test_activated
+		set_variable = {
+			which = ge_buff_count
+			value = 0
+		}
+		set_variable = {
+			which = ge_buff_count_fr
+			value = 0
+		}
+		set_variable = {
+			which = ge_buff_fire_range_count
+			value = 0
+		}
+
+		country_event = { #特别内容，Warhammer 40K
+			id = ge_sites.410
+			days = 10800
+			random = 3600
+		}
+		set_timed_country_flag = {	#计时，防止刷不出异常点
+			flag = roz_sgt_flagship_spawn_timed_flag
+			days = 7200
+		}
+		set_country_flag = roz_leader_name_jp_flag #开局设置，设定领袖名为片假名
+
+
+
+	}
+	option = {
+		name = ge_event.0.aa
+		default_hide_option = yes
+		trigger = {
+			has_global_flag = ge_test_activated
+		}
+	}
+	option = {
+		name = ge_event.0.bb
+		default_hide_option = yes
+		trigger = {
+			has_global_flag = ge_test_activated
+		}
+		give_technology = {
+			tech = GE_tech_reactor
+		}
+		give_technology = {
+			tech = tech_ge_pd
+		}
+		give_technology = {
+			tech = tech_ge_xl_beam
+		}
+		give_technology = {
+			tech = tech_ge_t_beam
+		}
+		give_technology = {
+			tech = tech_ge_laser_cannon
+		}
+		give_technology = {
+			tech = tech_ge_kinetic_gun
+		}
+		give_technology = {
+			tech = tech_ge_energy_torpedo
+		}
+		give_technology = {
+			tech = tech_ge_strike_craft_bomber
+		}
+		give_technology = {
+			tech = tech_ge_strike_craft_fighter
+		}
+		give_technology = {
+			tech = tech_ge_strike_craft_xuefeng
+		}
+		give_technology = {
+			tech = tech_ge_bhmissile
+		}
+		give_technology = {
+			tech = tech_ge_wtorpedo
+		}
+		give_technology = {
+			tech = tech_ge_planet_killer
+		}
+		give_technology = {
+			tech = tech_ge_sf_armor
+		}
+		give_technology = {
+			tech = tech_ge_shield
+		}
+		give_technology = {
+			tech = tech_ge_warp_drive
+		}
+		give_technology = {
+			tech = tech_ge_thruster
+		}
+		give_technology = {
+			tech = tech_ge_computer
+		}
+		give_technology = {
+			tech = tech_ge_rds
+		}
+		give_technology = {
+			tech = tech_ge_cb
+		}
+		give_technology = {
+			tech = tech_ge_sensor
+		}
+		give_technology = {
+			tech = tech_ge_shippart_titian_aura
+		}
+	}
+	option = {
+		name = ge_event.0.cc
+		country_event = {
+			id = ge_event.1
+		}
+		hidden_effect = {
+			create_ship_design = { design = ROZ_ITQ_design }
+			add_ship_design = last_created_design
+			create_ship_design = { design = roz_juggernaut_wanxiang_design }
+			add_ship_design = last_created_design
+		}
+		
+	}
+}
+
+
+
+
+
+#########################
+
+country_event = {
+	#飞升0触发事件
+	id = ge_event.10
+	title = "ge_event.10.t"
+	desc = "ge_event.10.d"
+	is_triggered_only = yes
+	picture = GFX_evt_ap_ge_0
+	option = {
+		name = ge_event.10.aa
+	}
+}
+
+country_event = {
+	#飞升1触发事件/另辟蹊径
+	id = ge_event.11
+	title = "ge_event.11.t"
+	desc = "ge_event.11.d"
+	is_triggered_only = yes
+	picture = GFX_evt_ap_ge_1
+	option = {
+		name = ge_event.11.aa
+		#give_technology = {
+			#tech = tech_ge_pd
+		#}
+		enable_special_project = {
+			name = "ge_reactor_project"
+			location = capital_star
+			owner = root
+		}
+		
+	}
+}
+
+country_event = {
+	#飞升2触发事件
+	id = ge_event.12
+	title = "ge_event.12.t"
+	desc = "ge_event.12.d"
+	is_triggered_only = yes
+	show_sound = ascension_perk_unlocked
+	picture = GFX_evt_ap_ge_2
+	option = {
+		name = ge_event.12.aa
+		capital_scope = {
+			enable_special_project = {
+				name = "ge_ascension_project"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+country_event = {
+	#飞升1完成事件
+	id = ge_event.39
+	title = "ge_event.39.title"
+	desc = "ge_event.39.desc" 
+	show_sound = survey_complete
+	is_triggered_only = yes
+	picture = GFX_evt_ap_ge_1
+	option = {
+		name = ge_event.39.aa
+		country_event = {
+			id = ge_event.40
+			days = 1
+		}
+		
+	}
+
+}
+
+country_event = {
+	#虚空侵蚀事件
+	id = ge_event.40
+	title = "ge_event.40.title"
+	desc = "ge_event.40.desc"
+	show_sound = event_red_alert
+	is_triggered_only = yes
+	picture = GFX_evt_zro_4
+	option = {
+		name = ge_event.40.aa
+		add_resource = {
+			alloys = -1
+			energy = -1
+		}
+		country_event = {
+			id = ge_event.41
+		}
+		#set_country_flag = nfield_invasion_waves_flag
+		#remove_country_flag = nfield_invasion_waves_flag
+	}
+}
+
+country_event = {	###侵蚀终止
+	id = ge_event.41
+	title = "ge_event.41.title"
+	desc = "ge_event.41.desc"
+	is_triggered_only = yes
+	show_sound = event_radio_chatter
+	picture = GFX_evt_surreal_visions
+	immediate = {
+		country_event = {
+			id = ge_event.412
+			days = 1
+		}
+	}
+	option = {
+		name = ge_event.41.aa
+		#country_event = {
+		#	id = ge_event.43
+		#	days = 360
+		#}
+		set_country_flag = ge_tech_continue
+		hidden_effect = {
+			#。。。以后再改
+			event_target:roz_n_field_site_target@root = {
+				save_event_target_as = roz_sgt_site_target
+			}
+		}
+		begin_event_chain = {
+			event_chain = "roz_void_energy_research_chain"
+			target = root
+		}
+
+		enable_special_project = {
+			name = roz_void_energy_research_project_stage_1_a
+			location = capital_star
+			owner = this
+		}
+
+	}
+	#option = {
+	#	name = ge_event.41.bb
+	#	set_country_flag = abandon_ge_research
+	#	country_event = {
+	#		id = ge_event.42
+	#		days = 2
+	#	}
+	#
+	#}
+}
+
+country_event = {	###放弃
+	id = ge_event.42
+	title = "ge_event.42.title"
+	desc = "ge_event.42.desc"
+	is_triggered_only = yes
+	show_sound = event_solar_fusion
+	picture = GFX_evt_night_raid
+	trigger = {
+		has_country_flag = abandon_ge_research
+	}
+	option = {
+		name = ge_event.42.aa
+		hidden_effect = {
+			
+			#remove_global_flag = abandon_ge_research
+		}
+	}
+}
+
+country_event = {	##
+	id = ge_event.411
+	title = "ge_event.411.title"
+	desc = "ge_event.411.desc"
+	is_triggered_only = yes
+	show_sound = event_solar_fusion
+	picture = GFX_roz_evt_Nfield_constructure_project
+	trigger = {
+
+	}
+	option = {
+		name = ge_event.411.aa
+		event_target:roz_n_field_site_target@root = {
+			add_deposit = ge_site_sgt_deposit_2
+		}
+		enable_special_project = {
+			name = roz_void_energy_research_project_stage_1
+			location = capital_star
+			owner = root
+		}
+		#capital_scope = {}
+		#hidden_effect = {}
+	}
+}
+
+#循环自检，尝试防止卡事件链
+country_event = {
+	id = ge_event.412
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_special_project = roz_void_energy_research_project_stage_1 }
+	}
+	immediate = {
+		country_event = {
+			id = ge_event.412
+			days = 1
+		}
+		if = {
+			limit = {
+				has_completed_special_project_in_log = roz_void_energy_research_project_stage_1_a
+				NOT = { has_special_project = roz_void_energy_research_project_stage_1 }
+				NOT = { has_active_event = {
+					ge_event.411
+				} }
+			}
+			enable_special_project = {
+				name = roz_void_energy_research_project_stage_1
+				location = capital_star
+				owner = root
+			}
+			if = {
+				limit = { NOT = { has_special_project = roz_void_energy_research_project_stage_1 } }
+				enable_special_project = {
+					name = roz_void_energy_research_project_stage_1
+					location = capital_scope
+					owner = root
+				}
+				if = {
+					limit = { NOT = { has_special_project = roz_void_energy_research_project_stage_1 } }
+					enable_special_project = {
+						name = roz_void_energy_research_project_stage_1
+						location = home_planet
+						owner = root
+					}
+					if = {
+						limit = { NOT = { has_special_project = roz_void_energy_research_project_stage_1 } }
+						random_owned_planet = {
+							solar_system = {
+								star = { save_event_target_as = roz_location_temp_target }
+							}
+						}
+						enable_special_project = {
+							name = roz_void_energy_research_project_stage_1
+							location = event_target:roz_location_temp_target
+							owner = root
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_special_project = roz_void_energy_research_project_stage_1 }
+			break = yes
+		}
+	}
+}
+
+country_event = {	###研究日志1
+	id = ge_event.43
+	title = "ge_event.43.title"
+	desc = "ge_event.43.desc"
+	is_triggered_only = yes
+	show_sound = event_administrative_work
+	picture = GFX_evt_synth_sabotage
+	trigger = {
+		has_country_flag = ge_tech_continue
+		NOT = {
+			has_country_flag = abandon_ge_research
+		}
+	}
+	option = {
+		name = ge_event.43.aa
+		#country_event = {
+		#	id = ge_event.44
+		#	days = 360
+		#}
+		enable_special_project = {
+			name = roz_void_energy_research_project_stage_2
+			location = capital_star
+			owner = root
+		}
+	}
+}
+
+country_event = {	###研究日志2
+	id = ge_event.44
+	title = "ge_event.44.title"
+	desc = "ge_event.44.desc"
+	is_triggered_only = yes
+	show_sound = event_administrative_work
+	picture = GFX_evt_intelligence_report
+	trigger = {
+		has_country_flag = ge_tech_continue
+		NOT = {
+			has_country_flag = abandon_ge_research
+		}
+	}
+	option = {
+		name = ge_event.44.aa
+		country_event = {
+		 	id = ge_event.45
+		 	days = 30
+		 }
+
+	}
+}
+
+country_event = {	###研究日志3
+	id = ge_event.45
+	title = "ge_event.45.title"
+	desc = {
+		trigger = {
+			NOT = {
+				has_technology = tech_zero_point_power
+			}
+		}
+		text = ge_event.45.desc
+	}
+	desc = {
+		trigger = {
+			has_technology = tech_zero_point_power
+		}
+		text = ge_event.45.desc_2
+	}
+	is_triggered_only = yes
+	show_sound = event_administrative_work
+	picture = GFX_evt_mysterious_signal
+	trigger = {
+		has_country_flag = ge_tech_continue
+		NOT = {
+			has_country_flag = abandon_ge_research
+		}
+	}
+	immediate = {
+
+	}
+	option = {
+		name = ge_event.45.aa
+		enable_special_project = {
+			name = roz_void_energy_research_project_stage_3_1
+			location = capital_star
+			owner = root
+		}
+	}
+}
+
+country_event = {	###研究日志3-2
+	id = ge_event.451
+	title = "ge_event.451.title"
+	desc = {
+		trigger = {
+			NOT = {
+				has_technology = tech_zero_point_power
+			}
+		}
+		text = ge_event.451.desc
+	}
+	desc = {
+		trigger = {
+			has_technology = tech_zero_point_power
+		}
+		text = ge_event.451.desc_2
+	}
+	is_triggered_only = yes
+	show_sound = event_administrative_work
+	picture = GFX_evt_mysterious_signal
+	immediate = {
+
+	}
+	option = {
+		name = ge_event.451.aa
+		trigger = {
+			has_technology = tech_zero_point_power
+		}
+		enable_special_project = {
+			name = roz_void_energy_research_project_stage_3_a2
+			location = capital_star
+			owner = this
+		}
+	}
+	option = {
+		name = ge_event.451.bb
+		trigger = {
+			NOT = {
+				has_technology = tech_zero_point_power
+			}
+		}
+		set_country_flag = ge_wait_zero_point
+		enable_special_project = {
+			name = roz_void_energy_research_project_stage_3_a
+			location = capital_star
+			owner = root
+		}
+	}
+}
+
+country_event = {
+	id = ge_event.452
+	title = "ge_event.452.title"
+	desc = ge_event.452.desc
+	is_triggered_only = yes
+	show_sound = event_administrative_work
+	picture = GFX_evt_resource_cache
+	immediate = {
+
+	}
+	option = {
+		name = ge_event.452.aa
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = 1
+		}
+		add_monthly_resource_mult = {
+			resource = engineering_research
+			value = 1
+		}
+		custom_tooltip = ge_event.452.aa_ct
+	}
+}
+
+country_event = {
+	id = ge_event.453
+	title = "ge_event.453.title"
+	desc = ge_event.453.desc
+	is_triggered_only = yes
+	show_sound = event_administrative_work
+	picture = GFX_evt_resource_cache
+	immediate = {
+
+	}
+	option = {
+		name = ge_event.453.aa
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = 1
+		}
+		add_monthly_resource_mult = {
+			resource = engineering_research
+			value = 1
+		}
+	}
+}
+
+country_event = {
+	id = ge_event.461
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_flag = ge_event_46_flag_CD
+		}
+		NOT = {
+			has_country_flag = evt_ge_event_46_flag
+		}
+		NOT = {
+			has_country_flag = ge_tech_reactor_get
+		}
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = ge_event_46_flag_CD
+			months = 3
+		}
+		capital_star = {
+			solar_system = {
+
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = ge_event.46
+		}
+	}
+}
+
+country_event = {	###研究日志4
+	id = ge_event.46
+	title = "ge_event.46.title"
+	desc = "ge_event.46.desc"
+	show_sound = event_administrative_work
+	is_triggered_only = yes
+	picture = GFX_evt_clocks
+	#mean_time_to_happen = {
+	#	months = 3
+	#}
+	trigger = {
+		NOT = {
+			has_country_flag = ge_wait_zero_point
+		}
+		has_country_flag = ge_tech_continue
+		has_country_flag = roz_zpe_support
+		has_technology = tech_zero_point_power
+		NOT = {
+			has_country_flag = abandon_ge_research
+		}
+		NOT = {
+			has_country_flag = evt_ge_event_46_flag
+		}
+	}
+	immediate = {
+		#remove_country_flag = ge_wait_zero_point
+		set_country_flag = evt_ge_event_46_flag
+		every_owned_ship = {
+			limit = {
+			}
+		}
+	}
+
+	#局势：国家电网修复工程，为雪华绮晶的对决埋下伏笔
+	option = {
+		name = ge_event.46.aa
+		if = {
+			limit = { 
+				has_technology = tech_dark_matter_power_core
+			}
+			country_event = {
+				id = ge_event.48
+				days = 3
+			}
+			set_country_flag = ge_wait_tech_dark_matter
+		}
+		else_if = {
+			limit = { 
+				has_technology = tech_zero_point_power
+			}
+			country_event = {
+				id = ge_event.47
+				days = 3
+			}
+		}
+		
+	}
+}
+
+country_event = {	###a17瓶颈
+	id = ge_event.47
+	title = "ge_event.47.title"
+	desc = "ge_event.47.desc"
+	is_triggered_only = yes
+	show_sound = event_power_down
+	picture = GFX_evt_physics_research
+	trigger = {
+		has_country_flag = ge_tech_continue
+		NOT = {
+			has_country_flag = abandon_ge_research
+		}
+	}
+	option = {		###直接超频
+		name = ge_event.47.aa
+		custom_tooltip = ge_event.47.aa.ct
+
+			country_event = {
+				id = ge_event.49
+				days = 1
+			}
+			add_modifier = {
+				modifier = ge_engine_boost_zp
+			}
+
+
+	}
+	option = {		###等暗物质反应堆
+		name = ge_event.47.bb
+		custom_tooltip = ge_event.47.bb.ct
+		set_country_flag = ge_wait_tech_dark_matter
+	}
+}
+
+country_event = {	###不想等了！
+	id = ge_event.470
+	title = "ge_event.470.title"
+	desc = "ge_event.470.desc"
+	is_triggered_only = yes
+	
+	show_sound = event_power_down
+	picture = GFX_evt_physics_research
+	trigger = {
+		has_country_flag = ge_tech_continue
+		NOT = {
+			has_country_flag = abandon_ge_research
+		}
+		NOT = {
+			has_country_flag = ge_rbp_activity_flag
+		}
+	}
+	option = {		###直接超频
+		name = ge_event.470.aa
+		custom_tooltip = ge_event.47.aa.ct
+		if = {
+			limit = { 
+				has_technology = tech_zero_point_power
+			}
+			country_event = {
+				id = ge_event.49
+				days = 1
+			}
+			add_modifier = {
+				modifier = ge_engine_boost_zp
+			}
+			add_modifier = {
+				modifier = ge_power_grid_Shock_zp
+				days = 1800
+			}
+			remove_country_flag = ge_wait_tech_dark_matter
+		}
+
+	}
+	option = {		###等暗物质反应堆
+		name = ge_event.470.bb
+		#set_country_flag = ge_wait_tech_dark_matter
+		add_resource = {
+			influence = -10
+		}
+		hidden_effect = {
+			remove_country_flag = ge_rbp_activity_flag
+		}
+	}
+}
+
+country_event = {	###sa殊途同归
+	id = ge_event.48
+	title = "ge_event.48.title"
+	desc = "ge_event.48.desc"
+	#is_triggered_only = yes
+	show_sound = event_power_down
+	picture = GFX_evt_wormhole
+	mean_time_to_happen = { #虚空科技起源-研究片段4触发（暗物质科技）
+		months = 6
+	}
+	trigger = {
+		has_country_flag = ge_tech_continue
+		has_country_flag = ge_wait_tech_dark_matter
+		NOT = {
+			has_country_flag = abandon_ge_research
+		}
+		has_technology = tech_dark_matter_power_core
+		
+	}
+	option = {
+		name = ge_event.48.aa
+		country_event = {
+			id = ge_event.49
+			days = 1
+		}
+		remove_country_flag = ge_wait_tech_dark_matter
+		add_modifier = {
+			modifier = ge_engine_boost_dm
+		}
+
+	}
+}
+
+country_event = {	###a23逆流而上
+	id = ge_event.49
+	title = "ge_event.49.title"
+	desc = "ge_event.49.desc"
+	is_triggered_only = yes
+	#fire_only_once = yes
+	
+	show_sound = event_activating_unknown_technology
+	picture = GFX_evt_ancient_databank
+	trigger = {
+		has_country_flag = ge_tech_continue
+		NOT = {
+			has_country_flag = abandon_ge_research
+		}
+	}
+	immediate = {
+		if = { ##零点反应堆
+			limit = {
+				has_modifier = ge_engine_boost_zp
+			}
+			add_modifier = {
+				modifier = ge_power_grid_Shock_zp
+				#days = 1800
+			}
+		}
+		else_if = { ###暗物质反应堆
+			limit = {
+				has_modifier = ge_engine_boost_dm
+			}
+			add_modifier = {
+				modifier = ge_power_grid_Shock_dm
+				#days = 360
+			}
+		}
+
+	}
+	option = {
+		name = ge_event.49.aa
+		if = {
+			limit = { 
+				has_technology = tech_dark_matter_power_core
+			}
+			add_resource = {
+				energy = -10000
+			}
+		}
+		else_if = {
+			limit = { 
+				has_technology = tech_zero_point_power
+			}
+			add_resource = {
+				energy = -100000
+			}
+		}
+		if = {
+			limit = { 
+				has_modifier = ge_engine_boost_dm
+			}
+			remove_modifier = ge_engine_boost_dm
+		}
+		else_if = {
+			limit = { 
+				has_modifier = ge_engine_boost_zp
+			}
+			remove_modifier = ge_engine_boost_zp
+		}
+
+	}
+	after = {
+		country_event = {
+			id = ge_event.60
+			days = 1
+		}
+	}
+}
+
+country_event = {	###a22极昼
+	id = ge_event.60
+	title = "ge_event.60.title"
+	desc = "ge_event.60.desc"
+	is_triggered_only = yes
+	show_sound = event_ship_explosion
+	picture = GFX_evt_supernova
+	trigger = {
+		has_country_flag = ge_tech_continue
+		NOT = {
+			has_country_flag = abandon_ge_research
+		}
+	}
+	immediate = {
+		start_situation = {
+			type = roz_ves_state_grid_shock_situation
+		}
+	}
+	option = {
+		name = ge_event.60.aa
+		country_event = {
+			id = ge_event.61
+			days = 5
+		}
+	}
+}
+
+country_event = {	###e17天赐
+	id = ge_event.61
+	title = "ge_event.61.title"
+	desc = "ge_event.61.desc"
+	show_sound = ascension_perk_unlocked
+	is_triggered_only = yes
+	picture = GFX_evt_unity_symbol
+	trigger = {
+		has_country_flag = ge_tech_continue
+		NOT = {
+			has_country_flag = abandon_ge_research
+		}
+	}
+	immediate = {
+		set_country_flag = ge_tech_reactor_get
+	}
+	option = {
+		name = ge_event.61.aa
+		custom_tooltip = ge_event.61.aa.ctmtp
+		give_technology = {
+			tech = GE_tech_reactor
+		}
+		if = {
+			limit = {
+				NOT = { has_technology = tech_ge_sgt_flagship }
+			}
+			give_technology = { tech = tech_ge_sgt_flagship }
+		}
+		#give_technology = {
+		#	tech = tech_ge_pd
+		#}
+		add_resource = {
+			sr_void_core = 1
+		}
+		hidden_effect = {
+			remove_country_flag = ge_tech_continue
+			remove_global_flag = abandon_ge_research
+			event_target:roz_n_field_site_target@root = {
+				add_deposit = ge_site_vc_deposit
+			}
+			every_owned_ship = {
+				limit = {
+					is_ship_size = Ge_Vampirilis_Ortaam
+				}
+				remove_modifier = roz_sgt_flagship_none_tech_modifier
+			}
+			every_owned_ship = {
+				limit = {
+					is_ship_size = Ge_Vampirilis_Letum
+				}
+				remove_modifier = roz_sgt_flagship_gardian_none_tech_modifier
+			}
+			if = {
+				limit = { NOT = { has_technology = tech_ge_sgt_flagship_normal } }
+				give_technology = { tech = tech_ge_sgt_flagship_normal }
+			}
+		}
+
+	}
+}
+
+country_event = {
+	#飞升2/特殊计划完成事件
+	id = ge_event.50
+	title = "ge_event.50.title"
+	desc = "ge_event.50.desc"
+	show_sound = high_war_exhaustion
+	is_triggered_only = yes
+	picture = GFX_evt_vortex
+	immediate = {
+		#ruler = {
+		#	save_event_target_as = roz_player_country_ruler_target
+		#}
+		#clone_leader = {	#这是干啥的。。。？
+		#	target = event_target:roz_player_country_ruler_target
+		#	effect = {
+		#		set_owner = event_target:ge_suigintou_country@root
+		#		save_global_event_target_as = roz_player_country_ruler_global_target@root
+		#	}
+		#}
+		country_event = {
+			id = ge_event.1000
+			days = 1
+		}
+		#country_event = {
+		#	id = ge_event.1003
+		#}
+	}
+	option = {
+		name = ge_event.50.zz
+		default_hide_option = yes
+		trigger = {
+			always = yes
+		}
+		add_modifier = {
+			modifier = roz_ge_event_50_zz_modifier
+			days = -1
+		}
+	}
+	option = {
+		name = ge_event.50.aa
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_xenophobe
+			}
+		}
+		add_modifier = {
+			modifier = roz_ge_event_50_aa_modifier
+			days = -1
+		}
+	}
+	option = {
+		name = ge_event.50.bb
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_xenophile
+			}
+		}
+		add_modifier = {
+			modifier = roz_ge_event_50_bb_modifier
+			days = -1
+		}
+	}
+	option = {
+		name = ge_event.50.cc
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_pacifist
+			}
+		}
+		add_modifier = {
+			modifier = roz_ge_event_50_cc_modifier
+			days = -1
+		}
+	}
+	option = {
+		name = ge_event.50.dd
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_militarist
+			}
+		}
+		add_modifier = {
+			modifier = roz_ge_event_50_dd_modifier
+			days = -1
+		}
+	}
+	option = {
+		name = ge_event.50.ff
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_authoritarian
+			}
+		}
+		add_modifier = {
+			modifier = roz_ge_event_50_ff_modifier
+			days = -1
+		}
+	}
+	option = {
+		name = ge_event.50.ee
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_egalitarian
+			}
+		}
+		add_modifier = {
+			modifier = roz_ge_event_50_ee_modifier
+			days = -1
+		}
+	}
+	option = {
+		name = ge_event.50.gg
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_materialist
+			}
+		}
+		add_modifier = {
+			modifier = roz_ge_event_50_gg_modifier
+			days = -1
+		}
+	}
+	option = {
+		name = ge_event.50.hh
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+		add_modifier = {
+			modifier = roz_ge_event_50_hh_modifier
+			days = -1
+		}
+	}
+}
+
+
+# country_event = {
+# 	##造船计划
+# 	id = ge_event.60
+# 	title = "ge_event.60.title"
+# 	desc = "ge_event.60.desc"
+# 	show_sound = select_click
+# 	is_triggered_only = yes
+# 	picture = GFX_starbase_shipyard
+# 	option = {
+# 		name = ge_event.60.aa
+# 		hidden_effect = {
+			
+# 		}
+# 	}
+# }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	#增加飞升种族特质
+	id = ge_event.1000
+	title = "ge_event.1000.name"
+	desc = "ge_event.1000.desc"
+	picture = GFX_evt_vortex
+	show_sound = event_the_great_awakening
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		has_technology = GE_tech_reactor
+		#last_increased_tech = GE_tech_reactor
+	}
+	immediate = {
+		#set_country_flag = ge_ap2_awakening
+		#every_owned_pop = {
+		#	limit = {
+		#		is_same_species = root
+		#		#has_trait = trait_cor_great_culture
+		#		NOT = {
+		#			species = {
+		#				has_trait = trait_cor_dragon_totem
+		#			}
+		#		}
+		#	}
+		#	# modify_species = {
+		#	# 	species = this
+		#	# 	add_trait = trait_cor_grand_wisdom
+		#	# }
+		#	# modify_species = {
+		#	# 	species = this
+		#	# 	add_trait = trait_cor_transpierce
+		#	# }
+		#	# modify_species = {
+		#	# 	species = this
+		#	# 	add_trait = trait_cor_ingenios
+		#	# }
+		#}
+		every_owned_pop = {
+			limit = {
+				is_being_purged = no
+				is_sapient = yes
+				is_enslaved = no
+			}
+			species = {
+				change_species_characteristics = {
+					add_trait = trait_cor_dragon_totem
+				}
+			}
+		}
+
+		#modify_species = {
+		#	species = this
+		#	#remove_trait = trait_docile
+		#	add_trait = trait_cor_dragon_totem
+		#	#add_trait = trait_cor_grand_wisdom
+		#	#add_trait = trait_cor_transpierce
+		#	#add_trait = trait_cor_ingenios
+		#	effect = {
+		#		save_event_target_as = give_ge_dragon_totem
+		#	}
+		#}
+		#change_dominant_species = {
+		#	species = event_target:give_ge_dragon_totem
+		#}
+		#while = {
+		#	limit = {
+		#		any_owned_pop = {
+		#			is_subspecies = root
+		#			NOT = { has_trait = trait_cor_dragon_totem }
+		#		}
+		#	}
+		#	random_owned_pop = {
+		#		limit = {
+		#			is_subspecies = root
+		#			NOT = { has_trait = trait_cor_dragon_totem }
+		#		}
+		#		root = {
+		#			modify_species = {
+		#				species = event_target:give_ge_dragon_totem
+		#				add_trait = trait_cor_dragon_totem
+		#			}
+		#		}
+		#	}
+		#}
+		#ruler = {
+		#	change_leader_portrait = event_target:roz_player_country_ruler_global_target@root
+		#}
+
+	}
+	option = {
+		name = "ge_event.1000.a"
+		if = {
+			limit = {
+				NOR = {
+					has_civic = civic_cor_time_honored
+					has_civic = civic_cor_celestial_military
+				}
+			}
+			force_add_civic = civic_cor_time_honored
+			force_add_civic = civic_cor_celestial_military
+		}
+		while = {
+			count = 1
+			limit = {}
+			if = {
+				limit = {}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = ge_final_ascension_project_completed
+			every_country = {
+				limit = {
+					has_country_flag = ge_leader_suigintou_get 
+				}
+				every_owned_leader = {
+					limit = {
+						#species = {
+							#has_trait = trait_cor_dragon_totem
+						#}
+						NOT= {
+							#has_trait = leader_trait_ge_cor_admiral
+							has_trait = leader_trait_ge_ruler_bond
+							##has_trait = leader_trait_llk_ruler_star_light
+							#has_trait = leader_trait_ge_cor_general
+							#has_trait = leader_trait_ge_cor_scientist
+							#has_trait = leader_trait_ge_dominator
+						}
+					}
+					add_trait = leader_trait_ge_ruler_bond
+					#if = {
+					#	limit = {
+					#		leader_class = admiral
+					#	}
+					#	add_trait = leader_trait_ge_cor_admiral
+					#	add_ruler_trait = leader_trait_ge_ruler_bond
+					#}
+					#if = {
+					#	limit = {
+					#		leader_class = general
+					#	}
+					#	add_trait = leader_trait_ge_cor_general
+					#	add_ruler_trait = leader_trait_ge_ruler_bond
+					#}
+					#if = {
+					#	limit = {
+					#		leader_class = governor
+					#	}
+					#	add_trait = leader_trait_ge_dominator
+					#	add_ruler_trait = leader_trait_ge_ruler_bond
+					#}
+					#if = {
+					#	limit = {
+					#		leader_class = scientist
+					#	}
+					#	add_trait = leader_trait_ge_cor_scientist
+					#	add_ruler_trait = leader_trait_ge_ruler_bond
+					#}
+					#if = {
+					#	limit = {
+					#		leader_class = ruler
+					#	}
+					#	add_trait = leader_trait_ge_ruler_bond
+					#	add_ruler_trait = leader_trait_ge_ruler_bond
+					#}
+				}
+				every_pool_leader = {
+					limit = {
+						#species = {
+							#as_trait = trait_cor_dragon_totem
+						#}
+						NOT = {
+							#has_trait = leader_trait_ge_cor_admiral
+							#has_trait = leader_trait_ge_cor_general
+							#has_trait = leader_trait_ge_dominator
+							#has_trait = leader_trait_ge_cor_scientist
+							has_trait = leader_trait_ge_ruler_bond
+						}
+					}
+					add_trait = leader_trait_ge_ruler_bond
+					#if = {
+					#	limit = {
+					#		leader_class = admiral
+					#	}
+					#	add_trait = leader_trait_ge_cor_admiral
+					#	add_ruler_trait = leader_trait_ge_ruler_bond
+					#}
+					#if = {
+					#	limit = {
+					#		leader_class = general
+					#	}
+					#	add_trait = leader_trait_ge_cor_general
+					#	add_ruler_trait = leader_trait_ge_ruler_bond
+					#}
+					#if = {
+					#	limit = {
+					#		leader_class = governor
+					#	}
+					#	add_trait = leader_trait_ge_dominator
+					#	add_ruler_trait = leader_trait_ge_ruler_bond
+					#}
+					#if = {
+					#	limit = {
+					#		leader_class = scientist
+					#	}
+					#	add_trait = leader_trait_ge_cor_scientist
+					#	add_ruler_trait = leader_trait_ge_ruler_bond
+					#}
+					#if = {
+					#	limit = {
+					#		leader_class = ruler
+					#	}
+					#	add_trait = leader_trait_ge_ruler_bond
+					#	add_ruler_trait = leader_trait_ge_ruler_bond
+					#}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	#增加飞升种族特质
+	id = ge_event.1001
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		#from = {
+			#species = {
+				#has_trait = trait_cor_dragon_totem
+			#}
+		#}
+		owner_main_species = {
+			has_trait = trait_cor_dragon_totem
+		}
+	}
+	immediate = {
+		from = {
+			add_trait = leader_trait_ge_ruler_bond
+			#if = {
+			#	limit = {
+			#		leader_class = admiral
+			#	}
+			#	add_trait = leader_trait_ge_cor_admiral
+			#	add_ruler_trait = leader_trait_ge_ruler_bond
+			#	break = yes
+			#}
+			#if = {
+			#	limit = {
+			#		leader_class = general
+			#	}
+			#	add_trait = leader_trait_ge_cor_general
+			#	add_ruler_trait = leader_trait_ge_ruler_bond
+			#	break = yes
+			#}
+			#if = {
+			#	limit = {
+			#		leader_class = governor
+			#	}
+			#	add_trait = leader_trait_ge_dominator
+			#	add_ruler_trait = leader_trait_ge_ruler_bond
+			#	break = yes
+			#}
+			#if = {
+			#	limit = {
+			#		leader_class = scientist
+			#	}
+			#	add_trait = leader_trait_ge_cor_scientist
+			#	add_ruler_trait = leader_trait_ge_ruler_bond
+			#	break = yes
+			#}
+			#if = {
+			#	limit = {
+			#		leader_class = ruler
+			#	}
+			#	add_trait = leader_trait_ge_ruler_bond
+			#	add_ruler_trait = leader_trait_ge_ruler_bond
+			#	break = yes
+			#}
+		}
+	}
+}
+
+#飞升2加公民性
+country_event = {
+	#增加飞升种族特质
+	id = ge_event.1002
+	title = "ge_event.1002.t"
+	desc = "ge_event.1002.d"
+	picture = GFX_evt_psionics
+	show_sound = event_the_great_awakening
+	is_triggered_only = yes
+	trigger = {
+		NOR = {
+			has_civic = civic_cor_time_honored
+			has_civic = civic_cor_celestial_military
+		}
+	}
+	immediate = {
+		set_country_flag = ge_final_ascension_project_completed
+	}
+	option = {
+		name = ge_event.1002.aa
+		force_add_civic = civic_cor_time_honored
+		#force_add_civic = civic_cor_time_honored
+		force_add_civic = civic_cor_celestial_military
+	}
+}
+
+#country_event = {
+#	id = ge_event.1003
+#	is_triggered_only = yes
+#	hide_window = yes
+#	trigger = {
+#		is_ai = no
+#	}
+#	immediate = {
+#		every_country = {
+#			limit = {
+#				is_ai = yes
+#				OR = {
+#					has_civic = civic_cor_celestial_empire
+#					has_civic = civic_cor_celestial_military
+#					has_civic = civic_cor_time_honored
+#				}
+#			}
+#			force_remove_civic = civic_cor_celestial_empire
+#			force_remove_civic = civic_cor_celestial_military
+#			force_remove_civic = civic_cor_time_honored
+#		}
+#	}
+#}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#巨构建造转换为巨像
+#country_event = {
+#	id = ge_event.2001
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		from = {
+#			is_megastructure_type = roz_mega_wanxiangtianyin_undeploy
+#		}
+#	}
+#	immediate = {
+#		create_fleet = {
+#			name = "roz_juggernaut_wanxiang_section"
+#			settings = {
+#				is_boss = yes
+#				can_upgrade = yes
+#			}
+#			effect = {
+#				set_owner = root
+#				set_fleet_flag = roz_juggernaut_wanxiang_flag
+#				set_location = from
+#				create_ship = {
+#					name = juggernaut
+#					graphical_culture = owner
+#					design = random_existing_design
+#					random_existing_design = roz_juggernaut_wanxiang
+#				}
+#			}
+#		}
+#		from = {
+#			remove_megastructure = this
+#		}
+#	}
+#}
+
+planet_event = {
+	id = ge_event.3002
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		solar_system = {
+			has_owner = yes
+			owner = {
+				is_same_value = prev.from.owner
+			}
+		}
+	}
+	immediate = {
+		#export_trigger_value_to_variable = {
+		#	trigger = count_owned_pop
+		#	parameters = {
+		#		limit = {
+		#			is_pop_category = specialist
+		#		}
+		#	}
+		#	variable = aaa
+		#
+		#}
+
+		solar_system = {
+			spawn_megastructure = {
+				type = roz_mega_wanxiangtianyin
+				planet = root
+				owner = from.owner
+			}
+			star = {
+				save_event_target_as = roz_wx_star_target
+			}
+			#every_neighbor_system = { }
+		}
+		from = {
+			delete_fleet = this
+		}
+		solar_system = {
+			owner = {
+				country_event = {
+					id = ge_event.3003
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ge_event.3003
+	title = "ge_event.3003.title"
+	desc = "ge_event.3003.desc"
+	is_triggered_only = yes
+	picture = GFX_evt_roz_mega_wanxiangtianyin
+	fire_only_once = yes
+	trigger = {
+		#is_ai = no
+	}
+	option = {
+		name = ge_event.3003.aa
+		add_resource = {
+			influence = 500
+		}
+	}
+}
+
+country_event = {
+	id = ge_event.3009
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		is_ai = no
+		mid_game_years_passed > 0
+		any_observed_pre_ftl_within_border = {
+			OR = {
+				has_pre_ftl_age = industrial_age
+				has_pre_ftl_age = atomic_age
+				has_pre_ftl_age = early_space_age
+			}
+		}
+	}
+	immediate = {
+		random_list = {
+			3 = {
+				country_event = {
+					id = ge_event.3010
+					days = 10
+				}
+			}
+			1 = {
+				add_resource = {
+					unity = 100
+				}
+			}
+		}
+
+
+	}
+}
+
+country_event = {
+	id = ge_event.3010
+	title = "ge_event.3010.title"
+	desc = "ge_event.3010.desc"
+	is_triggered_only = yes
+	picture = GFX_evt_ground_combat
+	show_sound = event_ground_battle
+	#fire_only_once = yes
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = ge_event.3010.aa
+		country_event = {
+			id = ge_event.3011
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = ge_event.3011
+	title = "ge_event.3011.title"
+	desc = "ge_event.3011.desc"
+	is_triggered_only = yes
+	picture = GFX_roz_evt_burn
+	show_sound = event_burning_city
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = ge_event.3011.aa
+		add_resource = {
+			unity = 1000
+		}
+	}
+	option = {
+		name = ge_event.3011.bb
+		add_resource = {
+			unity = 1000
+		}
+	}
+	option = {
+		name = ge_event.3011.cc
+		add_resource = {
+			unity = 1000
+		}
+	}
+	option = {
+		name = ge_event.3011.ee
+		add_resource = {
+			unity = 1000
+		}
+	}
+	option = {
+		name = ge_event.3011.ff
+		add_resource = {
+			unity = 1000
+		}
+	}
+}
+
+country_event = {
+	id = ge_event.3020
+	title = "ge_event.3020.title"
+	desc = "ge_event.3020.desc"
+	is_triggered_only = yes
+	picture = GFX_evt_roz_space_1
+	trigger = {
+		NOT = {
+			has_country_flag = roz_tech_ge_section_get
+		}
+	}
+	immediate = {
+		set_country_flag = roz_tech_ge_section_get
+	}
+	option = {
+		name = ge_event.3020.aa
+		trigger = {
+			resource_revenue_compare = {
+				resource = alloys
+				value <= 600000
+			}
+		}
+		add_modifier = {
+			modifier = roz_resource_stoke_add
+		}
+	}
+	option = {
+		name = ge_event.3020.bb
+		add_monthly_resource_mult = {
+			resource = engineering_research
+			value = 1
+		}
+	}
+	option = {
+		name = ge_event.3020.cc
+		add_resource = {
+			sr_void_core = 3000
+		}
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,1129 @@
+namespace = ge_skills
+
+
+country_event = {
+	######清除舰队标识win
+	id = ge_skills.1000
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_country_flag = ge_leader_suigintou_get
+		
+	}
+	immediate = {
+		#set_update_modifiers_batch = begin
+		###
+		every_owned_fleet = {
+			if = {
+				limit = { 
+					has_fleet_flag = ge_skill_bwg_activated_flag
+				}
+				remove_fleet_flag = ge_skill_bwg_activated_flag
+			}
+		}
+		####
+		#if = {#雪华绮晶技能，精神榨取
+		#	limit = {
+		#		check_variable = {
+		#			which = ge_modifier_count_krks
+		#			value >= 1
+		#		}
+		#	}
+		#	fromfrom = {#owned fleet
+		#		while = {
+		#			count = ge_modifier_count_krks
+		#			remove_modifier = ge_basic_ship_accuracy_add
+		#			remove_modifier = ge_basic_ship_tracking_add
+		#		}
+		#	}
+		#	from = {#enemy country
+		#		while = {
+		#			count = root.ge_modifier_count_krks
+		#			if = {
+		#				limit = {
+		#					any_owned_ship = {
+		#						has_modifier = ge_basic_ship_accuracy_add
+		#					}
+		#				}
+		#				remove_modifier = ge_basic_ship_accuracy_add
+		#			}
+		#			if = {
+		#				limit = {
+		#					any_owned_ship = {
+		#						has_modifier = ge_basic_ship_tracking_add
+		#					}
+		#				}
+		#				remove_modifier = ge_basic_ship_tracking_add
+		#			}
+		#		}
+		#	}
+		#	clear_variable = ge_modifier_count_krks
+		#}
+		FromFromFrom = {
+			remove_fleet_flag = roz_time_freeze_active_flag
+			every_owned_ship = {
+				remove_ship_flag = roz_krks_mind_drain_flag
+			}
+
+		}
+		#set_update_modifiers_batch = end
+	}
+}
+
+
+
+# country_event = {
+# 	###清除敌方舰队标识win
+# 	id = ge_skills.1001
+# 	is_triggered_only = yes
+# 	hide_window = yes
+# 	trigger = {
+# 		has_country_flag = ge_leader_suigintou_get
+# 	}
+# 	immediate = {
+# 		fromfrom = {
+# 			if = {
+# 				limit = {
+# 					has_fleet_flag = ge_skill_theworld_activated_flag
+# 				}
+# 				remove_fleet_flag = ge_skill_theworld_activated_flag
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_fleet_flag = ge_skill_nfield_hostile_activated_flag
+# 				}
+# 				remove_fleet_flag = ge_skill_nfield_hostile_activated_flag
+# 			}
+# 		}
+# 	}
+# }
+
+country_event = {
+	######清除舰队标识lose
+	id = ge_skills.2000
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_country_flag = ge_leader_suigintou_get
+		
+	}
+	immediate = {
+		#set_update_modifiers_batch = begin
+		every_owned_fleet = {
+			if = {
+				limit = { 
+					has_fleet_flag = ge_skill_bwg_activated_flag
+				}
+				remove_fleet_flag = ge_skill_bwg_activated_flag
+			}
+		}
+		###
+		#if = {#雪华绮晶技能，精神榨取
+		#	limit = {
+		#		check_variable = {#传参变量，报错无视
+		#			which = ge_modifier_count_krks
+		#			value >= 1
+		#		}
+		#	}
+		#	fromfrom = {#owned fleet
+		#		while = {
+		#			count = ge_modifier_count_krks
+		#			remove_modifier = ge_basic_ship_accuracy_add
+		#			remove_modifier = ge_basic_ship_tracking_add
+		#		}
+		#	}
+		#	from = {#enemy country
+		#		while = {
+		#			count = root.ge_modifier_count_krks
+		#			if = {
+		#				limit = {
+		#					any_owned_ship = {
+		#						has_modifier = ge_basic_ship_accuracy_add
+		#					}
+		#				}
+		#				remove_modifier = ge_basic_ship_accuracy_add
+		#			}
+		#			if = {
+		#				limit = {
+		#					any_owned_ship = {
+		#						has_modifier = ge_basic_ship_tracking_add
+		#					}
+		#				}
+		#				remove_modifier = ge_basic_ship_tracking_add
+		#			}
+		#		}
+		#	}
+		#	clear_variable = ge_modifier_count_krks
+		#}
+		###
+		FromFromFrom = {
+			remove_fleet_flag = roz_time_freeze_active_flag
+			every_owned_ship = {
+				remove_ship_flag = roz_krks_mind_drain_flag
+			}
+		}
+		#set_update_modifiers_batch = end
+	}
+}
+
+# country_event = {
+# 	###清除敌方舰队标识lose
+# 	id = ge_skills.2001
+# 	is_triggered_only = yes
+# 	hide_window = yes
+# 	trigger = {
+# 		has_country_flag = ge_leader_suigintou_get
+# 	}
+# 	immediate = {
+# 		fromfrom = {
+# 			if = {
+# 				limit = {
+# 					has_fleet_flag = ge_skill_theworld_activated_flag
+# 				}
+# 				remove_fleet_flag = ge_skill_theworld_activated_flag
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_fleet_flag = ge_skill_nfield_hostile_activated_flag
+# 				}
+# 				remove_fleet_flag = ge_skill_nfield_hostile_activated_flag
+# 			}
+# 		}
+# 	}
+# }
+
+
+#country_event = {
+#	id = ge_skills.1
+#	is_triggered_only = yes
+#	hide_window = yes
+#	trigger = {
+#		is_ai = no
+#		has_country_flag = ge_leader_suigintou_get
+#	}
+#	immediate = {
+#
+#	}
+#}
+
+
+
+
+
+
+
+
+
+
+fleet_event = {
+	id = ge_skills.25555
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		any_controlled_ship = {
+			has_component = ge_shippart_time_freeze
+		}
+	}
+}
+#时间静止
+country_event = {
+	id = ge_skills.2
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+			fromfrom = {
+				OR = {
+					AND = {
+						exists = leader
+						leader = {
+							has_trait = leader_trait_ge_time_freeze
+						}
+					}
+					any_controlled_ship = {
+						has_component = ge_shippart_time_freeze
+					}
+					#has_fleet_flag = kirakishou_hostile_fleet_flag
+				}
+			}
+	}
+	immediate = {
+		#set_update_modifiers_batch = begin
+		fromfromfrom = {
+			add_modifier = {
+				modifier = ge_modifier_time_freeze
+				days = 30
+			}
+			set_timed_fleet_flag = {
+				flag = roz_time_freeze_active_flag
+				days = 30
+			}
+			#延时添加buff，防止接战被重置修正，有动修就算了
+			fleet_event = {
+				id = ge_skills.22
+				days = 1
+			}
+			fleet_event = {
+				id = ge_skills.23
+				days = 2
+			}
+			fleet_event = {
+				id = ge_skills.24
+				days = 3
+			}
+
+		}
+		FromFrom = {
+			solar_system = {
+				every_fleet_in_system = {
+					limit = {
+						is_owned_by = From
+						not = {
+							has_fleet_flag = roz_time_freeze_active_flag
+						}
+					}
+					add_modifier = {
+						modifier = ge_modifier_time_freeze
+						days = 30
+					}
+					set_timed_fleet_flag = {
+						flag = roz_time_freeze_active_flag
+						days = 30
+					}
+				}
+			}
+		}
+		#set_update_modifiers_batch = end
+
+
+
+		###time freeze notification
+		random_owned_ship = {
+			limit = {
+				is_ship_size = Ge_Ragnarok
+				is_in_combat = yes
+			}
+			solar_system = {
+				save_event_target_as = roz_Ragnarok_time_freeze_system_target
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = roz_Ragnarok_time_freeze_flag
+				}
+			}
+			create_message = {
+				type = roz_time_freeze_activity
+				localization = roz_time_freeze_activity_desc
+				days = @toast_message_days
+				target = event_target:roz_Ragnarok_time_freeze_system_target
+				variable = {
+					type = name
+					localization = SYSTEM
+					scope = event_target:roz_Ragnarok_time_freeze_system_target
+				}
+				variable = {
+					key = "border"
+					value = GFX_border_legendary
+				}
+			}
+		}
+	}
+	after = {
+		set_timed_country_flag = {
+			flag = roz_Ragnarok_time_freeze_flag
+			days = 360
+		}
+
+	}
+}
+
+country_event = {
+	id = ge_skills.21
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		fromfromfrom = {
+			OR = {
+				AND = {
+					exists = leader
+					leader = {
+						has_trait = leader_trait_ge_time_freeze
+					}
+				}
+				any_controlled_ship = {
+					has_component = ge_shippart_time_freeze
+				}
+			}
+		}
+	}
+	immediate = {
+		#set_update_modifiers_batch = begin
+		fromfrom = {
+			add_modifier = {
+				modifier = ge_modifier_time_freeze
+				days = 30
+			}
+			set_timed_fleet_flag = {
+				flag = roz_time_freeze_active_flag
+				days = 30
+			}
+		}
+		FromFromFrom = {
+			solar_system = {
+				every_fleet_in_system = {
+					limit = {
+						is_owned_by = Root
+						not = {
+							has_fleet_flag = roz_time_freeze_active_flag
+						}
+					}
+					add_modifier = {
+						modifier = ge_modifier_time_freeze
+						days = 30
+					}
+					set_timed_fleet_flag = {
+						flag = roz_time_freeze_active_flag
+						days = 30
+					}
+				}
+			}
+		}
+		#set_update_modifiers_batch = end
+	}
+}
+
+fleet_event = {
+	id = ge_skills.22
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		solar_system = {
+			any_fleet_in_system = {
+				any_controlled_ship = {
+					has_component = ge_shippart_time_freeze
+				}
+			}
+		}
+	}
+	immediate = {
+		add_modifier = {
+			modifier = ge_modifier_time_freeze
+			days = 29
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_skills.23
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		solar_system = {
+			any_fleet_in_system = {
+				any_controlled_ship = {
+					has_component = ge_shippart_time_freeze
+				}
+			}
+		}
+	}
+	immediate = {
+		add_modifier = {
+			modifier = ge_modifier_time_freeze
+			days = 28
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_skills.24
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		solar_system = {
+			any_fleet_in_system = {
+				any_controlled_ship = {
+					has_component = ge_shippart_time_freeze
+				}
+			}
+		}
+	}
+	immediate = {
+		add_modifier = {
+			modifier = ge_modifier_time_freeze
+			days = 27
+		}
+	}
+}
+
+###水银灯技能
+country_event = {
+	##黑羽龙
+	id = ge_skills.3
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		fromfrom = {
+			exists = leader
+			leader = {
+				AND = {
+					has_trait = leader_trait_ge_mercury_lamp
+					has_trait = leader_trait_ge_Blackwinged_Dragon
+				}
+			}
+			NOT = {
+				has_fleet_flag = ge_skill_bwg_activated_flag
+			}
+		}
+	}
+	immediate = {
+		fromfrom = {
+			set_fleet_flag = ge_skill_bwg_activated_flag
+			fleet_event = {
+				id = ge_skills.4
+				#days = 1
+			}
+		}
+	}
+}
+
+fleet_event = {
+	#fleet
+	##黑羽龙循环
+	id = ge_skills.4
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_fleet_flag = ge_skill_bwg_activated_flag
+	}
+	immediate = {
+		#set_update_modifiers_batch = begin
+		fromfrom = {
+			
+		}
+		if = {
+			limit = {
+				exists = leader
+				leader = {
+					has_trait = leader_trait_ge_Blackwinged_Dragon
+				}
+			}
+			add_modifier = {
+				modifier = ge_modifier_bwg
+				days = 10
+			}
+		}
+		fleet_event = {
+			id = ge_skills.4
+			days = 30
+		}
+		#set_update_modifiers_batch = end
+	}
+}
+
+country_event = {
+	##水银剑
+	id = ge_skills.5
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		OR = {
+			fromfrom = {
+				exists = leader
+				leader = {
+					AND = {
+						has_trait = leader_trait_ge_mercury_lamp
+						has_trait = leader_trait_ge_azoth
+					}
+				}
+				#NOT = {
+				#has_fleet_flag = ge_skill_azoth_activated_flag
+				#}
+			}
+		}
+	}
+	immediate = {
+		#set_update_modifiers_batch = begin
+		if = {
+			limit = {
+				fromfrom = {
+					leader = {
+						OR = {
+							has_trait = leader_trait_ge_mercury_lamp
+							has_trait = leader_trait_ge_azoth
+						}
+					}
+				}
+			}
+		}
+		fromfrom = {
+			#set_fleet_flag = ge_skill_azoth_activated_flag
+			add_modifier = {
+				modifier = ge_modifier_azoth
+				days = 40
+			}
+			# export_modifier_to_variable = {
+			# 	modifier = ge_modifier_azoth
+			# 	variable = ge_modifier_azoth_var
+			# }
+		}
+		#set_update_modifiers_batch = end
+	}
+}
+
+country_event = {
+	##N之领域
+	id = ge_skills.6
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		fromfrom = {
+			exists = leader
+			leader = {
+				AND = {
+					has_trait = leader_trait_ge_mercury_lamp
+					has_trait = leader_trait_ge_N_field
+				}
+			}
+			# NOT = {
+			# 	has_fleet_flag = ge_skill_nfield_friendly_activated_flag
+			# }
+		}
+		# fromfromfrom = {
+		# 	NOT = {
+		# 		has_fleet_flag = ge_skill_nfield_hostile_activated_flag
+		# 	}
+		# }
+	}
+	immediate = {
+		#set_update_modifiers_batch = begin
+		if = {
+			limit = {
+				fromfrom = {
+					exists = leader
+					leader = {
+						OR = {
+							has_trait = leader_trait_ge_mercury_lamp
+							has_trait = leader_trait_ge_N_field
+						}
+					}
+				}
+			}
+			fromfrom = {
+				#set_fleet_flag = ge_skill_nfield_friendly_activated_flag
+				add_modifier = {
+					modifier = ge_modifier_nfield_friendly
+					days = 130
+				}
+			}
+		}
+		fromfromfrom = {
+			#set_fleet_flag = ge_skill_nfield_hostile_activated_flag
+			add_modifier = {
+				modifier = ge_modifier_nfield_hostile
+				days = 130
+			}
+		}
+		#set_update_modifiers_batch = end
+	}
+}
+
+###雪华绮晶
+
+country_event = {
+	##广域精神榨取
+	id = ge_skills.200
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		fromfrom = {
+			exists = leader
+			leader = {
+				AND = {
+					#has_trait = leader_trait_ge_mercury_lamp
+					has_trait = leader_trait_ge_mind_drain
+				}
+			}
+
+		}
+
+	}
+	immediate = {
+		fromfrom = {
+			leader = {
+				export_trigger_value_to_variable = {
+					trigger = has_skill
+					variable = roz_krks_level_var
+				}
+				change_variable = {
+					which = roz_krks_level_var
+					value = 20
+				}
+			}
+		}
+		fromfromfrom = {  #enemy fleet
+			every_owned_ship = {
+				set_variable = {
+					which = roz_krks_level_var
+					value = root.fromfrom.leader.roz_krks_level_var
+				}
+				set_timed_ship_flag = {
+					flag = roz_krks_mind_drain_flag
+					days = roz_krks_level_var
+				}
+				ship_event = {
+					id = ge_skills.201
+				}
+				clear_variable = roz_krks_level_var
+			}
+			#solar_system = {
+			#	every_ship_in_system = {
+			#		limit = {
+			#			NOT = { has_ship_flag = roz_krks_mind_drain_flag }
+			#			NOT = { owner = { has_country_flag = ge_leader_suigintou_get } }
+			#		}
+			#		set_variable = {
+			#			which = roz_krks_level_var
+			#			value = root.fromfrom.leader.roz_krks_level_var
+			#		}
+			#		set_timed_ship_flag = {
+			#			flag = roz_krks_mind_drain_flag
+			#			days = roz_krks_level_var
+			#		}
+			#		ship_event = {
+			#			id = ge_skills.201
+			#		}
+			#		clear_variable = roz_krks_level_var
+			#	}
+			#}
+		}
+	}
+	after = {
+		fromfrom = {
+			leader = {
+				clear_variable = roz_krks_level_var
+			}
+		}
+		fromfromfrom = {
+			clear_variable = roz_krks_level_var
+		}
+	}
+}
+
+ship_event = {
+	##动态修正循环
+	id = ge_skills.201
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_ship_flag = roz_krks_mind_drain_flag
+	}
+	immediate = {
+		solar_system = { #
+			every_ship_in_system = {
+				limit = {
+					NOT = { has_ship_flag = roz_krks_mind_drain_flag }
+					NOT = { owner = { has_country_flag = ge_leader_suigintou_get } }
+				}
+				ge_ship_modifier_intercepting = {
+					modifier = ship_tracking_add
+					change = 1
+					multiply = 10
+					#PARA1 = -100
+					DAYS = 2
+				}
+				ge_ship_modifier_intercepting = {
+					modifier = ship_accuracy_add
+					change = 1
+					multiply = 10
+					#PARA1 = -100
+					DAYS = 2
+				}
+			}
+		}
+			reduce_hp_percent = 1
+			ge_ship_modifier_intercepting = {
+				modifier = ship_tracking_add
+				change = 1
+				multiply = 10
+				#PARA1 = -100
+				DAYS = 2
+			}
+			ge_ship_modifier_intercepting = {
+				modifier = ship_accuracy_add
+				change = 1
+				multiply = 10
+				#PARA1 = -100
+				DAYS = 2
+			}
+			ship_event = {
+				id = ge_skills.201
+				days = 1
+			}
+
+	}
+	after = {
+
+	}
+}
+
+
+country_event = {
+	id = ge_skills.210
+	is_triggered_only = yes
+	title = ge_skills.210.t
+	desc = ge_skills.210.d
+	picture = GFX
+	trigger = {
+		has_country_flag = roz_kirakishou_get
+	}
+}
+
+
+
+
+
+
+####################
+########科学家
+####################
+###水银灯-scientist
+country_event = {
+	id = ge_skills.10
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_flag = roz_sgt_scientist_main_skill_timed_flag
+		}
+		root = {
+			#exists = leader
+			#research_leader = {
+			#	area = society
+			#	OR = {
+			#		has_trait = leader_trait_ge_mercury_lamp_scientist
+			#		has_leader_flag = ge_suigintou_flag
+			#	}
+			#}
+			any_owned_leader = {
+				#is_councilor_type = councilor_research
+				is_councilor = yes
+				leader_class = scientist
+				OR = {
+					has_trait = leader_trait_ge_mercury_lamp_scientist
+					has_leader_flag = ge_suigintou_flag
+				}
+			}
+			
+		}		
+	}
+	immediate = {
+		# random_list = {
+		# 	2 = {
+		# 		add_random_research_option = {
+		# 			add_progress = 0.15
+		# 			area = society
+		# 			ignore_prereqs = no
+		# 			tier = 5
+		# 			fail_effects = {
+		# 				add_monthly_resource_mult = {
+		# 					resource = society_research
+		# 					value = @tier5researchreward
+		# 					min = @tier5researchmin
+		# 					max = @tier5researchmax
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# 	11 = {
+		# 		add_random_research_option = {
+		# 			add_progress = 0.15
+		# 			area = society
+		# 			ignore_prereqs = no
+		# 			tier = 4
+		# 			fail_effects = {
+		# 				add_monthly_resource_mult = {
+		# 					resource = society_research
+		# 					value = @tier5researchreward
+		# 					min = @tier5researchmin
+		# 					max = @tier5researchmax
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# 	21 = {
+		# 		add_random_research_option = {
+		# 			add_progress = 0.15
+		# 			area = society
+		# 			ignore_prereqs = no
+		# 			tier = 3
+		# 			fail_effects = {
+		# 				add_monthly_resource_mult = {
+		# 					resource = society_research
+		# 					value = @tier5researchreward
+		# 					min = @tier5researchmin
+		# 					max = @tier5researchmax
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# 	31 = {
+		# 		add_random_research_option = {
+		# 			add_progress = 0.15
+		# 			area = society
+		# 			ignore_prereqs = no
+		# 			tier = 2
+		# 			fail_effects = {
+		# 				add_monthly_resource_mult = {
+		# 					resource = society_research
+		# 					value = @tier5researchreward
+		# 					min = @tier5researchmin
+		# 					max = @tier5researchmax
+							
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# 	35 = {
+		# 		add_random_research_option = {
+		# 			add_progress = 0.0
+		# 			area = society
+		# 			ignore_prereqs = no
+		# 		}
+		# 	}
+		# }
+		country_event = {
+			id = ge_skills.11
+			days = 1830
+		}
+		set_timed_country_flag = {
+			flag = roz_sgt_scientist_main_skill_timed_flag
+			days = 1830
+		}
+		#hidden_effect = {
+			#ge_add_aft_scientist_on_research = yes
+			#科学家领导科研时加好感值
+		#}
+		
+	}
+}
+
+country_event = {
+	id = ge_skills.11
+	title = "ge_skills.11.title"
+	desc = "ge_skills.11.desc"
+	picture = GFX_ge_sgt_wake
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		#research_leader = {
+		#	area = society
+		#	OR = {
+		#		has_trait = leader_trait_ge_mercury_lamp_scientist
+		#		has_leader_flag = ge_suigintou_flag
+		#	}
+		#}
+		any_owned_leader = {
+			is_councilor = yes
+			OR = {
+				has_trait = leader_trait_ge_mercury_lamp_scientist
+				has_leader_flag = ge_suigintou_flag
+			}
+		}
+	}
+	option = {
+		name = ge_skills.11.a
+		#set_update_modifiers_batch = begin
+		hidden_effect = {
+			if = {
+				limit = { 
+					check_variable = {
+						which = ge_sgt_survey_count
+						value <= 50
+					}
+				}
+				while = {
+					count = 1
+					Mercury_lamp_helps_research_current_technology = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = ge_sgt_survey_count
+						value <= 100
+					}
+				}
+				
+				while = {
+					count = 2
+					Mercury_lamp_helps_research_current_technology = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = ge_sgt_survey_count
+						value > 100
+					}
+				}
+				
+				while = {
+					count = 3 
+					Mercury_lamp_helps_research_current_technology = yes
+				}
+			}
+		}	
+		#set_update_modifiers_batch = end
+	}
+}
+
+ship_event = { ##N之领域-scientist	
+	id = ge_skills.12
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = leader
+		leader = {
+			has_leader_flag = ge_suigintou_flag
+			has_trait = leader_trait_ge_N_field_scientist
+		}
+	}
+	immediate = {
+		#暂定为探索给unity，现在unity真的缺啊
+		#set_update_modifiers_batch = begin
+		owner = {
+			#set_country_flag = ge_sgt_survey_test_flag
+			change_variable = {
+				which = ge_sgt_survey_count
+				value = 1
+			}
+			add_resource = {
+				unity = 3
+				mult = ge_sgt_survey_count
+			}
+			add_resource = {
+				minor_artifacts = 0.2
+				mult = ge_sgt_survey_count
+			}
+		}
+		#set_update_modifiers_batch = end
+	}
+}
+
+
+country_event = { #创生之湖
+	id = ge_skills.15
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		fromfrom = {
+			#leader = {
+			#	has_leader_flag = ge_suigintou_flag
+			#}
+			has_component = ge_shippart_genesis_lake
+			NOT = { is_ship_size = Ge_Vampirilis_Letum }
+		}
+		has_existing_ship_design = Ge_Vampirilis_Letum
+		NOT = {
+			has_country_flag = roz_sgt_flagship_guardian_spawn_flag
+		}
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = roz_sgt_flagship_guardian_spawn_flag
+			years = 25
+		}
+		fromfrom = {
+			while = {
+				count = 4
+				random_list = {
+					1 = {
+						create_ship = {
+							name = NAME_roz_flagship_gardian_DK
+							design = random_existing_design
+							random_existing_design = Ge_Vampirilis_Letum
+							graphical_culture = root
+							prefix = yes
+						}
+					}
+					1 = {
+						create_ship = {
+							name = NAME_roz_flagship_gardian_WS
+							design = random_existing_design
+							random_existing_design = Ge_Vampirilis_Letum
+							graphical_culture = root
+							prefix = yes
+						}
+					}
+					1 = {
+						create_ship = {
+							name = NAME_roz_flagship_gardian_SW
+							design = random_existing_design
+							random_existing_design = Ge_Vampirilis_Letum
+							graphical_culture = root
+							prefix = yes
+						}
+					}
+					1 = {
+						create_ship = {
+							name = NAME_roz_flagship_gardian_IF
+							design = random_existing_design
+							random_existing_design = Ge_Vampirilis_Letum
+							graphical_culture = root
+							prefix = yes
+						}
+					}
+					1 = {
+						create_ship = {
+							name = NAME_roz_flagship_gardian_BA
+							design = random_existing_design
+							random_existing_design = Ge_Vampirilis_Letum
+							graphical_culture = root
+							prefix = yes
+						}
+					}
+					1 = {
+						create_ship = {
+							name = NAME_roz_flagship_gardian_IH
+							design = random_existing_design
+							random_existing_design = Ge_Vampirilis_Letum
+							graphical_culture = root
+							prefix = yes
+						}
+					}
+					1 = {
+						create_ship = {
+							name = NAME_roz_flagship_gardian_U
+							design = random_existing_design
+							random_existing_design = Ge_Vampirilis_Letum
+							graphical_culture = root
+							prefix = yes
+						}
+					}
+					1 = {
+						create_ship = {
+							name = NAME_roz_flagship_gardian_S
+							design = random_existing_design
+							random_existing_design = Ge_Vampirilis_Letum
+							graphical_culture = root
+							prefix = yes
+						}
+					}
+					1 = {
+						create_ship = {
+							name = NAME_roz_flagship_gardian_RG
+							design = random_existing_design
+							random_existing_design = Ge_Vampirilis_Letum
+							graphical_culture = root
+							prefix = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

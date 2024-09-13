@@ -1,0 +1,328 @@
+############### BLACK DRAGON ###############
+
+entity = {
+	name =  "ge_black_dragon_entity"
+	pdxmesh = "locator_mesh"
+
+	locator = { name = "part1" 	position = { 0 0 0 } }
+	locator = { name = "wing_1_3" 	position = { 0 0 0 } }
+	locator = { name = "wing_2_3" 	position = { 0 0 0 } }
+	locator = { name = "wing_3_4" 	position = { 0 0 0 } }
+	locator = { name = "wing_4_3" 	position = { 0 0 0 } }
+
+
+	cull_radius = 10.0
+	game_data = {
+  		raytrace_projectiles = no
+  		dissolve_on_death = 8.0
+		ship_color = hsv { 0.6 1.0 0.75 1.0 }
+ 	}
+}
+entity = {
+	name = "ge_black_dragon_section_entity"
+	pdxmesh = "ge_black_dragon_mesh"
+	scale = 1.0
+
+	attach = { part1 = "ge_black_dragon_floater_1_entity" }               
+    attach = { part1 = "ge_black_dragon_floater_2_entity" }  
+
+	locator = { name = "part1" 	position = { 0 0 0 } }
+	locator = { name = "wing_1_3" 	position = { 0 0 0 } }
+	locator = { name = "wing_2_3" 	position = { 0 0 0 } }
+	locator = { name = "wing_3_4" 	position = { 0 0 0 } }
+	locator = { name = "wing_4_3" 	position = { 0 0 0 } }
+
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_blend_time = 1.5
+		start_event = { trigger_once = yes sound = { soundeffect = "aqu_dragon_idle" } }
+
+
+	}
+	state = { name = "moving" animation = "moving" animation_blend_time = 1
+		event = { sound = { soundeffect = "aqu_dragon_move" stop_on_state_change = yes } }
+
+	}
+	state = { name = "death" animation = "death" looping = no
+		event = { trigger_once = yes sound = { soundeffect = "aqu_dragon_death" } }
+	}
+
+	#state = { name = "combat_idle" animation = "idle" }
+	state = { name = "combat_moving" animation = "moving" animation_blend_time =  0
+		event = { sound = { soundeffect = "aqu_dragon_move" stop_on_state_change = yes } }
+	}
+
+	state = { name = "attack" animation = "attack" looping = no animation_blend_time = 1 next_state = "idle"
+	#	event = { time = 0.0 particle = "ship_explosion_particle" node = "l_wing_4_4" }
+	#	event = { time = 0.3 particle = "ship_explosion_particle" node = "l_wing_4_1" }
+	#	event = { time = 0.6 particle = "ship_explosion_particle" node = "l_wing_4_2" }
+	#	event = { time = 0.9 particle = "ship_explosion_particle" node = "l_wing_4_3" }
+	#	event = { time = 1.2 particle = "ship_explosion_particle" node = "l_wing_4_4" }
+		event = { trigger_once = yes sound = { soundeffect = "aqu_dragon_attack_mouth" } }
+		#event = { trigger_once = yes sound = { soundeffect = "distance_dragon_attack_mouth" } }
+
+	}
+
+	game_data = { size = 50 }
+}
+
+entity = {
+	name = "ge_black_dragon_floater_1_entity" 
+	## Body
+	pdxmesh = "ge_black_dragon_floater_1_mesh"
+
+		game_data = {
+		bloom_factor			= 1
+		uv_animation_speed 		= 0.035
+		uv_animation_direction 	= { -0.1 0.55 }
+		}
+		
+	scale = 1
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_blend_time = 1.5
+	}
+	state = { name = "moving" animation = "moving" animation_blend_time = 1
+	}
+	state = { name = "death" animation = "death" looping = no
+	}
+
+	#state = { name = "combat_idle" animation = "idle" }
+	state = { name = "combat_moving" animation = "moving" animation_blend_time =  0
+	}
+
+	state = { name = "attack" animation = "attack" looping = no animation_blend_time = 1 next_state = "idle"
+	}
+}
+
+entity = {
+	name = "ge_black_dragon_floater_2_entity"
+	## Wings
+	pdxmesh = "ge_black_dragon_floater_2_mesh"
+
+		game_data = {
+		bloom_factor			= 0.3
+		uv_animation_speed 		= 0.03
+		uv_animation_direction 	= { -0.1 0.55 }
+		}
+	scale = 1
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_blend_time = 1.5
+	}
+	state = { name = "moving" animation = "moving" animation_blend_time = 1
+	}
+	state = { name = "death" animation = "death" looping = no
+	}
+
+	#state = { name = "combat_idle" animation = "idle" }
+	state = { name = "combat_moving" animation = "moving" animation_blend_time =  0
+	}
+
+	state = { name = "attack" animation = "attack" looping = no animation_blend_time = 1 next_state = "idle"
+	}
+}
+
+entity = {
+	name = "kirakishou_shroud_entity"
+	pdxmesh = "shroud_creature_01_mesh"
+	scale = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" 
+		event = { time = 0 node = "effect_1" particle = "shroud_creature_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "root" particle = "shroud_creature_cloud_effect" keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = "shroud_creature_idle_low" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "shroud_creature_idle_high" } }
+		event = { time = 1.2 trigger_once = yes sound = { soundeffect = "shroud_creature_thunder" } }
+	}
+	state = { name = "death"	animation = "death" animation_blend_time = 0.0 animation_speed = 1 looping = no 
+		event = { sound = { soundeffect = "shroud_creature_death" } }
+	}
+	
+	game_data = { 
+		bloom_factor = 1.0 
+		uv_animation_speed 		= 100
+		uv_animation_direction 	= { 0.0 -0.02 }
+	}
+	
+	attach = { root = "shroud_creature_clouds_01_entity" }
+}
+
+###############
+# WEAPON
+###############
+####### Aquatic Dragon weapons
+
+
+
+# entity = {
+# 	name = "aquatic_dragon_wing_projectile_entity"
+
+# 	cull_radius = 1.0
+	
+# 	default_state = "idle"
+# 	state = { name = "idle" state_time = 5
+# 		event = { time = 0 particle = "aquatic_dragon_wing_projectile_particle" keep_particle = yes trigger_once = yes}
+
+# 	}
+# 	state = { name = "stop"
+# 		looping = no
+# 		#state_time = 2.0
+# 	}
+	
+		
+# 	scale = 1.0
+	
+# }
+
+# entity = {
+# 	name = "aquatic_dragon_wing_hit_entity"
+# 	cull_radius = 1.0
+# 	default_state = "idle"
+# 	state = { name = "idle"
+# 		start_event = { particle = "aquatic_dragon_wing_hit_effect" }
+# 	}
+# 	state = { name = "stop" state_time = 0.5 looping = no }
+# }
+
+# entity = {
+# 	name = "aquatic_dragon_wing_shield_hit_entity"
+# 	cull_radius = 1.0
+# 	default_state = "idle"
+# 	state = { name = "idle"
+# 		event = { time = 0.0 particle = "aquatic_dragon_wing_hit_effect" }
+# 		start_event = { particle = projectile_large_shield_hit_effect sound = { soundeffect = shield_hit } }
+# 		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } }
+# 	}
+# 	state = { name = "stop" state_time = 0.5 looping = no }
+# }
+
+# entity = {
+# 	name = "aquatic_dragon_wing_muzzle_entity"
+# 	pdxmesh = "locator_mesh"
+
+# 	default_state = "idle"
+# 	state = { name = "idle" state_time = 3 looping = no
+# 		event = { time = 0 particle = "aquatic_dragon_wing_muzzle_effect" keep_particle = yes sound = { soundeffect = dragon_wing_attack } }
+# 		event = { trigger_once = yes sound = { soundeffect = "distance_dragon_wing_attack" } }
+# 	}
+# }
+
+
+# entity = {
+# 	name = "aquatic_dragon_weapon_hit_entity"
+# 	cull_radius = 1.0
+
+# 	default_state = "idle"
+# 	state = { name = "idle" state_time = 2 looping = no
+# 		event = {  time = 0.8 particle = "aquatic_dragon_weapon_hit_effect" keep_particle = yes #sound = { soundeffect = "titan_laser_hit" }
+# 		}
+# 		#start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+# 	}
+# 	state = { name = "stop" state_time = 0.5 looping = no }
+# }
+
+# entity = {
+# 	name = "aquatic_dragon_weapon_shield_hit_entity"
+# 	cull_radius = 1.0
+
+# 	default_state = "idle"
+# 	state = { name = "idle" state_time = 5 looping = no
+# 		event = { time = 0.8 particle = "aquatic_dragon_weapon_hit_effect" sound = { soundeffect = "shield_hit" } }
+# 		event = { time = 0.8 particle = "titan_laser_shield_hit_effect" }
+# 		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } }
+# 	}
+# 	state = { name = "stop" state_time = 0.5 looping = no }
+# }
+
+# entity = {
+# 	name = "aquatic_dragon_weapon_windup_entity"
+
+# 	default_state = "attack"
+# 	get_state_from_parent = no
+# 	state = {
+# 		name = "attack" looping = yes state_time = 0.8
+# 		event = { trigger_once = yes sound = { soundeffect = "dragon_breath_windup" } }
+
+# 		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "aquatic_dragon_weapon_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+# 	}
+# }
+
+# entity = {
+# 	name = "aquatic_dragon_weapon_muzzle_entity"
+# 	pdxmesh = "locator_mesh"
+
+# 	default_state = "idle"
+# 	state = { name = "idle" state_time = 7.0 looping = no
+# 		event = { time = 1 particle = "aquatic_dragon_weapon_muzzle_effect" keep_particle = yes }
+
+# 		event = { trigger_once = yes sound = { soundeffect = "aqu_dragon_attack_mouth_deluge" } }
+# 		#event = { trigger_once = yes sound = { soundeffect = "distance_dragon_breath_fire" } }
+
+# 	}
+# }
+
+###############
+# ANIMATIONS
+###############
+
+animation = {
+	name = "aquatic_dragon_01_idle_animation"
+	file = "aquatic_dragon_01_idle.anim"
+}
+
+animation = {
+	name = "aquatic_dragon_01_moving_animation"
+	file = "aquatic_dragon_01_moving.anim"
+}
+
+animation = {
+	name = "aquatic_dragon_01_death_animation"
+	file = "aquatic_dragon_01_death.anim"
+}
+
+animation = {
+	name = "aquatic_dragon_01_attack_animation"
+	file = "aquatic_dragon_01_attack.anim"
+}
+
+animation = {
+	name = "aquatic_dragon_floater_01_idle_animation"
+	file = "aquatic_dragon_floater_01_idle.anim"
+}
+
+animation = {
+	name = "aquatic_dragon_floater_01_moving_animation"
+	file = "aquatic_dragon_floater_01_moving.anim"
+}
+
+animation = {
+	name = "aquatic_dragon_floater_01_death_animation"
+	file = "aquatic_dragon_floater_01_death.anim"
+}
+
+animation = {
+	name = "aquatic_dragon_floater_01_attack_animation"
+	file = "aquatic_dragon_floater_01_attack.anim"
+}
+
+animation = {
+	name = "aquatic_dragon_floater_03_idle_animation"
+	file = "aquatic_dragon_floater_03_idle.anim"
+}
+
+animation = {
+	name = "aquatic_dragon_floater_03_moving_animation"
+	file = "aquatic_dragon_floater_03_moving.anim"
+}
+
+animation = {
+	name = "aquatic_dragon_floater_03_death_animation"
+	file = "aquatic_dragon_floater_03_death.anim"
+}
+
+animation = {
+	name = "aquatic_dragon_floater_03_attack_animation"
+	file = "aquatic_dragon_floater_03_attack.anim"
+}

@@ -1,0 +1,348 @@
+﻿l_simp_chinese:
+###############################
+
+######synced
+##########
+NAME_nfield:0 "N之领域"
+ NAME_nfield_suigintou: "N之领域-水银灯"
+ NAME_nfield_krks: "N之领域-雪华绮晶"
+ NAME_nfield_junn: "人偶师-樱田纯"
+ NAME_nfield_hinaichigo:"N之领域-雏莓"
+ NAME_nfield_shinku:"N之领域-真红"
+NAME_ge_br:0 "黑蔷薇"
+NAME_ge_vfs:0 "Y*%§R<数据错误>§!恒"
+NAME_ap_ge_0:0 "N之领域的财富"
+
+ NAME_Suigintou:0 "すいぎんとう"
+ NAME_Kirakishou:0 "きらきしょう"
+ NAME_hinaichigo:"ひないちご"
+ NAME_shinku:"しんく"
+ NAME_shuiyindeng:0 "水银灯"
+ NAME_xuehuaqijing:0 "雪华绮晶"
+ NAME_chumei:"雏莓"
+ NAME_zhenhong:"真红"
+ NAME_Mercury_Lamp:0 "Mercury Lamp"
+
+NAME_ge_stg_black_dragon: "化身之躯"
+NAME_ge_stg_black_dragon_ship: "黑羽龙"
+NAME_ge_bwd: "黑羽龙"
+NAME_kirakishou_hostile_country: "深渊凝视"
+ NAME_madgod_force_country: "深渊疯神"
+ NAME_ge_kirakishou_hostile_fleet: "苍白蔷薇之海"
+NAME_ge_kirakishou_hostile_ship: "白色恶魔"
+
+ NAME_ge_kirakishou_hostile_ship_dh: "化身：维度恶魔"
+ NAME_ge_kirakishou_hostile_ship_et: "化身？#￥%祖母？"
+ NAME_ge_kirakishou_hostile_ship_everything: "不可名状"
+ NAME_roz_krks_zakko: "极端情绪综合体"
+ NAME_Corrupted_Avatar_ROZ:"恶堕地狱"
+ NAME_EDDY_ROZ:"恶堕地狱"
+
+NAME_kirakishou_neutral: "星灵体世界"
+NAME_ge_krksu: ""
+NAME_ge_kirakishou_neutral_ship: ""
+NAME_ge_sgt_ship: "黑蔷薇"
+
+ NAME_roz_flagship_gardian_DK: "§g黑暗天使§!" #Drak Angels
+ NAME_roz_flagship_gardian_WS: "§W白色伤疤§!" #White Scars
+ NAME_roz_flagship_gardian_SW: "§P太空野狼§!" #Space Wolves
+ NAME_roz_flagship_gardian_IF: "§Y帝国之拳§!" #Imperial Fists
+ NAME_roz_flagship_gardian_BA: "§R圣血天使§!" #Blood Angels × #Blue Archive √
+ NAME_roz_flagship_gardian_IH: "§L钢铁之手§!" #Iron Hands
+ NAME_roz_flagship_gardian_U: "§B极限战士§!" #Ultramarines
+ NAME_roz_flagship_gardian_S: "§G火蜥蜴§!" #Salamanders
+ NAME_roz_flagship_gardian_RG: "§g暗鸦守卫§!" #Raven Guard
+
+ roz_dark_box_star: "破败神国"
+roz_outland_star_system: "§R“星空之上”§!"
+NAME_roz_outland_system: "§R“星空之上”§!"
+NAME_roz_outland_planet: "§M门之钥§!"
+NAME_roz_outland_planet_moon: "§R穷极之门§!"
+roz_gateway: "银钥"
+roz_gateway_name_header: "银钥"
+roz_gateway_name_DESC: "通往外域"
+BYPASS_ROZ_GATEWAY: "通往外域"
+
+NAME_sgt: "sgt"
+
+ suigintou_backstory: "\n§g来自黑洞之门的神秘存在§!\n§rN之领域的永恒掌控者§!\n§R不可言说的伟岸身躯§!\n§M蔷薇少女第一人偶——水银灯§!"
+ suigintou_sci_catch_phrase: "我们穷极一切能到达的宇宙尽头只有这边银河系的边缘了吧…"
+ suigintou_adm_catch_phrase: "愿你玩得愉快哦"
+
+ kirakishou_backstory: "§rN之领域的心灵梦魇§!\n§W纯净无瑕的苍白蔷薇§!\n§R横亘于历史中的灰暗与诡秘§!\n§P蔷薇少女第七人偶——雪华绮晶§!"
+ kirakishou_gov_catch_phrase: ""
+ kirakishou_gen_catch_phrase: ""
+
+
+ ge_black_dragon: "黑羽龙"
+ ge_kirakishou_avatar: "化身"
+
+ NAME_ROZ_X:"[Root.GetName]"
+
+ NAME_roz_lgate:0 "仙境"
+ NAME_roz_lgate_starbase:0 "银河极点"
+
+##   :0 ""
+##   _desc:0 ""
+
+###planet/star
+
+pc_roz_YS_planet: "§R神国核心§!"
+pc_roz_YS_planet_desc: "令人不安的外表下却藏着一块宝藏之地，这究竟是大自然的鬼斧神工还是某个未知存在的作品？"
+
+ pc_roz_YS_planet_cant_colony: "§R¿虚境星球?§!"
+ pc_roz_YS_planet_cant_colony_desc: "令人不安的外表下却藏着一块宝藏之地，这究竟是大自然的鬼斧神工还是某个未知存在的作品？"
+
+col_roz_YS_planet: "§R外神所在§!"
+col_roz_YS_planet_desc: "和虚境星球相比，这里浓厚的紫色大气层并没有隔绝作用，舰船可以自由进出。而大气之下是一片勃勃生机万物竞发的景象，地面的生态环境类似于盖亚星球，不过令人困惑的是这里存在着数量众多、各式各样、功能正常的文明设施。在这里呆久了耳边时不时会传来神秘的低语，这对居民们的精神是种严峻的考验。"
+ mod_pc_roz_YS_planet_habitability: "破败神国适居度"
+ pc_roz_YS_planet_adj: ""
+ trait_pc_roz_YS_planet_preference: "破败神国适居特质"
+ trait_pc_roz_YS_planet_preference_desc: ""
+
+
+
+
+
+
+
+
+ ################
+ ##relics
+
+ r_roz_stasis_field: "§M虚空盾发生器§!"
+ r_roz_stasis_field_desc: "这是那段失落历史留下来的丰碑. 由于这玩意儿已经爆炸过一次了，因此工程部只能修复发挥静滞场作用的那部分元件，对于产生迷彩隐形的那部分暂时是无能为力了。"
+ r_roz_doll_Annabelle:"§P安娜贝尔§!"
+ r_roz_doll_Annabelle_desc:"模因：§R不详§!"
+
+ #Beacon of Space-Time
+ r_roz_Chronos_Label:"§C时空道标§!"
+ r_roz_Chronos_Label_desc:"螺旋状的雾团，拿在手中具有相当的重量。与雪华绮晶建立了灵魂绑定。即使是被封存的状态下也会不断扭曲折叠周围时空，激活状态下可轻松造成IV级时空畸变。\n§C--祂曾是无尽星空的引路者，祂曾被深渊的污染侵蚀，这片残破但纯粹的权柄碎片或许是祂最后的净土§!……\n§R需注意：激活§C时空道标§!会轻微破坏当前时空的连续性，我们将在一段时间内无法获取准确时间！§!"
+ r_roz_Chronos_Label_active_effect_tt:"\n在选择的星系中制造一场§C时空风暴§!。伴随风暴产生的时空畸变将§R杀死§!当前风暴范围内的星系殖民地上的4个人口£pop£§!§!，对星球的生产生活造成§R灾难性的破坏§!，并将星系内随机一颗无价值星球破坏为§H破碎星球§!。\n "
+ r_roz_Chronos_Label_effect:"激活后的一年内，§C时空道标§!将允许所有舰船跳跃，绕过超空间航道。\n激活时,若处于战时，将向所有正在战斗的敌方舰队释放时空乱流，迫使其进行§R紧急超光速跃迁§!。"
+
+ ##tps
+ r_roz_teaparty_set:"§Y茶会器具§!"
+ r_roz_teaparty_set_desc:"水银灯根据遥远庭院时光的记忆复刻出来的精致炼金工艺品，虽然她本人一直不愿交代这些器具的用途，然而在每次人偶茶会中这些东西都会被盛满点心与红茶端上餐桌。"
+ r_roz_teaparty_set_ct:"\n§B您可以从这里更改茶会的举办时间§! \n \n"
+ r_roz_teaparty_set_possible:"§R您已经进入设置界面!§!"
+
+ r_roz_orgel:"§M水银灯的八音盒§!"
+ r_roz_orgel_desc:"这个小巧的八音盒曾经是水银灯最重要的宝物——这是父亲罗真第一次送给她的礼物。这是一个神奇的炼金物品，哪怕它未奏响乐章，周围的听众也能被安抚情绪。"
+
+ #shinku
+ roz_shuukan_shoujonotsukurikata_vol1:"周刊——少女的制作方法 Vol.1"
+ roz_shuukan_shoujonotsukurikata_vol1_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中附带了些许制作工具，以及一枚黄铜色的发条。\n\"所谓的「['concept_roz_rozen_maiden']」是由著名人偶师['concept_roz_rozen']所创造的七个人偶，出现在市场上的记录极端稀少，因此现在甚至有说法怀疑其真实性。而根据那稀少之极的记录来看该系列的人偶各自的制作年代也相当分散，甚至有相隔数百年之久，这是独自一人的技艺吗？罗真又到底是什么人呢？所谓的蔷薇少女就是包含着如此多姿多彩谜团的幻之古董人偶了。而如今将通过你的手复苏过来！\""
+ roz_shuukan_shoujonotsukurikata_vol2:"周刊——少女的制作方法 Vol.2"
+ roz_shuukan_shoujonotsukurikata_vol2_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中不仅附带了些许制作工具，还有一个华丽的['concept_roz_kaban']，其上镶着金色的蔷薇花，这个箱子与水银灯的那个在外观上如出一辙，其中安放着一对人偶的腿部零件，零件上的铭文写着：§RRozen§!。\n\"第二期附录是可以收纳完成后的人偶的箱子以及——§R大腿部件§!，蔷薇少女的共同点就是在大腿部内侧处刻有签名，这个笔迹被认为出自同一人之手。用每期提供的零件制作出来的、只属于您的蔷薇少女。§R本刊为您奉上的是第五人偶——真红§!。\""
+
+ roz_shuukan_shoujonotsukurikata_vol3:"周刊——少女的制作方法 Vol.3"
+ roz_shuukan_shoujonotsukurikata_vol3_desc:"来历不明的刊物，特辑上详细描述了如何为人偶的眼球贴上眼珠，其中还附带了些许制作工具以及新的人偶部件——小腿及右脚"
+
+ roz_shuukan_shoujonotsukurikata_vol4:"周刊——少女的制作方法 Vol.4"
+ roz_shuukan_shoujonotsukurikata_vol4_desc:"来历不明的刊物，本期特辑介绍了各种人偶制作工具的详细功能和用法，其中附带了些许制作工具以及新的人偶部件——上臂"
+ roz_shuukan_shoujonotsukurikata_vol5:"周刊——少女的制作方法 Vol.5"
+ roz_shuukan_shoujonotsukurikata_vol5_desc:"来历不明的刊物，本期特辑讲解了如何使用化妆品来打扮人偶，其中附带了些许制作工具以及新的人偶部件——下臂"
+ roz_shuukan_shoujonotsukurikata_vol6:"周刊——少女的制作方法 Vol.6"
+ roz_shuukan_shoujonotsukurikata_vol6_desc:"来历不明的刊物，本期特辑为纺织工艺教学，重点介绍了蕾丝织物的制作与应用，其中附带了些许制作工具以及新的人偶部件——手部"
+ roz_shuukan_shoujonotsukurikata_vol7:"周刊——少女的制作方法 Vol.7"
+ roz_shuukan_shoujonotsukurikata_vol7_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中附带了些许制作工具以及新的人偶部件——眼珠"
+ roz_shuukan_shoujonotsukurikata_vol8:"周刊——少女的制作方法 Vol.8"
+ roz_shuukan_shoujonotsukurikata_vol8_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中附带了些许制作工具以及新的人偶部件——躯干"
+ roz_shuukan_shoujonotsukurikata_vol9:"周刊——少女的制作方法 Vol.9"
+ roz_shuukan_shoujonotsukurikata_vol9_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中附带了些许制作工具以及人偶的零件"
+
+ r_roz_extrinsic_xinlin_crystal:"§B希灵水晶§!"
+ r_roz_extrinsic_xinlin_crystal_desc:"一个棺材状的晶体，至于为什么要这么形容，这是所有科研人员在审视其外貌后的一致看法……\n物理结构强度极高，我们尚未找到合适的损毁方法来让它破层皮……\n§Y晶体内存储数据仍在解析中§!……"
+
+
+ ############################
+ ####cosmic storm
+ chronos_storm:"§C时空风暴§!"
+ chronos_storm_lore_description:"§L一场极强的$chronos_storm$将威胁该星系，对行星造成破坏。为了生命安全务必寻找庇护！§!"
+ chronos_storm_desc:"我们唯一能推测的是：这种宇宙风暴似乎不是自然形成的。究竟是何种事物引发了这世界末日般的恐怖威胁？在这恐怖之物里面没有人能够侥幸获益；光是幸存下去就已经谢天谢地了。"
+ chronos_storm_aftermath_modifier_severity_desc: "$chronos_storm$极具破坏力的性质导致也难以预测究竟会产生何种类型的破坏。"
+ chronos_storm_aftermath_modifier_tooltip: "$t$$chronos_storm_aftermath_modifier_severity_desc$"
+ chronos_storm_color_tooltip:"$chronos_storm$"
+
+ chronos_storm_fleet_tt:"—§R禁用§!舰船和空间站的$MOD_SHIP_HULL_REGEN_ADD_PERC$，$MOD_SHIP_ARMOR_REGEN_ADD_PERC$和$MOD_SHIP_SHIELD_REGEN_ADD_PERC$。\n—每月对舰船和空间站造成高于$@storm_hp_perc_limit|0Y%$ $HITPOINTS$的§R$@storm_monthly_dmg_high|0$§!伤害。"
+ chronos_modifier:"$storm_base_modifier$" #This is a hidden modifier
+ MESSAGE_CHRONOS_STORM_COSMIC_STORM_SPOTTED_TITLE: "侦测到$chronos_storm$！"
+ MESSAGE_CHRONOS_STORM_COSMIC_STORM_SPOTTED_DESC: "$MESSAGE_COSMIC_STORM_SPOTTED_DESC$$MESSAGE_STORM_INTRO$此类风暴对我们的殖民地、舰队和空间站有极高的危险。当风暴过境时，它们会受到严重的损害。"
+
+
+
+
+
+ ######################雪华绮晶事件链
+
+ roz_krks_battle_win_modifier: "战胜失控的雪华绮晶"
+ roz_krks_battle_win_modifier_desc: "\"她怎么这么能变啊！\""
+
+ disable_ap_ge_0: "N之领域被禁用"
+ disable_ap_ge_1: "N之领域被禁用"
+ ge_kirakishou_invasion_lv1: "恐慌蔓延"
+ ge_kirakishou_invasion_lv2: "恐慌蔓延"
+ ge_kirakishou_invasion_lv2.5: "恐慌蔓延"
+ ge_kirakishou_invasion_lv3: "恐慌蔓延"
+ ge_kirakishou_invasion_lv4: "恐慌蔓延"
+ ge_kirakishou_invasion_lv5: "恐慌蔓延"
+ ge_kirakishou_invasion_lvMAX: "未知是最大的恐惧"
+ ge_kirakishou_invasion_in_country: "恐慌蔓延"
+
+
+
+
+
+
+
+#####resource
+sr_rosa_mystica:0 "蔷薇圣母（赝品）"
+sr_rosa_mystica_desc:0 "由水银灯和科学院共同仿制的蔷薇圣母，看上去和蔷薇圣母一模一样，虽然这是现代科学与炼金技术结合的出色造物，但是并没有蔷薇圣母的那些神奇特性。"
+sr_void_core:0 "虚空核心"
+sr_void_core_desc:0 "虚空反应堆的核心，也是虚空衰变能的来源，虚空核心实际上连接着虚空，不过闭锁的能量循环和N之领域的压制阻挡了来自虚空的侵蚀。"
+
+sr_void_core_hidden: "幽能引擎"
+sr_void_core_hidden_desc: "唯一"
+#######deposit
+ge_site_sgt_deposit:0 "N之领域科考站"
+d_dark_matter_deposit_10:0 "£sr_dark_matter£ §Y+10§!"
+ ge_site_sgt_deposit_2: "N之领域综合科研基地"
+
+ roz_site_hive_museum_deposit: "巢都博物馆"
+ roz_site_hive_museum_deposit_desc: "这是远古先驱们遗留下的丰碑，值得我们永远纪念。"
+
+########name
+########
+NAME_ge_suigintou:0 "§M水银灯§!"
+NAME_ge_sgt_site_planet:0 "不明黑洞"
+NAME_ge_sgt_site_planet_after:0 "N之领域入口"
+
+#######ap
+ap_ge_0:0 "N之领域的财富"
+ap_ge_0_desc:0 "N之领域使我们证实并坚信多元宇宙的存在，无数的门连接着无数的世界，蔷薇少女便是打开那些门的钥匙，无穷的资源与无尽的知识正在向我们招手...\n属于我们的时代来临了！"
+enable_ge_0:0 "§B虚空科技事件链后续事件必要飞升之一。"
+requires_sgt_communication_ge_tech:0 "需要和水银灯交流"
+
+ap_ge_1:0 "N之领域的秘密"
+ap_ge_1_desc:0 "这片空间比我们想象的还要神秘，或许我们应该对其展开深入研究。"
+enable_ge_1:0 "§B虚空科技事件链后续事件必要飞升之一。"
+requires_ap_ge_0:0 "需要修正$roz_ap_ge_0$"
+requires_ap_ge_1:0 "需要飞升$ap_ge_1$"
+requires_ge_tech_reactor:0 "需要科技$GE_tech_reactor$"
+
+
+ap_ge_2:0 "§R超维觉醒§!"
+ap_ge_2_desc:0 "§R太好了，我们逐渐理解了一切......§!"
+enable_ge_2:0 "§B为主要种族和所有领袖增加飞升特质，增加三个飞升公民性。§!"
+
+
+
+
+
+##################
+#anomaly
+roz_unknow_crashed_flagship_category: "§R诡异暗影§!"
+roz_unknow_crashed_flagship_category_desc: "这艘船的表面吞噬了几乎所有的可见光，它隐匿于黑暗的空间背景中. 它没有回应我们的呼叫，或许我们该详细调查一下这个神秘飞船。"
+
+ roz_destroyed_planet_anomaly: "不明灵能源"
+ roz_destroyed_planet_anomaly_desc: "我们的科研船在[This.GetName]那崎岖不平的地表上发现了一处奇怪的能量源。\n根据探测器传回的数据来判断，这种能量具有某种超自然特征，兴奋的能量学家们建议我们应该一探究竟。"
+
+
+
+
+
+####################
+
+##############
+#starbase
+Roz_starbase_placeholder: "永不"
+
+####################
+#Ambient_Object
+ROZ_SSVL_AO: "诡异暗影"
+ROZ_SSVL_AO_tooltip: "这个实体十分神秘，它几乎不反射任何电磁波，我们只能从其外部轮廓上判断出这是一艘船……"
+ROZ_SSVL_AO_object_desc: "这个实体十分神秘，它几乎不反射任何电磁波，我们只能从其外部轮廓上判断出这是一艘船……"
+
+###################
+#opinion
+opinion_roz_edict_mutiplayer_tech: "第四天灾团结起来了"
+opinion_roz_test_postive: "不知道为什么，这帮异种喜欢我们"
+ triggered_opinion_roz_test_postive: "不知道为什么，这帮异种喜欢我们"
+ opinion_roz_date_dip_dissatisfied: "不满"
+
+
+#######Starbase Buildings
+sm_Roz_starbase_placeholder: "§g旗舰限制器§!"
+Roz_starbase_placeholder_desc_modifier: "§g特殊占位符，用来限制座驾舰船的建造§!"
+
+#§H
+
+
+###############################councilor
+
+ councilor_celestial_military: "§Y大都督§!"
+ councilor_celestial_military_female: "§Y大都督§!"
+ councilor_celestial_military_desc: "都督中外诸军事，开府仪同三司，入朝不趋，赞拜不名，剑履上殿，封王加……"
+ councilor_time_honored: "§B时空管理分局负责人§!"
+ councilor_time_honored_female: "$councilor_time_honored$"
+ councilor_time_honored_desc: "由水银灯牵头组建的大型机构，主要的职责范围是统筹N之领域内的一切事务，下辖异世界探索开发部、异世界移民中心、异世界外交使馆、N之领域卫戍军、N之领域后勤保障部、N之领域交通运输部等部门。\n\n§W（“那么总局在哪儿呢？”）§!\n§M（“总局在影子城~”）§!\n§W（“？”）§!"
+
+
+####################################
+##message
+
+ roz_time_freeze_activity_title: "§B悖论引擎§!"
+ roz_time_freeze_activity_desc: "§R警告 - 时间静止已经启动！§!"
+
+ roz_agenda_void_core_boost_available_title: "解锁内阁议程：§B能源泄洪§!"
+ roz_agenda_void_core_boost_available_desc: ""
+ ROZ_sgt_gal_MESSAGE:"§M来自水银灯的暗示§!"
+ ROZ_sgt_gal_MESSAGE_desc:"看起来，她已经准备好再次和你出去共度时光了"
+ ROZ_krks_gal_MESSAGE:"§M来自雪华绮晶的邀请§!"
+ ROZ_krks_gal_MESSAGE_desc:"看起来，她十分期待接下来的约会"
+###########################################
+###agenda
+
+ council_agenda_agenda_void_core_boost_name:0 "§B能源泄洪§!"
+ council_agenda_agenda_void_core_boost_desc:0 "在如今这个黄金时代，能源过剩居然已经成为了困扰我们的一个不小的问题，因此实施周期性的能源泄洪便是理所当然的高效解决方案了，这些廉价而磅礴的能量将毫无保留的供应给太空部队以及全银河各地民众的家中(前提是他们运得回去)。有不少社会学家曾指出这个方案会让人们养成挥霍能源的恶劣习惯，如果我们§R失去了这个无限能源§!，整个文明很可能会§R瞬间崩塌§!……"
+
+
+
+###################################
+#event chains
+
+ roz_void_energy_research_chain_title:0 "§B虚空科技起源§!"
+ roz_void_energy_research_chain_desc:0 "针对那扇门的实验所产生的神秘光点已经向我们揭示了其无与伦比的价值，同时也暴露出了其巨大的风险性。最终我们决定依旧冒险对这个光点进行研究，同时我们也应该对N之领域内的研究设施进行改良加固以应对某些突发情况。"
+
+ roz_outland_system_chain_title: "§P破败神国§!"
+ roz_outland_system_chain_desc:0 "那道时空裂缝将我们引领至此，然而这片昏黑的星系并不处于现实宇宙里，视线延伸至深处也只能看到无比深邃的黑暗. 所有人的脑内回档着似有似无的低语声，那犹如濒死之人的呻吟……"
+
+outland_systen_counter: "线索"
+
+
+
+############light
+sc_roz_dark_box: "§P破败神国§!"
+
+
+
+
+
+
+
+
+#####################################megastructure
+ roz_mega_wanxiangtianyin:"万象天引"
+ roz_mega_wanxiangtianyin_DESC:"这座宏伟巨舰正锚定在星系重力井的中轴线上，持续为我们高效的\"生产\"虚空核心。"
+ roz_mega_wanxiangtianyin_undeploy:"收起引力锚"
+ roz_mega_wanxiangtianyin_undeploy_DESC:"不再锚定星系重力井，让这个庞然大物再次运动起来"
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,124 @@
+objectTypes = {
+
+####################
+#	WINDUP
+####################
+
+	pdxparticle = {
+		name = "ge_xl_windup_effect"
+		type = "arc_emitter_windup_effect"
+		
+		scale = 3
+	}
+	
+	pdxparticle = {
+		name = "ge_xl_muzzle_windup_effect"
+		type = "arc_emitter_muzzle_windup_effect"
+		
+		scale = 3
+	}
+
+	pdxparticle = {
+		name = "ge_t_beam_windup_particle"
+		type = "ge_t_beam_windup_effect"
+		
+		scale = 0.75
+	}
+
+	pdxparticle = {
+		name = "roz_xl_beam_windup_effect"
+		type = "roz_xl_beam_windup_effect"
+
+		scale = 1.5
+	}
+
+	pdxparticle = {
+		name = "roz_xl_beam_muzzle_windup_effect"
+		type = "roz_xl_beam_muzzle_windup_effect"
+
+		scale = 1.5
+	}
+
+#projectile
+	pdxparticle = {
+		name = "ge_energy_torpedo_idle_particle"
+		type = "ge_energy_torpedo_idle_file"
+		
+		scale = 2.0
+	}
+	
+#muzzle
+	pdxparticle = {
+		name = "ge_energy_torpedo_muzzle_particle"
+		type = "ge_energy_torpedo_file"	
+		scale = 1.1
+	}
+
+	pdxparticle = {
+		name = "ge_t_beam_muzzle_particle"
+		type = "ge_t_beam_muzzle"
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "roz_xl_beam_muzzle_particle"
+		type = "roz_xl_beam_muzzle"
+
+		scale = 1.5
+	}
+
+
+
+#hit effect	
+	pdxparticle = {
+		name = "ge_energy_torpedo_hit_effect"
+		type = "ge_energy_torpedo_hit_entity"	
+		scale = 2.5
+	}
+
+	pdxparticle = {
+		name = "roz_t_beam_hit_effect_particle"
+		type = "roz_t_beam_hit_effect"
+		scale = 2.0
+	}
+
+	pdxparticle = {
+		name = "roz_xl_beam_hit_effect"
+		type = "roz_xl_beam_hit_effect"
+		scale = 2
+	}
+
+
+#trail
+	pdxparticle = {
+		name = "ge_energy_torpedoes_idle_trail_particle"
+		type = "ge_energy_torpedo_idle_trail_file"	
+		scale = 1.0
+	}
+
+##########
+	pdxparticle = {
+		name = "roz_necroid_01_ion_core_effect"
+		type = "necroid_01_ion_core_effect_file"
+
+		scale = 10
+	}
+	pdxparticle = {
+		name = "roz_aquatic_01_science_ship_core_effect"
+		type = "aquatic_01_science_ship_core_file"
+
+		scale = 2
+	}
+	pdxparticle = {
+		name = "ROZ_generic_verybig_exhaust_circle_moving"
+		type = "ROZ_generic_verybig_exhaust_circle_moving_effect_file"
+		scale = 35
+	}
+
+	pdxparticle = {
+		name = "roz_a_class_star_particle"
+		type = "a_class_star_file"
+		scale = 1.0
+	}
+
+}	

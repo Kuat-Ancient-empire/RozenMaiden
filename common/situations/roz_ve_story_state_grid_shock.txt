@@ -1,0 +1,317 @@
+roz_ves_state_grid_shock_situation = {
+    ##
+    desc = {
+        text = roz_ves_state_grid_crisis_hard_situation_text
+        trigger = {
+            owner = {
+                has_modifier = ge_power_grid_Shock_zp
+            }
+        }
+    }
+    desc = {
+        text = roz_ves_state_grid_crisis_normal_situation_text
+        trigger = {
+            owner = {
+                has_modifier = ge_power_grid_Shock_dm
+            }
+        }
+    }
+    picture = GFX_evt_deficit
+    complete_icon = GFX_situation_outcome_meh
+    complete_icon_frame = GFX_situation_outcome_frame_green
+    fail_icon = GFX_situation_outcome_negative
+    fail_icon_frame = GFX_situation_outcome_frame_red
+    category = positive
+
+
+    on_start = {
+        owner = {
+            country_event = {
+                id = roz_state_grid_crisis.10
+                days = 60
+            }
+            home_planet = {
+                add_modifier = {
+                    modifier =  roz_stc_zp_homeplanet_debuff
+                }
+            }
+        }
+
+    }
+    #abort_trigger = {
+    #	OR = {
+    #		NOT = { exists = target.owner }
+    #		target.owner = { NOT = { is_same_value = root.owner } }
+    #	}
+    #}
+
+
+    triggered_modifier = {#方案一
+        potential = {
+            owner = {
+                has_country_flag = roz_state_grid_crisis_selection_1_flag
+            }
+        }
+        modifier = {
+            country_produces_mult = -0.6
+            country_monl
+            ship_weapon_damage = -0.3
+            ships_upkeep_mult = 0.3
+        }
+    }
+
+    triggered_modifier = {#方案二
+        potential = {
+            owner = {
+                has_country_flag = roz_state_grid_crisis_selection_2_flag
+            }
+        }
+        modifier = {
+            country_produces_mult = -0.1
+            ship_weapon_damage = -0.1
+            ships_upkeep_mult = 0.1
+        }
+    }
+
+    triggered_modifier = {#all in
+        potential = {
+            owner = {
+                has_country_flag = roz_state_grid_crisis_selection_3_flag
+            }
+        }
+        modifier = {
+            country_produces_mult = -0.3
+            ship_weapon_damage = -0.2
+            ships_upkeep_mult = 0.2
+        }
+    }
+
+
+    on_progress_complete = {
+        hidden_effect = {
+            destroy_situation = this
+        }
+        owner = {
+            remove_modifier = ge_power_grid_Shock_zp
+            remove_modifier = ge_power_grid_Shock_dm
+            give_technology = {
+                tech = tech_roz_power_core
+            }
+            owner = {
+                country_event = {
+                    id = roz_state_grid_crisis.14
+                }
+            }
+            home_planet = {
+                remove_modifier =  roz_stc_zp_homeplanet_debuff
+            }
+            end_event_chain = roz_void_energy_research_chain
+
+        }
+
+        custom_tooltip = "roz_ves_state_grid_shock_situation_complete_ct"
+
+    }
+    on_fail = {
+        owner = {
+            hidden_effect = {
+                remove_modifier = ge_power_grid_Shock_zp
+                remove_modifier = ge_power_grid_Shock_dm
+                add_modifier = {
+                    modifier = ge_power_grid_Shock_zp
+                    days = 3600
+                }
+            }
+        }
+        hidden_effect = {
+            destroy_situation = this
+        }
+        custom_tooltip = "roz_ves_state_grid_shock_situation_fail_ct"
+    }
+    start_value = 2
+    #triggered_target_modifier = {
+    #Modifier applying to the target planet of a Situation, if the triggers are true. Does not work on other scope types!
+    #}
+    on_monthly = {
+        events = {
+        }
+        random_events = {
+            4 = 0
+        }
+    }
+    stages = {
+        roz_grid_crisis_stage_1 = {
+            icon = GFX_situation_stage_1
+            icon_background = GFX_situation_stage_frame_green
+            on_first_enter = {
+
+            }
+            custom_tooltip = roz_grid_crisis_stage_1_ct
+            end = 10
+        }
+        roz_grid_crisis_stage_2 = {
+            icon = GFX_situation_stage_2
+            icon_background = GFX_situation_stage_frame_green
+            on_first_enter = {
+                owner = {
+                    country_event = {
+                        id = roz_state_grid_crisis.11
+                    }
+                }
+            }
+            custom_tooltip = roz_grid_crisis_stage_2_ct
+            end = 40
+        }
+        roz_grid_crisis_stage_3 = {
+            icon = GFX_situation_stage_3
+            icon_background = GFX_situation_stage_frame_green
+            on_first_enter = {
+                owner = {
+                    country_event = {
+                        id = roz_state_grid_crisis.12
+                    }
+                }
+            }
+
+            custom_tooltip = roz_grid_crisis_stage_3_ct
+            end = 75
+        }
+        roz_grid_crisis_stage_4 = {
+            icon = GFX_situation_stage_4
+            icon_background = GFX_situation_stage_frame_green
+            on_first_enter = {
+                owner = {
+                    country_event = {
+                        id = roz_state_grid_crisis.13
+                    }
+                }
+            }
+            custom_tooltip = roz_grid_crisis_stage_4_ct
+            end = 100
+        }
+    }
+    approach = {#
+        name = roz_invest_more_in_resources
+        icon = GFX_situation_approach_this_is_fine
+        icon_background = GFX_situation_approach_bg_green
+        allow = {
+        }
+        potential = {
+        }
+        on_select = {
+            # owner = {
+            # 	country_event = {
+            # 		id = x
+            # 	}
+            # }
+            custom_tooltip = roz_roz_invest_more_in_resources_ct
+        }
+        triggered_modifier = {
+            #planet_jobs_physics_research_produces_mult = -0.10
+            #planet_jobs_engineering_research_produces_mult = -0.15
+            all_technology_research_speed = -0.6
+            planet_jobs_consumer_goods_upkeep_mult = 0.10
+        }
+        default = yes
+        resources = {
+            category = situations
+            cost = {
+                influence = 50
+            }
+            upkeep = {
+                influence = 1
+            }
+        }
+        ai_weight = {
+        }
+        #AI will pick the one with the highest weight
+    }
+    approach = {
+        name = roz_sgc_abort	#all approaches must have at least a name
+        icon = GFX_situation_approach_this_is_fine
+        icon_background = GFX_situation_approach_bg_yellow
+        allow = {
+        }
+        #If this fails, the Approach is greyed out
+        potential = {
+            #owner = {
+            #    has_country_flag = ge_leader_suigintou_get
+            #}
+        }
+        triggered_modifier = {
+            planet_jobs_energy_upkeep_mult = 0.15
+        }
+        #If this fails, the Approach is not shown
+        on_select = {
+            custom_tooltip = roz_sgc_abort_tooltip
+            owner = {
+
+            }
+        }
+
+        resources = {
+            #Resource table as standard
+            category = situations
+            cost = {
+                influence = 50
+                unity = 50
+            }
+            upkeep = {
+
+            }
+            produces = {
+
+            }
+        }
+    }
+
+    monthly_progress = {
+        base = 0
+        modifier = {
+            desc = roz_invest_more_in_resources_approach
+            current_situation_approach = roz_invest_more_in_resources
+            add = 0.4
+        }
+        modifier = {
+            desc = roz_sgc_abort_approach
+            current_situation_approach = roz_sgc_abort
+            add = -0.1
+        }
+
+        modifier = {
+            desc = roz_sgc_dm_approach
+            owner = {
+                has_modifier = ge_power_grid_Shock_dm
+            }
+            add = 0.8
+        }
+
+
+        modifier = {
+            desc = roz_sgc_selection_1
+            owner = {
+                has_country_flag = roz_state_grid_crisis_selection_1_flag
+            }
+            add = 1.2
+        }
+
+        modifier = {
+            desc = roz_sgc_selection_2
+            owner = {
+                has_country_flag = roz_state_grid_crisis_selection_2_flag
+            }
+            add = 0.3
+        }
+
+        modifier = {
+            desc = roz_sgc_selection_3
+            owner = {
+                has_country_flag = roz_state_grid_crisis_selection_3_flag
+            }
+            add = 0.5
+        }
+    }
+}
+
+
+

@@ -1,0 +1,807 @@
+r_roz_stasis_field = {
+    activation_duration = 900
+    portrait = "GFX_r_roz_stasis_field"
+    sound = "relic_activation_miniature_galaxy"
+
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            energy = 1000
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        country_physics_research_produces_mult = 0.10
+        country_engineering_research_produces_mult = 0.10
+    }
+
+    score = 1000
+
+    active_effect = {
+        capital_scope = {
+            add_modifier = {
+                modifier = "roz_planetary_defense_buff"
+                days = 3600
+            }
+        }
+        custom_tooltip = relic_triumph_cooldown_veryshort
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 900
+            }
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = { has_modifier = relic_activation_cooldown }
+        }
+    }
+}
+
+
+###茶会器具
+r_roz_teaparty_set = {
+    activation_duration = 1
+    portrait = "GFX_r_roz_teaparty_set"
+    sound = roz_teaparty_set_activity
+    resources = {
+        category = relics
+        produces = {
+            consumer_goods = 5
+        }
+        upkeep = {
+            food = 1
+        }
+    }
+    can_be_stolen = no
+    active_effect = {
+        custom_tooltip = r_roz_teaparty_set_ct
+        hidden_effect = {
+            country_event = {
+                id = roz_teaparty_evt.10
+            }
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_stability_add = 5
+    }
+    possible = {
+        custom_tooltip = {
+            text = "r_roz_teaparty_set_possible"
+            NOT = {
+                has_country_flag = roz_teaparty_setting_falg
+            }
+        }
+
+    }
+}
+
+
+########N等分の真红（
+roz_shuukan_shoujonotsukurikata_vol1 = {
+    activation_duration = 1
+    portrait = "GFX_r_roz_shuukan_shoujonotsukurikata_vol1"
+    sound = relic_activation_eternal_throne
+    resources = {
+        category = relics
+        # Activation cost
+    }
+    can_be_stolen = no
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+    }
+
+    score = 10
+
+    active_effect = {
+
+    }
+
+    # Possible check for activation
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = { has_modifier = relic_activation_cooldown }
+        }
+    }
+}
+
+roz_shuukan_shoujonotsukurikata_vol2 = {
+    activation_duration = 1
+    portrait = "GFX_r_roz_shuukan_shoujonotsukurikata_vol2"
+    sound = relic_activation_eternal_throne
+    resources = {
+        category = relics
+        # Activation cost
+    }
+    can_be_stolen = no
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+    }
+
+    score = 10
+
+    active_effect = {
+
+    }
+
+    # Possible check for activation
+    possible = {
+    }
+}
+
+roz_shuukan_shoujonotsukurikata_vol3 = {
+    activation_duration = 1
+    portrait = "GFX_r_roz_shuukan_shoujonotsukurikata_vol3"
+    sound = relic_activation_eternal_throne
+    resources = {
+        category = relics
+        # Activation cost
+    }
+    can_be_stolen = no
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+    }
+
+    score = 10
+
+    active_effect = {
+
+    }
+
+    # Possible check for activation
+    possible = {
+    }
+}
+
+roz_shuukan_shoujonotsukurikata_vol4 = {
+    activation_duration = 1
+    portrait = "GFX_r_roz_shuukan_shoujonotsukurikata_vol4"
+    sound = relic_activation_eternal_throne
+    resources = {
+        category = relics
+        # Activation cost
+    }
+    can_be_stolen = no
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+    }
+
+    score = 10
+
+    active_effect = {
+
+    }
+
+    # Possible check for activation
+    possible = {
+    }
+}
+
+roz_shuukan_shoujonotsukurikata_vol5 = {
+    activation_duration = 1
+    portrait = "GFX_r_roz_shuukan_shoujonotsukurikata_vol5"
+    sound = relic_activation_eternal_throne
+    resources = {
+        category = relics
+        # Activation cost
+    }
+    can_be_stolen = no
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+    }
+
+    score = 10
+
+    active_effect = {
+
+    }
+
+    # Possible check for activation
+    possible = {
+    }
+}
+
+roz_shuukan_shoujonotsukurikata_vol6 = {
+    activation_duration = 1
+    portrait = "GFX_r_roz_shuukan_shoujonotsukurikata_vol6"
+    sound = relic_activation_eternal_throne
+    resources = {
+        category = relics
+        # Activation cost
+    }
+    can_be_stolen = no
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+    }
+
+    score = 10
+
+    active_effect = {
+
+    }
+
+    # Possible check for activation
+    possible = {
+    }
+}
+
+roz_shuukan_shoujonotsukurikata_vol7 = {
+    activation_duration = 1
+    portrait = "GFX_r_roz_shuukan_shoujonotsukurikata_vol7"
+    sound = relic_activation_eternal_throne
+    resources = {
+        category = relics
+        # Activation cost
+    }
+    can_be_stolen = no
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+    }
+
+    score = 10
+
+    active_effect = {
+
+    }
+
+    # Possible check for activation
+    possible = {
+    }
+}
+
+roz_shuukan_shoujonotsukurikata_vol8 = {
+    activation_duration = 1
+    portrait = "GFX_r_roz_shuukan_shoujonotsukurikata_vol8"
+    sound = relic_activation_eternal_throne
+    resources = {
+        category = relics
+        # Activation cost
+    }
+    can_be_stolen = no
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+    }
+
+    score = 10
+
+    active_effect = {
+
+    }
+
+    # Possible check for activation
+    possible = {
+    }
+}
+
+roz_shuukan_shoujonotsukurikata_vol9 = {
+    activation_duration = 1
+    portrait = "GFX_r_roz_shuukan_shoujonotsukurikata_vol9"
+    sound = relic_activation_eternal_throne
+    resources = {
+        category = relics
+        # Activation cost
+    }
+    can_be_stolen = no
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+    }
+
+    score = 10
+
+    active_effect = {
+
+    }
+
+    # Possible check for activation
+    possible = {
+    }
+}
+
+
+####################
+##Annabelle
+
+r_roz_doll_Annabelle = {
+    activation_duration = 1800
+    portrait = GFX_r_roz_ann
+    sound = event_screams
+
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            unity = 1250
+            influence = 10
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_stability_add = -5
+        planet_amenities_add = -5
+        country_produces_mult = 0.05
+    }
+
+    score = 1500
+
+    active_effect = {
+        capital_scope = {
+
+        }
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 900
+            }
+        }
+        custom_tooltip = relic_triumph_cooldown_short
+        hidden_effect = {
+
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = { has_modifier = relic_activation_cooldown }
+        }
+    }
+}
+
+########
+r_roz_orgel = {
+    activation_duration = 900
+    portrait = GFX_r_roz_orgel
+    sound = roz_relic_orgel
+    can_be_stolen = no
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        country_base_minor_artifacts_produces_add = 6
+    }
+
+    score = 3000
+
+    active_effect = {
+        capital_scope = {
+
+        }
+        add_monthly_resource_mult = {
+            resource = unity
+            value = 8
+        }
+        add_monthly_resource_mult = {
+            resource = minor_artifacts
+            value = 4
+        }
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 900
+            }
+        }
+        custom_tooltip = relic_triumph_cooldown_veryshort
+    }
+
+    # Possible check for activation
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = { has_modifier = relic_activation_cooldown }
+        }
+    }
+}
+
+r_roz_extrinsic_xinlin_crystal = {
+    activation_duration = 1800
+    portrait = GFX_r_roz_extrinsic_xinlin_crystal
+    sound = relic_activation_eternal_throne
+    possible = {
+        is_ai = no
+    }
+    can_be_stolen = no
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            ##astral_threads = 1000
+            engineering_research = 3000
+            physics_research = 3000
+        }
+        upkeep = {
+            consumer_goods = 50
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        tech_cost_empire_size_mult = -0.2
+        diplo_weight_technology_mult = 0.1
+        engineering_tech_cost_mult = -0.1
+        physics_tech_cost_mult = -0.1
+        society_tech_cost_mult = -0.1
+    }
+
+    score = 2500
+
+    active_effect = {
+        capital_scope = {
+
+        }
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 1800
+            }
+        }
+    }
+}
+
+######时空道标
+r_roz_Chronos_Label = {
+    activation_duration = 900
+    portrait = GFX_r_roz_Chronos_Label
+    sound = "par_ui_keides_relic"
+    can_be_stolen = no
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            trigger = { has_astral_planes_dlc = yes }
+            sr_dark_matter = 5000
+            astral_threads = 500
+            energy = 25000
+        }
+        cost = {
+            trigger = { has_astral_planes_dlc = no }
+            sr_dark_matter = 5000
+            energy = 25000
+        }
+        upkeep = {
+            energy = 50
+            sr_dark_matter = 3
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        country_physics_research_produces_mult = 0.2
+        fleet_mia_time_mult = -0.15
+        ship_jumpdrive_cooldown_mult = -0.25
+        ship_ftl_jumpdrive_range_mult = 0.25
+        planet_housing_mult = 0.10
+    }
+
+    score = 10000
+
+    active_effect = {
+        custom_tooltip = relic_triumph_cooldown_veryshort
+        custom_tooltip = r_roz_Chronos_Label_effect
+        custom_tooltip = r_roz_Chronos_Label_active_effect_tt
+        set_country_flag = "started_placing_storm"
+
+        #every_cosmic_storm = {
+        #    if = {
+        #        limit = { is_storm_type = electric_storm }
+        #        every_system_within_storm = {
+        #            every_ship_in_system = {
+        #                limit = { has_shield_hp > 0 }
+        #                reduce_shield = value:storm_ship_damage_received|DMG|@storm_monthly_dmg_low|
+        #            }
+        #        }
+        #    }
+        #}
+        start_storm_area_placing = {
+            sacrifice_leader_with_ui = no
+            cosmic_storm = chronos_storm
+            immediate = yes
+
+            reticle_radius = { base = 100 }
+            max_range = { base = 2500 }
+            on_confirm = {
+                add_modifier = {
+                    modifier = tempest_invocator_active_modifier
+                    days = 900
+                }
+                custom_tooltip = relic_triumph_cooldown
+
+                hidden_effect = {
+                    add_modifier = {
+                        modifier = "relic_activation_cooldown"
+                        days = 900
+                    }
+                    set_country_flag = used_tempest_invocator_relic_achievement
+                    last_created_cosmic_storm = {
+                        every_system_within_storm = {
+                            random_system_planet = {
+                                limit = {
+                                    NOR = {
+                                        has_anomaly = yes
+                                        is_colony = yes
+                                        has_owner = yes
+                                        is_artificial = yes
+                                    }
+                                    NOR = {
+                                        exists = archaeological_site
+                                        has_planet_flag = hatchling_egg
+                                    }
+                                    OR = {
+                                        is_planet_class = pc_molten
+                                        is_planet_class = pc_barren
+                                        is_planet_class = pc_barren_cold
+                                        is_planet_class = pc_toxic
+                                        is_planet_class = pc_frozen
+                                        is_planet_class = pc_nuked
+                                    }
+                                }
+                                change_pc = pc_shattered
+                                clear_deposits = yes
+                                random_list = {
+                                    2 = {
+                                        add_deposit = d_minerals_10
+                                        add_deposit = d_minerals_6
+                                    }
+                                    2 = {
+                                        add_deposit = d_minerals_10
+                                        add_deposit = d_minerals_2
+                                    }
+                                    1 = {
+                                        add_deposit = d_minerals_8
+                                    }
+                                    1 = {
+                                        add_deposit = d_minerals_4
+                                    }
+                                }
+                            }
+                            every_system_planet = {
+                                limit = {
+                                    OR = {
+                                        is_colony = yes
+                                        has_owner = yes
+                                    }
+                                }
+                                while = {
+                                    count = 4
+                                    random_owned_pop = { kill_pop = yes }
+                                }
+                                add_modifier = {
+                                    modifier = roz_chronos_label_planet_effect_stability
+                                    days = 360
+                                }
+                                add_modifier = {
+                                    modifier = roz_chronos_label_planet_effect_product
+                                    days = 360
+                                }
+                            }
+                        }
+                    }
+
+                }
+                remove_country_flag = "started_placing_storm"
+            }
+
+            on_cancel = {
+                add_resource = {
+                    sr_dark_matter = 1000
+                    energy = 10000
+                }
+                remove_modifier = {
+                    modifier = "relic_activation_cooldown"
+                }
+                remove_country_flag = "started_placing_storm"
+            }
+        }
+
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 900
+            }
+        }
+        #add_modifier = {
+        #    modifier = "paragon_relic_wormhole_key"
+        #    days = 359
+        #}
+        set_timed_country_flag = {
+            flag = jump_drive_allowed
+            days = 359
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    is_at_war = yes
+                }
+                every_country = {
+                    limit = {
+                        is_fallen_empire = yes
+                        is_at_war_with = root
+                    }
+                    every_owned_fleet = {
+                        limit = {
+                            is_in_combat = yes
+                            solar_system = {
+                                any_fleet_in_system = {
+                                    owner = {
+                                        OR = {
+                                            is_at_war_with = root
+                                            is_hostile_to = prevprevprevprev
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        set_mia = mia_emergency_ftl
+                    }
+                    add_static_war_exhaustion = {
+                        attacker = root
+                        location = home_planet
+                        value_for_planet_destruction = 5
+                    }
+                }
+                every_playable_country = {
+                    limit = {
+                        is_at_war_with = root
+                        NOT = { has_relic = r_roz_Chronos_Label }
+                    }
+                    every_owned_fleet = {
+                        limit = {
+                            is_in_combat = yes
+                            solar_system = {
+                                any_fleet_in_system = {
+                                    owner = {
+                                        OR = {
+                                            is_at_war_with = root
+                                            is_hostile_to = prevprevprevprev
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        set_mia = mia_emergency_ftl
+                    }
+                    add_static_war_exhaustion = {
+                        attacker = root
+                        location = home_planet
+                        value_for_planet_destruction = 5
+                    }
+                }
+            }
+            country_event = {
+                id = ge_test_event.9997
+                days = 899
+            }
+            country_event = {
+                id = ge_test_event.9998
+                days = 1
+            }
+            country_event = {
+                id = ge_test_event.9999
+                days = 179
+            }
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = { has_modifier = relic_activation_cooldown }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

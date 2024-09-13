@@ -1,0 +1,24 @@
+spriteTypes = {
+
+    spriteType = {
+        name = "GFX_component_HD_Defensive"
+        texturefile = "gfx/interface/icons/ship_parts/HD_Defensive.dds"
+    }
+    spriteType = {
+        name = "GFX_component_HD_Eagle_Strike"
+        texturefile = "gfx/interface/icons/ship_parts/HD_Eagle_Strike.dds"
+    }
+    spriteType = {
+        name = "GFX_component_HD_Orbital_Bridge"
+        texturefile = "gfx/interface/icons/ship_parts/HD_Orbital_Bridge.dds"
+    }
+    spriteType = {
+        name = "GFX_component_HD_Orbital_Strikes"
+        texturefile = "gfx/interface/icons/ship_parts/HD_Orbital_Strikes.dds"
+    }
+    spriteType = {
+        name = "GFX_component_HD_Supply"
+        texturefile = "gfx/interface/icons/ship_parts/HD_Supply.dds"
+    }
+
+}

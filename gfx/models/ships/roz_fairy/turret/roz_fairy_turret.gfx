@@ -1,0 +1,59 @@
+objectTypes = {
+	pdxmesh = {
+		name = "roz_fairy_three-gun_turret_1_mesh"
+		file = "gfx/models/ships/roz_fairy/turret/roz_fairy_THGT1.mesh"
+		scale = 1.0
+		meshsettings = {
+			name = "polySurfaceShape2"
+			index = 0
+			texture_diffuse = anister_crusier_turrret_DIFF.dds
+			texture_normal = anister_crusier_turrret_NORM.dds
+			texture_specular = anister_crusier_turrret_SPEC.dds
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "roz_fairy_large_gun_turret_2_mesh"
+		file = "gfx/models/ships/roz_fairy/turret/roz_fairy_THGT3.mesh"
+		scale = 1.0
+
+	}
+	pdxmesh = {
+		name = "roz_fairy_large_gun_turret_3_mesh"
+		file = "gfx/models/ships/roz_fairy/turret/roz_fairy_THGT4.mesh"
+		scale = 1.0
+
+	}
+
+	pdxmesh = {
+		name = "roz_fairy_point_defense_turret_1_mesh"
+		file = "gfx/models/ships/roz_fairy/turret/roz_fairy_PDT1.mesh"
+		scale = 1.0
+		meshsettings = {
+			name = "polySurface311Shape"
+			index = 0
+			texture_diffuse = CruiserTripleTur_diffuse.dds
+			texture_normal = CruiserTripleTur_normal.dds
+			texture_specular = CruiserTripleTur_specular.dds
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "roz_fairy_medium_gun_1_mesh"
+		file = "gfx/models/ships/roz_fairy/turret/roz_fairy_TGT3.mesh"
+		scale = 1.0
+
+	}
+	pdxmesh = {
+		name = "roz_fairy_samll_gun_1_mesh"
+		file = "gfx/models/ships/roz_fairy/turret/roz_fairy_TGT1.mesh"
+		scale = 1.0
+
+	}
+	pdxmesh = {
+		name = "roz_fairy_samll_gun_2_mesh"
+		file = "gfx/models/ships/roz_fairy/turret/roz_fairy_TGT2.mesh"
+		scale = 1.0
+
+	}
+}

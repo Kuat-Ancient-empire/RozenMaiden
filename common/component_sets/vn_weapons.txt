@@ -1,0 +1,65 @@
+component_set = {
+	key = "ge_vn_main_beam"
+
+	icon = "GFX_ship_part_ge_vn_main_beam"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_vn_secondary_beam"
+
+	icon = "GFX_ship_part_ge_vn_secondary_beam"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_vn_laser"
+
+	icon = "GFX_ship_part_ge_vn_laser"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_vn_torpedo"
+
+	icon = "GFX_ship_part_ge_vn_torpedo"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_vn_pd"
+
+	icon = "GFX_ship_part_ge_vn_pd"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_vn_aux"
+
+	icon = "GFX_ship_part_ge_vn_aux"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_vn_shield"
+
+	icon = "GFX_ship_part_ge_vn_shield"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ge_vn_strike_craft_bomber"
+
+	icon = "GFX_ship_part_ge_vn_strike_craft_bomber"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "roz_iqt_gun"
+
+	icon = "GFX_ge_ship_part_iqt_gun"
+	icon_frame = 1
+}
+
+
+

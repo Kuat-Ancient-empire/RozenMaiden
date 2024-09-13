@@ -1,0 +1,147 @@
+﻿l_simp_chinese:
+####Weapons
+ GE_GRAVITY_BURST:0 "§H混沌能星爆§!"
+ GE_GRAVITY_BURST_DESC:0 "发射一团外域概念干涉实体，瞬间使敌方护盾发生器过载，无视大部分装甲防护直击舰体结构。"
+ GE_PD:0 "§P虚空聚焦点防御§!"
+ GE_PD_DESC:0 "这种点防御武器能快速抹消来袭舰载机和弹头。"
+ GE_XL_BEAM:0 "§G混沌撕裂炮§!"
+ GE_XL_BEAM_DESC:0 "在所有已知的能量种类中，虚空能量可以说是最不讲理的存在。利用它们产生的各种规则层面上的衰变效应，我们的武器可以瞬间毁伤敌舰的装甲和船体结构"
+ GE_T_BEAM:0 "§R寂灭原点§!"
+ GE_T_BEAM_DESC:0 "§R敢教日月换新天。§!"
+ GE_SMALL_LASER_CANNON:0 "§P小型混沌聚能光束§!"
+ GE_MEDIUM_LASER_CANNON:0 "§P中型混沌聚能光束§!"
+ GE_LARGE_LASER_CANNON:0 "§P大型混沌聚能光束§!"
+ GE_LASER_CANNON:0 "§P混沌聚能光束§!"
+ GE_LASER_CANNON_DESC:0 "混沌撕裂炮的轻量化版本，受出力问题，其输出能力有所下调。"
+ GE_SMALL_KINETIC_GUN:0 "§M轻型虚空阱发射器§!"
+ GE_MEDIUM_KINETIC_GUN:0 "§M中型虚空阱发射器§!"
+ GE_LARGE_KINETIC_GUN:0 "§M重型虚空阱发射器§!"
+ GE_KINETIC_GUN:0 "§M虚空阱发射器§!"
+ GE_KINETIC_GUN_DESC:0 "发射前请检查虚空侵蚀指数。"
+ge_bhmissile:0 "§M奇点导弹§!"
+ge_bhmissile_DESC:0 "黑洞打击是在常规宇宙空间作战中的优解"
+ge_wtorpedo:0 "§M开天§!"
+ge_wtorpedo_DESC:0 "天地乖离，开辟之星。(某灯：这是什么中二台词。)"
+ge_strike_craft_fighter:0 "§L王蛇歼击机§!"
+ge_strike_craft_fighter_DESC:0 "这种歼击机搭载了轻型虚空点防御炮，能抹除来袭舰载机和弹头。"
+ge_strike_craft_bomber:0 "§L狮心王轰炸机§!"
+ge_strike_craft_bomber_DESC:0 "这种轰炸机载有大当量的虚空炸弹，相比于老式的通用高级舰载机，狮心王拥有更出色的机动性和防御力。"
+ge_strike_craft_xuefeng:0 "§L战斗妖精-雪风§!"
+ge_strike_craft_xuefeng_DESC:0 "这些特种轰炸机虽然编队少，但其搭载的虚空鱼雷是任何船只的梦魇，这种毁灭性弹头的破坏力几乎是狮心王航弹的3倍。（この雪風様なのだ！）"
+
+GE_PLANET_KILLER_Crasher:0 "§R死亡流星§!"
+GE_PLANET_KILLER_Crasher_DESC:0 "我们新式的死亡流星已经完全超越了老式的地爆天星！"
+GE_PLANET_KILLER_Crasher_ACTION:0 "§R焚灭§!"
+FLEETORDER_DESTROY_PLANET_WITH_GE_PLANET_KILLER_Crasher:0 "正在准备焚灭$PLANET|Y$"
+#roz_juggemaut_wanxiang_deployer_ACTION:"部署于"
+ GE_PLANET_KILLER_CRACKER:"$PLANET_KILLER_CRACKER$"
+ GE_PLANET_KILLER_CRACKER_DESC:"$PLANET_KILLER_CRACKER_DESC$"
+ GE_PLANET_KILLER_SHIELDER:"$PLANET_KILLER_SHIELDER$"
+ GE_PLANET_KILLER_SHIELDER_DESC:"$PLANET_KILLER_SHIELDER_DESC$"
+ GE_PLANET_KILLER_NEUTRON:"$PLANET_KILLER_NEUTRON$"
+ GE_PLANET_KILLER_NEUTRON_DESC:"$PLANET_KILLER_NEUTRON_DESC$"
+ GE_PLANET_KILLER_GODRAY:"$PLANET_KILLER_GODRAY$"
+ GE_PLANET_KILLER_GODRAY_DESC:"$PLANET_KILLER_GODRAY_DESC$"
+ GE_PLANET_KILLER_NANOBOTS:"$PLANET_KILLER_NANOBOTS$"
+ GE_PLANET_KILLER_NANOBOTS_DESC:"$PLANET_KILLER_NANOBOTS_DESC$"
+ GE_PLANET_KILLER_DELUGE:"$PLANET_KILLER_DELUGE$"
+ GE_PLANET_KILLER_DELUGE_DESC:"$PLANET_KILLER_DELUGE_DESC$"
+ GE_PLANET_KILLER_TOXIFIER:"$PLANET_KILLER_TOXIFIER$"
+ GE_PLANET_KILLER_TOXIFIER_DESC:"$PLANET_KILLER_TOXIFIER_DESC$"
+ GE_PLANET_KILLER_DEVOLUTION:"$PLANET_KILLER_DEVOLUTION$"
+ GE_PLANET_KILLER_DEVOLUTION_DESC:"$PLANET_KILLER_DEVOLUTION_DESC$"
+ GE_PLANET_KILLER_DEVOLVER:"$PLANET_KILLER_DEVOLVER$"
+ GE_PLANET_KILLER_DEVOLVER_DESC:"$PLANET_KILLER_DEVOLVER_DESC$"
+
+
+ roz_juggernaut_wanxiang_deployer:"万象部署装置"
+ roz_juggernaut_wanxiang_deployer_DESC:"万象部署为巨型结构的核心装置。"
+ roz_juggernaut_wanxiang_deployer_ACTION:"在此部署"
+ FLEETORDER_DESTROY_PLANET_WITH_roz_juggernaut_wanxiang_deployer:"万象装置正在部署"
+
+
+ ##############################################################
+
+ge_vn_main_beam:0 "§B三联装超重型对舰幽能炮§!-§H星河§!"
+ge_vn_main_beam_DESC:0 "§H星河§!主炮是一种有效口径半公里的高聚能式物质湮灭发生器，在蓄力完成的情况下发射一次的威力接近于一次超新星爆发. 我们的科学家曾警告：鉴于虚空能量的特殊性，在宇宙内多次射击有可能会导致时间连续性崩溃。。"
+ge_vn_secondary_beam:0 "§B三联装重型对舰幽能炮§!-§E日冕§!"
+ge_vn_secondary_beam_DESC:0 "相比于§H星河§!主炮的震撼人心，§E日冕§!的威力就要减弱很多，但这也意味着我们基本可以毫无顾忌的使用它们来粉碎敌人。"
+ge_small_vn_laser:0 "§B幽能单装炮§!"
+ge_small_vn_laser_DESC:0 ""
+ge_medium_vn_laser:0 "§B双联装幽能炮§!"
+ge_medium_vn_laser_DESC:0 ""
+ge_large_vn_laser:0 "§B三联装幽能炮§!"
+ge_large_vn_laser_DESC:0 ""
+ge_vn_laser:0 "§B幽能联装炮§!"
+ge_vn_laser_DESC:0 "这一系列的幽能联装炮的口径皆为1000mm，虽然虚空武器的输出与外观口径没有什么关联，不过看着这黑黝黝的庞大炮口，总比那些小水管来得安心多了。"
+ge_vn_torpedo:0 "§B幽能内爆弹§!"
+ge_vn_torpedo_DESC:0 "这是开天导弹的改良版，得益于对虚空能量的不断进展，我们解决了开天导弹充能速度慢到令人摆烂的大问题，虽然伤害提升不大，但是射的快多了。"
+ge_vn_pd:0 "§B幽能速射机炮§!"
+ge_vn_pd_DESC:0 "这些点防御阵列不仅能轻易解决敌方舰载机和导弹，还能直接杀伤任何敢靠近其射程的小型舰艇。"
+ge_vn_aux:0 "§B损伤定义装置§!/§R幽能深渊§!"
+ge_vn_aux_DESC:0 "篡改宇宙信息流，我们可以从根本层面上逆转因果。"
+ge_vn_shield:0 "§B幽能护盾§!"
+ge_vn_shield_DESC:0 "联合幽能护盾靠着信息锚定，甚至能抵御虚空侵蚀。"
+ge_vn_strike_craft_bomber:0 "§B幽能轰炸机§!"
+ge_vn_strike_craft_bomber_DESC:0 "帝国某高级飞行教官曾表示：以该机型的防护能力，帝国士兵完全可以对敌舰执行跳帮战术，完成对敌舰的俘获。"
+
+#########################################################
+ ge_sgt_main_beam:0 "§M星河主炮§!"
+ ge_sgt_main_beam_DESC:0 "这是水银灯不知道从哪里得到的神秘主炮，这个玩意儿虽然很强，但是只能用在她的座驾上……"
+ ge_sgt_main_T_beam:"§M星河主炮PLUS§!"
+ ge_sgt_main_T_beam_DESC:"这是水银灯不知道从哪里得到的神秘主炮，这个玩意儿比那个星河更强，但依旧只能用在她的座驾上……"
+ ge_sgt_main_beam_1:0 "§M星河主炮-1号位§!"
+ ge_sgt_main_beam_1_DESC:0 "水银灯不知道从哪里得到的神秘主炮，这个玩意儿虽然很强，但是只能用在她的座驾上……"
+ ge_medium_stg_laser:0 "§M黑翎羽§!"
+ ge_medium_stg_laser_DESC:0 "这明明射出来的是激光，但是水银灯坚持认为这是羽毛动能弹，还直言声称很快这个激光特效就会换成真正的羽毛特效了……"
+ ge_small_stg_laser:0 "§M黑翎羽§!"
+ ge_small_stg_laser_DESC:0 "这明明射出来的是激光，但是水银灯坚持认为这是羽毛动能弹，还直言声称很快这个激光特效就会换成真正的羽毛特效了……"
+ ge_large_stg_laser:0 "§M黑翎羽§!"
+ ge_large_stg_laser_DESC:0 "这明明射出来的是激光，但是水银灯坚持认为这是羽毛动能弹，还直言声称很快这个激光特效就会换成真正的羽毛特效了……"
+ge_sgt_torpedo:0 "§M虚空炸弹§!"
+ge_sgt_torpedo_DESC:0 "§R警告，虚空隔绝减弱，同质体信息融合度正在上升。§!"
+ge_sgt_pd:0 "§M虚锋§!"
+ge_sgt_pd_DESC:0 "§M“这是陈老太爷教我的！”§!\n§M“陈老太爷是谁啊？……”§!"
+
+ ###
+
+ ge_sgt_normal_beam: "§P波能三门炮§!"
+ ge_sgt_normal_beam_DESC: "从希灵战舰的数据库中找到的一款宏伟的轴基武器，令人奇怪的是其使用的能量类型即不是希灵帝国的幽能，也不是王座上使用的能量。\n§P✟波门✟§!"
+ ge_normal_medium_laser: "§P重型波能副炮阵列§!"
+ ge_normal_medium_laser_DESC: "从希灵战舰的数据库中找到的一款重型主炮，不仅威力远超常规炮塔，而且还能以不完全充能模式实现提早发射。"
+ ge_normal_medium_2_laser: "§P战术波能副炮阵列§!"
+ ge_normal_medium_2_laser_DESC: "从希灵战舰的数据库中找到的一款中型主炮，不仅威力远超常规炮塔，而且还能以不完全充能模式实现提早发射。"
+ ge_normal_small_laser: "§P轻型波能副炮阵列§!"
+ ge_normal_small_laser_DESC: "从希灵战舰的数据库中找到的一款轻型主炮，不仅威力远超常规炮塔，而且还能以不完全充能模式实现提早发射。"
+ ge_normal_pd: "§P反胶子波束高射炮§!"
+ ge_normal_pd_DESC: "从希灵战舰的数据库中找到的一款量产型能量高射炮，其发射的异质波束可以无视防御。"
+
+
+ roz_iqt_gun:"§c逆变射流§!"
+ roz_iqt_gun_DESC:"大型武器适配的零件规格允许将激光器的谐振腔也用于能量储备。在能量转换时的多重逆反馈效应爆发出的能量洪流，若控制不当则足以撕裂时空。 ——《Starsector》-Polaris Prime"
+
+###########################################################
+
+Kirakishou_Blast: "心灵震爆"
+Kirakishou_Blast_DESC: "在空间极大的宇宙环境中用蔷薇藤曼来战斗显然十分不聪明，于是雪华绮晶便想到了这个简单粗暴但又不失华丽优雅的攻击方式。"
+
+
+
+
+
+
+
+
+##字体颜色代码
+##§W W白色
+##§R R红色
+##§L L暗金
+##§S S土黄
+##§H H金黄
+##§Y Y黄色
+##§G G绿色
+##§E E青色
+##§B B深蓝
+##§M M紫色
+##§g g灰色
+##§! 结束

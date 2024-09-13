@@ -1,0 +1,25 @@
+spriteTypes = {
+
+    #messages
+
+    spriteType = {
+        name = "GFX_roz_time_freeze"
+        texturefile = "gfx/interface/icons/toasts/toast_roz_time_freeze_1.dds"
+    }
+
+    spriteType = {
+        name = "GFX_council_agenda_void_core_boost_available"
+        texturefile = "gfx/interface/icons/toasts/toast_roz_agenda_void_core_boost_available.dds"
+    }
+
+    spriteType = {
+        name = "GFX_message_ROZ_GAL_SGT"
+        texturefile = "gfx/interface/icons/message/message_ROZ_GAL_SGT.dds"
+    }
+
+    spriteType = {
+        name = "GFX_message_ROZ_GAL_KRKS"
+        texturefile = "gfx/interface/icons/message/message_ROZ_GAL_KRKS.dds"
+    }
+
+}

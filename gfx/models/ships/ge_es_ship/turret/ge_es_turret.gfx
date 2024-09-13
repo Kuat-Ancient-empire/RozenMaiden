@@ -1,0 +1,59 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "SSV_M_beam_mesh"
+		file = "gfx/models/ships/ge_es_ship/turret/SSV_M_beam.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "MDL_Wpn_Vampirilis_Beam_Medium_03_nodeShape"
+			index = 0
+			texture_diffuse = "SSV_M_Beam_diffuse.dds"
+			texture_normal = "SSV_M_Beam_Normal.dds"
+			texture_specular = "SSV_M_Beam_specular.dds"
+			shader = "PdxMeshShip"
+		}		
+	}			
+	pdxmesh = {
+		name = "SSV_M_beam_1_mesh"
+		file = "gfx/models/ships/ge_es_ship/turret/SSV_M_beam_1.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "MDL_Wpn_Vampirilis_Beam_Medium_03_nodeShape"
+			index = 0
+			texture_diffuse = "SSV_M_Beam_diffuse.dds"
+			texture_normal = "SSV_M_Beam_Normal.dds"
+			texture_specular = "SSV_M_Beam_specular.dds"
+			shader = "PdxMeshShip"
+		}		
+	}
+	pdxmesh = {
+		name = "SSV_S_Beam_mesh"
+		file = "gfx/models/ships/ge_es_ship/turret/SSV_S_Beam.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "MDL_Wpn_Vampirilis_Beam_Small_03_nodeShape"
+			index = 0
+			texture_diffuse = "SSV_S_Beam_diffuse.dds"
+			texture_normal = "SSV_S_Beam_normal.dds"
+			texture_specular = "SSV_S_Beam_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SSV_S_Missile_mesh"
+		file = "gfx/models/ships/ge_es_ship/turret/SSV_S_Missile.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "MDL_Wpn_Vampirilis_Missile_Small_03_nodeShape"
+			index = 0
+			texture_diffuse = "SSV_S_missile_diffuse.dds"
+			texture_normal = "SSV_S_missile_normal.dds"
+			texture_specular = "SSV_S_missile_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

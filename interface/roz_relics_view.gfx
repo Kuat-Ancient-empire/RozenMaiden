@@ -1,0 +1,263 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_r_roz_stasis_field"
+        texturefile = "gfx/interface/icons/relics/r_roz_stasis_field.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_stasis_field_shine.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    #teaparty set
+    SpriteType = {
+        name = "GFX_r_roz_teaparty_set"
+        texturefile = "gfx/interface/icons/relics/r_roz_teaparty_set.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_teaparty_set.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    ###shinku no pa-to
+    SpriteType = {
+        name = "GFX_r_roz_shuukan_shoujonotsukurikata_vol1"
+        texturefile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol1.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol1.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    SpriteType = {
+        name = "GFX_r_roz_shuukan_shoujonotsukurikata_vol2"
+        texturefile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol2.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol2.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    SpriteType = {
+        name = "GFX_r_roz_shuukan_shoujonotsukurikata_vol3"
+        texturefile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol3.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol3.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    SpriteType = {
+        name = "GFX_r_roz_shuukan_shoujonotsukurikata_vol4"
+        texturefile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol4.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol4.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    SpriteType = {
+        name = "GFX_r_roz_shuukan_shoujonotsukurikata_vol5"
+        texturefile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol5.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol5.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    SpriteType = {
+        name = "GFX_r_roz_shuukan_shoujonotsukurikata_vol6"
+        texturefile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol6.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol6.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    SpriteType = {
+        name = "GFX_r_roz_shuukan_shoujonotsukurikata_vol7"
+        texturefile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol7.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol7.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    SpriteType = {
+        name = "GFX_r_roz_shuukan_shoujonotsukurikata_vol8"
+        texturefile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol8.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_週刊ー少女の作り方_vol8.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    SpriteType = {
+        name = "GFX_r_roz_ann"
+        texturefile = "gfx/interface/icons/relics/r_roz_ann.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_ann.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    SpriteType = {
+        name = "GFX_r_roz_Chronos_Label"
+        texturefile = "gfx/interface/icons/relics/r_roz_Chronos_Label.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_Chronos_Label.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    SpriteType = {
+        name = "GFX_r_roz_orgel"
+        texturefile = "gfx/interface/icons/relics/r_roz_orgel.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_orgel.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+    SpriteType = {
+        name = "GFX_r_roz_extrinsic_xinlin_crystal"
+        texturefile = "gfx/interface/icons/relics/r_roz_extrinsic_xinlin_crystal.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/relics/r_roz_extrinsic_xinlin_crystal.dds"
+            animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 11				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+
+}

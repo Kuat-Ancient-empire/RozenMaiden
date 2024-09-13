@@ -1,0 +1,545 @@
+objectTypes = {
+	#pdxmesh = {
+	#	name = "2_mesh"
+	#	file = "gfx/models/ships/ge_es_ship/2.mesh"
+	#	scale = 1.0
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_Back_nodeShape"
+	#		index = 0
+	#		texture_diffuse = "SS_Vampirilis_Large_ID6_AlbedoTransparency.dds"
+	#		texture_normal = "ID6_normal.dds"
+	#		texture_specular = "ID6_specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_Back_nodeShape"
+	#		index = 0
+	#		texture_diffuse = "SS_Vampirilis_Large_ID6_AlbedoTransparency.dds"
+	#		texture_normal = "ID1_normal.dds"
+	#		texture_specular = "ID1_specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#}
+	#pdxmesh = {
+	#	name = "ID0_locator_mesh"
+	#	file = "gfx/models/ships/ge_es_ship/ID0.mesh"
+	#	scale = 1.0
+	#
+	#	meshsettings = {
+	#		shader = "PdxMeshShip"
+	#	}
+	#}
+	#pdxmesh = {
+	#	name = "ID1_mesh"
+	#	file = "gfx/models/ships/ge_es_ship/ID1.mesh"
+	#	scale = 1.0
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_BackShape"
+	#		index = 0
+	#		texture_diffuse = "SS_Vampirilis_Large_ID1_AlbedoTransparency.dds"
+	#		texture_normal = "ID1_normal.dds"
+	#		texture_specular = "ID1_specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#}
+	#pdxmesh = {
+	#	name = "ID2_mesh"
+	#	file = "gfx/models/ships/ge_es_ship/ID2.mesh"
+	#	scale = 1.0
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_Back_nodeShape"
+	#		index = 0
+	#		texture_diffuse = "SS_Vampirilis_Large_ID2_AlbedoTransparency.dds"
+	#		texture_normal = "ID2_normal.dds"
+	#		texture_specular = "ID2_specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#}
+	#pdxmesh = {
+	#	name = "ID3_mesh"
+	#	file = "gfx/models/ships/ge_es_ship/ID3.mesh"
+	#	scale = 1.0
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_Back_nodeShape"
+	#		index = 0
+	#		texture_diffuse = "SS_Vampirilis_Large_ID3_AlbedoTransparency.dds"
+	#		texture_normal = "ID3_normal.dds"
+	#		texture_specular = "ID3_specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#}
+	#pdxmesh = {
+	#	name = "ID4_mesh"
+	#	file = "gfx/models/ships/ge_es_ship/ID4.mesh"
+	#	scale = 1.0
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_Back_nodeShape"
+	#		index = 0
+	#		texture_diffuse = "SS_Vampirilis_Large_ID4_AlbedoTransparency.dds"
+	#		texture_normal = "ID4_normal.dds"
+	#		texture_specular = "ID4_specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#}
+	#pdxmesh = {
+	#	name = "ID5_mesh"
+	#	file = "gfx/models/ships/ge_es_ship/ID5.mesh"
+	#	scale = 1.0
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_Back_nodeShape"
+	#		index = 0
+	#		texture_diffuse = "SS_Vampirilis_Large_ID5_AlbedoTransparency.dds"
+	#		texture_normal = "ID5_normal.dds"
+	#		texture_specular = "ID5_specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#}
+	#pdxmesh = {
+	#	name = "ID6_mesh"
+	#	file = "gfx/models/ships/ge_es_ship/ID6.mesh"
+	#	scale = 1.0
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_Back_nodeShape"
+	#		index = 0
+	#		texture_diffuse = "SS_Vampirilis_Large_ID6_AlbedoTransparency.dds"
+	#		texture_normal = "ID6_normal.dds"
+	#		texture_specular = "ID6_specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#}
+	pdxmesh = {
+		name = "SSVL_mesh"
+		file = "gfx/models/ships/ge_es_ship/SSV_L.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 0
+			# texture_diffuse = "SSV_L_ID6_diffuse.dds"
+			# texture_normal = "ID6_normal.dds"
+			# texture_specular = "ID6_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 1
+			# texture_diffuse = "SSV_L_ID3_diffuse.dds"
+			# texture_normal = "ID3_normal.dds"
+			# texture_specular = "ID3_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 2
+			# texture_diffuse = "SSV_L_ID4_diffuse.dds"
+			# texture_normal = "ID4_normal.dds"
+			# texture_specular = "ID4_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 3
+			# texture_diffuse = "SSV_L_ID2_diffuse.dds"
+			# texture_normal = "ID2_normal.dds"
+			# texture_specular = "ID2_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 4
+			# texture_diffuse = "SSV_L_ID5_diffuse.dds"
+			# texture_normal = "ID5_normal.dds"
+			# texture_specular = "ID5_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 5
+			# texture_diffuse = "SSV_L_ID1_diffuse.dds"
+			# texture_normal = "ID1_normal.dds"
+			# texture_specular = "ID1_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	#
+	#pdxmesh = {
+	#	name = "SSV_L1_mesh"
+	#	file = "gfx/models/ships/ge_es_ship/SSV_L1.mesh"
+	#	scale = 1.0
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_BackShape"
+	#		index = 0
+	#		texture_diffuse = "SS_VampirilisPathfinders_Large_ID6_AlbedoTransparency.dds"
+	#		texture_normal = "ID6_normal.dds"
+	#		texture_specular = "SS_VampirilisPathfinders_Large_ID6_Specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_BackShape"
+	#		index = 1
+	#		texture_diffuse = "SS_VampirilisPathfinders_Large_ID3_AlbedoTransparency.dds"
+	#		texture_normal = "ID3_normal.dds"
+	#		texture_specular = "SS_VampirilisPathfinders_Large_ID3_Specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_BackShape"
+	#		index = 2
+	#		texture_diffuse = "SS_VampirilisPathfinders_Large_ID4_AlbedoTransparency.dds"
+	#		texture_normal = "ID4_normal.dds"
+	#		texture_specular = "SS_VampirilisPathfinders_Large_ID4_Spec.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_BackShape"
+	#		index = 3
+	#		texture_diffuse = "SS_VampirilisPathfinders_Large_ID2_AlbedoTransparency.dds"
+	#		texture_normal = "ID2_normal.dds"
+	#		texture_specular = "SS_VampirilisPathfinders_Large_ID2_Specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_BackShape"
+	#		index = 4
+	#		texture_diffuse = "SS_VampirilisPathfinders_Large_ID5_AlbedoTransparency.dds"
+	#		texture_normal = "ID5_normal.dds"
+	#		texture_specular = "SS_VampirilisPathfinders_Large_ID5_Specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_BackShape"
+	#		index = 5
+	#		texture_diffuse = "SS_VampirilisPathfinders_Large_ID1_AlbedoTransparency.dds"
+	#		texture_normal = "ID1_normal.dds"
+	#		texture_specular = "SS_VampirilisPathfinders_Large_ID1_Specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#}
+	#
+	#pdxmesh = {
+	#	name = "SSV_LB_mesh"
+	#	file = "gfx/models/ships/ge_es_ship/SSV_L1.mesh"
+	#	scale = 1.0
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_BackShape"
+	#		index = 0
+	#		texture_diffuse = "SSV_L_ID6B_diffuse.dds"
+	#		texture_normal = "ID6_normal.dds"
+	#		texture_specular = "SS_VampirilisPathfinders_Large_ID6_Specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_BackShape"
+	#		index = 1
+	#		texture_diffuse = "SSV_L_ID3B_diffuse.dds"
+	#		texture_normal = "ID3_normal.dds"
+	#		texture_specular = "SS_VampirilisPathfinders_Large_ID3_Specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_BackShape"
+	#		index = 2
+	#		texture_diffuse = "SSV_L_ID4B_diffuse.dds"
+	#		texture_normal = "ID4_normal.dds"
+	#		texture_specular = "SS_VampirilisPathfinders_Large_ID4_Spec.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_BackShape"
+	#		index = 3
+	#		texture_diffuse = "SSV_L_ID2B_diffuse.dds"
+	#		texture_normal = "ID2_normal.dds"
+	#		texture_specular = "SS_VampirilisPathfinders_Large_ID2_Specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_BackShape"
+	#		index = 4
+	#		texture_diffuse = "SSV_L_ID5B_diffuse.dds"
+	#		texture_normal = "ID5_normal.dds"
+	#		texture_specular = "SS_VampirilisPathfinders_Large_ID5_Specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#
+	#	meshsettings = {
+	#		name = "SS_Vampirilis_Hull_BackShape"
+	#		index = 5
+	#		texture_diffuse = "SSV_L_ID1B_diffuse.dds"
+	#		texture_normal = "ID1_normal.dds"
+	#		texture_specular = "SS_VampirilisPathfinders_Large_ID1_Specular.dds"
+	#		shader = "PdxMeshShip"
+	#	}
+	#}
+
+	pdxmesh = {
+		name = "Black_Infinite_Large_ship_mesh"
+		file = "gfx/models/ships/ge_es_ship/SSV/SSV_ILS.mesh"
+		scale = 1.0
+		animation = { id = "idle"			type = "ROZ_Infinite_Large_ship_idle_animation" }
+		animation = { id = "open"			type = "ROZ_Infinite_Large_ship_open_animation" }
+		animation = { id = "opening"		type = "ROZ_Infinite_Large_ship_opening_animation" }
+		animation = { id = "clossing"		type = "ROZ_Infinite_Large_ship_clossing_animation" }
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_FrontShape"
+			index = 0
+			texture_diffuse = "SSV_L_ID1B_diffuse.dds"
+			#texture_normal = "SSV_L1_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID1_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID1_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_FrontShape"
+			index = 1
+			texture_diffuse = "SSV_L_ID4B_diffuse.dds"
+			#texture_normal = "SSV_L4_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID4_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID4_Spec.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_FrontShape"
+			index = 2
+			texture_diffuse = "SSV_L_ID2B_diffuse.dds"
+			#texture_normal = "SSV_L2_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID2_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID2_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_FrontShape"
+			index = 3
+			texture_diffuse = "SSV_L_ID3B_diffuse.dds"
+			#texture_normal = "SSV_L3_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID3_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID3_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_FrontShape"
+			index = 4
+			texture_diffuse = "SSV_L_ID6B_diffuse.dds"
+			#texture_normal = "SSV_L6_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID6_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID6_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 0
+			texture_diffuse = "SSV_L_ID6B_diffuse.dds"
+			#texture_normal = "SSV_L6_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID6_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID6_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 1
+			texture_diffuse = "SSV_L_ID3B_diffuse.dds"
+			#texture_normal = "SSV_L3_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID3_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID3_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 2
+			texture_diffuse = "SSV_L_ID4B_diffuse.dds"
+			#texture_normal = "SSV_L4_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID4_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID4_Spec.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 3
+			texture_diffuse = "SSV_L_ID2B_diffuse.dds"
+			#texture_normal = "SSV_L2_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID2_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID2_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 4
+			texture_diffuse = "SSV_L_ID5B_diffuse.dds"
+			#texture_normal = "SSV_L5_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID5_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID5_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 5
+			texture_diffuse = "SSV_L_ID1B_diffuse.dds"
+			#texture_normal = "SSV_L1_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID1_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID1_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "White_Infinite_Large_ship_mesh"
+		file = "gfx/models/ships/ge_es_ship/SSV/SSV_ILS.mesh"
+		scale = 1.0
+		animation = { id = "idle"			type = "ROZ_Infinite_Large_ship_idle_animation" }
+		animation = { id = "open"			type = "ROZ_Infinite_Large_ship_open_animation" }
+		animation = { id = "opening"		type = "ROZ_Infinite_Large_ship_opening_animation" }
+		animation = { id = "clossing"		type = "ROZ_Infinite_Large_ship_clossing_animation" }
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_FrontShape"
+			index = 0
+			texture_diffuse = "SS_VampirilisPathfinders_Large_ID1_AlbedoTransparency.dds"
+			#texture_normal = "SSV_L1_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID1_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID1_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_FrontShape"
+			index = 1
+			texture_diffuse = "SS_VampirilisPathfinders_Large_ID4_AlbedoTransparency.dds"
+			#texture_normal = "SSV_L4_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID4_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID4_Spec.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_FrontShape"
+			index = 2
+			texture_diffuse = "SS_VampirilisPathfinders_Large_ID2_AlbedoTransparency.dds"
+			#texture_normal = "SSV_L2_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID2_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID2_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_FrontShape"
+			index = 3
+			texture_diffuse = "SS_VampirilisPathfinders_Large_ID3_AlbedoTransparency.dds"
+			#texture_normal = "SSV_L3_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID3_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID3_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_FrontShape"
+			index = 4
+			texture_diffuse = "SS_VampirilisPathfinders_Large_ID6_AlbedoTransparency.dds"
+			#texture_normal = "SSV_L6_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID6_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID6_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 0
+			texture_diffuse = "SS_VampirilisPathfinders_Large_ID6_AlbedoTransparency.dds"
+			#texture_normal = "SSV_L6_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID6_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID6_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 1
+			texture_diffuse = "SS_VampirilisPathfinders_Large_ID3_AlbedoTransparency.dds"
+			#texture_normal = "SSV_L3_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID3_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID3_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 2
+			texture_diffuse = "SS_VampirilisPathfinders_Large_ID4_AlbedoTransparency.dds"
+			#texture_normal = "SSV_L4_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID4_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID4_Spec.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 3
+			texture_diffuse = "SS_VampirilisPathfinders_Large_ID2_AlbedoTransparency.dds"
+			#texture_normal = "SSV_L2_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID2_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID2_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 4
+			texture_diffuse = "SS_VampirilisPathfinders_Large_ID5_AlbedoTransparency.dds"
+			#texture_normal = "SSV_L5_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID5_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID5_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Vampirilis_Hull_BackShape"
+			index = 5
+			texture_diffuse = "SS_VampirilisPathfinders_Large_ID1_AlbedoTransparency.dds"
+			#texture_normal = "SSV_L1_Normal.dds"
+			texture_normal = "SS_Vampirilis_Large_ID1_N.dds"
+			texture_specular = "SS_VampirilisPathfinders_Large_ID1_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+}

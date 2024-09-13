@@ -1,0 +1,543 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ge_sgt_site"
+		texturefile = "gfx/event_pictures/ge_sgt_site.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_sgt_site_stage1"
+		texturefile = "gfx/event_pictures/ge_sgt_site_stage1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_sgt_site_stage2"
+		texturefile = "gfx/event_pictures/ge_sgt_site_stage2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_sgt_site_stage3"
+		texturefile = "gfx/event_pictures/ge_sgt_site_stage3.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_sgt_site_stage4"
+		texturefile = "gfx/event_pictures/ge_sgt_site_stage4.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_sgt_site_stage5"
+		texturefile = "gfx/event_pictures/ge_sgt_site_stage5.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_sgt_site_stage6"
+		texturefile = "gfx/event_pictures/ge_sgt_site_stage6.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_lple_run"
+		texturefile = "gfx/event_pictures/ge_lple_run.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_sgt_option"
+		texturefile = "gfx/event_pictures/ge_sgt_option.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_sgt_wake"
+		texturefile = "gfx/event_pictures/ge_sgt_wake.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_sgt_oath"
+		texturefile = "gfx/event_pictures/ge_sgt_oath.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_research_event1"
+		texturefile = "gfx/event_pictures/ge_research_event1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_ap_ge_0"
+		texturefile = "gfx/event_pictures/evt_ap_ge_0.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_ap_ge_1"
+		texturefile = "gfx/event_pictures/evt_ap_ge_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_ap_ge_2"
+		texturefile = "gfx/event_pictures/evt_ap_ge_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_rz_start"
+		texturefile = "gfx/event_pictures/ge_rz_start.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_rz_start2"
+		texturefile = "gfx/event_pictures/roz_evt_sgt_start2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_rz_start3"
+		texturefile = "gfx/event_pictures/roz_evt_sgt_start3.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+
+
+	spriteType = {
+		name = "GFX_ge_sgt_army1"
+		texturefile = "gfx/event_pictures/ge_sgt_army_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_sgt_army2"
+		texturefile = "gfx/event_pictures/ge_sgt_army_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ge_sgt_trait"
+		texturefile = "gfx/interface/icons/traits/trait_cute_1_small.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_roz_sgt_flagship_dark"
+		texturefile = "gfx/event_pictures/roz_sgt_flagship_dark.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_roz_sgt_wedding"
+		texturefile = "gfx/event_pictures/roz_sgt_wedding.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_scholarium_cache_engineering"
+		texturefile = "gfx/event_pictures/scholarium_cache_engineering.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_space_1"
+		texturefile = "gfx/event_pictures/roz_space_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_imperial"
+		texturefile = "gfx/event_pictures/roz_imperial.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_barren_planet_event"
+		textureFile = "gfx/event_pictures/roz_barren_planet_event.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_san_check_1"
+		textureFile = "gfx/event_pictures/roz_san_check_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_san_check_2"
+		textureFile = "gfx/event_pictures/roz_san_check_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_evt_planet_mask"
+		textureFile = "gfx/event_pictures/roz_evt_planet_mask.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_evt_relic_hive"
+		textureFile = "gfx/event_pictures/roz_evt_relic_hive.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_evt_museum_hive"
+		textureFile = "gfx/event_pictures/roz_evt_museum_hive.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_evt_Great_Crusade_II"
+		textureFile = "gfx/event_pictures/roz_evt_Great_Crusade_II.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_roz_evt_revolution_1"
+		textureFile = "gfx/event_pictures/roz_evt_revolution_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_evt_solidarity_1"
+		textureFile = "gfx/event_pictures/roz_evt_solidarity_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_evt_subspace_1"
+		textureFile = "gfx/event_pictures/roz_evt_subspace_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_evt_Exalted"
+		textureFile = "gfx/event_pictures/roz_evt_Exalted.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_evt_Exalted_2"
+		textureFile = "gfx/event_pictures/roz_evt_Exalted_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_evt_Exalted_3"
+		textureFile = "gfx/event_pictures/roz_evt_Exalted_3.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_evt_40k_story_end"
+		textureFile = "gfx/event_pictures/roz_evt_40k_story_end.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_evt_monumental"
+		textureFile = "gfx/event_pictures/roz_evt_monumental.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_evt_letum_1"
+		textureFile = "gfx/event_pictures/roz_evt_letum_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_evt_letum_2"
+		textureFile = "gfx/event_pictures/roz_evt_letum_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_sgt_start_settings"
+		textureFile = "gfx/event_pictures/roz_evt_sgt_start_settings.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_sgt_main_room_evt"
+		textureFile = "gfx/event_pictures/roz_sgt_main_room_evt.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_sgt_main_room_evt_2"
+		textureFile = "gfx/event_pictures/roz_sgt_main_room_evt_2.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_Nfield_constructure_project"
+		textureFile = "gfx/event_pictures/roz_evt_Nfield_constructure_plans.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_Nfield_military_base_project"
+		textureFile = "gfx/event_pictures/roz_evt_Nfield_base.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_Nfield_military_base_project_complete"
+		textureFile = "gfx/event_pictures/roz_evt_Nfield_base_complete.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_uproar"
+		textureFile = "gfx/event_pictures/roz_evt_uproar.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_uproar_2"
+		textureFile = "gfx/event_pictures/roz_evt_uproar_2.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_hostile_UVA_approaching"
+		textureFile = "gfx/event_pictures/roz_evt_hostile_UVA_approaching.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_Nfeild_lost"
+		textureFile = "gfx/event_pictures/roz_evt_Nfeild_lost.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_krks_chaos"
+		textureFile = "gfx/event_pictures/roz_evt_krks_chaos.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_black_dragon"
+		textureFile = "gfx/event_pictures/roz_evt_black_dragon.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_krks_time_freeze"
+		textureFile = "gfx/event_pictures/roz_evt_krks_time_freeze.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_krks_horror"
+		textureFile = "gfx/event_pictures/roz_evt_krks_horror.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_krks_tiyanki"
+		textureFile = "gfx/event_pictures/roz_evt_krks_tiyanki.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_lpls_letter"
+		textureFile = "gfx/event_pictures/roz_evt_lpls_letter.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_sgt_sleeping"
+		textureFile = "gfx/event_pictures/roz_evt_sgt_sleeping.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_krks_dl_select"
+		textureFile = "gfx/event_pictures/roz_evt_krks_dl_select.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_tea_party_invitation"
+		textureFile = "gfx/event_pictures/roz_evt_tea_party_invitation.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_outland"
+		textureFile = "gfx/event_pictures/roz_evt_outland.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_outland_planet"
+		textureFile = "gfx/event_pictures/roz_evt_outland_planet.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_dolls_evtchain_1"
+		textureFile = "gfx/event_pictures/roz_evt_dolls_evtchain_1.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_dolls_evtchain_2"
+		textureFile = "gfx/event_pictures/roz_evt_dolls_evtchain_2.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_dolls_evtchain_3"
+		textureFile = "gfx/event_pictures/roz_evt_dolls_evtchain_3.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_burn"
+		textureFile = "gfx/event_pictures/roz_evt_burn.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_shoujonotsukurikata"
+		textureFile = "gfx/event_pictures/roz_evt_shoujonotsukurikata.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_shoujonotsukurikata_vol1"
+		textureFile = "gfx/event_pictures/roz_evt_shoujonotsukurikata_vol1.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_shinku&suigintou"
+		textureFile = "gfx/event_pictures/roz_evt_shinku&suigintou.dds"
+		#masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_fall_and_signal"
+		textureFile = "gfx/event_pictures/evt_roz_fall_and_signal.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_torsion_space"
+		textureFile = "gfx/event_pictures/evt_roz_torsion_space.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_outland_decision"
+		textureFile = "gfx/event_pictures/evt_roz_outland_decision.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_outland_thorough"
+		textureFile = "gfx/event_pictures/evt_roz_outland_thorough.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_outland_choose"
+		textureFile = "gfx/event_pictures/evt_roz_outland_choose.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_outland_altar"
+		textureFile = "gfx/event_pictures/evt_roz_outland_altar.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_outland_end1"
+		textureFile = "gfx/event_pictures/evt_roz_outland_end1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_clouds_of_undergrand"
+		textureFile = "gfx/event_pictures/evt_roz_clouds_of_undergrand.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_laminating_world"
+		textureFile = "gfx/event_pictures/evt_roz_laminating_world.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+objectTypes = {
+	pdxmesh = {
+		name = "ITQ_mesh"
+		file = gfx/models/ships/roz_ske/IQT/ITQ.mesh
+		scale = 15.0
+		animation = { id = "idle"		type = "IQT_idle_animation" }
+
+		meshsettings = {
+			name = "FBXASC04918Shape"
+			index = 0
+			texture_diffuse = "race2_m_razer_d.dds"
+			texture_normal = "race2_m_razer_nm.dds"
+			texture_specular = "race2_m_razer_msk_sc.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "FBXASC04909Shape"
+			index = 0
+			texture_diffuse = "race2_m_razer_d.dds"
+			texture_normal = "race2_m_razer_nm.dds"
+			texture_specular = "race2_m_razer_msk_sc.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

@@ -1,0 +1,76 @@
+﻿l_english:
+
+###Weapons
+ tech_ge_pd:0 "§EVoid Point Defense"
+ tech_ge_pd_desc:0 "这种点防御军备能快速打击来袭舰载机和弹头。"
+ tech_ge_xl_beam:0 "§EChaotic Avulsion Beam"
+ tech_ge_xl_beam_desc:0 "狂暴的能量可以瞬间毁伤敌舰的装甲和船体结构（对精罗人士伤害提升395倍）"
+ tech_ge_t_beam:0 "§ERemodeling Chaos"
+ tech_ge_t_beam_desc:0 "完全取消虚空反应堆出力限制，将浩瀚的能量禁锢于狭小的引力场中，其中蕴含的毁灭性力量足以开天辟地。"
+ tech_ge_laser_cannon:0 "§EEnergy-gathered Chaotic Laser"
+ tech_ge_laser_cannon_desc:0 "混沌撕裂炮的轻量化版本，受出力问题，其输出能力有所下调。"
+ tech_ge_kinetic_gun:0 "§EVoid Trap Emitter"
+ tech_ge_kinetic_gun_desc:0 "发射前请检查虚空侵蚀指数。""
+ tech_ge_energy_torpedo:0 "Chaotic Energy Starburst"
+ tech_ge_energy_torpedo_desc:0 "发射一团外域概念干涉实体，瞬间使敌方护盾发生器过载，无视大部分装甲防护直击舰体结构。"
+tech_ge_strike_craft_bomber:0 "§LLion Heart§!"
+tech_ge_strike_craft_bomber_desc:0 "这种轰炸机拥有大当量的虚空炸弹，能擦除敌方战舰的大量结构。"
+tech_ge_strike_craft_fighter:0 "§LKing Snake§!"
+tech_ge_strike_craft_fighter_desc:0 "这种歼击机搭载了轻型虚空点防御炮，能抹除来袭舰载机和弹头。"
+tech_ge_strike_craft_xuefeng:0 "§LBattle Demon - Snow Wind§!"
+tech_ge_strike_craft_xuefeng_desc:0 "这些特种轰炸机虽然编队少，但是机动十分出色，其搭载的虚空鱼雷能轻易扭曲敌方战舰。"
+tech_ge_bhmissile:0 "§MBlack Hole Missile§!"
+tech_ge_bhmissile_desc:0 "黑洞打击是在常规宇宙空间作战中的优解"
+tech_ge_wtorpedo:0 "§MWorld Torpedo§!"
+tech_ge_wtorpedo_desc:0 "天地乖离，开辟之星。"
+tech_ge_planet_killer:0 "§RDeath meteor§!"
+tech_ge_planet_killer_desc:0 "死亡即是怜悯。\n§R=====This weapon is not subject to any provision=====§!"
+
+
+###utility
+ GE_tech_reactor:0 "§EVoid Reactor"
+ GE_tech_reactor_desc:0 "§BInspired by the research and exploration of N-field, this reactor is the interface for us to break the limit of universe. Strictly speaking, it is not a void reactor, but should be called a void decay reactor. However, the Central Academy of Sciences has no objection to this. We can use it to §R虚无混沌虚无混沌虚混沌无氵-》*￥%！&*#……&*"
+ tech_ge_sf_armor:0 "§EIron curtain of gravitation§!"
+ tech_ge_sf_armor_desc:0 "项目总工程师：“继续加力！在这玩意儿的没坍缩成黑洞之前给我往死里压缩！”"
+ tech_ge_shield:0 "§EGravitational Twisting Device"
+ tech_ge_shield_desc:0 "无限的能源供应着引力折射器形成极其坚韧的立场护盾，同时空间中游离的虚空衰变能量可以侵蚀来袭的攻击。"
+ tech_ge_warp_drive:0 "§EPSC"
+ tech_ge_warp_drive_desc:0 "Programmable Space Controller."
+ tech_ge_thruster:0 "§ESpatial shifter"
+ tech_ge_thruster_desc:0 "我们已经可以抛弃传统的工质推进器了，直接操控空间坐标参数就可实现亚光速移动，至于原来的喷口只是大型RGB而已。（ps：超过1.644光年距离的位移有概率使时空撕裂发生在船体内，最严重的会导致船员穿越回过去反清复明。因此总设计师建议最好不要拿这玩意儿来当FTL用）"
+ tech_ge_computer:0 "§EParadox"
+ tech_ge_computer_desc:0 "§RLogical failure, trying to return to backup time node."
+ tech_ge_rds:0 "§ERCS"
+ tech_ge_rds_desc:0 "Improve the compatibility of the rules of the multiverse of our ships. Even if we pass through other universes, we can avoid the exclusion of those."
+ tech_ge_sensor:0 "§EDimensional Information Matrix"
+ tech_ge_sensor_desc:0 "The new void sensor is not an antique. Our tentacles have extended to a higher dimension."
+ tech_ge_cb:0 "§RChaos Booster"
+ tech_ge_cb_desc:0 "§RAttaching the energy of the void reactor to shipborne weapons is not safe, but it can make our offensive invincible. "
+ tech_ge_shippart_titian_aura:0 "§Rknowledge of the multiverse"
+ tech_ge_shippart_titian_aura_desc:0 "We have got rid of the heat death, and the universe can no longer limit our journey."
+ 
+ ge_flagship_slot:0 "Void Flagship Core"
+
+ 
+###tech
+GE_tech_default_reactor:0 "Space station reactor"
+GE_tech_default_reactor_desc:0 "The reactor used in the resource space station is designed with a large amount of redundant power in order to supply energy to the means of production."
+
+###building
+
+ 
+
+###Doff
+
+#####section
+tech_ge_section:0 "Next generation ship section"
+tech_ge_section_desc:0 "With the exaggerated energy output of the void reactor, our designers can finally make drastic innovations to the existing space facilities and ships, and the firepower of the new generation of frigates has even reached the level of the old cruisers! At the same time, our designers also prepared an great gift for the space forces - Gungnir. "
+
+
+ = :0 ""
+_desc = :0 ""
+
+
+
+
+

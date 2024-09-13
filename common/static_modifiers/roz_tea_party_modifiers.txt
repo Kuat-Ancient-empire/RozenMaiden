@@ -1,0 +1,136 @@
+
+roz_2nd_tp_modifier = {
+    pop_happiness = 0.15
+    country_produces_mult = 0.10
+    pop_category_rulers_upkeep_mult = 0.20
+}
+
+
+roz_tp_101_modifier = {
+    country_food_produces_mult = 0.15
+}
+
+roz_tp_102_modifier = {
+    icon = gfx/interface/icons/modifiers/mod_roz_yakult.dds
+    planet_stability_add = 10
+    pop_happiness = 0.10
+    country_unity_produces_mult = 0.2
+}
+
+roz_tp_random_modifier_1 = {
+    country_produces_mult = 0.25
+    planet_jobs_upkeep_mult = 0.25
+}
+
+roz_tp_random_modifier_2 = {
+    ship_weapon_damage = 0.25
+    ship_fire_rate_mult = 0.25
+    ship_speed_mult = -0.25
+}
+
+#超光
+#desc:
+#光子的速度和能量已被人为增加，这对太阳能发电是一个福音。
+roz_tp_random_modifier_3 = {
+    country_energy_produces_mult = 1
+    empire_size_mult = -0.5
+    weapon_type_energy_weapon_damage_mult = 0.5
+    ship_shield_mult = 0.5
+}
+
+#name:
+#时间加速
+#desc:
+#这个星球已经滑入了一个略有不同的时间流
+roz_tp_random_modifier_4 = {
+    icon = gfx/interface/icons/planet_modifiers/pm_rejuvenation.dds
+    icon_frame = 1
+    planet_jobs_produces_mult = 0.1
+    pop_growth_speed = 0.1
+    planet_pop_assembly_mult = 0.1
+    planet_building_build_speed_mult = 0.1
+    planet_jobs_upkeep_mult = 0.1
+}
+
+roz_tp_random_modifier_5 = {
+    planet_stability_add = 10
+    pop_happiness = 0.05
+    pop_ethics_shift_speed_mult = 1.0
+    pop_government_ethic_attraction = 1.0
+}
+
+#name:
+#稳定超导
+#desc:
+#我们对现实进行编辑，改进了我们的超导材料
+roz_tp_random_modifier_6 = {
+    planet_technician_energy_produces_add = 2
+    country_physics_research_produces_mult = 0.1
+    country_society_research_produces_mult = 0.1
+    country_engineering_research_produces_mult = 0.1
+}
+
+#name:
+#强化教育
+roz_tp_random_modifier_7 = {
+    icon = "gfx/interface/icons/modifiers/mod_energy_upkeep_add.dds"
+    planet_researchers_upkeep_mult = -0.5
+    country_energy_produces_mult = -0.15
+}
+
+#name:
+#过度生长
+roz_tp_random_modifier_8 = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_overgrowth.dds"
+    icon_frame = 2
+    planet_jobs_food_produces_mult = 0.25
+    planet_housing_mult = -0.1
+}
+
+#name:
+#改进舰队后勤
+#desc:
+#提升效率的作用绝对不容小视：优化船坞的产出，我们的扩张将会因此变得更加迅捷。
+roz_tp_random_modifier_9 = {
+    shipclass_military_build_speed_mult = 0.25
+    starbase_shipyard_build_cost_mult = -0.1
+}
+
+#name:
+#技术进步
+#desc:
+#每一个技术研发领域都取得了巨大的进展。
+roz_tp_random_modifier_10 = {
+    country_engineering_research_produces_mult = 0.13
+    country_physics_research_produces_mult = 0.13
+    country_society_research_produces_mult = 0.13
+}
+
+#name:
+#万众之音
+roz_tp_random_modifier_11 = {
+    shipclass_starbase_damage_mult = 0.5
+    shipclass_starbase_hull_mult = 0.5
+    shipclass_military_station_damage_mult = 0.5
+    shipclass_military_station_hull_mult = 0.5
+}
+
+#name:
+#多元设计
+roz_tp_random_modifier_12 = {
+    country_produces_mult = 0.05
+    country_consumer_goods_produces_mult = 0.1
+    planet_jobs_specialist_produces_mult = 0.1
+    pop_happiness = 0.1
+}
+
+#name:
+#时髦的关税
+roz_tp_random_modifier_13 = {
+    station_observers_energy_produces_add = 30
+}
+
+
+
+
+

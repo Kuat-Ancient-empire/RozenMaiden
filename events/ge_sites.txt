@@ -1,0 +1,1737 @@
+namespace = ge_sites
+
+country_event = {
+	id = ge_sites.9999
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		country_event = {
+			id = ge_sites.1
+			days = 6
+		}
+		set_country_flag = ge_start_flag
+	}
+}
+
+
+#####参考自臭鼬坟的代码
+country_event = {
+	id = ge_sites.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		is_fallen_empire = no
+	}
+	immediate = {
+		#generate_sgt_site_on_game_start = yes
+		random_planet_within_border = {
+			limit = {
+				space_owner = {
+					is_fallen_empire = no
+				}
+			}
+			weights = {
+				base = 1
+				modifier = {
+					factor = 100
+					is_capital = yes
+					space_owner = {
+						is_fallen_empire = no
+					}
+				}
+			}
+			solar_system = {
+				closest_system = {
+					min_steps = 0
+					max_steps = 17
+					use_bypasses = yes
+					limit = {
+						NOT = {
+							has_star_flag = ge_suigintou_site_counted
+						}
+						#_禁止同星系生成
+						has_owner = no
+						has_access_fleet = root
+						any_system_planet = {
+							has_owner = no
+							is_colony = no
+							has_anomaly = no
+							NOR = {
+								exists = archaeological_site
+								has_planet_flag = hatchling_egg
+							}
+							OR = {
+								is_planet_class = pc_molten
+								is_planet_class = pc_barren
+								is_planet_class = pc_barren_cold
+								is_planet_class = pc_toxic
+								is_planet_class = pc_frozen
+								is_planet_class = pc_nuked
+							}
+						}
+					}
+					this = {
+						set_star_flag = ge_suigintou_site_star_flag
+					}
+					set_timed_star_flag = {
+						flag = ge_suigintou_site_counted
+						days = 1
+					}
+					#_[挖掘地sstm隔离debug]				
+					random_system_planet = {
+						limit = {
+							has_owner = no
+							is_colony = no
+							has_anomaly = no
+							NOR = {
+								exists = archaeological_site
+								has_planet_flag = hatchling_egg
+							}
+							OR = {
+								is_planet_class = pc_molten
+								is_planet_class = pc_barren
+								is_planet_class = pc_barren_cold
+								is_planet_class = pc_toxic
+								is_planet_class = pc_frozen
+								is_planet_class = pc_nuked
+							}
+						}
+						set_name = "NAME_ge_sgt_site_planet"						#_星球改名
+						change_pc = pc_black_hole
+						set_planet_size = 1
+						clear_deposits = yes
+						#add_deposit = ge_sgt_depo	#_添加deposit
+						set_planet_flag = ge_planet_flag_sgt@root
+						create_archaeological_site = ge_sgt_site
+						root = {
+							set_country_flag = ge_sgt_site_owner_flag_for_multiplayer
+						}
+					}
+				}
+			}
+		}
+
+
+
+		hidden_effect = {
+
+		}
+	}
+}
+
+country_event = {	###传说（背景铺垫）
+	id = ge_sites.2
+	title = "ge_sites.2.name"
+	desc = "ge_sites.2.desc"
+	picture = GFX_ge_rz_start
+	is_triggered_only = yes
+	option = {
+		name = ge_sites.2.aa
+		default_hide_option = yes
+	}
+ }
+
+country_event = {
+	id = ge_sites.3
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		every_system = {
+			limit = {
+				has_star_flag = ge_suigintou_site_star_flag
+			}
+			create_starbase = {
+				size = starbase_outpost
+				effect = {
+					set_owner = root
+				}
+			}			
+		}
+		#
+		if = {
+			limit = { always = no }
+			set_country_type = fallen_empire
+		}
+	}
+}
+
+ship_event = {
+	##进坟星系弹窗
+	id = ge_sites.9
+	title = "ge_sites.9.name"
+	desc = "ge_sites.9.desc"
+	show_sound = event_the_great_awakening
+	picture = GFX_evt_black_hole
+	is_triggered_only = yes
+	trigger = {
+		owner = {
+			NOT = {
+				has_country_flag = ge_sgt_site_find_flag
+			}
+		}
+		solar_system = {
+			has_star_flag = ge_suigintou_site_star_flag
+		}
+
+	}
+	immediate = {
+		owner = {
+			set_country_flag = ge_sgt_site_find_flag
+		}
+
+	}
+	option = {
+		name = ge_sites.9.aa
+
+
+		#solar_system = {
+		#	star = {
+		#		add_anomaly = {
+		#			category = abandoned_outpost_category
+		#		}
+		#		prevprev = {
+		#
+		#		}
+		#	}
+		#}
+
+	}
+}
+########坟：门
+country_event = {
+	id = ge_sites.10
+	title = "ge_sites.10.name"
+	desc = "ge_sites.10.desc"
+	show_sound = event_scanner
+	picture = GFX_evt_star_pulsar
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		NOT = {
+			has_country_flag = ge_sgt_site_find_flag
+		}
+	}
+	option = {
+		name = ge_sites.10.aa
+	}
+}
+
+#stage1###门后的世界
+fleet_event = {
+	id = ge_sites.11
+	title = "ge_sites.11.name"
+	desc = "ge_sites.11.desc"
+	picture = GFX_ge_sgt_site_stage1
+	show_sound = event_wind_ruins
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = CURIOUS
+		small_artifact_reward = yes
+		hidden_effect = {
+			owner = {
+				add_resource = {
+					energy = 100
+				}
+				country_event = {
+					id = ge_sites.99
+				}
+			}
+			#if = {
+			#	limit = {
+			#		is_multiplayer = yes
+			#	}
+			#}
+			if = {
+				limit = {
+
+				}
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							has_planet_flag = ge_planet_flag_sgt@root.owner
+						}
+						save_global_event_target_as = roz_n_field_site_target@root.owner
+						set_planet_flag = shroud_storm_changed
+					}
+				}
+			}
+		}
+	}
+}
+
+#stage2###发现不明生物
+fleet_event = {
+	id = ge_sites.12
+	title = "ge_sites.12.name"
+	desc = "ge_sites.12.desc"
+	picture = GFX_ge_sgt_site_stage2
+	show_sound = event_wind_ruins
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.12.aa
+		small_artifact_reward = yes
+		hidden_effect = {
+			#event_target:ge_site_sgt_target = {
+			#	set_name = "NAME_ge_sgt_site_planet_after"
+			#}
+			owner = {
+				country_event = {
+					id = ge_sites.100
+				}
+				every_planet_within_border = {
+					limit = {
+						has_planet_flag = ge_planet_flag_sgt@root.owner
+					}
+					set_name = "NAME_ge_sgt_site_planet_after"
+				}
+			}
+		}
+	}
+}
+
+#stage3###牢笼与白色藤曼
+fleet_event = {
+	id = ge_sites.13
+	title = "ge_sites.13.name"
+	desc = "ge_sites.13.desc"
+	picture = GFX_ge_sgt_site_stage3
+	show_sound = event_wind_ruins
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.13.aa
+		small_artifact_reward = yes
+	}
+}
+
+#stage4###无形阻拦
+fleet_event = {
+	id = ge_sites.14
+	title = "ge_sites.14.name"
+	desc = "ge_sites.14.desc"
+	picture = GFX_ge_sgt_site_stage4
+	show_sound = event_wind_ruins
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.14.aa
+		small_artifact_reward = yes
+	}
+}
+
+#stage5###笼中少女——沉睡的人偶
+fleet_event = {
+	id = ge_sites.15
+	title = "ge_sites.15.name"
+	desc = "ge_sites.15.desc"
+	picture = GFX_ge_sgt_site_stage5
+	show_sound = event_wind_ruins
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.15.aa
+		small_artifact_reward = yes
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = ge_sites.120
+				}
+			}
+		}
+	}
+}
+
+#stage6####结尾
+fleet_event = {
+	id = ge_sites.16
+	title = "ge_sites.16.name"
+	desc = "ge_sites.16.desc"
+	picture = GFX_ge_sgt_site_stage6
+	show_sound = event_wind_ruins
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		###suigintou get
+		name = ge_sites.16.aa
+		large_artifact_reward = yes
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = ge_sites.21
+				}
+				country_event = {
+					id = ge_sites.20
+					days = 30
+				}
+				every_planet_within_border = {
+					limit = {
+						has_planet_flag = ge_planet_flag_sgt@root.owner
+					}
+					add_deposit = ge_site_sgt_deposit
+				}
+				#country_event = {	#真红事件链
+				#	id = roz_shinku_evt.1
+				#	days = 360
+				#	random = 1080
+				#}
+			}
+			#event_target:ge_site_sgt_target = {
+			#	add_deposit = ge_site_sgt_deposit
+			#
+			#}
+
+			
+		}
+	}
+}
+############星球产出
+
+country_event = {
+	id = ge_sites.20
+	is_triggered_only = yes
+	title = "ge_sites.20.t"
+	desc = "ge_sites.20.d"
+	picture = GFX_evt_black_hole
+	option = {
+		name = ge_sites.20.aa
+		default_hide_option = yes
+		add_modifier = {
+			modifier = ge_gravity_knowledge
+		}
+	}
+}
+
+############苏醒
+country_event = {
+	id = ge_sites.21
+	title = "ge_sites.21.name"
+	desc = "ge_sites.21.desc"
+	picture = GFX_ge_sgt_wake
+	is_triggered_only = yes
+	option = {
+		name = ge_sites.21.aa
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = ge_sites.22
+				days = 1
+			}
+		}
+	}
+}
+###########契约
+country_event = {
+	id = ge_sites.22
+	title = "ge_sites.22.name"
+	desc = "ge_sites.22.desc"
+	picture = GFX_ge_sgt_oath
+	is_triggered_only = yes
+	option = {
+		name = ge_sites.22.aa
+		#default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = ge_leader_event.1
+				days = 1
+			}
+		}
+	}
+}
+
+#############
+country_event = {	###uav arguments
+	id = ge_sites.99
+	title = "ge_sites.99.name"
+	desc = "ge_sites.99.desc"
+	diplomatic = yes
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+	is_triggered_only = yes
+	option = {
+		name = ge_sites.99.aa
+		default_hide_option = yes
+	}
+}
+
+country_event = {	###usagi san
+	id = ge_sites.100
+	title = "ge_sites.100.name"
+	desc = "ge_sites.100.desc"
+	diplomatic = yes
+	picture_event_data = {
+		#portrait = ge_
+		room = ge_lple_1_room
+	}
+	is_triggered_only = yes
+	option = {
+		name = ge_sites.100.aa
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = ge_sites.101
+			}
+		}
+	}
+}
+
+country_event = {  #lple main
+	id = ge_sites.101
+	title = "ge_sites.101.name"
+	desc = "ge_sites.101.desc"
+	diplomatic = yes
+	picture_event_data = {
+		#portrait = ge_
+		room = ge_lple_1_room
+	}
+	is_triggered_only = yes
+	option = {
+		name = ge_sites.101.aa
+		response_text = ge_sites.101.aa.desc
+		is_dialog_only = yes
+		hidden_effect = {
+			country_event = {
+				id = ge_sites.102
+			}
+		}
+	}
+	option = {
+		name = ge_sites.101.bb
+		response_text = ge_sites.101.bb.desc
+		is_dialog_only = yes
+		hidden_effect = {
+			country_event = {
+				id = ge_sites.103
+			}
+		}
+	}
+	option = {
+		name = ge_sites.101.cc
+		response_text = ge_sites.101.cc.desc
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = {
+				id = ge_sites.111
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {  #alice
+	id = ge_sites.102
+	title = "ge_sites.102.name"
+	desc = "ge_sites.102.desc"
+	diplomatic = yes
+	picture_event_data = {
+		#portrait = ge_
+		room = ge_lple_2_room
+	}
+	is_triggered_only = yes
+	option = {
+		name = ge_sites.102.aa
+		response_text = ge_sites.102.aa.desc
+		is_dialog_only = yes
+	}
+	option = {
+		name = ge_sites.102.bb
+		response_text = ge_sites.102.bb.desc
+		is_dialog_only = yes
+	}
+	option = {
+		name = ge_sites.102.cc
+		response_text = ge_sites.102.cc.desc
+		is_dialog_only = yes
+	}
+	option = {
+		name = ge_sites.102.dd
+		default_hide_option = yes
+	}
+}
+
+country_event = { ###nf
+	id = ge_sites.103
+	title = "ge_sites.103.name"
+	desc = "ge_sites.103.desc"
+	diplomatic = yes
+	picture_event_data = {
+		#portrait = ge_
+		room = ge_lple_2_room
+	}
+	is_triggered_only = yes
+	option = {
+		name = ge_sites.103.aa
+		response_text = ge_sites.103.aa.desc
+		is_dialog_only = yes
+	}
+	option = {
+		name = ge_sites.103.bb
+		response_text = ge_sites.103.bb.desc
+		is_dialog_only = yes
+	}
+	option = {
+		name = ge_sites.103.cc
+		default_hide_option = yes
+	}
+}
+
+country_event = {  #run
+	id = ge_sites.111
+	title = "ge_sites.111.name"
+	desc = "ge_sites.111.desc"
+	is_triggered_only = yes
+	picture = GFX_ge_lple_run
+	option = {
+		name = ge_sites.111.aa
+		default_hide_option = yes
+	}
+}
+
+country_event = {  #选择option
+	id = ge_sites.120
+	title = "ge_sites.120.name"
+	desc = "ge_sites.120.desc"
+	is_triggered_only = yes
+	picture = GFX_ge_sgt_option
+	option = {
+		name = ge_sites.120.aa
+		default_hide_option = yes
+		add_resource = {
+			sr_dark_matter = 11
+		}
+	}
+	option = {
+		name = ge_sites.120.bb
+		default_hide_option = yes
+		add_resource = {
+			sr_dark_matter = 111
+		}
+	}
+}
+
+
+country_event = {	
+	id = ge_sites.200
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		NOT = {
+			has_country_flag = ge_sgt_site_find_flag
+			has_country_flag = ge_sgt_site_find_2_flag
+			has_country_flag = ge_leader_suigintou_get
+			solar_system = {
+				any_system_planet = {
+					has_planet_flag = ge_planet_flag_sgt@root
+				}
+			}
+		}
+	}
+	immediate = {
+		set_country_flag = ge_sgt_site_find_2_flag
+		random_planet_within_border = {
+			weights = {
+				base = 1
+				modifier = {
+					factor = 100
+					is_capital = yes
+				}
+			}
+			solar_system = {
+				closest_system = {
+					limit = {
+						NOT = {
+							has_star_flag = ge_suigintou_site_counted
+						}
+						#_禁止同星系生成
+						#has_owner = no
+						has_access_fleet = root
+						any_system_planet = {
+							#has_owner = no
+							#is_colony = no
+							has_anomaly = no
+							NOR = {
+								exists = archaeological_site
+								has_planet_flag = hatchling_egg
+							}
+							OR = {
+								is_planet_class = pc_molten
+								is_planet_class = pc_barren
+								is_planet_class = pc_barren_cold
+								is_planet_class = pc_toxic
+								is_planet_class = pc_frozen
+								is_planet_class = pc_nuked
+								is_planet_class = pc_ringworld_tech
+								is_planet_class = pc_ringworld_seam
+							}
+						}
+					}
+					this = {
+						set_star_flag = ge_suigintou_site_star_flag
+					}
+					set_timed_star_flag = {
+						flag = ge_suigintou_site_counted
+						days = 1
+					}
+					#_[挖掘地sstm隔离debug]
+					min_steps = 0
+					max_steps = 17
+					use_bypasses = yes
+					random_system_planet = {
+						limit = {
+							#has_owner = no
+							#is_colony = no
+							has_anomaly = no
+							NOR = {
+								exists = archaeological_site
+								has_planet_flag = hatchling_egg
+							}
+							OR = {
+								is_planet_class = pc_molten
+								is_planet_class = pc_barren
+								is_planet_class = pc_barren_cold
+								is_planet_class = pc_toxic
+								is_planet_class = pc_frozen
+								is_planet_class = pc_nuked
+								is_planet_class = pc_ringworld_tech
+								is_planet_class = pc_ringworld_seam
+							}
+						}
+						set_name = "NAME_ge_sgt_site_planet"						#_星球改名
+						change_pc = pc_black_hole
+						set_planet_size = 1
+						clear_deposits = yes
+						#add_deposit = ge_sgt_depo	#_添加deposit
+						set_planet_flag = ge_planet_flag_sgt@root
+						create_archaeological_site = ge_sgt_site
+						root = {
+							set_country_flag = ge_sgt_site_owner_flag_for_multiplayer
+						}
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = ge_sites.2
+				days = 40
+			}
+		}
+	}
+}
+
+
+
+########坟：门 /2 引力波动警告
+country_event = {
+	id = ge_sites.201
+	title = "ge_sites.201.name"
+	desc = "ge_sites.201.desc"
+	show_sound = event_scanner
+	picture = GFX_evt_star_pulsar
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		NOT = {
+			has_country_flag = ge_sgt_site_find_flag
+			#has_country_flag = ge_sgt_site_find_2_flag
+		}
+	}
+	option = {
+		name = ge_sites.201.aa
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##########
+country_event = {
+	id = ge_sites.410
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		random_system = {
+			limit = {
+				is_owned_by = root
+			}
+			set_star_flag = roz_relic40K_system_flag
+			random_system_planet = {
+				limit = {
+					is_colony = no
+					has_anomaly = no
+					NOR = {
+						exists = archaeological_site
+						has_planet_flag = hatchling_egg
+					}
+					OR = {
+						is_planet_class = pc_molten
+						is_planet_class = pc_barren
+						is_planet_class = pc_barren_cold
+						is_planet_class = pc_toxic
+						is_planet_class = pc_frozen
+					}
+				}
+				#weights = {
+				#	base = 1
+				#}
+				change_pc = pc_relic
+				set_planet_size = 20
+				relic_world_deposits = yes
+				set_planet_flag = roz_relic40K_flag
+				create_archaeological_site = roz_relic_of_eras_site
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ge_sites.400
+	title = "ge_sites.400.title"
+	desc = "ge_sites.400.desc"
+	picture = GFX_evt_roz_evt_planet_mask
+	show_sound = event_mysterious_signal
+	location = event_target:roz_relic40K_target
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		random_system = {
+			limit = {
+				is_owned_by = root
+				has_star_flag = roz_relic40K_system_flag
+			}
+			random_system_planet = {
+				limit = {
+					has_planet_flag = roz_relic40K_flag
+				}
+				save_event_target_as = roz_relic40K_target
+			}
+		}
+	}
+	option = {
+		name = ge_sites.400.aa
+		custom_tooltip = ge_sites.400.ct
+	}
+}
+
+fleet_event = {
+	id = ge_sites.401
+	title = "ge_sites.401.title"
+	desc = "ge_sites.401.desc"
+	picture = GFX_evt_roz_evt_relic_hive
+	show_sound = event_wind_ruins
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.401.aa
+		#small_artifact_reward = yes
+		owner = {
+			#add_resource = {
+			#	society_research = 100
+			#	mult = trigger:empire_size
+			#}
+			roz_site_inline_math = {
+				RESOURCE = society_research
+				COUNT = 2
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_sites.402
+	title = "ge_sites.402.title"
+	desc = "ge_sites.402.desc"
+	picture = GFX_evt_roz_evt_museum_hive
+	show_sound = event_ancient_drone
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.402.aa
+		#small_artifact_reward = yes
+		owner = {
+			great_artifact_reward = yes
+			#add_resource = {
+			#	society_research = 150
+			#	mult = trigger:empire_size
+			#}
+			roz_site_inline_math = {
+				RESOURCE = society_research
+				COUNT = 3
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_sites.403
+	title = "ge_sites.403.title"
+	desc = "ge_sites.403.desc"
+	picture = GFX_evt_roz_evt_Great_Crusade_II
+	show_sound = event_ground_battle
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.403.aa
+		#small_artifact_reward = yes
+		owner = {
+			#add_resource = {
+			#	society_research = 250
+			#	mult = trigger:empire_size
+			#}
+			roz_site_inline_math = {
+				RESOURCE = society_research
+				COUNT = 3
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_sites.404
+	title = "ge_sites.404.title"
+	desc = "ge_sites.404.desc"
+	picture = GFX_evt_roz_roz_evt_revolution_1
+	show_sound = event_public_unrest
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.404.aa
+		#small_artifact_reward = yes
+		owner = {
+			#add_resource = {
+			#	society_research = 200
+			#	mult = trigger:empire_size
+			#}
+			#add_resource = {
+			#	physics_research = 150
+			#	mult = trigger:empire_size
+			#}
+			#add_resource = {
+			#	engineering_research = 100
+			#	mult = trigger:empire_size
+			#}
+			roz_site_inline_math = {
+				RESOURCE = society_research
+				COUNT = 3
+			}
+			roz_site_inline_math = {
+				RESOURCE = physics_research
+				COUNT = 2
+			}
+			roz_site_inline_math = {
+				RESOURCE = engineering_research
+				COUNT = 2
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_sites.405
+	title = "ge_sites.405.title"
+	desc = "ge_sites.405.desc"
+	picture = GFX_evt_roz_evt_solidarity_1
+	show_sound = event_galactic_community
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.405.aa
+		owner = {
+			#add_resource = {
+			#	society_research = 100
+			#	mult = trigger:empire_size
+			#}
+			roz_site_inline_math = {
+				RESOURCE = society_research
+				COUNT = 2
+			}
+			add_tech_progress = {
+				tech = tech_psionic_theory
+				progress = 0.05
+			}
+		}
+		from = {
+			planet = {
+				add_deposit = roz_site_hive_museum_deposit
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_sites.406
+	title = "ge_sites.406.title"
+	desc = "ge_sites.406.desc"
+	picture = GFX_evt_roz_evt_subspace_1
+	show_sound = event_mind_over_matter
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.406.aa
+		owner = {
+			#add_resource = {
+			#	society_research = 250
+			#	mult = trigger:empire_size
+			#}
+			roz_site_inline_math = {
+				RESOURCE = society_research
+				COUNT = 3
+			}
+			add_tech_progress = {
+				tech = tech_psionic_barrier
+				progress = 0.05
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_sites.407
+	title = "ge_sites.407.title"
+	desc = "ge_sites.407.desc"
+	picture = GFX_evt_roz_evt_Exalted_3
+	show_sound = event_the_great_awakening
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.407.aa
+		owner = {
+			add_tech_progress = {
+				tech = tech_hyper_drive_3
+				progress = 0.20
+			}
+			add_tech_progress = {
+				tech = tech_hyper_relays
+				progress = 0.20
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_fallen_empire = yes
+						is_fallen_empire_machine = no
+					}
+				}
+				country_event = {
+					id =  ge_sites.408
+					days = 5
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = {
+						is_fallen_empire = yes
+						is_fallen_empire_machine = yes
+					}
+				}
+				add_relic = r_roz_stasis_field
+			}
+			else_if = {
+				limit = {
+					any_country = { is_fallen_empire = no }
+				}
+				add_relic = r_roz_stasis_field
+			}
+		}
+	}
+	option = {
+		name = ge_sites.407.bb
+		trigger = {
+			owner = {
+				has_country_flag = ge_leader_suigintou_get
+			}
+		}
+		owner = {
+			#add_resource = {
+			#	society_research = 200
+			#	mult = trigger:empire_size
+			#}
+			#add_resource = {
+			#	physics_research = 200
+			#	mult = trigger:empire_size
+			#}
+			#add_resource = {
+			#	engineering_research = 200
+			#	mult = trigger:empire_size
+			#}
+			#add_resource = {
+			#	unity = 300
+			#	mult = trigger:empire_size
+			#}
+			roz_site_inline_math = {
+				RESOURCE = physics_research
+				COUNT = 3
+			}
+			roz_site_inline_math = {
+				RESOURCE = society_research
+				COUNT = 4
+			}
+			roz_site_inline_math = {
+				RESOURCE = engineering_research
+				COUNT = 3
+			}
+			roz_site_inline_math = {
+				RESOURCE = unity
+				COUNT = 5
+			}
+			hidden_effect = {
+				every_owned_leader = {
+					limit = {
+						has_leader_flag = ge_suigintou_flag
+					}
+					change_variable = {
+						which = ge_leader_affection
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_fallen_empire = yes
+						is_fallen_empire_machine = no
+					}
+				}
+				country_event = {
+					id =  ge_sites.408
+					days = 5
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = {
+						is_fallen_empire = yes
+						is_fallen_empire_machine = yes
+					}
+				}
+				add_relic = r_roz_stasis_field
+			}
+			else_if = {
+				limit = {
+					any_country = { is_fallen_empire = no }
+				}
+				add_relic = r_roz_stasis_field
+			}
+			custom_tooltip = ge_sites.407.bb.ct
+
+		}
+	}
+}
+
+country_event = {
+	id =  ge_sites.408
+	is_triggered_only = yes
+	title = "ge_sites.408.title"
+	desc = "ge_sites.408.desc"
+	picture = GFX_evt_roz_evt_40k_story_end
+	show_sound = event_hand_shake
+	trigger = {
+		any_country = {
+			is_fallen_empire = yes
+			is_fallen_empire_machine = no
+		}
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				is_fallen_empire = yes
+				is_fallen_empire_machine = no
+			}
+			save_event_target_as = roz_sites_fallen_empire_target
+		}
+	}
+	option = {
+		name = ge_sites.408.aa
+		add_tech_progress = {
+			tech = tech_planetary_shield_generator
+			progress = 0.15
+		}
+
+		add_relic = r_roz_stasis_field
+	}
+}
+
+
+########################
+######神国坟头
+country_event = {
+	id = ge_sites.501
+	is_triggered_only = yes
+	title = "ge_sites.501.title"
+	desc = "ge_sites.501.desc"
+	picture = GFX_evt_roz_clouds_of_undergrand
+	show_sound = event_dig_site
+	trigger = {
+
+	}
+	immediate = {  }
+	option = {
+		name = ge_sites.501.aa
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = 1
+		}
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = 1
+		}
+		add_monthly_resource_mult = {
+			resource = engineering_research
+			value = 1
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_sites.511
+	is_triggered_only = yes
+	title = "ge_sites.511.title"
+	desc = "ge_sites.511.desc"
+	picture = GFX_evt_roz_fall_and_signal
+	show_sound = event_sensor_ping
+	location = from
+	archaeology = yes
+	trigger = {
+
+	}
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.511.aa
+		owner = {
+			add_resource = {
+				influence = 100
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_sites.512
+	is_triggered_only = yes
+	title = "ge_sites.512.title"
+	desc = "ge_sites.512.desc"
+	picture = GFX_evt_roz_laminating_world
+	show_sound = event_activating_unknown_technology
+	location = from
+	archaeology = yes
+	trigger = {
+
+	}
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.512.aa
+		owner = {
+			add_resource = {
+				physics_research = 5000
+				engineering_research = 5000
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_sites.513
+	is_triggered_only = yes
+	title = "ge_sites.513.title"
+	desc = "ge_sites.513.desc"
+	picture = GFX_evt_roz_torsion_space
+	show_sound = event_ghost_town
+	location = from
+	archaeology = yes
+	trigger = {
+
+	}
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+			save_event_target_as = roz_site_temp_target
+		}
+	}
+	#after = {
+	#	from = {
+	#		set_site_progress_locked = no
+	#	}
+	#}
+	option = {
+		name = ge_sites.513.aa
+		owner = {
+			add_modifier = {
+				modifier = roz_outland_planet_inspire
+			}
+			country_event = {
+				id = ge_sites.5131
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ge_sites.5131
+	is_triggered_only = yes
+	title = "ge_sites.5131.title"
+	desc = "ge_sites.5131.desc"
+	picture = GFX_evt_roz_outland_decision
+	show_sound = event_default
+	trigger = {
+
+	}
+	immediate = {  }
+	option = {
+		name = ge_sites.5131.aa
+		hidden_effect = {
+			set_country_flag = roz_outland_planet_site_end1_flag
+			event_target:roz_site_temp_target = {
+				set_site_progress_locked = no
+			}
+		}
+	}
+	option = {
+		name = ge_sites.5131.bb
+		hidden_effect = {
+			set_country_flag = roz_outland_planet_site_end2_flag
+			event_target:roz_site_temp_target = {
+				set_site_progress_locked = no
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_sites.514
+	is_triggered_only = yes
+	title = "ge_sites.514.title"
+	desc = {
+		trigger = { owner = { has_country_flag = roz_outland_planet_site_end1_flag } }
+		text = ge_sites.514.desc_1
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = roz_outland_planet_site_end2_flag } }
+		text = ge_sites.514.desc_2
+	}
+	picture = GFX_evt_roz_outland_thorough
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	trigger = {
+
+	}
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = ge_sites.514.aa_1
+		trigger = { owner = { has_country_flag = roz_outland_planet_site_end1_flag } }
+	}
+	option = {
+		name = ge_sites.514.aa_2
+		trigger = { owner = { has_country_flag = roz_outland_planet_site_end2_flag } }
+		owner = {
+			add_modifier = {
+				modifier = roz_outland_planet_emergency_rescue
+				days = 180
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_sites.515
+	is_triggered_only = yes
+	title = "ge_sites.515.title"
+	desc = "ge_sites.515.desc"
+	picture = GFX_evt_roz_outland_choose
+	show_sound = event_mystic_reveal
+	location = from
+	archaeology = yes
+	trigger = {
+
+	}
+	immediate = {  }
+	option = {
+		name = ge_sites.515.aa
+		allow = {
+			custom_tooltip = {
+				owner = {
+					OR = {
+						has_country_flag = roz_outland_planet_site_end1_flag
+						has_country_flag = roz_outland_planet_site_end2_flag
+					}
+				}
+				fail_text = "ge_sites.515.aa.ct"
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					owner = { has_country_flag = roz_outland_planet_site_end1_flag }
+				}
+				owner = {
+					country_event = {
+						id = ge_sites.5151
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					owner = { has_country_flag = roz_outland_planet_site_end2_flag }
+				}
+				owner = {
+					country_event = {
+						id = ge_sites.5152
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ge_sites.5151
+	is_triggered_only = yes
+	title = "ge_sites.5151.title"
+	desc = "ge_sites.5151.desc_1"
+	picture = GFX_evt_roz_outland_end1
+	show_sound = event_celebration
+	location = event_target:roz_outland_planet
+	trigger = {
+
+	}
+	immediate = {  }
+	option = {
+		name = ge_sites.5151.aa_1
+		custom_tooltip = roz_krks_leader_evt.55.aa.ct
+		roz_outland_planet_change = yes
+		clear_global_event_target = roz_outland_planet
+	}
+}
+
+country_event = {
+	id = ge_sites.5152
+	is_triggered_only = yes
+	title = "ge_sites.5152.title"
+	desc = "ge_sites.5152.desc_1"
+	diplomatic = yes
+	#picture = GFX_evt_roz_outland_altar
+
+	picture_event_data = {
+		room = roz_outland_altar_room
+		#portrait = s
+	}
+	show_sound = event_ancient_drone
+	trigger = {
+
+	}
+	immediate = {  }
+	option = {
+		name = ge_sites.5152.aa_1
+		is_dialog_only = yes
+		response_text = ge_sites.5152.aa.res
+	}
+	option = {
+		name = ge_sites.5152.bb
+		is_dialog_only = yes
+		response_text = ge_sites.5152.bb.res
+	}
+	option = {
+		name = ge_sites.5152.cc
+		is_dialog_only = yes
+		response_text = ge_sites.5152.cc.res
+	}
+	option = {
+		name = ge_sites.5152.dd
+		is_dialog_only = yes
+		response_text = ge_sites.5152.dd.res
+	}
+	option = {
+		name = ge_sites.5152.ee
+		is_dialog_only = yes
+		response_text = ge_sites.5152.ee.res
+	}
+	option = {
+		name = ge_sites.5152.ff
+	}
+	after = {
+		country_event = {
+			id = ge_sites.516
+			days = 15
+		}
+	}
+}
+
+country_event = {
+	id = ge_sites.516
+	is_triggered_only = yes
+	title = "ge_sites.516.title"
+	desc = "ge_sites.516.desc"
+	picture = GFX_evt_astral_rift_advisor_exploding
+	location = event_target:roz_outland_planet
+	trigger = {
+		NOT = {
+			has_relic = r_roz_Chronos_Label
+		}
+	}
+	immediate = {
+		event_target:roz_outland_planet = {
+			create_ambient_object = {
+				type = "star_explosion"
+				play_animation_once = yes
+				location = this
+				scale = 0.25
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+			change_pc = pc_shattered_2
+			remove_modifier = lush_planet
+			add_deposit = d_physics_4
+			add_deposit = d_engineering_4
+			add_deposit = d_minerals_10
+		}
+	}
+	option = {
+		name = ge_sites.516.aa
+		country_event = {
+			id = ge_sites.517
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = ge_sites.517
+	is_triggered_only = yes
+	title = "ge_sites.517.title"
+	desc = "ge_sites.517.desc"
+	picture = GFX_evt_astral_rift_vortex
+	show_sound = event_celebration
+	trigger = {
+		NOT = {
+			has_relic = r_roz_Chronos_Label
+		}
+	}
+	immediate = {
+
+	}
+	option = {
+		name = ge_sites.517.aa
+		add_relic = r_roz_Chronos_Label
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 3
+		}
+		clear_global_event_target = roz_outland_planet
+	}
+}
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+
+concept_roz_rozen_maiden = { icon = gfx/interface/icons/traits/leader_trait_black_rozen.dds }
+
+
+concept_roz_rozen = {  }
+
+concept_roz_alice = {  }
+
+concept_roz_alice_game = {  }
+
+concept_roz_rosa_mystica = {
+    icon = gfx/interface/icons/resources/sr_rosa_mystica_large.dds
+}
+
+concept_roz_jinnkouseirei = {
+    icon = gfx/interface/icons/traits/leader_trait_ge_meimei.dds
+}
+
+concept_roz_Demon_de_Laplace = {}
+
+concept_roz_kaban = {
+    icon = gfx/interface/icons/roz_icon_kaban.dds
+}
+
+concept_chronos_storm = {
+    icon = gfx/interface/icons/planet_modifiers/pm_chronos_storm.dds
+}
+
+
+
+
+

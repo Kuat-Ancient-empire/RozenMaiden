@@ -1,0 +1,6 @@
+sc_roz_dark_box = {
+    class 			= roz_dark_box_star
+    planet			= { key = pc_g_star }
+    spawn_odds 		= 0
+    num_planets 	= { min = 4 max = 10 }
+}

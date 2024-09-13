@@ -1,0 +1,9 @@
+layer = {
+    icon = "GFX_trait_glow_krks_nightmare"
+    color = "trait_rarity_destiny"
+}
+
+layer = { #该层默认，不用改
+    icon = "GFX_trait_frame_suigintou"
+    color = "trait_rarity_destiny"
+}

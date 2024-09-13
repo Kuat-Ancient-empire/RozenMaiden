@@ -1,0 +1,173 @@
+﻿l_english:
+###############################
+
+###synced
+NAME_nfield:0 "N-field"	
+NAME_ge_br:0 "Black Pose"
+NAME_ge_vfs:0 "Y*%§R<数据错误>§!恒"
+NAME_ap_ge_0:0 "Treasure of N-field"
+NAME_Suigintou:0 "スイギントウ"
+
+##   :0 ""
+##   _desc:0 ""
+
+
+#####modifiers
+ge_modifier_1:0 "Initial Buff"
+ge_modifier_1_desc:0 "Initial Buff"
+
+ge_modifier_time_freeze:0 "The Paradox Engine：Time Freeze Ready!"
+
+ge_engine_boost_zp:0 "Zero Piont Reactor Overload"
+ge_engine_boost_zp_desc:0 "Zero Piont Reactor Overload"
+
+ge_engine_boost_dm:0 "Dark Matter Reactor Overload"
+ge_engine_boost_dm_desc:0 "Dark Matter Reactor Overload"
+
+ge_gravity_knowledge:0 "Knowledge of Gravity"
+ge_gravity_knowledge_desc:0 "Our physicists are very interested in the gravitational phenomenon in The Entrance of n-field, and The National Academy of Sciences has set up a large research station there to explore the mystery of gravity."
+
+
+mod_country_base_consumer_goods_produces_add:0 "Monthly£consumer_goods£ Consumer Goods"
+mod_country_base_alloys_produces_add:0 "Monthly£alloys£ Alloys"
+mod_country_base_minor_artifacts_produces_add:0 "Monthly£minor_artifacts£ Minor_Artifacts"
+mod_country_base_physics_research_produces_add:0 "Monthly Physics Produces"
+mod_country_base_society_research_produces_add:0 "Monthly Society Produces"
+mod_country_base_engineering_research_produces_add:0 "Monthly Engineering Produces"
+
+
+
+#######deposit
+ge_site_sgt_deposit:0 "N-Field Research Station"
+
+########name
+########单色光
+NAME_ge_suigintou:0 "§MMercury Lamp"
+NAME_ge_sgt_site_planet:0 "Unnormal Black Hole"
+NAME_ge_sgt_site_planet_after:0 "The Entrance of N-Field"
+
+#######ap
+ap_ge_0:0 "The Treasure of N-Field"
+ap_ge_0_desc:0 "We got the keys of the gate in the N-Fieldwhos named Rozen Maiden, Infinite resources and knowledge are waiting for us to exploit...\nOur time has come!"
+enable_ge_0:0 "§BOne of the necessary ascension perk of the Void-Tech event chains."
+
+ap_ge_1:0 "The Mystery of N-Field"
+ap_ge_1_desc:0 "This space is more mysterious than we thought. Maybe we should intensive study for it."
+enable_ge_1:0 "§BBOne of the necessary ascension perk of the Void-Tech event chains."
+
+ap_ge_2:0 "§RThe Awakening of Over-dimensional"
+ap_ge_2_desc:0 "§RGreat, We've come to understand everything......§!"
+enable_ge_2:0 "§BAdding some powerful traits for all leader and root species.\nAdding some powerful civils for your country."
+
+
+
+##########special projects
+ge_reactor_project:0 "Strange Light-spot"
+ge_reactor_project_DESC:0 "我们的实验证明这里似乎不仅仅连接着其他世界，似乎还隐约连接着某些东西..."
+
+ge_ascension_project:0 "初步升华"
+ge_ascension_project_DESC:0 "虚空引擎的创造是划时代的，从现在开始我们有权接过天堂帝国的冠冕，我们将挣脱枷锁、超越平凡！为了这伟大的理想，我们已经准备好了一个初步升华计划，使得我们的同胞们得以全体飞升，成为天堂帝国的子民"
+
+############
+weapon_type_ge_void_energy:0 "§BVoid decay Energy§!"
+mod_weapon_type_ge_void_energy_weapon_damage_mult:0 "§BVoid decay Energy Weapon Damage§!"
+mod_weapon_type_ge_void_energy_weapon_fire_rate_mult:0 "§BVoid decay Energy Weapon Fire Rate§!"
+
+ge_mozheng1:0 "§YCrazy +50%§!"
+ge_mozheng2:0 "§HCrazy +200%§!"
+ge_mozheng3:0 "§MCrazy +500%§!"
+ge_mozheng4:0 "§RCrazy +1000%§!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

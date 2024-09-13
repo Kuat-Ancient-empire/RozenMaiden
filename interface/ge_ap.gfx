@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_ge_0"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_ge_0.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_ge_1"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_ge_1.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_ge_2"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_ge_0b.dds"
+		alwaystransparent = yes
+	}
+}	

@@ -1,0 +1,23 @@
+light = {
+    name = "roz_dark_class_star"
+
+    	color = {
+    		r = { 1.0 }
+    		g = { 1.0 }
+    		b = { 1.0 }
+    	}
+
+
+
+    #	intensity = 3.5
+    #	radius = 10000
+    #	falloff = 0
+
+    intensity = 0.1
+    radius = 10000
+    falloff = 0
+
+    position = { x = 0 y = 0 z = 0 }
+
+
+}

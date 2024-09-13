@@ -1,0 +1,331 @@
+namespace = roz_nf_discovery
+
+country_event = {
+	id = roz_nf_discovery.0
+	is_triggered_only = yes
+	location = home_planet
+	title = ""
+	desc = ""
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:ge_leader
+		room = ge_sgt_main_room
+	}
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		get_ge_leader_target = { flag = ge_suigintou_flag }
+	}
+	option = {
+		name = roz_nf_discovery.0.aa
+		is_dialog_only = yes
+		response_text = roz_nf_discovery.0.aa.res
+	}
+	option = {
+		name = roz_nf_discovery.0.bb
+		allow = {
+			always = yes
+		}
+		hidden_effect = {
+			country_event = {
+				id = roz_nf_discovery.10
+			}
+		}
+	}
+}
+
+
+country_event = {	#选择世界等级（探索难度）
+	id = roz_nf_discovery.10
+	is_triggered_only = yes
+	location = home_planet
+	title = ""
+	desc = ""
+	diplomatic = yes
+	picture_event_data = {
+		portrait = x
+		room = x
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {#浪静风平
+		name = roz_nf_discovery.10.aa
+		custom_tooltip = x1
+		hidden_effect = {
+			set_country_flag = roz_nfd_s0_lv1
+		}
+	}
+	option = {#山雨欲来
+		name = roz_nf_discovery.10.bb
+		custom_tooltip = x2
+		hidden_effect = {
+			set_country_flag = roz_nfd_s0_lv2
+		}
+	}
+	option = {#波涛迭起
+		name = roz_nf_discovery.10.bb
+		custom_tooltip = x3
+		hidden_effect = {
+			set_country_flag = roz_nfd_s0_lv3
+		}
+	}
+	option = {#乘风破浪
+		name = roz_nf_discovery.10.bb
+		custom_tooltip = x4
+		hidden_effect = {
+			set_country_flag = roz_nfd_s0_lv4
+		}
+	}
+	after = {
+		set_variable = {#行动点数
+			which = roz_nf_roguelike_ActionValue
+			value = 10
+		}
+		set_variable = {#异界紧张度
+			which = roz_nf_roguelike_AlienTensity
+			value = 0
+		}
+		set_variable = {#队伍完整性
+			which = roz_nf_roguelike_TeamIntegrality
+			value = 100
+		}
+		set_variable = {#技巧
+			which = roz_nf_roguelike_TeamSkill
+			value = 3
+		}
+		set_variable = {#士气
+			which = roz_nf_roguelike_TeamMorale
+			value = 3
+		}
+		country_event = {
+			id = roz_nf_discovery.11
+		}
+	}
+}
+
+country_event = { #选择探索主旨
+	id = roz_nf_discovery.11
+	is_triggered_only = yes
+	location = home_planet
+	title = ""
+	desc = ""
+	picture = GFX_
+	trigger = {
+		is_ai = no
+	}
+	option = {#隐秘观察
+		name = roz_nf_discovery.11.aa
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s1_hide
+		}
+	}
+	option = {#强制殖民
+		name = roz_nf_discovery.11.bb
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s1_settlement
+		}
+	}
+	option = {#秘密渗透
+		name = roz_nf_discovery.11.bb
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s1_infiltrate
+		}
+	}
+	option = {#和谐共处
+		name = roz_nf_discovery.11.bb
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s1_peace
+		}
+	}
+	after = {
+		country_event = {
+			id = roz_nf_discovery.12
+		}
+	}
+}
+
+country_event = {#选择队伍携带的特殊装备
+	id = roz_nf_discovery.12
+	is_triggered_only = yes
+	location = home_planet
+	title = ""
+	desc = ""
+	picture = GFX_
+	option = {#唯物：智能AI副官
+		name = roz_nf_discovery.12.bb0
+		trigger = {
+			this = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+				
+			}
+		}
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s2_materialist
+		}	
+	}
+	option = {#唯心：圣堂祝福
+		name = roz_nf_discovery.12.bb1
+		trigger = {
+			this = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				
+			}
+		}
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s2_spiritualist
+		}	
+	}
+	option = {#亲外：特级交涉团队
+		name = roz_nf_discovery.12.bb2
+		trigger = {
+			this = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}			
+			}
+		}
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s2_xenophile
+		}	
+	}
+	option = {#排外：精诚团结，一致对外
+		name = roz_nf_discovery.12.bb3
+		trigger = {
+			this = {
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}			
+			}
+		}
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s2_xenophobe
+		}	
+	}
+	option = {#军国：先进重轰炸
+		name = roz_nf_discovery.12.bb4
+		trigger = {
+			this = {
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}			
+			}
+		}
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s2_militarist
+		}	
+	}
+	option = {#和平：国立建筑集团
+		name = roz_nf_discovery.12.bb5
+		trigger = {
+			this = {
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}			
+			}
+		}
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s2_pacifist
+		}	
+	}
+	option = {#平等：集体决策
+		name = roz_nf_discovery.12.bb6
+		trigger = {
+			this = {
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}			
+			}
+		}
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s2_egalitarian
+		}	
+	}
+	option = {#独裁：领导决策
+		name = roz_nf_discovery.12.bb7
+		trigger = {
+			this = {
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}			
+			}
+		}
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s2_authoritarian
+		}	
+	}
+	option = {#UVA应用体系
+		name = roz_nf_discovery.12.aa
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s2_UAV
+		}		
+	}
+	option = {#充分的后勤供应
+		name = roz_nf_discovery.12.cc
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s2_logistics
+		}	
+	}
+	option = {#紧急逃生装置
+		name = roz_nf_discovery.12.dd
+		custom_tooltip = x
+		hidden_effect = {
+			set_country_flag = roz_nfd_s2_escape
+		}
+	}
+	after = {
+		country_event = {
+			id = roz_nf_discovery.13
+		}
+	}
+}
+
+country_event = {#开始行动
+	id = roz_nf_discovery.13
+	is_triggered_only = yes
+	location = home_planet
+	title = ""
+	desc = ""
+	picture = GFX_
+	option = {
+		name = roz_nf_discovery.13.aa
+		hidden_effect = {
+			
+		}
+	}
+}
+
+
+
+
+
+
+
+

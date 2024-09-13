@@ -1,0 +1,176 @@
+roz_titanic_turret = {
+	size = titanic
+	component = weapon
+	entities = {
+		weapon_type_energy = "SSV_M_beam_turret_entity"
+		weapon_type_explosive = "SSV_M_beam_turret_entity"
+		weapon_type_kinetic = "SSV_M_beam_turret_entity"
+		weapon_type_ge_void_energy = "SSV_M_beam_turret_entity"
+	}
+}
+
+roz_extra_large_turret = {
+	size = extra_large
+	component = weapon
+	entities = {
+		weapon_type_energy = "SSV_M_beam_turret_entity"
+		weapon_type_explosive = "SSV_M_beam_turret_entity"
+		weapon_type_kinetic = "SSV_M_beam_turret_entity"
+		weapon_type_ge_void_energy = "SSV_M_beam_turret_entity"
+	}
+}
+
+roz_large_turret = {
+	size = large
+	component = weapon
+	entities = {
+		weapon_type_energy = "SSV_S_Beam_turret_entity"
+		weapon_type_explosive = "SSV_S_Missile_turret_entity"
+		weapon_type_kinetic = "SSV_S_Beam_turret_entity"
+		weapon_type_ge_void_energy = "SSV_S_Beam_turret_entity"
+	}
+}
+
+roz_medium_turret = {
+	size = medium
+	component = weapon
+	entities = {
+		weapon_type_energy = "SSV_S_Beam_turret_entity"
+		weapon_type_explosive = "SSV_S_Missile_turret_entity"
+		weapon_type_kinetic = "SSV_S_Beam_turret_entity"
+		weapon_type_ge_void_energy = "SSV_S_Beam_turret_entity"
+	}
+}
+
+
+roz_small_turret = {
+	size = small
+	component = weapon
+	entities = {
+		weapon_type_energy = "SSV_S_Beam_turret_entity"
+		weapon_type_explosive = "SSV_S_Missile_turret_entity"
+		weapon_type_kinetic = "SSV_S_Beam_turret_entity"
+		weapon_type_ge_void_energy = "SSV_S_Beam_turret_entity"
+	}
+}
+
+roz_pd_turret = {
+	size = point_defence                
+	component = weapon
+	entities = {
+		weapon_type_energy = "SSV_S_Beam_turret_entity"
+		weapon_type_explosive = "SSV_S_Missile_turret_entity"
+		weapon_type_kinetic = "SSV_S_Beam_turret_entity"
+		weapon_type_ge_void_energy = "SSV_S_Beam_turret_entity"
+	}
+}
+
+roz_missile_turret = {
+	size = torpedo
+	component = weapon
+	weapon_type_energy = "SSV_S_Missile_turret_entity"
+	weapon_type_explosive = "SSV_S_Missile_turret_entity"
+	weapon_type_kinetic = "SSV_S_Missile_turret_entity"
+	weapon_type_ge_void_energy = "SSV_S_Missile_turret_entity"
+}
+
+###########
+roz_extra_large_1_turret = {
+	size = extra_large
+	component = weapon
+	entities = {
+		weapon_type_energy = roz_fairy_three-gun_turret_1_entity
+		weapon_type_explosive = roz_fairy_three-gun_turret_1_entity
+		weapon_type_kinetic = roz_fairy_three-gun_turret_1_entity
+		weapon_type_ge_void_energy = roz_fairy_three-gun_turret_1_entity
+	}
+}
+roz_extra_large_2_turret = {
+	size = extra_large
+	component = weapon
+	entities = {
+		weapon_type_energy = roz_fairy_large_gun_turret_2_entity
+		weapon_type_explosive = roz_fairy_large_gun_turret_2_entity
+		weapon_type_kinetic = roz_fairy_three-gun_turret_2_entity
+		weapon_type_ge_void_energy = roz_fairy_three-gun_turret_2_entity
+	}
+}
+
+roz_large_1_turret = {
+	size = large
+	component = weapon
+	entities = {
+		weapon_type_energy = roz_fairy_three-gun_turret_1_entity
+		weapon_type_explosive = roz_fairy_three-gun_turret_1_entity
+		weapon_type_kinetic = roz_fairy_three-gun_turret_1_entity
+		weapon_type_ge_void_energy = roz_fairy_three-gun_turret_1_entity
+	}
+}
+roz_large_3_turret = {
+	size = large
+	component = weapon
+	entities = {
+		weapon_type_energy = 	roz_fairy_large_gun_turret_3_entity
+		weapon_type_explosive = roz_fairy_three-gun_turret_3_entity
+		weapon_type_kinetic = 	"large_kinetic_gun_entity"
+		weapon_type_ge_void_energy = roz_fairy_large_gun_turret_3_entity
+	}
+}
+roz_medium_1_turret = {
+	size = medium
+	component = weapon
+	entities = {
+		weapon_type_energy = roz_fairy_medium_gun_1_entity
+		weapon_type_explosive = roz_fairy_medium_gun_1_entity
+		weapon_type_kinetic = roz_fairy_medium_gun_1_entity
+		weapon_type_ge_void_energy = roz_fairy_medium_gun_1_entity
+	}
+}
+roz_medium_2_turret = {
+	size = medium
+	component = weapon
+	entities = {
+		weapon_type_energy = roz_fairy_medium_gun_2_entity
+		weapon_type_explosive = roz_fairy_medium_gun_2_entity
+		weapon_type_kinetic = roz_fairy_medium_gun_2_entity
+		weapon_type_ge_void_energy = roz_fairy_medium_gun_2_entity
+	}
+}
+
+roz_small_1_turret = {
+	size = small
+	component = weapon
+	entities = {
+		weapon_type_energy = "roz_fairy_samll_gun_1_entity"
+		weapon_type_explosive = "roz_fairy_samll_gun_1_entity"
+		weapon_type_kinetic = "roz_fairy_samll_gun_1_entity"
+		weapon_type_ge_void_energy = "roz_fairy_samll_gun_1_entity"
+	}
+}
+
+roz_small_2_turret = {
+	size = small
+	component = weapon
+	entities = {
+		weapon_type_energy = "roz_fairy_samll_gun_2_entity"
+		weapon_type_explosive = "roz_fairy_samll_gun_2_entity"
+		weapon_type_kinetic = "roz_fairy_samll_gun_2_entity"
+		weapon_type_ge_void_energy = "roz_fairy_samll_gun_2_entity"
+	}
+}
+
+roz_pd_1_turret = {
+	size = point_defence
+	component = weapon
+	entities = {
+		weapon_type_energy = roz_fairy_point_defense_turret_1_entity
+		weapon_type_explosive = roz_fairy_point_defense_turret_1_entity
+		weapon_type_kinetic = roz_fairy_point_defense_turret_1_entity
+		weapon_type_ge_void_energy = roz_fairy_point_defense_turret_1_entity
+	}
+}
+
+
+
+
+

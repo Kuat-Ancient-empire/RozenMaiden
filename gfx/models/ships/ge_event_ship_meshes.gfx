@@ -1,0 +1,102 @@
+objectTypes = {
+	
+	pdxmesh = {
+		name = "ge_003"
+		file = "gfx/models/ships/ge_003.mesh"
+		scale = 1.0
+		meshsettings = {
+			name = "shipShape"
+			index = 0
+			#texture_diffuse = ""
+			#texture_normal = ""
+			#texture_specular = ""
+			shader = "PdxMeshShip"
+			#shader = "PdxMeshExtraDimensionalShip"
+		}
+		
+		# meshsettings = {
+		# 	shader = "PdxMeshExtraDimensionalShip"
+		# }
+		# animation = { id = "idle"		type = "necroid_01_colossus_idle_animation" }
+		# animation = { id = "open"		type = "necroid_01_colossus_idle_animation" }
+		# animation = { id = "opening"	type = "necroid_01_colossus_idle_animation" }
+		# animation = { id = "closing"	type = "necroid_01_colossus_idle_animation" }
+
+	}
+	pdxmesh = {
+		name = "ge_003_table&plane"
+		file = "gfx/models/ships/ge_003_table&plane.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		# animation = { id = "idle"		type = "necroid_01_colossus_idle_animation" }
+		# animation = { id = "open"		type = "necroid_01_colossus_idle_animation" }
+		# animation = { id = "opening"	type = "necroid_01_colossus_idle_animation" }
+		# animation = { id = "closing"	type = "necroid_01_colossus_idle_animation" }
+
+	}
+	pdxmesh = {
+		name = "ge_003_wing"
+		file = "gfx/models/ships/ge_003_wing.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		
+	}
+	pdxmesh = {
+		name = "ge_003_ship_board"
+		file = "gfx/models/ships/ge_003_ship_board.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		
+	}
+	pdxmesh = {
+		name = "ge_003_bow"
+		file = "gfx/models/ships/ge_003_bow.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		
+	}
+	pdxmesh = {
+		name = "ge_003_stern"
+		file = "gfx/models/ships/ge_003_stern.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		
+	}
+	pdxmesh = {
+		name = "ge_003_main"
+		file = "gfx/models/ships/ge_003_main.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		
+	}
+	
+	pdxmesh = {
+		name = "ge_003_shader"
+		file = "gfx/models/ships/ge_003.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+		
+	}
+	
+}

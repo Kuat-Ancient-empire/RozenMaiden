@@ -1,0 +1,8 @@
+objectTypes = {
+	pdxmesh = {
+		name = "roz_fairy_dreadnaught_mesh"
+		file = "gfx/models/ships/roz_fairy/dreadnaught/roz_dread.mesh"
+		scale = 0.4
+
+	}
+}

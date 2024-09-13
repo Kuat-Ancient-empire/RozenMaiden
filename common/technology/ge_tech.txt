@@ -1,0 +1,1038 @@
+
+
+GE_tech_default_reactor = {
+	area = physics
+	start_tech = yes
+	cost = 0
+	tier = 0
+	category = { particles }
+	prerequisites = { "tech_starbase_2" }
+	ai_update_type = all
+	
+	is_reverse_engineerable = no
+	
+	gateway = power_generation
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		
+	}
+}
+
+###utilities
+
+GE_tech_reactor = {
+	area = physics
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { "tech_zero_point_power" }
+	category = { particles }
+	ai_update_type = all
+
+	weight = 400
+	
+	potential = {
+		is_ai = no
+		#has_ascension_perk = ap_ge_2
+		has_country_flag = ge_tech_reactor_get
+		#has_country_flag = roz_weapon_damage_limitation_flag
+	}
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	
+	gateway = power_generation
+
+	#prereqfor_desc = {
+		#hide_prereq_for_desc = component
+		#custom = {
+			#title = "TECH_UNLOCK_GE_TITLE"
+			#desc = "TECH_UNLOCK_GE_POWER_DESC"
+		#}
+	#}
+
+	modifier = {
+		ships_upkeep_mult = -0.15
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+###
+
+tech_ge_sf_armor = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { "GE_tech_reactor" }
+	category = { materials }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	#gateway = 
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+###
+
+tech_ge_shield = {
+	area = physics
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { "GE_tech_reactor" }
+	category = { field_manipulation }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	#gateway = 
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+###
+
+tech_ge_warp_drive = {
+	area = physics
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { "GE_tech_reactor" }
+	category = { particles }
+	ai_update_type = all
+
+	weight = 40
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	modifier = {
+		ship_disengage_chance_mult = 0.25
+		ship_jumpdrive_cooldown_mult = -0.5
+	}
+	
+	#weight_modifier = {}
+
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_thruster = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { "GE_tech_reactor" }
+	category = { propulsion }
+	ai_update_type = all
+
+	weight = 40
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+
+	modifier = {
+		ship_speed_mult = 0.05
+		ship_evasion_mult = 0.05
+	}
+	
+	#weight_modifier = {}
+
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_sensor = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { "GE_tech_reactor" }
+	category = { industry }
+	ai_update_type = all
+
+	weight = 40
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	modifier = {
+		ship_weapon_damage = 0.05
+	}
+	
+	#weight_modifier = {}
+
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+##ge_computer
+
+tech_ge_computer = {
+	area = physics
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { "GE_tech_reactor" }
+	category = { computing }
+	ai_update_type = all
+
+	weight = 40
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	modifier = {
+		ship_fire_rate_mult = 0.05
+	}
+	
+	#weight_modifier = {}
+
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_rds = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { "GE_tech_reactor" }
+	category = { materials }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	modifier = {
+		##
+	}
+	
+	#weight_modifier = {}
+
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_cb = {
+	area = physics
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { "GE_tech_reactor" }
+	category = { particles }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	
+	modifier = {
+		##
+	}
+	
+	#weight_modifier = {}
+
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_shippart_titian_aura = {
+	area = physics
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { "GE_tech_reactor" }
+	category = { particles }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	
+	modifier = {
+		country_government_civic_points_add = 2
+	}
+	
+	#weight_modifier = {}
+
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+
+
+
+
+###weapon
+
+tech_ge_pd = {
+	area = physics
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { "GE_tech_reactor" }
+
+	category = { particles }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	#gateway = 
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			#research_leader = {
+			#	area = physics
+			#	has_trait = "leader_trait_expertise_particles"
+			#}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+
+
+
+###
+
+tech_ge_xl_beam = {
+	area = physics
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { 
+		"GE_tech_reactor" 
+	}
+
+	category = { particles }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	
+	gateway = energy_weapons
+
+	modifier = {
+		ship_shield_mult = 0.2
+		ship_shield_damage_mult = 0.1
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 5
+			years_passed > 100
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_t_beam = {
+	area = physics
+	cost = @tier4cost2
+	tier = 4
+	prerequisites = { 
+		"GE_tech_reactor" 
+	}
+
+	category = { particles }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	
+	#gateway = energy_weapons
+
+	modifier = {
+		#ship_shield_mult = 0.2
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 5
+			years_passed > 120
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_laser_cannon = {
+	area = physics
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { 
+		"GE_tech_reactor" 
+	}
+
+	category = { particles }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	#gateway = energy_weapons
+
+	modifier = {
+		#ship_shield_mult = 0.2
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 5
+			years_passed > 120
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_kinetic_gun = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { 
+		"GE_tech_reactor" 
+	}
+
+	category = { materials }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	#gateway = energy_weapons
+
+	modifier = {
+		#ship_shield_mult = 0.2
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 5
+			years_passed > 120
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_energy_torpedo = {
+	area = physics
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { "GE_tech_reactor" }
+	category = { particles }
+	ai_update_type = military
+	weight = 10
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_reverse_engineerable = no
+	
+	gateway = kinetic_weapons
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			#research_leader = {
+			#	area = physics
+			#	has_trait = "leader_trait_expertise_particles"
+			#}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_wtorpedo = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { 
+		"GE_tech_reactor" 
+	}
+
+	category = { voidcraft }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	#gateway = 
+
+	modifier = {
+		#
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 5
+			years_passed > 120
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_bhmissile = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { 
+		"GE_tech_reactor" 
+	}
+
+	category = { voidcraft }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	#
+
+	modifier = {
+		#
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 5
+			years_passed > 120
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_strike_craft_bomber = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { 
+		"GE_tech_reactor" 
+	}
+
+	category = { voidcraft }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	#
+
+	modifier = {
+		#
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 5
+			years_passed > 120
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_strike_craft_fighter = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { 
+		"GE_tech_reactor" 
+	}
+
+	category = { voidcraft }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	#
+
+	modifier = {
+		#
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 5
+			years_passed > 120
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_planet_killer = {
+	area = physics
+	cost = 10000
+	tier = 4
+	prerequisites = { 
+		"GE_tech_reactor" 
+	}
+
+	category = { particles }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	
+	#gateway = energy_weapons
+
+	modifier = {
+		country_base_influence_produces_add = 1
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 5
+			years_passed > 120
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_strike_craft_xuefeng = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	prerequisites = { 
+		"GE_tech_reactor" 
+	}
+
+	category = { voidcraft }
+	ai_update_type = all
+
+	weight = 20
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	#
+
+	modifier = {
+		#
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 5
+			years_passed > 120
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+
+#######section tech
+
+tech_ge_section = {
+	area = engineering
+	cost = 24000
+	tier = 4
+	prerequisites = { 
+		"GE_tech_reactor" 
+	}
+
+	category = { voidcraft }
+	ai_update_type = all
+
+	weight = 4
+	
+	potential = {
+		is_ai = no
+	}
+
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	
+	#
+
+	modifier = {
+		#
+	}
+	
+	weight_modifier = {
+		base = 1
+		modifier = {
+			factor = 0.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 50
+			years_passed > 100
+		}
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+tech_ge_HTEP = {
+	area = physics
+	cost = 2000
+	tier = 4
+	category = { 
+		field_manipulation
+	}
+	weight = 4	
+	potential = {
+		has_country_flag = ge_jyzzlfd_flag
+	}
+	is_rare = yes
+	is_dangerous = no
+	modifier = {
+		ships_upkeep_mult = -0.1
+	}
+	weight = 100
+	weight_modifier = {
+		
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+
+tech_ge_sgt_flagship = {
+	area = engineering
+	cost = 8000
+	tier = 4
+	category = { 
+		propulsion
+	}
+	potential = {
+		#has_country_flag = ge_sgt_flagship_enable_flag
+		has_country_flag = ge_leader_suigintou_get
+		#has_global_flag = roz_sgt_unknow_flagship_spawn
+		has_country_flag = roz_sgt_unknow_flagship_spawn_country
+	}
+	is_rare = yes
+	#is_dangerous = yes
+	modifier = {
+		
+	}
+	weight = 0
+	weight_modifier = {
+		
+	}
+	
+	ai_weight = {
+		factor = 0		
+	}
+}
+
+
+tech_roz_power_core = {
+	area = physics
+	cost = 20000
+	tier = 4
+	category = { particles }
+	prerequisites = { GE_tech_reactor }
+	is_dangerous = yes
+	weight = 0
+	#weight_modifier = {
+	#	modifier = {
+	#		factor = 2.5
+	#		has_technology = tech_ge_t_beam
+	#	}
+	#}
+
+	ai_weight = { factor = 0 }
+}
+
+tech_ge_sgt_flagship_normal = {
+	area = engineering
+	cost = 8000
+	tier = 4
+	category = {
+		voidcraft
+	}
+	potential = {
+		#has_country_flag = ge_leader_suigintou_get
+		#has_global_flag = roz_sgt_unknow_flagship_spawn
+		has_country_flag = ge_sgt_flagship_proj_complete_flag
+	}
+	is_rare = yes
+	#is_dangerous = yes
+	modifier = {
+		
+	}
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}
+
+

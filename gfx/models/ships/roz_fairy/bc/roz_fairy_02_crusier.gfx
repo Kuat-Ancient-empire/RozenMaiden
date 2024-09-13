@@ -1,0 +1,50 @@
+objectTypes = {
+	pdxmesh = {
+		name = "roz_fairy_battlecrusier_mesh"
+		file = "gfx/models/ships/roz_fairy/bc/roz_bcship.mesh"
+		scale = 1.0
+
+		#meshsettings = {
+		#	name = "polySurface1"
+		#	index = 0
+		#	texture_diffuse = roz_anister_crusier_engine_DIFF.dds
+		#	texture_normal = "roz_anister_crusier_engine_norm.dds"
+		#	texture_specular = "roz_anister_crusier_engine_spec.dds"
+		#	shader = "PdxMeshShip"
+		#}
+		#
+		#meshsettings = {
+		#	name = "polySurface5"
+		#	index = 0
+		#	texture_diffuse = roz_anister_crusier_hull_NORM.dds
+		#	texture_normal = "roz_anister_crusier_hull_norm.dds"
+		#	texture_specular = "roz_anister_crusier_hull_spec.dds"
+		#	shader = "PdxMeshShip"
+		#}
+		#
+		#meshsettings = {
+		#	name = "polySurface6"
+		#	index = 0
+		#	texture_diffuse = roz_anister_crusier_support_engine_DIFF.dds
+		#	texture_normal = "roz_anister_crusier_support_engine_norm.dds"
+		#	texture_specular = "roz_anister_crusier_support_engine_spec.dds"
+		#	shader = "PdxMeshShip"
+		#}
+
+	}
+	pdxmesh = {
+		name = "roz_fairy_battlecrusier_frame_mesh"
+		file = "gfx/models/ships/roz_fairy/bc/roz_bcship_frame.mesh"
+		scale = 0.95
+
+		meshsettings = {
+			name = "polySurface1"
+			index = 0
+			texture_diffuse = roz_anister_crusier_engine_DIFF.dds
+			texture_normal = "roz_anister_crusier_engine_norm.dds"
+			texture_specular = "roz_anister_crusier_engine_spec.dds"
+			shader = "PdxMeshShip"
+		}
+
+	}
+}

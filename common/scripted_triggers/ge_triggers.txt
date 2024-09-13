@@ -1,0 +1,242 @@
+is_rozen_leader = {
+	OR = {
+		has_leader_flag = ge_suigintou_flag
+		#has_leader_flag = roz_kanaria_flag
+		#has_leader_flag = roz_suiseiseki_flag
+		#has_leader_flag = roz_souseiseki_flag
+		#has_leader_flag = roz_shinku_flag
+		#has_leader_flag = roz_hinaichigo_flag
+		#has_leader_flag = roz_kirakishou_flag
+	}
+}
+
+has_tech_ge_shippart_titian_aura = {
+	has_technology = tech_ge_shippart_titian_aura
+}
+
+has_rozen_leader = {
+	any_owned_leader = {
+		is_rozen_leader = yes			
+	}
+}
+
+roz_sgt_site_planet_select_condition = { ##scope:solar system
+	any_system_planet = {
+		has_owner = no
+		is_colony = no
+		has_anomaly = no
+		NOR = {
+			exists = archaeological_site
+			has_planet_flag = hatchling_egg
+		}
+		OR = {
+			is_planet_class = pc_molten
+			is_planet_class = pc_barren
+			is_planet_class = pc_barren_cold
+			is_planet_class = pc_toxic
+			is_planet_class = pc_frozen
+			is_planet_class = pc_nuked
+			is_planet_class = pc_shattered
+			is_planet_class = pc_asteroid
+		}
+	}
+}
+
+has_rozen_affection_trait = {
+	OR = {
+		has_trait = leader_trait_ge_admiral_a_strangeness
+		has_trait = leader_trait_ge_admiral_a_friendly
+		has_trait = leader_trait_ge_admiral_a_like
+		has_trait = leader_trait_ge_admiral_a_love
+		has_trait = leader_trait_ge_scientist_a_strangeness
+		has_trait = leader_trait_ge_scientist_a_friendly
+		has_trait = leader_trait_ge_scientist_a_like
+		has_trait = leader_trait_ge_scientist_a_love
+	}
+}
+
+#strangeness
+ge_affection_strangeness_trigger = {
+	is_variable_set = ge_leader_affection
+	check_variable = {
+		which = ge_leader_affection
+		value >= 0
+	}
+}
+
+#frindly
+ge_affection_frindly_trigger = {
+	is_variable_set = ge_leader_affection
+	is_rozen_leader = yes
+	has_rozen_affection_trait = yes
+	check_variable = {
+		which = ge_leader_affection
+		value >= 30
+	}
+}
+
+#like
+ge_affection_like_trigger = {
+	is_variable_set = ge_leader_affection
+	is_rozen_leader = yes
+	has_rozen_affection_trait = yes
+	check_variable = {
+		which = ge_leader_affection
+		value >= 60
+	}
+}
+
+#love
+ge_affection_love_trigger = {
+	is_variable_set = ge_leader_affection
+	is_rozen_leader = yes
+	has_rozen_affection_trait = yes
+	check_variable = {
+		which = ge_leader_affection
+		value >= 90
+	}
+}
+
+#好感度判定：友好
+ge_aft_fri = {
+	is_rozen_leader = yes
+	has_rozen_affection_trait = yes
+	check_variable = {
+		which = ge_leader_affection
+		value >= 30
+	}
+}
+
+#好感度判定：喜欢
+ge_aft_lik = {
+	is_rozen_leader = yes
+	has_rozen_affection_trait = yes
+	check_variable = {
+		which = ge_leader_affection
+		value >= 60
+	}
+}
+
+#好感度判定：爱意
+ge_aft_lov = {
+	is_rozen_leader = yes
+	has_rozen_affection_trait = yes
+	check_variable = {
+		which = ge_leader_affection
+		value >= 90
+	}
+}
+
+###############################
+###舰船部件条件
+
+has_ge_component = {
+	OR = {
+		has_component = CORVETTE_GE_REACTOR
+		has_component = DESTROYER_GE_REACTOR
+		has_component = BATTLESHIP_GE_REACTOR
+		has_component = CRUISER_GE_REACTOR
+		has_component = TITAN_GE_REACTOR
+		has_component = PLATFORM_GE_REACTOR
+		has_component = COLOSSUS_GE_REACTOR
+		has_component = ION_CANNON_GE_REACTOR
+		has_component = STARBASE_GE_REACTOR
+	}
+}
+
+has_ge_weapon = {
+	OR = {
+		has_component = GE_SMALL_LASER_CANNON
+		has_component = GE_MEDIUM_LASER_CANNON
+		has_component = GE_LARGE_LASER_CANNON
+		has_component = GE_XL_BEAM
+		has_component = GE_T_BEAM
+		has_component = GE_GRAVITY_BURST
+		has_component = GE_PD
+		has_component = ge_vn_main_beam
+		has_component = ge_vn_secondary_beam
+		has_component = ge_vn_pd
+		has_component = ge_large_vn_laser
+		has_component = ge_medium_vn_laser
+		has_component = ge_small_vn_laser
+		has_component = ge_vn_aux
+		has_component = ge_vn_torpedo
+		has_component = GE_LARGE_KINETIC_GUN
+		has_component = GE_MEDIUM_KINETIC_GUN
+		has_component = GE_SMALL_KINETIC_GUN
+	}
+}
+
+has_ge_energy_weapon = {
+	OR = {
+		has_component = GE_SMALL_LASER_CANNON
+		has_component = GE_MEDIUM_LASER_CANNON
+		has_component = GE_LARGE_LASER_CANNON
+		has_component = GE_XL_BEAM
+		has_component = GE_T_BEAM
+		has_component = GE_GRAVITY_BURST
+		has_component = GE_PD
+		has_component = ge_vn_main_beam
+		has_component = ge_vn_secondary_beam
+		has_component = ge_vn_pd
+		has_component = ge_large_vn_laser
+		has_component = ge_medium_vn_laser
+		has_component = ge_small_vn_laser
+	}
+}
+
+has_ge_kinetic_weapon = {
+	OR = {
+		has_component = GE_LARGE_KINETIC_GUN
+		has_component = GE_MEDIUM_KINETIC_GUN
+		has_component = GE_SMALL_KINETIC_GUN
+	}
+}
+
+has_component_ZERO_POINT_REACTOR = {
+	OR = {
+		has_component = CORVETTE_ZERO_POINT_REACTOR
+		has_component = DESTROYER_ZERO_POINT_REACTOR
+		has_component = CRUISER_ZERO_POINT_REACTOR
+		has_component = BATTLESHIP_ZERO_POINT_REACTOR
+		has_component = TITAN_ZERO_POINT_REACTOR
+		has_component = COLOSSUS_ZERO_POINT_REACTOR
+	}
+}
+
+has_component_DARK_MATTER_REACTOR = {
+	OR = {
+		has_component = CORVETTE_DARK_MATTER_REACTOR
+		has_component = DESTROYER_DARK_MATTER_REACTOR
+		has_component = CRUISER_DARK_MATTER_REACTOR
+		has_component = BATTLESHIP_DARK_MATTER_REACTOR
+		has_component = TITAN_DARK_MATTER_REACTOR
+		has_component = COLOSSUS_DARK_MATTER_REACTOR
+	}
+}
+
+has_component_GE_REACTOR = {
+	OR = {
+		has_component = CORVETTE_GE_REACTOR
+		has_component = DESTROYER_GE_REACTOR
+		has_component = CRUISER_GE_REACTOR
+		has_component = BATTLESHIP_GE_REACTOR
+		has_component = TITAN_GE_REACTOR
+		has_component = COLOSSUS_GE_REACTOR
+		has_component = STARBASE_GE_REACTOR
+	}
+}
+
+is_real_roz_YS_planet = {
+	exists = event_target:roz_outland_planet
+	is_same_value = event_target:roz_outland_planet
+	is_planet_class = pc_roz_YS_planet
+}
+
+
+
+
+
+
+
+

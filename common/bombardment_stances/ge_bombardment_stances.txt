@@ -1,0 +1,79 @@
+q_dolls_bombardment = {
+	trigger = {
+		owner = {
+			has_country_flag = q_sgt_army
+			NOT = {
+				is_crisis_faction = yes
+			}
+			
+		}
+	}
+
+	default = no
+
+	stop_when_armies_dead = no
+	abduct_pops = no
+	planet_damage = 5
+	army_damage = 25
+	kill_pop_chance = {
+		base = 0.30
+	}
+	min_pops_to_kill_pop = 0
+
+	# root = fleet
+	# from = planet
+	
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.01
+			exists = from
+			from = {
+				owner = { NOT = { is_hostile = root.owner } }
+			}
+			exists = owner
+			owner = { is_crisis_faction = no }
+		}
+	}
+}
+
+q_dolls_armageddon = {
+	trigger = {
+		owner = {
+			has_country_flag = q_sgt_army
+			OR = {
+				is_crisis_faction = yes
+				has_crisis = yes
+			}
+		}
+	}
+
+	default = no
+	stop_when_armies_dead = no
+	abduct_pops = no
+
+	planet_damage = 15
+	army_damage = 55
+
+	kill_pop_chance = {
+		base = 2
+	}
+	min_pops_to_kill_pop = 0
+
+	# root = fleet
+	# from = planet
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.01
+			exists = from
+			from = {
+				owner = { NOT = { is_hostile = root.owner } }
+			}
+			exists = owner
+			owner = { is_crisis_faction = no }
+		}
+	}
+}
+
+

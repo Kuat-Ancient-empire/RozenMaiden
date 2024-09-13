@@ -1,0 +1,69 @@
+entity = {
+	name = "SSV_M_beam_turret_entity"
+	pdxmesh = "SSV_M_beam_mesh"
+	scale = 1.0
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	locator = { name = root position = { 0 0 -1 } rotation = { 0 0 0 } }
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+entity = {
+	name = "SSV_M_beam_2_turret_entity"
+	pdxmesh = "SSV_M_beam_mesh"
+	scale = 0.68
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	locator = { name = root position = { 0 0 -1 } rotation = { 0 0 0 } }
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+entity = {
+	name = "SSV_M_beam_turret_entity_1"
+	pdxmesh = "SSV_M_beam_1_mesh"
+	scale = 1.0
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	locator = { name = root position = { 0 0 -1 } rotation = { 0 0 0 } }
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+entity = {
+	name = "SSV_S_Beam_turret_entity"
+	pdxmesh = "SSV_S_Beam_mesh"
+	scale = 1.0
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}
+
+entity = {
+	name = "SSV_S_Missile_turret_entity"
+	pdxmesh = "SSV_S_Missile_mesh"
+	scale = 1.0
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	
+	game_data = {
+		emissive_recolor_crunch = 1.0
+	}
+}

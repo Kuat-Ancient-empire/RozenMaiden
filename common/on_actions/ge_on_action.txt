@@ -1,0 +1,274 @@
+on_game_start_country = {
+
+	events = {
+
+	}
+
+	events = {
+		ge_event.0
+		#ge_sites.1
+		#ge_sites.10
+		ge_sites.9999	#创建水银灯的考古遗迹
+	}
+}
+
+
+
+on_monthly_pulse_country = {
+    events = {
+		VOP_evt_FRAMEWORK.8
+    }
+}
+
+VOP_on_monthly_pulse_country = {
+	#this = country #root = country
+	events = {
+		ge_affection.0	#领袖相关月检
+		ge_modifier_evt.1	#发电机测试功能
+		ge_modifier_evt.2	#削弱黑天使守卫的强度
+		ge_skills.10		###sgt本体技能
+		ge_communication.501
+		#ge_event.3009
+		roz_teaparty_evt.11	#茶会月检
+		ge_affection.1	#通用月检
+		ge_affection.23	#汞灯作为科学家处于内阁时加好感值
+		ge_event.461	#虚空科技起源-研究片段4触发
+		ge_affection.12	#好感度升级
+
+	}
+	random_events = {
+		6 = ge_event.3009	#致敬亚伦·布什内尔
+	}
+}
+
+on_planet_class_changed = {  }
+
+
+on_leader_hired = {
+
+}
+
+
+
+on_fleet_enter_orbit = {  }
+
+on_mid_game_pulse_country = {
+
+}
+
+on_leader_fired = {
+
+}
+
+on_leader_spawned = {
+	events = {
+		ge_event.1001	#增加飞升特质
+	}
+}
+
+on_tech_increased = {
+	events = {
+		#ge_event.46
+		#ge_event.48
+		#ge_event.1000
+		#ge_leader_event.1
+		#ge_affection.23	###完成研究加好感度
+	}
+}
+
+###scope: country
+on_entering_battle = {
+	events = {
+		ge_skills.2		#tf
+		ge_skills.21		#tf, too
+
+		ge_skills.3		#bwg
+		ge_skills.5		#az
+		ge_skills.6		#nf
+		ge_skills.15		#创生之湖
+		#ge_modifier_evt.100
+
+		ge_skills.200		#雪华绮晶，广域精神榨取
+
+		#ge_event.2038	#时停debuff flag
+		#ge_event.2048	#时停debuff
+
+		ge_affection.15 #水银灯接战-敌方战力计算
+
+	}
+}
+
+on_space_battle_won = {
+	events = {
+		#ge_skills.999
+		ge_skills.1000		######清除我方舰队标识win
+		#ge_skills.1001		###清除敌方舰队标识win
+		ge_affection.20		###水银灯舰队司令赢得战斗加的好感值
+		#ge_affection.15
+	}
+}
+
+on_space_battle_lost = {
+	events = {
+		ge_skills.2000		######清除我方舰队标识lose
+		#ge_skills.2001		###清除敌方舰队标识lose
+		ge_affection.201	###水银灯舰队司令输了战斗加的好感值
+	}
+}
+
+# Triggers when trying to open the diplomacy view for countries with custom diplomacy.
+# Country scope
+# This = target country (player)
+# From = source country
+on_custom_diplomacy = {
+	events = {
+		ge_communication.100
+		roz_krks_leader_evt.100
+		roz_krks_leader_evt.101
+		#ge_leader_event.3
+		ge_communication.102
+	}
+}
+
+# Triggers event when each country first sends a ship into the system (once per country)
+# Scope = Ship
+# From = System
+# FromFrom = Country
+on_entering_system_first_time = {
+	events = {
+
+	}
+}
+
+# Triggers event when ship enters a system. It's usually better to use on_entering_system_first_time or on_entering_system_fleet
+# Scope = Ship
+# From = System
+# FromFrom = Country
+on_entering_system = {
+	events = {
+		ge_sites.9
+		roz_krks_leader_evt.54
+		#ge_test_event.1112
+	}
+
+}
+
+on_survey_planet = {  }
+
+# A fleet has entered a system | See also: on_fleet_auto_move_arrival
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+	events = {
+		ge_affection.21	###舰队司令逛街加好感值,倍数0.025
+	}
+}
+
+# A ship has surveyed a planet.
+# Scope = Ship
+# From = Planet
+on_survey_planet = {
+	events = {
+		ge_skills.12	##nfield
+		ge_affection.22	##探索加好感度，倍数0.1
+	}
+}
+
+
+
+# This = Country
+# From = Leader
+on_leader_death = {
+	events = {
+		ge_affection.10	##死亡或换职位时记录好感度（）
+		#ge_communication.1000	#复活#咕
+		#ge_test_event.300
+	}
+}
+
+on_single_player_save_game_load = {
+	events = {
+		#ge_event.3
+	}
+}
+
+on_fleet_enter_orbit = {
+
+}
+
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_victim = {
+	events = {
+		ge_event.3050	#雪华绮晶boss战-二阶段
+		ge_event.3060	#雪华绮晶boss战-三阶段
+		ge_event.3070	#雪华绮晶boss战-四阶段
+		ge_event.3049
+		#ge_sgt_falgship_events.5
+
+		roz_shinku_evt.439		##真红事件链-卷土重来(事件跳转)
+	}
+}
+
+# This = owner of fleet 1 (combatant)
+# From = owner of fleet 2 (destroyed)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_perp = {
+	events = {
+		ge_event.2062
+
+		#ge_sgt_falgship_events.5
+	}
+}
+
+on_leader_death = {  }
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_perp = {
+	events = {
+		#ge_sgt_falgship_events.4
+	}
+}
+
+on_ship_destroyed_victim = {
+	events = {
+		ge_sgt_falgship_events.4
+	}
+}
+
+
+# A ship has been built
+# Root = Ship
+# From = Planet
+on_ship_built = {
+	events = {
+		
+	}
+}
+
+# A ship design has been finished
+# Root = Country
+on_ship_designed = {
+	events = {
+		
+	}
+}
+
+
+on_megastructure_built = {
+	events = {
+
+	}
+}
+
+on_planet_bombarded = {
+	events = {
+
+	}
+}
+

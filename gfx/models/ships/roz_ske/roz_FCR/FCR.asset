@@ -1,0 +1,18 @@
+entity = {
+	name = "roz_FCR_entity"
+	pdxmesh = "roz_FCR_mesh"
+	game_data = {
+		emissive_recolor_crunch = 0
+	}
+	default_state = "idle"
+	scale = 6
+	state = {
+		name = "idle"
+		animation = "idle"
+		animation_blend_time = 10 #looping = yes
+		event = { time = 0 node = "root" particle = reptilian_01_colossus_inner_core_effect keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "root" particle = ion_cannon_windup_effect keep_particle = yes trigger_once = yes}
+	}
+}
+
+animation = { name = FCR_idle_animation file = FCR_idle.anim }

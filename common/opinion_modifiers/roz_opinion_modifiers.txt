@@ -1,0 +1,52 @@
+opinion_roz_edict_mutiplayer_tech = {
+	opinion = {
+		base = -50
+	}
+	unique = yes
+	decay = {
+		base = 2
+	}
+}
+
+triggered_opinion_roz_test_postive = {
+	opinion = {
+		base = 50
+	}
+	#unique = no
+}
+
+opinion_roz_test_postive = {
+	trigger = {
+		FROM = {
+			has_modifier = roz_ap_slot_add
+		}
+		# Is not a Fallen Empire, Awakened Empire or Pre-FTL Empire
+		is_country_type = default
+		OR = {
+			# Is independent
+			is_subject = no
+			# Or a subject of another empire that is capable of independent diplomacy
+			AND = {
+				is_subject = yes
+				FROM = {
+					NOT = { is_overlord_to = PREV }
+				}
+			}
+		}
+	}
+	opinion = {
+		base = 1000
+	}
+}
+
+opinion_roz_date_dip_dissatisfied = {
+	opinion = {
+		base = -10
+	}
+	unique = no
+	decay = {
+		base = 5
+	}
+
+}
+

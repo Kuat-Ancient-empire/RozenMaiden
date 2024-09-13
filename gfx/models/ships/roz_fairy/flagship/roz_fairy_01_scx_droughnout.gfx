@@ -1,0 +1,48 @@
+objectTypes = {
+	pdxmesh = {
+		name = "roz_fairy_flagship_mesh"
+		file = "gfx/models/ships/roz_fairy/flagship/roz_flagship.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "Object17497Shape"
+			index = 0
+			texture_diffuse = "roz_Flagship_engine_diffuse.dds"
+			texture_normal = "roz_Flagship_engine_normal.dds"
+			texture_specular = "roz_Flagship_engine_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "Object04Shape"
+			index = 0
+			texture_diffuse = "roz_Colossus_hull_diffuse.dds"
+			texture_normal = "roz_Colossus_hull_normal.dds"
+			texture_specular = "roz_Colossus_hull_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "MeshShape"
+			index = 0
+			texture_diffuse = "roz_Colossus_armor_diffuse.dds"
+			texture_normal = "roz_Colossus_armor_normal.dds"
+			texture_specular = "roz_Colossus_armor_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "roz_fairy_flagship_frame_mesh"
+		file = "gfx/models/ships/roz_fairy/flagship/roz_flagship_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "Object17497Shape"
+			index = 0
+			texture_diffuse = "roz_Flagship_engine_diffuse.dds"
+			texture_normal = "roz_Flagship_engine_normal.dds"
+			texture_specular = "roz_Flagship_engine_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

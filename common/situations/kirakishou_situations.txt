@@ -1,0 +1,984 @@
+kirakishou_planet_invasion_situation = {
+	##just use for home planet
+	desc = {
+		text = krks_pi_situ_ges
+		trigger = {
+			owner = {
+				is_gestalt != no
+				NOT = { has_country_flag = roz_krks_dl_early_flag }
+			}
+		}
+	}
+	desc = {
+		text = krks_pi_situ_standard
+		trigger = {
+			owner = {
+				is_gestalt = no
+				NOT = { has_country_flag = roz_krks_dl_early_flag }
+			}
+		}
+	}
+	desc = {
+		text = krks_pi_situ_early
+		trigger = {
+			owner = {
+				has_country_flag = roz_krks_dl_early_flag
+				NOT = { has_country_flag = roz_krks_dl_normal_flag }
+			}
+		}
+	}
+	picture = GFX_evt_alien_nature
+	complete_icon = GFX_situation_outcome_negative
+	complete_icon_frame = GFX_situation_outcome_frame_red
+	fail_icon = GFX_situation_outcome_meh
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	category = negative
+	#progress_direction = bidirectional	#monodirectional/bidirectional (defaults to monodirectional)
+	on_start = {
+		# if = {
+		# 	limit = {
+		# 		root = {
+		# 			NOT = {
+		# 				has_planet_flag = ge_krks_pi_cap_flag
+		# 			}
+		# 		}
+		# 	}
+		# 	root = {
+		# 		set_planet_flag = ge_krks_pi_cap_flag
+		# 	}
+		# }
+
+	}
+	on_progress_complete = {
+		owner = {
+			home_planet = {
+				owner = {
+					start_situation = {
+						type = situation_planetary_revolt
+						target = prev
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lv1
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lv1
+					}
+				}
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lv2
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lv2
+					}
+				}
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lv2.5
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lv2.5
+					}
+				}
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lv3
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lv3
+					}
+				}
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lv4
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lv4
+					}
+				}
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lv5
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lv5
+					}
+				}
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lvMAX
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lvMAX
+					}
+				}
+				home_planet = {
+					add_modifier = {
+						modifier = ge_kirakishou_invasion_lvMAX
+						days = 1800
+					}
+				}
+			}
+			# country_event = {
+			# 	id = x
+			# }
+		}
+		hidden_effect = {
+			destroy_situation = this
+		}
+		custom_tooltip = "krks_pis_complete_ct"
+	}
+	on_fail = {
+		owner = {
+			home_planet = {
+				remove_planet_flag = ge_krks_pi_cap_flag
+			}
+			#移除debuff
+			hidden_effect = {
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lv1
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lv1
+					}
+				}
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lv2
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lv2
+					}
+				}
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lv2.5
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lv2.5
+					}
+				}
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lv3
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lv3
+					}
+				}
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lv4
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lv4
+					}
+				}
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lv5
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lv5
+					}
+				}
+				if = {
+					limit = {
+						home_planet = {
+							has_modifier = ge_kirakishou_invasion_lvMAX
+						}
+					}
+					home_planet = {
+						remove_modifier = ge_kirakishou_invasion_lvMAX
+					}
+				}
+				home_planet = {
+					switch = {
+						trigger = has_modifier
+						ge_kirakishou_invasion_lv1 = {
+							remove_modifier = ge_kirakishou_invasion_lv1
+						}
+						ge_kirakishou_invasion_lv2 = {
+							remove_modifier = ge_kirakishou_invasion_lv2
+						}
+						ge_kirakishou_invasion_lv2.5 = {
+							remove_modifier = ge_kirakishou_invasion_lv2.5
+						}
+						ge_kirakishou_invasion_lv3 = {
+							remove_modifier = ge_kirakishou_invasion_lv3
+						}
+						ge_kirakishou_invasion_lv4 = {
+							remove_modifier = ge_kirakishou_invasion_lv4
+						}
+						ge_kirakishou_invasion_lv5 = {
+							remove_modifier = ge_kirakishou_invasion_lv5
+						}
+						ge_kirakishou_invasion_lvMAX = {
+							remove_modifier = ge_kirakishou_invasion_lvMAX
+						}
+					}
+				}
+
+			}
+			# country_event = {
+			# 	id = x
+			# }
+		}
+		hidden_effect = {
+			destroy_situation = this
+		}
+		custom_tooltip = "krks_pis_fail_ct"
+	}
+	on_abort = {
+	}
+	#Effects when Situation is cancelled via abort_trigger trigger
+	abort_trigger = {
+	}
+	#Trigger for when a Situation should abort, firing on_abort
+	start_value = 6	#Situation will start at this number. Default is 0
+	modifier = {
+	}
+	#Modifier applying to the country experiencing the situation
+	triggered_modifier = {
+		#Triggered modifier applying to the country experiencing the situation, if the triggers are true
+		potential = {
+		}
+		modifier = {
+		}
+	}
+	target_modifier = {
+	}
+	#Modifier applying to the target planet of a Situation. Does not work on other scope types!
+	triggered_target_modifier = {
+		#Modifier applying to the target planet of a Situation, if the triggers are true. Does not work on other scope types!
+		potential = {
+			owner = {
+				home_planet = {
+					has_planet_flag = ge_krks_pi_cap_flag
+				}
+			}
+		}
+		modifier = {
+			planet_stability_add = -5
+			#@kskr_pi
+		}
+	}
+	#This behaves like an on_action. Note: technically, this is an on_action called test_situation. So don't call your situation "on_monthly_pulse"!
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+			60 = 0
+			20 = 0
+		}
+	}
+	stages = {
+		#List all your stages here, in the correct order.
+		kr_defcon_5 = {
+			icon = GFX_situation_stage_1
+
+			icon_background = GFX_situation_stage_frame_green
+			triggered_target_modifier = {
+				potential = {
+					owner = {
+						has_country_flag = roz_krks_dl_normal_flag
+					}
+				}
+				planet_stability_add = -5
+				planet_amenities_add = -5
+			}
+			triggered_target_modifier = {
+				potential = {
+					owner = {
+						has_country_flag = roz_krks_dl_early_flag
+					}
+				}
+				planet_stability_add = -5
+				planet_amenities_add = -5
+			}
+
+			on_first_enter = {
+				situation_event = {
+					id = ge_event.20161
+				}
+			}
+			custom_tooltip = stage_ct_kr_defcon_5
+			end = 15
+		}
+		kr_defcon_4 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			triggered_target_modifier = {
+				potential = {
+					owner = {
+						has_country_flag = roz_krks_dl_normal_flag
+					}
+				}
+				planet_stability_add = -15
+				planet_amenities_add = -15
+				#planet_jobs_produces_mult = -0.11
+			}
+			triggered_target_modifier = {
+				potential = {
+					owner = {
+						has_country_flag = roz_krks_dl_early_flag
+					}
+				}
+				planet_stability_add = -10
+				planet_amenities_add = -10
+			}
+			on_first_enter = {
+				if = {
+					limit = {
+						owner = {
+							NOT = {
+								has_country_flag = krks_pis_stage_flag
+							}
+						}
+					}
+					situation_event = {
+						id = ge_event.20171
+					}
+				}
+				else_if = {
+					limit = {
+						owner = {
+							has_country_flag = krks_pis_stage_flag
+						}
+					}
+					situation_event = {
+						id = ge_event.20181
+						days = 1
+					}
+				}
+			}
+			custom_tooltip = stage_ct_kr_defcon_4
+			end = 30
+		}
+		kr_defcon_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			triggered_target_modifier = {
+				potential = {
+					owner = {
+						has_country_flag = roz_krks_dl_normal_flag
+					}
+				}
+				planet_stability_add = -25
+				planet_amenities_add = -25
+				planet_jobs_produces_mult = -0.15
+			}
+			triggered_target_modifier = {
+				potential = {
+					owner = {
+						has_country_flag = roz_krks_dl_early_flag
+					}
+				}
+				planet_stability_add = -15
+				planet_amenities_add = -15
+				planet_jobs_produces_mult = -0.05
+			}
+			on_first_enter = {
+				situation_event = {
+					id = ge_event.20191
+				}
+			}
+			custom_tooltip = stage_ct_kr_defcon_3
+			end = 45
+		}
+		kr_defcon_2 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			triggered_target_modifier = {
+				potential = {
+					owner = {
+						has_country_flag = roz_krks_dl_normal_flag
+					}
+				}
+				planet_stability_add = -30
+				planet_amenities_add = -30
+				planet_jobs_produces_mult = -0.20
+			}
+			triggered_target_modifier = {
+				potential = {
+					owner = {
+						has_country_flag = roz_krks_dl_early_flag
+					}
+				}
+				planet_stability_add = -20
+				planet_amenities_add = -20
+				planet_jobs_produces_mult = -0.10
+			}
+			modifier = {
+				country_energy_produces_mult = -0.05
+				trade_value_mult = -0.1
+			}
+			on_first_enter = {
+				situation_event = {
+					id = ge_event.20301
+				}
+			}
+			custom_tooltip = stage_ct_kr_defcon_2
+			end = 60
+		}
+		kr_defcon_1 = {
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_red
+			triggered_target_modifier = {
+				potential = {
+					owner = {
+						has_country_flag = roz_krks_dl_normal_flag
+					}
+				}
+				planet_stability_add = -35
+				planet_amenities_add = -35
+				planet_jobs_produces_mult = -0.25
+			}
+			triggered_target_modifier = {
+				potential = {
+					owner = {
+						has_country_flag = roz_krks_dl_early_flag
+					}
+				}
+				planet_stability_add = -20
+				planet_amenities_add = -20
+				planet_jobs_produces_mult = -0.15
+			}
+			modifier = {
+				country_energy_produces_mult = -0.05
+				trade_value_mult = -0.2
+			}
+			on_first_enter = {
+				situation_event = {
+					id = ge_event.20302
+				}
+			}
+			custom_tooltip = stage_ct_kr_defcon_1
+			end = 80
+		}
+		kr_before_the_storm = {
+			#Expects the key to be localised. You can also define <key>_desc and it will show on the tooltip, but this is optional.
+			icon = GFX_situation_outcome_revolt
+			icon_background = GFX_situation_stage_frame_red
+			#background = GFX_evt_alien_propaganda
+			end = 100
+			triggered_target_modifier = {
+				potential = {
+					owner = {
+						has_country_flag = roz_krks_dl_normal_flag
+					}
+				}
+				planet_stability_add = -40
+				planet_amenities_add = -40
+				planet_jobs_produces_mult = -0.33
+			}
+			triggered_target_modifier = {
+				potential = {
+					owner = {
+						has_country_flag = roz_krks_dl_early_flag
+					}
+				}
+				planet_stability_add = -20
+				planet_amenities_add = -20
+				planet_jobs_produces_mult = -0.20
+			}
+			modifier = {
+				country_energy_produces_mult = -0.1
+				trade_value_mult = -0.3
+			}
+			on_first_enter = {
+				situation_event = {
+					id = ge_event.20303
+				}
+			}
+			#Effect for the first time this stage fires
+			modifier = {
+				planet_stability_add = -10
+			}
+			#as standard (applies only during this Stage)
+			custom_tooltip = stage_ct_kr_before_the_storm			#this will print in the stage tooltip (on_first_enter will not, because spoilers; modifiers will)
+		}
+	}
+	approach = {
+		name = krks_pi_approach_block_message		#This is localised. If you add a loc key "approach_a_desc", it will also show, but this is optional.
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		allow = {
+		}
+		#If this fails, the Approach is greyed out
+		potential = {
+		}
+		#If this fails, the Approach is not shown
+		on_select = {
+			# owner = {
+			# 	country_event = {
+			# 		id = x
+			# 	}
+			# }
+			custom_tooltip = krks_pi_approach_block_message_ct
+		}
+		#Effect when you pick the Approach.
+		default = yes		#Sets the Approach to be the Situation's default. This means that it will be picked when the Situation starts, and if the current
+		#Approach is invalidated (fails potential or allow check). This won't happen while the Situation is locked, so events which demand
+		#a choice of Approach can lock the situation (set_situation_locked) in immediate (or the Situation's on_start) and unlock them in after.
+		modifier = {
+		}
+		#as standard (applies only when this Approach is picked)
+		triggered_modifier = {
+			potential = {
+				owner = {
+					has_country_flag = krks_pis_stage_flag_2
+				}
+			}
+			modifier = {
+				planet_stability_add = 5
+			}
+		}
+		target_modifier = {
+			planet_stability_add = 10
+			planet_amenities_add = -5
+		}
+		resources = {
+			#Resource table as standard
+			category = situations
+			cost = {
+				influence = 50
+				unity = 50
+				energy = 100
+			}
+			upkeep = {
+				trigger = {
+					NOT = { current_stage = stage_1 }
+				}
+				unity = 10
+			}
+			produces = {
+				time = 1
+			}
+		}
+		ai_weight = {
+		}
+		#AI will pick the one with the highest weight
+	}
+	approach = {
+		#维持治安
+		name = krks_pi_approach_keep_order		#all approaches must have at least a name
+		#They also need to display well in the UI. So the game will force you to at least add a custom tooltip if it cannot find any effects to localise.
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		allow = {
+		}
+		#If this fails, the Approach is greyed out
+		potential = {
+			owner = {
+				has_country_flag = krks_pis_stage_flag_3
+			}
+		}
+		#If this fails, the Approach is not shown
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		modifier = {
+		}
+		#as standard (applies only when this Approach is picked)
+		triggered_modifier = {
+			potential = {
+				owner = {
+					has_country_flag = krks_pis_stage_flag_3
+				}
+			}
+			modifier = {
+				planet_stability_add = 10
+			}
+		}
+		target_modifier = {
+			job_soldier_stability_add = 3
+			planet_stability_add = 15
+			planet_amenities_mult = -0.15
+			planet_jobs_produces_mult = -0.1
+		}
+		resources = {
+			#Resource table as standard
+			category = situations
+			cost = {
+				influence = 30
+				energy = 150
+				alloys = 10
+			}
+			upkeep = {
+				energy = 15
+				alloys = 5
+			}
+			produces = {
+				time = 1
+			}
+		}
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			desc = krks_pis_mp_lv1
+			add = 4
+			target = {
+				has_modifier = ge_kirakishou_invasion_lv1
+			}
+		}
+		modifier = {
+			desc = krks_pis_mp_lv2
+			add = 2
+			target = {
+				OR = {
+					has_modifier = ge_kirakishou_invasion_lv2
+					has_modifier = ge_kirakishou_invasion_lv2.5
+				}
+			}
+		}
+		modifier = {
+			desc = krks_pis_mp_lv3
+			add = 2
+			target = {
+				has_modifier = ge_kirakishou_invasion_lv3
+			}
+		}
+		modifier = {
+			desc = krks_pis_mp_lv4
+			add = 1
+			target = {
+				has_modifier = ge_kirakishou_invasion_lv4
+			}
+		}
+		modifier = {
+			desc = krks_pis_mp_lv5
+			add = 0.2
+			target = {
+				has_modifier = ge_kirakishou_invasion_lv5
+			}
+		}
+		modifier = {
+			desc = krks_pis_mp_lvMAX
+			add = 0
+			target = {
+				has_modifier = ge_kirakishou_invasion_lvMAX
+			}
+		}
+		modifier = {
+			desc = krks_pis_mp_purge
+			add = 1.5
+			target = {
+				has_current_purge = yes
+				any_owned_pop = {
+					is_being_purged = yes
+					NOT = {
+						has_purge_type = {
+							type = purge_neutering
+						}
+					}
+				}
+			}
+		}
+		# modifier = {
+		# 	desc = string_current_approach
+		# 	current_situation_approach = approach_investigate
+		# 	add = 2.5
+		# }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+kirakishou_battle_field_situation = {
+	##
+	desc = {
+		text = krks_bf_situation_desc
+		trigger = {
+			owner = {
+				#is_gestalt = no
+			}
+		}
+	}
+	picture = GFX_evt_small_space_battle
+	complete_icon = GFX_situation_outcome_negative
+	complete_icon_frame = GFX_situation_outcome_frame_red
+	fail_icon = GFX_situation_outcome_positive
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	category = negative
+	on_start = {
+		#add_situation_progress = 0.9999
+		save_global_event_target_as = krks_bf_situation_target@owner
+		root = {	#日检开始
+						
+		}
+		owner = {
+
+		}
+	}
+	on_progress_complete = {
+		owner = {
+		}
+		custom_tooltip = "krks_bf_lose_ct"
+		hidden_effect = {
+			destroy_situation = this
+		}
+	}
+	on_fail = {
+		owner = {
+		}
+		custom_tooltip = "krks_pis_fail_ct"
+		hidden_effect = {
+			destroy_situation = this
+		}
+	}
+	on_abort = {
+	}
+	abort_trigger = {
+	}
+	start_value = 99	#Situation will start at this number. Default is 0
+	modifier = {
+	}
+	#Modifier applying to the country experiencing the situation
+	triggered_modifier = {
+		#Triggered modifier applying to the country experiencing the situation, if the triggers are true
+		potential = {
+		}
+		modifier = {
+		}
+	}
+	target_modifier = {
+	}
+	#Modifier applying to the target planet of a Situation. Does not work on other scope types!
+	triggered_target_modifier = {
+		#Modifier applying to the target planet of a Situation, if the triggers are true. Does not work on other scope types!
+		potential = {
+			owner = {
+			}
+		}
+		modifier = {
+		}
+	}
+	#This behaves like an on_action. Note: technically, this is an on_action called test_situation. So don't call your situation "on_monthly_pulse"!
+	stages = {
+		#List all your stages here, in the correct order.
+		kr_bf_stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			target_modifier = {
+			}
+			on_first_enter = {
+				root = {
+					every_country = {
+						limit = {
+							is_ai = no
+							has_country_flag = ge_leader_suigintou_get
+						}
+						
+					}					
+				}
+				owner = {
+					country_event = {
+						id = ge_event.20621
+					}
+				}
+			}
+			custom_tooltip = stage_ct_kr_bf_25%
+			end = 25
+		}
+		#kr_bf_stage_2 = {
+		#	icon = GFX_situation_stage_1
+		#	icon_background = GFX_situation_stage_frame_green
+		#	target_modifier = {
+		#	}
+		#	on_first_enter = {
+		#	}
+		#	custom_tooltip = stage_ct_kr_bf_80%
+		#	end = 25
+		#}
+		kr_bf_stage_3 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			target_modifier = {
+			}
+			on_first_enter = {
+			}
+			custom_tooltip = stage_ct_kr_bf_50%
+			end = 50
+		}
+		kr_bf_stage_4 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			target_modifier = {
+			}
+			on_first_enter = {
+			}
+			custom_tooltip = stage_ct_kr_bf_75%
+			end = 75
+		}
+		kr_bf_stage_5 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			target_modifier = {
+			}
+			on_first_enter = {
+			}
+			custom_tooltip = stage_ct_kr_bf_99%
+			end = 100
+		}
+	}
+	approach = {
+		name = krks_bf_approach_1		#This is localised. If you add a loc key "approach_a_desc", it will also show, but this is optional.
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		allow = {
+		}
+		#If this fails, the Approach is greyed out
+		potential = {
+		}
+		#If this fails, the Approach is not shown
+		on_select = {
+			# owner = {
+			# 	country_event = {
+			# 		id = x
+			# 	}
+			# }
+			custom_tooltip = krks_bf_approach_1_ct
+		}
+		#Effect when you pick the Approach.
+		default = yes		#Sets the Approach to be the Situation's default. This means that it will be picked when the Situation starts, and if the current
+		#Approach is invalidated (fails potential or allow check). This won't happen while the Situation is locked, so events which demand
+		#a choice of Approach can lock the situation (set_situation_locked) in immediate (or the Situation's on_start) and unlock them in after.
+		modifier = {
+		}
+		#as standard (applies only when this Approach is picked)
+		triggered_modifier = {
+			potential = {
+			}
+			modifier = {
+			}
+		}
+		target_modifier = {
+		}
+		resources = {
+			#Resource table as standard
+			category = situations
+			cost = {
+			}
+			upkeep = {
+			}
+			produces = {
+				time = 1
+			}
+		}
+		ai_weight = {
+		}
+	}
+	approach = {
+		name = krks_bf_approach_2		#all approaches must have at least a name
+		#They also need to display well in the UI. So the game will force you to at least add a custom tooltip if it cannot find any effects to localise.
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		allow = {
+		}
+		#If this fails, the Approach is greyed out
+		potential = {
+		}
+		#If this fails, the Approach is not shown
+		on_select = {
+			custom_tooltip = krks_bf_approach_2_ct
+		}
+		modifier = {
+		}
+		#as standard (applies only when this Approach is picked)
+		triggered_modifier = {
+			potential = {
+			}
+			modifier = {
+			}
+		}
+		target_modifier = {
+		}
+		resources = {
+			category = situations
+			cost = {
+			}
+			upkeep = {
+			}
+			produces = {
+				time = 1
+			}
+		}
+	}
+	monthly_progress = {
+		base = 0
+	}
+	on_monthly = {
+		random_events = {
+		}
+		events = {
+			ge_event.30501
+			ge_event.30601
+			ge_event.30701
+		}
+	}
+}

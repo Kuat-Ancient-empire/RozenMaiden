@@ -1,0 +1,33 @@
+decision_roz_N_field_main_entrance = {
+	owned_planets_only = yes
+	enactment_time = 0
+	sound = event_cityscape
+	potential = {
+		always = no
+		exists = owner
+		owner = {
+			has_country_flag = ge_leader_suigintou_get
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = ""
+			NOT = {
+				owner = {
+					has_country_flag = roz_nfme_in_contact_flag
+				}			
+			}
+		}		
+	}
+	effect = { 
+		custom_tooltip = ""
+		hidden_effect = {
+			owner = {
+				set_country_flag = roz_nfme_in_contact_flag
+				country_event = {
+					id = roz_nf_discovery.0
+				}
+			}
+		}
+	}
+}

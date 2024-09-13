@@ -1,0 +1,68 @@
+ge_site_sgt_deposit = {
+	category = deposit_cat_rare
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			physics_research = 15
+			#society_research = 15
+			#engineering_research = 15
+			#minor_artifacts = 2
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+	drop_weight = {
+		weight = 0
+	}
+}
+
+ge_site_sgt_deposit_2 = {
+	category = deposit_cat_rare
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			engineering_research = 15
+			alloys = 3
+			energy = -5
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+	drop_weight = {
+		weight = 0
+	}
+}
+
+ge_site_vc_deposit = {
+	category = deposit_cat_rare
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			sr_void_core = 1
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+	drop_weight = {
+		weight = 0
+	}
+}
+
+roz_site_hive_museum_deposit = {
+	icon = d_roz_monumental
+	category = deposit_cat_rare
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			unity = 20
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = yes
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+

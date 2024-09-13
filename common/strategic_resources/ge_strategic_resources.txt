@@ -1,0 +1,67 @@
+########Rozen Maiden resource
+
+sr_rosa_mystica = {	###蔷薇圣母(赝品)
+	
+	#is_rare = yes
+	#AI_category = strategic_resource
+	#is_planet_local = no
+	#is_global = yes
+	tradable = no
+	#deficit_modifier = sr_rosa_mystica_deficit 
+	max = 10000
+	ai_weight = {
+		weight = 100
+	}
+	visibility_prerequisite = {
+		has_country_flag = q_sgt_army
+	}
+
+}
+
+sr_void_core = {	###虚空核心
+	#is_rare = yes
+	#AI_category = strategic_resource
+	#is_planet_local = no
+	#is_global = yes
+	tradable = no
+	deficit_modifier = sr_void_core_deficit ###
+	max = 10000
+	ai_weight = {
+		weight = 100
+	}
+	visibility_prerequisite = {
+		has_technology = GE_tech_reactor
+	}
+
+}
+
+sr_void_core_hidden = {	###虚空引擎
+	#is_rare = yes
+	#AI_category = strategic_resource
+	#is_planet_local = no
+	#is_global = yes
+	tradable = no
+	max = 1
+	ai_weight = {
+		weight = 100
+	}
+	visibility_prerequisite = {
+		has_technology = tech_ge_sgt_flagship
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

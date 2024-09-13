@@ -1,0 +1,134 @@
+objectTypes = {
+	pdxmesh = {
+		name = "roz_ju1_mesh"
+		file = "gfx/models/ships/ge_es_ship/ju/roz_ju1.mesh"
+		scale = 1.0
+		animation = { id = "idle"			type = "roz_ju1_idle_animation" }
+		animation = { id = "opening"			type = "roz_ju1_opening_animation" }
+		animation = { id = "open"			type = "roz_ju1_open_animation" }
+		meshsettings = {
+			name = "SS_Juggernaut_01Shape"
+			index = 0
+			texture_diffuse = "SS_Juggernaut_01_ID2_AlbedoTransparency.dds"
+			texture_normal = "SS_Juggernaut_01_ID1_Normal.dds"
+			texture_specular = "SS_Juggernaut_01_ID1_spec.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SS_Juggernaut_01Shape"
+			index = 1
+			texture_diffuse = "SS_Juggernaut_01_ID1_AlbedoTransparency.dds"
+			texture_normal = "SS_Juggernaut_01_ID2_Normal.dds"
+			texture_specular = "SS_Juggernaut_01_ID2_spec.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "roz_ju2_mesh"
+		file = "gfx/models/ships/ge_es_ship/ju/roz_ju2.mesh"
+		scale = 1.0
+		animation = { id = "idle"			type = "roz_ju2_idle_animation" }
+		meshsettings = {
+			name = "polySurface12Shape"
+			index = 0
+			texture_diffuse = "SS_Juggernaut_01_ID1_AlbedoTransparency.dds"
+			texture_normal = "SS_Juggernaut_01_ID2_Normal.dds"
+			texture_specular = "SS_Juggernaut_01_ID2_spec.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "polySurface12Shape"
+			index = 1
+			texture_diffuse = "SS_Juggernaut_01_ID2_AlbedoTransparency.dds"
+			texture_normal = "SS_Juggernaut_01_ID1_Normal.dds"
+			texture_specular = "SS_Juggernaut_01_ID1_spec.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "polySurfaceShape25"
+			index = 0
+			texture_diffuse = "SS_Juggernaut_01_ID2_AlbedoTransparency.dds"
+			texture_normal = "SS_Juggernaut_01_ID1_Normal.dds"
+			texture_specular = "SS_Juggernaut_01_ID1_spec.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "polySurfaceShape25"
+			index = 1
+			texture_diffuse = "SS_Juggernaut_01_ID1_AlbedoTransparency.dds"
+			texture_normal = "SS_Juggernaut_01_ID2_Normal.dds"
+			texture_specular = "SS_Juggernaut_01_ID2_spec.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "roz_ju3_mesh"
+		file = "gfx/models/ships/ge_es_ship/ju/roz_ju3.mesh"
+		scale = 1.0
+		animation = { id = "idle"			type = "roz_ju3_idle_animation" }
+		meshsettings = {
+			name = "polySurface98Shape"
+			index = 0
+			texture_diffuse = "SS_Juggernaut_01_ID2_AlbedoTransparency.dds"
+			texture_normal = "SS_Juggernaut_01_ID1_Normal.dds"
+			texture_specular = "SS_Juggernaut_01_ID1_spec.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "polySurfaceShape97"
+			index = 0
+			texture_diffuse = "SS_Juggernaut_01_ID2_AlbedoTransparency.dds"
+			texture_normal = "SS_Juggernaut_01_ID1_Normal.dds"
+			texture_specular = "SS_Juggernaut_01_ID1_spec.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "polySurfaceShape97"
+			index = 1
+			texture_diffuse = "SS_Juggernaut_01_ID1_AlbedoTransparency.dds"
+			texture_normal = "SS_Juggernaut_01_ID2_Normal.dds"
+			texture_specular = "SS_Juggernaut_01_ID2_spec.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "polySurface28Shape"
+			index = 0
+			texture_diffuse = "SS_Juggernaut_01_ID1_AlbedoTransparency.dds"
+			texture_normal = "SS_Juggernaut_01_ID2_Normal.dds"
+			texture_specular = "SS_Juggernaut_01_ID2_spec.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "roz_jume_mesh"
+		file = "gfx/models/ships/ge_es_ship/ju/roz_jume.mesh"
+		scale = 1.0
+	}
+}
+
+objectTypes = {
+	pdxmesh = {
+		name = "roz_ju_loc_mesh"
+		file = "gfx/models/ships/ge_es_ship/ju/roz_ju_loc.mesh"
+		scale = 1.0
+	}
+}
+
+
+

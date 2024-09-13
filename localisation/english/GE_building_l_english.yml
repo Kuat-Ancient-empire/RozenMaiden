@@ -1,0 +1,16 @@
+﻿l_english:
+
+############### 职位 ###############
+
+llk_over_dimension:0 "§RWorld Beyonder"
+llk_over_dimension_desc:0 ""
+mod_job_llk_over_dimension_add:0 "$llk_over_dimension$"
+job_llk_over_dimension:0 "§RWorld Beyonder"
+job_llk_over_dimension_plural:0 "§RWorld Beyonder"
+job_llk_over_dimension_desc:0 ""
+job_llk_over_dimension_effect_desc:0 "£mod_job_llk_over_dimension_add£ $llk_over_dimension$World Beyonder consume £energy£ §REnergy§! £food£ §RFood§! 生产 £alloys£ §GAlloys§! £consumer_goods£ §GConsumer Goods§! £unity£ §GUnity§! £volatile_motes£ §GVolatile Motes§! £exotic_gases£ §GExotic Gases§! £rare_crystals£ §GRare Crystals§! £sr_dark_matter£ §Gsr dark matter§! £sr_zro£ §Gsr zro§! £sr_living_metal£ §Gsr living metal§! £nanites£ §Gnanites§! 。"
+
+############### 建筑 ###############
+
+building_llk_paradox_origin:0 "§RParadox Origin"
+building_llk_paradox_origin_desc:0 ""

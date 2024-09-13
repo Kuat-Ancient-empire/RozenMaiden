@@ -1,0 +1,484 @@
+
+
+roz_shuukan_shoujonotsukurikata_situation = {
+    ##
+    desc = {
+        text = roz_shuukan_shoujonotsukurikata_text
+        trigger = {
+            always = yes
+        }
+    }
+    picture = GFX_roz_evt_shoujonotsukurikata
+    complete_icon = GFX_situation_outcome_meh
+    complete_icon_frame = GFX_situation_outcome_frame_green
+    fail_icon = GFX_situation_outcome_negative
+    fail_icon_frame = GFX_situation_outcome_frame_red
+    category = positive
+    on_start = {
+
+    }
+    #abort_trigger = {
+    #	OR = {
+    #		NOT = { exists = target.owner }
+    #		target.owner = { NOT = { is_same_value = root.owner } }
+    #	}
+    #}
+    triggered_modifier = {
+        potential = {
+
+        }
+        modifier = { }
+    }
+    modifier = {
+        country_base_energy_produces_add = -10
+    }
+    on_progress_complete = {
+        hidden_effect = {
+            destroy_situation = this
+            owner = {
+                country_event = {
+                    id = roz_shinku_evt.401
+                    days = 30
+                }
+            }
+        }
+        owner = {
+            country_event = {
+                id = roz_shinku_evt.400
+            }
+        }
+        custom_tooltip = "roz_shuukan_shoujonotsukurikata_situation_complete_ct"
+
+    }
+    on_fail = {
+        owner = {
+            hidden_effect = {
+
+            }
+        }
+        hidden_effect = {
+            destroy_situation = this
+        }
+        custom_tooltip = "roz_shuukan_shoujonotsukurikata_situation_fail_ct"
+    }
+    start_value = 1
+    #triggered_target_modifier = {
+    #Modifier applying to the target planet of a Situation, if the triggers are true. Does not work on other scope types!
+    #}
+    on_monthly = {
+        events = {
+        }
+        random_events = {
+        }
+    }
+    stages = {
+        roz_shuukan_stage_1 = {
+            icon = GFX_situation_stage_1
+            icon_background = GFX_situation_stage_frame_green
+            on_first_enter = {
+                owner = {
+                    country_event = {
+                        id = roz_shinku_evt.10
+                        days = 10
+                        random = 10
+                    }
+                }
+            }
+            custom_tooltip = roz_shuukan_stage_1_ct
+            end = 10
+        }
+        roz_shuukan_stage_2 = {
+            icon = GFX_situation_stage_2
+            icon_background = GFX_situation_stage_frame_green
+            on_first_enter = {
+                owner = {
+                    country_event = {
+                        id = roz_shinku_evt.12
+                        days = 1
+                    }
+                }
+            }
+            custom_tooltip = roz_shuukan_stage_2_ct
+            end = 20
+        }
+        roz_shuukan_stage_3 = {
+            icon = GFX_situation_stage_3
+            icon_background = GFX_situation_stage_frame_green
+            on_first_enter = {
+                owner = {
+                    country_event = {
+                        id = roz_shinku_evt.13
+                        days = 1
+                    }
+                }
+            }
+
+            custom_tooltip = roz_shuukan_stage_3_ct
+            end = 30
+        }
+        roz_shuukan_stage_4 = {
+            icon = GFX_situation_stage_4
+            icon_background = GFX_situation_stage_frame_green
+            on_first_enter = {
+                owner = {
+                    country_event = {
+                        id = roz_shinku_evt.14
+                        days = 1
+                    }
+                }
+            }
+            custom_tooltip = roz_shuukan_stage_4_ct
+            end = 40
+        }
+        roz_shuukan_stage_5 = {
+            icon = GFX_situation_stage_5
+            icon_background = GFX_situation_stage_frame_green
+            #background = GFX_evt_alien_propaganda
+            on_first_enter = {
+                owner = {
+                    country_event = {
+                        id = roz_shinku_evt.15
+                        days = 1
+                    }
+                }
+            }
+            custom_tooltip = roz_shuukan_stage_5_ct
+            end = 50
+        }
+        roz_shuukan_stage_6 = {
+            icon = GFX_situation_stage_5
+            icon_background = GFX_situation_stage_frame_green
+            #background = GFX_evt_alien_propaganda
+            on_first_enter = {
+                owner = {
+                    country_event = {
+                        id = roz_shinku_evt.16
+                        days = 1
+                    }
+                }
+            }
+            custom_tooltip = roz_shuukan_stage_6_ct
+            end = 60
+        }
+        roz_shuukan_stage_7 = {
+            icon = GFX_situation_stage_5
+            icon_background = GFX_situation_stage_frame_green
+            #background = GFX_evt_alien_propaganda
+            on_first_enter = {
+                owner = {
+                    country_event = {
+                        id = roz_shinku_evt.17
+                        days = 1
+                    }
+                }
+            }
+            custom_tooltip = roz_shuukan_stage_7_ct
+            end = 70
+        }
+        roz_shuukan_stage_8 = {
+            icon = GFX_situation_stage_5
+            icon_background = GFX_situation_stage_frame_green
+            #background = GFX_evt_alien_propaganda
+            on_first_enter = {
+                owner = {
+                    country_event = {
+                        id = roz_shinku_evt.18
+                        days = 1
+                    }
+                }
+            }
+            custom_tooltip = roz_shuukan_stage_8_ct
+            end = 80
+        }
+        roz_shuukan_stage_9 = {
+            icon = GFX_situation_stage_5
+            icon_background = GFX_situation_stage_frame_green
+            #background = GFX_evt_alien_propaganda
+            on_first_enter = {
+                owner = {
+                    country_event = {
+                        id = roz_shinku_evt.19
+                        days = 1
+                    }
+                }
+            }
+            custom_tooltip = roz_shuukan_stage_9_ct
+            end = 90
+        }
+        roz_shuukan_stage_10 = {
+            icon = GFX_situation_stage_5
+            icon_background = GFX_situation_stage_frame_green
+            #background = GFX_evt_alien_propaganda
+            on_first_enter = {
+
+            }
+            custom_tooltip = roz_shuukan_stage_10_ct
+            end = 100
+        }
+    }
+    approach = {#
+        name = roz_shuukan_approach
+        icon = GFX_situation_approach_this_is_fine
+        icon_background = GFX_situation_approach_bg_green
+        allow = {
+        }
+        potential = {
+        }
+        on_select = {
+            custom_tooltip = roz_shuukan_approach_onselect_ct
+        }
+        default = yes
+        resources = {
+            category = situations
+            upkeep = {
+                energy = 1
+            }
+        }
+        ai_weight = {
+        }
+        #AI will pick the one with the highest weight
+    }
+
+    monthly_progress = {
+        base = 0.1
+        #modifier = {
+        #    desc = roz_
+        #    owner = {
+        #        has_country_flag = ge_leader_suigintou_get
+        #    }
+        #    add = 0.5
+        #}
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##########真红的觉醒-解析蔷薇圣母
+roz_awaken_of_shinku_1_acknowledge_border = {
+    desc = {
+        text = roz_awaken_of_shinku_1_acknowledge_border_desc
+        trigger = { always = yes }
+    }
+    picture = GFX_
+    complete_icon = GFX_situation_outcome_meh
+    complete_icon_frame = GFX_situation_outcome_frame_blue
+    fail_icon = GFX_situation_outcome_unknown
+    fail_icon_frame = GFX_situation_outcome_frame_blue
+    category = positive
+    on_start = {
+
+    }
+    triggered_modifier = {
+        potential = {
+            owner = { has_country_flag = roz_SK_1_kxbj_accelerate }
+        }
+        country_energy_produces_mult = -0.1
+    }
+    on_progress_complete = {
+        owner = {
+            country_event = {
+                id = roz_shinku_evt.404
+                days = 1
+            }
+        }
+    }
+    start_value = 0
+    stages = {
+        roz_awaken_of_shinku_1_acknowledge_border_stage_1 = {
+            icon = GFX_situation_stage_1
+            icon_background = GFX_situation_stage_frame_green
+            on_first_enter = {  }
+            custom_tooltip = roz_awaken_of_shinku_1_acknowledge_border_stage_1_ct
+            end = 20
+        }
+        roz_awaken_of_shinku_1_acknowledge_border_stage_2 = {
+            icon = GFX_situation_stage_2
+            icon_background = GFX_situation_stage_frame_green
+            on_first_enter = {  }
+            custom_tooltip = roz_awaken_of_shinku_1_acknowledge_border_stage_2_ct
+            end = 40
+        }
+        roz_awaken_of_shinku_1_acknowledge_border_stage_3 = {
+            icon = GFX_situation_stage_3
+            icon_background = GFX_situation_stage_frame_green
+            on_first_enter = {
+                owner = {
+                    #二阶段开始-卷土重来事件链
+                    #之后本局势推进会开始加速
+                    country_event = {
+                        id = roz_shinku_evt.425
+                        days = 10
+                        random = 50
+                    }
+                }
+            }
+            custom_tooltip = roz_awaken_of_shinku_1_acknowledge_border_stage_3_ct
+            end = 60
+        }
+        roz_awaken_of_shinku_1_acknowledge_border_stage_4 = {
+            icon = GFX_situation_stage_4
+            icon_background = GFX_situation_stage_frame_green
+            on_first_enter = {  }
+            custom_tooltip = roz_awaken_of_shinku_1_acknowledge_border_stage_4_ct
+            end = 80
+        }
+        roz_awaken_of_shinku_1_acknowledge_border_stage_end = {
+            icon = GFX_situation_stage_5
+            icon_background = GFX_situation_stage_frame_green
+            on_first_enter = {  }
+            custom_tooltip = roz_awaken_of_shinku_1_acknowledge_border_stage_end_ct
+            end = 100
+        }
+    }
+
+
+    approach = {#方案1：细翻深耕
+        name = roz_awaken_of_shinku_1_acknowledge_border_1_approach
+        icon = GFX_situation_approach_handshake
+        icon_background = GFX_situation_approach_bg_green
+        allow = {
+        }
+        potential = {
+        }
+        on_select = {
+            custom_tooltip = roz_roz_awaken_of_shinku_1_acknowledge_border_1_approach_onselect_ct
+        }
+        default = yes
+        resources = {
+            category = situations
+            upkeep = {
+                energy = 30
+            }
+        }
+        ai_weight = {
+        }
+        #AI will pick the one with the highest weight
+    }
+    approach = {#方案2：正常研究
+        name = roz_awaken_of_shinku_1_acknowledge_border_2_approach
+        icon = GFX_situation_approach_handshake
+        icon_background = GFX_situation_approach_bg_green
+        allow = {
+        }
+        potential = {
+        }
+        on_select = {
+            custom_tooltip = roz_roz_awaken_of_shinku_1_acknowledge_border_2_approach_onselect_ct
+        }
+        default = yes
+        resources = {
+            category = situations
+            upkeep = {
+                energy = 30
+            }
+        }
+        ai_weight = {
+        }
+        #AI will pick the one with the highest weight
+    }
+    approach = {#方案3：囫囵吞枣
+        name = roz_awaken_of_shinku_1_acknowledge_border_3_approach
+        icon = GFX_situation_approach_handshake
+        icon_background = GFX_situation_approach_bg_green
+        allow = {
+        }
+        potential = {
+        }
+        on_select = {
+            custom_tooltip = roz_roz_awaken_of_shinku_1_acknowledge_border_3_approach_onselect_ct
+        }
+        default = yes
+        resources = {
+            category = situations
+            upkeep = {
+                energy = 30
+            }
+        }
+        ai_weight = {
+        }
+        #AI will pick the one with the highest weight
+    }
+    approach = {#方案4：暂停项目
+        name = roz_awaken_of_shinku_1_acknowledge_border_4_approach
+        icon = GFX_situation_approach_handshake
+        icon_background = GFX_situation_approach_bg_green
+        allow = {
+        }
+        potential = {
+        }
+        on_select = {
+            custom_tooltip = roz_roz_awaken_of_shinku_1_acknowledge_border_4_approach_onselect_ct
+        }
+        default = yes
+        resources = {
+            category = situations
+            upkeep = {
+                energy = 0
+            }
+        }
+        ai_weight = {
+        }
+        #AI will pick the one with the highest weight
+    }
+    monthly_progress = {
+        base = 0.5
+        modifier = {
+            factor = 0.5
+            desc = roz_awaken_of_shinku_1_acknowledge_border_rosa_analysis_negative_flag
+            owner  = {
+                has_country_flag = roz_rosa_analysis_negative_flag
+            }
+        }
+        modifier = {
+            add = 2
+            desc = roz_shinku_evt.4301.desc
+            owner  = {
+                has_country_flag = roz_SK_1_kxbj_accelerate
+            }
+        }
+    }
+    on_monthly = {
+        random_events = {
+            1 = roz_shinku_evt.411
+            4 = roz_shinku_evt.412
+            4 = roz_shinku_evt.413
+            4 = roz_shinku_evt.414
+            2 = roz_shinku_evt.415
+            2 = roz_shinku_evt.416
+            2 = roz_shinku_evt.417
+            4 = roz_shinku_evt.418
+            6 = roz_shinku_evt.419
+            2 = roz_shinku_evt.420
+            1 = roz_shinku_evt.421
+            4 = roz_shinku_evt.422
+            2 = roz_shinku_evt.423
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

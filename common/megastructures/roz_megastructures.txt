@@ -1,0 +1,102 @@
+roz_mega_wanxiangtianyin = {
+    entity = roz_ju_megastructure
+    construction_entity = "roz_ju_megastructure"
+    portrait = "GFX_roz_mega_wanxiangtianyin"
+    place_entity_on_planet_plane = no
+    entity_offset = { x = @entity_x y = @entity_y }
+    build_time = 1
+    resources = {
+        category = megastructures
+        cost = {
+
+        }
+        upkeep = {
+            energy = 50
+            influence = 1
+        }
+
+        produces = {
+            sr_void_core = 60
+            alloys = 35
+
+            mult = value:roz_mega_wanxiangtianyin_trigger_values
+        }
+    }
+    possible = {
+
+    }
+
+    station_modifier = {
+        starbase_shipyard_capacity_add = 15
+    }
+    #upgrade_from = {
+    #
+    #}
+
+
+    potential = {
+        always = no
+    }
+
+    country_modifier = {
+        diplo_weight_mult = 0.250
+    }
+}
+
+roz_mega_wanxiangtianyin_undeploy = {
+    entity = roz_ju_megastructure
+    construction_entity = "roz_ju_megastructure"
+    portrait = "GFX_roz_mega_wanxiangtianyin"
+    place_entity_on_planet_plane = no
+    entity_offset = { x = @entity_x y = @entity_y }
+    build_time = 1
+    resources = {
+        category = megastructures
+        cost = {
+            energy = 4000
+            sr_void_core = 1
+        }
+
+        upkeep = {
+        }
+
+        produces = {
+        }
+    }
+
+    upgrade_from = {
+        roz_mega_wanxiangtianyin
+    }
+    on_build_complete = {
+        create_fleet = {
+            name = "roz_juggernaut_wanxiang_section"
+            settings = {
+                #is_boss = yes
+                can_upgrade = yes
+            }
+            effect = {
+                set_owner = from
+                set_fleet_flag = roz_juggernaut_wanxiang_flag
+                set_location = fromfrom
+                create_ship = {
+                    name = juggernaut
+                    graphical_culture = owner
+                    design = random_existing_design
+                    random_existing_design = roz_juggernaut_wanxiang
+                }
+            }
+        }
+        fromfrom = {
+            remove_megastructure = this
+        }
+    }
+
+    possible = {
+        has_megastructure = roz_mega_wanxiangtianyin
+    }
+
+    country_modifier = {
+
+    }
+}
+

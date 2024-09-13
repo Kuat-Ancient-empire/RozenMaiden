@@ -1,0 +1,64 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SSV_M2_mesh"
+		file = "gfx/models/ships/ge_es_ship/SSV_M2/SSV_M2.mesh"
+		scale = 1.0
+
+		animation = { id = "idle"		type = "SSV_M2_idle_animation" }
+		animation = { id = "idle2"		type = "SSV_M2_idle2_animation" }
+		animation = { id = "opening"	type = "SSV_M2_opening_animation" }
+		animation = { id = "closing"	type = "SSV_M2_closing_animation" }
+		animation = { id = "death"		type = "SSV_M2_death_animation" }
+
+		meshsettings = {
+			name = "SSV_M2_ship_2016:SS_Vampirilis_Medium_02_nodeShape"
+			index = 0
+			texture_diffuse = "SSV_M2_ID4_AlbedoTransparency.dds"
+			#texture_normal = "SSV_M2_ID4_Normal.dds"
+			texture_specular = "SSV_M2_ID4_Specular.dds"
+			#texture_diffuse = "SS_Vampirilis_Medium_02_ID4_D.dds"
+			texture_normal = "SS_Vampirilis_Medium_02_ID4_N.dds"
+			#texture_specular = "SS_Vampirilis_Medium_02_ID4_S.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SSV_M2_ship_2016:SS_Vampirilis_Medium_02_nodeShape"
+			index = 1
+			texture_diffuse = "SSV_M2_ID2_AlbedoTransparency.dds"
+			#texture_normal = "SSV_M2_ID2_Normal.dds"
+			texture_specular = "SSV_M2_ID2_Specular.dds"
+			#texture_diffuse = "SS_Vampirilis_Medium_02_ID2_D.dds"
+			texture_normal = "SS_Vampirilis_Medium_02_ID2_N.dds"
+			#texture_specular = "SS_Vampirilis_Medium_02_ID2_S.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SSV_M2_ship_2016:SS_Vampirilis_Medium_02_nodeShape"
+			index = 2
+			texture_diffuse = "SSV_M2_ID3_AlbedoTransparency.dds"
+			#texture_normal = "SSV_M2_ID3_Normal.dds"
+			texture_specular = "SSV_M2_ID3_Specular.dds"
+			#texture_diffuse = "SS_Vampirilis_Medium_02_ID3_D.dds"
+			texture_normal = "SS_Vampirilis_Medium_02_ID3_N.dds"
+			#texture_specular = "SS_Vampirilis_Medium_02_ID3_S.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SSV_M2_ship_2016:SS_Vampirilis_Medium_02_nodeShape"
+			index = 3
+			texture_diffuse = "SSV_M2_ID1_AlbedoTransparency.dds"
+			#texture_normal = "SSV_M2_ID1_Normal.dds"
+			texture_specular = "SSV_M2_ID1_Specular.dds"
+			#texture_diffuse = "SS_Vampirilis_Medium_02_ID1_D.dds"
+			texture_normal = "SS_Vampirilis_Medium_02_ID1_N.dds"
+			#texture_specular = "SS_Vampirilis_Medium_02_ID1_S.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}
+
+
+

@@ -1,0 +1,156 @@
+
+roz_unknow_crashed_flagship_category = {
+	desc = roz_unknow_crashed_flagship_category_desc
+	picture = GFX_evt_ship_in_orbit
+	level = 8
+	should_ai_use = no
+	#max_once_global = yes
+	max_once = yes
+	null_spawn_chance = 0
+	spawn_chance = {
+		base = 10
+		modifier = {
+			add = 1000000
+			#add = 100
+			this = {
+				
+			}
+			from.owner = {
+				has_country_flag = ge_leader_suigintou_get
+				is_ai = no
+			}
+		}
+		modifier = {
+			add = -10000000
+			from.owner = {
+				has_country_flag = roz_sgt_unknow_flagship_spawn_country
+			}
+		}
+		modifier = {
+			factor = 0
+			from.owner = {
+				has_country_flag = roz_sgt_unknow_flagship_spawn_country
+			}
+		}
+	}
+	on_spawn = {
+		this = {
+			save_event_target_as = roz_sgt_flagship_target
+		}
+		from = {
+			ship_event = {
+				id = ge_sgt_falgship_events.100
+			}
+		}
+	}
+	on_success = {
+		1 = ge_sgt_falgship_events.101
+	}
+}
+
+roz_destroyed_planet_anomaly = { #不明灵能源
+	desc = "roz_destroyed_planet_anomaly_desc"
+	picture = GFX_evt_roz_barren_planet_event
+	level = 5
+	should_ai_use = no
+	null_spawn_chance = 0
+	max_once = yes
+	spawn_chance = {
+		base = 0
+		modifier = {
+			add = 2
+			from = {
+				leader = {
+					has_leader_flag = ge_suigintou_flag
+				}
+			}
+			from.owner = {
+				NOT = {
+					has_country_flag = roz_destroyed_planet_anomaly_flag
+				}
+			}
+			Root = {
+				OR = {
+					is_planet_class = pc_barren
+					is_planet_class = pc_barren_cold
+					is_planet_class = pc_broken
+					is_planet_class = pc_toxic
+					is_planet_class = pc_frozen
+					is_planet_class = pc_molten
+				}
+			}
+		}
+		modifier = {
+			add = 40
+			from.owner = {
+				check_variable = {
+					which = ge_sgt_survey_count
+					value > 20
+				}
+			}
+			from.owner = {
+				NOT = {
+					has_country_flag = roz_destroyed_planet_anomaly_flag
+				}
+			}
+			Root = {
+				OR = {
+					is_planet_class = pc_barren
+					is_planet_class = pc_barren_cold
+					is_planet_class = pc_broken
+					is_planet_class = pc_toxic
+					is_planet_class = pc_frozen
+					is_planet_class = pc_molten
+				}
+			}
+		}
+	}
+	on_spawn = {
+		from.owner = {
+			set_country_flag = roz_destroyed_planet_anomaly_flag
+		}
+	}
+	on_success = {
+		1 = roz_anomaly_event.100
+	}
+}
+
+
+### Gray ###
+disco_gray_cat = {
+	desc = "disco_gray_cat_desc"
+	picture = "GFX_evt_ship_in_orbit_2"
+	level = 3
+
+	spawn_chance = {
+		modifier = {
+			add = 10000
+			is_planet_class = pc_gray_goo
+			solar_system = { has_star_flag = lcluster }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = gray_goo_crisis_set
+				has_global_flag = dragon_season
+				has_global_flag = gray_goo_empire_set
+			}
+		}
+	}
+
+	on_success = graygoo.400
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

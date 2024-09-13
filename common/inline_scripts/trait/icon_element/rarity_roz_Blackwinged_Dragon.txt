@@ -1,0 +1,9 @@
+layer = {
+	icon = "GFX_trait_glow_roz_Blackwinged_Dragon"
+	color = "trait_rarity_destiny"
+}
+
+layer = {
+	icon = "GFX_trait_frame_suigintou"
+	color = "trait_rarity_destiny"
+}

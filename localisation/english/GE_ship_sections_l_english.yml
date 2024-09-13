@@ -1,0 +1,55 @@
+﻿l_english:
+
+####Shippart
+ge_titan_S_bow_T3X4H4P4:0 "ST-Bow"
+ge_titan_S_mid_X2L12P6:0 "ST-Mid"
+ge_titan_S_stern_L6H4P4:0 "ST-Stern"
+ge_corvette_mid_L1M2S4G1P2:0 "LF-Mid"
+ge_destroyer_bow_L3M2S2:0 "DL-Bow"
+ge_destroyer_stern_M2G2P4:0 "DL-Stern"
+ge_battleship_S_bow_T1X2L6P4:0 "HB-Bow"
+ge_battleship_S_mid_L8P4:0 "HB-Mid"
+ge_battleship_S_stern_L4G4:0 "HB-Stern"
+ge_flagship_core:0 "Void Flagship Core"
+Ge_Ragnarok_Core:0 "Odin（ban）"
+GE_COLOSSUS_SECTION_S:0 "HC"
+ge_carrier_S_bow_G2P4H6:0 "Top deck"
+ge_carrier_S_mid_P6H8:0 "Mid deck"
+ge_carrier_S_stern_P2H4:0 "Bottom deck"
+ge_cruiser_S_mid_L4M4G2:0 "LC-Mid"
+ge_cruiser_S_bow_X1H1P2:0 "LC-Bow"
+ge_cruiser_S_stern_L2S4P4:0 "LC-Stern"
+
+GE_CONSTRUCTION_SECTION:0 "Military construction section"
+GE_COLONIZATION_SECTION:0 "防卫区段"
+GE_TRANSPORT_SECTION:0 "武装区段"
+GE_SCIENCESHIP_SECTION:0 "Military survey section"
+
+########shipclass
+ge_military_science:0 "Military Science ship"
+ge_military_constructor:0 "Military Constructor"
+
+####Station
+GE_ION_CANNON_CORE:0 "Nebula"
+GE_MILITARY_STATION_SECTION_CARRIER:0 "Stars"
+GE_MILITARY_STATION_SECTION_Artillery:0 "Starlight"
+GE_MILITARY_mining_station:0 "武装采矿站"
+GE_MILITARY_research_station:0 "武装研究站"
+
+
+
+
+###字体颜色代码
+##§W W白色
+##§R R红色
+##§L L暗金
+##§S S土黄
+##§H H金黄
+##§Y Y黄色
+##§G G绿色
+##§E E青色
+##§B B深蓝
+##§M M紫色
+##§g g灰色
+##§P p粉红
+##§! 结束

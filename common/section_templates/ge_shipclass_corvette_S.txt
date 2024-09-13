@@ -1,0 +1,93 @@
+@section_cost = 45
+
+###大型护卫舰
+
+ship_section_template = {
+	key = "ge_corvette_mid_L1M2S4G1P2"
+	ship_size = corvette
+	fits_on_slot = mid
+	should_draw_components = yes
+	entity = "corvette_M1S1_entity"
+	icon = "GFX_ship_part_core_mid"
+	prerequisites = {
+		tech_ge_section
+	}
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ai_personality = peaceful_traders
+				has_ai_personality = slaving_despots
+				has_ai_personality = migrating_flock
+				has_ai_personality = evangelising_zealots
+				has_ai_personality = hive_mind
+			}
+		}
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "medium_gun_01"
+	}	
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+	}	
+	
+	# component_slot = {
+	# 	name = "MEDIUM_GUN_02"
+	# 	template = "medium_turret"
+	# 	locatorname = "medium_gun_01"
+	# }
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+	}
+	# component_slot = {
+	# 	name = "SMALL_GUN_03"
+	# 	template = "small_turret"
+	# 	locatorname = "small_gun_01"
+	# }	
+	# component_slot = {
+	# 	name = "SMALL_GUN_04"
+	# 	template = "small_turret"
+	# 	locatorname = "small_gun_01"
+	# }
+    component_slot = {
+		name = "TORPEDO_01"
+		template = "medium_missile_turret"
+		locatorname = "small_gun_01"
+	}
+    component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "small_gun_01"
+	}	
+	
+	component_slot = {
+		name = "PD_02"
+		template = "point_defence_turret"
+		locatorname = "small_gun_01"
+	}
+
+	medium_utility_slots = 4
+	aux_utility_slots = 2
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+

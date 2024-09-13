@@ -1,0 +1,171 @@
+﻿l_simp_chinese:
+###############################S&A
+ SMALL_SF_ARMOR:0 "§M小型引力铁幕§!"
+ MEDIUM_SF_ARMOR:0 "§M中型引力铁幕§!"
+ LARGE_SF_ARMOR:0 "§M大型引力铁幕§!"
+ GE_SF_ARMOR:0 "§M引力铁幕§!"
+ GE_SF_ARMOR_DESC:0 "当我们将黑洞穿甲弹头应用到装甲防护上时，便得到了这种牢不可破的极致防护方案。"
+
+ SMALL_G_SHIELD:0 "§M小型引力折射器§!"
+ MEDIUM_G_SHIELD:0 "§M中型引力折射器§!"
+ LARGE_G_SHIELD:0 "§M大型引力折射器§!"
+ GE_SHIELD:0 "§M引力扭曲系统§!"
+ GE_SHIELD_DESC:0 "无限的能源供应着引力折射器形成极其坚韧的立场护盾，同时空间中游离的虚空衰变能量可以侵蚀来袭的攻击。"
+
+###############################COMPUTER
+ GE_COMBAT_COMPUTER_LINE:0 "§M熵变增幅§!-§g线列战术§!"
+ GE_COMBAT_COMPUTER_SWARM:0 "§M熵变增幅§!-§g中程冲击战术§!"
+ GE_COMBAT_COMPUTER_PICKET:0 "§M熵变增幅§!-§g中远程哨戒战术§!"
+ GE_COMBAT_COMPUTER_CARRIER:0 "§M熵变增幅§!-§g航母战术§!"
+ GE_COMBAT_COMPUTER_PLATFORM:0 "§M熵变增幅§!-§g平台战术§!"
+ GE_COMBAT_COMPUTER_COLOSSUS:0 "§M高维运算者§!-§g微操§!"
+ GE_COMBAT_COMPUTER_ARTILLERY:0 "§M熵变增幅§!-§g炮击战术§!"
+ 
+ GE_COMBAT_COMPUTER_DESC:0 "太好了嬹?嬇谚+?関峻?我??B饙逐F嬒P?  渐婰$理$嬓婦解蓧G了一墂切!,!..,?"
+
+GE_COMBAT_COMPUTER_COLOSSUS_DEFAULT: "默认微操电脑"
+GE_COMBAT_COMPUTER_COLOSSUS_DEFAULT_DESC: "专为单人驾驶而设计的全自动辅助航行仪"
+ GE_COMBAT_COMPUTER_LINE_DEFAULT: "默认线列电脑"
+ GE_COMBAT_COMPUTER_COLOSSUS_DEFAULT_DESC: "专为单人驾驶而设计的全自动辅助航行仪"
+
+###############################Thruster
+ CORVETTE_GE_THRUSTER:0 "§P戊型空间移位器§!"
+ CORVETTE_GE_THRUSTER_DESC:0 "超越传统工质推进器的新型动力装置，能直接操控空间坐标参数而做出一些鬼畜机动，至于原来的喷口只是大型RGB而已。"
+ DESTROYER_GE_THRUSTER:0 "§P丁型空间移位器§!"
+ DESTROYER_GE_THRUSTER_DESC:0 "超越传统工质推进器的新型动力装置，能直接操控空间坐标参数而做出一些鬼畜机动，至于原来的喷口只是大型RGB而已。"
+ CRUISER_GE_THRUSTER:0 "§P丙型空间移位器§!"
+ CRUISER_GE_THRUSTER_DESC:0 "超越传统工质推进器的新型动力装置，能直接操控空间坐标参数而做出一些鬼畜机动，至于原来的喷口只是大型RGB而已。"
+ BATTLESHIP_GE_THRUSTER:0 "§P乙型空间移位器§!"
+ BATTLESHIP_GE_THRUSTER_DESC:0 "超越传统工质推进器的新型动力装置，能直接操控空间坐标参数而做出一些鬼畜机动，至于原来的喷口只是大型RGB而已。"
+ TITAN_GE_THRUSTER:0 "§P甲型空间移位器§!"
+ TITAN_GE_THRUSTER_DESC:0 "超越传统工质推进器的新型动力装置，能直接操控空间坐标参数而做出一些鬼畜机动，至于原来的喷口只是大型RGB而已。"
+ 
+GE_DEFAULT_THRUSTER:0 "实验推进器"
+GE_DEFAULT_THRUSTER_DESC:0 "这是一款持续更新的过渡型产品，专用于某些特级飞船。"
+
+###############################SENSOR
+ GE_SENSOR:0 "§P超维信息矩阵§!"
+ GE_SENSOR_DESC:0 "新型的虚空传感器遥遥领先于以前的老古董，我们探知的触角已经伸向了更高维度。"
+
+###############################REACTOR
+ CORVETTE_GE_REACTOR:0 "§M壬型虚空反应堆§!"
+ CORVETTE_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A§!"
+ DESTROYER_GE_REACTOR:0 "§M辛型虚空反应堆§!"
+ DESTROYER_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A§!"
+ CRUISER_GE_REACTOR:0 "§M庚型虚空反应堆§!"
+ CRUISER_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A§!"
+ BATTLESHIP_GE_REACTOR:0 "§M己型虚空反应堆§!"
+ BATTLESHIP_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A§!"
+ TITAN_GE_REACTOR:0 "§M丙型虚空反应堆§!"
+ TITAN_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A§!"
+ COLOSSUS_GE_REACTOR:0 "§M乙型虚空反应堆§!"
+ COLOSSUS_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A§!"
+ PLATFORM_GE_REACTOR:0 "§M戊型虚空反应堆§!"
+ PLATFORM_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A§!"
+ ION_CANNON_GE_REACTOR:0 "§M丁型虚空反应堆§!"
+ ION_CANNON_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A§!"
+ STARBASE_GE_REACTOR:0 "§M甲型虚空反应堆§!"
+ STARBASE_GE_REACTOR_DESC:0 "§R닪K{@UU쓪悖U??USS�zzj虚无=无限M��xX諭论���A§!"
+ 
+GE_DEFAULT_REACTOR:0 "空间站反应堆"
+GE_DEFAULT_REACTOR_DESC:0 "用于资源空间站的定制反应堆，为了给生产设施供能，反应堆设计了大量冗余电力. 经过适当调整后也可以完全兼容一些特殊类别的战舰。"
+
+ge_shippart_default:"空槽"
+ ge_shippart_default_DESC:"空槽"
+
+###############################AUX
+ GE_WARP_DRIVE:0 "§P次元折跃引擎§!"
+ GE_WARP_DRIVE_DESC:0 " 宇宙空间编辑器。"
+
+ GE_RDS:0 ""
+ GE_RDS_DESC:0 ""
+
+ GE_CB:0 "§R混沌超频器（小型）§!"
+ GE_CB_DESC:0 "§R将虚空反应堆的能量直接附加在舰载武器上，虽然这并不安全，但是能让我们的攻势无坚不摧。§!"
+
+ GE_RDS_L:0 "§E法则兼容系统§!"
+ GE_RDS_L_DESC:0 "改善我们舰船的多元宇宙法则兼容性，即使是乱入其他位面我们也能避免该宇宙本源的排斥。§!"
+ GE_RDS_Cloak: "§E\"捕鳞蓑\"§!"
+ GE_RDS_Cloak_DESC: "对船只周围的时空进行维度操作，这将使得舰船即使是面对最好的传感阵列也能躲开其探测——不属于这个星系甚至时空的天灾势力们除外……"
+
+ GE_CB_L:0 "§R混沌超频器§!"
+ GE_CB_L_DESC:0 "§R将虚空反应堆的能量附加在舰载武器上，虽然这并不安全，但是能让我们的攻势无坚不摧。§!"
+
+###############################Ship part#########Section_templates
+ ge_flagship_key:0 "虚空领舰"
+ ge_flagship:0 "虚空领舰"
+ ge_flagship_plural:0 "虚空领舰"
+ ge_carrier:0 "重型航母"
+ ge_carrier_plural:0 "重型航母"
+ Ge_Ragnarok:0 "永恒之枪"
+ Ge_Ragnarok_key:0 "永恒之枪"
+ Ge_Ragnarok_plural:0 "永恒之枪"
+ ge_aura_ship:0 "光环舰"
+ ge_aura_ship_key:0 "光环舰"
+ ge_aura_ship_plural:0 "光环舰"
+
+##############################Aura Aux
+ ge_shippart_titian_A:0 "维度§R崩毁§!/§B加持§!"
+ ge_shippart_titian_A_DESC:0 "范围性规则改写,这套系统的开发难度不在于如何实现，而在于战斗后怎么消弭不良影响。"
+ ge_shippart_titian_A_aura1_Debuff:0 "§R维度崩毁§!"
+ ge_shippart_titian_A_aura1_Buff:0 "§B维度加持§!"
+ 
+ ge_shippart_titian_B:0 "§M引力主宰§!"
+ ge_shippart_titian_B_DESC:0 "这是光的终结，亦是光的起点"
+ ge_shippart_Flagship_B:0 "§M“引力主宰”§!"
+ ge_shippart_Flagship_B_DESC:0 "“这是光的终结，亦是光的起点”"
+ ge_shippart_titian_B_aura1_Debuff:0 "§g光之墓§!"
+ ge_shippart_titian_B_aura1_Buff:0 "§B引力透镜§!"
+
+ ge_shippart_titian_C:0 "§M混沌海§!"
+ ge_shippart_titian_C_DESC:0 "§R大道无极，我们即将步入彼岸——真相就在眼前。……&*游*（……&￥%……￥%……！又￥%*￥%&#戈%……*）&*?!?!?!?!?!?!?§!"
+
+ ge_shippart_Flagship_C:0 "§M“混沌海”§!"
+ ge_shippart_Flagship_C_DESC:0 "§R“大道无极，我们即将步入彼岸——真相就在眼前。……&*游*（……&￥%……￥%……！又￥%*￥%&#戈%……*）&*?!?!?!?!?!?!?”§!"
+
+ ge_shippart_time_freeze:0 "§B悖论引擎§!"
+ ge_shippart_time_freeze_DESC:0 "§BTime is on our side!§!\n\n§B时间静止§!\n\n进入战斗后敌方舰队的时间流速将被全面静止，持续30天。\n§R（请注意，对拥有动态修正的舰队无效，比如说夸特——用动修对付动修，遭殃的是CPU）\n（就看谁读取和修正的快……）\n（你或许能看到你们的修正在跳舞）\n（确实，大道都磨灭了）§!"
+ge_shippart_titian_time_freeze:0 "§B时间静止§!\n\n进入战斗后敌方舰队的时间流速将被全面静止，持续30天。\n§R（请注意，对拥有动态修正的舰队无效，比如说夸特——用动修对付动修，遭殃的是CPU）\n（就看谁读取和修正的快……）\n（你或许能看到你们的修正在跳舞）\n（确实，大道都磨灭了）§!"
+
+ ge_shippart_titian_C_aura1_Debuff:0 "§W~§!§R全能§!§W~§!"
+ ge_shippart_titian_C_aura1_Buff:0 "§W~§!§B全知§!§W~§!"
+
+ge_shippart_peace_field:0 "§L止戈立场§!"
+ge_shippart_peace_field_DESC:0 "§L千乘为之轼庐，诸侯为之止戈。§!\n§H思路来源自RTS游戏红警3日冕中神州阵营的超级武器和群友的带孝女操作。§!\n§P这是一个特殊光环，可以完全停止对战双方舰队的所有输出，如果你不想搞些骚操作（刷经验或者卡对面舰队），请§R<<绝对>>§!§P不要装上这个玩意儿。§!"
+ge_shippart_titian_peace_field_hostile:0 "§P止戈立场（对敌）§!"
+ge_shippart_titian_peace_field_friendly:0 "§P止戈立场（对友）§!"
+
+ ge_shippart_peace_field_2:"$ge_shippart_peace_field$"
+ ge_shippart_peace_field_2_DESC:"$ge_shippart_peace_field_DESC$"
+
+ge_shippart_hyper_generator: "§BN之领域中转器§!"
+
+ ge_shippart_genesis_lake: "§l创生之湖§!"
+ #ge_shippart_genesis_lake_DESC: "该组件将为\"§M王座§!\"提供少量\"§P黑天使的守卫§!\"作为僚舰. 进入战斗后，如果当前\"§M王座§!\"所在的舰队中没有\"§P黑天使的守卫§!\"，§l创生之湖§!将当即在舰队内召唤出4艘\"§P黑天使的守卫§!\"，效果冷却时间为§H10年§!。\n\n如果当前\"§M王座§!\"所在舰队的指挥官是§M水银灯§!，则 §G每日护盾再生+200§!，§G每日装甲再生+150§!，§G每日船体再生+50§!。"
+ ge_shippart_genesis_lake_DESC: "该组件将为\"§M王座§!\"提供少量\"§P黑天使的守卫§!\"作为僚舰. 进入战斗后，§l创生之湖§!将当即在舰队内召唤出4艘\"§P黑天使的守卫§!\"，效果冷却时间为§H25年§!。\n\n如果当前\"§M王座§!\"所在舰队的指挥官是§M水银灯§!，则 §G每日护盾再生+200§!，§G每日装甲再生+150§!，§G每日船体再生+50§!。"
+ ge_shippart_genesis_lake_friendly: "§G创生§!"
+
+ roz_shippart_wx_aura_1:"万象引擎A"
+ roz_shippart_wx_aura_1_DESC:"该状态下，万象装置将专注于生产\n\n§H每月产出£energy£450§!"
+ roz_shippart_wx_aura_2:"万象引擎U"
+ roz_shippart_wx_aura_2_DESC:"万象装置将平衡生产与作战的能源调配\n\n§H每月产出£energy£200§!"
+ roz_shippart_wx_aura_3:"万象引擎X"
+ roz_shippart_wx_aura_3_DESC:"该状态下，万象装置将专注于战术支援\n\n§H每月产出£energy£50§!"
+ roz_shippart_wx_aura_1_hostile:""
+ roz_shippart_wx_aura_2_hostile:""
+ roz_shippart_wx_aura_3_hostile:""
+
+###字体颜色代码
+##§W W白色
+##§R R红色
+##§L L暗金
+##§S S土黄
+##§H H金黄
+##§Y Y黄色
+##§G G绿色
+##§E E青色
+##§B B深蓝
+##§M M紫色
+##§g g灰色
+##§P p粉红
+##§! 结束

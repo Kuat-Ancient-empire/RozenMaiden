@@ -1,0 +1,396 @@
+entity = {
+	name = "roz_ju1_entity"
+	scale = 1.6
+	pdxmesh = "roz_ju1_mesh"
+	default_state = idle
+	#cull_radius = 1
+	game_data = { emissive_recolor_crunch = 1.0 }
+	state = {
+		name = "idle"
+		looping = yes
+		state_time = 3
+		animation = idle
+		animation_blend_time = 3
+	}
+	state = {
+		name = "moving"
+		looping = yes
+		state_time = 3
+		animation = idle
+		animation_blend_time = 3
+
+	}
+	state = { name = "working_looping"
+		state_time = 3
+		animation = "open"
+		animation_blend_time = 3
+		event = { time = 0	id = "beam_start" }
+
+	}
+
+	# Opening state, goes into "working_looping" state when done.
+	state = { name = "working"
+		state_time = 3
+		animation = "opening" looping = no
+		next_state = "working_looping"
+		event = { trigger_once = yes sound = { soundeffect = "sfx_humanoid_colossus_opening" stop_on_state_change = yes } }
+		event = { time = 1000 id = "beam_start" } #will never fire, but lets the game know that an event with this ID exists
+
+	}
+
+	#attach = { root = roz_ju2_entity }
+	#attach = { root = roz_ju3_entity }
+	attach = { loc2 = roz_ju_loc }
+	#attach = { root = lithoid_01_colossus_core_entity }
+	#attach = { root = techno_sphere_entity }
+
+}
+
+entity = {
+	name = "roz_ju2_entity"
+	pdxmesh = "roz_ju2_mesh"
+	game_data = { emissive_recolor_crunch = 1.0 }
+	default_state = "idle"
+	state = { name = "idle"
+		animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+	}
+	state = { name = moving
+		animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+	}
+	state = { name = working_loop
+		animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+	}
+	state = { name = working
+		animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+	}
+	##get_state_from_parent = no
+}
+
+entity = {
+	name = "roz_ju3_entity"
+	pdxmesh = "roz_ju3_mesh"
+	game_data = { emissive_recolor_crunch = 1.0 }
+	default_state = "idle"
+	state = { name = "idle"
+		animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+		start_event = { node = "axis3" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "axis5" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "axis7" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "axis5" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+		#tubeside_1_1
+		start_event = { node = "tubeside_1_1" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_2_3" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_3_1" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_4_3" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_1_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_2_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_3_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_4_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_1_3" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_2_1" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_3_3" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_4_1" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+
+	}
+	state = { name = moving
+		animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+		start_event = { node = "axis3" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "axis5" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "axis7" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "axis5" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+		#tubeside_1_1
+		start_event = { node = "tubeside_1_1" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_2_3" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_3_1" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_4_3" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_1_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_2_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_3_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_4_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_1_3" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_2_1" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_3_3" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_4_1" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+
+	}
+	state = { name = working_loop
+		animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+		start_event = { node = "axis3" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "axis5" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "axis7" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "axis5" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+		#tubeside_1_1
+		start_event = { node = "tubeside_1_1" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_2_3" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_3_1" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_4_3" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_1_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_2_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_3_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_4_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_1_3" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_2_1" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_3_3" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_4_1" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+
+	}
+	state = { name = working
+		animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = juggernaut_mammalian_idle } }
+		start_event = { node = "axis3" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "axis5" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "axis7" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "axis5" particle = "matde_core_beam_effect" keep_particle = yes trigger_once = yes }
+		#tubeside_1_1
+		start_event = { node = "tubeside_1_1" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_2_3" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_3_1" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_4_3" particle = roz_aquatic_01_science_ship_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_1_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_2_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_3_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_4_2" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_1_3" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_2_1" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_3_3" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+		start_event = { node = "tubeside_4_1" particle = roz_necroid_01_ion_core_effect keep_particle = yes trigger_once = yes }
+
+	}
+	#get_state_from_parent = no
+	attach = { axis4 = "necroid_01_colossus_core_effect_entity"}
+
+	attach = { axis3 = mega_shipyard_01_core_effect_entity }
+	attach = { axis5 = mega_shipyard_01_core_effect_entity }
+
+}
+
+entity = {
+	name = "roz_ju_megastructure"
+	pdxmesh = roz_jume_mesh
+	attach = { down = roz_ju1_entity }
+	game_data = { emissive_recolor_crunch = 1.0 }
+}
+
+entity = {
+	name = "roz_ju_loc"
+	pdxmesh = roz_ju_loc_mesh
+	state = {
+		name = "idle"
+		looping = yes
+		state_time = 3
+		event = { time = 0 node = "root" particle = "ROZ_generic_verybig_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine1" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine2" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine3" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine4" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine5" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine6" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine7" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine8" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine9" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine10" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine11" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine12" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine13" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine14" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine15" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine16" particle = "generic_big_3_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "engine_s_1" particle = generic_1_exhaust_circle_idle keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_2" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_3" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_4" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_5" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_6" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_7" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_8" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_9" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_10" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_11" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_12" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_13" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_14" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_15" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_16" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_17" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_18" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_19" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_20" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_21" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_22" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_23" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_24" particle = "generic_1_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+	state = {
+		name = "moving"
+		looping = yes
+		state_time = 3
+		event = { time = 0 node = "root" particle = "ROZ_generic_verybig_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine1" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine2" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine3" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine4" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine5" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine6" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine7" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine8" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine9" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine13" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine14" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine15" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine16" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "engine_s_1" particle = generic_1_exhaust_circle_moving keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_2" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_3" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_4" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_5" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_6" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_7" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_8" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_9" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_10" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_11" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_12" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_13" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_14" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_15" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_16" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_17" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_18" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_19" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_20" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_21" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_22" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_23" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_24" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+	}
+	state = {
+		name = "working"
+		looping = yes
+		state_time = 3
+		event = { time = 0 node = "root" particle = "ROZ_generic_verybig_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine1" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine2" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine3" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine4" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine5" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine6" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine7" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine8" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine9" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine13" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine14" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine15" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine16" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "engine_s_1" particle = generic_1_exhaust_circle_moving keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_2" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_3" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_4" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_5" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_6" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_7" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_8" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_9" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_10" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_11" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_12" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_13" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_14" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_15" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_16" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_17" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_18" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_19" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_20" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_21" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_22" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_23" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_24" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+	}
+	state = {
+		name = "working_loop"
+		looping = yes
+		state_time = 3
+		event = { time = 0 node = "root" particle = "ROZ_generic_verybig_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine1" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine2" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine3" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine4" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine5" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine6" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine7" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine8" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine9" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine10" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine11" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine12" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine13" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine14" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine15" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine16" particle = "generic_big_3_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+
+		event = { time = 0 node = "engine_s_1" particle = generic_1_exhaust_circle_moving keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_2" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_3" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_4" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_5" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_6" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_7" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_8" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_9" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_10" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_11" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_12" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_13" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_14" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_15" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_16" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_17" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_18" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_19" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_20" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_21" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_22" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_23" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_s_24" particle = "generic_1_exhaust_circle_moving" keep_particle = yes trigger_once = yes }
+	}
+	attach = { root1 = roz_ju2_entity }
+	attach = { root1 = roz_ju3_entity }
+	#attach = { root = Roz_a_star_class_star_entity }
+	attach = { root1 = lithoid_01_colossus_core_entity }
+	#attach = { root = techno_sphere_entity }
+}
+
+entity = { # A
+	name = "Roz_a_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	get_state_from_parent = no
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "roz_a_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+	}
+	attach = { root = infected_planet_01_stage_1_entity }
+	scale = 2.5
+}
+
+animation = { name = "roz_ju2_idle_animation" file = "roz_ju2_idle.anim" }
+animation = { name = "roz_ju3_idle_animation" file = "roz_ju3_idle.anim" }
+animation = { name = "roz_ju1_opening_animation" file = "roz_ju1_working.anim" }
+animation = { name = "roz_ju1_idle_animation" file = "roz_ju1_idle.anim" }
+animation = { name = "roz_ju1_open_animation" file = "roz_ju1_idle1.anim" }

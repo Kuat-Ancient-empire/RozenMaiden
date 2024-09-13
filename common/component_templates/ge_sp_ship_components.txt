@@ -1,0 +1,702 @@
+
+
+weapon_component_template = {
+	key = "ge_sgt_main_beam"
+	size = extra_large
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_ship_part_ge_vn_main_beam"
+	#entity = SSV_M_beam_turret_entity
+	icon_frame = 1
+	#hidden = yes
+	firing_arc = 30.0
+	min_range = 1.0
+	#static_rotation = yes
+	use_ship_kill_target = yes
+	tags = { weapon_type_ge_void_energy weapon_type_energy }
+	projectile_gfx = "ge_vn_t_beam_projectile"
+	component_set = "ge_sgt_main_beam"
+	power = -30000
+	damage = { min = 10000 max = 25000 }
+	windup = { min = 50 max = 200 }	
+	total_fire_time = 50
+	range = 300.0
+	accuracy = 1.0
+	tracking = 1.0
+
+	shield_penetration = 2.0
+	armor_penetration = 2.0
+	shield_damage = 2.0
+	armor_damage = 2.0
+	hull_damage = 3.0
+	size_damage_factor = 1
+	ai_tags = { weapon_role_artillery }	
+	ai_tag_weight = 0
+
+	size_restriction = { Ge_Vampirilis_Ortaam }
+
+	ai_weight = {
+		weight = 0
+		#modifier = {
+		#	factor = 1000
+		#	is_ship_size = Ge_Ragnarok
+		#}
+	}
+}
+
+weapon_component_template = {
+	key = "ge_sgt_main_T_beam"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_ship_part_ge_vn_main_beam"
+	#entity = SSV_M_beam_turret_entity
+	icon_frame = 1
+	#hidden = yes
+	firing_arc = 15.0
+	min_range = 1.0
+	#static_rotation = yes
+	use_ship_kill_target = yes
+	tags = { weapon_type_ge_void_energy weapon_type_energy }
+	projectile_gfx = "ge_vn_t_beam_projectile"
+	component_set = "ge_sgt_main_beam"
+	power = -50000
+	damage = { min = 14500 max = 32500 }
+	windup = { min = 50 max = 200 }
+	total_fire_time = 50
+	range = 300.0
+	accuracy = 1.0
+	tracking = 1.0
+
+	shield_penetration = 2.0
+	armor_penetration = 2.0
+	shield_damage = 2.0
+	armor_damage = 2.0
+	hull_damage = 3.0
+	size_damage_factor = 1
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+
+	size_restriction = { Ge_Vampirilis_Ortaam }
+
+	ai_weight = {
+		weight = 0
+		#modifier = {
+		#	factor = 1000
+		#	is_ship_size = Ge_Ragnarok
+		#}
+	}
+}
+
+weapon_component_template = {
+	key = "ge_sgt_main_beam_1"
+	size = extra_large
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_ship_part_ge_vn_main_beam"
+	#entity = SSV_M_beam_turret_entity_1
+	icon_frame = 1
+	#hidden = yes
+	firing_arc = 30.0
+	min_range = 1.0
+	#static_rotation = yes
+	use_ship_kill_target = no
+	tags = { weapon_type_ge_void_energy weapon_type_energy }
+	projectile_gfx = "ge_vn_t_beam_projectile"
+	component_set = "ge_sgt_main_beam_1"
+	power = -30000
+	damage = { min = 10000 max = 25000 }
+	windup = { min = 50 max = 200 }	
+	total_fire_time = 50
+	range = 300.0
+	accuracy = 1.0
+	tracking = 1.0
+	size_damage_factor = 1
+	shield_penetration = 2.0
+	armor_penetration = 2.0
+	shield_damage = 2.0
+	armor_damage = 2.0
+	hull_damage = 3.0
+
+	ai_tags = { weapon_role_artillery }	
+	ai_tag_weight = 0
+	hidden = yes
+	size_restriction = { Ge_Vampirilis_Ortaam }
+
+	ai_weight = {
+		weight = 0
+		#modifier = {
+		#	factor = 1000
+		#	is_ship_size = Ge_Ragnarok
+		#}
+	}
+}
+#SSV_S_Missile_turret_entity
+#SSV_S_Beam_turret_entity
+
+weapon_component_template = {
+	key = "ge_small_stg_laser"
+	size = small
+	#entity = SSV_S_Beam_turret_entity
+	type = instant
+
+	icon = "GFX_ge_shippart_roz_sgt_feather"
+	icon_frame = 1
+	#hidden = yes
+
+	power = -700
+	component_set = "ge_medium_stg_laser"
+	projectile_gfx = "ge_vn_laser_m_projectile"
+
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		weapon_role_anti_hull
+	}
+	ai_tag_weight = 0
+	damage = { min = 50.0 max = 250.0 }
+	windup = { min = 5.0 max = 10.0 }
+
+	total_fire_time = 10
+
+	range = 180.00
+	accuracy = 0.8
+	tracking = 0.8
+
+	#shield_penetration = 1.25
+	#armor_penetration = 1.25
+	shield_damage = 2.00
+	armor_damage = 2.00
+	hull_damage = 1.75
+
+	tags = { weapon_type_ge_void_energy weapon_type_energy }
+	size_restriction = { Ge_Vampirilis_Ortaam }
+	ai_weight = {
+		weight = 0
+	}
+}
+
+weapon_component_template = {
+	key = "ge_medium_stg_laser"
+	size = medium
+	#entity = SSV_S_Beam_turret_entity
+	type = instant
+	
+	icon = "GFX_ge_shippart_roz_sgt_feather"
+	icon_frame = 1
+	#hidden = yes
+	
+    power = -1500	
+	component_set = "ge_medium_stg_laser"
+	projectile_gfx = "ge_vn_laser_m_projectile"
+	
+	ai_tags = { 
+		weapon_role_anti_armor 
+		weapon_role_anti_shield
+		weapon_role_anti_hull
+	}
+	ai_tag_weight = 0
+    damage = { min = 50.0 max = 500.0 }
+	windup = { min = 5.0 max = 10.0 }
+	
+	total_fire_time = 10
+	
+	range = 200.00 
+	accuracy = 0.8
+	tracking = 0.8
+	
+	#shield_penetration = 1.25
+	#armor_penetration = 1.25
+	shield_damage = 2.00
+	armor_damage = 2.00
+	hull_damage = 1.75                          
+
+    tags = { weapon_type_ge_void_energy weapon_type_energy }
+	size_restriction = { Ge_Vampirilis_Ortaam }
+	ai_weight = {
+		weight = 0
+	}
+}
+
+weapon_component_template = {
+	key = "ge_large_stg_laser"
+	size = large
+	#entity = SSV_S_Beam_turret_entity
+	type = instant
+
+	icon = "GFX_ge_shippart_roz_sgt_feather"
+	icon_frame = 1
+	#hidden = yes
+
+	power = -3000
+	component_set = "ge_medium_stg_laser"
+	projectile_gfx = "ge_vn_laser_m_projectile"
+
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		weapon_role_anti_hull
+	}
+	ai_tag_weight = 0
+	damage = { min = 100.0 max = 1000.0 }
+	windup = { min = 5.0 max = 10.0 }
+
+	total_fire_time = 10
+
+	range = 230.00
+	accuracy = 0.8
+	tracking = 0.8
+
+	#shield_penetration = 1.25
+	#armor_penetration = 1.25
+	shield_damage = 2.00
+	armor_damage = 2.00
+	hull_damage = 1.75
+
+	tags = { weapon_type_ge_void_energy weapon_type_energy }
+	size_restriction = { Ge_Vampirilis_Ortaam }
+	ai_weight = {
+		weight = 0
+	}
+}
+
+weapon_component_template = {
+	key = "ge_sgt_torpedo"
+	size = torpedo			
+	type = missile		
+	#entity = SSV_S_Missile_turret_entity
+	icon = "GFX_ship_part_ge_vn_torpedo"
+	icon_frame = 1
+	#hidden = yes	
+	
+	power = -4000							
+	damage = { min = 618 max = 905 }		
+	windup = { min = 40 max = 60 }	
+	total_fire_time = 50					
+	hull_damage = 1.25                                     
+	armor_damage = 3.0                     
+	shield_penetration = 2.0                                                
+	tracking = 0.80                        
+	range = 250.00                         
+	accuracy = 1.00                        
+	missile_health = 200				   
+	missile_shield = 320		   
+	missile_armor = 320			   
+	missile_evasion = 0.9					   
+	missile_retarget_range = 150		   
+	missile_speed = 30
+	size_damage_factor = 0.8
+	component_set = "ge_sgt_torpedo"	
+	projectile_gfx = "ge_vn_torpedo_projectile"							
+	tags = { weapon_type_ge_void_energy weapon_type_explosive }
+
+	size_restriction = { Ge_Vampirilis_Ortaam }
+
+	ai_tags = { weapon_role_anti_armor }	
+	ai_tag_weight = 0
+	ai_weight = {
+		weight = 0
+		#modifier = {
+		#	factor = 1000
+		#	is_ship_size = Ge_Ragnarok
+		#}
+	}
+}
+
+weapon_component_template = {
+	key = "ge_sgt_pd"
+	size = point_defence
+	#entity = SSV_S_Beam_turret_entity
+	type = instant
+	
+	icon = "GFX_ship_part_ge_vn_pd"
+	icon_frame = 1
+	#hidden = yes
+	
+    power = -750
+	component_set = "ge_sgt_pd"
+	projectile_gfx = "ge_vn_pd_projectile"
+	
+	ai_tags = { weapon_role_point_defense }
+	ai_tag_weight = 0
+
+    damage = { min = 25.0 max = 55.0 }
+	windup = { min = 1.0 max = 3.0 }
+	
+	total_fire_time = 3
+	
+	range = 120.00
+	accuracy = 1.00
+	tracking = 1.00
+	
+	hull_damage = 2.0                                 
+	shield_penetration = 1.50               
+	armor_penetration = 1.50 
+
+    tags = { weapon_type_ge_void_energy weapon_type_energy }
+
+	size_restriction = { Ge_Vampirilis_Ortaam }
+
+	ai_weight = {
+		weight = 0
+		#modifier = {
+		#	factor = 1000
+		#	is_ship_size = Ge_Ragnarok
+		#}
+	}
+}
+
+
+utility_component_template = {
+	key = "ge_shippart_genesis_lake"
+	size = aux
+	icon = "GFX_ge_ship_part_genesis_lake"
+	icon_frame = 1
+	power = -300
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1500
+			energy = 4500
+		}
+		upkeep = {
+			energy = 25
+		}
+	}
+	size_restriction = { Ge_Vampirilis_Ortaam }
+	prerequisites = { tech_ge_sgt_flagship_normal }
+	component_set = "ge_flagship_slot"
+	friendly_aura = {
+		name = "ge_shippart_genesis_lake_friendly"
+		system_wide = yes
+		limit = {
+			fleet = {
+				leader = {
+					has_leader_flag = ge_suigintou_flag
+				}
+			}
+		}
+
+		apply_on = ships
+		stack_info = {
+			id = ge_shippart_genesis_lake_friendly
+			priority = 98
+		}
+		modifier = {
+			ship_shield_regen_add_static = 200
+			ship_armor_regen_add_static = 150
+			ship_hull_regen_add_static = 50
+		}
+		graphics = {
+			area_effect = {
+				#entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				#entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0		#AI权重相关
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+weapon_component_template = {
+	key = "ge_sgt_normal_beam"
+	size = extra_large
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_ge_ship_part_normal_main_beam"
+	#entity = SSV_M_beam_2_turret_entity
+	icon_frame = 1
+	#hidden = yes
+	firing_arc = 10.0
+	min_range = 1.0
+	#static_rotation = yes
+	use_ship_kill_target = no
+	tags = { weapon_type_energy }
+	projectile_gfx = "ge_vn_t_beam_projectile"
+	component_set = "ge_sgt_normal_beam"
+	power = -3500
+	damage = { min = 2048 max = 4096 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 20
+	range = 220.0
+	accuracy = 1.0
+	tracking = 1.0
+
+	shield_damage = 1.50
+	armor_damage = 2.50
+	hull_damage = 1.75
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+
+	size_restriction = { Ge_Vampirilis_Letum Ge_Vampirilis_Ortaam_normal }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 200
+			energy = 400
+			rare_crystals = 5
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		weight = 0
+		#modifier = {
+		#	factor = 1000
+		#	is_ship_size = Ge_Ragnarok
+		#}
+	}
+}
+
+weapon_component_template = {
+	key = "ge_normal_medium_laser"
+	size = large
+	#entity = SSV_S_Beam_turret_entity
+	type = instant
+
+	icon = "GFX_ge_ship_part_normal_medium_laser"
+	icon_frame = 1
+	#hidden = yes
+
+	power = -2500
+	component_set = "ge_normal_medium_laser"
+	projectile_gfx = "ge_vn_laser_m_projectile"
+
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		weapon_role_anti_hull
+	}
+	ai_tag_weight = 0
+	damage = { min = 256.0 max = 512.0 }
+	windup = { min = 5.0 max = 15.0 }
+
+	total_fire_time = 5
+
+	range = 180.00
+	accuracy = 0.8
+	tracking = 0.8
+
+	#shield_penetration = 1.25
+	#armor_penetration = 1.25
+	shield_damage = 1.75
+	armor_damage = 2.25
+	hull_damage = 1.5
+
+	tags = { weapon_type_energy }
+	size_restriction = { Ge_Vampirilis_Letum Ge_Vampirilis_Ortaam_normal }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 50
+			energy = 100
+			rare_crystals = 1
+		}
+		upkeep = {
+			energy = 0.5
+		}
+	}
+	ai_weight = {
+		weight = 0
+		#modifier = {
+		#	factor = 1000
+		#	is_ship_size = Ge_Ragnarok
+		#}
+	}
+}
+
+weapon_component_template = {
+	key = "ge_normal_medium_2_laser"
+	size = medium
+	#entity = SSV_S_Beam_turret_entity
+	type = instant
+
+	icon = "GFX_ge_ship_part_normal_medium_laser"
+	icon_frame = 1
+	#hidden = yes
+
+	power = -1750
+	component_set = "ge_normal_medium_laser"
+	projectile_gfx = "ge_vn_laser_m_projectile"
+
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		weapon_role_anti_hull
+	}
+	ai_tag_weight = 0
+	damage = { min = 128.0 max = 256.0 }
+	windup = { min = 5.0 max = 15.0 }
+
+	total_fire_time = 5
+
+	range = 160.00
+	accuracy = 0.8
+	tracking = 0.8
+
+	#shield_penetration = 1.25
+	#armor_penetration = 1.25
+	shield_damage = 1.75
+	armor_damage = 2.25
+	hull_damage = 1.5
+
+	tags = { weapon_type_energy }
+	size_restriction = { Ge_Vampirilis_Letum Ge_Vampirilis_Ortaam_normal }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 50
+			energy = 100
+			rare_crystals = 1
+		}
+		upkeep = {
+			energy = 0.5
+		}
+	}
+	ai_weight = {
+		weight = 0
+		#modifier = {
+		#	factor = 1000
+		#	is_ship_size = Ge_Ragnarok
+		#}
+	}
+}
+
+weapon_component_template = {
+	key = "ge_normal_small_laser"
+	size = small
+	#entity = SSV_S_Beam_turret_entity
+	type = instant
+
+	icon = "GFX_ge_ship_part_normal_medium_laser"
+	icon_frame = 1
+	#hidden = yes
+
+	power = -1000
+	component_set = "ge_normal_medium_laser"
+	projectile_gfx = "ge_vn_laser_m_projectile"
+
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		weapon_role_anti_hull
+	}
+	ai_tag_weight = 0
+	damage = { min = 64.0 max = 128.0 }
+	windup = { min = 3.0 max = 7.0 }
+
+	total_fire_time = 5
+
+	range = 140.00
+	accuracy = 0.8
+	tracking = 0.8
+
+	#shield_penetration = 1.25
+	#armor_penetration = 1.25
+	shield_damage = 1.75
+	armor_damage = 2.25
+	hull_damage = 1.5
+
+	tags = { weapon_type_energy }
+	size_restriction = { Ge_Vampirilis_Letum Ge_Vampirilis_Ortaam_normal }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+			energy = 50
+			rare_crystals = 0.5
+		}
+		upkeep = {
+			energy = 0.25
+		}
+	}
+	ai_weight = {
+		weight = 0
+		#modifier = {
+		#	factor = 1000
+		#	is_ship_size = Ge_Ragnarok
+		#}
+	}
+}
+
+weapon_component_template = {
+	key = "ge_normal_pd"
+	size = point_defence
+	#entity = SSV_S_Beam_turret_entity
+	type = instant
+
+	icon = "GFX_ship_part_ge_vn_pd"
+	icon_frame = 1
+	#hidden = yes
+
+	power = -250
+	component_set = "ge_normal_pd"
+	projectile_gfx = "ge_vn_pd_projectile"
+
+	ai_tags = { weapon_role_point_defense }
+	ai_tag_weight = 0
+
+	damage = { min = 16.0 max = 64.0 }
+	windup = { min = 1.0 max = 4.0 }
+
+	total_fire_time = 4
+
+	range = 50.00
+	accuracy = 1.00
+	tracking = 1.00
+
+	hull_damage = 1.50
+	shield_penetration = 1.00
+	armor_penetration = 1.00
+
+	tags = { weapon_type_energy }
+
+	size_restriction = { Ge_Vampirilis_Letum Ge_Vampirilis_Ortaam_normal }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 30
+			energy = 60
+			rare_crystals = 1
+		}
+		upkeep = {
+			energy = 0.2
+		}
+	}
+	ai_weight = {
+		weight = 0
+		#modifier = {
+		#	factor = 1000
+		#	is_ship_size = Ge_Ragnarok
+		#}
+	}
+}
+
+
+
+
+
+
+
+

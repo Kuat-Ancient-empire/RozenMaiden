@@ -1,0 +1,97 @@
+
+###########################+
+#T slot
+entity = {
+    name = "roz_t_beam_hit_entity"
+    cull_radius = 1.0
+
+    default_state = "idle"
+    state = { name = "idle" state_time = 5 looping = no
+        event = { time = 0.25 particle = "roz_t_beam_hit_effect_particle" keep_particle = yes #sound = { soundeffect = titan_laser_hit }
+        }
+        #start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+    }
+    state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+
+###########################
+#XL
+
+entity = {
+    name = "roz_xl_beam_hit_entity"
+    cull_radius = 1.0
+
+    default_state = "idle"
+    state = { name = "idle" state_time = 2 looping = no
+        event = { time = 0.25 particle = "roz_xl_beam_hit_effect" keep_particle = yes sound = { soundeffect = tachyon_lance_hit } }
+        event = { time = 0.25 trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+    }
+    state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+    name = "roz_xl_beam_shield_hit_entity"
+    cull_radius = 1.0
+
+    default_state = "idle"
+    state = { name = "idle"
+        event = { time = 0.25 particle = "roz_xl_beam_hit_effect" sound = { soundeffect = shield_hit } }
+        event = { time = 0.15 particle = "projectile_large_shield_hit_effect" }
+        event = { time = 0.25 trigger_once = yes sound = { soundeffect = "distance_shield_hit" } }
+    }
+    state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+    name = "roz_xl_beam_muzzle_entity"
+    cull_radius = 1.0
+
+    default_state = "idle"
+    state = { name = "idle" state_time = 0.8 looping = no
+        event = { time = 0 particle = "roz_xl_beam_muzzle_particle" keep_particle = yes sound = { soundeffect = tachyon_lance_fire } }
+        event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_fire" } }
+    }
+}
+
+entity = {
+    name = "roz_xl_beam_windup_entity"
+
+    default_state = "attack"
+    get_state_from_parent = no
+    state = {
+        name = "attack" looping = yes state_time = 0.8
+        event = { trigger_once = yes sound = { soundeffect = "tachyon_lance_windup" } }
+
+        event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "roz_xl_beam_windup_effect" }
+        event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "roz_xl_beam_windup_effect" }
+        event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "roz_xl_beam_windup_effect" }
+        event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "roz_xl_beam_windup_effect" }
+        event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "roz_xl_beam_windup_effect" }
+        event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "roz_xl_beam_windup_effect" }
+        event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "roz_xl_beam_windup_effect" }
+        event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "roz_xl_beam_windup_effect" }
+
+        event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "roz_xl_beam_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+    }
+}
+
+entity = {
+    name = "roz_xl_beam_turret_windup_entity"
+
+    default_state = "attack"
+    get_state_from_parent = no
+    state = {
+        name = "attack" looping = yes state_time = 0.8
+        event = { trigger_once = yes sound = { soundeffect = "tachyon_lance_windup" } }
+
+        event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "roz_xl_beam_windup_effect" trigger_once = yes keep_particle = yes }
+    }
+}
+
+
+
+
+
+
+

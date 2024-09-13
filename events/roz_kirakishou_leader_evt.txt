@@ -1,0 +1,1504 @@
+namespace = roz_krks_leader_evt
+
+country_event = {
+    id = roz_krks_leader_evt.10
+    is_triggered_only = yes
+    title = "roz_krks_leader_evt.10.title"
+    desc = "roz_krks_leader_evt.10.desc"
+    diplomatic = yes
+    picture_event_data = {
+        room = ge_sgt_main_room
+        portrait = roz_kirakishou_default
+    }
+    trigger = {
+        NOR =  {
+            has_country_flag = roz_kirakishou_get
+            has_country_flag = roz_kirakishou_governor_active
+        }
+
+    }
+    immediate = {
+        set_country_flag = roz_kirakishou_governor_active
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = roz_kirakishou_get
+                }
+            }
+            set_country_flag = roz_kirakishou_get
+            create_leader = {
+                class = official
+                name = "NAME_Kirakishou"
+                skill = 2
+                gender = female
+                species = owner_main_species
+                immortal = yes
+                event_leader = yes
+                set_age = 0
+                traits = {  }
+                #randomize_traits = no
+                hide_age = yes
+                skip_background_generation = yes
+                custom_catch_phrase = kirakishou_gov_catch_phrase
+                custom_description = kirakishou_backstory
+                effect = {
+                    add_skill_without_trait_selection = 1
+                    roz_leader_name_set_effect = {
+                        who_jp = Kirakishou
+                        who_sc = xuehuaqijing
+                    }
+                }
+            }
+            last_created_leader = {
+                set_leader_flag = roz_kirakishou_flag
+                set_leader_flag = legendary_leader
+                set_leader_flag = immune_to_negative_traits
+                save_global_event_target_as = roz_leader_kirakishou_global_target@root
+                unassign_leader = this
+                set_variable = {
+                    ##好感状态初始化
+                    which = roz_kirakishou_affection
+                    value = 60
+                }
+                add_trait = leader_trait_roz_kirakishou_main
+                add_trait = leader_trait_roz_kirakishou_nightmare
+                add_trait = leader_trait_supreme_organizer
+                random_list = {
+                    1 = {
+                        add_trait = leader_trait_efficient
+                    }
+                    1 = {
+                        add_trait = leader_trait_arbiter
+                    }
+                    1 = {
+                        add_trait = leader_trait_utopian_idealist
+                    }
+                    1 = {
+                        add_trait = leader_trait_mediator
+                    }
+                    1 = {
+                        add_trait = leader_trait_shroud_preacher
+                    }
+                    1 = {
+                        add_trait = leader_trait_master_diplomat
+                    }
+                    1 = {
+                        add_trait = leader_trait_galvanizer
+                    }
+                }
+            }
+            roz_leader_change_skin_set_flag_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                leader_flag = roz_kirakishou_flag
+                portrait_key = roz_kirakishou_default
+            }
+
+        }
+        country_event = { id = roz_krks_leader_evt.11 }
+    }
+    option = {
+        name = roz_krks_leader_evt.10.aa
+        hidden_effect = {
+            country_event = {
+                id = roz_krks_leader_evt.12
+                days = 1
+            }
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.11
+    is_triggered_only = yes
+    hide_window = yes
+    trigger = {
+        exists = owner
+    }
+    immediate = {
+        create_country = {
+            name = "NAME_nfield_krks"
+            type = ge_N_Field
+            flag = {
+                icon = {
+                    category = "nfield_krks_flags"
+                    file = "flag_roz_white_rozen.dds"
+                }
+                background = {
+                    category = "backgrounds"
+                    file = "inverted_v.dds"
+                }
+                colors = {
+                    "black"
+                    "black"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                save_global_event_target_as = roz_kirakishou_global_country@root
+            }
+        }
+        last_created_country = {
+            establish_communications_no_message = root
+        }
+        random_owned_species = {
+            limit = {
+                NOT = {
+                    is_same_species = owner_main_species
+                }
+            }
+            save_event_target_as = secondary_species
+        }
+        capital_scope = {
+            while = {
+                count = 20
+                create_pop = {
+                    species = event_target:secondary_species
+                    ethos = random
+                }
+            }
+        }
+        event_target:roz_kirakishou_global_country@root = {
+            owner = {
+                clone_leader = {
+                    target = event_target:roz_leader_kirakishou_global_target@root
+                    effect = {
+                        save_global_event_target_as = roz_kirakishou_governor_inactive_temp@root
+                        #set_leader_flag = roz_kirakishou_flag
+                        set_name = NAME_Kirakishou
+                        unassign_leader = this
+                        set_owner = event_target:roz_kirakishou_global_country@root
+                    }
+                }
+
+                create_leader = {
+                    class = commander
+                    name = "NAME_Kirakishou"
+                    skill = 2
+                    gender = female
+                    species = owner_main_species
+                    immortal = yes
+                    event_leader = yes
+                    set_age = 0
+                    traits = {  }
+                    #randomize_traits = no
+                    hide_age = yes
+                    skip_background_generation = yes
+                    custom_catch_phrase = kirakishou_gov_catch_phrase
+                    custom_description = kirakishou_backstory
+                    effect = {
+                        add_skill_without_trait_selection = 1
+                        remove_all_traits = yes
+                        roz_leader_name_set_effect = {
+                            who_jp = Kirakishou
+                            who_sc = xuehuaqijing
+                        }
+                    }
+                }
+                last_created_leader = {
+                    save_global_event_target_as = roz_kirakishou_admiral_inactive_temp@root
+                    unassign_leader = this
+                    set_variable = {
+                        ##好感状态初始化
+                        which = roz_kirakishou_affection
+                        value = 60
+                    }
+                    add_trait = leader_trait_roz_kirakishou_main
+                    add_trait = leader_trait_roz_kirakishou_nightmare
+                    add_trait = leader_trait_ge_mind_drain
+                    add_trait = leader_trait_supreme_organizer
+                    random_list = {
+                        1 = { add_trait = leader_trait_armorer }
+                        1 = { add_trait = leader_trait_military_overseer }
+                        1 = { add_trait = leader_trait_master_gunner }
+                        1 = { add_trait = leader_trait_destiny_engineer }
+                        2 = { add_trait = leader_trait_guerilla_tactics }
+                        1 = { add_trait = leader_trait_survivalist }
+                        1 = { add_trait = leader_trait_maven_of_war }
+                        1 = { add_trait = leader_trait_peacekeeper }
+                    }
+                    random_list = {
+                        1 = { add_trait = leader_trait_taskmaster }
+                        1 = { add_trait = leader_trait_fortress_cracker }
+                        2 = { add_trait = leader_trait_chainbreaker }
+                        1 = { add_trait = leader_trait_chainbreaker }
+                        1 = { add_trait = leader_trait_honored_warmaster }
+                        1 = { add_trait = leader_trait_academia_recruiter }
+                        1 = { add_trait = leader_trait_supreme_warrior }
+                        1 = { add_trait = leader_trait_spymaster }
+                        1 = { add_trait = leader_trait_totalitarian }
+                        1 = { add_trait = leader_trait_bellicose }
+                    }
+                    freeze_leader_age = yes
+                    set_leader_flag = roz_kirakishou_flag
+                    set_leader_flag = legendary_leader
+                    set_leader_flag = immune_to_negative_traits
+                    roz_leader_change_skin_set_flag_effect = {
+                        who = krks
+                        portrait = roz_kirakishou
+                        flag = ge_krks_portrait_change
+                        leader_flag = roz_kirakishou_flag
+                        portrait_key = roz_kirakishou_default
+                    }
+                }
+            }
+        }
+        event_target:ge_suigintou_country@root = {
+
+        }
+        set_timed_country_flag = { flag = roz_kirakishou_diplomatic_initialize_flag
+        days = 31}
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.12
+    is_triggered_only = yes
+    picture = GFX_roz_evt_sgt_sleeping
+    title = roz_krks_leader_evt.12.title
+    desc = roz_krks_leader_evt.12.desc
+    option = {
+        name = roz_krks_leader_evt.12.aa
+        country_event = {
+            id =  roz_krks_leader_evt.13
+            days = 1
+        }
+    }
+}
+
+country_event = {
+    id =  roz_krks_leader_evt.13
+    is_triggered_only = yes
+    title =  roz_krks_leader_evt.13.title
+    desc =  roz_krks_leader_evt.13.desc
+    diplomatic = yes
+    picture_event_data = {
+        portrait = ge_suigintou_61
+        room = ge_sgt_main_room
+    }
+    immediate = {
+        country_event = {
+            id = roz_krks_leader_evt.20
+            days = 60
+        }
+    }
+    option = {
+        name =  roz_krks_leader_evt.13.aa
+        response_text =  roz_krks_leader_evt.13.aa.res
+        is_dialog_only = yes
+    }
+    option = {
+        name =  roz_krks_leader_evt.13.bb
+        response_text =  roz_krks_leader_evt.13.bb.res
+        is_dialog_only = yes
+    }
+    option = {
+        name =  roz_krks_leader_evt.13.cc
+        response_text =  roz_krks_leader_evt.13.cc.res
+        is_dialog_only = yes
+    }
+    option = {
+        name =  roz_krks_leader_evt.13.dd
+        response_text =  roz_krks_leader_evt.13.dd.res
+        custom_tooltip = roz_krks_leader_evt.13.dd.ct
+        hidden_effect = {
+            if = {  #恢复水银灯
+                limit = {
+                    NOT = { has_country_flag = ge_leader_suigintou_get }
+                }
+                set_country_flag = ge_leader_suigintou_get
+            }
+            remove_country_flag = ge_sgt_busy
+            remove_country_flag = ge_nfield_diplomacy_activated
+            remove_country_flag = ge_sgt_chat
+            event_target:roz_suigintou_bwg_leader_target@root = {
+                set_owner = root
+            }
+            if = {
+                limit = {
+                    capital_scope = {
+                        exists = this
+                    }
+                }
+                capital_scope = {
+                    random_planet_army = {
+                        set_leader =event_target:roz_suigintou_bwg_leader_target@root
+                        unassign_leader = event_target:roz_suigintou_bwg_leader_target@root
+                    }
+
+                }
+            }
+            else_if = {
+                limit = {
+                    any_owned_fleet = {
+                        exists = this
+                    }
+                }
+                random_owned_fleet = {
+                    set_leader = event_target:roz_suigintou_bwg_leader_target@root
+                    unassign_leader = event_target:roz_suigintou_bwg_leader_target@root
+                }
+            }
+            else_if = {
+                limit = {
+                    capital_scope = {
+                        is_same_value != this
+                    }
+                    any_owned_fleet = {
+                        exists != this
+                    }
+                }
+                event_target:ge_suigintou_country@root = {
+                    random_system_planet = {
+                        save_event_target_as = roz_location_temp_target
+                    }
+                    create_fleet = {
+                        name = "NAME_ge_sgt_ship"
+                        settings = {
+                            spawn_debris = no
+                            is_boss = no
+                            can_change_leader = yes
+                        }
+                        effect = {
+                            set_cloaking_active = yes
+                            set_owner = prev
+                            create_ship = {
+                                name = "NAME_sgt"
+                                design = NAME_ge_vfs
+                                graphical_culture = root
+                                prefix = no
+                            }
+                            set_location = {
+                                target = event_target:roz_location_temp_target
+                                distance = 45
+                                angle = random
+                            }
+                            set_leader = event_target:roz_suigintou_bwg_leader_target@root
+                            unassign_leader = event_target:roz_suigintou_bwg_leader_target@root
+                        }
+                    }
+                    last_created_fleet = {
+                        destroy_fleet = this
+                    }
+                }
+                #ruler = { unassign_leader = this }
+
+                #remove_country_flag = ge_suigintou_scientist_active
+                #set_country_flag = ge_suigintou_admiral_active
+                #clone_leader = {
+                #    target = event_target:ge_suigintou_admiral_inactive_temp@root
+                #    effect = {
+                #        set_name = "NAME_Suigintou"
+                #    }
+                #}
+                #last_created_leader = {
+                #    set_leader_flag = ge_suigintou_flag
+                #    set_leader_flag = legendary_leader
+                #    set_leader_flag = immune_to_negative_traits
+                #    save_global_event_target_as = ge_leader_suigintou_global_target@root
+                #    #set_is_female = yes
+                #    #get_ge_leader_target = {flag = ge_suigintou_flag}
+                #    set_variable = {
+                #        which = ge_leader_affection
+                #        value = root.ge_leader_affection_temp
+                #    }
+                #    if = {
+                #        limit = {
+                #            check_variable = {
+                #                which = ge_leader_affection
+                #                value >= 90
+                #            }
+                #        }
+                #        add_trait = leader_trait_ge_admiral_a_love
+                #    }
+                #    else_if = {
+                #        limit = {
+                #            check_variable = {
+                #                which = ge_leader_affection
+                #                value >= 60
+                #            }
+                #        }
+                #        add_trait = leader_trait_ge_admiral_a_like
+                #    }
+                #    else_if = {
+                #        limit = {
+                #            check_variable = {
+                #                which = ge_leader_affection
+                #                value >= 30
+                #            }
+                #        }
+                #        add_trait = leader_trait_ge_admiral_a_friendly
+                #    }
+                #    else_if = {
+                #        limit = {
+                #            check_variable = {
+                #                which = ge_leader_affection
+                #                value < 30
+                #            }
+                #        }
+                #        add_trait = leader_trait_ge_admiral_a_strangeness
+                #    }
+                #
+                #
+                #    freeze_leader_age = yes
+                #}
+                #clear_variable = ge_leader_affection_temp
+            }
+            clear_global_event_target = roz_suigintou_bwg_leader_target
+            #第一次茶会
+            country_event = {
+                id = roz_krks_leader_evt.50
+                days = 90
+            }
+
+        }
+    }
+}
+
+
+country_event = {
+    id = roz_krks_leader_evt.20
+    title = roz_krks_leader_evt.20.title
+    desc = roz_krks_leader_evt.20.desc
+    is_triggered_only = yes
+    picture = GFX_evt_roz_roz_evt_revolution_1
+    show_sound = event_celebration
+    option = {
+        name = roz_krks_leader_evt.20.aa
+        add_resource = {
+            unity = 77777
+            #mult = trigger:has_tradition
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+    id = roz_krks_leader_evt.100
+    title = "roz_krks_leader_evt.100.title"
+
+    desc = "roz_krks_leader_evt.100.a.n1.desc"
+    desc = "roz_krks_leader_evt.100.a.n2.desc"
+    desc = {
+        text = "roz_krks_leader_evt.100.a.nadm1.desc"
+        trigger = {
+            any_owned_leader = {
+                leader_class = commander
+                has_leader_flag = roz_kirakishou_flag
+            }
+        }
+    }
+    desc = {
+        text = "roz_krks_leader_evt.100.a.ngov1.desc"
+        trigger = {
+            has_country_flag = roz_kirakishou_governor_active
+        }
+    }
+    desc = {
+        text = "roz_krks_leader_evt.100.a.ngen1.desc"
+        trigger = {
+            has_country_flag = roz_kirakishou_general_active
+        }
+    }
+    desc = {
+        text = "roz_krks_leader_evt.100.a.like2.desc"
+        trigger = {
+            check_variable = {
+                which = roz_leader_aft_krks_reduced_score
+                value > 50
+            }
+        }
+    }
+    desc = {
+        text = "roz_krks_leader_evt.100.a.like3.desc"
+        trigger = {
+            check_variable = {
+                which = roz_leader_aft_krks_reduced_score
+                value > 50
+            }
+        }
+    }
+    desc = {
+        text = "roz_krks_leader_evt.100.a.like4.desc"
+        trigger = {
+            check_variable = {
+                which = roz_leader_aft_krks_reduced_score
+                value > 50
+            }
+        }
+    }
+    desc = {
+        text = "roz_krks_leader_evt.100.a.like5.desc"
+        trigger = {
+            check_variable = {
+                which = roz_leader_aft_krks_reduced_score
+                value > 50
+            }
+        }
+    }
+
+    desc = {
+        text = "roz_krks_leader_evt.100.a.love1.desc"
+        trigger = {
+            check_variable = {
+                which = roz_kirakishou_affection
+                value >= 90
+            }
+        }
+    }
+    desc = {
+        text = "roz_krks_leader_evt.100.a.love2.desc"
+        trigger = {
+            check_variable = {
+                which = roz_kirakishou_affection
+                value >= 90
+            }
+        }
+    }
+    desc = {
+        text = "roz_krks_leader_evt.100.a.love3.desc"
+        trigger = {
+            check_variable = {
+                which = roz_kirakishou_affection
+                value >= 90
+            }
+        }
+    }
+    desc = {
+        text = "roz_krks_leader_evt.100.a.love4.desc"
+        trigger = {
+            check_variable = {
+                which = roz_kirakishou_affection
+                value >= 90
+            }
+        }
+    }
+
+    event_window_type = leader_recruit
+    picture = GFX_roz_sgt_main_room_evt_2
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_main_2_room
+    }
+    is_triggered_only = yes
+
+
+    trigger = {
+        NOT = {
+            has_country_flag = ge_nfield_diplomacy_activated
+        }
+        from = {
+            is_country_type = ge_N_Field
+            is_country = event_target:roz_kirakishou_global_country@root
+            NOT = { is_country = event_target:ge_suigintou_country@root }
+        }
+        has_country_flag = roz_kirakishou_get
+        exists = event_target:roz_leader_kirakishou_global_target@root
+        #exists = event_target:roz_kirakishou_admiral_inactive_temp@root
+        #exists = event_target:roz_kirakishou_governor_inactive_temp@root
+        #exists = event_target:roz_kirakishou_global_country@root
+    }
+
+
+    immediate = {
+        set_country_flag = ge_nfield_diplomacy_activated
+        get_ge_leader_target = {
+            flag = roz_kirakishou_flag
+        }
+        if = {
+            limit = {
+                exists = event_target:roz_leader_kirakishou_global_target@root
+                exists = event_target:roz_kirakishou_admiral_inactive_temp@root
+                exists = event_target:roz_kirakishou_governor_inactive_temp@root
+                exists = event_target:roz_kirakishou_global_country@root
+            }
+        }
+    }
+    after = {
+        if = {
+            limit = {
+                has_country_flag = ge_nfield_diplomacy_activated
+            }
+            remove_country_flag = ge_nfield_diplomacy_activated
+        }
+    }
+
+
+
+    option = {
+        #退出
+        name = roz_krks_leader_evt.100.zz
+        tag = dismiss_leader
+        #tag = hire_leader
+        default_hide_option = yes
+        hidden_effect = {
+            remove_country_flag = ge_nfield_diplomacy_activated
+        }
+    }
+
+    option = {
+        #
+        name = roz_krks_leader_evt.100.af
+        #tag = dismiss_leader
+        response_text = roz_krks_leader_evt.100.af.desc
+        is_dialog_only = yes
+        tag = hire_leader
+    }
+
+    option = {
+        name = roz_krks_leader_evt.100.date
+        allow = {
+            NOT = { has_country_flag = roz_krks_date_cd }
+            custom_tooltip = {
+                text = roz_krks_leader_evt.100.date.ct
+            }
+        }
+        hidden_effect = {
+            #set_timed_country_flag = {
+            #    flag = roz_krks_date_cd
+            #    days = 60
+            #}
+            country_event = {
+                id = roz_krks_leader_evt.400
+                days = 1
+            }
+        }
+    }
+
+
+    option = {	##换装
+        name = roz_krks_leader_evt.100.a
+        #response_text = roz_krks_leader_evt.100.a.desc
+        is_dialog_only = yes
+        hidden_effect = {
+            country_event = {
+                id = roz_krks_leader_evt.1001
+            }
+        }
+
+
+    }
+
+    option = { #变成总督
+        name = roz_krks_leader_evt.100.b
+        is_dialog_only = yes
+        response_text = roz_krks_leader_evt.100.res
+        allow = {
+            custom_tooltip_fail = {
+                text = roz_krks_leader_evt.100.b.ct
+                NOR = {
+                    has_country_flag = roz_kirakishou_governor_active
+                    any_owned_leader = {
+                        leader_class = official
+                        has_leader_flag = roz_kirakishou_flag
+                    }
+                }
+            }
+
+            custom_tooltip_fail = {
+                text = "ge_communication.100.diplomatic_initialize"
+                NOT = { has_country_flag = roz_kirakishou_diplomatic_initialize_flag }
+            }
+        }
+        trigger = {
+            NOT = { has_country_flag = roz_kirakishou_governor_active }
+            has_country_flag = roz_kirakishou_get
+            NOT = {
+                any_owned_leader = {
+                    leader_class = official
+                    has_leader_flag = roz_kirakishou_flag
+                }
+            }
+        }
+        hidden_effect = {
+            create_roz_kirakishou_governor = yes
+            #remove_country_flag = ge_nfield_diplomacy_activated
+        }
+
+    }
+
+    option = { #变成舰队司令
+        name = roz_krks_leader_evt.100.c
+        is_dialog_only = yes
+        response_text = roz_krks_leader_evt.100.res
+        allow = {
+            custom_tooltip_fail = {
+                text = roz_krks_leader_evt.100.b.ct
+                NOR = {
+                    has_country_flag = roz_kirakishou_admiral_active
+                    any_owned_leader = {
+                        leader_class = commander
+                        has_leader_flag = roz_kirakishou_flag
+                    }
+                }
+            }
+            custom_tooltip_fail = {
+                text = "ge_communication.100.diplomatic_initialize"
+                NOT = { has_country_flag = roz_kirakishou_diplomatic_initialize_flag }
+            }
+        }
+        trigger = {
+            NOT = { has_country_flag = roz_kirakishou_admiral_active }
+            has_country_flag = roz_kirakishou_get
+            NOT = {
+                any_owned_leader = {
+                    leader_class = commander
+                    has_leader_flag = roz_kirakishou_flag
+                }
+            }
+        }
+        hidden_effect = {
+            create_roz_kirakishou_admiral = yes
+            #remove_country_flag = ge_nfield_diplomacy_activated
+        }
+
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.101
+    is_triggered_only = yes
+    title = TRANSMISSION
+    desc = "roz_krks_leader_evt.101.desc"
+    diplomatic = yes
+    picture_event_data = {
+        portrait = roz_kirakishou_default
+        room = ge_sgt_main_2_room
+    }
+    trigger = {
+        NOT = {
+            has_country_flag = ge_nfield_diplomacy_activated
+        }
+        from = {
+            is_country_type = ge_N_Field
+            is_country = event_target:roz_kirakishou_global_country@root
+            NOT = { is_country = event_target:ge_suigintou_country@root }
+        }
+        has_country_flag = roz_kirakishou_get
+        NOT = {
+            exists = event_target:roz_leader_kirakishou_global_target@root
+        }
+    }
+    immediate = {
+        set_country_flag = ge_nfield_diplomacy_activated
+    }
+    after = {
+        remove_country_flag = ge_nfield_diplomacy_activated
+        if = {
+            limit = { exists = event_target:roz_leader_kirakishou_global_target@root }
+            fire_on_action = {
+                on_action = on_custom_diplomacy
+                scopes = {
+                    from = event_target:roz_kirakishou_global_country@root
+                }
+            }
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.101.aa
+        custom_tooltip = roz_krks_leader_evt.101.aa.ct
+        hidden_effect = {
+            if = {
+                limit = {
+                    has_country_flag = roz_kirakishou_governor_active
+                }
+                roz_kirakishou_revive_reset_offcial = yes
+            }
+            else_if = {
+                limit = {
+                    has_country_flag = roz_kirakishou_admiral_active
+                }
+                roz_kirakishou_revive_reset_commander = yes
+            }
+        }
+    }
+}
+
+
+country_event = { ###换装
+    id = roz_krks_leader_evt.1001
+    is_triggered_only = yes
+    title = "roz_krks_leader_evt.1001.name"
+    desc = "roz_krks_leader_evt.1001.desc"
+    desc = "roz_krks_leader_evt.1001.desc2"
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = ge_sgt_main_2_room
+    }
+    trigger = {
+        NOT = {
+            has_country_flag = roz_krks_change_skin_flag
+            #防止连点
+        }
+    }
+    immediate = {
+        set_country_flag = roz_krks_change_skin_flag
+        get_ge_leader_target = {
+            flag = roz_kirakishou_flag
+
+        }
+        remove_country_flag = ge_nfield_diplomacy_activated
+    }
+    after = {
+        hidden_effect = {
+            remove_country_flag = roz_krks_change_skin_flag
+        }
+    }
+    option = {
+        #退出换装
+        name = "roz_krks_leader_evt.1001.00"
+        default_hide_option = yes
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_custom_diplomacy
+                scopes = {
+                    from = event_target:roz_kirakishou_global_country@root
+                }
+            }
+        }
+    }
+    option = {
+        name = "roz_krks_leader_evt.1001.20th"
+        response_text = "roz_krks_leader_evt.1001.res.20th"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                leader_flag = roz_kirakishou_flag
+                portrait_key = roz_kirakishou_20th
+            }
+        }
+    }
+    option = {
+        name = "roz_krks_leader_evt.1001.aa"
+        response_text = "roz_krks_leader_evt.1001.res.1"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                leader_flag = roz_kirakishou_flag
+                portrait_key = roz_kirakishou_default
+            }
+        }
+    }
+    option = {
+        name = "roz_krks_leader_evt.1001.bb"
+        response_text = "roz_krks_leader_evt.1001.res.1"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                leader_flag = roz_kirakishou_flag
+                portrait_key = roz_kirakishou_1
+            }
+        }
+    }
+    option = {
+        name = "roz_krks_leader_evt.1001.CC"
+        response_text = "roz_krks_leader_evt.1001.res.1"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                leader_flag = roz_kirakishou_flag
+                portrait_key = roz_kirakishou_2
+            }
+        }
+    }
+    option = {
+        name = "roz_krks_leader_evt.1001.DD"
+        response_text = "roz_krks_leader_evt.1001.res.1"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                leader_flag = roz_kirakishou_flag
+                portrait_key = roz_kirakishou_3
+            }
+        }
+    }
+    option = {
+        name = "roz_krks_leader_evt.1001.EE"
+        response_text = "roz_krks_leader_evt.1001.res.1"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                leader_flag = roz_kirakishou_flag
+                portrait_key = roz_kirakishou_4
+            }
+        }
+    }
+    option = {
+        name = "roz_krks_leader_evt.1001.FF"
+        response_text = "roz_krks_leader_evt.1001.res.1"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                leader_flag = roz_kirakishou_flag
+                portrait_key = roz_kirakishou_5
+            }
+        }
+    }
+    option = {
+        name = "roz_krks_leader_evt.1001.GG"
+        response_text = "roz_krks_leader_evt.1001.res.1"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = ge_krks_portrait_change
+                leader_flag = roz_kirakishou_flag
+                portrait_key = roz_kirakishou_6
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+#########前三次非循环茶会
+
+
+country_event = {
+    id = roz_krks_leader_evt.50
+    is_triggered_only = yes
+    hide_window = yes
+    immediate = {
+        if = { #第一次举办
+            limit = {
+                NOT = {
+                    has_country_flag = roz_first_tea_party_has_held
+                }
+            }
+            set_country_flag = roz_first_tea_party_has_held
+            country_event = {
+                id = roz_krks_leader_evt.51
+            }
+        }
+        else_if = {
+            limit = {}
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.51
+    is_triggered_only = yes
+    title = roz_krks_leader_evt.51.title
+    desc = roz_krks_leader_evt.51.desc
+
+    picture = GFX_roz_evt_tea_party_invitation
+    show_sound = event_hand_shake
+    option = {
+        name = roz_krks_leader_evt.51.aa
+        country_event = {
+            id = roz_krks_leader_evt.52
+            days = 5
+        }
+
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.52
+    is_triggered_only = yes
+    title = roz_krks_leader_evt.52.title
+    desc = roz_krks_leader_evt.52.desc
+    picture_event_data = {
+        room = Roz_tea_party_room
+    }
+
+    diplomatic = yes
+    option = {
+        name = roz_krks_leader_evt.52.aa
+        response_text = roz_krks_leader_evt.52.aa.res
+        is_dialog_only = yes
+    }
+    option = {
+        name = roz_krks_leader_evt.52.bb
+        country_event = {
+            id = roz_krks_leader_evt.53
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.53
+    is_triggered_only = yes
+    title = roz_krks_leader_evt.52.title
+    desc = roz_krks_leader_evt.53.desc
+    picture_event_data = {
+        room = Roz_tea_party_room
+    }
+    diplomatic = yes
+    immediate = {
+        #创建星系
+        #event_target:ge_site_sgt_target = {
+        #    solar_system = {
+        #        set_star_flag = roz_outland_star
+        #        spawn_natural_wormhole = {
+        #            bypass_type = roz_gateway
+        #            random_pos = no
+        #            orbit_angle = 360
+        #        }
+        #        set_surveyed = {
+        #            surveyed = yes
+        #            surveyor = root
+        #        }
+        #
+        #    }
+        #}
+        event_target:roz_n_field_site_target@root = {
+            solar_system = {
+                set_star_flag = roz_outland_star
+                spawn_natural_wormhole = {
+                    bypass_type = roz_gateway
+                    random_pos = no
+                    orbit_angle = 360
+                }
+                set_surveyed = {
+                    surveyed = yes
+                    surveyor = root
+                }
+
+            }
+        }
+        set_spawn_system_batch = begin
+        # batch-processes the spawn_system effects between "begin" and "end",
+        # so caches are recalculated only once rather than for every system spawned
+        # can also be used when removing and adding hyperlanes
+
+        #set_spawn_system_batch = begin
+        #no_scope = {
+        #    # no_scope: makes system positions originate from galactic core
+        #    spawn_system = {
+        #        min_distance >= 0
+        #        max_distance <= 5
+        #        min_orientation_angle = 90
+        #        max_orientation_angle = 270
+        #        max_jumps = 0
+        #        initializer = great_wound_system
+        #        hyperlane = no
+        #    }
+        #}
+        #set_spawn_system_batch = end
+
+
+        no_scope = {
+            # no_scope: makes system positions originate from galactic core
+            spawn_system = {
+                min_distance >= 500
+                max_distance <= 800
+                min_orientation_angle = 90
+                max_orientation_angle = 270
+                initializer = roz_outland_star_system
+                hyperlane = no
+            }
+            last_created_system = {
+                set_name = "NAME_roz_outland_system"
+                star = {
+                    set_name = "NAME_roz_outland_system"
+                    #set_planet_size = 15
+                }
+                event_target:roz_outland_planet_moon = {
+                    change_pc = pc_black_hole
+                }
+                #set_surveyed = {
+                #    surveyed = yes
+                #    surveyor = root
+                #}
+            }
+        }
+        set_spawn_system_batch = end
+        #solar_system = {
+        #    spawn_megastructure = {  }
+        #}
+    }
+    option = {
+        name = roz_krks_leader_evt.53.aa
+        response_text = roz_krks_leader_evt.53.aa.res
+        is_dialog_only = yes
+    }
+    option = {
+        name = roz_krks_leader_evt.53.bb
+        begin_event_chain = {
+            event_chain = roz_outland_system_chain
+            target = root
+        }
+
+    }
+    after = {
+        hidden_effect = {
+            country_event = {
+                id = roz_krks_leader_evt.61
+                days = 720
+                random = 720
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = roz_krks_leader_evt.54
+    is_triggered_only = yes
+    desc = roz_krks_leader_evt.54.desc
+    title = roz_krks_leader_evt.54.title
+    picture = GFX_evt_black_hole
+    show_sound = event_ship_thrusters
+    fire_only_once = yes
+    trigger = {
+        solar_system = {
+            has_star_flag = roz_outland_system
+        }
+    }
+    location = this.solar_system
+    immediate = {
+        solar_system = {
+            random_system_planet = {
+                limit = {
+                    has_planet_flag = roz_outland_main_black_hole
+                }
+                save_event_target_as = roz_outland_main_black_hole
+            }
+            random_system_planet = {
+                limit = {
+                    has_planet_flag = roz_outland_broken_planet
+                }
+                save_event_target_as = roz_outland_broken_planet
+            }
+            random_system_planet = {
+                limit = {
+                    has_planet_flag = roz_outland_planet_moon
+                }
+                save_event_target_as = roz_outland_planet_moon
+            }
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.54.aa
+        owner = {
+            enable_special_project = {
+                name = roz_outland_main_black_hole_project
+                location = event_target:roz_outland_main_black_hole
+            }
+            enable_special_project = {
+                name = roz_outland_small_black_hole_project
+                location = event_target:roz_outland_planet_moon
+            }
+            enable_special_project = {
+                name = roz_outland_broken_planet_project
+                location = event_target:roz_outland_broken_planet
+            }
+            enable_special_project = {
+                name = roz_outland_YS_planet_project
+                location = event_target:roz_outland_planet
+            }
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.55
+    is_triggered_only = yes
+    desc = roz_krks_leader_evt.55.desc
+    title = roz_krks_leader_evt.55.title
+    picture = GFX_roz_evt_outland_planet
+    show_sound = event_solar_fusion
+    location = from
+    option = {
+        name = roz_krks_leader_evt.55.aa
+
+        end_event_chain = roz_outland_system_chain
+        event_target:roz_outland_planet = {
+            solar_system = {
+                set_surveyed = {
+                    surveyed = yes
+                    surveyor = root
+                }
+            }
+            create_archaeological_site = roz_ruined_paradise_site
+        }
+        from.solar_system = {
+            create_starbase = {
+                size = starbase_outpost
+                effect = {
+                    set_owner = root
+                }
+            }
+        }
+        from = {
+            leader = {
+                add_experience = 500
+                if = {
+                    limit = {
+                        has_trait = leader_trait_archaeologist
+                    }
+                    remove_trait = leader_trait_archaeologist
+                    add_trait = leader_trait_archaeologist_2
+                }
+                if = {
+                    limit = {
+                        NOR = {
+                            has_trait = leader_trait_archaeologist
+                            has_trait = leader_trait_archaeologist_2
+                        }
+                    }
+                    add_trait = leader_trait_archaeologist_2
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+country_event = {
+    id = roz_krks_leader_evt.61
+    title = "roz_krks_leader_evt.61.title"
+    desc = "roz_krks_leader_evt.61.desc"
+    is_triggered_only = yes
+    picture = GFX_roz_evt_tea_party_invitation
+    option = {
+        name = roz_krks_leader_evt.61.aa
+        country_event = {
+            id = roz_krks_leader_evt.62
+            days = 7
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.62
+    title = "roz_krks_leader_evt.62.title"
+    desc = "roz_krks_leader_evt.62.desc"
+    picture_event_data = {
+        room = roz_teaparty_normal_room
+    }
+    diplomatic = yes
+    is_triggered_only = yes
+    option = {
+        name = roz_krks_leader_evt.62.aa
+        custom_tooltip = roz_krks_leader_evt.62.aa.ct
+        add_modifier = {
+            modifier = roz_2nd_tp_modifier
+            days = 60
+        }
+        hidden_effect = {
+            country_event = {
+                id = roz_krks_leader_evt.63
+                days = 360
+                random = 180
+            }
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.62.bb
+        custom_tooltip = roz_krks_leader_evt.62.bb.ct
+        add_modifier = {
+            modifier = roz_2nd_tp_modifier
+            days = 60
+        }
+        hidden_effect = {
+            country_event = {
+                id = roz_krks_leader_evt.63
+                days = 360
+                random = 180
+            }
+        }
+    }
+}
+
+country_event = {
+    id = roz_krks_leader_evt.63
+    title = "roz_krks_leader_evt.63.title"
+    desc = "roz_krks_leader_evt.63.desc"
+    picture_event_data = {
+        room = roz_teaparty_normal_room
+    }
+    diplomatic = yes
+    is_triggered_only = yes
+    immediate = {
+        set_country_flag = roz_teaparty_loop_begin
+        set_timed_country_flag = {
+            flag = roz_teaparty_loop_cd
+            years = 3
+        }
+    }
+    option = {
+        name = roz_krks_leader_evt.63.aa
+        custom_tooltip = roz_krks_leader_evt.63.aa.ct
+        add_modifier = {
+            modifier = roz_2nd_tp_modifier
+            days = 60
+        }
+        custom_tooltip = roz_krks_leader_evt.63.ct
+    }
+    option = {
+        name = roz_krks_leader_evt.63.bb
+        custom_tooltip = roz_krks_leader_evt.63.bb.ct
+        add_modifier = {
+            modifier = roz_2nd_tp_modifier
+            days = 60
+        }
+        custom_tooltip = roz_krks_leader_evt.63.ct
+    }
+    after = {
+
+        add_relic = r_roz_teaparty_set
+
+        hidden_effect = {
+            set_variable = {   #unit:year
+                which = roz_teaparty_loop_cd_time
+                value = 3
+            }
+            set_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = roz_teaparty_loop_cd_time
+            }
+            multiply_variable = {
+                which = roz_teaparty_loop_cd_2_time
+                value = 2
+            }
+            set_country_flag = roz_teaparty_holding_3year
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#######################################
+############################################
+
+
+#country_event = {
+#    id = roz_krks_leader_evt.420
+#    title = "roz_krks_leader_evt.420.name"
+#    desc = "roz_krks_leader_evt.420.desc"
+#    is_triggered_only = yes
+#
+#
+#    option = {
+#        name = roz_krks_leader_evt.420.aa
+#    }
+#}
+
+
+#event = {
+#    id = roz_krks_leader_evt.11111
+#    is_triggered_only = yes
+#    hide_window = yes
+#    immediate = {
+#        set_variable = {
+#            value = 1
+#            which = 111
+#        }
+#    }
+#}
+
+
+
+
+
+
+
+

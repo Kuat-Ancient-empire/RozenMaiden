@@ -1,0 +1,820 @@
+special_project = {		####Q_sgt
+	key = "ge_sgt_army_proj"
+	desc = {
+		text = ge_sgt_army_proj_DESC
+		trigger = { is_ai = no }
+	}
+	location = no
+	cost = 0
+	days_to_research = 720
+	picture = GFX_ge_sgt_army1
+	icon = "gfx/interface/icons/situation_log/situation_log_combat.dds"
+	event_scope = planet_event
+	timelimit = -1
+	abort_trigger = {
+
+	}
+	on_success = {
+		owner = {
+			country_event = {
+				id = ge_leader_event.2
+			}
+			add_resource = {
+				sr_rosa_mystica = 5
+			}
+		}
+	 }
+}
+
+
+special_project = {		###ap1
+	key = "ge_reactor_project"
+	desc = {
+		text = ge_reactor_project_DESC
+		trigger = { is_ai = no }
+	}
+	cost = 0
+	days_to_research = 180
+	tech_department = physics_technology
+	picture = GFX_evt_ap_ge_1
+	location = no
+	icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
+	timelimit = -1
+	
+	event_scope = planet_event
+	
+	on_success = {
+		space_owner = {
+			country_event = { id = ge_event.39 }
+		}
+	}
+}
+
+
+
+special_project = {
+	key = "roz_void_energy_research_project_stage_1_a"
+	desc = {
+		text = "roz_void_energy_research_project_stage_1_a_desc"
+		trigger = { always = yes }
+	}
+	event_chain = "roz_void_energy_research_chain"
+	cost = 6000
+	#days_to_research = 360
+	tech_department = engineering_technology
+	picture = GFX_evt_physics_research
+
+	event_scope = planet_event
+	#event_scope = country_event
+	#requirements = {
+	#	shipclass_science_ship = 1
+	#}
+	location = no
+	abort_trigger = {
+		#has_country_flag =
+	}
+
+	on_success = {
+		event_target:ge_suigintou_owner@space_owner = {
+			set_country_flag = roz_ve_proj_s1a_flag
+			#
+			country_event = {
+				id = ge_event.411
+			}
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+
+special_project = {
+	key = "roz_void_energy_research_project_stage_1"
+	desc = {
+		text = "roz_void_energy_research_project_stage_1_desc"
+		trigger = { always = yes }
+	}
+	event_chain = "roz_void_energy_research_chain"
+	#cost = 0
+	days_to_research = 360
+	#tech_department = society_technology
+	picture = GFX_evt_physics_research
+	location = no
+	event_scope = planet_event
+
+	on_success = {
+		event_target:ge_suigintou_owner@space_owner = {
+			country_event = {
+				id = ge_event.43
+			}
+		}
+	}
+	on_fail = {
+	}
+}
+
+
+
+special_project = {
+	key = "roz_void_energy_research_project_stage_2"
+	desc = {
+		text = "roz_void_energy_research_project_stage_2_desc"
+		trigger = { always = yes }
+	}
+	event_chain = "roz_void_energy_research_chain"
+	cost = 12000
+	#days_to_research = 360
+	tech_department = physics_technology
+	picture = GFX_evt_physics_research
+
+	event_scope = planet_event
+	#event_scope = country_event
+
+	requirements = {
+		shipclass_science_ship = 1
+	}
+
+	abort_trigger = {
+		#has_country_flag = queen_snatched
+	}
+	on_success = {
+		event_target:ge_suigintou_owner@space_owner = {
+			country_event = {
+				id = ge_event.44
+			}
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+
+special_project = {
+	key = "roz_void_energy_research_project_stage_3_1"
+	desc = {
+		text = "roz_void_energy_research_project_stage_3_1_desc"
+		trigger = { always = yes }
+	}
+	event_chain = "roz_void_energy_research_chain"
+	cost = 10000
+	#days_to_research = 360
+	tech_department = physics_technology
+	picture = GFX_evt_physics_research
+
+	event_scope = planet_event
+	#event_scope = country_event
+
+	requirements = {
+		shipclass_science_ship = 1
+	}
+
+	abort_trigger = {
+		#has_country_flag = queen_snatched
+	}
+
+	on_success = {
+		event_target:ge_suigintou_owner@space_owner = {
+			country_event = {
+				id = ge_event.451
+			}
+
+		}
+		#
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "roz_void_energy_research_project_stage_3_a"
+	desc = {
+		text = "roz_void_energy_research_project_stage_3_a_desc"
+		trigger = { always = yes }
+	}
+	event_chain = "roz_void_energy_research_chain"
+	cost = 2500
+	#days_to_research = 360
+	tech_department = physics_technology
+	picture = GFX_evt_physics_research
+
+	event_scope = planet_event
+	#event_scope = country_event
+
+	requirements = {
+		shipclass_science_ship = 1
+	}
+
+	abort_trigger = {
+		#has_country_flag = queen_snatched
+	}
+
+	on_success = {
+		event_target:ge_suigintou_owner@space_owner = {
+			remove_country_flag = ge_wait_zero_point
+			set_country_flag = roz_zpe_support
+			#add_tech_progress = {
+			#	tech = tech_zero_point_power
+			#	progress = 0.01
+			#}
+			add_modifier = {
+				modifier = roz_zp_pre-research
+				days = 3600
+			}
+			country_event = {
+				id = ge_event.453
+				days = 1
+			}
+		}
+		#
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "roz_void_energy_research_project_stage_3_a2"
+	desc = {
+		text = "roz_void_energy_research_project_stage_3_a2_desc"
+		trigger = { always = yes }
+	}
+	event_chain = "roz_void_energy_research_chain"
+	cost = 2000
+	#days_to_research = 360
+	tech_department = physics_technology
+	picture = GFX_evt_physics_research
+
+	#event_scope = planet_event
+	event_scope = country_event
+
+	requirements = {
+		shipclass_constructor = 1
+	}
+
+	abort_trigger = {
+		#has_country_flag = queen_snatched
+	}
+
+	on_success = {
+		remove_country_flag = ge_wait_zero_point
+		event_target:ge_suigintou_owner@space_owner = {
+			set_country_flag = roz_zpe_support
+			country_event = {
+				id = ge_event.452
+				days = 1
+			}
+		}
+
+		#
+	}
+
+	on_fail = {
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+special_project = {		###ap2
+	key = "ge_ascension_project"
+	desc = {
+		text = ge_ascension_project_DESC
+		trigger = { is_ai = no }
+	}
+	cost = 150000
+	tech_department = society_technology
+	picture = GFX_evt_ap_ge_2
+	location = no
+	icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
+	timelimit = -1
+	
+	event_scope = planet_event
+	
+	on_success = {
+		owner = {
+			country_event = { id = ge_event.50 }
+			set_country_flag = ge_ap2_complate
+		}
+	}
+}
+
+#special_project = {		####座驾计划1
+#	key = "ge_sgt_flagship_proj_1"
+#	desc = {
+#		text = ge_sgt_flagship_proj_DESC
+#		trigger = { is_ai = no }
+#	}
+#	location = no
+#	cost = 1000
+#	tech_department = engineering_technology
+#	#days_to_research = 720
+#	event_chain = ge_sgt_flagship_proj_chain
+#	picture = GFX_
+#	icon = ""
+#	event_scope = planet_event
+#	on_start = {
+#		owner = {
+#			country_event = {
+#				id = ge_sgt_falgship_events.102
+#			}
+#		}
+#
+#	}
+#	on_success = {
+#		planet_event = {
+#			id = ge_sgt_falgship_events.1
+#		}
+#	}
+#}
+#
+#special_project = {		####座驾计划2
+#	key = "ge_sgt_flagship_proj_2"
+#	desc = {
+#		text = ge_sgt_flagship_proj_DESC
+#		trigger = { is_ai = no }
+#	}
+#	location = no
+#	cost = 2000
+#	tech_department = engineering_technology
+#	#days_to_research = 720
+#	event_chain = ge_sgt_flagship_proj_chain
+#	picture = GFX_
+#	icon = ""
+#	event_scope = planet_event
+#	on_success = {
+#		planet_event = {
+#			id = ge_sgt_falgship_events.2
+#		}
+#	}
+#}
+#
+#special_project = {		####座驾计划3
+#	key = "ge_sgt_flagship_proj_3"
+#	desc = {
+#		text = ge_sgt_flagship_proj_DESC
+#		trigger = { is_ai = no }
+#	}
+#	location = no
+#	cost = 5000
+#	tech_department = engineering_technology
+#	#days_to_research = 720
+#	event_chain = ge_sgt_flagship_proj_chain
+#	picture = GFX_
+#	icon = ""
+#	event_scope = planet_event
+#	requirements = {
+#		shipclass_constructor = 2
+#	}
+#	on_success = {
+#		planet_event = {
+#			id = ge_sgt_falgship_events.3
+#		}
+#	}
+#}
+
+special_project = {		####王座守卫
+	key = "ge_sgt_flagship_proj_1"
+	desc = {
+		text = ge_sgt_flagship_proj_1_DESC
+		trigger = { is_ai = no }
+	}
+	location = no
+	cost = 14800
+	tech_department = engineering_technology
+	#days_to_research = 1800
+	event_chain = ge_sgt_flagship_proj_chain
+	picture = GFX_evt_ancient_databank
+	icon = gfx/interface/icons/situation_log/situation_log_engineering.dds
+	event_scope = planet_event
+	#requirements = {
+	#	shipclass_constructor = 1
+	#	shipclass_science_ship = 1
+	#}
+	on_success = {
+		hidden_effect = {
+			owner = {
+				set_country_flag = ge_sgt_flagship_proj_complete_flag
+			}
+		}
+		owner = {
+			country_event = {
+				id = ge_sgt_falgship_events.11
+			}
+			give_technology = {
+				tech = tech_ge_sgt_flagship_normal
+				message = yes
+			}
+			set_country_flag = get_tech_ge_sgt_flagship_normal_flag
+		}
+
+	}
+}
+
+
+
+
+
+##################################################################
+##################################################################
+###############krks_invi
+
+special_project = {		####万恶之源
+	key = roz_N_field_great_development_plan
+	desc = {
+		text = roz_N_field_great_development_plan_DESC
+		trigger = { is_ai = no }
+	}
+	location = yes
+	#cost = 360
+	#tech_department = engineering_technology
+	days_to_research = 360
+	#event_chain = ge_sgt_flagship_proj_chain
+	picture = GFX_roz_evt_Nfield_military_base_project
+	icon = gfx/interface/icons/situation_log/situation_log_engineering.dds
+	event_scope = ship_event
+	requirements = {
+		shipclass_constructor = 1
+		shipclass_science_ship = 1
+	}
+	abort_trigger = {
+		is_multiplayer = yes
+		OR = {
+			any_country = {	#已有玩家完成特殊计划，开始事件链
+				has_country_flag = roz_great_development_of_Nfield
+				NOT = {
+					has_country_flag = roz_kirakishou_get
+				}
+			}
+			any_country = {	#已有玩家提前触发
+				has_country_flag = roz_krks_dl_early_flag
+				has_country_flag = roz_krks_story_begin_flag
+			}
+		}
+		custom_tooltip = roz_N_field_great_development_plan_abort_trigger
+	}
+	on_success = {
+		owner = {
+			country_event = {
+				id = ge_event.1951
+			}
+		}
+	}
+}
+
+
+
+
+
+
+##################################################################
+##################################################################
+###############krks_outland
+
+special_project = {		####
+	key = roz_outland_main_black_hole_project
+	desc = {
+		text = roz_outland_main_black_hole_project_DESC
+		trigger = { is_ai = no }
+	}
+	location = yes
+	days_to_research = 60
+	event_chain = roz_outland_system_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+	}
+	on_success = {
+		planet = {
+			add_deposit = d_energy_10
+			add_deposit = d_physics_10
+		}
+		event_target:ge_suigintou_owner@owner = {
+			add_event_chain_counter = {
+				amount = 1
+				counter = specimens_collected
+				event_chain = roz_outland_system_chain
+			}
+			if = {
+				limit = {
+					has_completed_event_chain_counter = {
+						event_chain = roz_outland_system_chain
+						counter = specimens_collected
+					}
+				}
+				country_event = {
+					id = roz_krks_leader_evt.55
+				}
+			}
+		}
+	}
+}
+special_project = {		####
+	key = roz_outland_broken_planet_project
+	desc = {
+		text = roz_outland_broken_planet_project_DESC
+		trigger = { is_ai = no }
+	}
+	location = yes
+	days_to_research = 60
+	event_chain = roz_outland_system_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+	}
+	on_success = {
+		planet = {
+			add_deposit = d_minerals_10
+		}
+		event_target:ge_suigintou_owner@owner = {
+			add_event_chain_counter = {
+				amount = 1
+				counter = specimens_collected
+				event_chain = roz_outland_system_chain
+			}
+			if = {
+				limit = {
+					has_completed_event_chain_counter = {
+						event_chain = roz_outland_system_chain
+						counter = specimens_collected
+					}
+				}
+				country_event = {
+					id = roz_krks_leader_evt.55
+				}
+			}
+		}
+	}
+}
+special_project = {		####
+	key = roz_outland_small_black_hole_project
+	desc = {
+		text = roz_outland_small_black_hole_DESC
+		trigger = { is_ai = no }
+	}
+	location = yes
+	days_to_research = 60
+	event_chain = roz_outland_system_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+	}
+	on_success = {
+		planet = {
+			add_deposit = d_physics_10
+			add_deposit = d_engineering_10
+		}
+		event_target:ge_suigintou_owner@owner = {
+			add_event_chain_counter = {
+				amount = 1
+				counter = specimens_collected
+				event_chain = roz_outland_system_chain
+			}
+			if = {
+				limit = {
+					has_completed_event_chain_counter = {
+						event_chain = roz_outland_system_chain
+						counter = specimens_collected
+					}
+				}
+				country_event = {
+					id = roz_krks_leader_evt.55
+				}
+			}
+		}
+	}
+}
+special_project = {		####
+	key = roz_outland_YS_planet_project
+	desc = {
+		text = roz_outland_YS_planet_project_DESC
+		trigger = { is_ai = no }
+	}
+	location = yes
+	days_to_research = 60
+	event_chain = roz_outland_system_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+	}
+	on_success = {
+		event_target:ge_suigintou_owner@owner = {
+			add_event_chain_counter = {
+				amount = 1
+				counter = specimens_collected
+				event_chain = roz_outland_system_chain
+			}
+			if = {
+				limit = {
+					has_completed_event_chain_counter = {
+						event_chain = roz_outland_system_chain
+						counter = specimens_collected
+					}
+				}
+				country_event = {
+					id = roz_krks_leader_evt.55
+				}
+			}
+		}
+	}
+}
+
+
+
+
+########################真红事件
+
+special_project = {		####
+	key = roz_shinku_phone_of_junn_analysis
+	desc = {
+		text = roz_shinku_phone_of_junn_analysis_DESC
+		trigger = { is_ai = no }
+	}
+	on_start = {
+		if = {
+			limit = {  }
+			#complete_special_project = {  }
+		}
+	}
+	location = yes
+	#days_to_research = 60
+	tech_department = society_technology
+	cost = 2000
+	event_chain = roz_outland_system_chain
+	picture = GFX_
+	icon = gfx/interface/icons/situation_log/situation_log_society.dds
+	event_scope = planet_event
+	on_success = {
+		event_target:ge_suigintou_owner@owner = {
+
+		}
+		space_owner = {
+			country_event = {
+				id = roz_shinku_evt.403
+				days = 1
+			}
+		}
+	}
+}
+
+special_project = {
+	key = "roz_junn_rosa_flexible_employment"
+	desc = {
+		text = roz_junn_rosa_flexible_employment_DESC
+		trigger = { is_ai = no }
+	}
+	picture = GFX_
+	location = no
+	tech_department = engineering_technology
+	cost = 5000
+	icon = gfx/interface/icons/situation_log/situation_log_engineering.dds
+	event_scope = country_event
+	on_success = {
+		set_country_flag = roz_rosa_mystica_enhance_flag
+	}
+}
+
+#######真红的觉醒
+special_project = {
+	key	= roz_border_of_technical_proj
+	desc = {
+		text = roz_border_of_technical_proj_DESC
+		trigger = { is_ai = no }
+	}
+	location = no
+	days_to_research = 1234567890
+	event_chain = roz_wake-up_shinku_chain
+	event_scope = country_event
+	requirements = { #由事件完成，玩家无法也无需进行
+		has_trait = leader_trait_scientist_mind_wipe_02
+	}
+	picture = GFX_
+	icon = gfx/interface/icons/situation_log/situation_log_tutorial.dds
+	on_success = {  }
+}
+
+special_project = {
+	#卷土重来：凯旋而归(一方案成功)
+	key = roz_unholy_invasion_defproj_1
+	desc = {
+		text = roz_unholy_invasion_defproj_1_DESC
+		trigger = { is_ai = no }
+	}
+	event_chain = roz_wake-up_shinku_chain
+	event_scope = country_event
+	location = no
+	picture = GFX_
+	icon = gfx/interface/icons/situation_log/situation_log_astral_rift.dds
+	on_success = {
+		#人偶们前去执行任务
+		remove_country_flag = unholy_invasion_defend_proj_aggressive
+		remove_country_flag = ge_sgt_busy
+		remove_country_flag = ge_nfield_diplomacy_activated
+		owner = {
+			set_leader = event_target:roz_leader_kirakishou_global_target@root
+			set_leader = event_target:ge_leader_suigintou_global_target@root
+			set_leader = event_target:roz_ruler_target_temp@root
+		}
+		clear_global_event_target = roz_ruler_target_temp@root
+
+	}
+}
+
+special_project = {
+	#卷土重来：二方案-诱饵计划
+	key = roz_unholy_invasion_defproj_1_decoy
+	desc = {
+		text = roz_unholy_invasion_defproj_1_decoy_DESC
+		trigger = { is_ai = no }
+	}
+	requirements = {
+		shipclass_constructor = 1
+		shipclass_science_ship = 1
+	}
+	days_to_research = 180
+	event_chain = roz_wake-up_shinku_chain
+	event_scope = planet_event
+	picture = GFX_
+	icon = gfx/interface/icons/situation_log/situation_log_projectile.dds
+	on_success = {
+		owner = {
+			country_event = {
+				id = roz_shinku_evt.435
+			}
+		}
+	}
+}
+
+##间章特殊项目-凝视深渊
+special_project = {
+	#卷土重来：战斗残骸
+	key = roz_stare_into_the_abyss
+	desc = {
+		text = roz_stare_into_the_abyss_DESC
+		trigger = { is_ai = no }
+	}
+	requirements = {
+		shipclass_military = 1
+		shipclass_science_ship = 1
+	}
+
+	event_scope = planet_event
+	picture = GFX_
+	icon = gfx/interface/icons/situation_log/situation_log_ship.dds
+	on_success = {
+
+	}
+}
+
+###第三阶段-见识超凡
+####研究希灵结晶体
+special_project = {
+	#卷土重来：战斗残骸
+	key = roz_poring_xiling_crystal
+	desc = {
+		text = roz_poring_xiling_crystal_DESC
+		trigger = { is_ai = no }
+	}
+	requirements = {
+		leader = scientist
+		skill = 6
+		shipclass_science_ship = 1
+	}
+
+	event_scope = planet_event
+	picture = GFX_
+	icon = gfx/interface/icons/situation_log/situation_log_precursor.dds
+	on_success = {
+
+	}
+}
+
+
+
+
+

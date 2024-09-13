@@ -1,0 +1,115 @@
+particle={
+	name="ge_energy_torpedo_idle_file"
+	subsystem={
+		name="flare_pulse"
+		max_amount=10
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/glow.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255
+			y={ 100,grow 100 }
+			z={ 5,grow 5 }
+			alpha=100,flash_fade
+		}
+		position={
+			x=0
+			y=0
+			z=0
+		}
+		start=0
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ 20 0 }
+		velocity_yaw={ 0 180 }
+		velocity={ 0 0 }
+		life={ 0.55 0 }
+		emission=100
+		size={ 0,grow 8 }
+		rotation={ 0 270 }
+	}
+	subsystem={
+		name="flare_spikes"
+		max_amount=50
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/flare.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x={ 255,grow 255 }
+			y=0,grow,80
+			z=5,grow,55
+			alpha=100,flash_fade
+		}
+		position={
+			x=0
+			y=0
+			z=0
+		}
+		start=0
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ 20 0 }
+		velocity_yaw={ 0 180 }
+		velocity={ 0 0 }
+		life={ 0.5 0 }
+		emission=100
+		size={ 5 0 }
+		rotation={ 0 180 }
+		rotation_speed={ 0 0 }
+	}
+	animation={
+		name="flash_fade"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 1 0.32941 0.28906 1 0 
+		}
+		op="MUL"
+		time="life_abs"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0 0 0 
+		}
+		direction={
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=5
+	}
+}

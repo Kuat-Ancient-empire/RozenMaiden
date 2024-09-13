@@ -1,0 +1,302 @@
+roz_outland_star_system = {
+	#usage = fallen_empire_init
+
+	#name = NAME_roz_outland_system
+	#class = "rl_standard_stars"
+	class = sc_roz_dark_box
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 50
+	}
+	flags = {
+		roz_outland_system
+	}
+	planet = {
+		count = 1
+		class = pc_black_hole
+		orbit_distance = 0
+		orbit_angle = 1
+		size = {
+			min = 15
+			max = 20
+		}
+		has_ring = no
+		init_effect = {
+			#save_event_target_as = roz_outland_main_black_hole
+			set_planet_flag = roz_outland_main_black_hole
+		}
+	}
+	change_orbit = 50
+	planet = {
+		count = {
+			min = 2
+			max = 3
+		}
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = {
+			min = 40
+			max = 100
+		}
+	}
+	planet = {
+		count = {
+			min = 1
+			max = 1
+		}
+		orbit_distance = 20
+		class = pc_broken
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		change_orbit = @base_moon_distance
+		moon = {
+			count = {
+				min = 0
+				max = 1
+			}
+			class = pc_broken
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			orbit_distance = 5
+		}
+		init_effect = {
+			#save_event_target_as = roz_outland_broken_planet
+			set_planet_flag = roz_outland_broken_planet
+		}
+	}
+	planet = {
+		name = "NAME_roz_outland_planet"
+		orbit_distance = 20
+		class = pc_roz_YS_planet_cant_colony
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		size = 30
+		deposit_blockers = none
+		modifiers = none
+		#artificial=yes
+		flags = {
+			roz_outland_planet
+		}
+		init_effect = {
+			save_global_event_target_as = roz_outland_planet
+			create_cluster = {
+				id = fe2_cluster
+				radius = 140
+				center = this.solar_system
+			}
+			# set_planet_flag = fallen_empire_world
+			prevent_anomaly = yes
+			#set_owner = root
+			# set_controller = root
+			#set_capital = yes
+			set_planet_flag = colony_event
+			set_planet_flag = fallen_empire_world
+			set_planet_flag = can_not_be_changed_by_akx_worm
+			add_modifier = {
+				modifier = lush_planet
+			}
+			#while = {
+			#	count = 10
+			#	create_pop = {
+			#		species = owner_main_species
+			#		ethos = root
+			#		effect = {}
+			#	}
+			#}
+			#add_deposit = d_volatile_motes_5
+			#add_deposit = d_rare_crystals_5
+			#add_deposit = d_exotic_gases_5
+			#add_deposit = d_nutritious_mudland
+			#
+			#add_deposit = d_ancient_reactor_pits
+			#add_deposit = d_immense_solar_array
+			#add_deposit = d_abandoned_mining_tunnels
+			#add_deposit = d_relic_metal_boneyard
+			#add_deposit = d_central_spire
+			#add_deposit = d_relic_dense_ruins
+			#add_deposit = d_former_relic_world
+			#add_deposit = d_mutation_vats
+			#add_deposit = d_ancient_particle_accelerator
+			#add_deposit = d_flooded_mounds
+			#add_deposit = d_former_relic_world
+			#
+			#add_deposit = d_industrial_sector
+			#add_deposit = d_alien_pets_deposit
+			#add_deposit = d_betharian_deposit
+			#add_deposit = d_zro_deposit_5
+			#add_deposit = d_dark_matter_deposit_10
+			#add_deposit = d_sentinels_metal
+			#add_deposit = d_hab_nanites_1
+			#
+			#add_deposit = d_food_10
+			#add_deposit = d_minerals_10
+			#add_deposit = d_energy_10
+			#add_deposit = d_food_10
+			#add_deposit = d_minerals_10
+			#add_deposit = d_energy_10
+			#add_deposit = d_food_10
+			#add_deposit = d_minerals_10
+			#add_deposit = d_energy_10
+			#add_deposit = d_alloys_10
+			#add_deposit = d_trade_value_10
+			#add_deposit = d_engineering_10
+			#add_deposit = d_physics_10
+			#add_deposit = d_society_10
+
+			#add_building = building_imperial_capital
+			##add_building = building_system_capital
+			#add_building = building_fe_dome
+			#add_building = building_dimensional_fabricator
+			#add_building = building_master_archive
+			#add_building = building_dimensional_fabricator
+			#add_building = building_class_4_singularity
+			##add_building = building_hab_fe_capital
+			#add_building = building_nano_forge
+			#add_building = building_fe_stronghold
+			#add_building = building_affluence_center
+			#add_building = building_nourishment_center
+			#add_building = building_empyrean_shrine
+			add_building = building_roz_class_5_singularity
+
+
+
+
+			#while = {
+			#	count = 10
+			#	add_district = district_city
+			#}
+			#while = {
+			#	count = 4
+			#	add_district_and_planet_size_if_needed_effect = {
+			#		district = district_mining
+			#	}
+			#}
+			#while = {
+			#	count = 4
+			#	add_district_and_planet_size_if_needed_effect = {
+			#		district = district_generator
+			#	}
+			#}
+			#while = {
+			#	count = 4
+			#	add_district_and_planet_size_if_needed_effect = {
+			#		district = district_farming
+			#	}
+			#}
+			#while = {
+			#	count = 4
+			#	add_district_and_planet_size_if_needed_effect = {
+			#		district = district_industrial
+			#	}
+			#}
+
+		}
+		change_orbit = @base_moon_distance
+		moon = { #Yog-Sothoth
+			name = "NAME_roz_outland_planet_moon"
+			class = pc_barren
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			orbit_distance = 5
+			modifiers = none
+			size = 2
+			init_effect = {
+				prevent_anomaly = yes
+				set_planet_flag = roz_outland_planet_moon
+				change_pc = pc_black_hole
+			}
+		}
+	}
+	planet = {
+		count = {
+			min = 1
+			max = 2
+		}
+		orbit_distance = 20
+		class = random_non_colonizable
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		change_orbit = @base_moon_distance
+		moon = {
+			count = {
+				min = 0
+				max = 1
+			}
+			class = random_non_colonizable
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			orbit_distance = 5
+		}
+	}
+	planet = {
+		count = {
+			min = 3
+			max = 4
+		}
+		orbit_distance = 20
+		class = pc_gas_giant
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		change_orbit = @base_moon_distance
+		moon = {
+			count = {
+				min = 0
+				max = 3
+			}
+			class = random
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			orbit_distance = 5
+		}
+	}
+	# neighbor_system = {
+	# 	distance = { min = 0 max = 50 }
+	# 	initializer = ""
+	# }
+	init_effect = {
+		#create_starbase = {
+		#	size = starbase_citadel
+		#}
+		spawn_natural_wormhole = {
+			bypass_type = roz_gateway
+			random_pos = yes
+			#orbit_angle = 360
+			orbit_angle = {
+				min	= 270
+				max = 480
+			}
+		}
+		create_ambient_object = {
+			type = nebula_1
+			duration = -1
+			#play_animation_once = yes
+			entity_scale_to_size = no
+			use_3d_location = yes
+			entity_offset = { min = 0 max = 0 }
+			entity_offset_angle = { min = 0 max = 0 }
+			entity_offset_height = { min = 0 max = 0 }
+			scale = 4
+			location = this
+		}
+		set_surveyed = {
+			surveyed = yes
+			surveyor = root
+		}
+	}
+}

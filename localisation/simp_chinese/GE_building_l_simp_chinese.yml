@@ -1,0 +1,65 @@
+﻿l_simp_chinese:
+
+############### 职位 ###############
+
+llk_over_dimension:0 "§R跨位面探索队§!"
+#llk_over_dimension_desc:0 "对异位面进行探索调查并不是什么轻松事，这些勇敢的探索队如同大航海时代的水手，他们需要面对各式各样的威胁与挑战，为祖国带回宝贵的知识和财富。"
+ llk_over_dimension_desc:0 "水银灯创造的炼金生物为我们开发N之领域提供了极大的便利与安全保障，然而对N之领域内的异位面进行探索开发依旧不是什么轻松事，虽然这些勇敢的探索队员们是本着合作共赢的宗旨去开展工作的，但是无比复杂的当地环境和局势都极端考验着他们的能(跑)力(路)水平，这些挑战包括但不限于：语言不通、种族矛盾、经济危机、革命四起、世界大战、生化危机、核末日、二次穿越、灵气复苏、古神苏醒、空间震灾难、亚空间侵蚀、使徒来袭、诸神黄昏、无量量劫……"
+mod_job_llk_over_dimension_add:0 "$llk_over_dimension$职业"
+job_llk_over_dimension:0 "§R跨位面探索队§!"
+job_llk_over_dimension_plural:0 "§R跨位面探索队§!"
+job_llk_over_dimension_desc:0 "水银灯创造的炼金生物为我们开发N之领域提供了极大的便利与安全保障，然而对N之领域内的异位面进行探索开发依旧不是什么轻松事，虽然这些勇敢的探索队员们是本着合作共赢的宗旨去开展工作的，但是无比复杂的当地环境和局势都极端考验着他们的能(跑)力(路)水平，这些挑战包括但不限于：§R语言不通、种族矛盾、经济危机、革命四起、世界大战、生化危机、核末日、二次穿越、灵气复苏、古神苏醒、空间震灾难、亚空间侵蚀、使徒来袭、诸神黄昏、无量量劫……§!"
+job_llk_over_dimension_effect_desc:0 "£mod_job_llk_over_dimension_add£ $llk_over_dimension$超维者消耗 £energy£ §R能量§! £food£ §R食物§! 生产 £alloys£ §G合金§! £consumer_goods£ §G消费品§! £unity£ §G凝聚力§! £volatile_motes£ §G易爆粉尘§! £exotic_gases£ §G异星气体§! £rare_crystals£ §G稀有水晶§! £sr_dark_matter£ §G暗物质§! £sr_zro£ §G泽洛§! £sr_living_metal£ §G活性金属§! £nanites£ §G纳米机器人§! 。"
+
+############### 建筑 ###############
+
+building_llk_paradox_origin:0 "§R悖论起点§!"
+building_llk_paradox_origin_desc:0 "一座连接N之领域的超大型中转站，其中涉及神秘学要素的维护工作将由水银灯的炼金生命负责。我们的跨位面探索队获取而来的宝贵资源和将从这里送往全国各地，而他们收集的新奇知识也将拓展我们的视野、激发我们的思维。"
+
+ building_roz_power_core: "§P虚空能量反应塔§!"
+ building_roz_power_core_desc:0 "从远处望去，这座奇观发出的光柱直插天穹. 这是一座由多个虚空核心并联组成堆芯阵列的宏伟巨塔，其发电量远超常规星舰所用的型号，唯一限制其输出上限的是国家电网的负荷水平…\n\n作为帝国电网的核心枢纽设施，该建筑只能建造在我们的首都。"
+
+ building_roz_dolls_factory: "§M水银灯的炼金人偶工厂§!"
+ building_roz_dolls_factory_desc: "由水银灯一手建立的大型人偶设计与组装工厂，为全银河范围内所有家庭提供着品质卓越的\"儿童玩具\"。借助仿蔷薇圣母的特性，使得这里生产出的人偶都是拥有灵能特征的炼金生物，完全超越了其他类似的人工智能产品。不过有不少社会评论家表示这些高性能人偶可能会被一些别有用心的人拿去开发一些本不该有的功能……§H顺带一提，在其发售的产品中，蔷薇少女系列的真红人偶销量最为火爆，这显然要得益于水银灯对其设计的倾力投入。§!"
+
+###fe
+ building_roz_fe_dome: "§C天堂穹顶§!"
+ building_roz_fe_dome_desc: "依托极度先进的反重力科技漂浮在空中的乌托邦。"
+ building_roz_fe_stronghold: "§S神盾基地§!"
+ building_roz_fe_stronghold_desc: "一座巨大的星球防御基地，拥有多个装满先进先驱者武器的军械库。"
+ building_roz_nourishment_center: "§c营养中心§!"
+ building_roz_nourishment_center_desc: "只要是有味道的东西，这里就能重现出来。"
+ building_roz_nano_forge: "§M纳米熔炉§!"
+ building_roz_dimensional_fabricator: "§Y次元制造机§!"
+ building_roz_dimensional_fabricator_desc: "这座建筑利用所知甚少的次元科技，从其它世界吸取宝贵的资源。"
+ building_roz_nano_forge_desc: "巨型纳米复制器托架将原材料转化为拥有奇迹般效能的高端合金。"
+ building_roz_affluence_center: "§H财富中心§!"
+ building_roz_affluence_center_desc: "无论多奇特的材料，都可以在这里找到。"
+ building_roz_class_5_singularity: "§B4.5级奇点§!"
+ building_roz_class_5_singularity_desc: "虽然经历了如此漫长的岁月，隔离场却仍能正常稳定的运行，没人知道原因。"
+ building_roz_master_archive: "§U主档案库§!"
+ building_roz_master_archive_desc: "这里存储着五个星系纪元的知识集合，但操作该档案库并调出系统数据的方法已经遗失。在这种情况下，从这里提取出的一点一滴的信息都是无价之宝。"
+ building_roz_ancient_palace:"§R中央行政宫殿§!"
+ building_roz_ancient_palace_desc:"这座巨大的宫殿建筑群是一个早已逝去的时代的见证。尽管它富丽堂皇的外表拒绝屈服于时间的流逝，但许多翼殿都处于年久失修状态。"
+ building_roz_fe_administration_2:"§H全知管理机构§!"
+ building_roz_fe_administration_2_desc:"这座庞大的复合体是一个横跨星系的官僚系统的中心，与一座强韧且先进的行政网络相连。"
+ building_roz_fe_clinic_2:"§c生物再生所§!"
+ building_roz_fe_clinic_2_desc:"生物再生研究所是医疗技术的巅峰，是开创性生物再生疗法的先驱，他们不断重新定义延长生命的界限。"
+
+ building_roz_fe_mine_2:"§H量子钻穿中心§!"
+ building_roz_fe_mine_2_desc:"这座采矿中心使用量子隧穿科技可以在不进行物理接触的前提下透过固液物体、从该行星上地核以上的所有位置提取矿物"
+ building_roz_fe_lab_2:"§B超然创新部§!"
+ building_roz_fe_lab_2_desc:"建筑这座建筑是科学进步的顶点，见证着这个无限创新的时代。"
+ building_roz_fe_entertainment_2:"§Y无尽极乐枢纽§!"
+ building_roz_fe_entertainment_2_desc:"这是娱乐的顶峰，这座枢纽超越常规的限制，在这里，所有的愿望在许下之前就已经实现了。"
+ building_roz_fe_silo_2:"§E高维度仓库§!"
+ building_roz_fe_silo_2_desc:"我们可以通过创造一个局部口袋维度来存储几乎无尽的资源。"
+ building_roz_fe_market_2:"§L星际贸易枢纽§!"
+ building_roz_fe_market_2_desc:"这个贸易区划在星系贸易中占据着至高无上的地位，甚至从轨道上都能看到它的巨大尖顶。"
+
+
+
+
+
+
+#####

@@ -1,0 +1,1475 @@
+namespace = ge_test_event
+country_event = {
+	id = ge_test_event.99
+	hide_window = yes
+	is_triggered_only = yes
+	location = root
+	immediate = {
+		give_technology = {
+			tech = GE_tech_reactor
+		}
+		give_technology = {
+			tech = tech_dark_matter_power_core
+		}
+		#add_global_ship_design = ROZ_ITQ_design
+		#create_ship_design = { design = ROZ_ITQ_design }
+		#add_ship_design = last_created_design
+	}
+}
+
+planet_event = {
+	id = ge_test_event.1000
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		#from = {
+		#	is_in_combat = no
+		#}
+	}
+	immediate = {
+		random_megastructure = {
+			limit = {
+				is_megastructure_type = orbital_ring_ruined
+			}
+			remove_megastructure = this
+		}
+		#set_update_modifiers_batch = begin
+		add_threat = {
+			who = from.owner
+			amount = 10
+		}
+		from = {
+
+			owner = {
+				save_event_target_as = crisis_country
+				add_victory_score = {
+					source = destroyed_stars_score
+					score = 10
+				}
+				switch = {
+					trigger = galaxy_size
+					huge = {
+						add_resource = {
+							sr_dark_matter = 1000
+						}
+					}
+					large = {
+						add_resource = {
+							sr_dark_matter = 1500
+						}
+					}
+					medium = {
+						add_resource = {
+							sr_dark_matter = 2000
+						}
+					}
+					small = {
+						add_resource = {
+							sr_dark_matter = 2500
+						}
+					}
+					tiny = {
+						add_resource = {
+							sr_dark_matter = 3000
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = cracked_first_star
+						}
+					}
+					set_country_flag = cracked_first_star
+				}
+			}
+		}
+		solar_system = {
+			save_event_target_as = destroyed_system
+			
+		}
+		every_playable_country = {
+			limit = {
+				is_ai = no
+				has_communications = event_target:crisis_country
+				NOR = {
+					is_same_value = event_target:crisis_country
+					has_country_flag = can_build_star_eaters
+					has_country_flag = star_eater_alert@event_target:crisis_country
+				}
+				intel_level = {
+					system = event_target:destroyed_system
+					level = none
+				}
+			}
+			country_event = {
+				id = crisis.6180
+			}
+		}
+		every_playable_country = {
+			limit = {
+				is_ai = no
+				has_communications = event_target:crisis_country
+				NOR = {
+					is_same_value = event_target:crisis_country
+					has_country_flag = can_build_star_eaters
+					has_country_flag = star_eater_alert@event_target:crisis_country
+				}
+				intel_level = {
+					system = event_target:destroyed_system
+					level > none
+				}
+			}
+			country_event = {
+				id = crisis.6181
+			}
+		}
+		every_playable_country = {
+			limit = {
+				is_ai = no
+				has_communications = event_target:crisis_country
+				NOR = {
+					is_same_value = event_target:crisis_country
+					has_country_flag = star_eater_alert@event_target:crisis_country
+				}
+				has_country_flag = can_build_star_eaters
+			}
+			country_event = {
+				id = crisis.6182
+			}
+		}
+		solar_system = {
+			destroy_star_system = yes
+			
+		}
+		#set_update_modifiers_batch = end
+	}
+}
+
+country_event = {
+	id = ge_test_event.1110
+	hide_window = yes
+	is_triggered_only = yes
+	#	fire_only_once = yes
+	location = root
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		capital_scope = {
+			create_fleet = {
+				name = "NAME_sgt"
+				settings = {
+					spawn_debris = no
+					is_boss = no
+				}
+				effect = {
+					set_owner = ROOT
+					create_ship = {
+						name = NAME_sgt
+						design = NAME_sgt
+						graphical_culture = owner
+						prefix = no
+					}
+					set_location = {
+						target = PREV
+						distance = 45
+						angle = random
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ge_test_event.1111
+	hide_window = yes
+	is_triggered_only = yes
+	#	fire_only_once = yes
+	location = root
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		capital_scope = {
+			create_fleet = {
+				name = "NAME_ge_sgt_ship"
+				settings = {
+					spawn_debris = no
+					is_boss = no
+				}
+				effect = {
+					set_owner = ROOT
+					create_ship = {
+						name = "NAME_sgt"
+						design = NAME_ge_vfs
+						graphical_culture = owner
+						prefix = no
+					}
+					set_location = {
+						target = PREV
+						distance = 45
+						angle = random
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+ship_event = {
+	id = ge_test_event.1112
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = {
+			is_ai = no
+		}
+	}
+	immediate = {
+		set_ship_flag = roz_test_flag
+		fleet = {
+			set_fleet_flag = roz_test_flag_1
+		}
+	}
+}
+
+
+country_event = { #控制台effect测试区
+	id = ge_test_event.10
+	hide_window = yes
+	is_triggered_only = yes
+	#	fire_only_once = yes
+	location = root
+	trigger = {
+		#always = no
+		is_ai = no
+	}
+	immediate = {
+		#capital_scope = {
+		#	create_fleet = {
+		#		name = "NAME_ge_sgt_ship"
+		#		settings = {
+		#			spawn_debris = no
+		#			is_boss = no
+		#		}
+		#		effect = {
+		#			set_owner = ROOT
+		#			create_ship_design = {
+		#				design = "NAME_ge_sgt_ship"
+		#			}
+		#			create_ship = {
+		#				name = "NAME_ge_sgt_ship"
+		#				design = last_created_design
+		#				graphical_culture = owner
+		#				#prefix = "Suigintou"
+		#				prefix = no
+		#			}
+		#			set_location = {
+		#				target = PREV
+		#				distance = 45
+		#				angle = random
+		#			}
+		#		}
+		#	}
+		#	last_created_fleet = {
+		#		set_fleet_flag = ge_sgt_flag_ship
+		#		set_timed_fleet_flag = {
+		#			flag = ge_ship_hull_locked
+		#			days = 360
+		#		}
+		#	}
+		#}
+		#effect = { set_country_type = default }
+		#effect = { set_country_type = fallen_empire }
+		#effect = { set_country_type = awakened_fallen_empire }
+
+		#effect = { force_add_civic = civic_KZ_VOY_borg_enhancement }
+		#effect = { force_add_civic = civic_KZ_VOY_hiawatha_family force_add_civic = civic_KZ_VOY_drake_chamber_of_commerce force_add_civic = civic_KZ_VOY_KM_agency force_add_civic = civic_KZ_VOY_onimaru_heavy_industry force_add_civic = civic_KZ_VOY_grand_fleet force_add_civic = civic_KZ_VOY_shion_biotech }
+		#effect = { add_awakened_fallen_empire_resources = yes add_awakened_fallen_empire_fleet = yes }
+		#effect = { every_country = { establish_contact = { who = this location = root } } }
+		#effect = { force_add_civic = civic_azur_K1 force_add_civic = civic_azur_K2 force_add_civic = civic_azur_K3 }
+		#
+		
+		# effect = {
+		# 	if = {
+		# 		limit = {
+		# 			has_valid_civic = civic_KZ_VOY_hiawatha_family
+		# 			NOT = {
+		# 				has_global_flag = KZ_VOY_hiawatha_family_exists_flag
+		# 			}
+		# 		}
+		# 		set_global_flag = KZ_VOY_hiawatha_family_exists_flag
+		# 		# event_target:KZ_VOY_solaria_target = {
+		# 		# 	add_building = building_KZ_VOY_chateau_picard
+		# 		# }
+		# 		create_KZ_VOY_LUNA = yes
+		# 		create_KZ_VOY_STOLAS = yes
+		# 		give_technology = {
+		# 			tech = tech_resort_colonies
+		# 			message = no
+		# 		}
+		# 	}
+		# 	#KM机关
+		# 	if = {
+		# 		limit = {
+		# 			has_valid_civic = civic_KZ_VOY_KM_agency
+		# 			NOT = {
+		# 				has_global_flag = KZ_VOY_KM_agency_exists_flag
+		# 			}
+		# 		}
+		# 		set_global_flag = KZ_VOY_KM_agency_exists_flag
+		# 		create_KZ_VOY_AF_PMC = yes
+		# 		event_target:KZ_VOY_luna_alpha_target = {
+		# 			create_colony = {
+		# 				owner = root
+		# 			}
+		# 			set_name = KZ_VOY_luna_alpha
+		# 			remove_building = building_colony_shelter
+		# 			add_building = building_capital
+		# 			add_modifier = {
+		# 				modifier = KZ_VOY_PM_AF_HQ
+		# 			}
+		# 			while = {
+		# 				count = 1
+		# 				KZ_VOY_create_random_sub_terran_pop = yes
+		# 			}
+		# 		}
+		# 	}
+		# 	#德雷克商会
+		# 	if = {
+		# 		limit = {
+		# 			has_valid_civic = civic_KZ_VOY_drake_chamber_of_commerce
+		# 			NOT = {
+		# 				has_global_flag = KZ_VOY_drake_chamber_of_commerce_exists_flag
+		# 			}
+		# 		}
+		# 		set_global_flag = KZ_VOY_drake_chamber_of_commerce_exists_flag
+		# 		create_KZ_VOY_DCC = yes
+		# 		create_KZ_VOY_NACO = yes
+		# 		create_KZ_VOY_LIA = yes
+		# 	}
+		# 	#大舰队主义
+		# 	if = {
+		# 		limit = {
+		# 			has_valid_civic = civic_KZ_VOY_grand_fleet
+		# 			NOT = {
+		# 				has_global_flag = KZ_VOY_grand_fleet_exists_flag
+		# 			}
+		# 		}
+		# 		set_global_flag = KZ_VOY_grand_fleet_exists_flag
+		# 		create_KZ_VOY_RUMI = yes
+		# 		create_KZ_VOY_GAWAIN = yes
+		# 		create_KZ_VOY_DROSSEL = yes
+		# 		KZ_VOY_recreate_starting_navy = {
+		# 			count = 6
+		# 			owner = root
+		# 			location = root.capital_scope.starbase
+		# 		}
+		# 		last_created_fleet = {
+		# 			set_leader = event_target:KZ_VOY_GAWAIN_target
+		# 		}
+		# 	}
+		# 	#鬼丸重工
+		# 	if = {
+		# 		limit = {
+		# 			has_valid_civic = civic_KZ_VOY_onimaru_heavy_industry
+		# 			NOT = {
+		# 				has_global_flag = KZ_VOY_onimaru_heavy_industry_exists_flag
+		# 			}
+		# 		}
+		# 		set_global_flag = KZ_VOY_onimaru_heavy_industry_exists_flag
+		# 		create_KZ_VOY_ICHIGO = yes
+		# 		create_KZ_VOY_OHI = yes
+		# 	}
+		# 	#博尔格改造
+		# 	if = {
+		# 		limit = {
+		# 			has_valid_civic = civic_KZ_VOY_borg_enhancement
+		# 			NOT = {
+		# 				has_global_flag = KZ_VOY_borg_enhancement_exists_flag
+		# 			}
+		# 		}
+		# 		set_global_flag = KZ_VOY_borg_enhancement_exists_flag
+		# 		every_owned_leader = {
+		# 			KZ_VOY_leader_trait_add = {
+		# 				trait = trait_KZ_VOY_borg_implant
+		# 			}
+		# 		}
+		# 		every_pool_leader = {
+		# 			KZ_VOY_leader_trait_add = {
+		# 				trait = trait_KZ_VOY_borg_implant
+		# 			}
+		# 		}
+		# 		owner = {
+		# 			create_species = {
+		# 				name = KZ_VOY_magic_puppet
+		# 				plural = KZ_VOY_magic_puppet
+		# 				class = ROBOT
+		# 				namelist = this
+		# 				portrait = KZ_VOY_SUB_TERRAN_03
+		# 				traits = {
+		# 					trait = trait_mechanical
+		# 					trait = trait_KZ_VOY_magic_puppet
+		# 				}
+		# 				effect = {
+		# 					set_species_flag = mechanical_species@prev
+		# 					save_event_target_as = KZ_VOY_magic_puppet_species_target
+		# 				}
+		# 			}
+		# 		}
+		# 		event_target:KZ_VOY_solaria_target = {
+		# 			add_building = building_KZ_VOY_magic_puppet_workshop
+		# 			while = {
+		# 				count = 4
+		# 				create_pop = {
+		# 					species = event_target:KZ_VOY_magic_puppet_species_target
+		# 				}
+		# 			}
+		# 		}
+		# 		set_built_species = event_target:KZ_VOY_magic_puppet_species_target
+		# 		give_technology = {
+		# 			tech = tech_KZ_VOY_magic_puppet_assemble
+		# 			message = no
+		# 		}
+		# 		give_technology = {
+		# 			tech = tech_robotic_workers
+		# 			message = no
+		# 		}
+		# 	}
+		# 	#紫音生物科技
+		# 	if = {
+		# 		limit = {
+		# 			has_valid_civic = civic_KZ_VOY_shion_biotech
+		# 			NOT = {
+		# 				has_global_flag = civic_KZ_VOY_shion_biotech
+		# 			}
+		# 		}
+		# 		set_global_flag = KZ_VOY_shion_biotech_exists_flag
+		# 		create_KZ_VOY_SHION = yes
+		# 		create_KZ_VOY_NOCHI = yes
+		# 		create_KZ_VOY_IRUKA = yes
+		# 		give_technology = {
+		# 			tech = tech_KZ_VOY_magical_medicine_institute
+		# 			message = no
+		# 		}
+		# 		give_technology = {
+		# 			tech = tech_slave_colonies
+		# 			message = no
+		# 		}
+		# 		event_target:KZ_VOY_solaria_target = {
+		# 			add_building = building_KZ_VOY_magical_medicine_institute
+		# 			set_planet_flag = KZ_VOY_SBM_mode_all_flag
+		# 			KZ_VOY_SBM_refresh = yes
+		# 		}
+		# 	}
+		# }
+		#effect = {ruler = { save_global_event_target_as = KZ_VOY_star_chosen_target add_trait = leader_trait_KZ_VOY_magic_ruler add_trait = leader_trait_KZ_VOY_star_chosen }}
+		# effect = {
+		# 	#国家初始化
+		# 	KZ_VOY_initialize_country_effect = yes
+		# 	#临时岗位降级修正
+		# 	add_modifier = {
+		# 		modifier = KZ_VOY_demotion_time_down
+		# 		days = 30
+		# 	}
+		# 	#创建伊迪亚（IDEA）
+		# 	KZ_VOY_create_noumenon_leader = {
+		# 		name = KZ_VOY_IDEA
+		# 		portrait = G_IDEA01R
+		# 	}
+		# 	#探索局开局效果
+		# 	create_country = {
+		# 		name = KZ_VOY_SEA_country
+		# 		type = KZ_VOY_multipurpose_type
+		# 		species = root
+		# 		name_list = KZ_VOY_01
+		# 		ship_prefix = SEAS
+		# 		auto_delete = no
+		# 		flag = {
+		# 			icon = {
+		# 				category = KZ_VOY_sub_terran_flags
+		# 				file = flag_KZ_VOY_6.dds
+		# 			}
+		# 			background = {
+		# 				category = backgrounds
+		# 				file = 00_solid.dds
+		# 			}
+		# 			colors = {
+		# 				"blue"
+		# 				"blue"
+		# 				"black"
+		# 				"null"
+		# 			}
+		# 		}
+		# 		effect = {
+		# 			save_global_event_target_as = KZ_VOY_SEA_country_target
+		# 			set_graphical_culture = root
+		# 			set_faction_hostility = {
+		# 				target = prev
+		# 				set_friendly = yes
+		# 			}
+		# 		}
+		# 	}
+		# 	set_variable = {
+		# 		which = KZ_VOY_solaria_planet_EXP
+		# 		value = 20
+		# 	}
+		# 	set_global_flag = KZ_VOY_exploration_operation_P3_flag_1
+		# 	set_variable = {
+		# 		which = KZ_VOY_SEA_morale
+		# 		value = 75
+		# 	}
+		# 	set_variable = {
+		# 		which = KZ_VOY_SEA_combat
+		# 		value = 75
+		# 	}
+		# 	set_variable = {
+		# 		which = KZ_VOY_SEA_skill
+		# 		value = 75
+		# 	}
+		# 	#给予科技
+		# 	give_technology = {
+		# 		tech = tech_KZ_VOY_exploration_cruiser
+		# 		message = no
+		# 	}
+		# 	give_technology = {
+		# 		tech = tech_KZ_VOY_dilithium_magic
+		# 		message = no
+		# 	}
+		# 	#重建开局舰队
+		# 	KZ_VOY_recreate_starting_navy = {
+		# 		count = 3
+		# 		owner = root
+		# 		location = root.capital_scope.starbase
+		# 	}
+		# 	#创建探索巡洋舰
+		# 	random_owned_fleet = {
+		# 		#删除原版科研船
+		# 		limit = {
+		# 			count_owned_ship = {
+		# 				count = 1
+		# 				limit = {
+		# 					is_ship_size = science
+		# 				}
+		# 			}
+		# 		}
+		# 		leader = {
+		# 			save_event_target_as = KZ_VOY_new_exploration_cruiser_scientist_target
+		# 			unassign_leader = this
+		# 		}
+		# 		delete_fleet = this
+		# 	}
+		# 	create_fleet = {
+		# 		effect = {
+		# 			set_owner = root
+		# 			create_ship = {
+		# 				name = random
+		# 				random_existing_design = KZ_VOY_exploration_cruiser
+		# 				graphical_culture = owner
+		# 			}
+		# 			set_fleet_stance = evasive
+		# 			set_location = root.capital_scope.starbase
+		# 			set_leader = event_target:KZ_VOY_new_exploration_cruiser_scientist_target
+		# 		}
+		# 	}
+		# 	#索拉利亚行星开局效果
+		# 	event_target:KZ_VOY_solaria_target = {
+		# 		change_pc = pc_KZ_VOY_hyper_sphare_solaria
+		# 		set_planet_size = 30
+		# 		set_name = KZ_VOY_Solaria
+		# 		clear_deposits = yes
+		# 		clear_planet_modifiers = yes
+		# 		prevent_anomaly = yes
+		# 		add_modifier = {
+		# 			modifier = KZ_VOY_PM_ten_in_one
+		# 		}
+		# 		add_modifier = {
+		# 			modifier = KZ_VOY_PM_ancient_hyper_sphere
+		# 		}
+		# 		add_modifier = {
+		# 			modifier = KZ_VOY_PM_phased_halo
+		# 		}
+		# 		#增加地块
+		# 		while = {
+		# 			count = 4
+		# 			add_deposit = KZ_VOY_d_areas_to_be_integrated
+		# 		}
+		# 		while = {
+		# 			count = 5
+		# 			add_deposit = KZ_VOY_d_global_infrastructure_remains
+		# 		}
+
+		#effect = { owner = { change_variable = { which = KZ_VOY_terranoid_tribes_points value = 25 } } }
+
+		# 		add_deposit = KZ_VOY_d_infinite_ocean
+		# 		add_deposit = KZ_VOY_d_eleva_tower
+		# 		add_deposit = KZ_VOY_d_albion_floating_isles
+		# 		add_deposit = KZ_VOY_d_remus_rich_ore_area
+		# 		add_deposit = KZ_VOY_d_terra_ecumenopolis
+		# 		add_deposit = KZ_VOY_d_inner_surface_habitat_dilapidated
+		# 		add_deposit = KZ_VOY_d_underground_dyson_network_standby
+		# 		add_deposit = KZ_VOY_d_yggdrasil
+		# 		#删除/增加建筑
+		# 		remove_building = building_commercial_zone
+		# 		remove_building = building_research_lab_1
+		# 		remove_building = building_bureaucratic_1
+		# 		add_building = building_KZ_VOY_ancient_complex_structure_capital
+		# 		add_building = building_KZ_VOY_school_of_magic_primary
+		# 		add_building = building_KZ_VOY_magic_market
+		# 		while = {
+		# 			count = 4
+		# 			add_building = building_KZ_VOY_ancient_complex_structure_relic_1
+		# 		}
+		# 		while = {
+		# 			count = 4
+		# 			add_building = building_KZ_VOY_ancient_complex_structure_relic_2
+		# 		}
+		# 		#增加区划
+		# 		add_district = district_KZ_VOY_hyper_relic_city
+		# 		add_district = district_KZ_VOY_hyper_relic_replicator
+		# 		add_district = district_KZ_VOY_hyper_relic_agriculture
+		# 		add_district = district_KZ_VOY_hyper_relic_industry
+		# 		#增加人口
+		# 		#while = {
+		# 		#	count = 0
+		# 		#	KZ_VOY_create_random_sub_terran_pop = yes
+		# 		#}
+		# 	}
+		# }		
+		# effect = {
+		# 	home_planet = {
+		# 		set_name = KZ_VOY_Solaria
+		# 		change_planet_size = 30
+		# 		change_pc = pc_KZ_VOY_hyper_sphare_solaria
+		# 		save_global_event_target_as = KZ_VOY_solaria_target
+		# 		set_planet_flag = megastructure
+		# 		set_planet_flag = has_megastructure
+		# 		add_modifier = {
+		# 			modifier = KZ_VOY_PM_ten_in_one
+		# 		}
+		# 		add_modifier = {
+		# 			modifier = KZ_VOY_PM_ancient_hyper_sphere
+		# 		}
+		# 		add_modifier = {
+		# 			modifier = KZ_VOY_PM_phased_halo
+		# 		}
+		# 		while = {
+		# 			count = 5
+		# 			add_deposit = KZ_VOY_d_global_infrastructure_remains
+		# 		}
+		# 		add_deposit = KZ_VOY_d_genesis_ocean
+		# 		add_deposit = KZ_VOY_d_eleva_tower
+		# 		add_deposit = KZ_VOY_d_iconia_transporter_system
+		# 		add_deposit = KZ_VOY_d_albion_floating_isles
+		# 		add_deposit = KZ_VOY_d_romulan_imperial_archives
+		# 		add_deposit = KZ_VOY_d_remus_rich_ore_area
+		# 		add_deposit = KZ_VOY_d_land_of_sakura_wind
+		# 		add_deposit = KZ_VOY_d_terra_ecumenopolis
+		# 		add_deposit = KZ_VOY_d_lunar_remains
+		# 		add_deposit = KZ_VOY_d_inner_surface_habitat_dilapidated
+		# 		add_deposit = KZ_VOY_d_underground_dyson_network_standby
+		# 		add_deposit = KZ_VOY_d_yggdrasil
+		# 		add_deposit = KZ_VOY_d_xing_xiu_array
+		# 	}
+		# }
+
+		#event KZ_VOY_SEA.100
+		# effect = {
+		# 	home_planet = {
+		# 		add_building = building_KZ_VOY_chateau_picard
+		# 		add_building = building_KZ_VOY_complex_structure_capital
+		# 		add_building = building_KZ_VOY_space_magic_silo
+		# 		add_building = building_KZ_VOY_SEA_branch_office
+		# 		add_building = building_KZ_VOY_hyperstructure_capital
+		# 		add_building = building_KZ_VOY_dimensional_sovereign_beacon
+		# 	}
+		# }
+
+
+		#effect = { event_target:ge_site_sgt_target = { solar_system = { set_star_flag = roz_outland_star spawn_natural_wormhole = { bypass_type = roz_gateway random_pos = no orbit_angle = 360 } set_surveyed = { surveyed = yes surveyor = root } } } set_spawn_system_batch = begin no_scope = { spawn_system = { min_distance >= 500 max_distance <= 700 min_orientation_angle = 90 max_orientation_angle = 270 initializer = roz_outland_star_system hyperlane = no } last_created_system = { set_name = "NAME_roz_outland_system" star = { set_name = "NAME_roz_outland_system" } event_target:roz_outland_planet_moon = { change_pc = pc_black_hole } } } set_spawn_system_batch = end }
+
+
+		#effect = { add_modifier = { modifier = roz_ap_slot_add } }
+
+		#copy_survey_data = yes
+
+
+
+
+		#effect = {ruler = { change_leader_portrait = A_NS06 }}
+		#effect = {ruler = { change_leader_portrait = A_NS08 }}
+		#effect = {ruler = { change_leader_portrait = AO01 }}
+		#effect = { owner = { change_variable = { which = KZ_VOY_terranoid_tribes_points value = 25 } } }
+
+
+
+
+		#effect = { add_modifier = { modifier = roz_void_energy_revolution } }
+		#effect = { home_planet = { while = { count = 50 create_pop = {species = owner_main_species}}}}
+		#effect = {  while = { count = 50 create_pop = {species = owner_main_species}}}
+		#effect = {  while = { count = 1 create_pop = {species = owner_main_species}}}
+		#effect = {  while = { count = 10 create_pop = {species = owner_main_species}}}
+
+		# effect = {
+		# 	clr_country_flag = harmonization_shangdi_conflict
+		# 	clr_country_flag = harmonization_han_kitab
+		# 	clr_country_flag = harmonization_fate_of_advisor
+		# 	clr_country_flag = harmonization_empowering_ceremonies
+		# 	add_country_modifier = {
+		# 		name = "harmonized_buddhism"
+		# 		duration = -1
+		# 	}
+		# }
+		#effect = {set_graphical_culture = mammalian_01}
+		#effect = {set_graphical_culture = humanoid_01}
+		#effect = {set_graphical_culture = necroid_01}
+		#effect = {set_graphical_culture = whitegold_01}
+		#effect = {set_graphical_culture = fallen_empire_01}
+
+		every_owned_ship = {
+			limit = {
+				exists = leader
+				leader = {
+					has_skill < 1
+				}
+			}
+
+		}
+
+		#effect = {begin_event_chain = { event_chain = "prethoryn_scourge_chain" target = ROOT }}
+		#effect = {end_event_chain = "coming_storm_chain"}
+		#effect = {every_owned_fleet = { limit = { has_fleet_flag = pet_queen } while = { count = 40 create_ship = { name = "NAME_Domesticated_Warrior" design = "NAME_Swarm_Large" graphical_culture = "swarm_01" upgradable = no }} while = { count = 150 create_ship = { name = "NAME_Domesticated_Swarmling" design = "NAME_Swarm_Small" graphical_culture = "swarm_01" upgradable = no}}}}
+		#effect = {shift_ethic = ethic_xenophile}
+		#effect = {shift_ethic = ethic_egalitarian}
+		#every_planet_within_border = {  }
+		#random_planet_within_border = {  }
+		#effect = {while = {	count = 1000 add_random_research_option = {	add_progress = 0.0001	ignore_prereqs = yes	ignore_rare = yes}	}}
+		#effect = {while = {	count = 1000 add_random_research_option = {	add_progress = 0.0001	ignore_prereqs = yes	ignore_rare = yes}	}}
+
+		#effect = {while = { count = 10 every_country = {limit = {is_ai = yes}add_opinion_modifier = {who = root	modifier = opinion_roz_test_postive}} }}
+		#effect = {while = { count = 2 every_country = {limit = {is_subject = yes}add_opinion_modifier = {who = root	modifier = opinion_roz_test_postive}} }}
+
+		#effect = {while = { count = 10 every_country = {limit = {is_ai = yes or = { has_ethic = ethic_fanatic_xenophile has_ethic = ethic_xenophile } }add_opinion_modifier = {who = root	modifier = opinion_roz_test_postive}} }}
+		#effect = {while = { count = 5 every_country = {limit = {is_ai = yes}add_opinion_modifier = {who = root	modifier = opinion_roz_test_postive}} }}
+		#effect = {while = { count = 2 every_country = {limit = {is_ai = yes }add_opinion_modifier = {who = root	modifier = opinion_roz_test_postive}} }}
+		#every_owned_pop = {
+		#	set_pop_flag = 1111
+		#}
+		#effect = {create_leader = {	class = scientist	name = "NAME_Suigintou"	skill = 2	gender = female	species = owner_main_species	immortal = yes	event_leader = yes   	set_age = 17	traits = {	trait = leader_trait_ge_meimei_scientist	trait = leader_trait_ge_N_field_scientist	trait = leader_trait_ge_mercury_lamp_scientist}	effect = {	change_leader_portrait = ge_suigintou_6	}}	last_created_leader = {set_leader_flag = ge_suigintou_flag set_variable = {which = ge_leader_affection value = root.ge_leader_affection_count}}}
+		#effect = { ruler = { change_leader_portrait = event_target:roz_player_country_ruler_global_target } }
+		#effect = { ruler = { change_leader_portrait = random } }
+
+		#effect = {set_country_flag = ge_tech_reactor_get give_technology = {tech = GE_tech_reactor} remove_country_flag = ge_tech_continue event_target:ge_site_sgt_target = {add_resource = {sr_void_core = 1 }add_deposit = ge_site_vc_deposit }  every_owned_ship = { limit = { is_ship_size = Ge_Vampirilis_Ortaam } remove_modifier = roz_sgt_flagship_none_tech_modifier } every_owned_ship = { limit = { is_ship_size = Ge_Vampirilis_Letum } remove_modifier = roz_sgt_flagship_gardian_none_tech_modifier } start_situation = { type = roz_ves_state_grid_shock_situation }   }
+
+		#effect = {set_country_flag = ge_tech_continue country_event={id=ge_event.47}    }
+
+		#effect = {home_planet = { enable_special_project = { name = roz_void_energy_research_project_stage_1 owner = root } }}
+		#effect = {home_planet = { enable_special_project = { name = roz_void_energy_research_project_stage_1_a owner = root } }}
+
+		#effect = { change_dominant_species = { species = owner_main_species change_all = yes } }
+
+		#effect =  {every_owned_pop = { modify_species = { species = this } }}
+
+		#effect =  {queue_actions = { find_closest_system = { trigger = { id = KZ_VOY_demon_fleet_action_trigger.1 any_system_planet = { is_colony = yes num_pops > 0 is_KZ_VOY_Demon_Castle = no } } found_system = { move_to = this find_closest_planet = { trigger = { id = KZ_VOY_demon_fleet_action_trigger.2 is_colony = yes num_pops > 0 is_KZ_VOY_Demon_Castle = no } found_planet = { move_to = this orbit_planet = this } } } }}}
+
+		#effect = {set_ship_design = {  design = corvette random_existing_design = 1 }}
+		#effect = { set_country_flag = roz_sgt_unknow_flagship_spawn_country give_technology = { tech = tech_ge_sgt_flagship } add_modifier = { modifier = roz_sgt_flagship_completed_buff days = -1 } home_planet = { solar_system = { starbase = { create_ambient_object = { type = ROZ_SSVL_AO location = this scale = 0.4 use_3d_location = yes entity_offset = { min = 5 max = 20 } entity_offset_height = { min = 5 max = 5 } } last_created_ambient_object = { save_global_event_target_as =ROZ_SSVL_AO_home_target } } } } set_country_flag = ge_sgt_flagship_project_enable event_target:ROZ_SSVL_AO_target@owner = { destroy_ambient_object = this } country_event = { id = ge_sgt_falgship_events.10 days = 720 random = 1800 } }
+
+
+		#effect = add_event_chain_counter = { amount = 1 counter = specimens_collected event_chain = roz_outland_system_chain } country_event = { id = roz_krks_leader_evt.55 }
+
+		#effect = {every_country = { limit = { is_hostile = yes } every_controlled_fleet = { destroy_fleet = this } }}
+
+
+		#effect = {every_country = { limit = { NOT = { is_same_value = ROOT } is_country_type = extradimensional } destroy_country = yes }}
+
+
+
+		#effect give_technology = { tech = tech_space_cloud_weapon_1 }
+
+
+		#effect = { owner = { start_situation = { type = sgt_flagship_exploration_situation } } }
+		#effect = { capital_scope = { enable_special_project = { name = roz_void_energy_research_project_stage_1_a } }}
+
+		#capital_scope = {
+		#	remove_building = building_roz_ancient_palace
+		#	add_building = building_imperial_capital
+		#}
+		#effect create_fleet = {
+		#	name = "NAME_SRA_SOGZ_UF"
+		#	effect = {
+		#		#set_fleet_flag = wg_crisis_2_SRA_SOGZ_UF
+		#		#save_global_event_target_as = wg_crisis_2_SRA_SOGZ_UF
+		#		set_owner = root
+		#		create_ship = {
+		#			name = "NAME_SRA_SOGZ_UF"
+		#			design = "NAME_SRA_SOGZ_UF_design_2"
+		#			prefix = no
+		#		}
+		#		set_location = {
+		#			target = root.capital_scope
+		#			distance = 0
+		#			angle = 0
+		#		}
+		#		set_fleet_bombardment_stance = wg_doom2
+		#	}
+		#	settings = {
+		#		is_boss = yes
+		#		can_upgrade = no
+		#		uses_naval_capacity = no
+		#		can_change_leader = yes
+		#		can_change_composition = no
+		#		can_disband = no
+		#		spawn_debris = no
+		#		ai_ignore_strength = yes
+		#	}
+		#}
+		#effect create_fleet = {
+		#	effect = {
+		#		set_owner = root
+		#		create_ship = { design = "NAME_CG_SRA_Spear_Of_Galaxy_Zenith" }
+		#		set_location = { target = root.capital_star distance = 45 angle = random }
+		#	}
+		#	settings = {
+		#		is_boss = yes
+		#		can_upgrade = no
+		#		uses_naval_capacity = no
+		#		can_change_leader = yes
+		#		can_change_composition = no
+		#		can_disband = no
+		#		spawn_debris = no
+		#		ai_ignore_strength = yes
+		#	}
+		#}
+		#event KZ_VOY_relic_VE.10001
+
+
+
+
+		#effect = { add_modifier = { modifier = roz_product_modifier_test days = -1 }}
+		#effect = { remove_modifier = { modifier = roz_product_modifier_test }}
+
+
+
+
+
+		#effect = {set_global_flag = roz_sgt_unknow_flagship_spawn}
+		#effect = {force_remove_civic = civic_KZ_VOY_hiawatha_family}	
+		#effect = {force_add_civic = civic_KZ_VOY_hiawatha_family}
+		#effect = set_country_flag = q_sgt_army
+		#effect = country_event = { id = ge_leader_event.2 }
+		#effect = country_event = { id = ge_communication.201 }
+		#effect = { remove_megastructure = this }
+		#last_created_leader = {
+			#set_is_female = true
+		#}
+		#effect = { remove_country_flag = roz_date_temp_random_GM_KOF remove_country_flag = roz_date_temporary_flag }
+		#effect = { spawn_megastructure = { type = strategic_coordination_center_3 name = strategic_coordination_center_3 owner = root planet = this coords_from = this } }
+
+
+		#effect = {force_add_civic = civic_reanimated_armies}
+
+		#给每个拥有的星系刷出超空间中继器
+		#effect = {every_owned_starbase = { limit = { NOT = { solar_system = { has_megastructure = hyper_relay } } } solar_system = { spawn_megastructure = { type = hyper_relay orbit_angle = 0 orbit_distance = 0 owner = root graphical_culture = root random_pos = yes init_effect = {} } } }}
+		#
+		#effect = {random_owned_leader = { limit = { has_leader_flag = ge_suigintou_flag } remove_leader_flag = leader_BA_30 }}
+
+		#tech_cloaking_1
+
+		#effect = { set_country_flag = q_sgt_army_get add_modifier = {modifier = ge_sgt_Q_dolls } add_modifier = {modifier = ge_rm_fake_prod }}
+		#effect = { export_modifier_to_variable = { modifier = category_field_manipulation_research_speed_mult variable = roz_test_var }}
+
+		#effect = {solar_system = {set_star_flag = ge_suigintou_site_star_flag} set_name = "NAME_ge_sgt_site_planet" change_pc = pc_black_hole set_planet_size = 1 clear_deposits = yes set_planet_flag = ge_planet_flag_sgt@space_owner create_archaeological_site = ge_sgt_site space_owner = { set_country_flag = ge_sgt_site_owner_flag_for_multiplayer }}
+
+		#effect every_owned_planet = { limit = { is_under_colonization = no } while = { count = 10 limit = { NOT = { has_planet_flag = roz_krks_inv_zakko_fleet_planet } } set_planet_flag = roz_krks_inv_zakko_fleet_planet } } remove_modifier = ge_gravity_knowledge_plus remove_modifier = ge_gravity_knowledge event_target:roz_n_field_site_target@root = { save_event_target_as = ge_site_sgt_target create_ge_kirakishou_hostile_ship = yes } start_situation = { type = kirakishou_battle_field_situation target = event_target:kirakishou_hostile_country@root } country_event = { id = ge_event.2040 days = 2 }
+
+
+		 #effect ={ every_owned_fleet = {limit = {is_ship_size = ge_black_dragon }solar_system = {create_ambient_object = {type = "star_explosion"duration = 5entity_scale_to_size = no use_3d_location = yes entity_offset = { min = 0 max = 0 } entity_offset_angle = { min = 0 max = 0 }entity_offset_height = { min = 0 max = 0 }scale = 4 location = this }create_ambient_object = { type = nebula_1 duration = 30 entity_scale_to_size = no use_3d_location = yes entity_offset = { min = 0 max = 0 } entity_offset_angle = { min = 0 max = 0 }entity_offset_height = { min = 0 max = 0 }scale = 2 location = this } }  unassign_leader = event_target:roz_suigintou_bwg_leader_target@root exile_leader_as = this.leader destroy_fleet = this }event_target:roz_suigintou_bwg_leader_target@root = { unassign_leader = this exile_leader_as = this } }
+
+		
+
+
+
+
+
+	}
+}
+
+
+
+country_event = {
+	id = ge_test_event.11
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		#OR = {
+		#	last_increased_tech = tech_centralized_command
+		#	last_increased_tech = tech_psionic_theory
+		#}
+
+	}
+	immediate = {
+		home_planet = {
+			if = {
+				limit = {
+					NOT = {
+						has_planet_flag = ge_krks_pi_cap_flag
+					}
+				}
+				set_planet_flag = ge_krks_pi_cap_flag
+			}
+			every_megastructure = {
+				remove_megastructure = this
+			}
+		}
+		start_situation = {
+			type = kirakishou_planet_invasion_situation
+			target = home_planet
+		}
+		#if = {
+		#	limit = {}
+		#	hidden_effect = {}
+		#}
+		#random_owned_pop = {
+		#	limit = {
+		#	}
+		#}
+		#random_country = {
+		#	limit = {
+		#		is_country_type = default
+		#	}
+		#}
+		#random_playable_country = {
+		#	limit = {
+		#		is_same_species = root
+		#	}
+		#}
+
+
+	}
+}
+
+country_event = {
+	id = ge_test_event.100
+	desc = "ge_test_event.100.desc"
+	title = "ge_test_event.100.title"
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+
+	option = {
+		name = ge_test_event.100.aa
+		hidden_effect = {
+			set_country_flag = ge_tech_reactor_get
+			every_country = {
+				limit = {
+					is_ai = yes
+				}
+				add_opinion_modifier = {
+					who = THIS
+					modifier = opinion_roz_edict_mutiplayer_tech
+				}
+			}
+		}
+		give_technology = {
+			tech = GE_tech_reactor
+		}
+	}
+	option = {
+		name = ge_test_event.100.bb
+		default_hide_option = yes
+		ai_chance = {
+			weight = 100
+		}
+		add_resource = {
+			influence = 100
+		}
+
+	}
+}
+
+
+country_event = {
+	id = ge_test_event.110
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		#always = no
+	}
+
+	immediate = {
+		capital_scope = {
+			solar_system = { 
+				set_star_flag = roz_outland_star
+				spawn_natural_wormhole = {
+					bypass_type = roz_gateway
+					random_pos = no
+					orbit_angle = 360
+				}
+				set_surveyed = {
+					surveyed = yes
+					surveyor = root	
+				}
+
+			}
+
+		}
+		set_country_flag = class_4_singularity_center_can_build
+		set_country_flag = dimensional_fabricator_can_build
+		set_country_flag = skydome_can_build
+		set_country_flag = nano_forge_can_build
+		set_country_flag = affluence_center_can_build
+		set_country_flag = nourishment_center_can_build
+		#change_variable = {
+		#	which = class_4_singularity_build_count
+		#	value = 1
+		#}
+		set_spawn_system_batch = begin
+		# batch-processes the spawn_system effects between "begin" and "end",
+		# so caches are recalculated only once rather than for every system spawned
+		# can also be used when removing and adding hyperlanes
+		no_scope = {
+			# no_scope: makes system positions originate from galactic core
+			spawn_system = {
+				min_distance >= 500
+				max_distance <= 700
+				min_orientation_angle = 90
+				max_orientation_angle = 270
+				initializer = roz_outland_star_system
+				hyperlane = no
+			}
+			last_created_system = {
+				set_name = "NAME_roz_outland_system"
+				star = {
+					set_name = "NAME_roz_outland_system"
+					#set_planet_size = 15
+				}
+				event_target:roz_outland_planet_moon = {
+					change_pc = pc_black_hole
+				}
+			}
+		}	
+		set_spawn_system_batch = end
+	}
+}
+
+
+
+
+country_event = {
+	id = ge_test_event.999
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		create_country = {
+			type = ge_N_Field
+			effect = {
+				save_global_event_target_as = ge_X_country
+				set_name = {
+					key = NAME_ROZ_X
+					variable_string = "[Root.GetName]"
+				}
+			}
+		}
+		every_country = {
+			last_created_country = {
+				establish_communications_no_message = root
+			}
+		}
+	}
+}
+
+
+
+#测试功能，l星团开局
+country_event = {
+	id = ge_test_event.200
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_event_chain = "l_cluster_chain"
+			}
+			end_event_chain = "l_cluster_chain"
+		}
+		set_country_flag = roz_lgate_spawn
+		set_country_flag = roz_lgate_enable
+		set_country_flag = encountered_first_lgate
+		set_country_flag = lcluster_opener
+		set_global_flag = l_cluster_opened
+		#锁定小灰，蠢驴规定没有这仨任意一个flag就可以触发小灰，但只是有概率，毕竟是刷异常点，脸太黑谁都救不了捏ww
+		remove_global_flag = gray_goo_crisis_set
+		remove_global_flag = dragon_season
+		remove_global_flag = gray_goo_empire_set
+		country_event = { id = distar.11000 }
+		set_global_flag = lgates_activated_globally
+		# centralized handling of chain and project clean-up
+		every_playable_country = {
+			limit = {
+				has_special_project = LCLUSTER_PROJECT
+				NOT = { is_same_value = root }
+			}
+			country_event = { id = distar.10952 days = 1 }
+		}
+		every_playable_country = {
+			limit = {
+				NOR = {
+					has_event_chain = l_cluster_chain
+					has_special_project = LCLUSTER_PROJECT
+					is_same_value = root
+				}
+			}
+			country_event = { id = distar.10954 days = 1 }
+		}
+		every_playable_country = {
+			limit = {
+				NOR = {
+					has_special_project = LCLUSTER_PROJECT
+					is_same_value = root
+				}
+				has_event_chain = l_cluster_chain
+			}
+			country_event = { id = distar.10953 days = 1 }
+		}
+		observer_event = { id = observer.62 }
+		#####
+
+		event_target:lcluster1 = {
+			random_system_megastructure = {
+				activate_gateway = this
+				set_megastructure_flag = lgate_activated
+			}
+			solar_system = {
+				create_starbase = {
+					owner = root
+					size = starbase_starfortress
+					effect = {
+						set_starbase_building = {
+							slot = 1
+							building = dimensional_shrine
+						}
+						set_starbase_building = {
+							slot = 2
+							building = zroni_storm_caster
+						}
+					}
+				}
+			}
+		}
+
+		random_megastructure = {
+			limit = {
+				is_megastructure_type = lgate_base
+				NOT = { has_megastructure_flag = lgate_activated }
+			}
+			activate_gateway = this
+			set_megastructure_flag = lgate_activated
+			solar_system = {
+				create_starbase = {
+					owner = root
+					size = starbase_outpost
+				}
+			}
+		}
+		every_system = {
+			limit = {
+				has_megastructure = lgate_base
+			}
+			every_megastructure = {
+				limit = {
+					is_megastructure_type = lgate_base
+					NOT = { has_megastructure_flag = lgate_activated }
+				}
+				activate_gateway = this
+				set_megastructure_flag = lgate_activated
+			}
+		}
+		every_galaxy_planet = {
+			limit = { is_planet_class = pc_gray_goo }
+			add_modifier = {
+				modifier = "terraforming_candidate"
+				days = -1
+			}
+		}
+		country_event = {
+			id = ge_test_event.201
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = ge_test_event.201
+	is_triggered_only = yes
+	title = ge_test_event.201.title
+	desc = ge_test_event.201.desc
+	show_sound = greetings_arthopoid_special
+	picture = GFX_evt_l-gateway
+	immediate = {
+		
+		event_target:graygoo_factory_system = {
+			set_name = NAME_roz_lgate_starbase
+			create_starbase = {
+				size = starbase_citadel
+				owner = root
+				module = shipyard
+				module = shipyard
+				module = shipyard
+				module = shipyard
+				module = shipyard
+				module = shipyard
+				effect = {
+					add_starbase_component = {
+						component = "STARBASE_DARK_MATTER_REACTOR"
+					}
+					set_starbase_building = {
+						slot = 1
+						building = colossus_yards
+					}
+					set_starbase_building = {
+						slot = 2
+						building = fleet_academy
+					}
+					set_starbase_building = {
+						slot = 3
+						building = titan_yards
+					}
+					set_starbase_building = {
+						slot = 4
+						building = naval_logistics_office
+					}
+				}
+
+			}
+
+			#roz_lgate_create_reward_planet = yes
+		}
+	}
+	option = {
+		name = ge_test_event.201.aa
+		every_megastructure = {
+			limit = {
+				any_fleet_in_orbit = {
+
+				}
+			}
+		}
+		capital_scope = {
+
+			#set_owner = root
+			#while = {
+			#	count = 10
+			#	create_pop = {
+			#		species = space_owner
+			#		ethos = space_owner
+			#	}
+			#}
+
+		}
+
+	}
+}
+
+country_event = { # Remove Date Distortion
+	id = ge_test_event.9997
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		remove_modifier = relic_activation_cooldown
+	}
+}
+
+country_event = { # Remove Date Distortion
+	id = ge_test_event.9998
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		date_distortion = yes
+	}
+}
+
+country_event = { # Remove Date Distortion
+	id = ge_test_event.9999
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		date_distortion = no
+	}
+}
+
+#country_event = {
+#	id = ge_test_event.300
+#	is_triggered_only = yes
+#	hide_window = yes
+#	trigger = {
+#		has_country_flag = ge_suigintou_scientist_active
+#		from = {
+#			has_leader_flag = ge_suigintou_flag
+#		}
+#			from = {
+#				fleet = {
+#					space_owner = {
+#						has_opinion_modifier = {
+#							who = root
+#							modifier = opinion_hostile_first_contact
+#						}
+#					}
+#				}
+#			}
+#		any_playable_country = {
+#
+#		}
+#	}
+#	immediate = {
+#		from = {
+#			clone_leader = {
+#				target = this
+#				effect = {
+#					save_global_event_target_as = ge_suigintou_scientist_inactive_temp@root
+#					#set_leader_flag = ge_suigintou_flag
+#					unassign_leader = this
+#					set_name = "NAME_Suigintou"
+#					set_owner = event_target:ge_suigintou_country@root
+#
+#					freeze_leader_age = yes
+#
+#				}
+#			}
+#		}
+#	}
+#}
+
+# You accidentally destroy the ship
+# 非常坏事件，使汞灯发射
+
+
+
+
+
+#effect = {country_event = { id = ge_event.2063 }  event_target:krks_bf_situation_target@root = { add_situation_progress = -100 } every_situation = { limit = { is_situation_type = kirakishou_planet_invasion_situation } destroy_situation = this } every_situation = { limit = { is_situation_type = kirakishou_battle_field_situation }destroy_situation = this } remove_modifier = disable_ap_ge_0 remove_modifier = disable_ap_ge_1 remove_country_flag = ge_krks_time_freeze_loop_start_flag if = {limit = { has_country_flag = roz_krks_dl_normal_flag } add_modifier = { modifier = ge_gravity_knowledge_plus } } if = { limit = { has_country_flag = roz_krks_dl_early_flag } add_modifier = { modifier = ge_gravity_knowledge } } capital_scope = { switch = { trigger = has_modifier ge_kirakishou_invasion_lv1 = { remove_modifier = ge_kirakishou_invasion_lv1 } ge_kirakishou_invasion_lv2 = { remove_modifier = ge_kirakishou_invasion_lv2 } ge_kirakishou_invasion_lv2.5 = { remove_modifier = ge_kirakishou_invasion_lv2.5 } ge_kirakishou_invasion_lv3 = { remove_modifier = ge_kirakishou_invasion_lv3 } ge_kirakishou_invasion_lv4 = { remove_modifier = ge_kirakishou_invasion_lv4 } ge_kirakishou_invasion_lv5 = { remove_modifier = ge_kirakishou_invasion_lv5 } ge_kirakishou_invasion_lvMAX = { remove_modifier = ge_kirakishou_invasion_lvMAX } } }}
+
+country_event = {
+	id = ge_test_event.1200
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_country = {
+			name = "NAME_nfield"
+			type = ROZ_friendly
+			flag = {
+				icon = {
+					category = "nfield_flags"
+					file = "flag_ge_nfield.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "inverted_v.dds"
+				}
+				colors = {
+					"black"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				save_global_event_target_as = ge_suigintou_country_test
+				establish_communications_no_message = prev
+				set_graphical_culture = prev
+				set_faction_hostility = {
+					target = prev
+					set_friendly = yes
+				}
+
+			}
+		}
+		last_created_country = {
+			create_leader = {
+				class = commander
+				name = 111
+				skill = 1
+				traits = {
+					trait = leader_trait_roz_test_HD
+				}
+				effect = {
+					save_global_event_target_as = roz_test_leader_target
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = ge_test_event.1201
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		always = no
+		owner = {
+			is_ai = no
+		}
+		any_fleet_in_orbit = {
+			owner = {
+				is_hostile_to = root.owner
+				has_existing_ship_design = HD_SD_super_destroyer
+			}
+			any_owned_ship = {
+				is_ship_size = transport
+			}
+		}
+	}
+	immediate = {
+		planet_event = {
+			id = ge_test_event.1202
+			days = 18
+		}
+		from = {
+			save_event_target_as = roz_test_country_bombardment
+		}
+	}
+}
+
+planet_event = {
+	id = ge_test_event.1202
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	immediate = {
+		random_planet_army = {
+			limit = {
+				owner = {
+					is_hostile = root.owner
+				}
+			}
+			set_leader = event_target:roz_test_leader_target
+			assign_leader = event_target:roz_test_leader_target
+		}
+		random_ground_combat_attacker = {
+			set_leader = event_target:roz_test_leader_target
+			assign_leader = event_target:roz_test_leader_target
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

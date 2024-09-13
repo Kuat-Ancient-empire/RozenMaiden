@@ -1,0 +1,60 @@
+###################################################################################
+###																				###
+###									WEAPONS										###
+###																				###
+###################################################################################
+
+entity = {
+	name = "roz_fairy_three-gun_turret_1_entity"
+	pdxmesh = roz_fairy_three-gun_turret_1_mesh
+	scale = 0.65
+}
+
+entity = {
+	name = "roz_fairy_large_gun_turret_2_entity"
+	pdxmesh = roz_fairy_large_gun_turret_2_mesh
+	scale = 0.45
+}
+
+entity = {
+	name = "roz_fairy_large_gun_turret_3_entity"
+	pdxmesh = roz_fairy_large_gun_turret_3_mesh
+	scale = 0.45
+}
+
+entity = {
+	name = "roz_fairy_medium_gun_1_entity"
+	pdxmesh = roz_fairy_medium_gun_1_mesh
+	scale = 0.35
+}
+
+entity = {
+	name = "roz_fairy_medium_gun_2_entity"
+	pdxmesh = roz_fairy_samll_gun_1_mesh
+	scale = 0.5
+}
+
+entity = {
+	name = "roz_fairy_samll_gun_1_entity"
+	pdxmesh = roz_fairy_samll_gun_1_mesh
+	scale = 0.45
+}
+
+entity = {
+	name = "roz_fairy_samll_gun_2_entity"
+	pdxmesh = roz_fairy_samll_gun_2_mesh
+	scale = 0.6
+}
+
+entity = {
+	name = "roz_fairy_point_defense_turret_1_entity"
+	pdxmesh = roz_fairy_point_defense_turret_1_mesh
+	scale = 0.32
+}
+
+
+
+
+
+
+

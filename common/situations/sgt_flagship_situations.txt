@@ -1,0 +1,312 @@
+sgt_flagship_exploration_situation = {
+	##
+	desc = {
+		text = sgt_flagship_exploration_situation_text
+		trigger = {
+			always = yes
+		}
+	}
+	picture = GFX_roz_sgt_flagship_dark
+	complete_icon = GFX_situation_outcome_meh
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	fail_icon = GFX_situation_outcome_negative
+	fail_icon_frame = GFX_situation_outcome_frame_red
+	category = positive
+	on_start = {
+		event_target:ge_sgt_flagship_target@root = {
+			space_owner = {
+				
+				country_event = {
+					id = ge_sgt_falgship_events.110
+				}
+			}
+		}	
+		save_event_target_as = ge_sgt_flagship_situation_target
+		
+	}
+	#abort_trigger = {
+	#	OR = {
+	#		NOT = { exists = target.owner }
+	#		target.owner = { NOT = { is_same_value = root.owner } }
+	#	}
+	#}
+	triggered_modifier = {#加月度工程科研
+		potential = { 
+			NOT = {
+				has_situation_flag = triggered_ge_sgt_falgship_1
+			}
+		}
+		modifier = { }
+	}
+	on_progress_complete = {
+		hidden_effect = {
+			destroy_situation = this
+		}
+		owner = {
+			if = {
+				limit = { NOT = { has_country_flag = roz_sgt_unknow_flagship_spawn_country } }
+				set_country_flag = roz_sgt_unknow_flagship_spawn_country
+			}
+			add_tech_progress = {
+				tech = tech_ge_sgt_flagship
+				progress = 100
+			}
+			give_technology = {
+				tech = tech_ge_sgt_flagship
+			}
+			add_modifier = {
+				modifier = roz_sgt_flagship_completed_buff
+				days = -1
+			}
+			hidden_effect = {
+				home_planet = {
+					solar_system = {
+						starbase = {
+							create_ambient_object = {
+								type = ROZ_SSVL_AO
+								location = this
+								scale = 0.4
+								use_3d_location = yes
+								entity_offset = { min = 5 max = 20 }
+								entity_offset_height = { min = 5 max = 5 }
+								effect = {
+									save_global_event_target_as = ROZ_SSVL_AO_home_target@space_owner
+								}
+							}
+						}
+					}
+				}
+				set_country_flag = ge_sgt_flagship_project_enable
+				event_target:ROZ_SSVL_AO_target@owner = { #@后面的域名不一定要与save的一模一样，只要scope一样就能取到，实际上取的是目标的index
+					destroy_ambient_object = this
+				}
+				country_event = {
+					id = ge_sgt_falgship_events.10
+					days = 720
+					random = 1800
+				}
+
+			}
+		}
+
+		custom_tooltip = "sgt_flagship_exploration_situation_complete_ct"
+
+	}
+	on_fail = {
+		owner = {
+			
+			#移除debuff
+			hidden_effect = {
+				
+			}
+			# country_event = {
+			# 	id = x
+			# }
+		}
+		hidden_effect = {
+			destroy_situation = this
+		}
+		custom_tooltip = "sgt_flagship_exploration_situation_fail_ct"
+	}
+	start_value = 5
+	#triggered_target_modifier = {
+		#Modifier applying to the target planet of a Situation, if the triggers are true. Does not work on other scope types!
+	#}
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+			4 = 0
+			1 = ge_sgt_falgship_events.121
+			#2 = ge_sgt_falgship_events.122
+			#2 = ge_sgt_falgship_events.123
+		}
+	}
+	stages = {
+		sgt_flagship_stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			on_first_enter = {
+				situation_event = {
+					id = ge_sgt_falgship_events.111
+				}
+			}
+			custom_tooltip = sgt_flagship_stage_1_ct
+			end = 20
+		}
+		sgt_flagship_stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			on_first_enter = {
+				situation_event = {
+					id = ge_sgt_falgship_events.112
+				}
+			}
+			custom_tooltip = sgt_flagship_stage_2_ct
+			end = 40
+		}
+		sgt_flagship_stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			on_first_enter = {
+				situation_event = {
+					id = ge_sgt_falgship_events.113
+				}
+			}
+			
+			custom_tooltip = sgt_flagship_stage_3_ct
+			end = 60
+		}
+		sgt_flagship_stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			on_first_enter = {
+				situation_event = {
+					id = ge_sgt_falgship_events.114
+				}
+			}
+			custom_tooltip = sgt_flagship_stage_4_ct
+			end = 80
+		}
+		sgt_flagship_stage_5 = {
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+			#background = GFX_evt_alien_propaganda
+			on_first_enter = {
+				situation_event = {
+					id = ge_sgt_falgship_events.115
+				}
+			}
+			custom_tooltip = sgt_flagship_stage_5_ct
+			end = 100		
+		}
+	}
+	approach = {#得加钱！
+		name = roz_increse_of_budget_for_the_situation 		
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_green
+		allow = {
+		}
+		potential = {
+		}
+		on_select = {
+			# owner = {
+			# 	country_event = {
+			# 		id = x
+			# 	}
+			# }
+			custom_tooltip = roz_increse_of_budget_for_the_situation_onsel_ct
+		}
+		default = yes		
+		resources = {
+			category = situations
+			cost = {
+				influence = 5
+			}
+			upkeep = {
+				energy = 25
+			}
+			produces = {
+				engineering_research = 30
+				physics_research = 10
+			}
+		}
+		ai_weight = {
+		}
+		#AI will pick the one with the highest weight
+	}
+	approach = {
+		name = roz_assign_suigintou_to_unknowship_site	#all approaches must have at least a name
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		allow = {
+		}
+		#If this fails, the Approach is greyed out
+		potential = {
+			owner = {
+				has_country_flag = ge_leader_suigintou_get
+			}
+		}
+		#If this fails, the Approach is not shown
+		on_select = {
+			custom_tooltip = roz_assign_suigintou_to_unknowship_site_tooltip
+			owner = {
+				
+			}
+		}
+		
+		resources = {
+			#Resource table as standard
+			category = situations
+			cost = {
+				influence = 100
+				energy = 100
+				unity = 100
+			}
+			upkeep = {
+				energy = 10
+			}
+			produces = {
+				engineering_research = 30
+				physics_research = 10
+			}
+		}
+	}
+	approach = {
+		name = roz_unknowship_site_abort	#all approaches must have at least a name
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		allow = {
+		}
+		#If this fails, the Approach is greyed out
+		potential = {
+			always = yes
+		}
+		#If this fails, the Approach is not shown
+		on_select = {
+			custom_tooltip = roz_unknowship_site_abort_tooltip
+		}
+		
+		resources = {
+			#Resource table as standard
+			category = situations
+			cost = {
+				influence = 20
+			}
+			produces = {
+				engineering_research = 3
+				physics_research = 1
+			}
+		}
+	}
+	monthly_progress = {
+		base = -1
+		modifier = {
+			desc = sgt_flagship_exploration_situation_monthly_change_tooltip
+			situation_progress < 15
+			add = 1
+		}
+		modifier = {
+			desc = roz_increse_of_budget_approach
+			current_situation_approach = roz_increse_of_budget_for_the_situation
+			add = 1
+		}
+		modifier = {
+			desc = roz_assign_suigintou_to_unknowship_site_approach
+			current_situation_approach = roz_assign_suigintou_to_unknowship_site
+			add = 2
+		}
+		modifier = {
+			desc = roz_unknowship_site_abort_approach
+			current_situation_approach = roz_unknowship_site_abort
+			add = 0
+		}
+		modifier = {
+			desc = roz_unknowship_sgt_base_approach
+			owner = {
+				has_country_flag = ge_leader_suigintou_get
+			}
+			add = 0.5
+		}
+	}
+}

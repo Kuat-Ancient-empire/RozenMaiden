@@ -1,0 +1,108 @@
+
+########## specialist ##########
+
+llk_over_dimension = {   #ID
+    category = specialist                               #阶级
+    condition_string = SPECIALIST_JOB_TRIGGER           #用于检测这个工作是否可用的一系列逻辑
+    #在Stellaris\common\scripted_triggers里面
+    building_icon = building_llk_paradox_origin         #这个工作的背景建筑图标，图标位置同建筑
+    clothes_texture_index = 3                           #外表，仅影响外观
+    possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+    possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+    planet_modifier = {                                 #星球修正，同建筑
+        planet_amenities_add = 10
+        trade_value_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet.growing_species = {
+
+            }
+        }
+    }
+
+    resources = { 
+        
+        category = planet_jobs
+		produces = {
+            minerals = 12
+			alloys = 3
+            consumer_goods = 5
+            unity = 15
+            physics_research = 5
+			engineering_research = 5
+			society_research = 5
+            volatile_motes = 0.3
+            exotic_gases = 0.3
+            rare_crystals = 0.3
+            sr_dark_matter = 0.15
+            sr_zro = 0.15
+            sr_living_metal = 0.15
+            nanites = 0.15
+            sr_void_core = 0.5
+            minor_artifacts = 0.2
+            astral_threads = 0.3
+            
+		}
+		upkeep = {
+            trigger = {
+                
+            }
+            energy = 30
+			influence = 0.2
+            time = 42
+		}
+        upkeep = {
+            trigger = {
+                NOT = {
+                    has_trait = trait_lithoid
+                }
+               
+            }
+            food = 5
+        }
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+            }
+            minerals = 5
+        }
+     }                                                  #同建筑，可以添加生产/消耗等
+    #country_modifier = {}                              #同建筑，国家范围内的修正。
+    #pop_modifier = {}                                  #对于承担该职业的pop的修正
+    weight = {                                          #pop意图工作的权重，拥有高权重的pop会导致低权重的pop被替换
+        weight = 1000                                   #@指引用数值
+        modifier = {
+            factor = 0.25
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 2
+            OR = {  
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+        }   
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_thrifty
+                has_trait = trait_nuumismatic_administration
+            }   
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }           
+    }
+}

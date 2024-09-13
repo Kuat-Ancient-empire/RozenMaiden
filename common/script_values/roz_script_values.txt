@@ -1,0 +1,58 @@
+roz_mega_wanxiangtianyin_trigger_values = { #roz_tempvar备用
+    base = 1
+    max = 10
+    modifier = {
+        add = value:scripted_modifier_mult|MODIFIER|leader_skill_levels|MODIFIER|leader_initial_skill|VALUE|$roz_tempvar$|
+        capital_scope = {
+            has_building = building_llk_paradox_origin
+        }
+
+    }
+    modifier = {
+        add = 1
+        owner = {
+            check_variable = {
+                which = ge_leader_affection
+                value > 40
+            }
+        }
+    }
+    modifier = {
+        add = 1
+        owner = {
+            check_variable = {
+                which = ge_leader_affection
+                value > 50
+            }
+        }
+    }
+    modifier = {
+        add = 1
+        owner = {
+            check_variable = {
+                which = ge_leader_affection
+                value > 60
+            }
+        }
+    }
+    modifier = {
+        add = 1
+        owner = {
+            check_variable = {
+                which = ge_leader_affection
+                value > 70
+            }
+        }
+    }
+    modifier = {
+        add = 1
+        owner = {
+            check_variable = {
+                which = ge_leader_affection
+                value > 80
+            }
+        }
+    }
+    floor = yes
+}
+

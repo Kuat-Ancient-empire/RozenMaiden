@@ -1,0 +1,314 @@
+music = {
+    name = "thebirthofastar"
+    file = "thebirthofastar.ogg"
+    volume = 4
+}
+
+music = {
+    name = "gravitationalconstant"
+    file = "gravitationalconstant.ogg"
+    volume = 4
+}
+
+music = {
+    name = "sigmatauri"
+    file = "sigmatauri.ogg"
+    volume = 4
+}
+
+music = {
+    name = "luminescence"
+    file = "luminescence_endcredits.ogg"
+    volume = 4
+}
+
+music = {
+    name = "spatiallullaby"
+    file = "spatiallullaby.ogg"
+    volume = 4
+}
+
+music = {
+    name = "genesis"
+    file = "genesis.ogg"
+    volume = 4
+}
+
+music = {
+    name = "distantnebula"
+    file = "distantnebula.ogg"
+    volume = 4
+}
+
+music = {
+    name = "insearchoflife"
+    file = "insearchoflife.ogg"
+    volume = 4
+}
+
+
+music = {
+    name = "journeythroughthegalaxy"
+    file = "journeythroughthegalaxy.ogg"
+    volume = 4
+}
+
+music = {
+    name = "fasterthanlight"
+    file = "fasterthanlight.ogg"
+    volume = 4
+}
+
+music = {
+    name = "thecelestialcity"
+    file = "thecelestialcity.ogg"
+    volume = 4
+}
+
+music = {
+    name = "infinitebeing"
+    file = "infinitebeing.ogg"
+    volume = 4
+}
+
+music = {
+    name = "totheendsofthegalaxy"
+    file = "totheendsofthegalaxy.ogg"
+    volume = 4
+}
+
+music = {
+    name = "alphacentauri"
+    file = "alphacentauri.ogg"
+    volume = 4
+}
+
+music = {
+    name = "pillarsofcreation"
+    file = "pillarsofcreation.ogg"
+    volume = 4
+}
+
+music = {
+    name = "deepspacetravels"
+    file = "deepspacetravels.ogg"
+    volume = 4
+}
+
+music = {
+    name = "ridingthesolarwind"
+    file = "ridingthesolarwind.ogg"
+    volume = 4
+}
+
+music = {
+    name = "eternal_dance_of_photons"
+    file = "eternal_dance_of_photons.ogg"
+    volume = 4
+}
+music = {
+    name = "the_formless"
+    file = "the_formless.ogg"
+    volume = 4
+}
+music = {
+    name = "through_the_astral_rift"
+    file = "through_the_astral_rift.ogg"
+    volume = 4
+}
+
+music = {
+    name = "towardsutopianovaflare"
+    file = "towardsutopianovaflare.ogg"
+    volume = 4
+}
+music = {
+    name = "theimperialfleetsecondcoming"
+    file = "theimperialfleetsecondcoming.ogg"
+    volume = 4
+}
+music = {
+    name = "inmemoryofmrluminousflux"
+    file = "inmemoryofmrluminousflux.ogg"
+    volume = 4
+}
+music = {
+    name = "maintheme10"
+    file = "overlord_menumusic.ogg"
+    volume = 4
+}
+music = {
+    name = "coronationofthedarkemperor"
+    file = "coronationofthedarkemperor.ogg"
+    volume = 4
+}
+music = {
+    name = "supermassivefleet"
+    file = "supermassivefleet.ogg"
+    volume = 4
+}
+music = {
+    name = "maintheme9"
+    file = "nemesis_maintheme.ogg"
+    volume = 4
+}
+
+music = {
+    name = "unityandpaperwork"
+    file = "unityandpaperwork.ogg"
+    volume = 4
+}
+music = {
+    name = "hegemonicdominion"
+    file = "hegemonicdominion.ogg"
+    volume = 4
+}
+music = {
+    name = "calltoassembly"
+    file = "calltoassembly.ogg"
+    volume = 4
+}
+music = {
+    name = "ourheritage"
+    file = "ourheritage.ogg"
+    volume = 4
+}
+music = {
+    name = "amongtheruins"
+    file = "amongtheruins.ogg"
+    volume = 4
+}
+music = {
+    name = "findingsanctuary"
+    file = "findingsanctuary.ogg"
+    volume = 4
+}
+music = {
+    name = "maintheme7"
+    file = "abyss.ogg"
+    volume = 4
+}
+music = {
+    name = "maintheme6"
+    file = "hiddenmotives.ogg"
+    volume = 4
+}
+music = {
+    name = "darkminds"
+    file = "darkminds.ogg"
+    volume = 4
+}
+music = {
+    name = "themarchofprofits"
+    file = "themarchofprofits.ogg"
+    volume = 4
+}
+music = {
+    name = "themasterplan"
+    file = "themasterplan.ogg"
+    volume = 4
+}
+music = {
+    name = "onegalaxy"
+    file = "onegalaxy.ogg"
+    volume = 4
+}
+music = {
+    name = "adagiostellar"
+    file = "adagiostellar.ogg"
+    volume = 4
+}
+music = {
+    name = "thencomeslight"
+    file = "thencomeslight.ogg"
+    volume = 4
+}
+music = {
+    name = "hostilefleetdetected"
+    file = "hostilefleetdetected.ogg"
+    volume = 4
+}
+music = {
+    name = "robotichsapiens"
+    file = "robo_sapiens.ogg"
+    volume = 4
+}
+music = {
+    name = "syntheticgod"
+    file = "syntheticgod.ogg"
+    volume = 4
+}
+music = {
+    name = "cradleofthegalaxy"
+    file = "cradleofthegalaxy.ogg"
+    volume = 4
+}
+
+music = {
+    name = "theimperialfleet"
+    file = "theimperialfleet.ogg"
+    volume = 4
+}
+
+music = {
+    name = "inmemoryofmercedesromero"
+    file = "inmemoryofmercedesromero.ogg"
+    volume = 4
+}
+
+music = {
+    name = "anewdawn"
+    file = "anewdawn.ogg"
+    volume = 4
+}
+
+music = {
+    name = "towardsutopia"
+    file = "towardsutopia.ogg"
+    volume = 4
+}
+music = {
+    name = "assemblingthefleet"
+    file = "assemblingthefleet.ogg"
+    volume = 4
+}
+
+music = {
+    name = "theawakened"
+    file = "theawakened.ogg"
+    volume = 4
+}
+
+music = {
+    name = "thetitan"
+    file = "thetitan.ogg"
+    volume = 4
+}
+
+music = {
+    name = "thelaststand"
+    file = "thelaststand.ogg"
+    volume = 4
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

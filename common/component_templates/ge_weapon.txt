@@ -1,0 +1,1240 @@
+#ge_energy_torpedo#
+
+weapon_component_template = {
+	key = "GE_GRAVITY_BURST"
+	size = large
+	##entity = "turret_energy_torpedo_#entity"
+	type = instant
+	
+	icon = "GFX_ship_part_ge_gravity_burst"
+	icon_frame = 1
+	
+    power = -250
+	prerequisites = { "tech_ge_energy_torpedo" }
+	component_set = "GE_GRAVITY_BURST"
+	projectile_gfx = "ge_energy_torpedo_projectile"
+	
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth  }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 180
+			energy = 180
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 0.2
+			alloys = 0.02
+		}
+	}
+
+    damage = { min = 1790 max = 2550 }
+	#windup = { min = 110 max = 130 }
+	windup = { min = 100 max = 200 }
+
+	total_fire_time = 60
+	#total_fire_time = 200
+
+	range = 235.0
+	accuracy = 1.0
+	tracking = 0.75
+	
+	armor_penetration = 0.75
+	#shield_penetration = 0.0
+	shield_damage = 2.75
+	armor_damage = 1.25
+	hull_damage = 1.75
+	size_damage_factor = 0.6
+
+    tags = { weapon_type_energy weapon_type_ge_void_energy l_slot }
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+	}
+}
+
+#
+#ge_point_defense
+#
+
+weapon_component_template = {
+	key = "GE_PD"
+	size = point_defence
+	##entity = "turret_point_defence_#entity"
+	type = instant
+	
+	icon = "GFX_ship_part_ge_pd"
+	icon_frame = 1
+	
+    power = -35	
+	prerequisites = { "tech_ge_pd" }  ###
+	component_set = "GE_PD"
+	projectile_gfx = "ge_pd_projectile"
+	
+	ai_tags = { weapon_role_point_defense screen }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 35
+			energy = 35
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 0.05
+			alloys = 0.01
+		}
+	}
+
+    damage = { min = 5.0 max = 20.0 }
+	windup = { min = 3.0 max = 5.0 }
+	
+	total_fire_time = 1
+	
+	range = 85.00
+	accuracy = 1.00
+	tracking = 1.00
+	
+	hull_damage = 1.5
+	#shield_damage = 1.0
+	#armor_damage = 1.0
+	shield_penetration = 1.25               
+	armor_penetration = 1.25 
+
+    tags = { weapon_type_point_defense  weapon_type_ge_void_energy weapon_type_energy }
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+
+###ge_xl_beam##
+
+weapon_component_template = {
+	key = "GE_XL_BEAM"
+	size = extra_large
+	type = instant
+	
+	icon = "GFX_ship_part_ge_xl_beam"
+	icon_frame = 1
+	
+	firing_arc = 90
+	min_range = 10
+	static_rotation = no
+	use_ship_kill_target = no
+	power = -800
+	prerequisites = { "tech_ge_xl_beam" }
+	component_set = "GE_XL_BEAM"
+	projectile_gfx = "ge_xl_beam_projectile"
+	tags = { weapon_type_energy weapon_type_ge_void_energy }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 200
+			rare_crystals = 10
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 3
+			alloys = 0.5
+		}
+	}
+
+	damage = { min = 1453.0 max = 11187.0 }
+	#windup = { min = 80.0 max = 100.0 }
+	windup = { min = 180.0 max = 200.0 }
+	total_fire_time = 70
+
+	
+	
+	range = 280.0
+	accuracy = 1.0
+	tracking = 1.0
+	
+	shield_damage = 1.75
+	armor_damage = 3.00
+	hull_damage = 2.50
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+
+##T_beam
+
+weapon_component_template = {
+	key = "GE_T_BEAM"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+	
+	icon = "GFX_ship_part_ge_t_beam"
+	icon_frame = 1
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1200			
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 5
+
+		}
+	}
+
+	firing_arc = 50.0
+	min_range = 20.0
+	static_rotation = no
+	use_ship_kill_target = no
+
+	tags = { weapon_type_energy weapon_type_ge_void_energy t_slot }
+	projectile_gfx = "ge_t_beam_projectile"
+	prerequisites = { "tech_ge_t_beam" }
+	component_set = "GE_T_BEAM"
+
+	power = -3000
+	damage = { min = 20880.50 max = 64880.00 }
+	windup = { min = 405.0 max = 515.0 }
+	#windup = { min = 105.0 max = 115.0 }
+	total_fire_time = 110
+	range = 330.0
+	accuracy = 1.0
+	tracking = 1.0
+
+	shield_penetration = 1.0
+	armor_penetration = 1.0
+	shield_damage = 2.00
+	armor_damage = 2.50
+	hull_damage = 2.50
+
+	ai_tags = { weapon_role_artillery }	
+	ai_tag_weight = 0
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+
+###ge_l_laser_cannon
+
+weapon_component_template = {
+	key = "GE_SMALL_LASER_CANNON"
+	size = small
+	#entity = "small_laser_gun_#entity"
+	type = instant
+	
+	icon = "GFX_ship_part_ge_laser_cannon"
+	icon_frame = 1
+	
+    power = -75	
+	prerequisites = { "tech_ge_laser_cannon" }  ###
+	component_set = "GE_LASER_CANNON"
+	projectile_gfx = "ge_laser_s_cannon_projectile"
+	
+	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 75
+			energy = 75
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 0.25
+			alloys = 0.02
+		}
+	}
+
+    damage = { min = 280.0 max = 380.0 }
+	#windup = { min = 35.0 max = 45.0 }
+	windup = { min = 75.0 max = 85.0 }
+	
+	total_fire_time = 20
+	
+	range = 150.00 
+	accuracy = 1.00
+	tracking = 0.75
+	
+	hull_damage = 2.00
+	shield_damage = 1.25
+	armor_damage = 2.50
+
+    tags = { weapon_type_energy weapon_type_ge_void_energy s_slot }
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+
+weapon_component_template = {
+	key = "GE_MEDIUM_LASER_CANNON"
+	size = medium
+	#entity = "medium_laser_gun_#entity"
+	type = instant
+	
+	icon = "GFX_ship_part_ge_laser_cannon"
+	icon_frame = 1
+	
+    power = -105	
+	prerequisites = { "tech_ge_laser_cannon" }  ###
+	component_set = "GE_LASER_CANNON"
+	projectile_gfx = "ge_laser_m_cannon_projectile"
+	
+	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 105
+			energy = 105
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 0.3
+			alloys = 0.025
+		}
+	}
+
+    damage = { min = 400.0 max = 500.0 }
+	#windup = { min = 35.0 max = 45.0 }
+	windup = { min = 75.0 max = 85.0 }
+
+	total_fire_time = 20
+	
+	range = 180.00
+	accuracy = 1.00
+	tracking = 0.75
+
+	hull_damage = 2.00
+	shield_damage = 1.25
+	armor_damage = 2.50
+
+    tags = { weapon_type_energy weapon_type_ge_void_energy m_slot }
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+	
+}
+
+weapon_component_template = {
+	key = "GE_LARGE_LASER_CANNON"
+	size = large
+	#entity = "large_laser_gun_#entity"
+	type = instant
+	
+	icon = "GFX_ship_part_ge_laser_cannon"
+	icon_frame = 1
+	
+    power = -155	
+	prerequisites = { "tech_ge_laser_cannon" }  ###
+	component_set = "GE_LASER_CANNON"
+	projectile_gfx = "ge_laser_l_cannon_projectile"
+	
+	ai_tags = { weapon_role_anti_armor l_slot }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 155
+			energy = 155
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 0.35
+			alloys = 0.03
+		}
+	}
+
+    damage = { min = 520.0 max = 620.0 }
+	#windup = { min = 35.0 max = 45.0 }
+	windup = { min = 75.0 max = 85.0 }
+
+	total_fire_time = 20
+	
+	range = 210.00
+	accuracy = 1.00
+	tracking = 0.75
+
+	hull_damage = 2.00
+	shield_damage = 1.25
+	armor_damage = 2.50
+
+    tags = { weapon_type_energy weapon_type_ge_void_energy }
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+
+##ge_laser_gun
+
+weapon_component_template = {
+	key = "GE_SMALL_KINETIC_GUN"
+	size = small
+	#entity = "small_kinetic_gun_#entity"
+	type = instant
+	color = { 1.0  0.1  0.8  1.7 }
+	icon = "GFX_ship_part_ge_kinetic_gun"
+	icon_frame = 1
+	
+    power = -65	
+	prerequisites = { "tech_ge_kinetic_gun" }  ###
+	component_set = "GE_KINETIC_GUN"
+	projectile_gfx = "ge_kinetic_s_gun_projectile"
+	
+	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 65
+			energy = 65
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 0.20
+			alloys = 0.025
+		}
+	}
+
+    damage = { min = 30.0 max = 330.0 }
+	#windup = { min = 15.0 max = 25.0 }
+	windup = { min = 25.0 max = 45.0 }
+
+	total_fire_time = 10
+	
+	range = 120.00 
+	accuracy = 1.00
+	tracking = 0.50
+	
+	hull_damage = 1.25
+	shield_damage = 2.5
+	armor_damage = 1.25
+
+    tags = { weapon_type_kinetic weapon_type_ge_void_energy s_slot }
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+weapon_component_template = {
+	key = "GE_MEDIUM_KINETIC_GUN"
+	size = medium
+	#entity = "medium_kinetic_gun_#entity"
+	type = instant
+	color = { 1.0  0.1  0.8  1.7 }
+	icon = "GFX_ship_part_ge_kinetic_gun"
+	icon_frame = 1
+	
+    power = -95
+	prerequisites = { "tech_ge_kinetic_gun" }  ###
+	component_set = "GE_KINETIC_GUN"
+	projectile_gfx = "ge_kinetic_m_gun_projectile"
+	
+	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 95
+			energy = 95
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 0.25
+			alloys = 0.03
+		}
+	}
+
+    damage = { min = 40.0 max = 440.0 }
+	#windup = { min = 15.0 max = 25.0 }
+	windup = { min = 25.0 max = 45.0 }
+
+	total_fire_time = 10
+
+	range = 150.00
+	accuracy = 1.00
+	tracking = 0.50
+
+	hull_damage = 1.25
+	shield_damage = 2.5
+	armor_damage = 1.25
+
+    tags = { weapon_type_kinetic weapon_type_ge_void_energy m_slot }
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+
+weapon_component_template = {
+	key = "GE_LARGE_KINETIC_GUN"
+	size = large
+	#entity = "large_kinetic_gun_#entity"
+	type = instant
+	color = { 1.0  0.1  0.8  1.7 }
+	icon = "GFX_ship_part_ge_kinetic_gun"
+	icon_frame = 1
+	
+    power = -145
+	prerequisites = { "tech_ge_kinetic_gun" }  ###
+	component_set = "GE_KINETIC_GUN"
+	projectile_gfx = "ge_kinetic_l_gun_projectile"
+	
+	ai_tags = { weapon_role_anti_shield l_slot}
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 145
+			energy = 145
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 0.6
+			alloys = 0.035
+		}
+	}
+
+    damage = { min = 50.0 max = 550.0 }
+	#windup = { min = 15.0 max = 25.0 }
+	windup = { min = 25.0 max = 45.0 }
+
+	total_fire_time = 10
+
+	range = 180.00
+	accuracy = 1.00
+	tracking = 0.50
+
+	hull_damage = 1.25
+	shield_damage = 2.5
+	armor_damage = 1.25
+
+    tags = { weapon_type_kinetic weapon_type_ge_void_energy }
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+
+weapon_component_template = {
+	key = "ge_bhmissile"
+	size = torpedo			
+	type = missile		
+	#entity = "turret_torpedo_#entity"
+	icon = GFX_ge_bhmissile
+	icon_frame = 1	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 100
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 0.5
+		}
+	}
+	
+	power = -120							
+	damage = { min = 240 max = 640 }		
+	#windup = { min = 10 max = 30 }
+	windup = { min = 20 max = 50 }
+	total_fire_time = 30					
+	hull_damage = 1.75
+	armor_damage = 2.00
+	shield_penetration = 1.0                                                
+	tracking = 0.35                        
+	range = 250.00                         
+	accuracy = 1.00                        
+	missile_health = 100				   
+	missile_shield = 30				   
+	missile_armor = 30				   
+	missile_evasion = 0.9					   
+	missile_retarget_range = 100		   
+	missile_speed = 40
+	size_damage_factor = 0.3			   
+	
+	prerequisites = { tech_ge_bhmissile } 
+	component_set = "ge_bhmissile"	
+	projectile_gfx = "large_torpedo_03"							
+	tags = { weapon_type_explosive weapon_type_ge_void_energy g_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+
+weapon_component_template = {
+	key = "ge_wtorpedo"
+	size = torpedo			
+	type = missile		
+	#entity = "turret_torpedo_#entity"
+	icon = GFX_ge_wtorpedo
+	icon_frame = 1	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 160
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 0.7
+		}
+	}
+	
+	power = -400							
+	damage = { min = 17900 max = 19400 }		
+	#windup = { min = 540 max = 560 }
+	windup = { min = 740 max = 860 }
+	total_fire_time = 1000					
+	hull_damage = 2.5
+	armor_damage = 1.750
+	shield_penetration = 1.0                                                
+	tracking = 0.35                        
+	range = 250.00                         
+	accuracy = 1.00                        
+	missile_health = 590				   
+	missile_shield = 32				   
+	missile_armor = 32			   
+	missile_evasion = 0.9					   
+	missile_retarget_range = 150		   
+	missile_speed = 20
+	size_damage_factor = 0.75		   
+	
+	prerequisites = { tech_ge_wtorpedo } 
+	component_set = "ge_wtorpedo"	
+	projectile_gfx = "large_torpedo_03"							
+	tags = { weapon_type_explosive weapon_type_ge_void_energy g_slot }
+	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+
+strike_craft_component_template = {
+	key = "ge_strike_craft_fighter"		
+	size = LARGE
+	icon = GFX_ge_strike_craft_fighter
+	#entity = "fighter_#entity"				
+
+
+	power = -200
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 200
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	count = 2							
+	regeneration_per_day = 0.1
+	launch_time = 1						
+
+	damage = { min = 15 max = 45 }		
+	cooldown = 0.5					
+	range = 40							
+	engagement_range = 500			
+	accuracy = 1.00							
+	tracking = 0.90							
+
+	health = 1800					
+	armor = 500							
+	shield = 4500						
+	evasion = 0.97						
+
+	speed = 1050						
+	rotation_speed = 0.70				
+	acceleration = 1.60					
+	
+	hull_damage = 1.0
+	shield_penetration = 1.15                 
+	armor_penetration = 1.15              
+
+	ship_behavior = "fighters_behavior"
+	
+	weapon_type = point_defence
+
+	projectile_gfx = "toxic_god_strike_craft_weapon"
+	icon_frame = 1
+	component_set = "ge_strike_craft_fighter"	
+	prerequisites = { "tech_ge_strike_craft_fighter" }
+
+	point_defence_targets = { "missile" "strike_craft" }
+	tags = { weapon_type_strike_craft weapon_type_ge_void_energy }
+
+	ai_tags = { weapon_role_point_defense carrier }
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+
+strike_craft_component_template = {
+	key = "ge_strike_craft_bomber"		
+	size = LARGE							
+	icon = GFX_ge_strike_craft_bomber
+	#entity = "bomber_#entity"				
+
+
+	power = -240
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 250
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	count = 2							
+	regeneration_per_day = 0.1
+	launch_time = 1						
+
+	damage = { min = 85 max = 850 }		
+	cooldown = 7					
+	range = 40						
+	engagement_range = 500				
+	accuracy = 0.80							
+	tracking = 1.0					
+
+	health = 4330				
+	armor = 5060			
+	shield = 5060					
+	evasion = 0.90					
+
+	speed = 750						
+	rotation_speed = 0.70					
+	acceleration = 1.35					
+	
+	hull_damage = 1.25
+	armor_damage = 1.75
+	shield_penetration = 1.00
+
+	ship_behavior = "bombers_behavior"   
+	
+	weapon_type = instant				
+
+	projectile_gfx = "plasma_cannon_s"	
+	icon_frame = 1
+	component_set = "ge_strike_craft_bomber"	
+	prerequisites = { "tech_ge_strike_craft_bomber" }	
+
+	tags = { weapon_type_strike_craft weapon_type_ge_void_energy }
+	ai_tags = { weapon_role_anti_armor carrier }
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+
+strike_craft_component_template = {
+	key = "ge_strike_craft_xuefeng"		
+	size = LARGE							
+	icon = GFX_ge_strike_craft_xuefeng
+	#entity = "bomber_#entity"				
+
+
+	power = -240
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 250
+			sr_void_core = 1
+		}		
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	count = 1							
+	regeneration_per_day = 0.1
+	launch_time = 1						
+
+	damage = { min = 1790 max = 1940 }		
+	cooldown = 11					
+	range = 100						
+	engagement_range = 500				
+	accuracy = 1.00							
+	tracking = 1.0					
+
+	health = 5560				
+	armor = 6300			
+	shield = 6300					
+	evasion = 0.92					
+
+	speed = 850					
+	rotation_speed = 0.70					
+	acceleration = 1.35					
+	
+	hull_damage = 1.75
+	armor_damage = 1.50
+	shield_penetration = 1.0
+
+	ship_behavior = "bombers_behavior"   
+	
+	weapon_type = instant				
+
+	projectile_gfx = large_missile
+	icon_frame = 1
+	component_set = "ge_strike_craft_xuefeng"	
+	prerequisites = { "tech_ge_strike_craft_xuefeng" }	
+
+	tags = { weapon_type_strike_craft weapon_type_ge_void_energy }
+	ai_tags = { weapon_role_anti_armor carrier }
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+
+#W slots
+weapon_component_template = { #死亡流星
+	key = "GE_PLANET_KILLER_Crasher"
+	#entity = "invisible_turret_#entity"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+
+	prerequisites = { tech_ge_planet_killer }
+
+	windup = { min = 30.0 max = 30.0 }
+	total_fire_time = 30
+
+	icon = GFX_ship_part_ge_planet_killer
+	icon_frame = 1
+
+	size_restriction = { colossus Ge_Ragnarok }
+	component_set = "GE_PLANET_KILLER_Crasher"
+
+	planet_destruction_gfx = "shatter_planet_gfx"
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+		
+		
+	}
+}
+
+weapon_component_template = { # World Cracker
+	key = "GE_PLANET_KILLER_CRACKER"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_pk_cracker" }
+
+	icon = GFX_ship_part_world_cracker
+	icon_frame = 1
+
+	size_restriction = { Ge_Ragnarok }
+	component_set = "GE_PLANET_KILLER_CRACKER"
+	windup = { min = 30.0 max = 30.0 }
+	total_fire_time = 30
+	planet_destruction_gfx = "shatter_planet_gfx"
+
+	ai_weight = {
+		factor = 2
+	}
+}
+
+weapon_component_template = { # Pacifier
+	key = "GE_PLANET_KILLER_SHIELDER"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_pk_shielder" }
+
+	icon = GFX_ship_part_global_pacifier
+	icon_frame = 1
+	windup = { min = 30.0 max = 30.0 }
+	total_fire_time = 30
+	size_restriction = { Ge_Ragnarok }
+	component_set = "GE_PLANET_KILLER_SHIELDER"
+
+	planet_destruction_gfx = "global_pacifier_gfx"
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 8
+			is_pacifist = yes
+		}
+	}
+}
+
+weapon_component_template = { # Neutron Beam
+	key = "GE_PLANET_KILLER_NEUTRON"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_pk_neutron" }
+
+	icon = GFX_ship_part_neutron_sweep
+	icon_frame = 1
+	windup = { min = 30.0 max = 30.0 }
+	total_fire_time = 30
+	size_restriction = { Ge_Ragnarok }
+	component_set = "GE_PLANET_KILLER_NEUTRON"
+
+	planet_destruction_gfx = "neutron_planet_gfx"
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 5
+			is_homicidal = no
+		}
+	}
+}
+
+weapon_component_template = { # God Ray
+	key = "GE_PLANET_KILLER_GODRAY"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_pk_godray" }
+
+	icon = GFX_ship_part_divine_enforcer
+	icon_frame = 1
+	windup = { min = 30.0 max = 30.0 }
+	total_fire_time = 30
+	size_restriction = { Ge_Ragnarok }
+	component_set = "GE_PLANET_KILLER_GODRAY"
+
+	planet_destruction_gfx = "god_ray_gfx"
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 8
+			is_spiritualist = yes
+		}
+	}
+}
+
+weapon_component_template = { # Nanobot Assimilation
+	key = "GE_PLANET_KILLER_NANOBOTS"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_pk_nanobots" }
+
+	icon = GFX_ship_part_nanobot_diffuser
+	icon_frame = 1
+	windup = { min = 30.0 max = 30.0 }
+	total_fire_time = 30
+	size_restriction = { Ge_Ragnarok }
+	component_set = "GE_PLANET_KILLER_NANOBOTS"
+
+	planet_destruction_gfx = "assimilation_nanobots_gfx"
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 10
+			has_authority = auth_machine_intelligence
+		}
+	}
+}
+
+weapon_component_template = { # Deluge
+	key = "GE_PLANET_KILLER_DELUGE"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+
+	valid_for_country = {
+		has_ascension_perk = ap_hydrocentric
+	}
+
+	icon = GFX_ship_part_deluge
+	icon_frame = 1
+	windup = { min = 30.0 max = 30.0 }
+	total_fire_time = 30
+	size_restriction = { Ge_Ragnarok }
+	component_set = "GE_PLANET_KILLER_DELUGE"
+
+	planet_destruction_gfx = "planet_deluge_gfx"
+
+	ai_weight = {
+		factor = 10
+	}
+}
+
+weapon_component_template = {
+	key = "GE_PLANET_KILLER_TOXIFIER"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+
+	icon = GFX_ship_part_nanobot_diffuser
+	icon_frame = 1
+	windup = { min = 30.0 max = 30.0 }
+	total_fire_time = 30
+	size_restriction = { Ge_Ragnarok }
+	component_set = "GE_PLANET_KILLER_TOXIFIER"
+
+	planet_destruction_gfx = "planet_toxifier_gfx"
+}
+
+weapon_component_template = { # Archaeo Devolving Beam
+	key = "GE_PLANET_KILLER_DEVOLUTION"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_archaeo_pk_devolving_beam" }
+
+	icon = GFX_ship_part_devolution_beam
+	icon_frame = 1
+	windup = { min = 30.0 max = 30.0 }
+	total_fire_time = 30
+	size_restriction = { Ge_Ragnarok }
+	component_set = "GE_PLANET_KILLER_DEVOLVER"
+
+	planet_destruction_gfx = "neutron_planet_gfx"
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 3
+			is_homicidal = no
+		}
+		modifier = {
+			factor = 3
+			has_ascension_perk = ap_archaeoengineers
+		}
+	}
+}
+
+#########################################################################
+##########################################################################
+###########################################################################
+############################################################################
+weapon_component_template = { #deployer
+	key = "roz_juggernaut_wanxiang_deployer"
+	#entity = "invisible_turret_#entity"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+
+	#prerequisites = { tech_ge_planet_killer }
+
+	windup = { min = 4.0 max = 4.0 }
+	total_fire_time = 2
+	windup = { min = 30.0 max = 30.0 }
+	total_fire_time = 30
+	icon = GFX_ship_part_reinforcement_defense_system_2
+	icon_frame = 1
+
+	size_restriction = { roz_juggernaut_wanxiang }
+	component_set = "roz_juggernaut_wanxiang_deployer"
+
+	planet_destruction_gfx = "shatter_planet_gfx"
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+
+
+	}
+}
+
+
+utility_component_template = {
+
+}
+
+
+
+

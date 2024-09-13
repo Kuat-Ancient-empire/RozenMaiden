@@ -1,0 +1,30 @@
+#殖民地类型
+
+#门之钥
+col_roz_YS_planet = {
+	icon = GFX_colony_type_col_roz_YS_planet
+
+	potential = {
+		is_real_roz_YS_planet = yes
+		is_special_colony_type = no
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = -0.15
+
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+	}
+
+	weight_modifier = {
+		base = 100
+	}
+}
+
+
+
+
+
+
+

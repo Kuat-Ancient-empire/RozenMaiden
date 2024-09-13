@@ -1,0 +1,43 @@
+﻿l_simp_chinese:
+###############################
+
+ concept_roz_rozen_maiden: "§YRozen-Maiden§!"
+ concept_roz_rozen_maiden_desc: "蔷薇少女，是传说中拥有生命的不可思议人偶，制作者是谜样的人偶师['concept_roz_rozen']（Rozen）。制作非常细腻，有着宛如真人的拟真度，但从未在市面上流通过，也不知道持有人是谁。失去蔷薇圣母后身体会变得与一般人偶相同。"
+
+ concept_roz_rozen: "§Y罗真§!"
+ concept_roz_rozen_desc: "神秘的天才人偶师，蔷薇少女的创造者(父亲大人)。他曾经失去了女儿，因此渴望通过这些炼金人偶创造出自己心中完美无瑕的少女['concept_roz_alice']，然而却由于没有一个能达到他心目“爱丽丝”的境界，而在悲叹之余销声匿迹，离开了他心爱的\"女儿们\"。最终罗真迷失在长久的岁月中失去了作为人类的本质和存在的形式。\n——是位不合格的父亲呢……"
+
+ concept_roz_alice_game: "§RAlice-Game§!"
+ concept_roz_alice_game_desc: "（此处引自拉普拉斯魔['concept_roz_Demon_de_Laplace']口述）\n爱丽丝游戏，蔷薇少女的宿命，必须互相战斗夺取彼此的[' concept_roz_rosa_mystica']，最终获胜取得全部蔷薇圣母的蔷薇少女可成为完美少女——Alice，见到父亲大人。"
+
+ concept_roz_alice: "§RAlice§!"
+ concept_roz_alice_desc: "爱丽丝，只在罗真心中存在的纯洁无瑕少女。是蔷薇少女们所追求的目标，只有在['concept_roz_alice_game']中获胜才能成为爱丽丝、见到父亲。"
+
+ concept_roz_rosa_mystica: "§PRosa-Mystica§!"
+ concept_roz_rosa_mystica_desc: "蔷薇圣母，令人惊叹的炼金物品，是蔷薇少女们生命的来源，也是罗真的心之碎片。在蔷薇圣母被夺走后 连同记忆的一部分、[' concept_roz_jinnkouseirei']、武器、技能等都会被新主人所获取。如果蔷薇圣母十分抗拒新主人的话，可能会带来一系列排斥反应，甚至可能使新主人死亡。"
+
+ concept_roz_jinnkouseirei: "§Y人工精霊§!"
+ concept_roz_jinnkouseirei_desc: "人工精灵，蔷薇少女所操控的精灵，使魔一般的存在，且拥有不可思议的力量，几乎每个蔷薇少女都有一只，可以通过夺取[' concept_roz_rosa_mystica']的方式得到多只。职责是帮助蔷薇少女寻找媒介，战斗时也是蔷薇少女不可或缺的帮手，还有着多种功能。"
+
+ concept_roz_Demon_de_Laplace:"§L拉普拉斯魔§!"
+ concept_roz_Demon_de_Laplace_desc:"外形是一只优雅的兔子，说话从来不会张嘴，但是会发出声音。拉普拉斯妖可以认为是无所不能的存在，Alice Game的解说员，但不晓得站在哪一方。祂自称是爱丽丝游戏的监督者，罗真的老友，辅助['concept_roz_alice_game']的进行。"
+
+
+ concept_roz_kaban:"§H皮箱§!"
+ concept_roz_kaban_desc:"绝大多数蔷薇少女沉睡时所放置的箱子，其上镶着金色蔷薇花，蔷薇少女必须在皮箱内睡觉才能获得真正的休息，里面可能有着一些附带的物品。"
+
+ concept_chronos_storm:"$chronos_storm$"
+ concept_chronos_storm_desc:"§R这种宇宙风暴似乎不是自然形成的。究竟是何种事物引发了这世界末日般的恐怖威胁？在这恐怖的时空畸变里面没有人能够侥幸获益；光是幸存下去就已经谢天谢地了。§!"
+
+
+
+
+
+
+
+
+
+
+
+
+

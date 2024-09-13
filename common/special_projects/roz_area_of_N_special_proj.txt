@@ -1,0 +1,37 @@
+
+#N之领域见闻录
+special_project = {		####王座守卫
+    key = "roz_chronicle_of_AoN_proj_prise_the_sun"
+    desc = {
+        text = roz_chronicle_of_AoN_proj_prise_the_sun_DESC
+        trigger = { }
+    }
+    location = no
+    #cost = 14800
+    #tech_department = engineering_technology
+    days_to_research = 90
+    event_chain = roz_chronicle_of_AoN_proj_chain
+    picture = GFX_evt_
+    icon = gfx/interface/icons/situation_log/situation_log
+    event_scope = ship_event
+    requirements = {
+    	shipclass_military = 1
+        has_trait = leader_trait_ge_mercury_lamp
+    }
+    on_success = {
+        hidden_effect = {
+
+        }
+        owner = {
+
+        }
+
+    }
+}
+
+
+
+
+
+
+

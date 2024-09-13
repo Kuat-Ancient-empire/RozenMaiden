@@ -1,0 +1,68 @@
+Q_sgt = {
+	damage = 4.0
+	morale = 1.5
+	morale_damage = 1.5
+	collateral_damage = 0.1
+	war_exhaustion = 0.005
+	has_species = no
+	health = 1.250
+	time = 18
+	icon = GFX_ge_army_Q_sgt
+	resources = {
+		category = armies
+		cost = {
+			minerals = 5
+			alloys = 5
+			energy = 30
+			sr_rosa_mystica = 5
+		}
+		upkeep = {
+			energy = 2
+			alloys = 1
+			minerals = 1
+		}
+	}
+	potential = {
+		owner = {
+			
+				has_country_flag = ge_leader_suigintou_get
+				has_country_flag = q_sgt_army_get
+
+			
+			# resource_stockpile_compare = {
+			# 	resource = sr_rosa_mystica
+			# 	value >= 1
+			# }
+		}
+	}
+	army_modifier = {
+		army_defense_health_mult = 0.1
+	}
+}
+
+Q_titan_sgt = {
+	damage = 100.0
+	morale = 100
+	morale_damage = 50
+	collateral_damage = 0.1
+	war_exhaustion = 0.005
+	has_species = no
+	health = 100.0
+	time = 18
+	icon = GFX_ge_army_Q_sgt
+	resources = {
+		category = armies
+		cost = {
+			minerals = 5
+			alloys = 5
+			energy = 30
+			sr_rosa_mystica = 0.3
+		}
+		upkeep = {
+			
+		}
+	}
+	potential = {
+		always = no
+	}
+}

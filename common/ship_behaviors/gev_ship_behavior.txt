@@ -1,0 +1,127 @@
+ship_behavior = {
+	name = "gev_swarm_60"
+	preferred_attack_range = 50
+	formation_distance = 50
+	return_to_formation_distance = 60
+	source_target_anchor_factor = 1.0
+	combat_target_anchor = root
+
+	collision_awareness = 0.3
+	collision_strafe = 0.4							#collision_strafe allows the ship to move in any direction while colliding with another
+	collision_radius = 0.6
+	attack_move_pattern = orbit
+	passive_move_pattern = charge
+
+	desc = "gev_swarm_60_DESC"
+}
+
+ship_behavior = {
+	name = "gev_picket_90"
+
+	preferred_attack_range = 80
+	formation_distance = 80				#when orbing/following ship will try to keep this distance to assigned position
+	return_to_formation_distance = 90	#when attacking the ship will switch to passive mode if distance to assigned position is greater that this
+
+	collision_awareness = 0.5			#how much we try to avoid other ships
+	collision_strafe = 0.5				#collision_strafe allows the ship to move in any direction while colliding with another
+	collision_radius = 0.7
+
+	attack_move_pattern = stay_at_range			#stationary/charge/follow/stationary/none
+	passive_move_pattern = charge
+
+	desc = "gev_picket_90_DESC"
+}
+
+ship_behavior = {
+	name = "gev_line_120"
+	preferred_attack_range = median		#max/min/median/12/412..	#this is the distance to target the ship wants to keep when attacking
+
+	formation_distance = median			#when orbing/following ship will try to keep this distance to assigned position
+	#source_target_anchor_factor = 1.0
+	return_to_formation_distance = max	#when attacking the ship will switch to passive mode if distance to assigned position is greater that this
+	combat_target_anchor = root
+	collision_awareness = 0.4
+	collision_radius = 2
+	collision_strafe = 2.5		#collision_strafe allows the ship to move in any direction while colliding with another
+
+
+
+	attack_move_pattern = stay_at_range			#stationary/charge/follow/stationary/none
+	passive_move_pattern = stay_at_range
+
+	desc = "gev_line_120_DESC"
+}
+
+ship_behavior = {
+	name = "gev_artillery_150"
+	preferred_attack_range = max
+	formation_distance = median
+	return_to_formation_distance = max
+	source_target_anchor_factor = 1.0
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 2
+	collision_strafe = 2.5
+	attack_move_pattern = maintain_distance
+	passive_move_pattern = stay_at_range
+
+	desc = "gev_artillery_150_DESC"
+}
+
+ship_behavior = {
+	name = "gev_carrier_200"
+	preferred_attack_range = max
+	formation_distance = 500
+	return_to_formation_distance = max
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.7
+	collision_radius = 0.3						#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 0.4							#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = stay_at_range
+
+	desc = "gev_carrier_200_DESC"
+}
+
+ship_behavior = {
+	name = "gev_platform"
+	preferred_attack_range = max
+	formation_distance = 40
+	return_to_formation_distance = 20
+	collision_awareness = 0.4
+	collision_radius = 0.5							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 0.5							#collision_strafe allows the ship to move in any direction while colliding with another
+
+	attack_move_pattern = stationary
+	passive_move_pattern = none
+
+	desc = "gev_platform_DESC"
+}
+
+
+ship_behavior = {
+	name = "gev_colossus"
+
+	preferred_attack_range = 0
+	formation_distance = 0
+	return_to_formation_distance = 0
+
+	collision_awareness = 1
+	collision_strafe = 1
+	collision_radius = 1
+
+	attack_move_pattern = none
+	passive_move_pattern = none
+
+	ignore_combat_movement = yes
+
+	desc = "COLOSSUS_BEHAVIOR_DESC"
+}
+
+
+
+
+
