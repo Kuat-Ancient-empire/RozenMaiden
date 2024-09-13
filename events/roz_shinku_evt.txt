@@ -32,7 +32,7 @@ country_event = {
     diplomatic = yes
     picture_event_data = {
         portrait = event_target:ge_leader
-        room = ge_sgt_main_room
+         room = rge_sgt_main_room
     }
     immediate = {
         get_ge_leader_target = {
@@ -233,7 +233,7 @@ country_event = {
     diplomatic = yes
     picture_event_data = {
         portrait = event_target:ge_leader
-        room = ge_sgt_main_room
+         room = rge_sgt_main_room
     }
     is_triggered_only = yes
     trigger = {
@@ -288,7 +288,7 @@ country_event = {
     diplomatic = yes
     picture_event_data = {
         portrait = event_target:ge_leader
-        room = ge_sgt_main_room
+         room = rge_sgt_main_room
     }
     trigger = {
         is_ai = no
@@ -402,7 +402,7 @@ country_event = {
     diplomatic = yes
     picture_event_data = {
         portrait = event_target:
-        room = ge_sgt_main_room
+         room = rge_sgt_main_room
     }
     trigger = {
         #has_country_flag = ge_leader_suigintou_get
@@ -828,7 +828,7 @@ country_event = {
     title = "roz_shinku_evt.425.title"
     desc = "roz_shinku_evt.425.desc"
     picture_event_data = {
-        room = roz_junn_room
+         room = roz_junn_room
     }
     diplomatic = yes
     trigger = {
@@ -854,7 +854,7 @@ country_event = {
     title = "roz_shinku_evt.430.title"
     desc = "roz_shinku_evt.430.desc"
     picture_event_data = {
-        room = galactic_custodian_room
+         room = rgalactic_custodian_room
     }
     diplomatic = yes
     trigger = {
@@ -1226,7 +1226,7 @@ country_event = {
     desc = roz_shinku_evt.442.desc
     is_triggered_only = yes
     picture_event_data = {
-        room = no_video_feed_room
+         room = rno_video_feed_room
     }
     trigger = {
         is_ai = no
@@ -1337,6 +1337,7 @@ country_event = {
     is_triggered_only = yes
     diplomatic = yes
     picture_event_data = {
+         room = rr
         room = no_video_feed_room #TODO NEED REPLACE
     }
     trigger = {
@@ -1616,7 +1617,7 @@ country_event = {
     }
     diplomatic = yes
     picture_event_data = {
-        room = roz_junn_room
+         room = roz_junn_room
     }
     option = {
         name = roz_shinku_evt.4001.aa1
@@ -1709,7 +1710,7 @@ country_event = {
     }
     diplomatic = yes
     picture_event_data = {
-        room = roz_junn_room
+         room = roz_junn_room
     }
     option = {
         name = roz_shinku_evt.4010.aa
