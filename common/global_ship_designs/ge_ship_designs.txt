@@ -1,14 +1,14 @@
-ship_design = {
-	name = "NAME_ge_ragnarok"
-	ship_size = Ge_Ragnarok
-	hide_size = no
+# ship_design = {
+# 	name = "NAME_ge_ragnarok"
+# 	ship_size = Ge_Ragnarok
+# 	hide_size = no
 	
-	section = {
-		template = "Ge_Ragnarok_Core"
-		slot = "mid"	
-	}
+# 	section = {
+# 		template = "Ge_Ragnarok_Core"
+# 		slot = "mid"	
+# 	}
 
-}
+# }
 
 ship_design = {
 	#name = "NAME_ge_sgt_ship"
@@ -1446,7 +1446,7 @@ ship_design = {
 		template = ROZ_ITQ_ship
 		slot = "mid"
 		component = {
-			slot = T_01
+			slot = TITANIC_01
 			template = ge_sgt_normal_beam
 		}
 	}

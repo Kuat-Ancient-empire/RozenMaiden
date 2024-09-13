@@ -2409,15 +2409,15 @@ Mercury_lamp_helps_research_current_technology = {
 			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_nutrient_replication } } add_tech_progress = { tech = tech_nutrient_replication progress = 1 } }
 			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_frontier_health } } add_tech_progress = { tech = tech_frontier_health progress = 1 } }
 			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_frontier_hospital } } add_tech_progress = { tech = tech_frontier_hospital progress = 1 } }
-			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_physics_1 } } add_tech_progress = { tech = tech_physics_1 progress = 1 } }
-			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_physics_2 } } add_tech_progress = { tech = tech_physics_2 progress = 1 } }
-			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_physics_3 } } add_tech_progress = { tech = tech_physics_3 progress = 1 } }
-			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_society_1 } } add_tech_progress = { tech = tech_society_1 progress = 1 } }
-			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_society_2 } } add_tech_progress = { tech = tech_society_2 progress = 1 } }
-			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_society_3 } } add_tech_progress = { tech = tech_society_3 progress = 1 } }
-			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_engineering_1 } } add_tech_progress = { tech = tech_engineering_1 progress = 1 } }
-			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_engineering_2 } } add_tech_progress = { tech = tech_engineering_2 progress = 1 } }
-			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_engineering_3 } } add_tech_progress = { tech = tech_engineering_3 progress = 1 } }
+			# 100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_physics_1 } } add_tech_progress = { tech = tech_physics_1 progress = 1 } }
+			# 100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_physics_2 } } add_tech_progress = { tech = tech_physics_2 progress = 1 } }
+			# 100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_physics_3 } } add_tech_progress = { tech = tech_physics_3 progress = 1 } }
+			# 100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_society_1 } } add_tech_progress = { tech = tech_society_1 progress = 1 } }
+			# 100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_society_2 } } add_tech_progress = { tech = tech_society_2 progress = 1 } }
+			# 100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_society_3 } } add_tech_progress = { tech = tech_society_3 progress = 1 } }
+			# 100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_engineering_1 } } add_tech_progress = { tech = tech_engineering_1 progress = 1 } }
+			# 100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_engineering_2 } } add_tech_progress = { tech = tech_engineering_2 progress = 1 } }
+			# 100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_engineering_3 } } add_tech_progress = { tech = tech_engineering_3 progress = 1 } }
 			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_alloys_1 } } add_tech_progress = { tech = tech_alloys_1 progress = 1 } }
 			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_alloys_2 } } add_tech_progress = { tech = tech_alloys_2 progress = 1 } }
 			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_luxuries_1 } } add_tech_progress = { tech = tech_luxuries_1 progress = 1 } }

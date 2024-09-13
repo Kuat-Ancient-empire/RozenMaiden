@@ -112,7 +112,7 @@ country_event = {
 		text = "ge_communication.100.a.na1.desc"
 		trigger = {
 			any_owned_leader = {
-				leader_class = admiral
+				leader_class = commander
 				is_rozen_leader = yes
 			}
 		}

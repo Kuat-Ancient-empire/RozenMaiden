@@ -36,7 +36,7 @@ country_event = {
 				}
 				set_country_flag = ge_leader_suigintou_get
 				create_leader = {
-					class = admiral
+					class = commander
 					name = "NAME_Suigintou"
 					skill = 1
 					gender = female

@@ -356,7 +356,7 @@ can_destroy_planet_with_GE_PLANET_KILLER_GODRAY = {
 			from.owner = {
 				OR = {
 					has_policy_flag = interference_active
-					has_policy_flag = interference_full
+					has_policy_flag = interference_subtle
 				}
 			}
 		}
@@ -424,7 +424,7 @@ can_destroy_planet_with_GE_PLANET_KILLER_NANOBOTS = {
 		custom_tooltip = {
 			fail_text = primitives_not_full_interference
 			from.owner = {
-				has_policy_flag = interference_full
+				has_policy_flag = interference_subtle
 			}
 		}
 	}
@@ -510,7 +510,7 @@ can_destroy_planet_with_GE_PLANET_KILLER_DELUGE = {
 		custom_tooltip = {
 			fail_text = primitives_not_full_interference
 			from.owner = {
-				has_policy_flag = interference_full
+				has_policy_flag = interference_subtle
 			}
 		}
 	}

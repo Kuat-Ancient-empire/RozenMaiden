@@ -1,3 +1,5 @@
+@entity_x = 0
+@entity_y = 0
 roz_mega_wanxiangtianyin = {
     entity = roz_ju_megastructure
     construction_entity = "roz_ju_megastructure"

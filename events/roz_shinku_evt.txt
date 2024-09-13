@@ -1337,7 +1337,7 @@ country_event = {
     is_triggered_only = yes
     diplomatic = yes
     picture_event_data = {
-        room =
+        room = no_video_feed_room #TODO NEED REPLACE
     }
     trigger = {
         is_ai = no
@@ -1385,7 +1385,7 @@ country_event = {
     is_triggered_only = yes
     diplomatic = yes
     picture_event_data = {
-        room =
+        room = no_video_feed_room #TODO NEED REPLACE
     }
     trigger = {
         is_ai = no
@@ -1462,7 +1462,7 @@ country_event = {
     is_triggered_only = yes
     diplomatic = yes
     picture_event_data = {
-        room =
+        room = no_video_feed_room #TODO NEED REPLACE
     }
     trigger = {
         is_ai = no
@@ -1770,7 +1770,7 @@ country_event = {
     }
     diplomatic = yes
     picture_event_data = {
-        room =
+        room = no_video_feed_room #TODO NEED REPLACE
     }
     option = {
         #立绘切换
@@ -1830,7 +1830,7 @@ country_event = {
     }
     diplomatic = yes
     picture_event_data = {
-        room =
+        room = no_video_feed_room #TODO NEED REPLACE
     }
     option = {
         name = roz_shinku_evt.4601.aa

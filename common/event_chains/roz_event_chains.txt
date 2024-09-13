@@ -17,13 +17,14 @@ roz_outland_system_chain = {
 	}
 }
 
-roz_chronicle_of_AoN_proj_chain = {
-	icon = ""
-	picture = GFX
-}
+# TODO
+# roz_chronicle_of_AoN_proj_chain = {
+# 	icon = ""
+# 	picture = GFX
+# }
 
-roz_wake-up_shinku_chain = {
-	icon = ""
-	picture = GFX
-}
+# roz_wake-up_shinku_chain = {
+# 	icon = ""
+# 	picture = GFX
+# }
 

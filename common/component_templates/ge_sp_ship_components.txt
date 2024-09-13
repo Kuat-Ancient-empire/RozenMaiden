@@ -389,11 +389,11 @@ utility_component_template = {
 		}
 		graphics = {
 			area_effect = {
-				#entity = "circle_area_entity"
+				entity = "circle_area_entity"
 				dynamic_scale = yes
 			}
 			ship_effect = {
-				#entity = "ship_aura_positive_entity"
+				entity = "ship_aura_positive_entity"
 				dynamic_scale = no
 			}
 		}

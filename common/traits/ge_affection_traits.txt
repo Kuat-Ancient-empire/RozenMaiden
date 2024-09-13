@@ -21,7 +21,7 @@ leader_trait_ge_admiral_a_strangeness = {	###陌生
 	#	TIER = none
 	#}
 	
-	leader_class = { admiral commander }
+	leader_class = { commander }
 	initial = no
 	randomized = no
 }
@@ -46,7 +46,7 @@ leader_trait_ge_admiral_a_friendly = {	###友好
 	#}
 	
 	
-	leader_class = { admiral commander }
+	leader_class = { commander }
 	initial = no
 	randomized = no
 }
@@ -71,7 +71,7 @@ leader_trait_ge_admiral_a_like = {	###喜欢
 	#}
 
 	
-	leader_class = { admiral commander }
+	leader_class = { commander }
 	initial = no
 	randomized = no
 }
@@ -96,7 +96,7 @@ leader_trait_ge_admiral_a_love = {	###爱意
 	#}
 
 	
-	leader_class = { admiral commander }
+	leader_class = { commander }
 	initial = no
 	randomized = no
 }
@@ -231,7 +231,7 @@ leader_trait_krks_governor_a_like = {	###喜欢
 	#	TIER = none
 	#}
 
-	leader_class = { governor official }
+	leader_class = { official }
 	initial = no
 	randomized = no
 }
@@ -246,7 +246,7 @@ leader_trait_krks_governor_a_love = {	###喜欢
 		country_admin_cap_mult = 0.50
 	}
 
-	leader_class = { governor official }
+	leader_class = { official }
 	initial = no
 	randomized = no
 }
@@ -273,7 +273,7 @@ leader_trait_krks_general_a_like = {	###喜欢
 	#	TIER = none
 	#}
 
-	leader_class = { general commander }
+	leader_class = { commander }
 	initial = no
 	randomized = no
 }
@@ -285,7 +285,7 @@ leader_trait_krks_general_a_love = {	###喜欢
 		army_morale = 0.30
 	}
 
-	leader_class = { general commander }
+	leader_class = { commander }
 	initial = no
 	randomized = no
 }

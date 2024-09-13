@@ -273,7 +273,7 @@ leader_trait_ge_mind_drain = {
 		COUNCIL = triggered
 		TIER = none
 	}
-	leader_class = { admiral }
+	leader_class = { commander }
 	notify_on_gained = no
 	modifier = {  }
 }
