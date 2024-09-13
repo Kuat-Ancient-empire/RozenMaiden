@@ -89,7 +89,7 @@ ge_flagship = {
 			}
 		}
 	}
-	default_behavior = battleship
+	default_behavior = line
 	# prerequisites = {
 	# 	"tech_juggernaut"
 	# }
@@ -267,7 +267,7 @@ ge_aura_ship = {
 	acceleration = 0.5
 	rotation_speed = 0.5
 	collision_radius = 40
-	entity = "corvette_M1S1_entity"
+	entity = mammalian_01_corvette_entity
 	max_hitpoints = 100
 	modifier = {
 		ship_evasion_add = 40

@@ -1060,14 +1060,14 @@ ge_add_aft_scientist_on_research = {
 	}
 }
 
-ge_hostile_fleet_modifier = {
-	optimize_memory
-	add_modifier = {
-		modifier = ge_modifier_buff
-		multiplier = ge_modifier_buff_mult
-		days = -1
-	}
-}
+# ge_hostile_fleet_modifier = {
+# 	optimize_memory
+# 	add_modifier = {
+# 		modifier = ge_modifier_buff
+# 		multiplier = ge_modifier_buff_mult
+# 		days = -1
+# 	}
+# }
 
 ################################fleet
 create_ge_defense_ship = {
@@ -1881,7 +1881,7 @@ roz_outland_planet_change = {
 	        add_deposit = d_zro_deposit_5
 	        add_deposit = d_dark_matter_deposit_10
 	        add_deposit = d_sentinels_metal
-	        add_deposit = d_hab_nanites_1
+	        #add_deposit = d_hab_nanites_1
 
 	        add_deposit = d_food_10
 	        add_deposit = d_minerals_10
@@ -4255,14 +4255,14 @@ roz_teaparty_loop_random = { #root = player country
 		remove_country_flag = roz_teaparty_evt_108
 	}
 	random_list = {
-		roz_teaparty_101 = { country_event = { id = roz_teaparty_evt.101 } }
-		roz_teaparty_102 = { country_event = { id = roz_teaparty_evt.102 } }
-		roz_teaparty_103 = { country_event = { id = roz_teaparty_evt.103 } }
-		roz_teaparty_104 = { country_event = { id = roz_teaparty_evt.104 } }
-		roz_teaparty_105 = { country_event = { id = roz_teaparty_evt.105 } }
-		roz_teaparty_106 = { country_event = { id = roz_teaparty_evt.106 } }
-		roz_teaparty_107 = { country_event = { id = roz_teaparty_evt.107 } }
-		roz_teaparty_108 = { country_event = { id = roz_teaparty_evt.108 } }
+		1 = { country_event = { id = roz_teaparty_evt.101 } }
+		1 = { country_event = { id = roz_teaparty_evt.102 } }
+		1 = { country_event = { id = roz_teaparty_evt.103 } }
+		1 = { country_event = { id = roz_teaparty_evt.104 } }
+		1 = { country_event = { id = roz_teaparty_evt.105 } }
+		1 = { country_event = { id = roz_teaparty_evt.106 } }
+		1 = { country_event = { id = roz_teaparty_evt.107 } }
+		1 = { country_event = { id = roz_teaparty_evt.108 } }
 	}
 }
 

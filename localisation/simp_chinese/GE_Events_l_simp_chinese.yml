@@ -15,13 +15,13 @@ ge_event.0.bb:0 "搞快点！"
 ge_event.0.cc:0 "确认"
 
 ge_event.1.t:0 "§P命运的馈赠早已在暗中标好了价格§!"
- ge_event.1.d1:0 "虚空科技的强度取决于您为银河众生带来的是仁慈还是考验。\n\n§H当前§M虚空武器伤害§!buff倍数为：[Root.ge_buff_count]%§!\n当前§M虚空武器射速§!buff倍数为：[Root.ge_buff_count_fr]%§!\n当前§H射程§!buff倍数为：[Root.ge_buff_fire_range_count]%§!"
+ge_event.1.d1:0 "虚空科技的强度取决于您为银河众生带来的是仁慈还是考验。\n\n§H当前§M虚空武器伤害§!buff倍数为：[Root.ge_buff_count]%§!\n当前§M虚空武器射速§!buff倍数为：[Root.ge_buff_count_fr]%§!\n当前§H射程§!buff倍数为：[Root.ge_buff_fire_range_count]%§!"
  
  #ge_event.1.d1:0 "(提示：这是一个简易的强度调节器，动态平衡正在调试中) \n很多时候，少几个0才是在真正的做运营，真正的玩群星...\n不过如果您有需要，可以再魔怔回去.jpg\n\n§H目前的buff倍数为：[Root.ge_buff_count]%§!"
 
- ge_event.1.zz2:0 "§G完成调成§!"
+ge_event.1.zz2:0 "§G完成调成§!"
 ge_event.1.zz:0 "§G完成调成§!"
- ge_event.1.dm: "§Y调整伤害§!"
+ge_event.1.dm: "§Y调整伤害§!"
  ge_event.1.fr:0 "§Y调整射速§!"
  ge_event.1.range: "§Y调整射程§!"
  ge_event.1.im1: "§R削弱王座系列战舰战斗力§!"

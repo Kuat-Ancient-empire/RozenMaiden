@@ -1,8 +1,8 @@
-ge_modifier_1 = {
-	icon = "gfx/interface/icons/planet_modifiers/ge_gravity_knowledge.dds" #TODO
-	icon_frame = 1
-	planet_jobs_produces_mult = 0.1
-}
+# ge_modifier_1 = {
+# 	icon = "gfx/interface/icons/planet_modifiers/ge_gravity_knowledge.dds" #TODO
+# 	icon_frame = 1
+# 	planet_jobs_produces_mult = 0.1
+# }
 
 ge_gravity_knowledge = {
 	icon = "gfx/interface/icons/modifiers/ge_gravity_knowledge.dds"

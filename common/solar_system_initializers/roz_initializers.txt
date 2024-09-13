@@ -278,8 +278,8 @@ roz_outland_star_system = {
 			random_pos = yes
 			#orbit_angle = 360
 			orbit_angle = {
-				min	= 270
-				max = 480
+				min	= 180
+				max = 360
 			}
 		}
 		create_ambient_object = {

@@ -2,300 +2,300 @@
 
 ###重型航母
 
-ship_section_template = {
-	key = "ge_carrier_S_bow_G2P4H6"
-	ship_size = ge_carrier
-	fits_on_slot = bow
-	should_draw_components = yes
-	entity = "battleship_bow_M1S2SHB_entity"
-	icon = "GFX_ship_part_core_bow"
-	prerequisites = {
-		tech_ge_section
-	}
-	ai_weight = {
-		modifier = {
-			factor = 0
-		}
-	}
+# ship_section_template = {
+# 	key = "ge_carrier_S_bow_G2P4H6"
+# 	ship_size = ge_carrier
+# 	fits_on_slot = bow
+# 	should_draw_components = yes
+# 	entity = "battleship_bow_M1S2SHB_entity"
+# 	icon = "GFX_ship_part_core_bow"
+# 	prerequisites = {
+# 		tech_ge_section
+# 	}
+# 	ai_weight = {
+# 		modifier = {
+# 			factor = 0
+# 		}
+# 	}
 	
-	component_slot = {
-		name = "MEDIUM_GUN_01"
-		template = "medium_missile_turret"
-		locatorname = "medium_gun_01"
-	}
-	# component_slot = {
-	# 	name = "MEDIUM_GUN_02"
-	# 	template = "medium_missile_turret"
-	# 	locatorname = "medium_gun_01"
-	# }
+# 	component_slot = {
+# 		name = "MEDIUM_GUN_01"
+# 		template = "medium_missile_turret"
+# 		locatorname = "medium_gun_01"
+# 	}
+# 	# component_slot = {
+# 	# 	name = "MEDIUM_GUN_02"
+# 	# 	template = "medium_missile_turret"
+# 	# 	locatorname = "medium_gun_01"
+# 	# }
 	
-	component_slot = {
-		name = "SMALL_GUN_01"
-		template = "point_defence_turret"
-		locatorname = "small_gun_01"
-	}
+# 	component_slot = {
+# 		name = "SMALL_GUN_01"
+# 		template = "point_defence_turret"
+# 		locatorname = "small_gun_01"
+# 	}
 	
-	component_slot = {
-		name = "SMALL_GUN_02"
-		template = "point_defence_turret"
-		locatorname = "small_gun_02"
-	}
+# 	component_slot = {
+# 		name = "SMALL_GUN_02"
+# 		template = "point_defence_turret"
+# 		locatorname = "small_gun_02"
+# 	}
 
-	# component_slot = {
-	# 	name = "SMALL_GUN_03"
-	# 	template = "point_defence_turret"
-	# 	locatorname = "small_gun_01"
-	# }
+# 	# component_slot = {
+# 	# 	name = "SMALL_GUN_03"
+# 	# 	template = "point_defence_turret"
+# 	# 	locatorname = "small_gun_01"
+# 	# }
 	
-	# component_slot = {
-	# 	name = "SMALL_GUN_04"
-	# 	template = "point_defence_turret"
-	# 	locatorname = "small_gun_02"
-	# }
+# 	# component_slot = {
+# 	# 	name = "SMALL_GUN_04"
+# 	# 	template = "point_defence_turret"
+# 	# 	locatorname = "small_gun_02"
+# 	# }
 
-	component_slot = {
-		name = "STRIKE_CRAFT_01"
-		template = "large_strike_craft"
-		rotation = 90
-		locatorname = "strike_craft_locator_01"
-	}
+# 	component_slot = {
+# 		name = "STRIKE_CRAFT_01"
+# 		template = "large_strike_craft"
+# 		rotation = 90
+# 		locatorname = "strike_craft_locator_01"
+# 	}
 
-	component_slot = {
-		name = "STRIKE_CRAFT_02"
-		template = "large_strike_craft"
-		rotation = 90
-		locatorname = "strike_craft_locator_01"
-	}
+# 	component_slot = {
+# 		name = "STRIKE_CRAFT_02"
+# 		template = "large_strike_craft"
+# 		rotation = 90
+# 		locatorname = "strike_craft_locator_01"
+# 	}
 
-	component_slot = {
-		name = "STRIKE_CRAFT_03"
-		template = "large_strike_craft"
-		rotation = 90
-		locatorname = "strike_craft_locator_01"
-	}
+# 	component_slot = {
+# 		name = "STRIKE_CRAFT_03"
+# 		template = "large_strike_craft"
+# 		rotation = 90
+# 		locatorname = "strike_craft_locator_01"
+# 	}
 
-	component_slot = {
-		name = "STRIKE_CRAFT_04"
-		template = "large_strike_craft"
-		rotation = 90
-		locatorname = "strike_craft_locator_04"
-	}
+# 	component_slot = {
+# 		name = "STRIKE_CRAFT_04"
+# 		template = "large_strike_craft"
+# 		rotation = 90
+# 		locatorname = "strike_craft_locator_04"
+# 	}
 
-	# component_slot = {
-	# 	name = "STRIKE_CRAFT_05"
-	# 	template = "large_strike_craft"
-	# 	rotation = 90
-	# 	locatorname = "strike_craft_locator_05"
-	# }
+# 	# component_slot = {
+# 	# 	name = "STRIKE_CRAFT_05"
+# 	# 	template = "large_strike_craft"
+# 	# 	rotation = 90
+# 	# 	locatorname = "strike_craft_locator_05"
+# 	# }
 
-	# component_slot = {
-	# 	name = "STRIKE_CRAFT_06"
-	# 	template = "large_strike_craft"
-	# 	rotation = 90
-	# 	locatorname = "strike_craft_locator_06"
-	# }
+# 	# component_slot = {
+# 	# 	name = "STRIKE_CRAFT_06"
+# 	# 	template = "large_strike_craft"
+# 	# 	rotation = 90
+# 	# 	locatorname = "strike_craft_locator_06"
+# 	# }
 
-	large_utility_slots = 11
-	aux_utility_slots = 4
+# 	large_utility_slots = 11
+# 	aux_utility_slots = 4
 	
-	resources = {
-		category = ship_sections
-		cost = {
-			alloys = @section_cost
-		}
-	}
-}
+# 	resources = {
+# 		category = ship_sections
+# 		cost = {
+# 			alloys = @section_cost
+# 		}
+# 	}
+# }
 
-ship_section_template = {
-	key = "ge_carrier_S_mid_P6H8"
-	ship_size = ge_carrier
-	fits_on_slot = mid
-	should_draw_components = yes
-	entity = "battleship_mid_S4LHB_entity"
-	icon = "GFX_ship_part_core_mid"
-	prerequisites = {
-		tech_ge_section
-	}
-	ai_weight = {
-		modifier = {
-			factor = 0
-			}
-	}
+# ship_section_template = {
+# 	key = "ge_carrier_S_mid_P6H8"
+# 	ship_size = ge_carrier
+# 	fits_on_slot = mid
+# 	should_draw_components = yes
+# 	entity = "battleship_mid_S4LHB_entity"
+# 	icon = "GFX_ship_part_core_mid"
+# 	prerequisites = {
+# 		tech_ge_section
+# 	}
+# 	ai_weight = {
+# 		modifier = {
+# 			factor = 0
+# 			}
+# 	}
 	
-	component_slot = {
-		name = "SMALL_GUN_01"
-		template = "point_defence_turret"
-		locatorname = "small_gun_01"
-	}
+# 	component_slot = {
+# 		name = "SMALL_GUN_01"
+# 		template = "point_defence_turret"
+# 		locatorname = "small_gun_01"
+# 	}
 	
-	component_slot = {
-		name = "SMALL_GUN_02"
-		template = "point_defence_turret"
-		locatorname = "small_gun_02"
-	}
+# 	component_slot = {
+# 		name = "SMALL_GUN_02"
+# 		template = "point_defence_turret"
+# 		locatorname = "small_gun_02"
+# 	}
 	
-	# component_slot = {
-	# 	name = "SMALL_GUN_03"
-	# 	template = "point_defence_turret"
-	# 	locatorname = "small_gun_03"
-	# }
+# 	# component_slot = {
+# 	# 	name = "SMALL_GUN_03"
+# 	# 	template = "point_defence_turret"
+# 	# 	locatorname = "small_gun_03"
+# 	# }
 	
-	# component_slot = {
-	# 	name = "SMALL_GUN_04"
-	# 	template = "point_defence_turret"
-	# 	locatorname = "small_gun_04"
-	# }
+# 	# component_slot = {
+# 	# 	name = "SMALL_GUN_04"
+# 	# 	template = "point_defence_turret"
+# 	# 	locatorname = "small_gun_04"
+# 	# }
 
-	# component_slot = {
-	# 	name = "SMALL_GUN_05"
-	# 	template = "point_defence_turret"
-	# 	locatorname = "small_gun_01"
-	# }
+# 	# component_slot = {
+# 	# 	name = "SMALL_GUN_05"
+# 	# 	template = "point_defence_turret"
+# 	# 	locatorname = "small_gun_01"
+# 	# }
 	
-	# component_slot = {
-	# 	name = "SMALL_GUN_06"
-	# 	template = "point_defence_turret"
-	# 	locatorname = "small_gun_02"
-	# }
+# 	# component_slot = {
+# 	# 	name = "SMALL_GUN_06"
+# 	# 	template = "point_defence_turret"
+# 	# 	locatorname = "small_gun_02"
+# 	# }
 
-	component_slot = {
-		name = "STRIKE_CRAFT_01"
-		template = "large_strike_craft"
-		rotation = 90
-		locatorname = "strike_craft_locator_01"
-	}	
+# 	component_slot = {
+# 		name = "STRIKE_CRAFT_01"
+# 		template = "large_strike_craft"
+# 		rotation = 90
+# 		locatorname = "strike_craft_locator_01"
+# 	}	
 
-	component_slot = {
-		name = "STRIKE_CRAFT_02"
-		template = "large_strike_craft"
-		rotation = -90
-		locatorname = "strike_craft_locator_02"
-	}	
+# 	component_slot = {
+# 		name = "STRIKE_CRAFT_02"
+# 		template = "large_strike_craft"
+# 		rotation = -90
+# 		locatorname = "strike_craft_locator_02"
+# 	}	
 
-	component_slot = {
-		name = "STRIKE_CRAFT_03"
-		template = "large_strike_craft"
-		rotation = 90
-		locatorname = "strike_craft_locator_01"
-	}
+# 	component_slot = {
+# 		name = "STRIKE_CRAFT_03"
+# 		template = "large_strike_craft"
+# 		rotation = 90
+# 		locatorname = "strike_craft_locator_01"
+# 	}
 
-	component_slot = {
-		name = "STRIKE_CRAFT_04"
-		template = "large_strike_craft"
-		rotation = -90
-		locatorname = "strike_craft_locator_02"
-	}
+# 	component_slot = {
+# 		name = "STRIKE_CRAFT_04"
+# 		template = "large_strike_craft"
+# 		rotation = -90
+# 		locatorname = "strike_craft_locator_02"
+# 	}
 
-	component_slot = {
-		name = "STRIKE_CRAFT_05"
-		template = "large_strike_craft"
-		rotation = 90
-		locatorname = "strike_craft_locator_05"
-	}	
+# 	component_slot = {
+# 		name = "STRIKE_CRAFT_05"
+# 		template = "large_strike_craft"
+# 		rotation = 90
+# 		locatorname = "strike_craft_locator_05"
+# 	}	
 
-	component_slot = {
-		name = "STRIKE_CRAFT_06"
-		template = "large_strike_craft"
-		rotation = -90
-		locatorname = "strike_craft_locator_06"
-	}	
+# 	component_slot = {
+# 		name = "STRIKE_CRAFT_06"
+# 		template = "large_strike_craft"
+# 		rotation = -90
+# 		locatorname = "strike_craft_locator_06"
+# 	}	
 
-	# component_slot = {
-	# 	name = "STRIKE_CRAFT_07"
-	# 	template = "large_strike_craft"
-	# 	rotation = 90
-	# 	locatorname = "strike_craft_locator_07"
-	# }
+# 	# component_slot = {
+# 	# 	name = "STRIKE_CRAFT_07"
+# 	# 	template = "large_strike_craft"
+# 	# 	rotation = 90
+# 	# 	locatorname = "strike_craft_locator_07"
+# 	# }
 
-	# component_slot = {
-	# 	name = "STRIKE_CRAFT_08"
-	# 	template = "large_strike_craft"
-	# 	rotation = -90
-	# 	locatorname = "strike_craft_locator_08"
-	# }
+# 	# component_slot = {
+# 	# 	name = "STRIKE_CRAFT_08"
+# 	# 	template = "large_strike_craft"
+# 	# 	rotation = -90
+# 	# 	locatorname = "strike_craft_locator_08"
+# 	# }
 
-	large_utility_slots = 10
-	aux_utility_slots = 4
+# 	large_utility_slots = 10
+# 	aux_utility_slots = 4
 	
-	resources = {
-		category = ship_sections
-		cost = {
-			alloys = @section_cost
-		}
-	}
-}
+# 	resources = {
+# 		category = ship_sections
+# 		cost = {
+# 			alloys = @section_cost
+# 		}
+# 	}
+# }
 
-ship_section_template = {
-	key = "ge_carrier_S_stern_P2H4"
-	ship_size = ge_carrier
-	fits_on_slot = stern
-	should_draw_components = yes
-	entity = "battleship_stern_M2_entity"
-	icon = "GFX_ship_part_core_stern"
-	prerequisites = {
-		tech_ge_section
-	}
-	ai_weight = {
-		modifier = {
-			factor = 0
-			}
-	}
+# ship_section_template = {
+# 	key = "ge_carrier_S_stern_P2H4"
+# 	ship_size = ge_carrier
+# 	fits_on_slot = stern
+# 	should_draw_components = yes
+# 	entity = "battleship_stern_M2_entity"
+# 	icon = "GFX_ship_part_core_stern"
+# 	prerequisites = {
+# 		tech_ge_section
+# 	}
+# 	ai_weight = {
+# 		modifier = {
+# 			factor = 0
+# 			}
+# 	}
 
-	component_slot = {
-		name = "MEDIUM_GUN_01"
-		template = "medium_turret"
-		locatorname = "medium_gun_01"
-	}
-	# component_slot = {
-	# 	name = "MEDIUM_GUN_02"
-	# 	template = "medium_turret"
-	# 	locatorname = "medium_gun_02"
-	# }
+# 	component_slot = {
+# 		name = "MEDIUM_GUN_01"
+# 		template = "medium_turret"
+# 		locatorname = "medium_gun_01"
+# 	}
+# 	# component_slot = {
+# 	# 	name = "MEDIUM_GUN_02"
+# 	# 	template = "medium_turret"
+# 	# 	locatorname = "medium_gun_02"
+# 	# }
 
-	# component_slot = {
-	# 	name = "MEDIUM_GUN_03"
-	# 	template = "point_defence_turret"
-	# 	locatorname = "medium_gun_01"
+# 	# component_slot = {
+# 	# 	name = "MEDIUM_GUN_03"
+# 	# 	template = "point_defence_turret"
+# 	# 	locatorname = "medium_gun_01"
 				
-	# }
-	component_slot = {
-		name = "MEDIUM_GUN_04"
-		template = "point_defence_turret"
-		locatorname = "medium_gun_02"
-	}
+# 	# }
+# 	component_slot = {
+# 		name = "MEDIUM_GUN_04"
+# 		template = "point_defence_turret"
+# 		locatorname = "medium_gun_02"
+# 	}
 
-	component_slot = {
-		name = "STRIKE_CRAFT_01"
-		template = "large_strike_craft"
-		rotation = 0
-		locatorname = root
-	}
-	component_slot = {
-		name = "STRIKE_CRAFT_02"
-		template = "large_strike_craft"
-		rotation = 0
-		locatorname = root
-	}
-	component_slot = {
-		name = "STRIKE_CRAFT_03"
-		template = "large_strike_craft"
-		rotation = 0
-		locatorname = root
-	}
-	# component_slot = {
-	# 	name = "STRIKE_CRAFT_04"
-	# 	template = "large_strike_craft"
-	# 	rotation = 0
-	# 	locatorname = root
-	# }
+# 	component_slot = {
+# 		name = "STRIKE_CRAFT_01"
+# 		template = "large_strike_craft"
+# 		rotation = 0
+# 		locatorname = root
+# 	}
+# 	component_slot = {
+# 		name = "STRIKE_CRAFT_02"
+# 		template = "large_strike_craft"
+# 		rotation = 0
+# 		locatorname = root
+# 	}
+# 	component_slot = {
+# 		name = "STRIKE_CRAFT_03"
+# 		template = "large_strike_craft"
+# 		rotation = 0
+# 		locatorname = root
+# 	}
+# 	# component_slot = {
+# 	# 	name = "STRIKE_CRAFT_04"
+# 	# 	template = "large_strike_craft"
+# 	# 	rotation = 0
+# 	# 	locatorname = root
+# 	# }
 	
-	large_utility_slots = 6
-	aux_utility_slots = 3
+# 	large_utility_slots = 6
+# 	aux_utility_slots = 3
 	
-	resources = {
-		category = ship_sections
-		cost = {
-			alloys = @section_cost
-		}
-	}
-}
+# 	resources = {
+# 		category = ship_sections
+# 		cost = {
+# 			alloys = @section_cost
+# 		}
+# 	}
+# }

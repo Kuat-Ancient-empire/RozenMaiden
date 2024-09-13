@@ -400,7 +400,7 @@ special_project = {		####王座守卫
 	cost = 14800
 	tech_department = engineering_technology
 	#days_to_research = 1800
-	event_chain = ge_sgt_flagship_proj_chain
+	#event_chain = ge_sgt_flagship_proj_chain
 	picture = GFX_evt_ancient_databank
 	icon = gfx/interface/icons/situation_log/situation_log_engineering.dds
 	event_scope = planet_event
@@ -446,7 +446,6 @@ special_project = {		####万恶之源
 	#cost = 360
 	#tech_department = engineering_technology
 	days_to_research = 360
-	#event_chain = ge_sgt_flagship_proj_chain
 	picture = GFX_roz_evt_Nfield_military_base_project
 	icon = gfx/interface/icons/situation_log/situation_log_engineering.dds
 	event_scope = ship_event
@@ -708,7 +707,7 @@ special_project = {
 	}
 	location = no
 	days_to_research = 1234567890
-	event_chain = roz_wake-up_shinku_chain
+	#event_chain = roz_wake-up_shinku_chain
 	event_scope = country_event
 	requirements = { #由事件完成，玩家无法也无需进行
 		has_trait = leader_trait_scientist_mind_wipe_02
@@ -725,7 +724,7 @@ special_project = {
 		text = roz_unholy_invasion_defproj_1_DESC
 		trigger = { is_ai = no }
 	}
-	event_chain = roz_wake-up_shinku_chain
+	#event_chain = roz_wake-up_shinku_chain
 	event_scope = country_event
 	location = no
 	picture = GFX_
@@ -757,7 +756,7 @@ special_project = {
 		shipclass_science_ship = 1
 	}
 	days_to_research = 180
-	event_chain = roz_wake-up_shinku_chain
+	#event_chain = roz_wake-up_shinku_chain
 	event_scope = planet_event
 	picture = GFX_
 	icon = gfx/interface/icons/situation_log/situation_log_projectile.dds

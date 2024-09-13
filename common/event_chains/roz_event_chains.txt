@@ -1,7 +1,4 @@
-ge_sgt_flagship_proj_chain = {
-	icon = ""
-	picture = GFX
-}
+
 roz_void_energy_research_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
 	picture = GFX_evt_ap_ge_0
@@ -18,6 +15,11 @@ roz_outland_system_chain = {
 }
 
 # TODO
+# ge_sgt_flagship_proj_chain = {
+# 	icon = ""
+# 	picture = GFX
+# }
+
 # roz_chronicle_of_AoN_proj_chain = {
 # 	icon = ""
 # 	picture = GFX
