@@ -222,7 +222,7 @@ country_event = {
 				has_country_flag = ge_leader_suigintou_get
 				has_country_flag = ge_suigintou_scientist_active
 				exists = event_target:ge_suigintou_country@root
-				NOT = {
+				NOR = {
 					exists = event_target:ge_suigintou_scientist_inactive_temp@root
 					exists = event_target:ge_leader_suigintou_global_target@root
 				}
@@ -236,7 +236,7 @@ country_event = {
 			limit = {
 				has_country_flag = ge_leader_suigintou_get
 				exists = event_target:ge_suigintou_country@root
-				NOT = {
+				NOR = {
 					exists = event_target:ge_suigintou_admiral_inactive_temp@root
 					exists = event_target:ge_leader_suigintou_global_target@root
 				}

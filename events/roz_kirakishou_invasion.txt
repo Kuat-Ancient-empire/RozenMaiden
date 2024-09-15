@@ -2097,15 +2097,12 @@ country_event = {	#开局时停
             limit = {
                 is_in_combat = yes
                 #has_fleet_flag = kirakishou_effected_fleet_flag
-                NOT = {
-                    leader = {
-                        has_leader_flag = ge_suigintou_flag
-                    }
+                leader = {
+                    NOT = {  has_leader_flag = ge_suigintou_flag }
                 }
-                NOT = {
-                    any_owned_ship = {
-                        is_ship_size = ge_black_dragon
-                    }
+                count_owned_ship = {
+                    count = 0
+                    limit = { is_ship_size = ge_black_dragon }
                 }
                 solar_system = {
                     has_star_flag = ge_suigintou_site_star_flag
@@ -2152,10 +2149,9 @@ country_event = {
                         has_planet_flag = ge_planet_flag_sgt@root
                     }
                 }
-                NOT = {
-                    any_owned_ship = {
-                        is_ship_size = ge_black_dragon
-                    }
+                count_owned_ship = {
+                    count = 0
+                    limit = { is_ship_size = ge_black_dragon }
                 }
                 #has_fleet_flag = kirakishou_effected_fleet_flag
             }

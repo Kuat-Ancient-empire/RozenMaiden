@@ -629,8 +629,8 @@ country_event = {
         }
         from = {
             is_country_type = ge_N_Field
-            is_country = event_target:roz_kirakishou_global_country@root
-            NOT = { is_country = event_target:ge_suigintou_country@root }
+            is_same_value = event_target:roz_kirakishou_global_country@root
+            NOT = { is_same_value = event_target:ge_suigintou_country@root }
         }
         has_country_flag = roz_kirakishou_get
         exists = event_target:roz_leader_kirakishou_global_target@root
@@ -645,14 +645,14 @@ country_event = {
         get_ge_leader_target = {
             flag = roz_kirakishou_flag
         }
-        if = {
-            limit = {
-                exists = event_target:roz_leader_kirakishou_global_target@root
-                exists = event_target:roz_kirakishou_admiral_inactive_temp@root
-                exists = event_target:roz_kirakishou_governor_inactive_temp@root
-                exists = event_target:roz_kirakishou_global_country@root
-            }
-        }
+        # if = {
+        #     limit = {
+        #         exists = event_target:roz_leader_kirakishou_global_target@root
+        #         exists = event_target:roz_kirakishou_admiral_inactive_temp@root
+        #         exists = event_target:roz_kirakishou_governor_inactive_temp@root
+        #         exists = event_target:roz_kirakishou_global_country@root
+        #     }
+        # }
     }
     after = {
         if = {
@@ -728,13 +728,18 @@ country_event = {
                 text = roz_krks_leader_evt.100.b.ct
                 NOR = {
                     has_country_flag = roz_kirakishou_governor_active
-                    any_owned_leader = {
+                }
+            }
+            custom_tooltip_fail = {
+                text = roz_krks_leader_evt.100.b.ct
+                count_owned_leader = {
+                    count = 0
+                    limit = {
                         leader_class = official
                         has_leader_flag = roz_kirakishou_flag
                     }
                 }
             }
-
             custom_tooltip_fail = {
                 text = "ge_communication.100.diplomatic_initialize"
                 NOT = { has_country_flag = roz_kirakishou_diplomatic_initialize_flag }
@@ -743,12 +748,6 @@ country_event = {
         trigger = {
             NOT = { has_country_flag = roz_kirakishou_governor_active }
             has_country_flag = roz_kirakishou_get
-            NOT = {
-                any_owned_leader = {
-                    leader_class = official
-                    has_leader_flag = roz_kirakishou_flag
-                }
-            }
         }
         hidden_effect = {
             create_roz_kirakishou_governor = yes
@@ -766,7 +765,13 @@ country_event = {
                 text = roz_krks_leader_evt.100.b.ct
                 NOR = {
                     has_country_flag = roz_kirakishou_admiral_active
-                    any_owned_leader = {
+                }
+            }
+            custom_tooltip_fail = {
+                text = roz_krks_leader_evt.100.b.ct
+                count_owned_leader = {
+                    count = 0
+                    limit = {
                         leader_class = commander
                         has_leader_flag = roz_kirakishou_flag
                     }
@@ -780,12 +785,6 @@ country_event = {
         trigger = {
             NOT = { has_country_flag = roz_kirakishou_admiral_active }
             has_country_flag = roz_kirakishou_get
-            NOT = {
-                any_owned_leader = {
-                    leader_class = commander
-                    has_leader_flag = roz_kirakishou_flag
-                }
-            }
         }
         hidden_effect = {
             create_roz_kirakishou_admiral = yes
@@ -811,8 +810,8 @@ country_event = {
         }
         from = {
             is_country_type = ge_N_Field
-            is_country = event_target:roz_kirakishou_global_country@root
-            NOT = { is_country = event_target:ge_suigintou_country@root }
+            is_same_value = event_target:roz_kirakishou_global_country@root
+            NOT = { is_same_value = event_target:ge_suigintou_country@root }
         }
         has_country_flag = roz_kirakishou_get
         NOT = {
