@@ -99,12 +99,10 @@ country_event = {
 #		remove_country_flag = ge_nfield_diplomacy_activated
 #	}
 #}
-
 ###main
 country_event = {
 	id = ge_communication.100
 	title = "ge_communication.100.title"
-
 	desc = "ge_communication.100.a.n1.desc"
 	desc = "ge_communication.100.a.n2.desc"
 	desc = "ge_communication.100.a.n3.desc"
@@ -160,7 +158,6 @@ country_event = {
 					ge_aft_fri = yes
 				}
 			}
-			
 		}
 	}
 	desc = {
@@ -211,7 +208,6 @@ country_event = {
 					ge_aft_lik = yes
 				}
 			}
-			
 		}
 	}
 	desc = {
@@ -234,7 +230,6 @@ country_event = {
 			}
 		}
 	}
-
 	desc = {
 		text = "ge_communication.100.a.love1.desc"
 		trigger = {
@@ -243,7 +238,6 @@ country_event = {
 					ge_aft_lov = yes
 				}
 			}
-			
 		}
 	}
 	desc = {
@@ -266,13 +260,11 @@ country_event = {
 			}
 		}
 	}
-
 	#diplomatic = yes
 	event_window_type = leader_recruit
 	#picture = GFX_roz_sgt_main_room_evt
 	picture = GFX_roz_sgt_main_room_evt_2
 	#event_window_type = leader_story
-
 	picture_event_data = {
 		#portrait = ge_suigintou_6
 		portrait = event_target:ge_leader
@@ -290,17 +282,17 @@ country_event = {
 		from = {
 			OR = {
 				is_country_type = ge_N_Field
-				is_country = event_target:ge_suigintou_country@root
+				is_same_value = event_target:ge_suigintou_country@root
 			}
-			NOT = { is_country = event_target:roz_kirakishou_global_country@root }
+			NOT = {
+				is_same_value = event_target:roz_kirakishou_global_country@root
+			}
 			#has_country_flag = ge_nfield_country_set
 			#is_ai = no
 		}
 		#has_country_flag = ge_sgt_chat
 		has_country_flag = ge_leader_suigintou_get
-		any_owned_leader = {
-			is_same_value = event_target:ge_leader_suigintou_global_target@root
-		}
+		exists = event_target:ge_leader_suigintou_global_target@root
 	}
 	immediate = {
 		set_country_flag = ge_nfield_diplomacy_activated
@@ -316,7 +308,6 @@ country_event = {
 			remove_country_flag = ge_nfield_diplomacy_activated
 		}
 	}
-
 	#option = {
 	#	#退出
 	#	name = ge_communication.100.zz
@@ -328,7 +319,6 @@ country_event = {
 	#		remove_country_flag = sgt_changing_skin_flag
 	#	}
 	#}
-
 	option = {
 		#退出
 		name = ge_communication.100.zz
@@ -342,7 +332,6 @@ country_event = {
 			remove_country_flag = sgt_changing_skin_flag
 		}
 	}
-
 	option = {
 		#
 		name = ge_communication.100.af
@@ -351,119 +340,115 @@ country_event = {
 		is_dialog_only = yes
 		tag = hire_leader
 	}
-
-	option = {	##换装
+	option = {
+		##换装
 		name = ge_communication.100.a
 		response_text = ge_communication.100.a.desc
 		is_dialog_only = yes
 		hidden_effect = {
 			set_country_flag = sgt_changing_skin_flag
-				country_event = {
-					id = ge_communication.11000
-				}
+			country_event = {
+				id = ge_communication.11000
 			}
-		
-		
+		}
 	}
-	
-	option = { #变成科学家
+	option = {
+		#变成科学家
 		is_dialog_only = yes
 		allow = {
 			custom_tooltip = {
 				NOR = {
 					has_country_flag = roz_suigintou_switch_vocation_cd_flag
 					has_country_flag = ge_suigintou_scientist_active
-					any_owned_leader = {
-						leader_class = scientist
-						OR = {
-							has_leader_flag = ge_suigintou_flag
-							#has_trait = leader_trait_ge_mercury_lamp_scientist
-							is_variable_set = ge_leader_affection
-						}
-					}
 				}
 				fail_text = "Cool Down."
 			}
+			custom_tooltip = {
+				count_owned_leader = {
+					count = 0
+					limit = {
+						leader_class = scientist
+						OR = {
+							has_leader_flag = ge_suigintou_flag
+							has_trait = leader_trait_ge_mercury_lamp_scientist
+						}
+					}
+				}
+				fail_text = "NO LEADER"
+			}
 			custom_tooltip_fail = {
 				text = ge_communication.100.diplomatic_initialize
-				NOT = { has_country_flag = roz_suigintou_diplomatic_initialize_flag }
-			}
-		}
-		trigger = {
-			NOT = { has_country_flag = ge_suigintou_scientist_active }
-			has_country_flag = ge_leader_suigintou_get
-			any_owned_leader = {
-				NAND = {
-					leader_class = scientist
-					OR = {
-						has_leader_flag = ge_suigintou_flag
-						has_trait = leader_trait_ge_mercury_lamp_scientist
-					}
+				NOT = {
+					has_country_flag = roz_suigintou_diplomatic_initialize_flag
 				}
 			}
 		}
-		hidden_effect = { 
-			create_ge_suigintou_scientist = yes 
+		trigger = {
+			NOT = {
+				has_country_flag = ge_suigintou_scientist_active
+			}
+			has_country_flag = ge_leader_suigintou_get
+		}
+		hidden_effect = {
+			create_ge_suigintou_scientist = yes
 			remove_country_flag = ge_nfield_diplomacy_activated
 			#set_country_flag = ge_sgt_survey_start_first
 		}
 		name = ge_communication.100.b
-		response_text = ge_communication.100.b1.response	
-		response_text = ge_communication.100.b2.response	
-		response_text = ge_communication.100.b3.response	
+		response_text = ge_communication.100.b1.response
+		response_text = ge_communication.100.b2.response
+		response_text = ge_communication.100.b3.response
 	}
-
-	option = { #变成舰队司令
+	option = {
+		#变成舰队司令
 		is_dialog_only = yes
 		allow = {
 			custom_tooltip = {
 				NOR = {
 					has_country_flag = roz_suigintou_switch_vocation_cd_flag
 					has_country_flag = ge_suigintou_admiral_active
-					any_owned_leader = {
-						leader_class = commander
-						OR = {
-							has_leader_flag = ge_suigintou_flag
-							#has_trait = leader_trait_ge_mercury_lamp
-							is_variable_set = ge_leader_affection
-						}
-					}
 				}
 				fail_text = "Cool Down."
 			}
+			custom_tooltip = {
+				count_owned_leader = {
+					count = 0
+					limit = {
+						leader_class = commander
+						OR = {
+							has_leader_flag = ge_suigintou_flag
+							has_trait = leader_trait_ge_mercury_lamp
+						}
+					}
+				}
+				fail_text = "NO LEADER"
+			}
 			custom_tooltip_fail = {
 				text = ge_communication.100.diplomatic_initialize
-				NOT = { has_country_flag = roz_suigintou_diplomatic_initialize_flag }
-			}
-		}
-		trigger = {
-			NOT = { has_country_flag = ge_suigintou_admiral_active }
-			has_country_flag = ge_leader_suigintou_get
-			any_owned_leader = {
-				NAND = {
-					leader_class = commander
-					OR = {
-						has_leader_flag = ge_suigintou_flag
-						has_trait = leader_trait_ge_mercury_lamp
-					}
+				NOT = {
+					has_country_flag = roz_suigintou_diplomatic_initialize_flag
 				}
 			}
 		}
-		hidden_effect = { 
-			create_ge_suigintou_admiral = yes 
+		trigger = {
+			NOT = {
+				has_country_flag = ge_suigintou_admiral_active
+			}
+			has_country_flag = ge_leader_suigintou_get
+		}
+		hidden_effect = {
+			create_ge_suigintou_admiral = yes
 			remove_country_flag = ge_sgt_chat
 			remove_country_flag = ge_nfield_diplomacy_activated
 		}
 		name = ge_communication.100.c
-		response_text = ge_communication.100.c1.response	
-		response_text = ge_communication.100.c2.response	
+		response_text = ge_communication.100.c1.response
+		response_text = ge_communication.100.c2.response
 		response_text = ge_communication.100.c3.response
-		response_text = ge_communication.100.c4.response	
+		response_text = ge_communication.100.c4.response
 	}
-
-	
-
-	option = {	##闲聊
+	option = {
+		##闲聊
 		name = ge_communication.100.d
 		#response_text = ge_communication.100.d.response
 		#is_dialog_only = yes
@@ -473,11 +458,10 @@ country_event = {
 			country_event = {
 				id = ge_communication.101
 			}
-					
 		}
 	}
-
-	option = {	###约会
+	option = {
+		###约会
 		name = ge_communication.100.i
 		#default_hide_option = yes
 		allow = {
@@ -492,8 +476,8 @@ country_event = {
 						which = ge_leader_affection
 						value >= 10
 					}
-				}	
-			}			
+				}
+			}
 		}
 		#trigger = {}
 		hidden_effect = {
@@ -503,28 +487,25 @@ country_event = {
 			}
 		}
 	}
-
-	option = {	###查询水银灯已探索星球数量，若未执行过探索
+	option = {
+		###查询水银灯已探索星球数量，若未执行过探索
 		name = ge_communication.100.f0
 		trigger = {
-			NOT = {
+			OR = {
 				check_variable = {
 					which = ge_sgt_survey_count
-					value >= 1
+					value < 1
+				}
+				NOT = {
+					is_variable_set = ge_sgt_survey_count
 				}
 			}
-			#has_country_flag = ge_sgt_survey_start_first
-			check_variable = {
-				which = ge_sgt_survey_count
-				value < 1
-			}
-
 		}
 		response_text = ge_communication.100.f0.response
 		is_dialog_only = yes
 	}
-
-	option = {	###查询水银灯已探索星球数量
+	option = {
+		###查询水银灯已探索星球数量
 		name = ge_communication.100.f1
 		trigger = {
 			#has_country_flag = ge_sgt_survey_start_first
@@ -532,21 +513,19 @@ country_event = {
 				which = ge_sgt_survey_count
 				value >= 1
 			}
-
-
 		}
-
 		response_text = ge_communication.100.f1.response
 		is_dialog_only = yes
 	}
-
-	option = {	#座驾
+	option = {
+		#座驾
 		name = ge_communication.100.sgtship_build
 		#custom_tooltip = ge_communication.100.sgtship_build.ct
 		trigger = {
 			has_technology = tech_ge_sgt_flagship
-			NOT = {
-				any_controlled_ship = {
+			count_controlled_ship = {
+				count = 0
+				limit = {
 					is_ship_size = Ge_Vampirilis_Ortaam
 				}
 			}
@@ -600,7 +579,8 @@ country_event = {
 			}
 			set_country_flag = ge_sgt_flagship_project_enable
 			last_created_ship = {
-				if = { #没有虚空科技且打开修正时，增加debuff
+				if = {
+					#没有虚空科技且打开修正时，增加debuff
 					limit = {
 						owner = {
 							NOR = {
@@ -618,10 +598,10 @@ country_event = {
 			}
 		}
 		response_text = ge_communication.100.sgtship.response
-		is_dialog_only = yes	
+		is_dialog_only = yes
 	}
-
-	option = {	#座驾修复-禁用
+	option = {
+		#座驾修复-禁用
 		name = ge_communication.100.sgtship
 		trigger = {
 			NOT = {
@@ -632,7 +612,8 @@ country_event = {
 				value = 0
 			}
 			NOT = {
-				any_owned_ship = {#暂定判定
+				any_owned_ship = {
+					#暂定判定
 					is_ship_size = Ge_Vampirilis_Ortaam
 				}
 			}
@@ -646,18 +627,17 @@ country_event = {
 					value > 30
 				}
 			}
-			
 		}
-		enable_special_project = {#
-			name = x
+		enable_special_project = {
+			#TODO
+			name = disappearing_pops_project
 		}
 		hidden_effect = {
-			set_country_flag = ge_sgt_flagship_repair_project_enable	
+			set_country_flag = ge_sgt_flagship_repair_project_enable
 		}
 		response_text = ge_communication.100.sgtship.repairing.response
-		is_dialog_only = yes	
+		is_dialog_only = yes
 	}
-
 	option = {
 		name = ge_communication.100.eliminate_capital_hostile_army
 		trigger = {
@@ -667,7 +647,6 @@ country_event = {
 					has_planet_flag = BA_enemy_just_defeated
 					has_planet_flag = GF_nyto_elid_attack_begin
 				}
-
 			}
 		}
 		custom_tooltip = ge_communication.100.eliminate_capital_hostile_army_ct
@@ -678,7 +657,6 @@ country_event = {
 						owner = {
 							is_hostile_to = root
 						}
-						
 					}
 					remove_army = yes
 				}
@@ -689,15 +667,13 @@ country_event = {
 						type = Q_titan_sgt
 					}
 				}
-				
 			}
-			
 		}
 		response_text = ge_communication.100.eliminate_capital_hostile_army.response
-		is_dialog_only = yes	
+		is_dialog_only = yes
 	}
-
-	option = {	#发电
+	option = {
+		#发电
 		name = ge_communication.100.fadian
 		trigger = {
 			NOT = {
@@ -709,7 +685,8 @@ country_event = {
 			id = ge_communication.600
 		}
 	}
-	option = {	#发电查询
+	option = {
+		#发电查询
 		name = ge_communication.100.display_fadian
 		trigger = {
 			AND = {
@@ -724,14 +701,14 @@ country_event = {
 					any_owned_ship = {
 						has_component = ge_shippart_hyper_generator
 					}
-				}	
-			}		
+				}
+			}
 		}
 		is_dialog_only = yes
 		response_text = ge_communication.100.display_fadian.response
 	}
-
-	option = {	##虚空科技起源
+	option = {
+		##虚空科技起源
 		name = ge_communication.100.e
 		#response_text = ge_communication.100.e.response
 		#default_hide_option = yes
@@ -754,10 +731,8 @@ country_event = {
 			country_event = {
 				id = ge_communication.201
 			}
-			
 		}
 	}
-
 	#option = {	###Q版水银灯军团
 	#	name = ge_communication.100.g
 	#	response_text = ge_communication.100.g.response
@@ -786,10 +761,6 @@ country_event = {
 	#		}
 	#	}
 	#}
-
-
-
-	
 }
 
 country_event = {
@@ -797,53 +768,52 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-			random_list = {
-				4 = {
-					country_event = {
-						id = ge_communication.200
-					}
+		random_list = {
+			4 = {
+				country_event = {
+					id = ge_communication.200
 				}
-				4 = {
-					country_event = {
-						id = ge_communication.202
-					}
-				}
-				3 = {
-					country_event = {
-						id = ge_communication.203
-					}
-				}
-				9 = {
-					modifier = {
-						factor = 0
-						has_country_flag = ge_suigintou_sp1_event
-					}
-					if = {
-						limit = {
-							NOT = { has_country_flag = ge_suigintou_sp1_event }
-						}
-						country_event = {
-							id = ge_communication.205
-						}
-					}
-				}
-				3 = {
-					modifier = {
-						factor = 0
-						has_country_flag = roz_kirakishou_get
-					}
-					country_event = {
-						id = ge_communication.220
-					}			
-				}
-
-				
 			}
+			4 = {
+				country_event = {
+					id = ge_communication.202
+				}
+			}
+			3 = {
+				country_event = {
+					id = ge_communication.203
+				}
+			}
+			9 = {
+				modifier = {
+					factor = 0
+					has_country_flag = ge_suigintou_sp1_event
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = ge_suigintou_sp1_event
+						}
+					}
+					country_event = {
+						id = ge_communication.205
+					}
+				}
+			}
+			3 = {
+				modifier = {
+					factor = 0
+					has_country_flag = roz_kirakishou_get
+				}
+				country_event = {
+					id = ge_communication.220
+				}
+			}
+		}
 	}
 }
 
 #########################################
-
 country_event = {
 	id = ge_communication.102
 	title = TRANSMISSION
@@ -862,9 +832,11 @@ country_event = {
 		from = {
 			OR = {
 				is_country_type = ge_N_Field
-				is_country = event_target:ge_suigintou_country@root
+				is_same_value = event_target:ge_suigintou_country@root
 			}
-			NOT = { is_country = event_target:roz_kirakishou_global_country@root }
+			NOT = {
+				is_same_value = event_target:roz_kirakishou_global_country@root
+			}
 		}
 		has_country_flag = ge_leader_suigintou_get
 		NOT = {
@@ -872,24 +844,22 @@ country_event = {
 				is_same_value = event_target:ge_leader_suigintou_global_target@root
 			}
 		}
-		# NOT = {
-		# 	exists = event_target:ge_leader_suigintou_global_target@root
-		# }
+		#exists = event_target:ge_leader_suigintou_global_target@root
 	}
 	immediate = {
 		set_country_flag = ge_nfield_diplomacy_activated
 	}
 	after = {
 		remove_country_flag = ge_nfield_diplomacy_activated
-		# if = {
-		# 	limit = { exists = event_target:ge_leader_suigintou_global_target@root }
-		# 	fire_on_action = {
-		# 		on_action = on_custom_diplomacy
-		# 		scopes = {
-		# 			from = event_target:ge_suigintou_country@root
-		# 		}
-		# 	}
-		# }
+		if = {
+			limit = { exists = event_target:ge_leader_suigintou_global_target@root }
+			fire_on_action = {
+				on_action = on_custom_diplomacy
+				scopes = {
+					from = event_target:ge_suigintou_country@root
+				}
+			}
+		}
 	}
 	option = {
 		name = ge_communication.102.aa
@@ -917,8 +887,6 @@ country_event = {
 	}
 }
 
-
-
 #################################
 ###聊天1
 country_event = {
@@ -940,13 +908,11 @@ country_event = {
 		#		}
 		#	}
 		#}
-		
 	}
 	immediate = {
 		set_country_flag = ge_sgt_chat
 		get_ge_leader_target = {
 			flag = ge_suigintou_flag
-
 		}
 	}
 	option = {
@@ -954,12 +920,13 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = ge_communication.210
-			}			
+			}
 		}
 	}
 }
 
-country_event = {	###聊天1后续
+country_event = {
+	###聊天1后续
 	id = ge_communication.210
 	title = "ge_communication.200.title"
 	desc = "ge_communication.200.aa.desc"
@@ -972,7 +939,6 @@ country_event = {	###聊天1后续
 	immediate = {
 		get_ge_leader_target = {
 			flag = ge_suigintou_flag
-
 		}
 	}
 	option = {
@@ -982,13 +948,11 @@ country_event = {	###聊天1后续
 				id = ge_communication.100
 			}
 		}
-		
-		
 	}
+}
 
-}	
-
-country_event = {	###聊天2
+country_event = {
+	###聊天2
 	id = ge_communication.202
 	title = "ge_communication.202.title"
 	desc = "ge_communication.202.desc"
@@ -1008,13 +972,11 @@ country_event = {	###聊天2
 		#		}
 		#	}
 		#}
-		
 	}
 	immediate = {
 		set_country_flag = ge_sgt_chat
 		get_ge_leader_target = {
 			flag = ge_suigintou_flag
-
 		}
 	}
 	option = {
@@ -1023,14 +985,15 @@ country_event = {	###聊天2
 		#is_dialog_only = yes
 		hidden_effect = {
 			#remove_country_flag = suigintou_diplomacy_activated
-				country_event = {
-					id = ge_communication.212
-				}			
+			country_event = {
+				id = ge_communication.212
+			}
 		}
 	}
 }
 
-country_event = {	###聊天2后续
+country_event = {
+	###聊天2后续
 	id = ge_communication.212
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1045,7 +1008,6 @@ country_event = {	###聊天2后续
 		#set_country_flag = ge_sgt_chat
 		get_ge_leader_target = {
 			flag = ge_suigintou_flag
-
 		}
 	}
 	option = {
@@ -1058,12 +1020,12 @@ country_event = {	###聊天2后续
 					id = ge_communication.100
 				}
 			}
-			
 		}
 	}
 }
 
-country_event = {	###聊天3
+country_event = {
+	###聊天3
 	id = ge_communication.203
 	title = "ge_communication.203.title"
 	desc = "ge_communication.203.desc"
@@ -1083,14 +1045,12 @@ country_event = {	###聊天3
 		#		}
 		#	}
 		#}
-		
 	}
 	immediate = {
 		#set_country_flag = suigintou_diplomacy_activated
 		set_country_flag = ge_sgt_chat
 		get_ge_leader_target = {
 			flag = ge_suigintou_flag
-
 		}
 	}
 	option = {
@@ -1106,7 +1066,8 @@ country_event = {	###聊天3
 	}
 }
 
-country_event = {	###聊天3后续
+country_event = {
+	###聊天3后续
 	id = ge_communication.204
 	title = "ge_communication.204.title"
 	desc = "ge_communication.204.desc"
@@ -1120,7 +1081,6 @@ country_event = {	###聊天3后续
 		#set_country_flag = suigintou_diplomacy_activated
 		get_ge_leader_target = {
 			flag = ge_suigintou_flag
-
 		}
 	}
 	option = {
@@ -1133,11 +1093,11 @@ country_event = {	###聊天3后续
 				id = ge_communication.100
 			}
 		}
-		
 	}
 }
 
-country_event = {	###聊天4###新衣服
+country_event = {
+	###聊天4###新衣服
 	id = ge_communication.205
 	title = "ge_communication.205.title"
 	desc = "ge_communication.205.desc"
@@ -1166,7 +1126,6 @@ country_event = {	###聊天4###新衣服
 		set_country_flag = ge_sgt_chat
 		get_ge_leader_target = {
 			flag = ge_suigintou_flag
-
 		}
 	}
 	option = {
@@ -1176,11 +1135,11 @@ country_event = {	###聊天4###新衣服
 		country_event = {
 			id = ge_communication.206
 		}
-		
 	}
 }
 
-country_event = {	###聊天4###后续
+country_event = {
+	###聊天4###后续
 	id = ge_communication.206
 	title = "ge_communication.205.title"
 	desc = "ge_communication.205.aa.desc"
@@ -1205,7 +1164,8 @@ country_event = {	###聊天4###后续
 	}
 }
 
-country_event = {	###聊天5###真红
+country_event = {
+	###聊天5###真红
 	id = ge_communication.220
 	title = "ge_communication.220.title"
 	desc = "ge_communication.220.desc"
@@ -1240,11 +1200,11 @@ country_event = {	###聊天5###真红
 		country_event = {
 			id = ge_communication.221
 		}
-		
 	}
 }
 
-country_event = {	###聊天5###后续1
+country_event = {
+	###聊天5###后续1
 	id = ge_communication.221
 	title = "ge_communication.221.title"
 	desc = "ge_communication.221.aa.desc"
@@ -1255,7 +1215,9 @@ country_event = {	###聊天5###后续1
 		room = ge_sgt_chat_room
 	}
 	trigger = {
-		NOT = { has_country_flag = roz_kirakishou_get }
+		NOT = {
+			has_country_flag = roz_kirakishou_get
+		}
 	}
 	immediate = {
 		get_ge_leader_target = {
@@ -1270,7 +1232,8 @@ country_event = {	###聊天5###后续1
 	}
 }
 
-country_event = {	###聊天5###后续2
+country_event = {
+	###聊天5###后续2
 	id = ge_communication.222
 	title = "ge_communication.222.title"
 	desc = "ge_communication.222.aa.desc"
@@ -1295,7 +1258,8 @@ country_event = {	###聊天5###后续2
 	}
 }
 
-country_event = {	###飞升1前置对话
+country_event = {
+	###飞升1前置对话
 	id = ge_communication.201
 	title = "ge_communication.201.title"
 	desc = "ge_communication.201.desc"
@@ -1310,13 +1274,11 @@ country_event = {	###飞升1前置对话
 		NOT = {
 			has_country_flag = ge_tech_begin
 		}
-		
 	}
 	immediate = {
 		set_country_flag = ge_tech_begin
 		get_ge_leader_target = {
 			flag = ge_suigintou_flag
-
 		}
 	}
 	option = {
@@ -1351,13 +1313,10 @@ country_event = {	###飞升1前置对话
 			id = ge_event.10
 			days = 1
 		}
-		
 	}
 }
 
-
 ###后续新加事件从400开始
-
 country_event = {
 	id = ge_communication.600
 	is_triggered_only = yes
@@ -1402,9 +1361,7 @@ country_event = {
 			remove_country_flag = ge_nfield_diplomacy_activated
 		}
 	}
-	
 }
-
 
 country_event = {
 	id = ge_communication.501
@@ -1432,7 +1389,6 @@ country_event = {
 			days = 1
 		}
 	}
-
 }
 
 country_event = {
@@ -1463,7 +1419,6 @@ country_event = {
 		}
 	}
 }
-
 
 #################################
 # country_event = {
@@ -1497,9 +1452,3 @@ country_event = {
 # 		}
 # 	}
 # }
-
-
-
-
-
-

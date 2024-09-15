@@ -1608,7 +1608,7 @@ country_event = {
         }
         from = { #是小纯缓存国家
             is_country_type = ge_N_Field
-            is_country = event_target:roz_junn_global_country@root
+            is_same_value = event_target:roz_junn_global_country@root
             has_country_flag = roz_junn_country
         }
     }
@@ -1762,7 +1762,7 @@ country_event = {
         }
         from = { #是雏莓缓存国家
             is_country_type = ge_N_Field
-            is_country = event_target:roz_hinaichigo_global_country@root
+            is_same_value = event_target:roz_hinaichigo_global_country@root
             has_country_flag = roz_hinaichigo_country
         }
     }
