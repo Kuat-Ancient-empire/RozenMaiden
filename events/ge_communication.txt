@@ -872,22 +872,24 @@ country_event = {
 				is_same_value = event_target:ge_leader_suigintou_global_target@root
 			}
 		}
-		#exists = event_target:ge_leader_suigintou_global_target@root
+		# NOT = {
+		# 	exists = event_target:ge_leader_suigintou_global_target@root
+		# }
 	}
 	immediate = {
 		set_country_flag = ge_nfield_diplomacy_activated
 	}
 	after = {
 		remove_country_flag = ge_nfield_diplomacy_activated
-		if = {
-			limit = { exists = event_target:ge_leader_suigintou_global_target@root }
-			fire_on_action = {
-				on_action = on_custom_diplomacy
-				scopes = {
-					from = event_target:ge_suigintou_country@root
-				}
-			}
-		}
+		# if = {
+		# 	limit = { exists = event_target:ge_leader_suigintou_global_target@root }
+		# 	fire_on_action = {
+		# 		on_action = on_custom_diplomacy
+		# 		scopes = {
+		# 			from = event_target:ge_suigintou_country@root
+		# 		}
+		# 	}
+		# }
 	}
 	option = {
 		name = ge_communication.102.aa
