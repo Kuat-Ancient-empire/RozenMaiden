@@ -167,6 +167,7 @@ col_roz_YS_planet_desc: "和虚境星球相比，这里浓厚的紫色大气层�
 
  chronos_storm_fleet_tt:"—§R禁用§!舰船和空间站的$MOD_SHIP_HULL_REGEN_ADD_PERC$，$MOD_SHIP_ARMOR_REGEN_ADD_PERC$和$MOD_SHIP_SHIELD_REGEN_ADD_PERC$。\n—每月对舰船和空间站造成高于$@storm_hp_perc_limit|0Y%$ $HITPOINTS$的§R$@storm_monthly_dmg_high|0$§!伤害。"
  chronos_modifier:"$storm_base_modifier$" #This is a hidden modifier
+ chronos_storm_modifier:"$storm_base_modifier$"
  MESSAGE_CHRONOS_STORM_COSMIC_STORM_SPOTTED_TITLE: "侦测到$chronos_storm$！"
  MESSAGE_CHRONOS_STORM_COSMIC_STORM_SPOTTED_DESC: "$MESSAGE_COSMIC_STORM_SPOTTED_DESC$$MESSAGE_STORM_INTRO$此类风暴对我们的殖民地、舰队和空间站有极高的危险。当风暴过境时，它们会受到严重的损害。"
 

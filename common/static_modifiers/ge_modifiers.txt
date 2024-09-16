@@ -475,6 +475,13 @@ roz_rosa_analysis_research_fault = {
 	country_engineering_tech_research_speed = -0.15
 }
 
+#####cosmic storm
+chronos_storm_modifier = {
+	ship_emergency_ftl_mult = 1
+	ship_shield_regen_add_perc = -1
+	ship_armor_regen_add_perc = -0.33
+	ship_speed_reduction = 0.33
+}
 
 
 ###########################
