@@ -1,9 +1,4 @@
 on_game_start_country = {
-
-	events = {
-
-	}
-
 	events = {
 		ge_event.0
 		#ge_sites.1
