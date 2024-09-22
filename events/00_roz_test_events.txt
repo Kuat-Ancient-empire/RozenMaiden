@@ -14,6 +14,9 @@ country_event = {
 		#add_global_ship_design = ROZ_ITQ_design
 		#create_ship_design = { design = ROZ_ITQ_design }
 		#add_ship_design = last_created_design
+		home_planet = {
+			
+		}
 	}
 }
 
@@ -688,8 +691,13 @@ country_event = { #控制台effect测试区
 		# 		add_building = building_KZ_VOY_dimensional_sovereign_beacon
 		# 	}
 		# }
+		
 
-
+		declare_war = {
+			target = event_target:roz_temp_wargoal
+			attacker_war_goal = wg_colossus
+		}
+		save_global_event_target_as = roz_temp_wargoal
 		#effect = { event_target:ge_site_sgt_target = { solar_system = { set_star_flag = roz_outland_star spawn_natural_wormhole = { bypass_type = roz_gateway random_pos = no orbit_angle = 360 } set_surveyed = { surveyed = yes surveyor = root } } } set_spawn_system_batch = begin no_scope = { spawn_system = { min_distance >= 500 max_distance <= 700 min_orientation_angle = 90 max_orientation_angle = 270 initializer = roz_outland_star_system hyperlane = no } last_created_system = { set_name = "NAME_roz_outland_system" star = { set_name = "NAME_roz_outland_system" } event_target:roz_outland_planet_moon = { change_pc = pc_black_hole } } } set_spawn_system_batch = end }
 
 
@@ -1250,7 +1258,7 @@ country_event = {
 
 			}
 
-			#roz_lgate_create_reward_planet = yes
+			roz_lgate_create_reward_planet = yes
 		}
 	}
 	option = {

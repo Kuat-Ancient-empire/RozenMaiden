@@ -261,7 +261,14 @@ country_event = {
 			}
 		}
 		###检测水银灯是否重复
-		roz_leader_suigintou_counting_check = yes
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = roz_suigintou_diplomatic_initialize_flag
+				}
+			}
+			roz_leader_suigintou_counting_check = yes
+		}
 		#####leader kirakishou backup
 		if = {
 			limit = {

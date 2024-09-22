@@ -1,0 +1,30 @@
+objectTypes = {
+	pdxmesh = {
+		name = "ROZ_AS_mesh"
+		file = "gfx/models/ships/megastructures/ROZ_AS_mesh.mesh"
+		scale = 10.0
+
+		meshsettings = {
+			name = "AS1Shape"
+			index = 0
+			texture_diffuse = "albatar_texture.dds"
+			texture_normal = "albatar_normalMAP.dds"
+			texture_specular = "albatar_specularMap.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "ROZ_AS_entity"
+		file = "gfx/models/ships/megastructures/ROZ_AS_frame.mesh"
+		scale = 1.0
+
+		
+	}
+	pdxmesh = {
+		name = "ROZ_AS_main_entity"
+		file = "gfx/models/ships/megastructures/ROZ_AS_main.mesh"
+		scale = 2.0
+		animation = { id = "idle"	type = "ROZ_AS_main_idle_animation" }
+		
+	}
+}

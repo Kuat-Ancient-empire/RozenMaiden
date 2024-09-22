@@ -482,7 +482,7 @@ r_roz_orgel = {
     }
 }
 
-r_roz_extrinsic_xinlin_crystal = {
+r_roz_extrinsic_xinlin_crystal_unknow = {
     activation_duration = 1800
     portrait = GFX_r_roz_extrinsic_xinlin_crystal
     sound = relic_activation_eternal_throne

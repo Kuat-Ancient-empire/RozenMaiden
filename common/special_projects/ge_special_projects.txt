@@ -793,7 +793,6 @@ special_project = {
 ###第三阶段-见识超凡
 ####研究希灵结晶体
 special_project = {
-	#卷土重来：战斗残骸
 	key = roz_poring_xiling_crystal
 	desc = {
 		text = roz_poring_xiling_crystal_DESC

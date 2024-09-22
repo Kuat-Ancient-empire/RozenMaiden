@@ -1,0 +1,53 @@
+entity = {
+	name = "ROZ_AS_mesh"
+	pdxmesh = "ROZ_AS_mesh"
+}
+
+entity = {
+	name = "ROZ_AS_entity"
+	pdxmesh = "ROZ_AS_entity"
+	attach = { sector1 = ROZ_AS_mesh }
+	attach = { sector2 = ROZ_AS_mesh }
+	attach = { sector3 = ROZ_AS_mesh }
+	attach = { sector4 = ROZ_AS_mesh }
+}
+
+entity = {
+	name = "ROZ_AS_main_entity"
+	pdxmesh = ROZ_AS_main_entity
+	default_state = "idle"
+	state = { 
+		name = "idle" 		
+		animation = "idle" 	
+		looping = yes state_time = 5
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_01" } }
+	}
+	attach = { sector1 = roz_nemesis_01_quantum_catapult_stage_2_entity }
+}
+
+entity = {
+	name = "roz_nemesis_01_quantum_catapult_stage_2_entity"
+	pdxmesh = "quantum_catapult_stage_2_mesh"
+
+	locator = { name = "root"	position = { 0 0 0 } }
+	get_state_from_parent = yes
+	attach = { root = "quantum_catapult_stage_2_lightning_entity" }
+
+	meshsettings = {
+		name = "g_bodyShape"
+		index = 0
+		texture_diffuse = "nemesis_01_quantum_catapult_diffuse.dds"
+		texture_normal = "nemesis_01_quantum_catapult_normal.dds"
+		texture_specular = "nemesis_01_quantum_catapult_specular.dds"
+		shader = "PdxMeshShip"
+	}
+
+	game_data = {
+		size = @quantum_catapult_size
+	}
+}
+
+
+animation = { name = "ROZ_AS_main_idle_animation" file = "ROZ_AS_main_idle.anim" }
+
+

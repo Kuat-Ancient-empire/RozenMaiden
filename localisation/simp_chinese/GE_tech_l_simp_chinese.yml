@@ -63,6 +63,10 @@ tech_ge_sgt_flagship: "§B希灵的馈赠§!"
 tech_ge_sgt_flagship_desc: "命运的馈赠早已在暗中标好了价码……"
  tech_ge_sgt_flagship_normal: "§B王座守卫§!"
  tech_ge_sgt_flagship_normal_desc: "在完全掌握虚空能量之前，我们还难以发挥这些希灵星舰的真正实力……"
+
+tech_roz_information_remodeler: "资讯重构仪"
+tech_roz_information_remodeler_desc: "若我超脱自然，便将绝不再用……绝不"
+
 ###building
  tech_roz_power_core: "§P虚空能量反应塔§!"
  tech_roz_power_core_desc: "我们的设计师自从验证了这个建筑构想后便彻底看不上失落帝国的四级奇点了。"

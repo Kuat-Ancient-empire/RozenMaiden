@@ -1012,6 +1012,7 @@ tech_roz_power_core = {
 	ai_weight = { factor = 0 }
 }
 
+#王座守卫
 tech_ge_sgt_flagship_normal = {
 	area = engineering
 	cost = 8000
@@ -1035,4 +1036,20 @@ tech_ge_sgt_flagship_normal = {
 	}
 }
 
+tech_roz_information_remodeler = {
+	area = society
+	cost = 15000
+	category = {
+		archaeostudies
+	}
+	is_rare = yes
+	is_dangerous = yes
+	potential = {
+		has_country_flag = roz_tech_IR_allow
+	}
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}
 
