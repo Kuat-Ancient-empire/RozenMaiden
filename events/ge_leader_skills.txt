@@ -1021,8 +1021,12 @@ country_event = { #创生之湖
 			#leader = {
 			#	has_leader_flag = ge_suigintou_flag
 			#}
-			has_component = ge_shippart_genesis_lake
-			NOT = { is_ship_size = Ge_Vampirilis_Letum }
+			any_owned_ship = {
+				has_component = ge_shippart_genesis_lake
+				is_ship_size = Ge_Vampirilis_Ortaam
+			}
+			#has_component = ge_shippart_genesis_lake
+			#NOT = { is_ship_size = Ge_Vampirilis_Letum }
 		}
 		has_existing_ship_design = Ge_Vampirilis_Letum
 		NOT = {
@@ -1030,98 +1034,126 @@ country_event = { #创生之湖
 		}
 	}
 	immediate = {
-		set_timed_country_flag = {
-			flag = roz_sgt_flagship_guardian_spawn_flag
-			years = 25
-		}
 		fromfrom = {
-			while = {
-				count = 4
-				random_list = {
-					1 = {
-						create_ship = {
-							name = NAME_roz_flagship_gardian_DK
-							design = random_existing_design
-							random_existing_design = Ge_Vampirilis_Letum
-							graphical_culture = root
-							prefix = yes
-						}
+			export_trigger_value_to_variable = {
+				trigger = count_owned_ship
+				variable = roz_skills_temp_var_fleet
+				parameters = {
+					limit = {
+						is_ship_size = Ge_Vampirilis_Letum
 					}
-					1 = {
-						create_ship = {
-							name = NAME_roz_flagship_gardian_WS
-							design = random_existing_design
-							random_existing_design = Ge_Vampirilis_Letum
-							graphical_culture = root
-							prefix = yes
+				}
+			}
+			owner = {
+				set_variable = {
+					which = roz_skills_temp_var
+					value = prev.roz_skills_temp_var_fleet
+				}
+			}
+			clear_variable = roz_skills_temp_var_fleet
+		}
+		if = {
+			limit = { 
+				check_variable = {
+					which = roz_skills_temp_var
+					value <= 16
+				}
+			}
+			#remove_country_flag = roz_sgt_flagship_guardian_spawn_flag
+			set_timed_country_flag = {
+				flag = roz_sgt_flagship_guardian_spawn_flag
+				years = 15
+			}
+			fromfrom = {
+				while = {
+					count = 4
+					random_list = {
+						1 = {
+							create_ship = {
+								name = NAME_roz_flagship_gardian_DK
+								design = random_existing_design
+								random_existing_design = Ge_Vampirilis_Letum
+								graphical_culture = root
+								prefix = yes
+							}
 						}
-					}
-					1 = {
-						create_ship = {
-							name = NAME_roz_flagship_gardian_SW
-							design = random_existing_design
-							random_existing_design = Ge_Vampirilis_Letum
-							graphical_culture = root
-							prefix = yes
+						1 = {
+							create_ship = {
+								name = NAME_roz_flagship_gardian_WS
+								design = random_existing_design
+								random_existing_design = Ge_Vampirilis_Letum
+								graphical_culture = root
+								prefix = yes
+							}
 						}
-					}
-					1 = {
-						create_ship = {
-							name = NAME_roz_flagship_gardian_IF
-							design = random_existing_design
-							random_existing_design = Ge_Vampirilis_Letum
-							graphical_culture = root
-							prefix = yes
+						1 = {
+							create_ship = {
+								name = NAME_roz_flagship_gardian_SW
+								design = random_existing_design
+								random_existing_design = Ge_Vampirilis_Letum
+								graphical_culture = root
+								prefix = yes
+							}
 						}
-					}
-					1 = {
-						create_ship = {
-							name = NAME_roz_flagship_gardian_BA
-							design = random_existing_design
-							random_existing_design = Ge_Vampirilis_Letum
-							graphical_culture = root
-							prefix = yes
+						1 = {
+							create_ship = {
+								name = NAME_roz_flagship_gardian_IF
+								design = random_existing_design
+								random_existing_design = Ge_Vampirilis_Letum
+								graphical_culture = root
+								prefix = yes
+							}
 						}
-					}
-					1 = {
-						create_ship = {
-							name = NAME_roz_flagship_gardian_IH
-							design = random_existing_design
-							random_existing_design = Ge_Vampirilis_Letum
-							graphical_culture = root
-							prefix = yes
+						1 = {
+							create_ship = {
+								name = NAME_roz_flagship_gardian_BA
+								design = random_existing_design
+								random_existing_design = Ge_Vampirilis_Letum
+								graphical_culture = root
+								prefix = yes
+							}
 						}
-					}
-					1 = {
-						create_ship = {
-							name = NAME_roz_flagship_gardian_U
-							design = random_existing_design
-							random_existing_design = Ge_Vampirilis_Letum
-							graphical_culture = root
-							prefix = yes
+						1 = {
+							create_ship = {
+								name = NAME_roz_flagship_gardian_IH
+								design = random_existing_design
+								random_existing_design = Ge_Vampirilis_Letum
+								graphical_culture = root
+								prefix = yes
+							}
 						}
-					}
-					1 = {
-						create_ship = {
-							name = NAME_roz_flagship_gardian_S
-							design = random_existing_design
-							random_existing_design = Ge_Vampirilis_Letum
-							graphical_culture = root
-							prefix = yes
+						1 = {
+							create_ship = {
+								name = NAME_roz_flagship_gardian_U
+								design = random_existing_design
+								random_existing_design = Ge_Vampirilis_Letum
+								graphical_culture = root
+								prefix = yes
+							}
 						}
-					}
-					1 = {
-						create_ship = {
-							name = NAME_roz_flagship_gardian_RG
-							design = random_existing_design
-							random_existing_design = Ge_Vampirilis_Letum
-							graphical_culture = root
-							prefix = yes
+						1 = {
+							create_ship = {
+								name = NAME_roz_flagship_gardian_S
+								design = random_existing_design
+								random_existing_design = Ge_Vampirilis_Letum
+								graphical_culture = root
+								prefix = yes
+							}
+						}
+						1 = {
+							create_ship = {
+								name = NAME_roz_flagship_gardian_RG
+								design = random_existing_design
+								random_existing_design = Ge_Vampirilis_Letum
+								graphical_culture = root
+								prefix = yes
+							}
 						}
 					}
 				}
 			}
 		}
+		clear_variable = roz_skills_temp_var
 	}
 }
 

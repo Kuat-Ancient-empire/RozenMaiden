@@ -308,10 +308,10 @@ country_event = {
 				NOT = {
 					has_country_flag = roz_tech_ge_section_get
 				}
+				has_country_flag = ge_tech_reactor_get
 			}
 			if = {
 				limit = {
-					has_country_flag = ge_tech_reactor_get
 					has_technology = tech_ge_section
 				}
 				country_event = {
@@ -321,6 +321,7 @@ country_event = {
 		}
 
 		#没必要的东西
+		#以前有人反馈过丢失flag的神秘问题
 		if = {
 			limit = {
 				NOT = { has_country_flag = ge_leader_suigintou_get }

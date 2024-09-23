@@ -693,11 +693,11 @@ country_event = { #控制台effect测试区
 		# }
 		
 
-		declare_war = {
-			target = event_target:roz_temp_wargoal
-			attacker_war_goal = wg_colossus
-		}
-		save_global_event_target_as = roz_temp_wargoal
+		# declare_war = {
+		# 	target = event_target:roz_temp_wargoal
+		# 	attacker_war_goal = wg_colossus
+		# }
+		# save_global_event_target_as = roz_temp_wargoal
 		#effect = { event_target:ge_site_sgt_target = { solar_system = { set_star_flag = roz_outland_star spawn_natural_wormhole = { bypass_type = roz_gateway random_pos = no orbit_angle = 360 } set_surveyed = { surveyed = yes surveyor = root } } } set_spawn_system_batch = begin no_scope = { spawn_system = { min_distance >= 500 max_distance <= 700 min_orientation_angle = 90 max_orientation_angle = 270 initializer = roz_outland_star_system hyperlane = no } last_created_system = { set_name = "NAME_roz_outland_system" star = { set_name = "NAME_roz_outland_system" } event_target:roz_outland_planet_moon = { change_pc = pc_black_hole } } } set_spawn_system_batch = end }
 
 
@@ -807,35 +807,35 @@ country_event = { #控制台effect测试区
 		#	remove_building = building_roz_ancient_palace
 		#	add_building = building_imperial_capital
 		#}
-		#effect create_fleet = {
-		#	name = "NAME_SRA_SOGZ_UF"
-		#	effect = {
-		#		#set_fleet_flag = wg_crisis_2_SRA_SOGZ_UF
-		#		#save_global_event_target_as = wg_crisis_2_SRA_SOGZ_UF
-		#		set_owner = root
-		#		create_ship = {
-		#			name = "NAME_SRA_SOGZ_UF"
-		#			design = "NAME_SRA_SOGZ_UF_design_2"
-		#			prefix = no
-		#		}
-		#		set_location = {
-		#			target = root.capital_scope
-		#			distance = 0
-		#			angle = 0
-		#		}
-		#		set_fleet_bombardment_stance = wg_doom2
-		#	}
-		#	settings = {
-		#		is_boss = yes
-		#		can_upgrade = no
-		#		uses_naval_capacity = no
-		#		can_change_leader = yes
-		#		can_change_composition = no
-		#		can_disband = no
-		#		spawn_debris = no
-		#		ai_ignore_strength = yes
-		#	}
-		#}
+		# effect create_fleet = {
+		# 	name = "NAME_SRA_SOGZ_UF"
+		# 	effect = {
+		# 		#set_fleet_flag = wg_crisis_2_SRA_SOGZ_UF
+		# 		#save_global_event_target_as = wg_crisis_2_SRA_SOGZ_UF
+		# 		set_owner = root
+		# 		create_ship = {
+		# 			name = "NAME_SRA_SOGZ_UF"
+		# 			design = "NAME_SRA_SOGZ_UF_design_2"
+		# 			prefix = no
+		# 		}
+		# 		set_location = {
+		# 			target = root.capital_scope
+		# 			distance = 0
+		# 			angle = 0
+		# 		}
+		# 		set_fleet_bombardment_stance = wg_doom2
+		# 	}
+		# 	settings = {
+		# 		is_boss = yes
+		# 		can_upgrade = no
+		# 		uses_naval_capacity = no
+		# 		can_change_leader = yes
+		# 		can_change_composition = no
+		# 		can_disband = no
+		# 		spawn_debris = no
+		# 		ai_ignore_strength = yes
+		# 	}
+		# }
 		#effect create_fleet = {
 		#	effect = {
 		#		set_owner = root
@@ -1258,7 +1258,7 @@ country_event = {
 
 			}
 
-			roz_lgate_create_reward_planet = yes
+			#roz_lgate_create_reward_planet = yes
 		}
 	}
 	option = {
