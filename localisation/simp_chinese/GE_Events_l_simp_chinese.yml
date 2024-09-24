@@ -1271,6 +1271,11 @@ ge_skills.11.a: "太好了！"
  ge_skills.210.cc: "随机挑选一个幸运领袖.jpg"
  ge_skills.210.dd: "随机挑选一个幸运国家.jpg"
 
+ge_skills.20.title: "命中注定的献祭"
+ge_skills.20.desc: "目前，若我们要通过时空道标在目标星系召唤一场恐怖的宇宙风暴必须献祭一位科学家……我们要这么做吗？"
+ge_skills.20.aa: "JUST DO IT.（蠢驴全责）"
+ge_skills.20.bb: "不，这太费科学家了（"
+
 ############################
 ge_test_event.100.title: "多人游戏模式科技同步"
 ge_test_event.100.desc: "主机玩家决定给予您虚空科技"
