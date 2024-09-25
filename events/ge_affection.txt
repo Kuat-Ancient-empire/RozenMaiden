@@ -360,6 +360,10 @@ country_event = {
 		if = { 	#反隐形探测压制
 			limit = {
 				has_country_flag = ge_leader_suigintou_get
+				NOR = {
+					has_country_flag = ge_tech_reactor_get
+					has_country_flag = roz_kirakishou_get
+				}
 			}
 			every_country = {
 				limit = {
@@ -398,6 +402,17 @@ country_event = {
 			country_event = {
 				id = ge_affection.2
 			}
+		}
+		#水银灯在星球上任职时,增加好感度
+		if = {
+			limit = { 
+				has_country_flag = ge_leader_suigintou_get
+				check_variable = {
+					which = ge_leader_aft_sgt_reduced_score
+					value <= 100
+				}
+			}
+			roz_add_aft_govern_planet = yes
 		}
 	}
 }
