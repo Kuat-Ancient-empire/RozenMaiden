@@ -1073,7 +1073,7 @@ roz_add_aft_govern_planet = { #蔷薇少女在星球上任职时,增加好感度
 			 event_target:ge_leader_suigintou_global_target@root = {
 				change_variable = {
 					which = ge_leader_affection
-					value = 0.1
+					value = 0.03
 				}
 			 }
 		}

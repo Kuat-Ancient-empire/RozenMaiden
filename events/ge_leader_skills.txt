@@ -1157,7 +1157,7 @@ country_event = { #创生之湖
 	}
 }
 
-country_event = {
+country_event = { #用不了了
 	id = ge_skills.20
 	is_triggered_only = yes
 	picture = GFX_evt_cosmic_storms_the_storm_speaks
@@ -1179,8 +1179,18 @@ country_event = {
 			cosmic_storm = chronos_storm
 			immediate = yes
 
-            reticle_radius = { base = 100 }
-            max_range = { base = 2500 }
+            reticle_radius = { 
+				base = 100 
+				modifier = {
+					mult = value:storm_area_placing_reticle_radius_multiplier
+				}
+			}
+            max_range = { 
+				base = 2500 
+				modifier = {
+					mult = value:storm_area_placing_max_range_multiplier
+				}
+			}
             on_confirm = {
                 add_modifier = {
                     modifier = tempest_invocator_active_modifier
@@ -1254,10 +1264,8 @@ country_event = {
                             }
                         }
                     }
-
+					remove_country_flag = "started_placing_storm"
                 }
-                remove_country_flag = started_placing_storm
-				remove_country_flag = roz_chronos_leader_sacrifice_setting
             }
 
             on_cancel = {
@@ -1265,11 +1273,10 @@ country_event = {
                     sr_dark_matter = 1000
                     energy = 15000
                 }
+				remove_country_flag = "started_placing_storm"
                 # remove_modifier = {
                 #     modifier = "relic_activation_cooldown"
                 # }
-                remove_country_flag = started_placing_storm
-                remove_country_flag = roz_chronos_leader_sacrifice_setting
             }
         }
 	}
@@ -1279,7 +1286,13 @@ country_event = {
 			sr_dark_matter = 1000
 			energy = 15000
 		}
-		remove_country_flag = roz_chronos_leader_sacrifice_setting
+	
+	}
+	after = {
+		hidden_effect = {
+			remove_country_flag = started_placing_storm
+			remove_country_flag = roz_chronos_leader_sacrifice_setting
+		}
 	}
 }
 

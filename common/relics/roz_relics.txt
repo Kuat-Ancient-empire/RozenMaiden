@@ -580,7 +580,7 @@ r_roz_Chronos_Label = {
         custom_tooltip = relic_triumph_cooldown_veryshort
         custom_tooltip = r_roz_Chronos_Label_effect
         custom_tooltip = r_roz_Chronos_Label_active_effect_tt
-        set_country_flag = started_placing_storm
+        set_country_flag = "started_placing_storm"
 
         #every_cosmic_storm = {
         #    if = {
@@ -593,9 +593,113 @@ r_roz_Chronos_Label = {
         #        }
         #    }
         #}
-        country_event = {
-            id = ge_skills.20
+        # country_event = {
+        #     id = ge_skills.20
+        # }
+        start_storm_area_placing = {
+			sacrifice_leader_with_ui = yes
+			cosmic_storm = chronos_storm
+			immediate = yes
 
+            reticle_radius = { 
+				base = 100 
+				modifier = {
+					mult = value:storm_area_placing_reticle_radius_multiplier
+				}
+			}
+            max_range = { 
+				base = 2500 
+				modifier = {
+					mult = value:storm_area_placing_max_range_multiplier
+				}
+			}
+            on_confirm = {
+                add_modifier = {
+                    modifier = tempest_invocator_active_modifier
+                    days = 900
+                }
+                custom_tooltip = relic_triumph_cooldown
+
+                hidden_effect = {
+                    set_country_flag = used_tempest_invocator_relic_achievement
+                    last_created_cosmic_storm = {
+                        every_system_within_storm = {
+                            random_system_planet = {
+                                limit = {
+                                    NOR = {
+                                        has_anomaly = yes
+                                        is_colony = yes
+                                        has_owner = yes
+                                        is_artificial = yes
+                                    }
+                                    NOR = {
+                                        exists = archaeological_site
+                                        has_planet_flag = hatchling_egg
+                                    }
+                                    OR = {
+                                        is_planet_class = pc_molten
+                                        is_planet_class = pc_barren
+                                        is_planet_class = pc_barren_cold
+                                        is_planet_class = pc_toxic
+                                        is_planet_class = pc_frozen
+                                        is_planet_class = pc_nuked
+                                    }
+                                }
+                                change_pc = pc_shattered
+                                clear_deposits = yes
+                                random_list = {
+                                    2 = {
+                                        add_deposit = d_minerals_10
+                                        add_deposit = d_minerals_6
+                                    }
+                                    2 = {
+                                        add_deposit = d_minerals_10
+                                        add_deposit = d_minerals_2
+                                    }
+                                    1 = {
+                                        add_deposit = d_minerals_8
+                                    }
+                                    1 = {
+                                        add_deposit = d_minerals_4
+                                    }
+                                }
+                            }
+                            every_system_planet = {
+                                limit = {
+                                    OR = {
+                                        is_colony = yes
+                                        has_owner = yes
+                                    }
+                                }
+                                while = {
+                                    count = 4
+                                    random_owned_pop = { kill_pop = yes }
+                                }
+                                add_modifier = {
+                                    modifier = roz_chronos_label_planet_effect_stability
+                                    days = 360
+                                }
+                                add_modifier = {
+                                    modifier = roz_chronos_label_planet_effect_product
+                                    days = 360
+                                }
+                            }
+                        }
+                    }
+                    remove_country_flag = "started_placing_storm"
+                }
+            }
+
+            on_cancel = {
+                add_resource = {
+                    sr_dark_matter = 1000
+                    energy = 15000
+                }
+                remove_country_flag = "started_placing_storm"
+                # remove_modifier = {
+                #     modifier = "relic_activation_cooldown"
+                # }
+            }
         }
         
 
