@@ -10,6 +10,18 @@ entity = {
 	attach = { sector2 = ROZ_AS_mesh }
 	attach = { sector3 = ROZ_AS_mesh }
 	attach = { sector4 = ROZ_AS_mesh }
+	attach = {
+		root = ROZ_AS_crystal_rift_entity
+	}
+}
+
+entity = {
+	name = "ROZ_AS_crystal_rift_entity"
+	pdxmesh = avian_01_titan_frame_mesh
+	scale = 2
+	attach = {
+		root = crystal_rift_entity
+	}
 }
 
 entity = {

@@ -385,69 +385,69 @@ country_event = {
             #             destroy_fleet = this
             #         }
             #     }
-                #ruler = { unassign_leader = this }
+            #     #ruler = { unassign_leader = this }
 
-                #remove_country_flag = ge_suigintou_scientist_active
-                #set_country_flag = ge_suigintou_admiral_active
-                #clone_leader = {
-                #    target = event_target:ge_suigintou_admiral_inactive_temp@root
-                #    effect = {
-                #        set_name = "NAME_Suigintou"
-                #    }
-                #}
-                #last_created_leader = {
-                #    set_leader_flag = ge_suigintou_flag
-                #    set_leader_flag = legendary_leader
-                #    set_leader_flag = immune_to_negative_traits
-                #    save_global_event_target_as = ge_leader_suigintou_global_target@root
-                #    #set_is_female = yes
-                #    #get_ge_leader_target = {flag = ge_suigintou_flag}
-                #    set_variable = {
-                #        which = ge_leader_affection
-                #        value = root.ge_leader_affection_temp
-                #    }
-                #    if = {
-                #        limit = {
-                #            check_variable = {
-                #                which = ge_leader_affection
-                #                value >= 90
-                #            }
-                #        }
-                #        add_trait = leader_trait_ge_admiral_a_love
-                #    }
-                #    else_if = {
-                #        limit = {
-                #            check_variable = {
-                #                which = ge_leader_affection
-                #                value >= 60
-                #            }
-                #        }
-                #        add_trait = leader_trait_ge_admiral_a_like
-                #    }
-                #    else_if = {
-                #        limit = {
-                #            check_variable = {
-                #                which = ge_leader_affection
-                #                value >= 30
-                #            }
-                #        }
-                #        add_trait = leader_trait_ge_admiral_a_friendly
-                #    }
-                #    else_if = {
-                #        limit = {
-                #            check_variable = {
-                #                which = ge_leader_affection
-                #                value < 30
-                #            }
-                #        }
-                #        add_trait = leader_trait_ge_admiral_a_strangeness
-                #    }
-                #
-                #
-                #    freeze_leader_age = yes
-                #}
-                #clear_variable = ge_leader_affection_temp
-            }
+            #     #remove_country_flag = ge_suigintou_scientist_active
+            #     #set_country_flag = ge_suigintou_admiral_active
+            #     #clone_leader = {
+            #     #    target = event_target:ge_suigintou_admiral_inactive_temp@root
+            #     #    effect = {
+            #     #        set_name = "NAME_Suigintou"
+            #     #    }
+            #     #}
+            #     #last_created_leader = {
+            #     #    set_leader_flag = ge_suigintou_flag
+            #     #    set_leader_flag = legendary_leader
+            #     #    set_leader_flag = immune_to_negative_traits
+            #     #    save_global_event_target_as = ge_leader_suigintou_global_target@root
+            #     #    #set_is_female = yes
+            #     #    #get_ge_leader_target = {flag = ge_suigintou_flag}
+            #     #    set_variable = {
+            #     #        which = ge_leader_affection
+            #     #        value = root.ge_leader_affection_temp
+            #     #    }
+            #     #    if = {
+            #     #        limit = {
+            #     #            check_variable = {
+            #     #                which = ge_leader_affection
+            #     #                value >= 90
+            #     #            }
+            #     #        }
+            #     #        add_trait = leader_trait_ge_admiral_a_love
+            #     #    }
+            #     #    else_if = {
+            #     #        limit = {
+            #     #            check_variable = {
+            #     #                which = ge_leader_affection
+            #     #                value >= 60
+            #     #            }
+            #     #        }
+            #     #        add_trait = leader_trait_ge_admiral_a_like
+            #     #    }
+            #     #    else_if = {
+            #     #        limit = {
+            #     #            check_variable = {
+            #     #                which = ge_leader_affection
+            #     #                value >= 30
+            #     #            }
+            #     #        }
+            #     #        add_trait = leader_trait_ge_admiral_a_friendly
+            #     #    }
+            #     #    else_if = {
+            #     #        limit = {
+            #     #            check_variable = {
+            #     #                which = ge_leader_affection
+            #     #                value < 30
+            #     #            }
+            #     #        }
+            #     #        add_trait = leader_trait_ge_admiral_a_strangeness
+            #     #    }
+            #     #
+            #     #
+            #     #    freeze_leader_age = yes
+            #     #}
+            #     #clear_variable = ge_leader_affection_temp
+            # }
             clear_global_event_target = roz_suigintou_bwg_leader_target
             #第一次茶会
             country_event = {
