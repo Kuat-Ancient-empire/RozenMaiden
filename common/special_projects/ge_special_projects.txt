@@ -803,12 +803,17 @@ special_project = {
 		skill = 6
 		shipclass_science_ship = 1
 	}
-
+	cost = 40000
+	tech_department = society_technology
 	event_scope = planet_event
 	picture = GFX_
 	icon = gfx/interface/icons/situation_log/situation_log_precursor.dds
 	on_success = {
-
+		owner = {
+			country_event = {
+				id = roz_shinku_evt.510
+			}
+		}
 	}
 }
 

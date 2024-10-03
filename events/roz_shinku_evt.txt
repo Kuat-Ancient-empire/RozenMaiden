@@ -1537,6 +1537,7 @@ country_event = {
             id = roz_shinku_evt.504
             days = 1
         }
+        add_relic = r_roz_extrinsic_xinlin_crystal_unknow
     }
 }
 
@@ -1554,7 +1555,7 @@ country_event = {
     option = {
         name = roz_shinku_evt.504.aa
         enable_special_project = {
-            name = roz_
+            name = roz_poring_xiling_crystal
             owner = root
         }
     }
@@ -1570,20 +1571,194 @@ country_event = {
         is_ai = no
         has_country_flag = roz_SK_1_kxbj_complete
         has_country_flag = roz_SK_2_jtcl_complete
-        NOT = {
-            has_relic = r_roz_extrinsic_xinlin_crystal
-        }
     }
     option = {
         name = roz_shinku_evt.510.aa
         add_relic = r_roz_extrinsic_xinlin_crystal
-        give_technology = {
-            tech = tech
+        hidden_effect = {
+            remove_relic = r_roz_extrinsic_xinlin_crystal_unknow
+            give_technology = {
+                tech = tech_roz_information_remodeler
+            }
         }
     }
 }
 
+#资讯重构仪基址建设完成
+country_event = {
+    id = roz_shinku_evt.512
+    title = roz_shinku_evt.512.title
+    desc = roz_shinku_evt.512.desc
+    is_triggered_only = yes
+    picture = GFX
+    trigger = {
+        is_ai = no
+    }
+    option = {
+        name = roz_shinku_evt.512.aa
+    }
+    option = {
+        name = roz_shinku_evt.512.bb
+    }
+    after = {
+        add_resource = {
+            influence = 200
+        }
+        add_monthly_resource_mult = {
+            resource = unity
+            value = 12
+        }
+    }
+}
 
+#资讯重构仪巨构完工
+country_event = {
+    id = roz_shinku_evt.513
+    title = roz_shinku_evt.513.title
+    desc = roz_shinku_evt.513.desc
+    is_triggered_only = yes
+    picture = GFX
+    trigger = {
+        is_ai = no
+    }
+    option = {
+        name = roz_shinku_evt.513.aa
+        play_sound = event_big_door_opening
+        country_event = {
+            id = roz_shinku_evt.514
+            days = 1
+        }
+    }
+    after = {
+        add_resource = {
+            influence = 250
+        }
+        add_monthly_resource_mult = {
+            resource = unity
+            value = 18
+        }
+    }
+}
+
+country_event = {
+    id = roz_shinku_evt.514
+    title = roz_shinku_evt.514.title
+    desc = roz_shinku_evt.514.desc
+    is_triggered_only = yes
+    picture = GFX
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        set_country_flag = roz_mega_information_remodeler_active
+    }
+    option = {
+        name = roz_shinku_evt.514.aa
+        custom_tooltip = roz_shinku_evt.514.aa.ct
+        add_modifier = {
+            modifier = roz_mega_information_remodeler_active_bonus
+        }
+    }
+    after = {
+        country_event = {
+            id = roz_shinku_evt.515
+        }
+    }
+}
+
+country_event = {
+    id = roz_shinku_evt.515
+    title = roz_shinku_evt.515.title
+    desc = roz_shinku_evt.515.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = no_video_feed_room
+        portrait = GFX
+    }
+    trigger = {
+        is_ai = no
+    }
+    option = {
+        name = roz_shinku_evt.515.aa
+        response_text = roz_shinku_evt.515.aa.res
+        is_dialog_only = yes
+    }
+    option = {
+        name = roz_shinku_evt.515.bb
+        response_text = roz_shinku_evt.515.bb.res
+        is_dialog_only = yes
+    }
+    option = {
+        name = roz_shinku_evt.515.cc
+        response_text = roz_shinku_evt.515.cc.res
+        is_dialog_only = yes
+    }
+    option = {
+        name = roz_shinku_evt.515.dd
+        response_text = roz_shinku_evt.515.dd.res
+        default_hide_option = yes
+    }
+    after = {
+        country_event = {
+            id = roz_shinku_evt.516
+            days = 1
+        }
+    }
+}
+
+#拨云见日
+country_event = {
+    id = roz_shinku_evt.516
+    title = roz_shinku_evt.516.title
+    desc = roz_shinku_evt.516.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = no_video_feed_room
+        portrait = GFX
+    }
+    trigger = {
+        is_ai = no
+    }
+    option = {
+        name = roz_shinku_evt.516.aa
+        custom_tooltip = roz_shinku_evt.516.ct
+    }
+    option = {
+        name = roz_shinku_evt.516.bb
+        custom_tooltip = roz_shinku_evt.516.ct
+    }
+    after = {
+        country_event = {
+            id = roz_shinku_evt.517
+            days = 5
+        }
+    }
+}
+
+country_event = {
+    id = roz_shinku_evt.517
+    title = roz_shinku_evt.517.title
+    desc = roz_shinku_evt.517.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = no_video_feed_room
+        portrait = GFX
+    }
+    trigger = {
+        is_ai = no
+    }
+    option = {
+        name = roz_shinku_evt.517.aa
+        custom_tooltip = roz_shinku_evt.517.ct
+    }
+}
+
+
+####
+##——————真红事件链，BOSS战和之后部分——————
 
 
 

@@ -102,3 +102,192 @@ roz_mega_wanxiangtianyin_undeploy = {
     }
 }
 
+
+###资讯重构仪
+#基址
+roz_mega_information_remodeler_base = {
+    entity = x
+    construction_entity = x
+    portrait = GFX_
+    place_entity_on_planet_plane = yes
+    entity_offset = { x = @entity_x y = @entity_y }
+    build_time = 1800
+    prerequisites = {
+        tech_roz_information_remodeler
+    }
+    resources = {
+        category = megastructures
+        cost = {
+            energy = 10000
+            alloys = 10000
+            sr_void_core = 1000
+            sr_dark_matter = 1500
+        }
+
+        upkeep = {
+        }
+
+        produces = {
+        }
+    }
+    possible = {
+        hidden_trigger = {
+            exists = starbase
+        }
+    }
+    placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "must_build_around_star"
+				is_star = yes
+			}
+		}
+	}
+    
+    country_modifier = {
+        country_produces_mult = 0.10
+    }
+    on_build_complete = {
+        from = {
+            country_event = {
+                id = roz_shinku_evt.512
+                days = 2
+            }
+        }
+    }
+}
+
+roz_mega_information_remodeler = {
+    entity = x
+    construction_entity = x
+    portrait = GFX_
+    place_entity_on_planet_plane = yes
+    entity_offset = { x = @entity_x y = @entity_y }
+    build_time = 1800
+    resources = {
+        category = megastructures
+        cost = {
+            energy = 10000
+            alloys = 10000
+            sr_void_core = 1000
+            sr_dark_matter = 1500
+        }
+
+        upkeep = {
+        }
+
+        produces = {
+            energy = 1500
+            alloys = 1000
+            sr_void_core = 150
+        }
+    }
+    country_modifier = {
+        country_produces_mult = 0.30
+        country_naval_cap_add = 2000
+        all_technology_research_speed = 0.15
+    }
+    possible = {
+        has_megastructure = roz_mega_information_remodeler_base
+        from = {
+            has_relic = r_roz_extrinsic_xinlin_crystal
+            has_technology = tech_roz_information_remodeler
+        }
+    }
+    upgrade_from = {
+        roz_mega_information_remodeler_base
+    }
+    on_build_complete = {
+        from = {
+            country_event = {
+                id = roz_shinku_evt.513
+                days = 2
+            }
+        }
+    }
+}
+
+roz_mega_information_remodeler_effect = {
+    entity = x
+    construction_entity = x
+    portrait = x
+    place_entity_on_planet_plane = no
+    entity_offset = { x = @entity_x y = @entity_y }
+    build_time = 1
+    resources = {
+        category = megastructures
+        cost = {
+            energy = 10000
+            sr_void_core = 100
+        }
+
+        upkeep = {
+        }
+
+        produces = {
+        }
+    }
+
+    upgrade_from = {
+        roz_mega_information_remodeler
+    }
+    on_build_complete = {
+        solar_system = {
+            spawn_megastructure = {
+				type = roz_mega_information_remodeler
+				planet = root.star
+				owner = prev.from
+			}
+        }
+        fromfrom = {
+            remove_megastructure = this
+        }
+        from = {
+            country_event = {
+                id = roz_shinku_evt.514
+            }
+        }
+    }
+
+    possible = {
+        NOT = {
+            has_country_flag = roz_mega_information_remodeler_active
+        }
+    }
+    potential = {
+        NOT = {
+            has_country_flag = roz_mega_information_remodeler_active
+        }
+    }
+
+    country_modifier = {
+
+    }
+}
+
+roz_mega_information_remodeler_destoryed = {
+    entity = x
+    construction_entity = x
+    portrait = GFX_
+    place_entity_on_planet_plane = yes
+    entity_offset = { x = @entity_x y = @entity_y }
+    build_time = 1800
+    resources = {
+        category = megastructures
+        cost = {
+        }
+
+        upkeep = {
+        }
+
+        produces = {
+            physics_research = 500
+            society_research = 250
+            engineering_research = 500
+        }
+    }
+    country_modifier = {
+        all_technology_research_speed = 0.10
+    }
+}
+

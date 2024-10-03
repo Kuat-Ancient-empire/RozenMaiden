@@ -252,6 +252,19 @@ country_event = { #控制台effect测试区
 		is_ai = no
 	}
 	immediate = {
+		# save_global_event_target_as = roz_test
+		# event_target:roz_test = {
+		# 	set_player = event_target:ge_suigintou_owner@root
+		# }
+
+		# every_cosmic_storm = {
+		# 	limit = {
+		# 		is_storm_type = chronos_storm
+		# 	}
+		# 	destroy_cosmic_storm = yes
+		# }
+
+		#
 		#capital_scope = {
 		#	create_fleet = {
 		#		name = "NAME_ge_sgt_ship"

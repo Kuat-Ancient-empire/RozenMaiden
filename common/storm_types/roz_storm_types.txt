@@ -1,4 +1,4 @@
-# Nexus Storm Type
+#Storm Type
 
 chronos_storm = {
 	inline_script = {
@@ -7,7 +7,7 @@ chronos_storm = {
 		MAX_RADIUS = 100
 		MIN_RANGE = value:storm_range_min
 		MAX_RANGE = value:storm_range_max
-		STORM_SPEED = 0.05
+		STORM_SPEED = 0.1
 		ACTIVATION_PERIOD_IN_MONTHS = 12
 		MONTHLY_ADDED_DEVASTATION = 3
 	}

@@ -712,6 +712,10 @@ roz_stare_into_the_abyss_debuff = {
 	all_technology_research_speed = -0.20
 }
 
-
+roz_mega_information_remodeler_active_bonus = {
+	icon = gfx/interface/icons/modifiers/mod_produces_mult.dds
+	PLANET_BUILDING_BUILD_SPEED_MULT = 0.25
+	MEGASTRUCTURE_BUILD_SPEED_MULT = 0.25
+}
 
 

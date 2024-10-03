@@ -315,74 +315,76 @@ country_event = {
             remove_country_flag = ge_sgt_chat
             event_target:roz_suigintou_bwg_leader_target@root = {
                 set_owner = root
+                return_leader_from_exile = this
             }
-            if = {
-                limit = {
-                    capital_scope = {
-                        exists = this
-                    }
-                }
-                capital_scope = {
-                    random_planet_army = {
-                        set_leader =event_target:roz_suigintou_bwg_leader_target@root
-                        unassign_leader = event_target:roz_suigintou_bwg_leader_target@root
-                    }
+        
+            # if = {
+            #     limit = {
+            #         capital_scope = {
+            #             exists = this
+            #         }
+            #     }
+            #     capital_scope = {
+            #         random_planet_army = {
+            #             set_leader =event_target:roz_suigintou_bwg_leader_target@root
+            #             unassign_leader = event_target:roz_suigintou_bwg_leader_target@root
+            #         }
 
-                }
-            }
-            else_if = {
-                limit = {
-                    any_owned_fleet = {
-                        exists = this
-                    }
-                }
-                random_owned_fleet = {
-                    set_leader = event_target:roz_suigintou_bwg_leader_target@root
-                    unassign_leader = event_target:roz_suigintou_bwg_leader_target@root
-                }
-            }
-            else_if = {
-                limit = {
-                    capital_scope = {
-                        is_same_value != this
-                    }
-                    any_owned_fleet = {
-                        exists != this
-                    }
-                }
-                event_target:ge_suigintou_country@root = {
-                    random_system_planet = {
-                        save_event_target_as = roz_location_temp_target
-                    }
-                    create_fleet = {
-                        name = "NAME_ge_sgt_ship"
-                        settings = {
-                            spawn_debris = no
-                            is_boss = no
-                            can_change_leader = yes
-                        }
-                        effect = {
-                            set_cloaking_active = yes
-                            set_owner = prev
-                            create_ship = {
-                                name = "NAME_sgt"
-                                design = NAME_ge_vfs
-                                graphical_culture = root
-                                prefix = no
-                            }
-                            set_location = {
-                                target = event_target:roz_location_temp_target
-                                distance = 45
-                                angle = random
-                            }
-                            set_leader = event_target:roz_suigintou_bwg_leader_target@root
-                            unassign_leader = event_target:roz_suigintou_bwg_leader_target@root
-                        }
-                    }
-                    last_created_fleet = {
-                        destroy_fleet = this
-                    }
-                }
+            #     }
+            # }
+            # else_if = {
+            #     limit = {
+            #         any_owned_fleet = {
+            #             exists = this
+            #         }
+            #     }
+            #     random_owned_fleet = {
+            #         set_leader = event_target:roz_suigintou_bwg_leader_target@root
+            #         unassign_leader = event_target:roz_suigintou_bwg_leader_target@root
+            #     }
+            # }
+            # else_if = {
+            #     limit = {
+            #         capital_scope = {
+            #             is_same_value != this
+            #         }
+            #         any_owned_fleet = {
+            #             exists != this
+            #         }
+            #     }
+            #     event_target:ge_suigintou_country@root = {
+            #         random_system_planet = {
+            #             save_event_target_as = roz_location_temp_target
+            #         }
+            #         create_fleet = {
+            #             name = "NAME_ge_sgt_ship"
+            #             settings = {
+            #                 spawn_debris = no
+            #                 is_boss = no
+            #                 can_change_leader = yes
+            #             }
+            #             effect = {
+            #                 set_cloaking_active = yes
+            #                 set_owner = prev
+            #                 create_ship = {
+            #                     name = "NAME_sgt"
+            #                     design = NAME_ge_vfs
+            #                     graphical_culture = root
+            #                     prefix = no
+            #                 }
+            #                 set_location = {
+            #                     target = event_target:roz_location_temp_target
+            #                     distance = 45
+            #                     angle = random
+            #                 }
+            #                 set_leader = event_target:roz_suigintou_bwg_leader_target@root
+            #                 unassign_leader = event_target:roz_suigintou_bwg_leader_target@root
+            #             }
+            #         }
+            #         last_created_fleet = {
+            #             destroy_fleet = this
+            #         }
+            #     }
                 #ruler = { unassign_leader = this }
 
                 #remove_country_flag = ge_suigintou_scientist_active

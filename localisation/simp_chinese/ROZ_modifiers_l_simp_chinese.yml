@@ -201,12 +201,15 @@
 
  #############################
  ####特殊计划：卷土重来
- roz_unholy_invasion_defproj_1_defender_buff:"§G作战指令：守株待兔§!"
- roz_unholy_invasion_defproj_1_defender_buff_desc:""
+ roz_unholy_invasion_defproj_1_defender_buff: "§G作战指令：守株待兔§!"
+ roz_unholy_invasion_defproj_1_defender_buff_desc: ""
 
- roz_stare_into_the_abyss_debuff:"§R直视深渊§!"
- roz_stare_into_the_abyss_debuff_desc:""
+ roz_stare_into_the_abyss_debuff: "§R直视深渊§!"
+ roz_stare_into_the_abyss_debuff_desc: ""
 
- roz_SK_ec_boundaries_of_science_frustrated:"在科学的边界碰壁"
- roz_SK_ec_boundaries_of_science_frustrated_desc:"解析的结果告诉我们，“唯一性”是目前的科学界无法突破的限制。\n至少我们还不行……"
+ roz_SK_ec_boundaries_of_science_frustrated: "在科学的边界碰壁"
+ roz_SK_ec_boundaries_of_science_frustrated_desc: "解析的结果告诉我们，“唯一性”是目前的科学界无法突破的限制。\n至少我们还不行……"
+
+roz_mega_information_remodeler_active_bonus: "晶体的启发"
+roz_mega_information_remodeler_active_bonus_desc: ""
 

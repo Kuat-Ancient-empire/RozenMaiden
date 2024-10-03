@@ -483,6 +483,53 @@ r_roz_orgel = {
 }
 
 r_roz_extrinsic_xinlin_crystal_unknow = {
+    activation_duration = 1
+    portrait = GFX_r_roz_extrinsic_xinlin_crystal
+    sound = relic_activation_eternal_throne
+    possible = {
+        is_ai = no
+    }
+    can_be_stolen = no
+    resources = {
+        category = relics
+        # Activation cost
+        # cost = {
+        #     ##astral_threads = 1000
+        #     engineering_research = 3000
+        #     physics_research = 3000
+        # }
+        # upkeep = {
+        #     consumer_goods = 50
+        # }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        country_base_influence_produces_add = 1
+    }
+
+    score = 2500
+
+    active_effect = {
+        capital_scope = {
+
+        }
+        # hidden_effect = {
+        #     add_modifier = {
+        #         modifier = "relic_activation_cooldown"
+        #         days = 1800
+        #     }
+        # }
+    }
+}
+
+r_roz_extrinsic_xinlin_crystal = {
     activation_duration = 1800
     portrait = GFX_r_roz_extrinsic_xinlin_crystal
     sound = relic_activation_eternal_throne
@@ -494,12 +541,11 @@ r_roz_extrinsic_xinlin_crystal_unknow = {
         category = relics
         # Activation cost
         cost = {
-            ##astral_threads = 1000
-            engineering_research = 3000
-            physics_research = 3000
+            sr_void_core = 1000
         }
         upkeep = {
-            consumer_goods = 50
+            energy = 120
+            sr_void_core = 5
         }
     }
 
@@ -511,11 +557,61 @@ r_roz_extrinsic_xinlin_crystal_unknow = {
         potential = {
             always = yes
         }
-        tech_cost_empire_size_mult = -0.2
-        diplo_weight_technology_mult = 0.1
+        weapon_type_ge_void_energy_weapon_damage_mult = 2.5
+        weapon_archaeotech_weapon_fire_rate_mult = 0.5
+        ship_shield_add = 10000
+    }
+
+    score = 2500
+
+    active_effect = {
+        capital_scope = {
+
+        }
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 1800
+            }
+        }
+    }
+}
+
+r_roz_extrinsic_xinlin_crystal_broken = {
+    activation_duration = 1800
+    portrait = GFX_r_roz_extrinsic_xinlin_crystal
+    sound = relic_activation_eternal_throne
+    possible = {
+        is_ai = no
+    }
+    can_be_stolen = no
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            society_research = 1000
+            engineering_research = 3000
+            physics_research = 3000
+        }
+        upkeep = {
+            sr_void_core = 5
+            alloys = 50
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
         engineering_tech_cost_mult = -0.1
         physics_tech_cost_mult = -0.1
         society_tech_cost_mult = -0.1
+        tech_cost_empire_size_mult = -0.2
+        diplo_weight_technology_mult = 0.1
     }
 
     score = 2500

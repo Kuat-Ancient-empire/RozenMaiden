@@ -1042,6 +1042,7 @@ tech_roz_information_remodeler = {
 	category = {
 		archaeostudies
 	}
+	tier = 5
 	is_rare = yes
 	is_dangerous = yes
 	potential = {

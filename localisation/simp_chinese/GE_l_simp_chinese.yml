@@ -122,13 +122,13 @@ col_roz_YS_planet_desc: "和虚境星球相比，这里浓厚的紫色大气层�
  r_roz_Chronos_Label_effect:"激活后的一年内，§C时空道标§!将允许所有舰船跳跃，绕过超空间航道。\n激活时,若处于战时，将向所有正在战斗的敌方舰队释放时空乱流，迫使其进行§R紧急超光速跃迁§!。"
 
  ##tps
- r_roz_teaparty_set:"§Y茶会器具§!"
- r_roz_teaparty_set_desc:"水银灯根据遥远庭院时光的记忆复刻出来的精致炼金工艺品，虽然她本人一直不愿交代这些器具的用途，然而在每次人偶茶会中这些东西都会被盛满点心与红茶端上餐桌。"
- r_roz_teaparty_set_ct:"\n§B您可以从这里更改茶会的举办时间§! \n \n"
- r_roz_teaparty_set_possible:"§R您已经进入设置界面!§!"
+ r_roz_teaparty_set: "§Y茶会器具§!"
+ r_roz_teaparty_set_desc: "水银灯根据遥远庭院时光的记忆复刻出来的精致炼金工艺品，虽然她本人一直不愿交代这些器具的用途，然而在每次人偶茶会中这些东西都会被盛满点心与红茶端上餐桌。"
+ r_roz_teaparty_set_ct: "\n§B您可以从这里更改茶会的举办时间§! \n \n"
+ r_roz_teaparty_set_possible: "§R您已经进入设置界面!§!"
 
- r_roz_orgel:"§M水银灯的八音盒§!"
- r_roz_orgel_desc:"这个小巧的八音盒曾经是水银灯最重要的宝物——这是父亲罗真第一次送给她的礼物。这是一个神奇的炼金物品，哪怕它未奏响乐章，周围的听众也能被安抚情绪。"
+ r_roz_orgel: "§M水银灯的八音盒§!"
+ r_roz_orgel_desc: "这个小巧的八音盒曾经是水银灯最重要的宝物——这是父亲罗真第一次送给她的礼物。这是一个神奇的炼金物品，哪怕它未奏响乐章，周围的听众也能被安抚情绪。"
 
 
  #shinku
@@ -154,14 +154,14 @@ col_roz_YS_planet_desc: "和虚境星球相比，这里浓厚的紫色大气层�
  roz_shuukan_shoujonotsukurikata_vol9_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中附带了些许制作工具以及人偶的零件"
 
 #
-r_roz_extrinsic_xinlin_crystal_unknow:"§B奇异希灵水晶§!"
-r_roz_extrinsic_xinlin_crystal_unknow_desc:"一个棺材状的晶体，至于为什么要这么形容，这是所有科研人员在审视其外貌后的一致看法……\n物理结构强度极高，我们尚未找到合适的损毁方法来让它破层皮……\n§Y晶体内存储数据仍在解析中§!……"
+r_roz_extrinsic_xinlin_crystal_unknow: "§B奇异希灵水晶§!"
+r_roz_extrinsic_xinlin_crystal_unknow_desc: "一个棺材状的晶体，至于为什么要这么形容，这是所有科研人员在审视其外貌后的一致看法……\n物理结构强度极高，我们尚未找到合适的损毁方法来让它破层皮……\n§Y晶体内存储数据仍在解析中§!……"
 
-r_roz_extrinsic_xinlin_crystal:"§B超限容晶体-12345型(小公主特供版)§!"
-r_roz_extrinsic_xinlin_crystal_desc:"神秘而强大的希灵文明给予我们的关键帮助，逆转神格污染与重塑蔷薇圣母的主控晶体。它的真身如今正镶嵌在破败神国星系中的资讯重构仪上，但仍可独立发挥作用。水银灯对这个命名吐槽了若干次，不过我们的科学家还是决定保留原名。"
+r_roz_extrinsic_xinlin_crystal: "§B超限容晶体-12345型(小公主特供版)§!"
+r_roz_extrinsic_xinlin_crystal_desc: "神秘而强大的希灵文明给予我们的关键帮助，逆转神格污染与重塑蔷薇圣母的主控晶体。它的真身如今正镶嵌在破败神国星系中的资讯重构仪上，但仍可独立发挥作用。水银灯对这个命名吐槽了若干次，不过我们的科学家还是决定保留原名。"
 
-r_roz_extrinsic_xinlin_crystal_broken:"§g损毁的超限容晶体§!"
-r_roz_extrinsic_xinlin_crystal_broken_desc:"原本的超限容结晶体-12345型(小公主特供版)，因为唤醒真红项目中的高强度使用，已经过载损坏，大部分结构失去作用。但作为超级文明的技术造物，这个结晶体依然能够让我们的科研人员得到有效启发。"
+r_roz_extrinsic_xinlin_crystal_broken: "§g损毁的超限容晶体§!"
+r_roz_extrinsic_xinlin_crystal_broken_desc: "原本的超限容结晶体-12345型(小公主特供版)，因为唤醒真红项目中的高强度使用，已经过载损坏，大部分结构失去作用。但作为超级文明的技术造物，这个结晶体依然能够让我们的科研人员得到有效启发。"
 
  ############################
  ####cosmic storm
@@ -349,10 +349,12 @@ sc_roz_dark_box: "§P破败神国§!"
 roz_mega_information_remodeler_base: "资讯重构仪基址"
 roz_mega_information_remodeler_base_DESC: "这项来自希灵帝国的超级工程无法为我们所理解，好在我们只需按照图纸依样画葫芦就能进行建设。"
 #该巨构只能建设在破败神国星系的恒星上。
-roz_mega_information_remodeler: "资讯重构仪"
+roz_mega_information_remodeler: "§B资讯重构仪§!"
 roz_mega_information_remodeler_DESC: "无中生有的神奇技术，超级文明的惊鸿一瞥。超限容晶体-12345型（小公主特供版）作为技术核心，镶嵌于此。"
-roz_mega_information_remodeler: "失效的资讯重构仪"
-roz_mega_information_remodeler_DESC: "尽管希灵帝国的科技锚点仍然留存在我们的宇宙中，可因为核心损毁，原有的神奇功能已经无法正常启用。不过研究它的结构和技术原理还是能为我们带来许多启发。"
 
+roz_mega_information_remodeler_effect: "启动$roz_mega_information_remodeler$"
+roz_mega_information_remodeler_effect_DESC: ""
+roz_mega_information_remodeler_destroyed: "§g失效的资讯重构仪§!"
+roz_mega_information_remodeler_destroyed_DESC: "尽管希灵帝国的科技锚点仍然留存在我们的宇宙中，可因为核心损毁，原有的神奇功能已经无法正常启用。不过研究它的结构和技术原理还是能为我们带来许多启发。"
 
 

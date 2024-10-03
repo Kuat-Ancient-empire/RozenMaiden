@@ -4028,6 +4028,7 @@ Mercury_lamp_helps_research_current_technology = {
 
 roz_lgate_create_reward_planet = {
 	#this = country
+	set_country_flag = roz_lgate_create_flag
 	give_technology = { tech = tech_fe_affluence_1 }
 	give_technology = { tech = tech_fe_affluence_2 }
 	give_technology = { tech = tech_fe_nourishment_1 }
