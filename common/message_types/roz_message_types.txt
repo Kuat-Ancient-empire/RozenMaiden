@@ -34,7 +34,7 @@ message_type = {
     key = "ROZ_sgt_gal_MESSAGE_TYPE"
     icon = GFX_message_ROZ_GAL_SGT
     icon_frame = 1
-    name = ROZ_sgt_gal_MESSAGE
+    #name = "ROZ_sgt_gal_MESSAGE"
     sound = "notification"
     ping = "ping_notification_green"
 }
@@ -43,7 +43,7 @@ message_type = {
     key = "ROZ_krks_gal_MESSAGE_TYPE"
     icon = GFX_message_ROZ_GAL_KRKS
     icon_frame = 1
-    name = ROZ_krks_gal_MESSAGE
+    #name = "ROZ_krks_gal_MESSAGE"
     sound = "notification"
     ping = "ping_notification_green"
 }

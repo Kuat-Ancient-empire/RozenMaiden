@@ -276,9 +276,10 @@ ROZ_SSVL_AO_object_desc: "这个实体十分神秘，它几乎不反射任何电
 #opinion
 opinion_roz_edict_mutiplayer_tech: "第四天灾团结起来了"
 opinion_roz_test_postive: "不知道为什么，这帮异种喜欢我们"
- triggered_opinion_roz_test_postive: "不知道为什么，这帮异种喜欢我们"
- opinion_roz_date_dip_dissatisfied: "不满"
+triggered_opinion_roz_test_postive: "不知道为什么，这帮异种喜欢我们"
+opinion_roz_date_dip_dissatisfied: "不满"
 
+opinion_roz_call_the_abyss_hostile: "招致深渊灾祸"
 
 #######Starbase Buildings
 sm_Roz_starbase_placeholder: "§g旗舰限制器§!"
@@ -305,10 +306,11 @@ roz_time_freeze_activity_desc: "§R警告 - 时间静止已经启动！§!"
 
 roz_agenda_void_core_boost_available_title: "解锁内阁议程：§B能源泄洪§!"
 roz_agenda_void_core_boost_available_desc: ""
-roz_sgt_gal_MESSAGE:"§M来自水银灯的暗示§!"
-roz_sgt_gal_MESSAGE_desc:"看起来，她已经准备好再次和你出去共度时光了"
-roz_krks_gal_MESSAGE:"§M来自雪华绮晶的邀请§!"
-roz_krks_gal_MESSAGE_desc:"看起来，她十分期待接下来的约会"
+MESSAGE_ROZ_sgt_gal_MESSAGE_TYPE_TITLE: "§M来自水银灯的暗示§!"
+MESSAGE_roz_sgt_gal_MESSAGE_TITLE_desc: "看起来，她已经准备好再次和你出去共度时光了"
+
+MESSAGE_ROZ_krks_gal_MESSAGE_TYPE_TITLE: "§M来自雪华绮晶的邀请§!"
+MESSAGE_roz_sgt_gal_MESSAGE_TITLE_desc: "看起来，她十分期待接下来的约会"
 ###########################################
 ###agenda
 

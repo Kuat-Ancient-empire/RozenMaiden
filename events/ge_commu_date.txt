@@ -1553,7 +1553,7 @@ country_event = {
     immediate = {
         create_message = {
             type = ROZ_sgt_gal_MESSAGE_TYPE
-            localization = ROZ_sgt_gal_MESSAGE_desc
+            localization = MESSAGE_roz_sgt_gal_MESSAGE_TITLE_desc
             days = 15
             target = event_target:ge_site_sgt_target@root
         }

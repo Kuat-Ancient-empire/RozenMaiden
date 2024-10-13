@@ -50,3 +50,12 @@ opinion_roz_date_dip_dissatisfied = {
 
 }
 
+opinion_roz_call_the_abyss_hostile = {
+	opinion = {
+		base = -50
+	}
+	unique = no
+	decay = {
+		base = 5
+	}
+}

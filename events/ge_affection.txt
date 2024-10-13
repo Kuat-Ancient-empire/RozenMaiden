@@ -213,11 +213,20 @@ country_event = {
 			limit = {
 				#exists = event_target:ge_suigintou_admiral_inactive_temp@root
 				exists = event_target:ge_leader_suigintou_global_target@root
+				NOR = {
+					has_country_flag = roz_suigintou_diplomatic_initialize_flag
+					has_active_event = {
+						ge_leader_event.1
+						ge_communication.0
+					}
+				}
 			}
 			roz_suigintou_admiral_backup = yes
 			roz_suigintou_scientist_backup = yes
 		}
-		if = {	#若备份和本体都失去，则初始化领袖，这将导致领袖特质与等级重置
+		if = {	
+			#科学家
+			#若备份和本体都失去，则初始化领袖，这将导致领袖特质与等级重置
 			limit = {
 				has_country_flag = ge_leader_suigintou_get
 				has_country_flag = ge_suigintou_scientist_active
@@ -226,21 +235,37 @@ country_event = {
 					exists = event_target:ge_suigintou_scientist_inactive_temp@root
 					exists = event_target:ge_leader_suigintou_global_target@root
 				}
+				NOR = {
+					has_country_flag = roz_suigintou_diplomatic_initialize_flag
+					has_active_event = {
+						ge_leader_event.1
+						ge_communication.0
+					}
+				}
 				NOT = { #在决战墨水人
 					has_country_flag = unholy_invasion_defend_proj_aggressive
 				}
 			}
 			roz_suigintou_revive_reset_scientist = yes
 		}
-		if = {	#若备份和本体都失去，则初始化领袖，这将导致领袖特质与等级重置
+		if = {	
+			#舰队司令
+			#若备份和本体都失去，则初始化领袖，这将导致领袖特质与等级重置
 			limit = {
 				has_country_flag = ge_leader_suigintou_get
+				has_country_flag = ge_suigintou_admiral_active
 				exists = event_target:ge_suigintou_country@root
 				NOR = {
 					exists = event_target:ge_suigintou_admiral_inactive_temp@root
 					exists = event_target:ge_leader_suigintou_global_target@root
 				}
-				has_country_flag = ge_suigintou_admiral_active
+				NOR = {
+					has_country_flag = roz_suigintou_diplomatic_initialize_flag
+					has_active_event = {
+						ge_leader_event.1
+						ge_communication.0
+					}
+				}
 				NOT = { #决战墨水人
 					has_country_flag = unholy_invasion_defend_proj_aggressive
 				}

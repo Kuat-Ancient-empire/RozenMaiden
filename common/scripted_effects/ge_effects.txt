@@ -430,29 +430,6 @@ roz_leader_suigintou_counting_check = {
 					}
 				}
 			}
-			#if = {
-			#	limit = {
-			#		has_country_flag = ge_suigintou_scientist_active
-			#		NOT = { has_country_flag = ge_suigintou_admiral_active }
-			#	}
-			#	#roz_suigintou_clone_scientist_from_cache_country = yes
-			#	#roz_suigintou_initialize_scientist = yes
-			#}
-			#else_if = {
-			#	limit = {
-			#		has_country_flag = ge_suigintou_admiral_active
-			#		NOT = { has_country_flag = ge_suigintou_scientist_active }
-			#	}
-			#	#roz_suigintou_clone_admiral_from_cache_country = yes
-			#	#roz_suigintou_initialize_admiral = yes
-			#}
-			#else_if = {
-			#	limit = {
-			#
-			#	}
-			#	remove_country_flag = ge_suigintou_scientist_active
-			#	#roz_suigintou_clone_admiral_from_cache_country = yes
-			#}
 			clear_variable = roz_suigintou_counting_var
 			every_owned_leader = {
 				limit = {
