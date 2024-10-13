@@ -250,7 +250,16 @@ country_event = { #控制台effect测试区
 	trigger = {
 		#always = no
 		is_ai = no
+		
 	}
+	# trigger = {
+	# 	event_target:ge_suigintou_country@root = {
+	# 		any_owned_leader = {
+	# 			leader_class = commander
+	# 			has_trait = leader_trait_ge_mercury_lamp			
+	# 		}
+	# 	}
+	# }
 	immediate = {
 		# save_global_event_target_as = roz_test
 		# event_target:roz_test = {
@@ -263,7 +272,7 @@ country_event = { #控制台effect测试区
 		# 	}
 		# 	destroy_cosmic_storm = yes
 		# }
-
+		
 		#
 		#capital_scope = {
 		#	create_fleet = {

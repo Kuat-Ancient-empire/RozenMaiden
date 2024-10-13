@@ -2674,46 +2674,107 @@ country_event = {
     option = {
         name = ge_event.3082.aa
         is_dialog_only = yes
+        allow = {
+            NOT = {
+                has_country_flag = roz_evt_temp_flag_1
+            }
+            fail_text = {
+                text = NO
+            }
+        }
         response_text = ge_event.3082.aa.res
         add_resource = {
             unity = 1000
+        }
+        hidden_effect = {
+            set_country_flag = roz_evt_temp_flag_1
         }
     }
     option = {
         name = ge_event.3082.bb
         is_dialog_only = yes
+        allow = {
+            NOT = {
+                has_country_flag = roz_evt_temp_flag_2
+            }
+            fail_text = {
+                text = NO
+            }
+        }
         response_text = ge_event.3082.bb.res
         add_resource = {
             influence = 10
+        }
+        hidden_effect = {
+            set_country_flag = roz_evt_temp_flag_2
         }
     }
     option = {
         name = ge_event.3082.cc
         is_dialog_only = yes
         response_text = ge_event.3082.cc.res
+        allow = {
+            NOT = {
+                has_country_flag = roz_evt_temp_flag_3
+            }
+            fail_text = {
+                text = NO
+            }
+        }
         add_resource = {
             unity = 1000
+        }
+        hidden_effect = {
+            set_country_flag = roz_evt_temp_flag_3
         }
     }
     option = {
         name = ge_event.3082.dd
         is_dialog_only = yes
         response_text = ge_event.3082.dd.res
+        allow = {
+            NOT = {
+                has_country_flag = roz_evt_temp_flag_4
+            }
+            fail_text = {
+                text = NO
+            }
+        }
         add_resource = {
             unity = 1000
+        }
+        hidden_effect = {
+            set_country_flag = roz_evt_temp_flag_4
         }
     }
     option = {
         name = ge_event.3083.bb
         is_dialog_only = yes
         response_text = ge_event.3083.bb.res
+        allow = {
+            NOT = {
+                has_country_flag = roz_evt_temp_flag_5
+            }
+            fail_text = {
+                text = NO
+            }
+        }
         add_resource = {
             influence = 10
+        }
+        hidden_effect = {
+            set_country_flag = roz_evt_temp_flag_5
         }
     }
 
     after = {
-
+        hidden_effect = {
+            remove_country_flag = roz_evt_temp_flag_1
+            remove_country_flag = roz_evt_temp_flag_2
+            remove_country_flag = roz_evt_temp_flag_3
+            remove_country_flag = roz_evt_temp_flag_4
+            remove_country_flag = roz_evt_temp_flag_5
+        }
     }
 }
 

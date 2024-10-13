@@ -24,6 +24,10 @@ spriteTypes = {
         name = "GFX_evt_roz_mega_wanxiangtianyin"
         texturefile = "gfx/event_pictures/evt_roz_mega_wanxiangtianyin.dds"
     }
+    spriteType = {
+        name = "GFX_roz_mega_information_remodeler"
+        texturefile = "gfx/event_pictures/roz_mega_information_remodeler.dds"
+    }
 
     ###ship_size
     spriteType = {

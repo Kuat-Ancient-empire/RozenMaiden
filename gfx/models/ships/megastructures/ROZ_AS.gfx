@@ -27,4 +27,32 @@ objectTypes = {
 		animation = { id = "idle"	type = "ROZ_AS_main_idle_animation" }
 		
 	}
+
+	pdxmesh = {
+		name = "ROZ_IRR_main_mesh"
+		file = "gfx/models/ships/megastructures/IRR10.mesh"
+		scale = 1.0
+		animation = { id = "idle"	type = "ROZ_IRR10_idle_animation" }
+		
+	}
+	pdxmesh = {
+		name = "ROZ_IRR_1_mesh"
+		file = "gfx/models/ships/megastructures/IRR11.mesh"
+		scale = 1.0
+		animation = { id = "idle"	type = "ROZ_IRR11_idle_animation" }
+		
+	}
+	pdxmesh = {
+		name = "ROZ_IRR_2_mesh"
+		file = "gfx/models/ships/megastructures/IRR12.mesh"
+		scale = 1.0
+		animation = { id = "idle"	type = "ROZ_IRR12_idle_animation" }
+		
+	}
+	pdxmesh = {
+		name = "ROZ_QT_mesh"
+		file = "gfx/models/ships/megastructures/ROZ_QT.mesh"
+		scale = 1.0
+	}
+
 }
