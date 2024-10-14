@@ -290,12 +290,12 @@ Roz_starbase_placeholder_desc_modifier: "§g特殊占位符，用来限制座驾
 
 ###############################councilor
 
- councilor_celestial_military: "§Y大都督§!"
- councilor_celestial_military_female: "§Y大都督§!"
- councilor_celestial_military_desc: "都督中外诸军事，开府仪同三司，入朝不趋，赞拜不名，剑履上殿，封王加……"
- councilor_time_honored: "§B时空管理分局负责人§!"
- councilor_time_honored_female: "$councilor_time_honored$"
- councilor_time_honored_desc: "由水银灯牵头组建的大型机构，主要的职责范围是统筹N之领域内的一切事务，下辖异世界探索开发部、异世界移民中心、异世界外交使馆、N之领域卫戍军、N之领域后勤保障部、N之领域交通运输部等部门。\n\n§W（“那么总局在哪儿呢？”）§!\n§M（“总局在影子城~”）§!\n§W（“？”）§!"
+councilor_celestial_military: "§Y大都督§!"
+councilor_celestial_military_female: "§Y大都督§!"
+councilor_celestial_military_desc: "都督中外诸军事，开府仪同三司，入朝不趋，赞拜不名，剑履上殿，封王加……"
+councilor_time_honored: "§B时空管理分局负责人§!"
+councilor_time_honored_female: "$councilor_time_honored$"
+councilor_time_honored_desc: "由水银灯牵头组建的大型机构，主要的职责范围是统筹N之领域内的一切事务，下辖异世界探索开发部、异世界移民中心、异世界外交使馆、N之领域卫戍军、N之领域后勤保障部、N之领域交通运输部等部门。\n\n§W（“那么总局在哪儿呢？”）§!\n§M（“总局在影子城~”）§!\n§W（“？”）§!"
 
 
 ####################################
@@ -314,8 +314,8 @@ MESSAGE_roz_sgt_gal_MESSAGE_TITLE_desc: "看起来，她十分期待接下来的
 ###########################################
 ###agenda
 
- council_agenda_agenda_void_core_boost_name:0 "§B能源泄洪§!"
- council_agenda_agenda_void_core_boost_desc:0 "在如今这个黄金时代，能源过剩居然已经成为了困扰我们的一个不小的问题，因此实施周期性的能源泄洪便是理所当然的高效解决方案了，这些廉价而磅礴的能量将毫无保留的供应给太空部队以及全银河各地民众的家中(前提是他们运得回去)。有不少社会学家曾指出这个方案会让人们养成挥霍能源的恶劣习惯，如果我们§R失去了这个无限能源§!，整个文明很可能会§R瞬间崩塌§!……"
+council_agenda_agenda_void_core_boost_name:0 "§B能源泄洪§!"
+council_agenda_agenda_void_core_boost_desc:0 "在如今这个黄金时代，能源过剩居然已经成为了困扰我们的一个不小的问题，因此实施周期性的能源泄洪便是理所当然的高效解决方案了，这些廉价而磅礴的能量将毫无保留的供应给太空部队以及全银河各地民众的家中(前提是他们运得回去)。有不少社会学家曾指出这个方案会让人们养成挥霍能源的恶劣习惯，如果我们§R失去了这个无限能源§!，整个文明很可能会§R瞬间崩塌§!……"
 
 
 

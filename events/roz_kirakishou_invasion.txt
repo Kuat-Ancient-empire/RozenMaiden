@@ -773,10 +773,12 @@ country_event = {	#谣言
     }
     option = {
         name = "ge_event.2015.aa"
-
-        start_situation = {
-            type = kirakishou_planet_invasion_situation
-            target = capital_scope
+        custom_tooltip = "ge_event.2015.aa.ct"
+        hidden_effect = {
+            start_situation = {
+                type = kirakishou_planet_invasion_situation
+                target = capital_scope
+            }
         }
     }
 }

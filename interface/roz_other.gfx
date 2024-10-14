@@ -104,4 +104,26 @@ spriteTypes = {
     }
 
 
+    #situation_log
+    spriteType = {
+        name = "GFX_situation_outcome_roz_shinku"
+        texturefile = "gfx/interface/icons/situation_log/situations/outcomes/situation_outcome_icon_roz_shinku.dds"
+    }
+    spriteType = {
+        name = "GFX_situation_stage_icon_roz_SK4_minus-one"
+        texturefile = "gfx/interface/icons/situation_log/situations/stages/situation_stage_icon_roz_SK4_minus-one.dds"
+    }
+    spriteType = {
+        name = "GFX_situation_stage_icon_roz_SK4_minus-two"
+        texturefile = "gfx/interface/icons/situation_log/situations/stages/situation_stage_icon_roz_SK4_minus-two.dds"
+    }
+    spriteType = {
+        name = "GFX_situation_stage_icon_roz_SK4_one"
+        texturefile = "gfx/interface/icons/situation_log/situations/stages/situation_stage_icon_roz_SK4_one.dds"
+    }
+    spriteType = {
+        name = "GFX_situation_stage_icon_roz_SK4_two"
+        texturefile = "gfx/interface/icons/situation_log/situations/stages/situation_stage_icon_roz_SK4_two.dds"
+    }
+
 }
