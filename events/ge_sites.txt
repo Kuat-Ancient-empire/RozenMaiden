@@ -1339,7 +1339,7 @@ country_event = {
 	picture = GFX_evt_roz_clouds_of_undergrand
 	show_sound = event_dig_site
 	trigger = {
-
+		is_ai = no
 	}
 	immediate = {  }
 	option = {
@@ -1369,7 +1369,9 @@ fleet_event = {
 	location = from
 	archaeology = yes
 	trigger = {
-
+		owner = {
+			is_ai = no
+		}
 	}
 	immediate = {
 		from = {
@@ -1401,7 +1403,9 @@ fleet_event = {
 	location = from
 	archaeology = yes
 	trigger = {
-
+		owner = {
+			is_ai = no
+		}
 	}
 	immediate = {
 		from = {
@@ -1434,7 +1438,9 @@ fleet_event = {
 	location = from
 	archaeology = yes
 	trigger = {
-
+		owner = {
+			is_ai = no
+		}
 	}
 	immediate = {
 		from = {
@@ -1468,7 +1474,7 @@ country_event = {
 	picture = GFX_evt_roz_outland_decision
 	show_sound = event_default
 	trigger = {
-
+		is_ai = no
 	}
 	immediate = {  }
 	option = {
@@ -1508,7 +1514,9 @@ fleet_event = {
 	location = from
 	archaeology = yes
 	trigger = {
-
+		owner = {
+			is_ai = no
+		}
 	}
 	immediate = {
 		from = {
@@ -1546,7 +1554,11 @@ fleet_event = {
 	location = from
 	archaeology = yes
 	trigger = {
-
+		owner = {
+			owner = {
+				is_ai = no
+			}
+		}
 	}
 	immediate = {  }
 	option = {
@@ -1594,16 +1606,16 @@ country_event = {
 	desc = "ge_sites.5151.desc_1"
 	picture = GFX_evt_roz_outland_end1
 	show_sound = event_celebration
-	location = event_target:roz_outland_planet
+	location = event_target:roz_outland_planet@root
 	trigger = {
-
+		is_ai = no
 	}
 	immediate = {  }
 	option = {
 		name = ge_sites.5151.aa_1
 		custom_tooltip = roz_krks_leader_evt.55.aa.ct
 		roz_outland_planet_change = yes
-		clear_global_event_target = roz_outland_planet
+		#clear_global_event_target = roz_outland_planet@root
 	}
 }
 
@@ -1621,7 +1633,7 @@ country_event = {
 	}
 	show_sound = event_ancient_drone
 	trigger = {
-
+		is_ai = no
 	}
 	immediate = {  }
 	option = {
@@ -1666,14 +1678,14 @@ country_event = {
 	title = "ge_sites.516.title"
 	desc = "ge_sites.516.desc"
 	picture = GFX_evt_astral_rift_advisor_exploding
-	location = event_target:roz_outland_planet
+	location = event_target:roz_outland_planet@root
 	trigger = {
 		NOT = {
 			has_relic = r_roz_Chronos_Label
 		}
 	}
 	immediate = {
-		event_target:roz_outland_planet = {
+		event_target:roz_outland_planet@root = {
 			create_ambient_object = {
 				type = "star_explosion"
 				play_animation_once = yes
@@ -1725,7 +1737,7 @@ country_event = {
 			resource = unity
 			value = 3
 		}
-		clear_global_event_target = roz_outland_planet
+		#clear_global_event_target = roz_outland_planet@root
 	}
 }
 

@@ -84,7 +84,6 @@ roz_outland_star_system = {
 			roz_outland_planet
 		}
 		init_effect = {
-			save_global_event_target_as = roz_outland_planet
 			create_cluster = {
 				id = fe2_cluster
 				radius = 140

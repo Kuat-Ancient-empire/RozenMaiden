@@ -467,8 +467,71 @@ roz_awaken_of_shinku_1_acknowledge_border = {
     }
 }
 
-###局势：墨水人实力来袭
-###次级深渊入侵
+###局势：墨水人来袭倒计时
+roz_SK_4_madgod_invasion_alert = {
+    desc = {
+        text = roz_SK_4_madgod_invasion_alert_desc
+        trigger = {
+            owner = {
+                always = yes
+            }
+        }
+    }
+    picture = GFX_
+    complete_icon = GFX_situation_outcome_negative
+    complete_icon_frame = GFX_situation_outcome_frame_red
+    fail_icon =  GFX_situation_outcome_unknown
+    fail_icon_frame = GFX_situation_outcome_frame_green
+    category = negative
+    start_value = 0
+    stages = {
+        roz_SK_4_madgod_invasion_alert_stage_end = {
+            icon =  GFX_situation_stage_1
+            icon_background = GFX_situation_stage_frame_red
+            end = 100
+        }
+    }
+    on_progress_complete = {
+        owner = {
+            hidden_effect = {
+                country_event = {
+                    id = roz_shinku_evt.522
+                    days = 1
+                }
+            }
+        }
+    }
+    approach = {#默认推进
+        name = roz_SK_4_madgod_invasion_alert_approach_1
+        icon = GFX_situation_approach_fleet
+        icon_background = GFX_situation_approach_bg_red
+        allow = {
+        }
+        potential = {
+        }
+        on_select = {
+            custom_tooltip = roz_SK_4_madgod_invasion_alert_1_onselect_ct
+        }
+        default = yes
+        resources = {
+            category = situations
+            upkeep = {
+                energy = 0
+            }
+        }
+        modifier = {
+            
+        }
+        ai_weight = {
+        }
+        #AI will pick the one with the highest weight
+    }
+    monthly_progress = {
+        base = 2
+    }
+}
+
+###局势：Boss战 深渊感染体入侵 
 roz_SK_4_madgod_invasion_placard = {
     desc = {
         text = roz_SK_4_madgod_invasion_placard_1_desc

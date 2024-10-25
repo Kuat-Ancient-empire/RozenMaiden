@@ -817,7 +817,37 @@ special_project = {
 	}
 }
 
-
+###BOSS战-决战深渊感染体
+#特殊项目：诱饵计划II
+special_project = {
+	key = roz_unholy_invasion_defproj_decoy_II
+	desc = {
+		text = roz_unholy_invasion_defproj_decoy_II_DESC
+		trigger = { is_ai = no }
+	}
+	requirements = {
+		shipclass_constructor = 1
+	}
+	cost = 50000
+	tech_department = engineering_technology
+	event_scope = planet_event
+	picture = GFX_
+	icon = gfx/interface/icons/situation_log/situation_log_precursor.dds
+	on_start = {
+		owner = {
+			country_event = {
+				id = roz_shinku_evt.520
+			}
+		}
+	}	
+	on_success = {
+		owner = {
+			country_event = {
+				id = roz_shinku_evt.521
+			}
+		}
+	}
+}
 
 
 

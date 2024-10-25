@@ -11,26 +11,26 @@
   ge_reactor_project:0 "§R诡异光点§!"
   ge_reactor_project_DESC:0 "我们的实验证明这里似乎不仅仅连接着其他世界，似乎还隐约连接着某些东西..."
 
-  roz_void_energy_research_project_stage_1: "第一阶段-重整旗鼓"
-  roz_void_energy_research_project_stage_1_desc: "转移试验场地，由水银灯负责对初次实验的区域进行抹除。整理归纳初次实验的成果。"
-  roz_void_energy_research_project_stage_1_ct: "需要先完成§Y特殊项目:§!$roz_void_energy_research_project_stage_1_a$"
+roz_void_energy_research_project_stage_1: "第一阶段-重整旗鼓"
+roz_void_energy_research_project_stage_1_desc: "转移试验场地，由水银灯负责对初次实验的区域进行抹除。整理归纳初次实验的成果。"
+roz_void_energy_research_project_stage_1_ct: "需要先完成§Y特殊项目:§!$roz_void_energy_research_project_stage_1_a$"
 
-  roz_void_energy_research_project_stage_1_a: "加强基础设施建设"
-  roz_void_energy_research_project_stage_1_a_desc: "先前的光点实验所造成的惊悚现象给我们敲响了警钟，这个神秘能源的危险性远比我们想的要大，我们必须对虚空研究计划的试验场地进行加强改造，防患于未然。"
+roz_void_energy_research_project_stage_1_a: "加强基础设施建设"
+roz_void_energy_research_project_stage_1_a_desc: "先前的光点实验所造成的惊悚现象给我们敲响了警钟，这个神秘能源的危险性远比我们想的要大，我们必须对虚空研究计划的试验场地进行加强改造，防患于未然。"
 
-  roz_void_energy_research_project_stage_2: "第二阶段-方案提出"
-  roz_void_energy_research_project_stage_2_desc: "鉴于神秘能源的不可接触性，水银灯提出了一个构想——利用引力场耦合光点能量并对其进行干预。我们应该对此方案的可行性进行论证"
+roz_void_energy_research_project_stage_2: "第二阶段-方案提出"
+roz_void_energy_research_project_stage_2_desc: "鉴于神秘能源的不可接触性，水银灯提出了一个构想——利用引力场耦合光点能量并对其进行干预。我们应该对此方案的可行性进行论证"
 
-  roz_void_energy_research_project_stage_3_a: "第三阶段(2)-零点反应堆预研"
-  roz_void_energy_research_project_stage_3_a_desc: "我们还没有真正创造出实用的真空零点能的设备，不过科研人员为将来实验时可能面对的极端情况提供了解决方案，预想中的零点反应堆将为了短时间的过载运行而完全舍弃长时的稳定性，同时还必须能够在短时间内承受超过其自身功率上限数倍的能量冲击而不损毁。这个特殊计划将会与零点反应堆的研发工作同步进行，我们的科研人员坚定的相信他们的计算没有差错，零点反应堆一定能完成任务。\n（服役一代，研制一代，预研一代.jpg）"
-  roz_void_energy_research_project_stage_3_a2: "第三阶段(2)-零点反应堆适配性改装"
-  roz_void_energy_research_project_stage_3_a2_desc: "我们的科研人员对可能面临的极端情况做了估计，以此对零点反应堆进行特殊改装，这个特制的零点反应堆为了短时间的过载运行而完全舍弃了长时的稳定性，同时还必须能够在短时间内承受超过其自身功率上限数倍的能量冲击而不损毁。"
-  roz_void_energy_research_project_stage_3_1: "第三阶段(1)-分析光点能量的属性"
-  roz_void_energy_research_project_stage_3_1_desc: "实验没有获得成功，这对于科学研究来说是在正常不过的事情了，好在我们已经有了明确的解决方向。在准备研究反应堆之前，我们应该先总结当前的实验数据与经验，完善理论模型，提出合理猜想。"
+roz_void_energy_research_project_stage_3_a: "第三阶段(2)-零点反应堆预研"
+roz_void_energy_research_project_stage_3_a_desc: "我们还没有真正创造出实用的真空零点能的设备，不过科研人员为将来实验时可能面对的极端情况提供了解决方案，预想中的零点反应堆将为了短时间的过载运行而完全舍弃长时的稳定性，同时还必须能够在短时间内承受超过其自身功率上限数倍的能量冲击而不损毁。这个特殊计划将会与零点反应堆的研发工作同步进行，我们的科研人员坚定的相信他们的计算没有差错，零点反应堆一定能完成任务。\n（服役一代，研制一代，预研一代.jpg）"
+roz_void_energy_research_project_stage_3_a2: "第三阶段(2)-零点反应堆适配性改装"
+roz_void_energy_research_project_stage_3_a2_desc: "我们的科研人员对可能面临的极端情况做了估计，以此对零点反应堆进行特殊改装，这个特制的零点反应堆为了短时间的过载运行而完全舍弃了长时的稳定性，同时还必须能够在短时间内承受超过其自身功率上限数倍的能量冲击而不损毁。"
+roz_void_energy_research_project_stage_3_1: "第三阶段(1)-分析光点能量的属性"
+roz_void_energy_research_project_stage_3_1_desc: "实验没有获得成功，这对于科学研究来说是在正常不过的事情了，好在我们已经有了明确的解决方向。在准备研究反应堆之前，我们应该先总结当前的实验数据与经验，完善理论模型，提出合理猜想。"
 
 
-  roz_void_energy_research_project_stage_4_a: "第四阶段"
-  roz_void_energy_research_project_stage_4_a_desc: ""
+roz_void_energy_research_project_stage_4_a: "第四阶段"
+roz_void_energy_research_project_stage_4_a_desc: ""
 
 
 
@@ -47,11 +47,11 @@
   #ge_sgt_flagship_proj_3_DESC: ""
 
   #####
-  roz_chronicle_of_AoN_proj_chain_title:"N之领域见闻录"
-  roz_chronicle_of_AoN_proj_chain_DESC:"拥有了王座舰这样坚固且性能优良的交通工具后，深入探查N之领域变得相当惬意起来。[Root.OwnerGetRulerTitle]接受水银灯的邀约，乘坐刚到手不久的王座舰一起前往N之领域旅行兜风。一同随行的还有[Root.OwnerGetName]的科研团队，倘若能在N之领域中发现了什么有趣的东西，就交给他们转化为可供帝国利用的成果吧。"
+roz_chronicle_of_AoN_proj_chain_title: "N之领域见闻录"
+roz_chronicle_of_AoN_proj_chain_DESC: "拥有了王座舰这样坚固且性能优良的交通工具后，深入探查N之领域变得相当惬意起来。[Root.OwnerGetRulerTitle]接受水银灯的邀约，乘坐刚到手不久的王座舰一起前往N之领域旅行兜风。一同随行的还有[Root.OwnerGetName]的科研团队，倘若能在N之领域中发现了什么有趣的东西，就交给他们转化为可供帝国利用的成果吧。"
 
-  roz_chronicle_of_AoN_proj_prise_the_sun:"赞美太阳"
-  roz_chronicle_of_AoN_proj_prise_the_sun_DESC:"“门”后传来某种延绵不绝的诵读声，其腔调交织着希望与绝望，辉煌与尾光，引起了水银灯女士的兴趣。我们决定一探究竟。"
+roz_chronicle_of_AoN_proj_prise_the_sun: "赞美太阳"
+roz_chronicle_of_AoN_proj_prise_the_sun_DESC: "“门”后传来某种延绵不绝的诵读声，其腔调交织着希望与绝望，辉煌与尾光，引起了水银灯女士的兴趣。我们决定一探究竟。"
 
 
   ####
@@ -65,20 +65,20 @@
 
 
   #######################
-  roz_N_field_great_development_plan: "§HN之领域大开发§!"
-  roz_N_field_great_development_plan_DESC: "自从我们成功完成了对虚空反应堆的研发工作，我们在N之领域内的活动强度越来越高了，来自黑洞之门科考站的科研团队建议我们应该在N之领域里建设一个大型的综合军事基地以支援我们对这片空间的探索计划.\n§P(请您做好准备后再进行这个计划！)§!"
+roz_N_field_great_development_plan: "§HN之领域大开发§!"
+roz_N_field_great_development_plan_DESC: "自从我们成功完成了对虚空反应堆的研发工作，我们在N之领域内的活动强度越来越高了，来自黑洞之门科考站的科研团队建议我们应该在N之领域里建设一个大型的综合军事基地以支援我们对这片空间的探索计划.\n§P(请您做好准备后再进行这个计划！)§!"
 
-  roz_N_field_great_development_plan_abort_trigger: "检测到当前多人游戏中已有玩家开始了雪华绮晶事件链，请等待TA完成后才能进行"
+roz_N_field_great_development_plan_abort_trigger: "检测到当前多人游戏中已有玩家开始了雪华绮晶事件链，请等待TA完成后才能进行"
 
   ############################
-  roz_outland_main_black_hole_project: "§R“星空之上”§!"
-  roz_outland_main_black_hole_project_DESC: "在这个贫瘠而逼仄的星系内，这个黑洞居然还有吸积盘……这些构成吸积盘的唔知值得我们深入研究。"
-  roz_outland_broken_planet_project: "破碎遗迹"
-  roz_outland_broken_planet_project_DESC: "这颗崩坏的星球尸体上，我们发现了一些非自然景观：它损毁极其严重，地核处存在着危险的时空乱流，荡漾的空间波纹似乎浮现着隐隐绰绰的符文标记……"
-  roz_outland_small_black_hole_project: "§R穷极之门§!"
-  roz_outland_small_black_hole_DESC: "这个微型黑洞让我们想起了让我们遇到水银灯的那个黑洞之门……或许这里也是通往N之领域的通道？"
-  roz_outland_YS_planet_project: "§M门之钥§!"
-  roz_outland_YS_planet_project_DESC: "这颗星球与我们遇到过的虚境星球十分类似，但似乎又些不同：我们没有在其上发现任何虚境灵能反应……"
+roz_outland_main_black_hole_project: "§R“星空之上”§!"
+roz_outland_main_black_hole_project_DESC: "在这个贫瘠而逼仄的星系内，这个黑洞居然还有吸积盘……这些构成吸积盘的唔知值得我们深入研究。"
+roz_outland_broken_planet_project: "破碎遗迹"
+roz_outland_broken_planet_project_DESC: "这颗崩坏的星球尸体上，我们发现了一些非自然景观：它损毁极其严重，地核处存在着危险的时空乱流，荡漾的空间波纹似乎浮现着隐隐绰绰的符文标记……"
+roz_outland_small_black_hole_project: "§R穷极之门§!"
+roz_outland_small_black_hole_DESC: "这个微型黑洞让我们想起了让我们遇到水银灯的那个黑洞之门……或许这里也是通往N之领域的通道？"
+roz_outland_YS_planet_project: "§M门之钥§!"
+roz_outland_YS_planet_project_DESC: "这颗星球与我们遇到过的虚境星球十分类似，但似乎又些不同：我们没有在其上发现任何虚境灵能反应……"
 
   ############
   weapon_type_ge_void_energy:0 "§B虚空衰变能§!"
@@ -92,7 +92,7 @@
   ge_mozheng2_desc:0 "§Y不过好像也不是什么坏事嘛（大概）§!"
 
   ge_mozheng3: "§Y善良狡猾二相性§!：§H射程§!"
-  ge_mozheng3_desc:"§Y那么，代价是什么？§!"
+  ge_mozheng3_desc: "§Y那么，代价是什么？§!"
 
   ###############army
   Q_sgt:0 "  §MQ版水银灯军团§!"
@@ -113,52 +113,52 @@
 
  ###################################################################
 ########################真红事件
-  roz_shinku_phone_of_junn_analysis:"破解土著通讯器"
-  roz_shinku_phone_of_junn_analysis_DESC:"向我们寄送蔷薇少女第五人偶真红的正是人偶师罗真的继承者，樱田纯！而他最新寄来的名为“翻盖手机”的土著通讯器，令双方建立直接通讯只差临门一脚。通讯器大致属于太空时代早期文明的科技产物，要解明其工程原理并不困难，但过于原始的输入界面和尚未系统化的异界语言使得相关工作还是遇到了些许阻碍。为了土著通讯器的交互界面星海化，我们的翻译团队和工程团队已准备就绪，马上就把[Root.GetRulerName]从原始低效的手机按键上解放出来。"
+roz_shinku_phone_of_junn_analysis: "破解土著通讯器"
+roz_shinku_phone_of_junn_analysis_DESC: "向我们寄送蔷薇少女第五人偶真红的正是人偶师罗真的继承者，樱田纯！而他最新寄来的名为“翻盖手机”的土著通讯器，令双方建立直接通讯只差临门一脚。通讯器大致属于太空时代早期文明的科技产物，要解明其工程原理并不困难，但过于原始的输入界面和尚未系统化的异界语言使得相关工作还是遇到了些许阻碍。为了土著通讯器的交互界面星海化，我们的翻译团队和工程团队已准备就绪，马上就把[Root.GetRulerName]从原始低效的手机按键上解放出来。"
 
-  roz_stare_into_the_abyss:"凝视深渊"
-  roz_stare_into_the_abyss_DESC:"历经艰辛战斗后，我们终于设法捕获了被称为“深渊感染体”的敌方实体，之前墨水人侵染雪华绮晶事件中因为事态发展过于离奇没有反应过来的帝国科学界，对这次宝贵的研究机会非常看重。考虑到深渊力量的神秘与强大，从中解析出的任何情报都可能对我们的科技发展产生重大意义。但水银灯对此感到悲观，并建议我们在研究前务必做好包括信息隔离和武装后援等安保措施。为保险起见，我们最好还是多做些准备。"
+roz_stare_into_the_abyss: "凝视深渊"
+roz_stare_into_the_abyss_DESC: "历经艰辛战斗后，我们终于设法捕获了被称为“深渊感染体”的敌方实体，之前墨水人侵染雪华绮晶事件中因为事态发展过于离奇没有反应过来的帝国科学界，对这次宝贵的研究机会非常看重。考虑到深渊力量的神秘与强大，从中解析出的任何情报都可能对我们的科技发展产生重大意义。但水银灯对此感到悲观，并建议我们在研究前务必做好包括信息隔离和武装后援等安保措施。为保险起见，我们最好还是多做些准备。"
 
-  roz_junn_rosa_flexible_employment:"赝品圣母灵活就业"
-  roz_junn_rosa_flexible_employment_DESC:"人偶师樱田纯提供了一套可以通过加大对£sr_rosa_mystica£$sr_rosa_mystica$的消耗来永久增强蔷薇少女能力的技术，这有效促进了赝品圣母的灵活就业(确信)。"
+roz_junn_rosa_flexible_employment: "赝品圣母灵活就业"
+roz_junn_rosa_flexible_employment_DESC: "人偶师樱田纯提供了一套可以通过加大对£sr_rosa_mystica£$sr_rosa_mystica$的消耗来永久增强蔷薇少女能力的技术，这有效促进了赝品圣母的灵活就业(确信)。"
 
   ################事件链：真红的觉醒###############
-  roz_wake-up_shinku_chain:"真红的觉醒"
-  roz_wake-up_shinku_chain_DESC:"我们成功同蔷薇少女第五人偶真红的原契约者，人偶师罗真的继承人樱田纯建立通讯，并与之达成了重新制作真红的蔷薇圣母，从而唤醒真红的合作协议。该项目与水银灯女士对此的热忱也脱不开关系。虽然口头上对自己的这位姐妹不留口德，但水银灯对真红的关心早就在[Root.GetRulerTitle]和一众[Root.GetName]高层官员中成了公开的秘密……言归正传，根据樱田纯提供的情报和建议，[Root.GetName]的许多人员资源调配已经提上日程。我们的技术人员对于这项涉及“因果”的宏大项目激动异常，认为这将是继N之领域初步开发后，通向帝国下一阶段超凡飞升的征程起点。前路未卜，但毫无疑问的是，如此野心勃勃的项目，在推进过程中一定会带来许多意想不到的机遇和挑战。"
+roz_wake-up_shinku_chain: "真红的觉醒"
+roz_wake-up_shinku_chain_DESC: "我们成功同蔷薇少女第五人偶真红的原契约者，人偶师罗真的继承人樱田纯建立通讯，并与之达成了重新制作真红的蔷薇圣母，从而唤醒真红的合作协议。该项目与水银灯女士对此的热忱也脱不开关系。虽然口头上对自己的这位姐妹不留口德，但水银灯对真红的关心早就在[Root.GetRulerTitle]和一众[Root.GetName]高层官员中成了公开的秘密……言归正传，根据樱田纯提供的情报和建议，[Root.GetName]的许多人员资源调配已经提上日程。我们的技术人员对于这项涉及“因果”的宏大项目激动异常，认为这将是继N之领域初步开发后，通向帝国下一阶段超凡飞升的征程起点。前路未卜，但毫无疑问的是，如此野心勃勃的项目，在推进过程中一定会带来许多意想不到的机遇和挑战。"
 
   #一
-  roz_border_of_technical_proj:"科学边界"
-  roz_border_of_technical_proj_DESC:"重新制作真红的蔷薇圣母，需要我们拥有“重写因果”的科技水平——人偶师樱田纯是如此描述的。尽管就如何才能达到这一境界，乃至是否存在这种可能性等等问题上，科学界仍然争论不休，有些老技术认为这已经触及了科学的边界，但主流观点仍然坚信此等难题也终会臣服于帝国的无限进步。庞大的人力物力已经筹措到位，新的突破口仿佛随时会展现在我们眼前。[Root.GetRulerTitle]，请下命令吧！"
+roz_border_of_technical_proj: "科学边界"
+roz_border_of_technical_proj_DESC: "重新制作真红的蔷薇圣母，需要我们拥有“重写因果”的科技水平——人偶师樱田纯是如此描述的。尽管就如何才能达到这一境界，乃至是否存在这种可能性等等问题上，科学界仍然争论不休，有些老技术认为这已经触及了科学的边界，但主流观点仍然坚信此等难题也终会臣服于帝国的无限进步。庞大的人力物力已经筹措到位，新的突破口仿佛随时会展现在我们眼前。[Root.GetRulerTitle]，请下命令吧！"
   #卷土重来：凯旋而归#姐妹双打（一方案直接莽）
-  roz_unholy_invasion_defproj_1:"卷土重来"
-  roz_unholy_invasion_defproj_1_DESC:"蔷薇圣母的解析项目正如火如荼地进行时，我们突然收到了来自人偶师樱田纯的紧急联络。疑似深渊的未知威胁发现并围困了樱田纯同N之领域的连接通道，旋即联络中断。继承了罗真衣钵的樱田纯，其存在对于蔷薇少女有特殊意义，并且对于我们正在开展的解析蔷薇圣母等一系列科研项目同样不可替代。不论具体采用哪些手段，我们必须营救这位帮助我们不少的人偶师，或许也能借此窥探到某些深渊的情报和秘密也说不定。"
+roz_unholy_invasion_defproj_1: "卷土重来"
+roz_unholy_invasion_defproj_1_DESC: "蔷薇圣母的解析项目正如火如荼地进行时，我们突然收到了来自人偶师樱田纯的紧急联络。疑似深渊的未知威胁发现并围困了樱田纯同N之领域的连接通道，旋即联络中断。继承了罗真衣钵的樱田纯，其存在对于蔷薇少女有特殊意义，并且对于我们正在开展的解析蔷薇圣母等一系列科研项目同样不可替代。不论具体采用哪些手段，我们必须营救这位帮助我们不少的人偶师，或许也能借此窥探到某些深渊的情报和秘密也说不定。"
   #卷土重来：二方案-诱饵计划
-  roz_unholy_invasion_defproj_1_decoy:"诱饵计划"
-  roz_unholy_invasion_defproj_1_decoy_DESC:"为了诱饵计划的顺利实施，工程团队首先要搭建起赝品圣母的存储和超频设施，科研团队则需要在诱饵激活后，时刻照看诱饵能量信号的正常功率。最重要的，我们的舰队要确保部署到位。帝国三大部门伺候它一个敌人，这福分还能小得了嘛。\n\n§R注意：请确保N之大门星系部署有足够实力的舰队！§!"
+roz_unholy_invasion_defproj_1_decoy: "诱饵计划"
+roz_unholy_invasion_defproj_1_decoy_DESC: "为了诱饵计划的顺利实施，工程团队首先要搭建起赝品圣母的存储和超频设施，科研团队则需要在诱饵激活后，时刻照看诱饵能量信号的正常功率。最重要的，我们的舰队要确保部署到位。帝国三大部门伺候它一个敌人，这福分还能小得了嘛。\n\n§R注意：请确保N之大门星系部署有足够实力的舰队！§!"
   #卷土重来：战斗残骸#国家暴力机器
-  roz_unholy_invasion_defproj_2:"卷土重来"
-  roz_unholy_invasion_defproj_2_DESC:"蔷薇圣母的解析项目正如火如荼地进行时，我们突然收到了来自人偶师樱田纯的紧急联络。疑似深渊的未知威胁发现并围困了樱田纯同N之领域的连接通道，旋即联络中断。继承了罗真衣钵的樱田纯，其存在对于蔷薇少女有特殊意义，并且对于我们正在开展的解析蔷薇圣母等一系列科研项目同样不可替代。不论具体采用哪些手段，我们必须营救这位帮助我们不少的人偶师，或许也能借此窥探到某些深渊的情报和秘密也说不定。"
+roz_unholy_invasion_defproj_2: "卷土重来"
+roz_unholy_invasion_defproj_2_DESC: "蔷薇圣母的解析项目正如火如荼地进行时，我们突然收到了来自人偶师樱田纯的紧急联络。疑似深渊的未知威胁发现并围困了樱田纯同N之领域的连接通道，旋即联络中断。继承了罗真衣钵的樱田纯，其存在对于蔷薇少女有特殊意义，并且对于我们正在开展的解析蔷薇圣母等一系列科研项目同样不可替代。不论具体采用哪些手段，我们必须营救这位帮助我们不少的人偶师，或许也能借此窥探到某些深渊的情报和秘密也说不定。"
 
   ###第三阶段-见识超凡
   #联动希灵
-  roz_touch_ascension_proj: "见识超凡"
-  roz_touch_ascension_proj_DESC: "就在我们一筹莫展时，希灵帝国，这个与水银灯女士似乎颇有渊源的神秘超级文明，似乎再次抛来了某种作用未知的神秘科技。这份意外的馈赠，我们应当继续收下吗？他们究竟为何会对我们产生兴趣？他们又在我们身上寻求什么呢？这份礼物又该付出什么代价？我们真的做好准备了吗？……所有这些激烈的争论，最终也只能指向的唯一结果就是，打开潘多拉的匣子吧。（顺带一提他们的匣子是棺材形状的ww）"
+roz_touch_ascension_proj: "见识超凡"
+roz_touch_ascension_proj_DESC: "就在我们一筹莫展时，希灵帝国，这个与水银灯女士似乎颇有渊源的神秘超级文明，似乎再次抛来了某种作用未知的神秘科技。这份意外的馈赠，我们应当继续收下吗？他们究竟为何会对我们产生兴趣？他们又在我们身上寻求什么呢？这份礼物又该付出什么代价？我们真的做好准备了吗？……所有这些激烈的争论，最终也只能指向的唯一结果就是，打开潘多拉的匣子吧。（顺带一提他们的匣子是棺材形状的ww）"
 
-  roz_poring_xiling_crystal: "研究希灵结晶体"
-  roz_poring_xiling_crystal_DESC: "在水银灯女士的协助下，我们的科研团队终于就如何深入调查神秘结晶体有了一定眉目。如今这个来自希灵帝国的神秘物体仍然静静地漂浮在我们本已熟悉得不能再熟悉的首都星球轨道上，提醒着我们宇宙中充满了未知的可能性和高深莫测的强大存在。许多科学家仍然愿意赶赴未知接触的第一线，但考虑到上次调查诡异阴影时碰到的危险，我们总应该格外谨慎。"
+roz_poring_xiling_crystal: "研究希灵结晶体"
+roz_poring_xiling_crystal_DESC: "在水银灯女士的协助下，我们的科研团队终于就如何深入调查神秘结晶体有了一定眉目。如今这个来自希灵帝国的神秘物体仍然静静地漂浮在我们本已熟悉得不能再熟悉的首都星球轨道上，提醒着我们宇宙中充满了未知的可能性和高深莫测的强大存在。许多科学家仍然愿意赶赴未知接触的第一线，但考虑到上次调查诡异阴影时碰到的危险，我们总应该格外谨慎。"
 
-roz_build_IR_proj: "建设资讯重构仪"
-roz_build_IR_proj_DESC: "从神秘的希灵帝国礼物中解明的名为资讯重构仪的巨构蓝图，完工后似乎拥有改天换地的神奇力量。为了知晓希灵帝国主动同我们接触的目的，必须先完成工程建设才行。不知何种原因，图纸中特意要求，该巨构设施必须建设在那个曾经是深渊神族墨水人起源地的破败神国星系的恒星上。"
+roz_build_IR_proj: "建设$roz_mega_information_remodeler$"
+roz_build_IR_proj_DESC: "从神秘的希灵帝国礼物中解明的名为$roz_mega_information_remodeler$的巨构蓝图，完工后似乎拥有改天换地的神奇力量。为了知晓希灵帝国主动同我们接触的目的，必须先完成工程建设才行。不知何种原因，图纸中特意要求，该巨构设施必须建设在那个曾经是深渊神族墨水人起源地的[roz_outland_planet@root.solar_system.GetName]的恒星上。"
 #完成条件：派遣工程船完成特殊巨构建设（实际上这个特殊项目就是备忘录防止玩家忘了事件链进度和建设条件）
 
 
 
   #最后的准备
-  roz_forbidden_area_proj:"禁忌领域"
-  roz_forbidden_area_proj_DESC:"希灵帝国为我们指明了重新制作真红蔷薇圣母的关键，一个足够强大以维持因果逆转的能量源：深渊感染体墨水人的神格。自从上次雪华绮晶事件碰到墨水人起，藉由一路上各方的帮助和[Root.GetName]各界精诚团结的发展，我们已经强大许多。现在，检验实力的时刻到了，用这一战，为我们同墨水人间的恩怨画上句号，然后，未来的大门就能以此打开……"
+roz_forbidden_area_proj: "禁忌领域"
+roz_forbidden_area_proj_DESC: "希灵帝国为我们指明了重新制作真红蔷薇圣母的关键，一个足够强大以维持因果逆转的能量源：深渊感染体墨水人的神格。自从上次雪华绮晶事件碰到墨水人起，藉由一路上各方的帮助和[Root.GetName]各界精诚团结的发展，我们已经强大许多。现在，检验实力的时刻到了，用这一战，为我们同墨水人间的恩怨画上句号，然后，未来的大门就能以此打开……"
 
-
-
+roz_unholy_invasion_defproj_decoy_II: "§R诱饵计划II§!"
+roz_unholy_invasion_defproj_decoy_II_DESC: "在解明了第二个希灵结晶体所承载的蓝图数据后，我们仍旧无法理解这个深渊诱饵装置的原理，好在图纸已经贴心而详尽地指导了如何以我们现有的技术水平完成建设工作，并且指名在[roz_outland_planet@root.solar_system.GetName]上以取得最佳的诱饵效果。标在旁边的还有一行小字：放心吧，区区深渊感染体还破坏不了我们的$roz_mega_information_remodeler$。\n仅仅建造并设置墨水人诱饵装置并不是一件特别困难的任务，重要的是，诱饵一旦设置完成便无法回头，[Root.GetRulerTitle]，§R您确定我们已经做好准备了吗？§!"
 
 
 

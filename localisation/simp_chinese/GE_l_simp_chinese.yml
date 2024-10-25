@@ -310,7 +310,7 @@ MESSAGE_ROZ_sgt_gal_MESSAGE_TYPE_TITLE: "§M来自水银灯的暗示§!"
 MESSAGE_roz_sgt_gal_MESSAGE_TITLE_desc: "看起来，她已经准备好再次和你出去共度时光了"
 
 MESSAGE_ROZ_krks_gal_MESSAGE_TYPE_TITLE: "§M来自雪华绮晶的邀请§!"
-MESSAGE_roz_sgt_gal_MESSAGE_TITLE_desc: "看起来，她十分期待接下来的约会"
+MESSAGE_ROZ_krks_gal_MESSAGE_desc: "看起来，她十分期待接下来的约会"
 ###########################################
 ###agenda
 

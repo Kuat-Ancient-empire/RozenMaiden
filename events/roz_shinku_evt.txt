@@ -1750,15 +1750,102 @@ country_event = {
     trigger = {
         is_ai = no
     }
+    location = event_target:roz_outland_planet@root.solar_system.star
     option = {
         name = roz_shinku_evt.517.aa
         custom_tooltip = roz_shinku_evt.517.ct
+        enable_special_project = {
+            name = roz_unholy_invasion_defproj_decoy_II
+            location = event_target:roz_outland_planet@root
+            owner = root
+        }
+        start_situation = {
+            type = roz_SK_4_madgod_invasion_alert
+        }
+    }
+}
+
+####
+##——————真红事件链，BOSS战和之后部分——————
+country_event = {   #部署墨水人诱饵装置
+    id = roz_shinku_evt.520
+    title = roz_shinku_evt.520.title
+    desc = roz_shinku_evt.520.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+        NOT = {
+            has_country_flag = roz_SK_4_decoyII_start
+        }
+    }
+    location = event_target:roz_outland_planet@root
+    immediate = {
+        set_country_flag = roz_SK_4_decoyII_start
+    }
+    option = {
+        name = roz_shinku_evt.520.aa
+    }
+}
+
+country_event = {   #装置部署完成
+    id = roz_shinku_evt.521
+    title = roz_shinku_evt.521.title
+    desc = roz_shinku_evt.521.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    location = event_target:roz_outland_planet@root
+    option = {
+        name = roz_shinku_evt.521.aa
+        event_target:roz_outland_planet@root = {
+            create_ambient_object = {
+                type = roz_SK4_decoyII_beacon
+                location = this
+            }
+        }
+        hidden_effect = {
+            country_event = {
+                id = roz_shinku_evt.522
+                days = 31
+            }
+        }
+    }
+}
+
+country_event = {   #抵达
+    id = roz_shinku_evt.522
+    title = roz_shinku_evt.522.title
+    desc = roz_shinku_evt.522.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    location = event_target:roz_outland_planet@root
+    immediate = {
+        
+    }
+    option = {
+        name = roz_shinku_evt.522.aa
+        
     }
 }
 
 
-####
-##——————真红事件链，BOSS战和之后部分——————
+
+
+
+
+
+
+
+
+
+
+
 
 
 

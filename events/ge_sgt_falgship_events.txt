@@ -1,13 +1,79 @@
 namespace = ge_sgt_falgship_events
 ###anomaly
-#well, it`s ge_sgt_flagship_events
+country_event = {
+	id = ge_sgt_falgship_events.99
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_planet_within_border = {
+					is_colonizable = no
+					is_colony = no
+					has_anomaly = no
+				}
+			}
+			random_planet_within_border = {
+				limit = {
+					is_star = no
+					is_colonizable = no
+					is_colony = no
+					has_anomaly = no
+				}
+				add_anomaly = {
+					category = roz_unknow_crashed_flagship_category
+					target = solar_system.owner
+				}
+				save_event_target_as = roz_sgt_flagship_target
+			}
+		}
+		else_if = {
+			limit = {
+				root = {
+					is_ai = no
+				}
+			}
+			random_planet_within_border = {
+				limit = {
+					is_star = no
+				}
+				add_anomaly = {
+					category = roz_unknow_crashed_flagship_category
+					target = solar_system.owner
+				}
+				save_event_target_as = roz_sgt_flagship_target
+				create_fleet = {
+					effect = {
+						create_ship = {
+							name = random
+							design = science
+							graphical_culture = owner
+						}
+						set_owner = root
+						set_location = prev
+						save_event_target_as = roz_sgt_flagship_science_target
+					}
+				}
+			}
+		}
+		event_target:roz_sgt_flagship_science_target = {
+			ship_event = {
+				id = ge_sgt_falgship_events.100
+			}
+		}
+	}
+}
+
 ship_event = {	#发现神秘舰船
 	id = ge_sgt_falgship_events.100
 	title = "ge_sgt_falgship_events.100.name"
 	desc = "ge_sgt_falgship_events.100.desc"
 	picture = GFX_evt_ship_in_orbit
 	show_sound = event_radio_chatter_02
-	location = this
+	location = event_target:roz_sgt_flagship_target
 	is_triggered_only = yes
 	immediate = {
 			this = {

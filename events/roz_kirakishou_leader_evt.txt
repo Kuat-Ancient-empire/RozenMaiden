@@ -1156,7 +1156,7 @@ country_event = {
             spawn_system = {
                 min_distance >= 500
                 max_distance <= 800
-                min_orientation_angle = 90
+                min_orientation_angle = 10
                 max_orientation_angle = 270
                 initializer = roz_outland_star_system
                 hyperlane = no
@@ -1169,6 +1169,12 @@ country_event = {
                 }
                 event_target:roz_outland_planet_moon = {
                     change_pc = pc_black_hole
+                }
+                random_system_planet = {
+                    limit = {
+                        has_planet_flag = roz_outland_planet
+                    }
+                    save_global_event_target_as = roz_outland_planet@root
                 }
                 #set_surveyed = {
                 #    surveyed = yes

@@ -410,24 +410,32 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				NOR = {
-					has_country_flag = roz_sgt_unknow_flagship_spawn_country
-					any_situation = {
-						is_situation_type = sgt_flagship_exploration_situation
-					}
-					has_active_event = {
-						ge_sgt_falgship_events.100
-						ge_sgt_falgship_events.101
-					}
-					has_country_flag = roz_sgt_flagship_spawn_timed_flag
-				}
-			}
-			country_event = {
-				id = ge_affection.2
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		NOR = {
+		# 			has_country_flag = roz_sgt_unknow_flagship_spawn_country
+		# 			any_situation = {
+		# 				is_situation_type = sgt_flagship_exploration_situation
+		# 			}
+		# 			has_active_event = {
+		# 				ge_sgt_falgship_events.100
+		# 				ge_sgt_falgship_events.101
+		# 			}
+		# 			has_country_flag = roz_sgt_flagship_spawn_timed_flag
+		# 		}
+		# 	}
+		# 	country_event = {
+		# 		id = ge_affection.2
+		# 	}
+		# 	random_owned_ship = {
+		# 		limit = {
+		# 			is_ship_class = shipclass_science_ship
+		# 		}
+		# 		ship_event = {
+		# 			id = ge_sgt_falgship_events.100
+		# 		}
+		# 	}
+		# }
 		#水银灯在星球上任职时,增加好感度
 		if = {
 			limit = { 

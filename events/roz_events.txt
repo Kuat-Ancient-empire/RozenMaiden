@@ -20,7 +20,7 @@ country_event = {
 		is_ai = no
 	}
 	immediate = {
-		#set_global_flag = ge_global_flag
+		set_global_flag = roz_global_flag
 		#set_global_flag = ge_test_activated
 		set_variable = {
 			which = ge_buff_count
@@ -40,10 +40,15 @@ country_event = {
 			days = 10800
 			random = 3600
 		}
-		set_timed_country_flag = {	#计时，防止刷不出异常点
-			flag = roz_sgt_flagship_spawn_timed_flag
-			days = 7200
+		country_event = {
+			id = ge_sgt_falgship_events.99
+			days = 720
+			random = 10800
 		}
+		# set_timed_country_flag = {	#计时，防止刷不出异常点 # 不计
+		# 	flag = roz_sgt_flagship_spawn_timed_flag
+		# 	days = 7200
+		# }
 		set_country_flag = roz_leader_name_jp_flag #开局设置，设定领袖名为片假名
 
 

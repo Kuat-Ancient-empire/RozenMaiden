@@ -13,3 +13,10 @@ ambient_object = {
 	selectable = no
 	show_name = no
 }
+
+ambient_object = {
+	name = "roz_SK4_decoyII_beacon"
+	entity = "sensor_station_01_entity"
+	selectable = no
+	show_name = no
+}
