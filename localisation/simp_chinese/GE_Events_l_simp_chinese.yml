@@ -19,8 +19,8 @@ ge_event.1.d1:0 "虚空科技的强度取决于您为银河众生带来的是仁
  
  #ge_event.1.d1:0 "(提示：这是一个简易的强度调节器，动态平衡正在调试中) \n很多时候，少几个0才是在真正的做运营，真正的玩群星...\n不过如果您有需要，可以再魔怔回去.jpg\n\n§H目前的buff倍数为：[Root.ge_buff_count]%§!"
 
-ge_event.1.zz2:0 "§G完成调成§!"
-ge_event.1.zz:0 "§G完成调成§!"
+ge_event.1.zz2:0 "§G完成调整§!"
+ge_event.1.zz:0 "§G完成调整§!"
 ge_event.1.dm: "§Y调整伤害§!"
 ge_event.1.fr:0 "§Y调整射速§!"
 ge_event.1.range: "§Y调整射程§!"
@@ -34,10 +34,10 @@ ge_event.1.lgate_ct: "§B这是一个辅助功能，可以立即开启L星门并
 ge_event.1.lgate_ct_1:"当前不是多人游戏模式"
 ge_event.1.lgate_ct_2:"L星团未开启"
 
-ge_event.1.leader_name_jp:"领袖名称切换：片假名"
-ge_event.1.leader_name_jp_ct:"将人偶们的名字语言更换，效果同步将在一个月后进行。\n当前她们的名字语言是：§H中文§!"
+ge_event.1.leader_name_jp:"领袖名称切换：平假名"
+ge_event.1.leader_name_jp_ct:"将人偶们的名字语言更换，效果同步将在一个月后进行。\n当前她们名字的语言是：§H中文§!"
 ge_event.1.leader_name_sc:"领袖名称切换：中文"
-ge_event.1.leader_name_sc_ct:"将人偶们的名字语言更换，效果同步将在一个月后进行。\n当前她们的名字语言是：§R片假名§!"
+ge_event.1.leader_name_sc_ct:"将人偶们的名字语言更换，效果同步将在一个月后进行。\n当前她们名字的语言是：§R平假名§!"
 
 ge_event.1.ct1:0 "§P目前雪华绮晶事件触发方式为：正常触发§!\n"
 ge_event.1.ct2:0 "§P目前雪华绮晶事件触发方式为：提前触发§!\n"
@@ -114,6 +114,82 @@ ge_event.5.title: "雪华绮晶事件链触发时间调整"
 ge_event.5.desc: "在这里您可以调节雪华绮晶获得的时间，§H默认时间点§!是获得虚空科技并做完§R重建能源中枢§!局势后才开始雪华绮晶的剧情，难度较高；也可以选择当水银灯§H好感度大于20时§!开始随机概率触发雪华绮晶的剧情，难度将大幅降低(系数为原来的1%)，但也会减少一些剧情展开。§R触发时间调整最好在开局时调节，当事件链正式开始后就不能再改了哦§!"
 ge_event.5.default: "默认触发"
 ge_event.5.early: "提前触发"
+
+
+
+
+###new ui
+roz_start.7777.difficult: "强度调整"
+roz_start.7777.mode1: "将模式切换为§H加算§!.\n[GetRozAdjustModeDiffText]"
+roz_start.7777.mode2: "将模式切换为§H乘算§!.\n[GetRozAdjustModeDiffText]"
+roz_start.7777.mode3: "[GetRozAdjustModeDiffText]"
+roz_start.7777.mode_add: "§c+§!"
+roz_start.7777.mode_mult: "§cx§!"
+roz_start.7777.mode_clear: "§g重置倍率§!"
+roz_start.7777.a: "§B提升虚空武器伤害§!"
+roz_start.7777.b: "§P降低虚空武器伤害§!"
+roz_start.7777.ab: "[GetRozDamageDiffText]"
+roz_start.7777.clear: "∅"   
+roz_start.7777.ab.clear.ct: "重置伤害修正数值"
+
+roz_start.7777.c: "§B提升虚空武器射速§!"
+roz_start.7777.d: "§P降低虚空武器射速§!"
+roz_start.7777.cd: "[GetRozFireRateDiffText]"
+roz_start.7777.cd.clear.ct: "重置射速修正数值"
+
+roz_start.7777.e: "§B提升武器射程§!"
+roz_start.7777.f: "§P降低武器射程§!"
+roz_start.7777.ef: "[GetRozFireRangeDiffText]"
+roz_start.7777.ef.clear.ct: "重置射程修正数值"
+
+roz_start.7777.kirakishou_eventchain_name: "雪华绮晶剧情时间调整"
+roz_start.7777.kirakishou_eventchain_name.tooltip: "在这里您可以调节雪华绮晶获得的时间。"
+roz_start.7777.g: "提前触发模式"
+roz_start.7777.g.trigger1.tooltip: "§R剧情已开始，无法更改§!"
+roz_start.7777.g.trigger2.tooltip: "已选择该模式"
+roz_start.7777.g.tooltip: "当前模式下，雪华绮晶剧情将在水银灯§H好感度大于20时§!满足触发条件，难度将大幅降低，但剧情路线基本一致。§R触发时间调整最好在开局时调节，当雪华剧情正式开始后就不能再改了哦§!"
+roz_start.7777.h: "正常触发模式"
+roz_start.7777.h.trigger1.tooltip: "§R剧情已开始，无法更改§!"
+roz_start.7777.h.trigger2.tooltip: "已选择该模式"
+roz_start.7777.h.tooltip: "当前模式下，获得虚空科技并做完§R重建能源中枢§!局势后将进入雪华绮晶的剧情，该难度适中。§R触发时间调整最好在开局时调节，当雪华剧情正式开始后就不能再改了哦§!"
+
+roz_start.7777.crisis_diff: "深渊入侵难度调整"
+roz_start.7777.easy: "§B轮椅§!"
+roz_start.7777.normal: "§G正常§!"
+roz_start.7777.hard: "§P困难§!"
+roz_start.7777.xiling: "§R希灵前线§!"
+
+roz_start.7777.placeholder1: "开发中"
+roz_start.7777.placeholder2: "开发中"
+
+roz_start.7777.settings: "其他设置"
+roz_start.7777.cheat: "?"
+roz_start.7777.cheat.enable: "¿"
+roz_start.7777.im1: "§R削弱王座系列战力§!"
+roz_start.7777.im1.tooltip: "如果您觉得前期送的船太强了就点这个选项吧，它将极大幅度削弱王座和守卫的耐久度和战斗力(指砍到原版水平)，削弱效果将持续到获得虚空反应堆科技为止。"
+roz_start.7777.im2: "§G恢复王座系列战力§!"
+roz_start.7777.im2.tooltip: "是时候重回巅峰了"
+
+roz_start.7777.leader_name_jp: "领袖名称切换为平假名"
+roz_start.7777.leader_name_jp.ct: "将人偶们的名字语言更换，效果同步将在一个月后进行。\n当前她们名字的语言是：§H中文§!"
+roz_start.7777.leader_name_sc: "领袖名称切换为中文"
+roz_start.7777.leader_name_sc.ct: "将人偶们的名字语言更换，效果同步将在一个月后进行。\n当前她们名字的语言是：§R平假名§!"
+
+roz_start.7777.lgate: "§VL星团~启动！§!"
+roz_start.7777.lgate.ct: "§B这是一个辅助功能，可以立即开启L星门并锁定本局灰盅为小灰。同时您将可以通过政策自由控制L星门的开闭§!"
+
+roz_start.7777.reload_menu: "刷新窗口"
+
+ge_event.7777.title: "设置面板"
+roz_start.7777.name: "§M蔷薇少女MOD§!全局设置"
+ge_event.7777.desc: "虚空科技的强度取决于您为银河众生带来的是仁慈还是考验。\n\n§H当前§M虚空武器伤害§!buff倍数为：[Root.ge_buff_count]%§!\n当前§M虚空武器射速§!buff倍数为：[Root.ge_buff_count_fr]%§!\n当前§H射程§!buff倍数为：[Root.ge_buff_fire_range_count]%§!"
+ge_event.7777.exit: "§G完成调整§!"
+
+
+
+
+
+
 
 
 #########################################
@@ -1043,7 +1119,7 @@ ge_communication.300.desc:0 "§M当时还真是千钧一发§!"
 ##########################################################
 #!#########################################################!
 ##########################################################
-#sgt_falgship #well, it`s flagship
+#sgt_falgship 
 ge_sgt_falgship_events.1.name: ""
 ge_sgt_falgship_events.1.desc: ""
 ge_sgt_falgship_events.1.a: ""

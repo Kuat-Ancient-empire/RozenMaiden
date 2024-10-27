@@ -1,0 +1,715 @@
+guiTypes = {
+    # exit button
+    containerWindowType = {
+        name = "roz_mod_settings_exit_button"
+        position = { x = 0 y = 0 }
+        size = { width = 544 height = 48 }
+        moveable = no
+        # iconType = {
+        #     name = "option_background"
+        #     spriteType = "GFX_button_animated_265_80"
+        #     position = { x = 12 y = 12 }
+        #     alwaysTransparent = yes
+        # }
+        buttonType = {
+            name = "option_button"
+            quadTextureSprite = "GFX_roz_button_animated_520_button"
+            position = { x = 4 y = 3 }
+            font = "cg_16b"
+            text = "OPTION_TEXT"
+        }
+        OverlappingElementsBoxType = {
+            name = "trigger_icons"
+            position = { x = 0 y = 2 }
+            size = { x=36 y= 28 }
+        }
+    }
+    # GFX_button_animated_265_34 width = (867 - (6 * 12)) / 3 = 265
+    # actual width = 265 + 12 * 2 = 289
+    # GFX_button_animated_116 width = 116
+    # actual width = 116 + 12 * 2 = 140
+    # main gui
+    containerWindowType = {
+        name = "roz_mod_settings_ui"
+        size = { width = 1200 height = 720 }
+        moveable = yes
+        orientation = center
+        origo = center
+        background = {
+            name = "background"
+            quadTextureSprite ="GFX_invisible"
+            position = { x = 0 y = 0 }
+        }
+        containerWindowType = {
+            name = "roz_event_window_background"
+            orientation = UPPER_LEFT
+            origo = UPPER_LEFT
+            movable = no
+            size = { width = 1200 height = 720 }
+            background = {
+                alwaysTransparent = yes
+                name = "background"
+                quadTextureSprite = "GFX_tile_outliner_bg_synth_queen"
+            }
+        }
+        @button_x_left  = 495
+        @button_x_right = 836
+
+        @button_x_mid1      = 766
+        @button_x_mid2      = 801
+        @button_y_line_mid1 = 137
+        @button_x_mid3      = 768
+        @button_y_line_mid2 = 172
+        @button_x_out       = 1120
+        @button_y_out_mid1   = 103
+        @button_y_out_mid2   = 154
+        @button_y_out_mid3   = 207
+
+        @button_x_4_1 = 495
+        @button_x_4_2 = 655
+        @button_x_4_3 = 815
+        @button_x_4_4 = 975
+        @button_y_text1 = 90
+        @button_y_line1 = 100
+        @button_y_line2 = 151
+        @button_y_line3 = 204
+        @button_y_text2 = 280
+        @button_y_line4 = 290
+        @button_y_text3 = 365
+        @button_y_line5 = 375
+        @button_y_line6 = 426
+        @button_y_text4 = 505
+        @button_y_line7 = 515
+        @button_y_line8 = 565
+        @button_y_line9 = 620
+        # 强度调整
+        effectButtonType = {
+            name = "roz_settings_difficult_group"
+            quadTextureSprite = "GFX_tiles_light_area_cut_8"
+            size = { width = 630 height = 180 }
+            position = { x = 495 y = 85 }
+            no_clicksound = yes
+            effect = "roz_settings_group_button"
+        }
+        instantTextBoxType = {
+            name = "roz_settings_difficult_group_name"
+            font = "cg_16b"
+            text_color_code = "H"
+            text = "roz_start.7777.difficult"
+            tooltipText = "roz_start.7777.crisis.tooltip"
+            textureFile = "gfx/interface/tiles/tooltip.dds"
+            position = { x = 508 y = @button_y_text1 }
+            maxWidth = 144
+            maxHeight = 40
+            fixedSize = yes
+            alwaysTransparent = yes
+        }
+        # 调整模式
+        effectButtonType = {
+            name = "roz_settings_difficult_adjust_mode_add"
+            quadTextureSprite = "GFX_button_29_animated"
+            position = { x = @button_x_mid1 y = @button_y_line_mid1 }
+			clicksound = interface
+            font = "cg_16b"
+            text = "roz_start.7777.mode_add"
+            effect = "roz_settings_difficult_adjust_mode_add_effect"
+        }
+        effectButtonType = {
+            name = "roz_settings_difficult_adjust_mode_mult"
+            quadTextureSprite = "GFX_button_29_animated"
+            position = { x = @button_x_mid2 y = @button_y_line_mid1 }
+			clicksound = interface
+            font = "cg_16b"
+            text = "roz_start.7777.mode_mult"
+            effect = "roz_settings_difficult_adjust_mode_mult_effect"
+        }
+        effectButtonType = {
+            name = "roz_settings_difficult_adjust_mode_clear"
+            quadTextureSprite = "GFX_button_60_29"
+            position = { x = @button_x_mid3 y = @button_y_line_mid2 }
+			clicksound = interface
+            font = "cg_16b"
+            text = "roz_start.7777.mode_clear"
+            effect = "roz_settings_difficult_adjust_mode_clear_effect"
+        }
+        # 伤害调整
+        effectButtonType = {
+            name = "roz_settings_difficult_damage_up"
+            quadTextureSprite = "GFX_button_animated_265_34"
+            position = { x = @button_x_left y = @button_y_line1 }
+			clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.a"
+            effect = "roz_settings_difficult_damage_up_effect"
+        }
+        effectButtonType = {
+            name = "roz_settings_difficult_damage_down"
+            quadTextureSprite = "GFX_button_animated_265_34"
+            position = { x = @button_x_right y = @button_y_line1 }
+			clicksound = ui_deselect
+            font = "cg_16b"
+            text = "roz_start.7777.b"
+            effect = "roz_settings_difficult_damage_down_effect"
+        }
+        effectButtonType = {
+            name = "roz_settings_difficult_damage_clear"
+            quadTextureSprite = "GFX_button_29_animated"
+            position = { x = @button_x_out y = @button_y_out_mid1 }
+			clicksound = ui_deselect
+            font = "cg_16b"
+            text = "roz_start.7777.clear"
+            effect = "roz_settings_difficult_damage_clear_effect"
+        }
+        # 射速调整
+        effectButtonType = {
+            name = "roz_settings_difficult_fire_rate_up"
+            quadTextureSprite = "GFX_button_animated_265_34"
+            position = { x = @button_x_left y = @button_y_line2 }
+			clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.c"
+            effect = "roz_settings_difficult_fire_rate_up_effect"
+        }
+        effectButtonType = {
+            name = "roz_settings_difficult_fire_rate_down"
+            quadTextureSprite = "GFX_button_animated_265_34"
+            position = { x = @button_x_right y = @button_y_line2 }
+			clicksound = ui_deselect
+            font = "cg_16b"
+            text = "roz_start.7777.d"
+            effect = "roz_settings_difficult_fire_rate_down_effect"
+        }
+        effectButtonType = {
+            name = "roz_settings_difficult_fire_rate_clear"
+            quadTextureSprite = "GFX_button_29_animated"
+            position = { x = @button_x_out y = @button_y_out_mid2 }
+			clicksound = ui_deselect
+            font = "cg_16b"
+            text = "roz_start.7777.clear"
+            effect = "roz_settings_difficult_fire_rate_clear_effect"
+        }
+        # 射程调整
+        effectButtonType = {
+            name = "roz_settings_difficult_fire_range_up"
+            quadTextureSprite = "GFX_button_animated_265_34"
+            position = { x = @button_x_left y = @button_y_line3 }
+			clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.e"
+            effect = "roz_settings_difficult_fire_range_up_effect"
+        }
+        effectButtonType = {
+            name = "roz_settings_difficult_fire_range_down"
+            quadTextureSprite = "GFX_button_animated_265_34"
+            position = { x = @button_x_right y = @button_y_line3 }
+            clicksound = ui_deselect
+            font = "cg_16b"
+            text = "roz_start.7777.f"
+            effect = "roz_settings_difficult_fire_range_down_effect"
+        }
+        effectButtonType = {
+            name = "roz_settings_difficult_fire_range_clear"
+            quadTextureSprite = "GFX_button_29_animated"
+            position = { x = @button_x_out y = @button_y_out_mid3 }
+			clicksound = ui_deselect
+            font = "cg_16b"
+            text = "roz_start.7777.clear"
+            effect = "roz_settings_difficult_fire_range_clear_effect"
+        }
+        # 雪华绮晶剧情触发设置
+        effectButtonType = {
+            name = "roz_settings_kirakishou_eventchain"
+            quadTextureSprite = "GFX_tiles_light_area_cut_8"
+            size = { width = 630 height = 70 }
+            position = { x = 495 y = 275 }
+            no_clicksound = yes
+            effect = "roz_settings_kirakishou_eventchain_button"
+        }
+        instantTextBoxType = {
+            name = "roz_settings_kirakishou_eventchain_name"
+            font = "cg_16b"
+            text_color_code = "H"
+            text = "roz_start.7777.kirakishou_eventchain_name"
+            tooltipText = "roz_start.7777.kirakishou_eventchain_name.tooltip"
+            textureFile = "gfx/interface/tiles/tooltip.dds"
+            position = { x = 508 y = @button_y_text2 }
+            maxWidth = 144
+            maxHeight = 40
+            fixedSize = yes
+            alwaysTransparent = yes
+        }
+        effectButtonType = {
+            name = "roz_settings_kirakishou_eventchain_early"
+            quadTextureSprite = "GFX_button_animated_265_34"
+            position = { x = @button_x_left y = @button_y_line4 }
+            clicksound = interface
+            font = "cg_16b"
+            text = "roz_start.7777.g"
+            effect = "roz_settings_kirakishou_eventchain_early_effect"
+        }
+        effectButtonType = {
+            name = "roz_settings_kirakishou_eventchain_late"
+            quadTextureSprite = "GFX_button_animated_265_34"
+            position = { x = @button_x_right y = @button_y_line4 }
+            clicksound = interface
+            font = "cg_16b"
+            text = "roz_start.7777.h"
+            effect = "roz_settings_kirakishou_eventchain_late_effect"
+        }
+        # 天灾难度调整
+        # 836+289-495=630
+        # 3*d+4*140=610, d=20
+        # first = 495, second = 495+(20+140)
+        effectButtonType = {
+            name = "roz_settings_crisis_phantasm_group"
+            quadTextureSprite = "GFX_tiles_light_area_cut_8"
+            size = { width = 630 height = 130 }
+            position = { x = 495 y = 355 }
+            no_clicksound = yes
+            effect = "roz_settings_group_button"
+        }
+        instantTextBoxType = {
+            name = "roz_settings_lunar_crisis_diff_option"
+            font = "cg_16b"
+            text_color_code = "H"
+            text = "roz_start.7777.crisis_diff"
+            #tooltipText = "roz_start.7777.crisis.tooltip"
+            textureFile = "gfx/interface/tiles/tooltip.dds"
+            position = { x = 508 y = @button_y_text3 }
+            maxWidth = 360
+            maxHeight = 40
+            fixedSize = yes
+            alwaysTransparent = yes
+        }
+        effectButtonType = {
+            name = "roz_settings_lunar_crisis_easy_option"
+            quadTextureSprite = "GFX_button_animated_116"
+            position = { x = @button_x_4_1 y = @button_y_line5 }
+			clicksound = queuing_building
+            font = "cg_16b"
+            text = "roz_start.7777.easy"
+            effect = "roz_settings_crisis_easy"
+        }
+        effectButtonType = {
+            name = "roz_settings_lunar_crisis_normal_option"
+            quadTextureSprite = "GFX_button_animated_116"
+            position = { x = @button_x_4_2 y = @button_y_line5 }
+            clicksound = queuing_building
+            font = "cg_16b"
+            text = "roz_start.7777.normal"
+            effect = "roz_settings_crisis_normal"
+        }
+        effectButtonType = {
+            name = "roz_settings_lunar_crisis_hard_option"
+            quadTextureSprite = "GFX_button_animated_116"
+            position = { x = @button_x_4_3 y = @button_y_line5 }
+            clicksound = queuing_building
+            font = "cg_16b"
+            text = "roz_start.7777.hard"
+            effect = "roz_settings_crisis_hard"
+        }
+        effectButtonType = {
+            name = "roz_settings_lunar_crisis_lunatic_option"
+            quadTextureSprite = "GFX_button_animated_116"
+            position = { x = @button_x_4_4 y = @button_y_line5 }
+            clicksound = queuing_building
+            font = "cg_16b"
+            text = "roz_start.7777.xiling"
+            effect = "roz_settings_crisis_xiling"
+        }
+        # ??调整
+        effectButtonType = {
+            name = "roz_settings_crisis_phantasm_on"
+            quadTextureSprite = "GFX_button_animated_265_34"
+            position = { x = @button_x_left y = @button_y_line6 }
+            clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.placeholder1"
+            effect = "roz_settings_crisis_phantasm_on"
+        }
+        effectButtonType = {
+            name = "roz_settings_crisis_phantasm_off"
+            quadTextureSprite = "GFX_button_animated_265_34"
+            position = { x = @button_x_right y = @button_y_line6 }
+            clicksound = ui_deselect
+            font = "cg_16b"
+            text = "roz_start.7777.placeholder2"
+            effect = "roz_settings_crisis_phantasm_off"
+        }
+        # 实用功能页
+        # 448+2*d+53=610, d=109
+        effectButtonType = {
+            name = "roz_settings_other_group"
+            quadTextureSprite = "GFX_tiles_light_area_cut_8"
+            size = { width = 630 height = 180 }
+            position = { x = 495 y = 495 }
+            no_clicksound = yes
+            effect = "roz_settings_group_button"
+        }
+        instantTextBoxType = {
+            name = "roz_settings_other_group_name"
+            font = "cg_16b"
+            text_color_code = "H"
+            text = "roz_start.7777.settings"
+            #tooltipText = "roz_start.7777.crisis.tooltip"
+            textureFile = "gfx/interface/tiles/tooltip.dds"
+            position = { x = 508 y = @button_y_text4 }
+            maxWidth = 144
+            maxHeight = 40
+            fixedSize = yes
+            alwaysTransparent = yes
+        }
+
+        effectButtonType = {
+            name = "roz_settings_cheat_disable"
+            quadTextureSprite = "GFX_button_29_animated"
+            position = { x = 783 y = @button_y_line6 }
+            clicksound = decrement_click
+            font = "cg_16b"
+            text = "roz_start.7777.cheat"
+            effect = "roz_settings_cheat_disable"
+        }
+        effectButtonType = {
+            name = "roz_settings_cheat_enable"
+            quadTextureSprite = "GFX_button_29_animated"
+            position = { x = 783 y = @button_y_line6 }
+            clicksound = increment_click
+            font = "cg_16b"
+            text = "roz_start.7777.cheat.enable"
+            effect = "roz_settings_cheat_enable"
+        }
+
+        #王座系列战力调整
+        effectButtonType = {
+            name = "roz_settings_im1"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = @button_x_left y = @button_y_line7 }
+            clicksound = ui_queuing_terraforming
+            font = "cg_16b"
+            text = "roz_start.7777.im1"
+            effect = "roz_settings_im1"
+        }
+        effectButtonType = {
+            name = "roz_settings_im2"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = @button_x_left y = @button_y_line7 }
+            clicksound = ui_queuing_terraforming
+            font = "cg_16b"
+            text = "roz_start.7777.im2"
+            effect = "roz_settings_im2"
+        }
+
+        #领袖名称切换
+        effectButtonType = {
+            name = "roz_settings_leader_name_jp"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = 698 y = @button_y_line7 }
+            clicksound = decrement_click
+            font = "cg_16b"
+            text = "roz_start.7777.leader_name_jp"
+            effect = "roz_settings_leader_name_jp_effect"
+        }
+        effectButtonType = {
+            name = "roz_settings_leader_name_sc"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = 698 y = @button_y_line7 }
+            clicksound = decrement_click
+            font = "cg_16b"
+            text = "roz_start.7777.leader_name_sc"
+            effect = "roz_settings_leader_name_sc_effect"
+        }
+
+        #L星团~启动！
+        effectButtonType = {
+            name = "roz_settings_lgate"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = 901 y = @button_y_line7 }
+            clicksound = ui_queuing_terraforming
+            font = "cg_16b"
+            text = "roz_start.7777.lgate"
+            effect = "roz_settings_lgate_effect"
+        }
+
+        # 刷新窗口#后面弄个二维码吧
+        # ui_back
+        effectButtonType = {
+            name = "roz_settings_reload_menu"
+            quadTextureSprite = "GFX_roz_button_animated_520_button"
+            position = { x = 541 y = 590 }
+            clicksound = ui_queuing_terraforming
+            font = "cg_16b"
+            text = "roz_start.7777.reload_menu"
+            effect = "roz_settings_reload_menu_effect"
+        }
+
+        # the portrait, actually room.
+        containerWindowType = {
+            name = "portrait"
+            size = { width = 490 height = 620 }
+            position = { x = 0 y = -88 }
+            clipping = yes
+            iconType = {
+                name = "portrait"
+                position = { x = 20 y = 135 }
+                spriteType = "GFX_portrait_gamesetup_mask"
+                alwaysTransparent = yes
+                scale = 0.471
+            }
+            iconType = {
+                name = "black_frame"
+                spriteType = "GFX_diplomacy_portrait_frame"
+                orientation = center_up
+                centerPosition = yes
+                position = { x = 0 y = 215 }
+                alwaystransparent = yes
+                scale = 0.471
+            }
+            ####################### HIDDEN ########################
+            iconType = {
+                name = "city_frame"
+                spriteType = "GFX_diplomacy_portrait_frame"
+                position = { x = 0 y = 23333 }
+                alwaysTransparent = yes
+            }
+        }
+        # basic info, or some text u want to show here.
+        # hidden ui
+        buttonType = {
+            name = "close"
+            quadTextureSprite = "GFX_close_button_planet"
+            position = { x= 0 y = 23333 }
+            Orientation = "UPPER_RIGHT"
+            clicksound = "back_click"
+        }
+        instantTextBoxType = {
+            name = "heading"
+            font = "malgun_goth_24"
+            text = "DIPLOMACY"
+            position = { x = 0 y = 23333 }
+            maxWidth = 543
+            maxHeight = 22
+            fixedSize = yes
+            alwaysTransparent = yes
+        }
+        buttonType = {
+            name = "confirm_button"
+            quadTextureSprite = "GFX_standard_button_142_34_button"
+            position = { x= 0 y = 23333  }
+            Orientation = "UPPER_RIGHT"
+            font = "cg_16b"
+            text = "MESSAGE_OK"
+            clicksound = "confirmation"
+        }
+        containerWindowType = {
+            name = "portrait_background"
+            position = { x = 0 y = 23333 }
+            size = { width = 1 height = 1 }
+            clipping = yes
+            iconType = {
+                name = "event_picture"
+                spriteType = "GFX_diplomacy_portrait_frame"
+                position = { x = 0 y = 23333 }
+            }
+            iconType = {
+                name = "portrait"
+                position = { x = 0 y = 23333 }
+                spriteType = "GFX_portrait_character"
+            }
+        }
+        iconType = {
+            name = "empire_info_bg"
+            spriteType = "GFX_diplomacy_dark_fade_bg"
+            position = { x = 0 y = 23333 }
+            alwaysTransparent = yes
+        }
+        instantTextBoxType={
+            name = "empire_name"
+            font = "malgun_goth_24"
+            text = "Kammarian Galactic Concordat"
+            position = { x = 0 y = 23333 }
+            maxWidth = 450
+            maxHeight = 16
+            format = LEFT
+            text_color_code = "E"
+            fixedsize = yes
+        }
+        instantTextBoxType={
+            name = "empire_government_type"
+            font = "cg_16b"
+            text = "Autocracy"
+            position = { x = 0 y = 23333 }
+            maxWidth = 250
+            maxHeight = 16
+            format = LEFT
+            fixedsize = yes
+            text_color_code = "Y"
+        }
+        instantTextBoxType={
+            name = "empire_personality_type"
+            font = "cg_16b"
+            text = "Despicable Neutrals"
+            position = { x = 0 y = 23333 }
+            maxWidth = 250
+            maxHeight = 16
+            format = LEFT
+            fixedsize = yes
+        }
+        OverlappingElementsBoxType = {
+            name = "empire_ethics_icons"
+            position = { x = 0 y = 23333 }
+            size = { x = 240 y = 30 }
+            spacing = 2.0
+            format = left
+        }
+        buttonType = {
+            name = "empire_flag"
+            quadTextureSprite = "GFX_flag_64_frame"
+            position = { x = 0 y = 23333 }
+            orientation = UPPER_LEFT
+        }
+        containerWindowType = {
+            name = "leader_details"
+            position = { x = 0 y = 23333 }
+            containerWindowType = {
+                name = "empire_traits_box"
+                position = { x = 0 y = 23333 }
+                size = { width = 210 height = 75 }
+                background = {
+                    name = "ethics_bg"
+                    spriteType = "GFX_tiles_dark_area_cut_8"
+                }
+            }
+            instantTextBoxType = {
+                name = "empire_traits_label"
+                position = { x = 0 y = 23333 }
+                font = "cg_16b"
+                maxWidth = 230
+                maxHeight = 20
+                fixedSize = yes
+                format = left
+                text = "RULER_TRAITS"
+                alwaysTransparent = yes
+            }
+            overlappingElementsBoxType = {
+                name = "leader_traits"
+                position = { x = 0 y = 23333 }
+                size = { x = 125 y = 330 }
+            }
+            instantTextBoxType = {
+                name = "leader_name"
+                position = { x = 0 y = 23333 }
+                font = "cg_16b"
+                maxWidth = 330
+                maxHeight = 20
+                fixedSize = yes
+                format = left
+                text = "Leader Name"
+                text_color_code = "E"
+            }
+            instantTextBoxType = {
+                name = "leader_species"
+                position = { x = 0 y = 23333 }
+                font = "cg_16b"
+                maxWidth = 330
+                maxHeight = 20
+                fixedSize = yes
+                text = "Leader Species"
+                format = left
+            }
+        }
+        containerWindowType = {
+            name = "opinion_window"
+            position = { x = 0 y = 23333 }
+            size = { width = 94 height = 30 }
+            background = {
+                name = "opinion_bg"
+                spriteType = "GFX_tiled_window_transparent"
+            }
+            iconType = {
+                name = "their_opinion_icon"
+                spriteType = "GFX_diplomacy_opinion"
+                position = { x = 0 y = 23333 }
+                alwaysTransparent = yes
+            }
+            instantTextBoxType = {
+                name = "their_opinion"
+                font = "cg_16b"
+                maxWidth = 40
+                position = { x = 0 y = 23333 }
+                format = left
+                text = "100"
+                alwaysTransparent = yes
+            }
+        }
+        # left top title
+        instantTextBoxType = {
+            name = "roz_mod_settings_title"
+            font = "cg_16b"
+            text_color_code = "E"
+            text = "roz_start.7777.name"
+            position = { x = 10 y = 7 }
+            maxWidth = 543
+            maxHeight = 25
+            fixedSize = yes
+            alwaysTransparent = yes
+        }
+        # event desc
+        buttonType = {
+            name = "alien_message_background"
+            size = { x = 454 y = 444 }
+            position = { x = 18 y = 225 }
+            spriteType = "GFX_tiles_dark_area_cut_8_hover"
+            alwaysTransparent = yes
+        }
+        instantTextBoxType = {
+            name = "alien_message"
+            font = "cg_16b"
+            textureFile = "gfx/interface/tiles/diplomacy_textbox_positive.dds"
+            position = { x = 25 y = 237 }
+            maxWidth = 440
+            maxHeight = 420
+            format = left
+            scrollbartype = "standardlistbox_slider"
+            text_color_code = "B"
+        }
+        # event diploma related
+        containerWindowType = {
+            name = "EVENT_DIPLO"
+            position = { x = 600 y = 100 }
+            size = { width=476 height=32 }
+            moveable = no
+            # event title
+            instantTextBoxType={
+                name = "action_title"
+                font = "malgun_goth_24"
+                position = { x = -100 y = -50 }
+                maxWidth = 400
+                maxHeight = 40
+                alwaysTransparent = yes
+            }
+            ####################### HIDDEN ########################
+            instantTextBoxType={
+                name = "action_desc"
+                font = "malgun_goth_24"
+                position = { x = 0 y = 23333 }
+                maxWidth = 500
+                maxHeight = 180
+                Orientation = "UPPER_LEFT"
+                format = center
+                alwaysTransparent = yes
+                text_color_code = "H"
+            }
+            #######################################################
+            # option pos
+            listboxType = {
+                name = "option_list"
+                position = { x = -63 y = 515 }
+                size = { x=480 y=56 }
+                spacing = 12
+                scrollbartype = "standardlistbox_slider"
+                borderSize = { x = 0 y = 0 }
+                Orientation = "UPPER_LEFT"
+            }
+        }
+    }
+}

@@ -1,0 +1,282 @@
+
+defined_text = {
+	#scope: country
+	#damage
+	name = GetRozDamageDiffText	
+	random = no
+	text = {
+		localization_key = GetRozDamageDiffTextA1
+		trigger = {	
+			is_variable_set = ge_buff_count
+			check_variable = {
+                which = ge_buff_count
+                value > 0
+            }
+            check_variable = {
+                which = ge_buff_count
+                value <= 100
+            }
+		}
+		weight = {
+			weight = 1
+		}
+	}
+	text = {
+		localization_key = GetRozDamageDiffTextA2
+		trigger = {
+			is_variable_set = ge_buff_count
+			check_variable = {
+                which = ge_buff_count
+                value > 100
+            }
+            check_variable = {
+                which = ge_buff_count
+                value < 400
+            }
+		}
+	}
+	text = {
+		localization_key = GetRozDamageDiffTextA3
+		trigger = {
+			is_variable_set = ge_buff_count
+			check_variable = {
+                which = ge_buff_count
+                value >= 400
+            }
+            check_variable = {
+                which = ge_buff_count
+                value < 3000
+            }
+		}
+	}
+	text = {
+		localization_key = GetRozDamageDiffTextA4
+		trigger = {
+			is_variable_set = ge_buff_count
+			check_variable = {
+                which = ge_buff_count
+                value >= 3000
+            }
+		}
+	}
+
+	text = {
+		localization_key = GetRozDamageDiffTextB1
+		trigger = {	
+			is_variable_set = ge_buff_count
+			check_variable = {
+                which = ge_buff_count
+                value < 0
+            }
+            check_variable = {
+                which = ge_buff_count
+                value >= -100
+            }
+		}
+		weight = {
+			weight = 1
+		}
+	}
+	text = {
+		localization_key = GetRozDamageDiffTextB2
+		trigger = {
+			is_variable_set = ge_buff_count
+			check_variable = {
+                which = ge_buff_count
+                value < -100
+            }
+            check_variable = {
+                which = ge_buff_count
+                value >= -200
+            }
+		}
+	}
+	text = {
+		localization_key = GetRozDamageDiffTextB3
+		trigger = {
+			is_variable_set = ge_buff_count
+			check_variable = {
+                which = ge_buff_count
+                value < -200
+            }
+            check_variable = {
+                which = ge_buff_count
+                value >= -300
+            }
+		}
+	}
+	text = {
+		localization_key = GetRozDamageDiffTextB4
+		trigger = {
+			is_variable_set = ge_buff_count
+			check_variable = {
+                which = ge_buff_count
+                value < -300
+            }
+		}
+	}
+	text = {
+		localization_key = GetRozDamageDiffTextDef
+		trigger = {
+			check_variable = {
+                which = ge_buff_count
+                value = 0
+            }
+		}
+	}
+	default = GetRozDamageDiffTextDef
+}
+
+defined_text = {
+	#scope: country
+	#fire rate
+	name = GetRozFireRateDiffText	
+	random = no
+	text = {
+		localization_key = GetRozFireRateDiffTextA1
+		trigger = {	
+			is_variable_set = ge_buff_count_fr
+			check_variable = {
+                which = ge_buff_count_fr
+                value > 0
+            }
+            check_variable = {
+                which = ge_buff_count_fr
+                value <= 100
+            }
+		}
+	}
+	text = {
+		localization_key = GetRozFireRateDiffTextA2
+		trigger = {
+			is_variable_set = ge_buff_count_fr
+			check_variable = {
+                which = ge_buff_count_fr
+                value > 100
+            }
+            check_variable = {
+                which = ge_buff_count_fr
+                value < 300
+            }
+		}
+	}
+	text = {
+		localization_key = GetRozFireRateDiffTextA3
+		trigger = {
+			is_variable_set = ge_buff_count_fr
+			check_variable = {
+                which = ge_buff_count_fr
+                value >= 300
+            }
+            check_variable = {
+                which = ge_buff_count_fr
+                value < 500
+            }
+		}
+	}
+	text = {
+		localization_key = GetRozFireRateDiffTextA4
+		trigger = {
+			is_variable_set = ge_buff_count_fr
+			check_variable = {
+                which = ge_buff_count_fr
+                value >= 500
+            }
+		}
+	}
+
+	text = {
+		localization_key = GetRozFireRateDiffTextB1
+		trigger = {	
+			is_variable_set = ge_buff_count_fr
+			check_variable = {
+                which = ge_buff_count_fr
+                value < 0
+            }
+            check_variable = {
+                which = ge_buff_count_fr
+                value >= -50
+            }
+		}
+		weight = {
+			weight = 1
+		}
+	}
+	text = {
+		localization_key = GetRozFireRateDiffTextB2
+		trigger = {
+			is_variable_set = ge_buff_count_fr
+			check_variable = {
+                which = ge_buff_count_fr
+                value < -50
+            }
+            check_variable = {
+                which = ge_buff_count_fr
+                value >= -100
+            }
+		}
+	}
+	text = {
+		localization_key = GetRozFireRateDiffTextB3
+		trigger = {
+			is_variable_set = ge_buff_count_fr
+			check_variable = {
+                which = ge_buff_count_fr
+                value < -100
+            }
+            check_variable = {
+                which = ge_buff_count_fr
+                value >= -150
+            }
+		}
+	}
+	text = {
+		localization_key = GetRozFireRateDiffTextB4
+		trigger = {
+			is_variable_set = ge_buff_count_fr
+			check_variable = {
+                which = ge_buff_count_fr
+                value < -150
+            }
+		}
+	}
+	text = {
+		localization_key = GetRozFireRateDiffTextDef
+		trigger = {
+			check_variable = {
+                which = ge_buff_count_fr
+                value = 0
+            }
+		}
+	}
+	default = GetRozFireRateDiffTextDef
+}
+
+defined_text = {
+	#scope: country
+	#range
+	name = GetRozFireRangeDiffText	
+	random = no
+	default = GetRozFireRangeDiffTextDef
+}
+
+defined_text = {
+	#scope: country
+	#range
+	name = GetRozAdjustModeDiffText
+	random = no
+	text = {
+		localization_key = GetRozAdjustModeAddDiffText
+		trigger = {
+			has_country_flag = roz_settings_difficult_adjust_mode_add_flag
+		}
+	}
+	text = {
+		localization_key = GetRozAdjustModeMultDiffText
+		trigger = {
+			has_country_flag = roz_settings_difficult_adjust_mode_mult_flag
+		}
+	}
+	#default = 
+}
+

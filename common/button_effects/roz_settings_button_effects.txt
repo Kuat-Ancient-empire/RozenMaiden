@@ -1,0 +1,699 @@
+
+# 调整模式
+roz_settings_difficult_adjust_mode_add_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.mode1
+        }
+        hidden_effect = {
+            from = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = roz_settings_difficult_adjust_mode_add_flag
+                    }
+                }
+                set_country_flag = roz_settings_difficult_adjust_mode_add_flag
+            }
+            if = {
+                limit = { 
+                    has_country_flag = roz_settings_difficult_adjust_mode_mult_flag
+                }
+                remove_country_flag = roz_settings_difficult_adjust_mode_mult_flag
+            }
+            change_variable = {
+                which = ge_buff_magnification_value
+                value = 1
+            }
+            }
+        }
+        
+    }
+}
+roz_settings_difficult_adjust_mode_mult_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.mode2
+        }
+        hidden_effect = {
+            from = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = roz_settings_difficult_adjust_mode_mult_flag
+                    }
+                }
+                set_country_flag = roz_settings_difficult_adjust_mode_mult_flag
+            }
+            if = {
+                limit = { 
+                    has_country_flag = roz_settings_difficult_adjust_mode_add_flag
+                }
+                remove_country_flag = roz_settings_difficult_adjust_mode_add_flag
+            }
+            change_variable = {
+                which = ge_buff_magnification_value
+                value = 1
+            }
+        }
+        }
+    }
+}
+roz_settings_difficult_adjust_mode_clear_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.mode3
+        }
+        hidden_effect = {
+            from = {
+            hidden_effect = {
+                set_variable = {
+                    which = ge_buff_magnification_value
+                    value = 1
+                }
+            }
+        }
+        }
+    }
+}
+
+# 伤害调整
+roz_settings_difficult_damage_up_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.ab
+        }
+        hidden_effect = { 
+            from = {
+                switch = {
+                    trigger = has_country_flag
+                    roz_settings_difficult_adjust_mode_add_flag = {
+                        change_variable = {
+                            which = ge_buff_count
+                            value = ge_buff_magnification_value
+                        }
+                    }
+                    roz_settings_difficult_adjust_mode_mult_flag = {
+                        multiply_variable = {
+                            which = ge_buff_count
+                            value = ge_buff_magnification_value
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+roz_settings_difficult_damage_down_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.ab
+        }
+        hidden_effect = { 
+            from = {
+                switch = {
+                    trigger = has_country_flag
+                    roz_settings_difficult_adjust_mode_add_flag = {
+                        subtract_variable = {
+                            which = ge_buff_count
+                            value = ge_buff_magnification_value
+                        }
+                    }
+                    roz_settings_difficult_adjust_mode_mult_flag = {
+                        divide_variable = {
+                            which = ge_buff_count
+                            value = ge_buff_magnification_value
+                        }
+                    }
+                }
+            } 
+        }    
+    }
+}
+roz_settings_difficult_damage_clear_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.ab.clear.ct
+        hidden_effect = { 
+            from = {  
+                set_variable = {
+                    which = ge_buff_count
+                    value = 0
+                }
+            }
+        }
+    }
+}
+# 射速调整
+roz_settings_difficult_fire_rate_up_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.cd
+        }
+        hidden_effect = { 
+            from = {
+                switch = {
+                    trigger = has_country_flag
+                    roz_settings_difficult_adjust_mode_add_flag = {
+                        change_variable = {
+                            which = ge_buff_count_fr
+                            value = ge_buff_magnification_value
+                        }
+                    }
+                    roz_settings_difficult_adjust_mode_mult_flag = {
+                        multiply_variable = {
+                            which = ge_buff_count_fr
+                            value = ge_buff_magnification_value
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+roz_settings_difficult_fire_rate_down_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.cd
+        }
+        hidden_effect = { 
+            from = {
+                switch = {
+                    trigger = has_country_flag
+                    roz_settings_difficult_adjust_mode_add_flag = {
+                        subtract_variable = {
+                            which = ge_buff_count_fr
+                            value = ge_buff_magnification_value
+                        }
+                    }
+                    roz_settings_difficult_adjust_mode_mult_flag = {
+                        divide_variable = {
+                            which = ge_buff_count_fr
+                            value = ge_buff_magnification_value
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+roz_settings_difficult_fire_rate_clear_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.cd.clear.ct
+        hidden_effect = { 
+            from = {  
+                set_variable = {
+                    which = ge_buff_count_fr
+                    value = 0
+                }
+            }
+        }
+    }
+}
+
+# 射程调整
+roz_settings_difficult_fire_range_up_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.ef
+        }
+        hidden_effect = { 
+            from = {
+                switch = {
+                    trigger = has_country_flag
+                    roz_settings_difficult_adjust_mode_add_flag = {
+                        change_variable = {
+                            which = ge_buff_fire_range_count
+                            value = ge_buff_magnification_value
+                        }
+                    }
+                    roz_settings_difficult_adjust_mode_mult_flag = {
+                        multiply_variable = {
+                            which = ge_buff_fire_range_count
+                            value = ge_buff_magnification_value
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+roz_settings_difficult_fire_range_down_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.ef
+        }
+        hidden_effect = { 
+            from = {
+                switch = {
+                    trigger = has_country_flag
+                    roz_settings_difficult_adjust_mode_add_flag = {
+                        subtract_variable = {
+                            which = ge_buff_fire_range_count
+                            value = ge_buff_magnification_value
+                        }
+                    }
+                    roz_settings_difficult_adjust_mode_mult_flag = {
+                        divide_variable = {
+                            which = ge_buff_fire_range_count
+                            value = ge_buff_magnification_value
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+roz_settings_difficult_fire_range_clear_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.ef.clear.ct
+        hidden_effect = { 
+            from = {  
+                set_variable = {
+                    which = ge_buff_fire_range_count
+                    value = 0
+                }
+            }
+        }
+    }
+}
+
+# 雪华绮晶剧情触发设置
+roz_settings_kirakishou_eventchain_button = {
+    potential = { always = yes }
+    allow = { always = yes }
+    effect = {}
+}
+
+roz_settings_kirakishou_eventchain_early_effect = {
+    potential = { always = yes }
+    allow = {
+        custom_tooltip = {
+            fail_text = "roz_start.7777.g.trigger1.tooltip"
+            from = {
+                NOR = {
+                    has_country_flag = roz_krks_story_begin_flag
+                    has_country_flag = roz_kirakishou_get
+                    has_country_flag = ge_nfield_develop_flag
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "roz_start.7777.g.trigger2.tooltip"
+            from = {
+                NOT = {
+                    has_country_flag = roz_krks_dl_early_flag
+                }
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = "roz_start.7777.g.tooltip"
+        hidden_effect = {
+            from = {
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = roz_krks_dl_early_flag }
+                    }
+                    set_country_flag = roz_krks_dl_early_flag
+                }
+                remove_country_flag = roz_krks_dl_normal_flag
+            }
+        }
+    }
+}
+roz_settings_kirakishou_eventchain_late_effect = {
+    potential = { always = yes }
+    allow = { 
+        custom_tooltip = {
+            fail_text = "roz_start.7777.h.trigger1.tooltip"
+            from = {
+                NOR = {
+                    has_country_flag = roz_krks_story_begin_flag
+                    has_country_flag = roz_kirakishou_get
+                    has_country_flag = ge_nfield_develop_flag
+                }  
+            }
+        }
+        custom_tooltip = {
+            fail_text = "roz_start.7777.h.trigger2.tooltip"
+            from = {
+                NOT = {
+                    has_country_flag = roz_krks_dl_normal_flag
+                }  
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = "roz_start.7777.h.tooltip"
+        hidden_effect = {
+            from = { 
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = roz_krks_dl_normal_flag }
+                    }
+                    set_country_flag = roz_krks_dl_normal_flag
+                }
+                remove_country_flag = roz_krks_dl_early_flag
+            }
+        }
+    }
+}
+
+# 天灾难度调整
+roz_settings_crisis_info = {
+    potential = { always = yes }
+    allow = { always = yes }
+    effect = { custom_tooltip = roz_start.7777.crisis.tooltip }
+}
+roz_settings_crisis_easy = {
+    potential = { always = yes }
+    allow = {
+        custom_tooltip = {
+            fail_text = roz_start.7777.is_this_diff
+            event_target:global_event_country = {
+                check_variable = { which = roz_lunar_capital_crisis_difficulty value != 1 }
+            }
+        }
+        custom_tooltip = {
+            fail_text = roz_start.7777.crisis.tooltip
+            from = { has_origin = origin_roz_story_roz }
+        }
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.easy.tooltip
+        hidden_effect = {
+            event_target:global_event_country = {
+                set_variable = { which = roz_lunar_capital_crisis_difficulty value = 1 }
+            }
+        }
+    }
+}
+roz_settings_crisis_normal = {
+    potential = { always = yes }
+    allow = {
+        custom_tooltip = {
+            fail_text = roz_start.7777.is_this_diff
+            event_target:global_event_country = {
+                check_variable = { which = roz_lunar_capital_crisis_difficulty value != 2 }
+            }
+        }
+        custom_tooltip = {
+            fail_text = roz_start.7777.crisis.tooltip
+            from = { has_origin = origin_roz_story_roz }
+        }
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.normal.tooltip
+        hidden_effect = {
+            event_target:global_event_country = {
+                set_variable = { which = roz_lunar_capital_crisis_difficulty value = 2 }
+            }
+        }
+    }
+}
+roz_settings_crisis_hard = {
+    potential = { always = yes }
+    allow = {
+        custom_tooltip = {
+            fail_text = roz_start.7777.is_this_diff
+            event_target:global_event_country = {
+                check_variable = { which = roz_lunar_capital_crisis_difficulty value != 3 }
+            }
+        }
+        custom_tooltip = {
+            fail_text = roz_start.7777.crisis.tooltip
+            from = { has_origin = origin_roz_story_roz }
+        }
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.hard.tooltip
+        hidden_effect = {
+            event_target:global_event_country = {
+                set_variable = { which = roz_lunar_capital_crisis_difficulty value = 3 }
+            }
+        }
+    }
+}
+roz_settings_crisis_xiling = {
+    potential = { always = yes }
+    allow = {
+        custom_tooltip = {
+            fail_text = roz_start.7777.is_this_diff
+            event_target:global_event_country = {
+                check_variable = { which = roz_lunar_capital_crisis_difficulty value != 4 }
+            }
+        }
+        custom_tooltip = {
+            fail_text = roz_start.7777.crisis.tooltip
+            from = { has_origin = origin_roz_story_roz }
+        }
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.lunatic.tooltip
+        hidden_effect = {
+            event_target:global_event_country = {
+                set_variable = { which = roz_lunar_capital_crisis_difficulty value = 4 }
+            }
+        }
+    }
+}
+roz_settings_crisis_phantasm_on = {
+    potential = { always = yes }
+    allow = {
+        from = {
+            custom_tooltip = {
+                fail_text = roz_start.7777.crisis.tooltip
+                has_origin = origin_roz_story_roz
+            }
+            hidden_trigger = {
+                NOT = { has_global_flag = roz_lunar_capital_crisis_phantasm }
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.phantasm.tooltip
+        from = { set_global_flag = roz_lunar_capital_crisis_phantasm }
+    }
+}
+roz_settings_crisis_phantasm_off = {
+    potential = { always = yes }
+    allow = {
+        from = {
+            custom_tooltip = {
+                fail_text = roz_start.7777.crisis.tooltip
+                has_origin = origin_roz_story_roz
+            }
+            hidden_trigger = {
+                has_global_flag = roz_lunar_capital_crisis_phantasm
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.phantasm.tooltip
+        hidden_effect = {
+            from = { remove_global_flag = roz_lunar_capital_crisis_phantasm }
+        }
+    }
+}
+
+#王座系列战力调整
+roz_settings_im1 = {
+    potential = {  
+        from = { NOT = { has_country_flag = roz_sgt_flagship_not_immune_tech_limit } } 
+    }
+    allow = { 
+        always = yes
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.im1.tooltip
+        hidden_effect = {
+            from = {
+                hidden_effect = {
+                    set_country_flag = roz_sgt_flagship_not_immune_tech_limit       
+                    every_owned_ship = {
+                        limit = {
+                            is_ship_size = Ge_Vampirilis_Ortaam
+                            NOT = {
+                                has_modifier = roz_sgt_flagship_none_tech_modifier
+                            }
+                        }
+                        add_modifier = {
+                            modifier = roz_sgt_flagship_none_tech_modifier
+                            days = -1
+                        }
+                    }      
+                    every_owned_ship = {
+                        limit = {
+                            is_ship_size = Ge_Vampirilis_Letum
+                            NOT = {
+                                has_modifier = roz_sgt_flagship_gardian_none_tech_modifier
+                            }
+                        }
+                        add_modifier = {
+                            modifier = roz_sgt_flagship_gardian_none_tech_modifier
+                            days = -1
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+roz_settings_im2 = {
+    potential = {
+        from = { has_country_flag = roz_sgt_flagship_not_immune_tech_limit }
+    }
+    allow = { 
+        always = yes
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.im2.tooltip
+        hidden_effect = {
+        from = {
+                remove_country_flag = roz_sgt_flagship_not_immune_tech_limit
+            every_owned_ship = {
+                limit = {
+                    is_ship_size = Ge_Vampirilis_Ortaam
+                }
+                remove_modifier = roz_sgt_flagship_none_tech_modifier
+            }
+            every_owned_ship = {
+                limit = {
+                    is_ship_size = Ge_Vampirilis_Letum
+                }
+                remove_modifier = roz_sgt_flagship_gardian_none_tech_modifier
+            }
+        }
+        }
+    }
+}
+
+
+roz_settings_cheat_disable = {
+    potential = { from = { NOT = { has_country_flag = enable_roz_cheat } } }
+    allow = { always = yes }
+    effect = {
+        from = {
+            set_country_flag = enable_roz_cheat
+        }
+    }
+}
+roz_settings_cheat_enable = {
+    potential = { from = { has_country_flag = enable_roz_cheat } }
+    allow = { always = yes }
+    effect = {
+        remove_country_flag = enable_roz_cheat
+    }
+}
+
+#领袖名称切换
+roz_settings_leader_name_jp_effect = {
+    potential = { 
+        NOT = { has_country_flag = roz_leader_name_jp_flag }
+    }
+    allow = { always = yes }
+    effect = {
+        custom_tooltip =  roz_start.7777.leader_name_jp.ct
+        hidden_effect = {
+            from = {
+                set_country_flag = roz_leader_name_jp_flag
+                remove_country_flag = roz_leader_name_sc_flag
+            }
+        }
+    }
+}
+roz_settings_leader_name_sc_effect = {
+    potential = { 
+        NOT = { has_country_flag = roz_leader_name_sc_flag }
+    }
+    allow = { always = yes }
+    effect = {
+        custom_tooltip =  roz_start.7777.leader_name_sc.ct
+        hidden_effect = {
+            from = {
+                set_country_flag = roz_leader_name_sc_flag
+                remove_country_flag = roz_leader_name_jp_flag
+            }
+        }
+    }
+}
+
+roz_settings_lgate_effect = {
+    potential = { always = yes }
+    allow = { 
+        custom_tooltip = {
+            NOT = { is_multiplayer = yes }
+            fail_text = ge_event.1.lgate_ct_1
+        }
+        custom_tooltip = {
+            NOT = { has_global_flag = l_cluster_opened }
+            fail_text = ge_event.1.lgate_ct_2
+        }
+    }
+    effect = { 
+        custom_tooltip = roz_start.7777.lgate.ct
+        hidden_effect = {
+            from = { country_event = { id = ge_test_event.200 } } 
+        }
+    }
+}
+
+roz_settings_reload_menu_effect = {
+    potential = { always = yes }
+    allow = { always = yes }
+    effect = {
+        from = {
+            
+        }
+    }
+}
+
+

@@ -359,4 +359,33 @@ roz_mega_information_remodeler_effect_DESC: "无中生有的神奇技术，超�
 roz_mega_information_remodeler_destoryed: "§g失效的资讯重构仪§!"
 roz_mega_information_remodeler_destoryed_DESC: "尽管希灵帝国的科技锚点仍然留存在我们的宇宙中，可因为水晶损毁，原有的核心功能已经无法正常启用。不过研究它的结构和技术原理还是能为我们带来许多启发。"
 
+#####################################scripted_loc
+
+#强度调整
+GetRozDamageDiffTextA1: "§W我对你们的勇敢、责任心和作战技巧充满了信心，你们迎接的只会是彻底的胜利，祝你们好运！§!\n\n§B目前的§H伤害§!buff倍数为：[This.ge_buff_count]%§!"
+GetRozDamageDiffTextA2: "§W这下指定嘎嘎乱杀了嗷，咱负责嘎嘎，您负责乱杀~§!\n\n§B目前的§H伤害§!buff倍数为：[This.ge_buff_count]%§!"
+GetRozDamageDiffTextA3: "§W随着您不停按下加成按钮，您的游玩压力大幅减弱了，然而空虚感却大幅上升了……§!\n\n§B目前的§H伤害§!buff倍数为：[This.ge_buff_count]%§!"
+GetRozDamageDiffTextA4: "§W究竟是什么样的对手让您如此如临大敌呢，联合舰队？万倍天灾？永恒舰队？第三远征舰队？蚀念恶印？喵块？发光人？虚境侵军？……§!\n\n§B目前的§H伤害§!buff倍数为：[This.ge_buff_count]%§!"
+GetRozDamageDiffTextB1: "§W敌强如斯，能如奔涛般击溃我军. 我们或许不会马到成功，但将屡败屡战，百战不挠。§!\n\n§R目前的§H伤害§!buff倍数为：[This.ge_buff_count]%§!"
+GetRozDamageDiffTextB2: "§W三百年后，当你坐在装有聚醚型聚氨酯泡沫海绵的靠背扶手四角宽凳上，你机械义腿上的孙子问你：\"您在那场伟大的§!§Y天堂之战§!§W期间都干了什么？\"你不用咳嗽一声说：\"这个嘛，你爷爷在涅克洛蒙达星拾荒.\"§!\n\n§R目前的§H伤害§!buff倍数为：[This.ge_buff_count]%§!"
+GetRozDamageDiffTextB3: "§W\"我能尽心奉献的别无他物，只有热血、辛劳、眼泪和汗水.\"§!\n\n§R目前的§H伤害和伤害§!buff倍数为：[This.ge_buff_count]%§!"
+GetRozDamageDiffTextB4: "§W真…真的还要减吗?再减下去可是要当RBQ的呀~§!\n\n§R目前的§H伤害§!buff倍数为：[This.ge_buff_count]%，在此加成下虚空武器将将趋近原版或更低。§!"
+GetRozDamageDiffTextDef: "§H目前的§H伤害§!buff倍数为：0%§!，当前没有任何修正值。"
+
+GetRozFireRateDiffTextA1: "§W我对你们的勇敢、责任心和作战技巧充满了信心，你们迎接的只会是彻底的胜利，祝你们好运！§!\n\n§B目前的§H射速§!buff倍数为：[This.ge_buff_count_fr]%§!"
+GetRozFireRateDiffTextA2: "§W这下指定嘎嘎乱杀了嗷，咱负责嘎嘎，您负责乱杀~§!\n\n§B目前的§H射速§!buff倍数为：[This.ge_buff_count_fr]%§!"
+GetRozFireRateDiffTextA3: "§W随着您不停按下加成按钮，您的游玩压力大幅减弱了，然而空虚感却大幅上升了……§!\n\n§B目前的§H射速§!buff倍数为：[This.ge_buff_count_fr]%§!"
+GetRozFireRateDiffTextA4: "§W究竟是什么样的对手让您如此如临大敌呢，联合舰队？万倍天灾？永恒舰队？第三远征舰队？蚀念恶印？喵块？发光人？虚境侵军？……§!\n\n§B目前的§H射速§!buff倍数为：[This.ge_buff_count_fr]%§!"
+GetRozFireRateDiffTextB1: "§W敌强如斯，能如奔涛般击溃我军. 我们或许不会马到成功，但将屡败屡战，百战不挠。§!\n\n§R目前的§H射速§!buff倍数为：[This.ge_buff_count_fr]%§!"
+GetRozFireRateDiffTextB2: "§W三百年后，当你坐在装有聚醚型聚氨酯泡沫海绵的靠背扶手四角宽凳上，你机械义腿上的孙子问你：\"您在那场伟大的§!§Y天堂之战§!§W期间都干了什么？\"你不用咳嗽一声说：\"这个嘛，你爷爷在涅克洛蒙达星拾荒.\"§!\n\n§R目前的§H射速§!buff倍数为：[This.ge_buff_count_fr]%§!"
+GetRozFireRateDiffTextB3: "§W\"我能尽心奉献的别无他物，只有热血、辛劳、眼泪和汗水.\"§!\n\n§R目前的§H射速和射速§!buff倍数为：[This.ge_buff_count_fr]%§!"
+GetRozFireRateDiffTextB4: "§W真…真的还要减吗?再减下去可是要当RBQ的呀~§!\n\n§R目前的§H射速§!buff倍数为：[This.ge_buff_count_fr]%，在此加成下大部分虚空武器将几乎无法正常开火。§!"
+GetRozFireRateDiffTextDef: "§H目前的§H射速§!buff倍数为：0%§!，当前没有任何修正值。"
+
+GetRozFireRangeDiffTextDef: "§H目前的§H射程§!buff倍数为：[This.ge_buff_fire_range_count]%§!。\n注：过高的射程会导致溢出，使得舰船无法正常接战，武器无法正常开火"
+
+GetRozAdjustModeAddDiffText: "当前调整模式为：§H加算§!\n当前调整倍率为：[ge_buff_magnification_value]%"
+GetRozAdjustModeMultDiffText: "当前调整模式为：§H乘算§!\n当前调整倍率为：[ge_buff_magnification_value]%"
+##end
+
 

@@ -1,86 +1,21 @@
-# guiTypes = {
-# 	### Crises
-# 	containerWindowType = {
-# 		name = "crises"
-# 		position = { x = 72 y = 365 }
-
-# 		instantTextBoxType = {
-# 			name = "crises_label"
-# 			position = { x = -20 y = 0 }
-# 			font = "malgun_goth_24"
-# 			maxWidth = 404
-# 			maxHeight = 52
-# 			orientation = "UPPER_LEFT"
-# 			text = "FE_CRISES"
-# 			pdx_tooltip = "FE_CRISES_TOOLTIP"
-# 			tooltip_mode_enabled = yes
-# 		}
-
-# 		instantTextBoxType = {
-# 			name = "pick_amount_value"
-# 			position = { x = 640 y = 0 }
-# 			font = "malgun_goth_24"
-# 			maxWidth = 100
-# 			maxHeight = 52
-# 			format = right
-# 			#alwaystransparent = yes
-# 			orientation = "UPPER_LEFT"
-# 			text = "5"
-# 		}
-
-# 		scrollbarType = {
-# 			id = "crises_slider"
-# 			name = "amount_slider"
-# 			slider = "scrollbar_SliderButton"
-# 			track= "scrollbar_TrackButton"
-# 			leftbutton = "scrollbar_upButton"
-# 			rightbutton = "scrollbar_downButton"
-# 			size = {x = 307 y = 30 }
-# 			position = {x= 747 y =0}
-# 			priority = 100
-# 			borderSize = {x =16 y = 16}
-# 			maxValue = 10000
-# 			minValue = 0
-# 			stepSize = 10
-# 			startValue = 20
-# 			horizontal = 1
-
-# 			guiButtonType = {
-# 				name = "scrollbar_SliderButton"
-# 				quadTextureSprite = "GFX_settings_scroll_drager"
-# 				tooltip = ""
-# 				tooltipText =""
-# 				delayedTooltipText = ""
-# 				position = { x=30 y =0}
-# 			}
-# 			guiButtonType = {
-# 				name = "scrollbar_TrackButton"
-# 				quadTextureSprite = "scrollbar_background"
-# 				position = { x=30 y =20}
-# 				tooltip = ""
-# 				tooltipText =""
-# 				delayedTooltipText = ""
-# 			}
-# 			guiButtonType = {
-# 				name = "scrollbar_upButton"
-# 				quadTextureSprite = "scrollbar_leftbutton"
-# 				position = { x=30 y =0}
-# 			}
-# 			guiButtonType = {
-# 				name = "scrollbar_downButton"
-# 				quadTextureSprite = "scrollbar_rightbutton"
-# 				position = { x=30 y =0}
-# 			}
-# 			overlay = {
-# 				name = "selected_overlay"
-# 				spriteType = "GFX_glow_tile_orange_no_padding"
-# 				overSprite = "GFX_glow_tile_line"
-# 				position = { x = @spinnerOverlayPosX y = @spinnerOverlayPosY }
-# 				size = { x = @spinnerOverlaySizeX y = @spinnerOverlaySizeY }
-# 			}
-
-# 			navUp = "num_fallen_empires_slider"
-# 			navDown = "crisis_type_spinner"
-# 		}
-# 	}
-# }
+spriteTypes = {
+	spriteType = {
+        name = "GFX_roz_button_animated_520_button"
+        texturefile = "gfx/interface/buttons/button_520_animated.dds"
+        effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+        noOfFrames = 3
+        animation = {
+            animationmaskfile = "gfx/interface/buttons/button_520_animated_mask.dds"
+            animationtexturefile = "gfx/interface/buttons/button_520_animated_texture.dds"
+            animationrotation = 180.0
+            animationlooping = yes
+            animationtime = 200.0
+            animationdelay = 0.0
+            animationblendmode = "overlay"       #add, multiply, overlay
+            animationtype = "scrolling"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+            animationframes = { 1 2 3 }
+        }
+    }
+}

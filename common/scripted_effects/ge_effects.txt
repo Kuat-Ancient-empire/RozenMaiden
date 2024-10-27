@@ -4533,7 +4533,6 @@ roz_leader_change_skin_reset_suigintou_effect = {
 	}
 }
 
-
 roz_leader_name_set_effect = {
 	#root = player_country
 	#this = leader
@@ -4553,6 +4552,63 @@ roz_leader_name_set_effect = {
 		}
 		set_name = NAME_$who_sc$
 	}
+}
+
+roz_setting_menu_initialize = {
+		if = {
+			limit = { NOT = { has_country_flag = roz_settings_first_fired } }
+			set_country_flag = roz_settings_first_fired
+		}
+		set_variable = {	#倍率初始化
+			which = ge_buff_magnification_value
+			value = 1
+		}
+		set_country_flag = roz_settings_difficult_adjust_mode_add_flag
+		if = {
+            limit = {
+                has_modifier = ge_mozheng1
+            }
+            remove_modifier = ge_mozheng1
+        }
+        if = {
+            limit = {
+                has_modifier = ge_mozheng2
+            }
+            remove_modifier = ge_mozheng2
+        }
+        if = {
+            limit = {
+                has_modifier = ge_mozheng3
+            }
+            remove_modifier = ge_mozheng3
+        }
+        if = {
+            limit = {
+                NOR = {
+                    has_country_flag = roz_krks_dl_early_flag
+                    has_country_flag = roz_krks_dl_normal_flag
+                }
+            }
+            set_country_flag = roz_krks_dl_normal_flag
+        }		
+}
+
+roz_setting_menu_after_effect = {
+	clear_variable = ge_buff_magnification_value
+	remove_country_flag = roz_settings_difficult_adjust_mode_add_flag
+	remove_country_flag = roz_settings_difficult_adjust_mode_mult_flag
+	add_modifier = {
+        modifier = ge_mozheng1
+        multiplier = ge_buff_count
+    }
+	add_modifier = {
+         modifier = ge_mozheng2
+        multiplier = ge_buff_count_fr
+    }
+    add_modifier = {
+        modifier = ge_mozheng3
+        multiplier = ge_buff_fire_range_count
+    }   
 }
 
 chronos_storm_add = {

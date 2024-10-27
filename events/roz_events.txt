@@ -149,7 +149,29 @@ country_event = {
 	}
 }
 
-
+##new setup ui
+country_event = {
+	id = ge_event.7777
+	title = ge_event.7777.title
+	desc = ge_event.7777.desc
+	is_triggered_only = yes
+	immediate = {
+		roz_setting_menu_initialize = yes
+	}
+	diplomatic = yes
+	custom_gui = roz_mod_settings_ui
+	custom_gui_option = roz_mod_settings_exit_button
+	picture_event_data = { room = Roz_tea_party_room }
+	option = {
+		name = ge_event.7777.exit
+		default_hide_option = yes
+	}
+	after = {
+		hidden_effect = {
+			roz_setting_menu_after_effect = yes
+		}
+	}
+}
 
 
 
