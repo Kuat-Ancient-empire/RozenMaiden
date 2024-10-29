@@ -3,7 +3,7 @@ guiTypes = {
     containerWindowType = {
         name = "roz_mod_settings_exit_button"
         position = { x = 0 y = 0 }
-        size = { width = 544 height = 48 }
+        size = { width = 544 height = 26 }
         moveable = no
         # iconType = {
         #     name = "option_background"
@@ -14,14 +14,14 @@ guiTypes = {
         buttonType = {
             name = "option_button"
             quadTextureSprite = "GFX_roz_button_animated_520_button"
-            position = { x = 4 y = 3 }
+            position = { x = 4 y = -30 }
             font = "cg_16b"
             text = "OPTION_TEXT"
         }
         OverlappingElementsBoxType = {
             name = "trigger_icons"
             position = { x = 0 y = 2 }
-            size = { x=36 y= 28 }
+            size = { x=65 y= 28 }
         }
     }
     # GFX_button_animated_265_34 width = (867 - (6 * 12)) / 3 = 265
@@ -432,15 +432,15 @@ guiTypes = {
 
         # 刷新窗口#后面弄个二维码吧
         # ui_back
-        effectButtonType = {
-            name = "roz_settings_reload_menu"
-            quadTextureSprite = "GFX_roz_button_animated_520_button"
-            position = { x = 541 y = 590 }
-            clicksound = ui_queuing_terraforming
-            font = "cg_16b"
-            text = "roz_start.7777.reload_menu"
-            effect = "roz_settings_reload_menu_effect"
-        }
+        # effectButtonType = {
+        #     name = "roz_settings_reload_menu"
+        #     quadTextureSprite = "GFX_roz_button_animated_520_button"
+        #     position = { x = 541 y = 590 }
+        #     clicksound = ui_queuing_terraforming
+        #     font = "cg_16b"
+        #     text = "roz_start.7777.reload_menu"
+        #     effect = "roz_settings_reload_menu_effect"
+        # }
 
         # the portrait, actually room.
         containerWindowType = {

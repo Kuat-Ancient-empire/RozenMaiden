@@ -166,6 +166,14 @@ country_event = {
 		name = ge_event.7777.exit
 		default_hide_option = yes
 	}
+	option = {
+		name = ge_event.7777.refresh
+		hidden_effect = {
+			country_event = {
+				id = ge_event.7777
+			}
+		}
+	}
 	after = {
 		hidden_effect = {
 			roz_setting_menu_after_effect = yes

@@ -179,6 +179,7 @@ roz_start.7777.lgate: "§VL星团~启动！§!"
 roz_start.7777.lgate.ct: "§B这是一个辅助功能，可以立即开启L星门并锁定本局灰盅为小灰。同时您将可以通过政策自由控制L星门的开闭§!"
 
 roz_start.7777.reload_menu: "刷新窗口"
+ge_event.7777.refresh: "刷新窗口"
 
 ge_event.7777.title: "设置面板"
 roz_start.7777.name: "§M蔷薇少女MOD§!全局设置"
