@@ -31,8 +31,8 @@ GE_SCIENCESHIP_SECTION:0 "武装探索区段"
 ge_aura_ship_core:0 "光环舰核心"
 ge_aura_ship_core_DESC:0 "首都航天工程院负责设计的一款专为战场支援的非作战舰艇。"
 
-ge_flagship_slot:0 "虚空领舰核心"
-ge_flagship_slot_DESC:0 "庞大的舰体赋予了无与伦比的火力和装甲，以及复杂而高效的辅助模块。"
+roz_flagship_slot:0 "虚空领舰核心"
+roz_flagship_slot_DESC:0 "庞大的舰体赋予了无与伦比的火力和装甲，以及复杂而高效的辅助模块。"
 
 ge_sgt_ship_core: "罪与罚"
 ge_sgt_ship_core_DESC: "接受爱丽丝的制裁吧！"

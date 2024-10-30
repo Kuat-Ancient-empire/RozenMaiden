@@ -47,7 +47,7 @@ weapon_component_template = {
 
 	size_restriction = { Ge_Ragnarok }
 
-	ai_weight = {
+	ai_weight = { #invi
 		weight = 1
 		modifier = {
 			factor = 1000

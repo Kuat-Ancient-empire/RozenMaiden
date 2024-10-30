@@ -102,8 +102,8 @@ ge_flagship = {
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
 	required_component_set = "ship_aura_components"
-	required_component_set = "ge_flagship_slot"
-	required_component_set = "ge_flagship_slot"
+	required_component_set = "roz_flagship_slot"
+	required_component_set = "roz_flagship_slot"
 	resources = {
 		category = ships
 		upkeep = {
@@ -186,8 +186,8 @@ Ge_Ragnarok = {	#永恒之枪
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
 	required_component_set = "ship_aura_components"
-	required_component_set = "ge_flagship_slot"
-	required_component_set = "ge_flagship_slot"
+	required_component_set = "roz_flagship_slot"
+	required_component_set = "roz_flagship_slot"
 	resources = {
 		category = ships
 		upkeep = {
@@ -362,8 +362,8 @@ ge_void_lord = {
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
 	required_component_set = "ship_aura_components"
-	required_component_set = "ge_flagship_slot"
-	required_component_set = "ge_flagship_slot"
+	required_component_set = "roz_flagship_slot"
+	required_component_set = "roz_flagship_slot"
 
 	components_add_to_cost = no
 }
@@ -413,7 +413,7 @@ ge_crime_and_punishment = {
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
 	required_component_set = "ship_aura_components"
-	required_component_set = "ge_flagship_slot"
+	required_component_set = "roz_flagship_slot"
 }
 
 
@@ -535,7 +535,7 @@ Ge_Vampirilis_Ortaam = {	#斗士
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
 	required_component_set = "ship_aura_components"
-	required_component_set = "ge_flagship_slot"
+	required_component_set = "roz_flagship_slot"
 
 	possible_starbase = {
 		has_starbase_size = starbase_ai

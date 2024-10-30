@@ -49,7 +49,7 @@ tech_ge_planet_killer_desc:0 "死亡即是怜悯。\n§R=====This weapon is not 
  tech_ge_shippart_titian_aura:0 "§Rknowledge of the multiverse"
  tech_ge_shippart_titian_aura_desc:0 "We have got rid of the heat death, and the universe can no longer limit our journey."
  
- ge_flagship_slot:0 "Void Flagship Core"
+ roz_flagship_slot:0 "Void Flagship Core"
 
  
 ###tech

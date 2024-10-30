@@ -1,4 +1,18 @@
 #normal
+
+utility_component_template = {
+	key = "ge_shippart_default"
+	#size = aux
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	power = 0
+	component_set = "roz_flagship_slot"
+	ai_weight = {
+		weight = 0
+	}
+	size = small
+}
+
 utility_component_template = {
 	key = "GE_DEFAULT_REACTOR"
 	size = small
@@ -31,6 +45,7 @@ utility_component_template = {
 		Ge_Vampirilis_Letum
 		Ge_Vampirilis_Ortaam_normal
 		ROZ_ITQ
+		ge_flagship
 	}
 	ai_weight = {
 		weight = 1
@@ -182,9 +197,34 @@ utility_component_template = {
 	}
 }
 
+###dummy
+# utility_component_template = {
+# 	key = "GE_DEFAULT_REACTOR_Dummy"
+# 	size = small
+# 	icon = GFX_ship_part_reactor_3
+# 	icon_frame = 1
+# 	power = 0
+# 	prerequisites = {
+# 		tech_roz_ship_component_dummy
+# 	}
+# 	component_set = "power_core"
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+# }
 
-
-
+# utility_component_template = {
+# 	key = "GE_COMBAT_COMPUTER_LINE_Dummy"
+# 	size = small
+# 	icon = GFX_ship_part_computer_default
+# 	icon_frame = 1
+# 	power = 0
+# 	ship_behavior = gev_line_120
+# 	component_set = "combat_computers"
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+# }
 
 
 
@@ -2198,6 +2238,8 @@ utility_component_template = {
 		Ge_Vampirilis_Ortaam
 		Ge_Vampirilis_Ortaam_normal
 		cosmo_crisis_titan
+		ge_crime_and_punishment
+		ge_void_lord
 	}
 	ai_weight = {
 		weight = 0
@@ -2228,6 +2270,8 @@ utility_component_template = {
 		ge_flagship
 		Ge_Vampirilis_Ortaam_normal
 		roz_juggernaut_wanxiang
+		ge_crime_and_punishment
+		ge_void_lord
 	}
 	component_set = "ship_aura_components"
 	prerequisites = {
@@ -2319,6 +2363,8 @@ utility_component_template = {
 		ge_flagship
 		roz_juggernaut_wanxiang
 		cosmo_crisis_titan
+		ge_crime_and_punishment
+		ge_void_lord
 	}
 	component_set = "ship_aura_components"
 	prerequisites = {
@@ -2428,7 +2474,7 @@ utility_component_template = {
 		roz_juggernaut_wanxiang
 
 	}
-	component_set = "ge_flagship_slot"
+	component_set = "roz_flagship_slot"
 	prerequisites = {
 		"tech_ge_shippart_titian_aura"
 	}
@@ -2521,7 +2567,7 @@ utility_component_template = {
 		roz_juggernaut_wanxiang
 
 	}
-	component_set = "ge_flagship_slot"
+	component_set = "roz_flagship_slot"
 	prerequisites = {
 		"tech_ge_shippart_titian_aura"
 	}
@@ -2598,24 +2644,7 @@ utility_component_template = {
 	}
 }
 
-utility_component_template = {
-	key = "ge_shippart_default"
-	size = aux
-	icon = GFX_ship_part_empty_ftl_drive
-	icon_frame = 1
-	power = 0
-	#size_restriction = {
-	#	azur_flagship
-	#	juggernaut
-	#	ge_flagship
-	#	Ge_Ragnarok
-	#	Ge_Vampirilis_Ortaam
-	#}
-	component_set = "ge_flagship_slot"
-	ai_weight = {
-		weight = 1000		#AI权重相关
-	}
-}
+
 
 #################################
 ###The World###
@@ -2799,7 +2828,7 @@ utility_component_template = {
 		tech_ge_shippart_titian_aura
 	}
 
-	component_set = ge_flagship_slot
+	component_set = roz_flagship_slot
 	hostile_aura = {
 		name = "ge_shippart_titian_peace_field_hostile"
 

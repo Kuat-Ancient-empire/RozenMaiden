@@ -1054,3 +1054,30 @@ tech_roz_information_remodeler = {
 	}
 }
 
+tech_roz_ship_component_dummy = {
+	area = society
+	cost = 1
+	category = {
+		archaeostudies
+	}
+	tier = 5
+	is_rare = yes
+	is_dangerous = yes
+	potential = {
+		always = no
+	}
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}
+
+
+
+
+
+
+
+
+
+
