@@ -1,18 +1,3 @@
-#normal
-
-utility_component_template = {
-	key = "ge_shippart_default"
-	#size = aux
-	icon = GFX_ship_part_empty_ftl_drive
-	icon_frame = 1
-	power = 0
-	component_set = "roz_flagship_slot"
-	ai_weight = {
-		weight = 0
-	}
-	size = small
-}
-
 utility_component_template = {
 	key = "GE_DEFAULT_REACTOR"
 	size = small
@@ -70,9 +55,9 @@ utility_component_template = {
 		}
 	}
 	modifier = {
-		ship_base_speed_mult = 0.10
+		ship_base_speed_mult = 0.1
 		ship_evasion_add = 15
-		ship_speed_mult = 1.10
+		ship_speed_mult = 1.1
 		#ship_disengage_chance_mult = 0.1
 	}
 	prerequisites = {
@@ -119,7 +104,7 @@ utility_component_template = {
 		ship_fire_rate_mult = 0.05
 	}
 	#class_restriction = {
-		#shipclass_military_special
+	#shipclass_military_special
 	#}
 	size_restriction = {
 		Ge_Ragnarok
@@ -134,15 +119,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -185,15 +168,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-
-
 	}
 }
 
@@ -212,7 +193,6 @@ utility_component_template = {
 # 		weight = 0
 # 	}
 # }
-
 # utility_component_template = {
 # 	key = "GE_COMBAT_COMPUTER_LINE_Dummy"
 # 	size = small
@@ -225,11 +205,6 @@ utility_component_template = {
 # 		weight = 0
 # 	}
 # }
-
-
-
-
-
 #reactor
 utility_component_template = {
 	key = "CORVETTE_GE_REACTOR"
@@ -279,25 +254,20 @@ utility_component_template = {
 		ge_military_constructor
 		ge_military_science
 		ge_aura_ship
-
 		KZ_VOY_vanguard_escort
 		BA_missile_ship
 		explorationship
-		
 	}
 	ai_weight = {
 		weight = 7000
-
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -343,15 +313,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 7000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -389,32 +357,25 @@ utility_component_template = {
 		azur_nsc_cruiser_L
 		azur_nsc_cruiser_H
 		azur_nsc_cruiser_S
-
 		GFnyto_flags
 		KZ_VOY_blockade_cruiser
 		KZ_VOY_exploration_cruiser
 		StrikeCruiser
 		Battlecruiser
-
 		small_ship_fallen_empire
 		large_ship_fallen_empire
 		massive_ship_fallen_empire
-
-
-
 	}
 	ai_weight = {
 		weight = 7000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -469,20 +430,17 @@ utility_component_template = {
 		BA_defence_cannon
 		wg_heavy_carrier
 		wsg_lady_warship
-
 	}
 	ai_weight = {
 		weight = 7000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -519,7 +477,6 @@ utility_component_template = {
 		juggernaut
 		GFnyto_mobile_city
 		GFnyto_shiled_ship
-
 		small_ship_fallen_empire
 		large_ship_fallen_empire
 		massive_ship_fallen_empire
@@ -531,7 +488,6 @@ utility_component_template = {
 		dreadnought_carrier
 		mist_dreadnought
 		wg_raider_battleship
-
 		mo_chrono_prison
 		aerial_fortress_irkalla
 		ff_madman
@@ -542,20 +498,17 @@ utility_component_template = {
 		su_chitzkoi
 		su_centurion
 		su_isbm
-
 	}
 	ai_weight = {
 		weight = 7000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -593,10 +546,8 @@ utility_component_template = {
 		ge_flagship
 		Ge_Ragnarok
 		Ge_Vampirilis_Ortaam
-
 		ROZ_ITQ
 		roz_juggernaut_wanxiang
-
 		GFnyto_mather_ship
 		GFnyto_Command_ship
 		KZ_VOY_battle_carrier
@@ -606,15 +557,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 7000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -652,15 +601,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 7000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -698,15 +645,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 7000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -740,15 +685,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 2000000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -784,15 +727,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -826,15 +767,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -868,15 +807,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -911,15 +848,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -953,15 +888,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -995,15 +928,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1031,21 +962,19 @@ utility_component_template = {
 	ship_modifier = {
 		ship_windup_mult = -0.95
 		ship_ftl_jumpdrive_range_mult = 3.95
-		ship_jumpdrive_cooldown_mult = -1.0
+		ship_jumpdrive_cooldown_mult = -1
 		ship_disengage_opportunities_add = 5
 	}
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1094,27 +1023,22 @@ utility_component_template = {
 		ge_military_constructor
 		ge_military_science
 		ge_aura_ship
-
 		Ge_Vampirilis_Ortaam
 		Ge_Vampirilis_Letum
 		Ge_Vampirilis_Ortaam_normal
-
 		KZ_VOY_vanguard_escort
-
 		explorationship
 	}
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1143,8 +1067,8 @@ utility_component_template = {
 	modifier = {
 		ship_base_speed_mult = 0.45
 		ship_evasion_add = 12
-		ship_speed_mult = 1.30
-		ship_disengage_chance_mult = 0.20
+		ship_speed_mult = 1.3
+		ship_disengage_chance_mult = 0.2
 	}
 	size_restriction = {
 		destroyer
@@ -1157,15 +1081,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1192,9 +1114,9 @@ utility_component_template = {
 		}
 	}
 	modifier = {
-		ship_base_speed_mult = 0.40
+		ship_base_speed_mult = 0.4
 		ship_evasion_add = 10
-		ship_speed_mult = 1.20
+		ship_speed_mult = 1.2
 		ship_disengage_chance_mult = 0.15
 	}
 	size_restriction = {
@@ -1203,13 +1125,11 @@ utility_component_template = {
 		azur_nsc_cruiser_L
 		azur_nsc_cruiser_H
 		azur_nsc_cruiser_S
-
 		GFnyto_flags
 		KZ_VOY_blockade_cruiser
 		KZ_VOY_exploration_cruiser
 		StrikeCruiser
 		Battlecruiser
-
 		small_ship_fallen_empire
 		large_ship_fallen_empire
 		massive_ship_fallen_empire
@@ -1217,15 +1137,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1269,7 +1187,6 @@ utility_component_template = {
 		GFnyto_mather_ship
 		GFnyto_Command_ship
 		GF_nyto_super_battelship
-
 		KZ_VOY_battle_barge
 		KZ_VOY_strike_suppression_battleship
 		Carrier
@@ -1278,15 +1195,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1313,12 +1228,11 @@ utility_component_template = {
 		}
 	}
 	modifier = {
-		ship_base_speed_mult = 0.30
+		ship_base_speed_mult = 0.3
 		ship_evasion_add = 5
-		ship_speed_mult = 1.10
+		ship_speed_mult = 1.1
 		ship_disengage_chance_mult = 0.15
 	}
-	
 	size_restriction = {
 		titan
 		colossus
@@ -1326,28 +1240,23 @@ utility_component_template = {
 		ge_flagship
 		Ge_Ragnarok
 		ROZ_ITQ
-
 		roz_juggernaut_wanxiang
 		cosmo_crisis_titan
 		GFnyto_mobile_city
 		GFnyto_shiled_ship
-
 		KZ_VOY_command_dreadnought
-
 		Flagship
 	}
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1380,21 +1289,18 @@ utility_component_template = {
 		ship_cloaking_strength_add = 16
 		ship_tracking_add = 32
 		ship_accuracy_add = 32
-		ship_weapon_damage = 0.10
+		ship_weapon_damage = 0.1
 	}
-
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1428,7 +1334,7 @@ utility_component_template = {
 	modifier = {
 		ship_evasion_mult = 0.15
 		ship_speed_mult = 0.2
-		ship_fire_rate_mult = 0.30
+		ship_fire_rate_mult = 0.3
 		ship_disengage_chance_mult = 0.25
 	}
 	class_restriction = {
@@ -1438,24 +1344,20 @@ utility_component_template = {
 		corvette
 		destroyer
 		azur_nsc_destroyer_A
-
 		KZ_VOY_vanguard_escort
-
 		explorationship
 	}
 	component_set = "combat_computers"
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1482,11 +1384,11 @@ utility_component_template = {
 		}
 	}
 	modifier = {
-		ship_evasion_mult = 0.10
+		ship_evasion_mult = 0.1
 		ship_speed_mult = 0.15
 		ship_weapon_damage = 0.05
 		ship_fire_rate_mult = 0.25
-		ship_disengage_chance_mult = 0.20
+		ship_disengage_chance_mult = 0.2
 	}
 	class_restriction = {
 		shipclass_military
@@ -1506,15 +1408,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1543,9 +1443,9 @@ utility_component_template = {
 	modifier = {
 		ship_evasion_mult = 0.05
 		ship_speed_mult = 0.05
-		ship_weapon_damage = 0.10
-		ship_fire_rate_mult = 0.10
-		ship_weapon_range_mult = 0.10
+		ship_weapon_damage = 0.1
+		ship_fire_rate_mult = 0.1
+		ship_weapon_range_mult = 0.1
 		ship_tracking_add = 5
 		ship_accuracy_add = 5
 		ship_disengage_chance_mult = 0.15
@@ -1561,23 +1461,17 @@ utility_component_template = {
 		Ge_Vampirilis_Letum
 		Ge_Vampirilis_Ortaam_normal
 		ROZ_ITQ
-
 		cosmo_crisis_destroyer
 		cosmo_crisis_battlecruiser
 		cosmo_crisis_titan
-
-
 		azur_nsc_destroyer_A
 		azur_nsc_destroyer_G
 		azur_nsc_cruiser_L
 		azur_nsc_cruiser_H
-
 		GFnyto_mather_ship
 		GFnyto_Command_ship
 		GF_nyto_super_battelship
-
 		large_ship_fallen_empire
-
 		KZ_VOY_blockade_cruiser
 		KZ_VOY_exploration_cruiser
 		StrikeCruiser
@@ -1587,15 +1481,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1622,11 +1514,11 @@ utility_component_template = {
 		}
 	}
 	modifier = {
-		ship_weapon_damage = 0.20
+		ship_weapon_damage = 0.2
 		ship_weapon_range_mult = 0.15
 		ship_tracking_add = 10
 		ship_accuracy_add = 10
-		ship_disengage_chance_mult = 0.10
+		ship_disengage_chance_mult = 0.1
 	}
 	class_restriction = {
 		shipclass_military
@@ -1656,7 +1548,6 @@ utility_component_template = {
 		GFnyto_mather_ship
 		GFnyto_Command_ship
 		GF_nyto_super_battelship
-
 		massive_ship_fallen_empire
 		KZ_VOY_battle_barge
 		KZ_VOY_strike_suppression_battleship
@@ -1664,24 +1555,20 @@ utility_component_template = {
 		Carrier
 		Dreadnought
 		Flagship
-
 		cosmo_crisis_battlecruiser
 		cosmo_crisis_titan
-		
 	}
 	component_set = "combat_computers"
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1713,7 +1600,6 @@ utility_component_template = {
 		weapon_type_strike_craft_weapon_damage_mult = 0.25
 		weapon_type_strike_craft_speed_mult = 0.25
 		ship_disengage_chance_mult = 0.5
-		
 	}
 	ship_modifier = {
 		ship_engagement_range_mult = 3
@@ -1734,27 +1620,22 @@ utility_component_template = {
 		Ge_Ragnarok
 		ge_carrier
 		Ge_Vampirilis_Ortaam
-
 		GFnyto_mather_ship
 		GFnyto_Command_ship
 		GF_nyto_super_battelship
-
 		cosmo_crisis_titan
-		
 	}
 	component_set = "combat_computers"
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1799,15 +1680,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1842,7 +1721,7 @@ utility_component_template = {
 		ship_tracking_add = 10
 	}
 	#class_restriction = {
-		#shipclass_military_special
+	#shipclass_military_special
 	#}
 	size_restriction = {
 		colossus
@@ -1854,25 +1733,21 @@ utility_component_template = {
 		Ge_Ragnarok
 		Ge_Vampirilis_Ortaam
 		ROZ_ITQ
-
 		cosmo_crisis_destroyer
 		cosmo_crisis_battlecruiser
 		cosmo_crisis_titan
-
 	}
 	component_set = "combat_computers"
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -1918,7 +1793,6 @@ utility_component_template = {
 # 	size = aux
 # 	icon = "GFX_ship_part_ge_chaos_booster"
 # 	icon_frame = 1
-
 #   prerequisites = { "tech_ge_cb" }	
 # 	power = -100
 #   component_set = "GE_CB"
@@ -1933,7 +1807,6 @@ utility_component_template = {
 # 			alloys = 0.04
 # 		}
 # 	}
-
 # 	modifier = {
 # 		ship_speed_mult = 0.20
 # 		ship_evasion_add = 15
@@ -1948,16 +1821,13 @@ utility_component_template = {
 # 		weapon_type_strike_craft_weapon_damage_mult = 1.0
 # 		weapon_type_strike_craft_speed_mult = 1.0
 # 		weapon_type_explosive_weapon_damage_mult = 0.75
-
 # 		ship_shield_mult = -0.25
 # 		ship_armor_mult = -0.30
 # 		ship_hull_mult = -0.20
 # 		ship_shield_regen_add_static = -50
 # 		ship_armor_regen_add_static = -50
 # 		ship_hull_regen_add_static = -30
-
 # 	}
-
 # size_restriction = { corvette  colonizer  lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette }
 # 	class_restriction = { shipclass_military }	
 # 	ai_weight = {
@@ -1992,11 +1862,11 @@ utility_component_template = {
 	#}
 	modifier = {
 		ship_shield_mult = 0.15
-		ship_armor_mult = 0.10
+		ship_armor_mult = 0.1
 		ship_hull_mult = 0.05
 		ship_hull_regen_add_perc = 0.25
-		ship_armor_regen_add_perc = 0.50
-		ship_shield_regen_add_perc = 0.50
+		ship_armor_regen_add_perc = 0.5
+		ship_shield_regen_add_perc = 0.5
 		ship_shield_hardening_add = 0.15
 		ship_armor_hardening_add = 0.15
 		ship_cloaking_strength_add = 2
@@ -2015,15 +1885,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -2054,22 +1922,26 @@ utility_component_template = {
 	#}
 	modifier = {
 		ship_hull_regen_add_perc = 0.25
-		ship_armor_regen_add_perc = 0.50
-		ship_shield_regen_add_perc = 0.50
-		ship_shield_hardening_add = 0.80
-		ship_armor_hardening_add = 0.80
+		ship_armor_regen_add_perc = 0.5
+		ship_shield_regen_add_perc = 0.5
+		ship_shield_hardening_add = 0.8
+		ship_armor_hardening_add = 0.8
 		ship_cloaking_strength_add = 10
 	}
 	#class_restriction = { shipclass_military }
-	size_restriction = { science explorer_vessel observation_station }
+	size_restriction = {
+		science
+		explorer_vessel
+		observation_station
+	}
 	ai_weight = {
 		weight = 5000
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
 	}
@@ -2098,18 +1970,18 @@ utility_component_template = {
 		}
 	}
 	modifier = {
-		ship_weapon_damage = 0.10
-		ship_fire_rate_mult = 0.10
+		ship_weapon_damage = 0.1
+		ship_fire_rate_mult = 0.1
 		ship_weapon_range_mult = 0.05
 		ship_shield_damage_mult = 0.05
 		ship_armor_damage_mult = 0.05
-		ship_hull_damage_mult = 0.10
+		ship_hull_damage_mult = 0.1
 		weapon_type_energy_weapon_damage_mult = 0.05
 		weapon_type_kinetic_weapon_damage_mult = 0.05
 		weapon_type_strike_craft_weapon_damage_mult = 0.05
 		weapon_type_strike_craft_speed_mult = 0.05
 		weapon_type_explosive_weapon_damage_mult = 0.05
-		weapon_type_ge_void_energy_damage_mult = 0.10
+		weapon_type_ge_void_energy_damage_mult = 0.1
 		ship_hull_regen_add_static = -10
 		ship_armor_regen_add_static = -20
 		ship_shield_regen_add_static = -20
@@ -2119,15 +1991,13 @@ utility_component_template = {
 	ai_weight = {
 		weight = 0
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_ai = yes
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			is_fallen_empire = yes
 		}
-		
-		
 	}
 }
 
@@ -2154,21 +2024,22 @@ utility_component_template = {
 			energy = 100
 		}
 	}
-
 	ftl_inhibitor = yes
-
 	hostile_aura = {
 		name = "ge_shippart_titian_A_aura1_Debuff"
-		system_wide = yes #是否作用于改恒星系
+		system_wide = yes		#是否作用于改恒星系
 		apply_on = ships
 		stack_info = {
 			id = ge_shippart_titian_A_aura1_Debuff
 			priority = 20
 		}
 		damage_per_day = {
-			accuracy = 1.00
-			damage = { min = 25 max = 35 }
-			shield_damage = 1.00
+			accuracy = 1
+			damage = {
+				min = 25
+				max = 35
+			}
+			shield_damage = 1
 			shield_penetration = 0.25
 			armor_penetration = 0.25
 		}
@@ -2176,14 +2047,13 @@ utility_component_template = {
 			ship_fire_rate_mult = -0.25
 			ship_weapon_range_mult = -0.25
 			#ship_speed_mult = -0.15
-			ship_speed_reduction = 0.20
-			ship_base_speed_mult = -0.20
-			ship_disengage_chance_reduction = 1.00
+			ship_speed_reduction = 0.2
+			ship_base_speed_mult = -0.2
+			ship_disengage_chance_reduction = 1
 			ship_disengage_opportunities_add = -10
-			ship_emergency_ftl_min_days_mult = 1.00
+			ship_emergency_ftl_min_days_mult = 1
 			#ship_windup_mult = 0.50
 			#ship_ftl_jumpdrive_range_mult = -1.00
-			
 		}
 		graphics = {
 			area_effect = {
@@ -2206,12 +2076,12 @@ utility_component_template = {
 		}
 		modifier = {
 			ship_fire_rate_mult = 0.15
-			ship_weapon_range_mult = 0.10
+			ship_weapon_range_mult = 0.1
 			#ship_speed_mult = 0.15
 			ship_evasion_add = 15
-			ship_emergency_ftl_min_days_mult = -1.0
+			ship_emergency_ftl_min_days_mult = -1
 			#ship_windup_mult = -0.30
-			ship_ftl_jumpdrive_range_mult = 0.50
+			ship_ftl_jumpdrive_range_mult = 0.5
 		}
 		graphics = {
 			area_effect = {
@@ -2279,7 +2149,6 @@ utility_component_template = {
 	}
 	hostile_aura = {
 		name = "ge_shippart_titian_B_aura1_Debuff"
-		
 		system_wide = yes
 		apply_on = ships
 		stack_info = {
@@ -2288,7 +2157,7 @@ utility_component_template = {
 		}
 		modifier = {
 			ship_evasion_add = -30
-			ship_evasion_mult = -0.30
+			ship_evasion_mult = -0.3
 			ship_hull_regen_add_perc = -0.15
 			ship_shield_regen_add_perc = -0.25
 			ship_armor_regen_add_perc = -0.25
@@ -2308,7 +2177,6 @@ utility_component_template = {
 	}
 	friendly_aura = {
 		name = "ge_shippart_titian_B_aura1_Buff"
-		
 		system_wide = yes
 		apply_on = ships
 		stack_info = {
@@ -2320,8 +2188,8 @@ utility_component_template = {
 			ship_shield_damage_mult = 0.25
 			ship_armor_damage_mult = 0.25
 			#ship_weapon_range_mult = 0.15
-			ship_shield_hardening_add = 0.40
-			ship_armor_hardening_add = 0.40
+			ship_shield_hardening_add = 0.4
+			ship_armor_hardening_add = 0.4
 		}
 		graphics = {
 			area_effect = {
@@ -2372,7 +2240,6 @@ utility_component_template = {
 	}
 	hostile_aura = {
 		name = "ge_shippart_titian_C_aura1_Debuff"
-		
 		system_wide = yes
 		apply_on = ships
 		stack_info = {
@@ -2380,10 +2247,9 @@ utility_component_template = {
 			priority = 23
 		}
 		modifier = {
-			
 			ship_tracking_mult = -0.25
 			ship_accuracy_mult = -0.25
-			ship_weapon_damage = -0.30
+			ship_weapon_damage = -0.3
 			weapon_type_point_defense_weapon_damage_mult = -0.15
 			weapon_type_point_defense_weapon_fire_rate_mult = -0.15
 			weapon_type_strike_craft_weapon_damage_mult = -0.15
@@ -2409,7 +2275,6 @@ utility_component_template = {
 	}
 	friendly_aura = {
 		name = "ge_shippart_titian_C_aura1_Buff"
-		
 		system_wide = yes
 		apply_on = ships
 		stack_info = {
@@ -2417,16 +2282,16 @@ utility_component_template = {
 			priority = 24
 		}
 		modifier = {
-			weapon_type_point_defense_weapon_damage_mult = 0.20
+			weapon_type_point_defense_weapon_damage_mult = 0.2
 			weapon_type_explosive_weapon_damage_mult = 0.15
 			weapon_type_strike_craft_weapon_damage_mult = 0.15
 			weapon_type_kinetic_weapon_damage_mult = 0.15
-			weapon_type_energy_weapon_damage_mult = 0.20
+			weapon_type_energy_weapon_damage_mult = 0.2
 			ship_tracking_mult = 0.15
 			ship_accuracy_mult = 0.15
 			ship_evasion_add = 15
-			ship_evasion_mult = 0.20
-			cloaking_cooldown = -1.0
+			ship_evasion_mult = 0.2
+			cloaking_cooldown = -1
 		}
 		graphics = {
 			area_effect = {
@@ -2472,15 +2337,13 @@ utility_component_template = {
 		Ge_Ragnarok
 		Ge_Vampirilis_Ortaam
 		roz_juggernaut_wanxiang
-
 	}
-	component_set = "roz_flagship_slot"
+	component_set = "ship_aura_components"
 	prerequisites = {
 		"tech_ge_shippart_titian_aura"
 	}
 	hostile_aura = {
 		name = "ge_shippart_titian_B_aura1_Debuff"
-		
 		system_wide = yes
 		apply_on = ships
 		stack_info = {
@@ -2489,7 +2352,7 @@ utility_component_template = {
 		}
 		modifier = {
 			ship_evasion_add = -30
-			ship_evasion_mult = -0.30
+			ship_evasion_mult = -0.3
 			ship_hull_regen_add_perc = -0.5
 			ship_shield_regen_add_perc = -0.5
 			ship_armor_regen_add_perc = -0.5
@@ -2509,7 +2372,6 @@ utility_component_template = {
 	}
 	friendly_aura = {
 		name = "ge_shippart_titian_B_aura1_Buff"
-		
 		system_wide = yes
 		apply_on = ships
 		stack_info = {
@@ -2520,7 +2382,7 @@ utility_component_template = {
 			ship_hull_damage_mult = 0.15
 			ship_shield_damage_mult = 0.15
 			ship_armor_damage_mult = 0.15
-			ship_weapon_range_mult = 0.10
+			ship_weapon_range_mult = 0.1
 			ship_shield_hardening_add = 0.55
 			ship_armor_hardening_add = 0.55
 		}
@@ -2565,15 +2427,13 @@ utility_component_template = {
 		Ge_Ragnarok
 		Ge_Vampirilis_Ortaam
 		roz_juggernaut_wanxiang
-
 	}
-	component_set = "roz_flagship_slot"
+	component_set = "ship_aura_components"
 	prerequisites = {
 		"tech_ge_shippart_titian_aura"
 	}
 	hostile_aura = {
 		name = "ge_shippart_titian_C_aura1_Debuff"
-		
 		system_wide = yes
 		apply_on = ships
 		stack_info = {
@@ -2583,7 +2443,7 @@ utility_component_template = {
 		modifier = {
 			ship_tracking_mult = -0.25
 			ship_accuracy_mult = -0.25
-			ship_weapon_damage = -0.30
+			ship_weapon_damage = -0.3
 			weapon_type_point_defense_weapon_damage_mult = -0.15
 			weapon_type_point_defense_weapon_fire_rate_mult = -0.15
 			weapon_type_strike_craft_weapon_damage_mult = -0.15
@@ -2609,7 +2469,6 @@ utility_component_template = {
 	}
 	friendly_aura = {
 		name = "ge_shippart_titian_C_aura1_Buff"
-		
 		system_wide = yes
 		apply_on = ships
 		stack_info = {
@@ -2617,16 +2476,16 @@ utility_component_template = {
 			priority = 24
 		}
 		modifier = {
-			weapon_type_point_defense_weapon_damage_mult = 0.20
+			weapon_type_point_defense_weapon_damage_mult = 0.2
 			weapon_type_explosive_weapon_damage_mult = 0.15
 			weapon_type_strike_craft_weapon_damage_mult = 0.15
 			weapon_type_kinetic_weapon_damage_mult = 0.15
-			weapon_type_energy_weapon_damage_mult = 0.20
+			weapon_type_energy_weapon_damage_mult = 0.2
 			ship_tracking_mult = 0.15
 			ship_accuracy_mult = 0.15
 			ship_evasion_add = 15
-			ship_evasion_mult = 0.20
-			cloaking_cooldown = -1.0
+			ship_evasion_mult = 0.2
+			cloaking_cooldown = -1
 		}
 		graphics = {
 			area_effect = {
@@ -2643,8 +2502,6 @@ utility_component_template = {
 		weight = 0		#AI权重相关
 	}
 }
-
-
 
 #################################
 ###The World###
@@ -2667,12 +2524,13 @@ utility_component_template = {
 			energy = 250
 		}
 	}
-	size_restriction = { Ge_Ragnarok }
+	size_restriction = {
+		Ge_Ragnarok
+	}
 	#prerequisites = {}
 	ship_modifier = {
 		roz_timefreeze_modifier_tooltip = 0.999999
 	}
-	
 	component_set = "ship_aura_components"
 	#hidden = yes
 	# hostile_aura = {
@@ -2684,11 +2542,8 @@ utility_component_template = {
 	# 		id = ge_shippart_titian_time_freeze
 	# 		priority = 50
 	# 	}
-		
 	# 	modifier = {
-			
 	# 	}
-		
 	# 	graphics = {
 	# 		area_effect = {
 	# 			entity = "circle_area_entity"
@@ -2700,7 +2555,6 @@ utility_component_template = {
 	# 		}
 	# 	}
 	# }
-	
 	ai_weight = {
 		weight = 0		#AI权重相关
 	}
@@ -2724,18 +2578,21 @@ utility_component_template = {
 			energy = 10
 		}
 	}
-	size_restriction = { Ge_Ragnarok titan ge_flagship ge_aura_ship Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal
-
+	size_restriction = {
+		Ge_Ragnarok
+		titan
+		ge_flagship
+		ge_aura_ship
+		Ge_Vampirilis_Ortaam
+		Ge_Vampirilis_Ortaam_normal
 		roz_juggernaut_wanxiang
 	}
 	prerequisites = {
 		tech_ge_shippart_titian_aura
 	}
-
 	component_set = "ship_aura_components"
 	hostile_aura = {
 		name = "ge_shippart_titian_peace_field_hostile"
-		
 		system_wide = yes
 		apply_on = ships
 		stack_info = {
@@ -2743,19 +2600,19 @@ utility_component_template = {
 			priority = 98
 		}
 		modifier = {
-			ship_fire_rate_mult = -100.0
-			ship_weapon_range_mult = -100.0
-			ship_weapon_damage = -100.0
+			ship_fire_rate_mult = -100
+			ship_weapon_range_mult = -100
+			ship_weapon_damage = -100
 			ship_shield_regen_add_perc = 1
 			ship_armor_regen_add_perc = 1
 			ship_hull_regen_add_perc = 1
-			weapon_type_strike_craft_speed_mult = -100.0
-			weapon_type_strike_craft_weapon_damage_mult = -100.0
-			weapon_type_strike_craft_weapon_fire_rate_mult = -100.0
-			weapon_type_kinetic_weapon_damage_mult = -100.0
-			weapon_type_energy_weapon_damage_mult = -100.0
-			weapon_type_explosive_weapon_damage_mult = -100.0
-			weapon_type_point_defense_weapon_damage_mult = -100.0
+			weapon_type_strike_craft_speed_mult = -100
+			weapon_type_strike_craft_weapon_damage_mult = -100
+			weapon_type_strike_craft_weapon_fire_rate_mult = -100
+			weapon_type_kinetic_weapon_damage_mult = -100
+			weapon_type_energy_weapon_damage_mult = -100
+			weapon_type_explosive_weapon_damage_mult = -100
+			weapon_type_point_defense_weapon_damage_mult = -100
 		}
 		graphics = {
 			area_effect = {
@@ -2777,19 +2634,19 @@ utility_component_template = {
 			priority = 98
 		}
 		modifier = {
-			ship_fire_rate_mult = -100.0
-			ship_weapon_range_mult = -100.0
-			ship_weapon_damage = -100.0
+			ship_fire_rate_mult = -100
+			ship_weapon_range_mult = -100
+			ship_weapon_damage = -100
 			ship_shield_regen_add_perc = 1
 			ship_armor_regen_add_perc = 1
 			ship_hull_regen_add_perc = 1
-			weapon_type_strike_craft_speed_mult = -100.0
-			weapon_type_strike_craft_weapon_damage_mult = -100.0
-			weapon_type_strike_craft_weapon_fire_rate_mult = -100.0
-			weapon_type_kinetic_weapon_damage_mult = -100.0
-			weapon_type_energy_weapon_damage_mult = -100.0
-			weapon_type_explosive_weapon_damage_mult = -100.0
-			weapon_type_point_defense_weapon_damage_mult = -100.0
+			weapon_type_strike_craft_speed_mult = -100
+			weapon_type_strike_craft_weapon_damage_mult = -100
+			weapon_type_strike_craft_weapon_fire_rate_mult = -100
+			weapon_type_kinetic_weapon_damage_mult = -100
+			weapon_type_energy_weapon_damage_mult = -100
+			weapon_type_explosive_weapon_damage_mult = -100
+			weapon_type_point_defense_weapon_damage_mult = -100
 		}
 		graphics = {
 			area_effect = {
@@ -2823,15 +2680,18 @@ utility_component_template = {
 			energy = 10
 		}
 	}
-	size_restriction = { Ge_Ragnarok   ge_aura_ship Ge_Vampirilis_Ortaam roz_juggernaut_wanxiang }
+	size_restriction = {
+		Ge_Ragnarok
+		ge_aura_ship
+		Ge_Vampirilis_Ortaam
+		roz_juggernaut_wanxiang
+	}
 	prerequisites = {
 		tech_ge_shippart_titian_aura
 	}
-
-	component_set = roz_flagship_slot
+	component_set = ship_aura_components
 	hostile_aura = {
 		name = "ge_shippart_titian_peace_field_hostile"
-
 		system_wide = yes
 		apply_on = ships
 		stack_info = {
@@ -2839,19 +2699,19 @@ utility_component_template = {
 			priority = 98
 		}
 		modifier = {
-			ship_fire_rate_mult = -100.0
-			ship_weapon_range_mult = -100.0
-			ship_weapon_damage = -100.0
+			ship_fire_rate_mult = -100
+			ship_weapon_range_mult = -100
+			ship_weapon_damage = -100
 			ship_shield_regen_add_perc = 1
 			ship_armor_regen_add_perc = 1
 			ship_hull_regen_add_perc = 1
-			weapon_type_strike_craft_speed_mult = -100.0
-			weapon_type_strike_craft_weapon_damage_mult = -100.0
-			weapon_type_strike_craft_weapon_fire_rate_mult = -100.0
-			weapon_type_kinetic_weapon_damage_mult = -100.0
-			weapon_type_energy_weapon_damage_mult = -100.0
-			weapon_type_explosive_weapon_damage_mult = -100.0
-			weapon_type_point_defense_weapon_damage_mult = -100.0
+			weapon_type_strike_craft_speed_mult = -100
+			weapon_type_strike_craft_weapon_damage_mult = -100
+			weapon_type_strike_craft_weapon_fire_rate_mult = -100
+			weapon_type_kinetic_weapon_damage_mult = -100
+			weapon_type_energy_weapon_damage_mult = -100
+			weapon_type_explosive_weapon_damage_mult = -100
+			weapon_type_point_defense_weapon_damage_mult = -100
 		}
 		graphics = {
 			area_effect = {
@@ -2873,19 +2733,19 @@ utility_component_template = {
 			priority = 98
 		}
 		modifier = {
-			ship_fire_rate_mult = -100.0
-			ship_weapon_range_mult = -100.0
-			ship_weapon_damage = -100.0
+			ship_fire_rate_mult = -100
+			ship_weapon_range_mult = -100
+			ship_weapon_damage = -100
 			ship_shield_regen_add_perc = 1
 			ship_armor_regen_add_perc = 1
 			ship_hull_regen_add_perc = 1
-			weapon_type_strike_craft_speed_mult = -100.0
-			weapon_type_strike_craft_weapon_damage_mult = -100.0
-			weapon_type_strike_craft_weapon_fire_rate_mult = -100.0
-			weapon_type_kinetic_weapon_damage_mult = -100.0
-			weapon_type_energy_weapon_damage_mult = -100.0
-			weapon_type_explosive_weapon_damage_mult = -100.0
-			weapon_type_point_defense_weapon_damage_mult = -100.0
+			weapon_type_strike_craft_speed_mult = -100
+			weapon_type_strike_craft_weapon_damage_mult = -100
+			weapon_type_strike_craft_weapon_fire_rate_mult = -100
+			weapon_type_kinetic_weapon_damage_mult = -100
+			weapon_type_energy_weapon_damage_mult = -100
+			weapon_type_explosive_weapon_damage_mult = -100
+			weapon_type_point_defense_weapon_damage_mult = -100
 		}
 		graphics = {
 			area_effect = {
@@ -2902,7 +2762,6 @@ utility_component_template = {
 		weight = 0		#AI权重相关
 	}
 }
-
 
 ###########################
 ######就要在这里发电！
@@ -2926,22 +2785,27 @@ utility_component_template = {
 			alloys = 15
 		}
 	}
-	size_restriction = { Ge_Ragnarok titan ge_flagship ge_aura_ship Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal }
-	prerequisites = { tech_ge_HTEP }
-	
+	size_restriction = {
+		Ge_Ragnarok
+		titan
+		ge_flagship
+		ge_aura_ship
+		Ge_Vampirilis_Ortaam
+		Ge_Vampirilis_Ortaam_normal
+	}
+	prerequisites = {
+		tech_ge_HTEP
+	}
 	component_set = "ship_aura_components"
-	
 	# friendly_aura = {
 	# 	name = "ge_shippart_hyper_generator_friendly"
 	# 	system_wide = no
 	# 	apply_on = ships
-		
 	# 	stack_info = {
 	# 		id = ge_shippart_hyper_generator_friendly
 	# 		priority = 98
 	# 	}
 	# 	modifier = {
-			
 	# 	}
 	# 	graphics = {
 	# 		area_effect = {
@@ -2958,9 +2822,6 @@ utility_component_template = {
 		weight = 0		#AI权重相关
 	}
 }
-
-
-
 
 ##############################################################
 utility_component_template = {
@@ -2989,10 +2850,9 @@ utility_component_template = {
 	prerequisites = {
 		#tech_ge_shippart_titian_aura
 	}
-	component_set = roz_wx_slot
+	component_set = ship_aura_components
 	hostile_aura = {
 		name = "roz_shippart_wx_aura_1_hostile"
-
 		system_wide = yes
 		apply_on = ships
 		stack_info = {
@@ -3003,7 +2863,7 @@ utility_component_template = {
 			ship_shield_regen_add_perc = -0.5
 			ship_armor_regen_add_perc = -0.5
 			ship_hull_regen_add_perc = -0.5
-			ship_fire_rate_mult = -0.10
+			ship_fire_rate_mult = -0.1
 			ship_shield_penetration_mult = -0.2
 			ship_armor_penetration_mult = -0.2
 		}
@@ -3018,7 +2878,6 @@ utility_component_template = {
 			}
 		}
 	}
-
 	ai_weight = {
 		weight = 0		#AI权重相关
 	}
@@ -3050,11 +2909,9 @@ utility_component_template = {
 	prerequisites = {
 		#tech_ge_shippart_titian_aura
 	}
-
-	component_set = roz_wx_slot
+	component_set = ship_aura_components
 	hostile_aura = {
 		name = "roz_shippart_wx_aura_2_hostile"
-
 		system_wide = yes
 		apply_on = ships
 		stack_info = {
@@ -3080,7 +2937,6 @@ utility_component_template = {
 			}
 		}
 	}
-
 	ai_weight = {
 		weight = 0		#AI权重相关
 	}
@@ -3112,11 +2968,9 @@ utility_component_template = {
 	prerequisites = {
 		#tech_ge_shippart_titian_aura
 	}
-
-	component_set = roz_wx_slot
+	component_set = ship_aura_components
 	hostile_aura = {
 		name = "roz_shippart_wx_aura_3_hostile"
-
 		system_wide = yes
 		apply_on = ships
 		stack_info = {
@@ -3127,7 +2981,7 @@ utility_component_template = {
 			ship_shield_regen_add_perc = -20
 			ship_armor_regen_add_perc = -20
 			ship_hull_regen_add_perc = -20
-			ship_fire_rate_mult = -0.50
+			ship_fire_rate_mult = -0.5
 			ship_shield_penetration_mult = -1
 			ship_armor_penetration_mult = -1
 		}
@@ -3142,12 +2996,7 @@ utility_component_template = {
 			}
 		}
 	}
-
 	ai_weight = {
 		weight = 0		#AI权重相关
 	}
 }
-
-
-
-

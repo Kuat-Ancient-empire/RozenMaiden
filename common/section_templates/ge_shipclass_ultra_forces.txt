@@ -1559,7 +1559,6 @@ ship_section_template = {
 
 	large_utility_slots = 100
 	aux_utility_slots = 22
-	#roz_flagship_slots = 1
 
 	resources = {
 		category = ship_sections

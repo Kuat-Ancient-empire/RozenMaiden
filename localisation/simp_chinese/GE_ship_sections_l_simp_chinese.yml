@@ -101,7 +101,12 @@ gev_platform_DESC:0 "防御平台将保持静止并向射程内的任何敌人�
 
 
 
-
+ ge_shippart_default_roz_flagship_slot:0 "基础组件"
+ ge_shippart_default_roz_wx_slot:0 "基础组件"
+ ge_shippart_default_combat_computers:0 "基础组件"
+ ge_shippart_default_power_core:0 "基础组件"
+ ge_shippart_default_ftl_components:0 "基础组件"
+ ge_shippart_default_thruster_components:0 "基础组件"
 
 
 

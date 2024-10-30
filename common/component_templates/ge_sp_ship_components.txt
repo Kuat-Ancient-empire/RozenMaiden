@@ -365,7 +365,7 @@ utility_component_template = {
 	}
 	size_restriction = { Ge_Vampirilis_Ortaam }
 	prerequisites = { tech_ge_sgt_flagship_normal }
-	component_set = "roz_flagship_slot"
+	component_set = "ship_aura_components"
 	friendly_aura = {
 		name = "ge_shippart_genesis_lake_friendly"
 		system_wide = yes
