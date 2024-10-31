@@ -53,7 +53,128 @@ utility_component_template = {
 	icon_frame = 1
 	size = small
 	power = 0
-	component_set = ship_aura_components
+	component_set = roz_flagship_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_flagship_slot1"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_flagship_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_flagship_slot2"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_flagship_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_flagship_slot3"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_flagship_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_flagship_slot4"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_flagship_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_flagship_slot5"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_flagship_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_flagship_slot6"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_flagship_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_flagship_slot7"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_flagship_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_flagship_slot8"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_flagship_slot
+	valid_for_country = { is_ai = yes }
 	size_restriction = {
 		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
 		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
@@ -62,6 +183,8 @@ utility_component_template = {
 	ai_weight = { weight = 0 }
 }
 
+
+
 utility_component_template = {
 	key = "ge_shippart_default_combat_computers"
 	size = small
@@ -69,6 +192,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	component_set = "combat_computers"
+	valid_for_country = { is_ai = yes }
 	size_restriction = {
 		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
 		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
@@ -85,6 +209,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	component_set = "power_core"
+	valid_for_country = { is_ai = yes }
 	size_restriction = {
 		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
 		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
@@ -102,6 +227,7 @@ utility_component_template = {
 	ftl = yes
 	jumpdrive = yes
 	ai_weight = { weight = 0 }
+	valid_for_country = { is_ai = yes }
 	size_restriction = {
 		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
 		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
@@ -117,6 +243,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	component_set = "thruster_components"
+	valid_for_country = { is_ai = yes }
 	size_restriction = {
 		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
 		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
@@ -125,3 +252,138 @@ utility_component_template = {
 	ai_weight = { weight = 0 }
 }
 
+utility_component_template = {
+	key = "ge_shippart_default_roz_wx_slot"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_wx_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_wx_slot1"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_wx_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_wx_slot2"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_wx_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_wx_slot3"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_wx_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_wx_slot4"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_wx_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_wx_slot5"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_wx_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_wx_slot6"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_wx_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_wx_slot7"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_wx_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}
+utility_component_template = {
+	key = "ge_shippart_default_roz_wx_slot8"
+	icon = GFX_ship_part_empty_ftl_drive
+	icon_frame = 1
+	size = small
+	power = 0
+	component_set = roz_wx_slot
+	valid_for_country = { is_ai = yes }
+	size_restriction = {
+		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
+		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar ge_military_constructor ge_military_science
+	}
+	ai_weight = { weight = 0 }
+}

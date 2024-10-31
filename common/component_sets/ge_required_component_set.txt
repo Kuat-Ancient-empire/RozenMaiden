@@ -1,13 +1,13 @@
-# component_set = {
-# 	key = "roz_flagship_slot"
-# 	icon = "GFX_ship_part_sensor"
-# 	icon_frame = 1
-# 	required_component_set = yes
-# }
+component_set = {
+	key = "roz_flagship_slot"
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+	required_component_set = yes
+}
 
-# component_set = {
-# 	key = "roz_wx_slot"
-# 	icon = "GFX_ship_part_sensor"
-# 	icon_frame = 1
-# 	required_component_set = yes
-# }
+component_set = {
+	key = "roz_wx_slot"
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+	required_component_set = yes
+}
