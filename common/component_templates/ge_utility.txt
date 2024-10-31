@@ -2338,7 +2338,7 @@ utility_component_template = {
 		Ge_Vampirilis_Ortaam
 		roz_juggernaut_wanxiang
 	}
-	component_set = "ship_aura_components"
+	component_set = "roz_flagship_slot"
 	prerequisites = {
 		"tech_ge_shippart_titian_aura"
 	}
@@ -2428,7 +2428,7 @@ utility_component_template = {
 		Ge_Vampirilis_Ortaam
 		roz_juggernaut_wanxiang
 	}
-	component_set = "ship_aura_components"
+	component_set = "roz_flagship_slot"
 	prerequisites = {
 		"tech_ge_shippart_titian_aura"
 	}
@@ -2531,7 +2531,7 @@ utility_component_template = {
 	ship_modifier = {
 		roz_timefreeze_modifier_tooltip = 0.999999
 	}
-	component_set = "ship_aura_components"
+	component_set = ship_aura_components
 	#hidden = yes
 	# hostile_aura = {
 	# 	name = "ge_shippart_titian_time_freeze"
@@ -2579,18 +2579,18 @@ utility_component_template = {
 		}
 	}
 	size_restriction = {
-		Ge_Ragnarok
-		titan
-		ge_flagship
+		#Ge_Ragnarok
+		#titan
+		#ge_flagship
 		ge_aura_ship
 		Ge_Vampirilis_Ortaam
-		Ge_Vampirilis_Ortaam_normal
-		roz_juggernaut_wanxiang
+		#Ge_Vampirilis_Ortaam_normal
+		#roz_juggernaut_wanxiang
 	}
 	prerequisites = {
 		tech_ge_shippart_titian_aura
 	}
-	component_set = "ship_aura_components"
+	component_set = "roz_flagship_slot"
 	hostile_aura = {
 		name = "ge_shippart_titian_peace_field_hostile"
 		system_wide = yes
@@ -2850,7 +2850,7 @@ utility_component_template = {
 	prerequisites = {
 		#tech_ge_shippart_titian_aura
 	}
-	component_set = ship_aura_components
+	component_set = roz_flagship_slot
 	hostile_aura = {
 		name = "roz_shippart_wx_aura_1_hostile"
 		system_wide = yes
@@ -2909,7 +2909,7 @@ utility_component_template = {
 	prerequisites = {
 		#tech_ge_shippart_titian_aura
 	}
-	component_set = ship_aura_components
+	component_set = roz_flagship_slot
 	hostile_aura = {
 		name = "roz_shippart_wx_aura_2_hostile"
 		system_wide = yes
@@ -2968,7 +2968,7 @@ utility_component_template = {
 	prerequisites = {
 		#tech_ge_shippart_titian_aura
 	}
-	component_set = ship_aura_components
+	component_set = roz_flagship_slot
 	hostile_aura = {
 		name = "roz_shippart_wx_aura_3_hostile"
 		system_wide = yes

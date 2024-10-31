@@ -60,6 +60,13 @@ ge_mozheng_edicts = {
 			energy = 0
 		}
 	}
+	potential = {
+		NOT = {
+			has_active_event = {
+				ge_event.7777
+			}
+		}
+	}
 	effect = {
 		country_event = {
 			id = ge_event.1
