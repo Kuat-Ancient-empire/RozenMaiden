@@ -51,7 +51,7 @@ weapon_component_template = {
 		weight = 1
 		modifier = {
 			factor = 1000
-			is_ship_size = Ge_Ragnarok
+			is_ai = no
 		}
 	}
 
@@ -106,11 +106,11 @@ weapon_component_template = {
 
 	size_restriction = { Ge_Ragnarok }
 
-	ai_weight = {
+	ai_weight = { #invi
 		weight = 1
 		modifier = {
 			factor = 1000
-			is_ship_size = Ge_Ragnarok
+			is_ai = no
 		}
 	}
 }
@@ -163,11 +163,11 @@ weapon_component_template = {
 
     tags = { weapon_type_ge_void_energy }
 	size_restriction = { Ge_Ragnarok }
-	ai_weight = {
+	ai_weight = { #invi
 		weight = 1
 		modifier = {
 			factor = 1000
-			is_ship_size = Ge_Ragnarok
+			is_ai = no
 		}
 	}
 }
@@ -220,11 +220,11 @@ weapon_component_template = {
 
     tags = { weapon_type_ge_void_energy }
 	size_restriction = { Ge_Ragnarok }
-	ai_weight = {
+	ai_weight = { #invi
 		weight = 1
 		modifier = {
 			factor = 1000
-			is_ship_size = Ge_Ragnarok
+			is_ai = no
 		}
 	}
 }
@@ -279,11 +279,11 @@ weapon_component_template = {
 
     tags = { weapon_type_ge_void_energy }
 	size_restriction = { Ge_Ragnarok }
-	ai_weight = {
+	ai_weight = { #invi
 		weight = 1
 		modifier = {
 			factor = 1000
-			is_ship_size = Ge_Ragnarok
+			is_ai = no
 		}
 	}
 }
@@ -333,11 +333,11 @@ weapon_component_template = {
 
 	ai_tags = { weapon_role_anti_shield }
 	ai_tag_weight = 0
-	ai_weight = {
+	ai_weight = { #invi
 		weight = 1
 		modifier = {
 			factor = 1000
-			is_ship_size = Ge_Ragnarok
+			is_ai = no
 		}
 	}
 }
@@ -398,11 +398,11 @@ weapon_component_template = {
 
 	size_restriction = { Ge_Ragnarok }
 
-	ai_weight = {
+	ai_weight = { #invi
 		weight = 1
 		modifier = {
 			factor = 1000
-			is_ship_size = Ge_Ragnarok
+			is_ai = no
 		}
 	}
 }
@@ -464,11 +464,11 @@ strike_craft_component_template = {
 	tags = { weapon_type_strike_craft weapon_type_ge_void_energy }
 	ai_tags = { weapon_role_anti_armor }
 
-	ai_weight = {
+	ai_weight = { #invi
 		weight = 1
 		modifier = {
 			factor = 1000
-			is_ship_size = Ge_Ragnarok
+			is_ai = no
 		}
 	}
 }
@@ -508,11 +508,11 @@ utility_component_template = {
 
 	size_restriction = { Ge_Ragnarok }
 
-	ai_weight = {
+	ai_weight = { #invi
 		weight = 1
 		modifier = {
 			factor = 1000
-			is_ship_size = Ge_Ragnarok
+			is_ai = no
 		}
 	}
 }
@@ -554,11 +554,11 @@ utility_component_template = {
 
 	size_restriction = { Ge_Ragnarok }
 
-	ai_weight = {
+	ai_weight = { #invi
 		weight = 1
 		modifier = {
 			factor = 1000
-			is_ship_size = Ge_Ragnarok
+			is_ai = no
 		}
 	}
 }
@@ -610,11 +610,11 @@ weapon_component_template = {
 
 	tags = { weapon_type_ge_void_energy }
 	size_restriction = { ROZ_ITQ }
-	ai_weight = {
+	ai_weight = { #invi
 		weight = 1
 		modifier = {
 			factor = 1000
-			is_ship_size = ROZ_ITQ
+			is_ai = no
 		}
 	}
 }
