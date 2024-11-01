@@ -18,6 +18,11 @@ country_event = {
 	# }
 	trigger = {
 		is_ai = no
+		NOT = {
+			has_active_event = {
+				ge_event.7777
+			}
+		}
 	}
 	immediate = {
 		set_global_flag = roz_global_flag
@@ -155,6 +160,15 @@ country_event = {
 	title = ge_event.7777.title
 	desc = ge_event.7777.desc
 	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		NOT = {
+			has_active_event = {
+				ge_event.0
+				ge_event.1
+			}
+		}
+	}
 	immediate = {
 		roz_setting_menu_initialize = yes
 	}

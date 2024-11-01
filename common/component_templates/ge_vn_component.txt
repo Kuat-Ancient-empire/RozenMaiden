@@ -35,6 +35,10 @@ weapon_component_template = {
 	accuracy = 1.0
 	tracking = 1.0
 
+	ship_modifier = {
+		component_lifesteal_add = 1
+	}
+
 	shield_penetration = 2.0
 	armor_penetration = 2.0
 	shield_damage = 3.5

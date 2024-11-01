@@ -1280,7 +1280,12 @@ country_event = {
 
 			}
 
-			#roz_lgate_create_reward_planet = yes
+			if = {
+				limit = { 
+					has_country_flag = enable_roz_cheat
+				}
+				roz_lgate_create_reward_planet = yes
+			}
 		}
 	}
 	option = {
