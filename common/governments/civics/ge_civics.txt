@@ -100,7 +100,7 @@ civic_cor_celestial_military = {
 		starbase_upgrade_time_mult = -0.25
 		ships_upkeep_mult = -0.15
 		country_naval_cap_mult = 0.15
-		#country_government_civic_points_add = 1
+		country_government_civic_points_add = 1
 	}
 }
 

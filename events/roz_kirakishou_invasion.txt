@@ -3315,6 +3315,32 @@ country_event = {	#战斗结束
         #    #save_global_event_target_as = roz_sgt_leader_target_temp
         #    exile_leader_as = this
         #}
+        fromfromfrom = {
+            create_ambient_object = {
+                type = "star_explosion"
+                duration = 4
+                #play_animation_once = yes
+                entity_scale_to_size = no
+                use_3d_location = yes
+                entity_offset = { min = 0 max = 0 }
+                entity_offset_angle = { min = 0 max = 0 }
+                entity_offset_height = { min = 0 max = 0 }
+                scale = 5
+                location = this
+            }
+            create_ambient_object = {
+                type = nebula_1
+                duration = 30
+                #play_animation_once = yes
+                entity_scale_to_size = no
+                use_3d_location = yes
+                entity_offset = { min = 0 max = 0 }
+                entity_offset_angle = { min = 0 max = 0 }
+                entity_offset_height = { min = 0 max = 0 }
+                scale = 2
+                location = this
+            }
+        }
         every_owned_fleet = {
             limit = {
                 is_ship_size = ge_black_dragon
@@ -3322,14 +3348,14 @@ country_event = {	#战斗结束
             solar_system = {
                 create_ambient_object = {
                     type = "star_explosion"
-                    duration = 5
+                    duration = 4
                     #play_animation_once = yes
                     entity_scale_to_size = no
                     use_3d_location = yes
                     entity_offset = { min = 0 max = 0 }
                     entity_offset_angle = { min = 0 max = 0 }
                     entity_offset_height = { min = 0 max = 0 }
-                    scale = 4
+                    scale = 5
                     location = this
                 }
                 create_ambient_object = {

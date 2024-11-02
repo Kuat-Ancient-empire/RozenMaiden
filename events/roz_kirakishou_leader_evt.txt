@@ -1264,7 +1264,7 @@ ship_event = {
             }
             enable_special_project = {
                 name = roz_outland_YS_planet_project
-                location = event_target:roz_outland_planet
+                location = event_target:roz_outland_planet@root
             }
         }
     }
@@ -1282,7 +1282,7 @@ country_event = {
         name = roz_krks_leader_evt.55.aa
 
         end_event_chain = roz_outland_system_chain
-        event_target:roz_outland_planet = {
+        event_target:roz_outland_planet@root = {
             solar_system = {
                 set_surveyed = {
                     surveyed = yes

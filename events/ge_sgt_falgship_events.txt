@@ -905,12 +905,10 @@ country_event = {
 	}
 	option = {
 		name = "ge_sgt_falgship_events.10.aa"
-		capital_scope = {
-			enable_special_project = {
-				name = ge_sgt_flagship_proj_1
-				owner = root
-				location = this
-			}
+		enable_special_project = {
+			name = ge_sgt_flagship_proj_1
+			owner = root
+			#location = this
 		}
 		add_resource = {
 			energy = -2500
@@ -926,7 +924,7 @@ country_event = {
 	is_triggered_only = yes
 	picture = GFX_evt_roz_evt_letum_2
 	trigger = {
-
+		is_ai = no
 	}
 	option = {
 		name = "ge_sgt_falgship_events.11.aa"

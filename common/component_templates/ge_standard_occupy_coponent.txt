@@ -54,11 +54,21 @@ utility_component_template = {
 	size = small
 	power = 0
 	component_set = roz_flagship_slot
-	valid_for_country = { is_ai = yes }
+	#valid_for_country = { is_ai = yes }
 	size_restriction = {
-		ge_flagship Ge_Ragnarok ge_aura_ship ge_void_lord ge_crime_and_punishment ge_black_dragon
-		Ge_Vampirilis_Ortaam Ge_Vampirilis_Ortaam_normal Ge_Vampirilis_Letum ROZ_ITQ roz_juggernaut_wanxiang
-		ge_kirakishou_avatar ge_military_constructor ge_military_science
+		ge_flagship 
+		Ge_Ragnarok
+		ge_aura_ship 
+		ge_void_lord 
+		ge_crime_and_punishment 
+		ge_black_dragon
+		Ge_Vampirilis_Ortaam 
+		Ge_Vampirilis_Ortaam_normal 
+		Ge_Vampirilis_Letum 
+		ROZ_ITQ roz_juggernaut_wanxiang
+		ge_kirakishou_avatar 
+		ge_military_constructor 
+		ge_military_science
 	}
 	ai_weight = { weight = 0 }
 }

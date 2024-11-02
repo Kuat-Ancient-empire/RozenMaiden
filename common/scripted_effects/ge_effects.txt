@@ -940,7 +940,7 @@ ge_add_aft_scientist_on_survey = {
 	ge_add_random_var = yes
 	divide_variable = {
 		which = ge_custom_variable
-		value = 4
+		value = 6
 	}
 	change_variable = {
 		which = ge_leader_affection
@@ -973,7 +973,7 @@ ge_add_aft_scientist_on_research = {
 		#}
 		divide_variable = {
 			which = roz_aft_temp_var
-			value = 300
+			value = 600
 		}
 	}
 	set_variable = {
@@ -1858,7 +1858,7 @@ roz_krks_inv_end_loop_effect = {	#scope:country
 }
 
 roz_outland_planet_change = {
-	event_target:roz_outland_planet = {
+	event_target:roz_outland_planet@root = {
 	    change_pc = pc_roz_YS_planet
 		change_planet_size = 10
 	    hidden_effect = {

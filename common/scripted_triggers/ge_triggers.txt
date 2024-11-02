@@ -228,8 +228,8 @@ has_component_GE_REACTOR = {
 }
 
 is_real_roz_YS_planet = {
-	exists = event_target:roz_outland_planet
-	is_same_value = event_target:roz_outland_planet
+	exists = event_target:roz_outland_planet@root
+	is_same_value = event_target:roz_outland_planet@root
 	is_planet_class = pc_roz_YS_planet
 }
 
