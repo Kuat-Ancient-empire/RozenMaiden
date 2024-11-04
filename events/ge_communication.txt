@@ -1410,12 +1410,10 @@ country_event = {
 	}
 	option = {
 		name = ge_communication.50.aa
-		capital_scope = {
-			enable_special_project = {
-				name = "ge_sgt_army_proj"
-				location = this
-				owner = root
-			}
+		enable_special_project = {
+			name = "ge_sgt_army_proj"
+			#location = this
+			owner = root
 		}
 	}
 }

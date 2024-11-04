@@ -9,7 +9,7 @@ special_project = {		####Q_sgt
 	days_to_research = 720
 	picture = GFX_ge_sgt_army1
 	icon = "gfx/interface/icons/situation_log/situation_log_combat.dds"
-	event_scope = planet_event
+	event_scope = country_event
 	timelimit = -1
 	abort_trigger = {
 

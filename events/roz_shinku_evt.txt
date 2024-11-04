@@ -1836,7 +1836,25 @@ country_event = {   #抵达
 
 
 
-
+###boss战局势阶段事件
+country_event = {   #抵达
+    id = roz_shinku_evt.610
+    title = roz_shinku_evt.610.title
+    desc = roz_shinku_evt.610.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    location = event_target:roz_outland_planet@root
+    immediate = {
+        
+    }
+    option = {
+        name = roz_shinku_evt.610.aa
+        
+    }
+}
 
 
 

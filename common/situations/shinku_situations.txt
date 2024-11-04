@@ -520,7 +520,7 @@ roz_SK_4_madgod_invasion_alert = {
             }
         }
         modifier = {
-            
+            shipclass_military_build_speed_mult = 0.25
         }
         ai_weight = {
         }
@@ -554,40 +554,43 @@ roz_SK_4_madgod_invasion_placard = {
     on_progress_complete = {
 
     }
+    on_fail = {
+        
+    }
     start_value = 50
     stages = {
         roz_SK_4_madgod_invasion_placard_stage_minus_two ={
             icon = GFX_situation_stage_icon_roz_SK4_minus-two
             icon_background = GFX_situation_stage_frame_red
+            custom_tooltip = "roz_SK_4_madgod_invasion_placard_stage_minus_two_ct"
             end = 20
         }
         roz_SK_4_madgod_invasion_placard_stage_minus_one ={
             icon = GFX_situation_stage_icon_roz_SK4_minus-one
             icon_background = GFX_situation_stage_frame_red
+            custom_tooltip = "roz_SK_4_madgod_invasion_placard_stage_minus_one_ct"
             end = 40
         }
         roz_SK_4_madgod_invasion_placard_stage_mid ={
             icon = GFX_situation_stage_1
             icon_background = GFX_situation_stage_frame_red
+            custom_tooltip = "roz_SK_4_madgod_invasion_placard_stage_mid_ct"
             end = 60
         }
         roz_SK_4_madgod_invasion_placard_stage_one ={
             icon = GFX_situation_stage_icon_roz_SK4_one
             icon_background = GFX_situation_stage_frame_green
+            custom_tooltip = "roz_SK_4_madgod_invasion_placard_stage_one_ct"
             end = 80
         }
         roz_SK_4_madgod_invasion_placard_stage_two ={
             icon = GFX_situation_stage_icon_roz_SK4_two
             icon_background = GFX_situation_stage_frame_green
+            custom_tooltip = "roz_SK_4_madgod_invasion_placard_stage_two_ct"
             end = 100
         }
-        roz_SK_4_madgod_invasion_placard_stage_end ={
-            icon = GFX_situation_stage_icon_roz_SK4_two
-            icon_background = GFX_situation_stage_frame_green
-            end = 110
-        }
     }
-    approach = {#方案1：细翻深耕
+    approach = {#方案
         name = roz_SK_4_madgod_invasion_placard_approach_1
         icon = GFX_situation_approach_fleet
         icon_background = GFX_situation_approach_bg_red
@@ -599,14 +602,70 @@ roz_SK_4_madgod_invasion_placard = {
             custom_tooltip = roz_SK_4_madgod_invasion_placard_approach_1_onselect_ct
         }
         default = yes
+        # resources = {
+        #     category = situations
+        #     upkeep = {
+        #         energy = 10
+        #     }
+        # }
+        modifier = {
+            #country_naval_cap_add = 500
+        }
+        ai_weight = {
+        }
+        #AI will pick the one with the highest weight
+    }
+    approach = {#方案2
+        name = roz_SK_4_madgod_invasion_placard_approach_2
+        icon = GFX_situation_approach_fleet
+        icon_background = GFX_situation_approach_bg_red
+        allow = {
+        }
+        potential = {
+        }
+        on_select = {
+            custom_tooltip = roz_SK_4_madgod_invasion_placard_approach_2_onselect_ct
+        }
+        default = yes
         resources = {
             category = situations
             upkeep = {
-                energy = 10
+                energy = 30
+                sr_void_core = 5
             }
         }
         modifier = {
-            country_naval_cap_add = 500
+            country_naval_cap_add = 1000
+            ship_weapon_damage = 0.15
+            country_produces_mult = -0.15
+        }
+        ai_weight = {
+        }
+        #AI will pick the one with the highest weight
+    }
+    approach = {#方案3
+        name = roz_SK_4_madgod_invasion_placard_approach_3
+        icon = GFX_situation_approach_fleet
+        icon_background = GFX_situation_approach_bg_red
+        allow = {
+        }
+        potential = {
+        }
+        on_select = {
+            custom_tooltip = roz_SK_4_madgod_invasion_placard_approach_3_onselect_ct
+        }
+        default = yes
+        resources = {
+            category = situations
+            upkeep = {
+                energy = 100
+                sr_void_core = 20
+            }
+        }
+        modifier = {
+            country_naval_cap_add = 2000
+            ship_weapon_damage = 0.4
+            country_produces_mult = -0.35
         }
         ai_weight = {
         }
@@ -615,8 +674,8 @@ roz_SK_4_madgod_invasion_placard = {
     monthly_progress = {
         base = 0
         modifier = {
-            desc = roz_SK_4_madgod_invasion_placard_approach_1_normal
-            add = 0.1
+            desc = roz_SK_4_madgod_invasion_placard_approach_monthly_progress_normal
+            add = -0.5
             owner = {
                 #预计通过check var来判断敌军头目数量
                 #check_variable = {
@@ -626,13 +685,14 @@ roz_SK_4_madgod_invasion_placard = {
             }
         }
         modifier = {
+            desc = roz_SK_4_madgod_invasion_placard_approach_monthly_progress_aggressive
             factor = 0
             current_stage = roz_SK_4_madgod_invasion_placard_stage_two
         }
-        # modifier = {
-        #     factor = 0
-        #     current_stage = roz_SK_4_madgod_invasion_placard_stage_minus_two
-        # }
+        modifier = {
+            factor = 0
+            current_stage = roz_SK_4_madgod_invasion_placard_approach_monthly_progress_negative
+        }
     }
     on_monthly = {  }
 }
