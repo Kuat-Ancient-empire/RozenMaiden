@@ -452,7 +452,7 @@ ge_military_constructor = {
 	combat_disengage_chance = 1.5
 
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
-	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+	enable_3dview_in_ship_browser = no #if yes, ship design will have a 3d view in the ship browser
 	prerequisites = { "tech_ge_section" }
 	is_civilian = yes
 	is_designable = yes
@@ -505,7 +505,7 @@ ge_military_science = {
 	combat_disengage_chance = 2.5
 
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
-	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+	enable_3dview_in_ship_browser = no #if yes, ship design will have a 3d view in the ship browser
 	is_designable = yes
 	components_add_to_cost = no
 	prerequisites = { "tech_ge_section"}
