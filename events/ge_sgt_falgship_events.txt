@@ -8,6 +8,7 @@ country_event = {
 		
 	}
 	immediate = {
+		set_country_flag = roz_sgt_unknow_flagship_spawn_country
 		if = {
 			limit = {
 				any_planet_within_border = {

@@ -10,18 +10,15 @@ roz_unknow_crashed_flagship_category = {
 	spawn_chance = {
 		base = 0
 		modifier = {
-			#add = 1000000
+			add = 100
 			add = 0
-			this = {
-				
-			}
 			from.owner = {
 				has_country_flag = ge_leader_suigintou_get
 				is_ai = no
 			}
 		}
 		modifier = {
-			#add = -10000000
+			add = -10000000
 			add = 0
 			from.owner = {
 				has_country_flag = roz_sgt_unknow_flagship_spawn_country
@@ -43,6 +40,9 @@ roz_unknow_crashed_flagship_category = {
 		# 		id = ge_sgt_falgship_events.100
 		# 	}
 		# }
+		from.owner = {
+			set_country_flag = roz_sgt_unknow_flagship_spawn_country
+		}
 	}
 	on_success = {
 		1 = ge_sgt_falgship_events.101
