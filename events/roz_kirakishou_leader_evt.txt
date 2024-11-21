@@ -1264,7 +1264,7 @@ ship_event = {
             }
             enable_special_project = {
                 name = roz_outland_YS_planet_project
-                location = event_target:roz_outland_planet@root
+                location = event_target:roz_outland_planet@this
             }
         }
     }
