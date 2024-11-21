@@ -1623,7 +1623,7 @@ country_event = {
     }
     option = {
         name = roz_shinku_evt.513.aa
-        play_sound = event_big_door_opening
+        play_sound = { sound = event_big_door_opening location = capital_scope }
         country_event = {
             id = roz_shinku_evt.514
             days = 1
