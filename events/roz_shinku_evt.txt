@@ -1436,7 +1436,7 @@ country_event = {
     immediate = {
         if = {
             limit = {
-                NOT = {
+                NOR = {
                     has_country_flag = roz_SK_1_kxbj_complete
                     has_country_flag = roz_SK_2_jtcl_complete
                 }

@@ -1,6 +1,4 @@
 namespace = ge_skills
-
-
 country_event = {
 	######清除舰队标识win
 	id = ge_skills.1000
@@ -8,14 +6,13 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		has_country_flag = ge_leader_suigintou_get
-		
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
 		###
 		every_owned_fleet = {
 			if = {
-				limit = { 
+				limit = {
 					has_fleet_flag = ge_skill_bwg_activated_flag
 				}
 				remove_fleet_flag = ge_skill_bwg_activated_flag
@@ -64,13 +61,10 @@ country_event = {
 			every_owned_ship = {
 				remove_ship_flag = roz_krks_mind_drain_flag
 			}
-
 		}
 		#set_update_modifiers_batch = end
 	}
 }
-
-
 
 # country_event = {
 # 	###清除敌方舰队标识win
@@ -97,7 +91,6 @@ country_event = {
 # 		}
 # 	}
 # }
-
 country_event = {
 	######清除舰队标识lose
 	id = ge_skills.2000
@@ -105,13 +98,12 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		has_country_flag = ge_leader_suigintou_get
-		
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
 		every_owned_fleet = {
 			if = {
-				limit = { 
+				limit = {
 					has_fleet_flag = ge_skill_bwg_activated_flag
 				}
 				remove_fleet_flag = ge_skill_bwg_activated_flag
@@ -191,8 +183,6 @@ country_event = {
 # 		}
 # 	}
 # }
-
-
 #country_event = {
 #	id = ge_skills.1
 #	is_triggered_only = yes
@@ -205,16 +195,6 @@ country_event = {
 #
 #	}
 #}
-
-
-
-
-
-
-
-
-
-
 fleet_event = {
 	id = ge_skills.25555
 	is_triggered_only = yes
@@ -225,26 +205,27 @@ fleet_event = {
 		}
 	}
 }
+
 #时间静止
 country_event = {
 	id = ge_skills.2
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-			fromfrom = {
-				OR = {
-					AND = {
-						exists = leader
-						leader = {
-							has_trait = leader_trait_ge_time_freeze
-						}
+		fromfrom = {
+			OR = {
+				AND = {
+					exists = leader
+					leader = {
+						has_trait = leader_trait_ge_time_freeze
 					}
-					any_controlled_ship = {
-						has_component = ge_shippart_time_freeze
-					}
-					#has_fleet_flag = kirakishou_hostile_fleet_flag
 				}
+				any_controlled_ship = {
+					has_component = ge_shippart_time_freeze
+				}
+				#has_fleet_flag = kirakishou_hostile_fleet_flag
 			}
+		}
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
@@ -270,7 +251,6 @@ country_event = {
 				id = ge_skills.24
 				days = 3
 			}
-
 		}
 		FromFrom = {
 			solar_system = {
@@ -293,9 +273,6 @@ country_event = {
 			}
 		}
 		#set_update_modifiers_batch = end
-
-
-
 		###time freeze notification
 		random_owned_ship = {
 			limit = {
@@ -334,7 +311,6 @@ country_event = {
 			flag = roz_Ragnarok_time_freeze_flag
 			days = 360
 		}
-
 	}
 }
 
@@ -499,7 +475,6 @@ fleet_event = {
 	immediate = {
 		#set_update_modifiers_batch = begin
 		fromfrom = {
-			
 		}
 		if = {
 			limit = {
@@ -629,7 +604,6 @@ country_event = {
 }
 
 ###雪华绮晶
-
 country_event = {
 	##广域精神榨取
 	id = ge_skills.200
@@ -644,9 +618,7 @@ country_event = {
 					has_trait = leader_trait_ge_mind_drain
 				}
 			}
-
 		}
-
 	}
 	immediate = {
 		fromfrom = {
@@ -661,7 +633,8 @@ country_event = {
 				}
 			}
 		}
-		fromfromfrom = {  #enemy fleet
+		fromfromfrom = {
+			#enemy fleet
 			every_owned_ship = {
 				set_variable = {
 					which = roz_krks_level_var
@@ -719,11 +692,18 @@ ship_event = {
 		has_ship_flag = roz_krks_mind_drain_flag
 	}
 	immediate = {
-		solar_system = { #
+		solar_system = {
+			#
 			every_ship_in_system = {
 				limit = {
-					NOT = { has_ship_flag = roz_krks_mind_drain_flag }
-					NOT = { owner = { has_country_flag = ge_leader_suigintou_get } }
+					NOT = {
+						has_ship_flag = roz_krks_mind_drain_flag
+					}
+					NOT = {
+						owner = {
+							has_country_flag = ge_leader_suigintou_get
+						}
+					}
 				}
 				ge_ship_modifier_intercepting = {
 					modifier = ship_tracking_add
@@ -741,32 +721,29 @@ ship_event = {
 				}
 			}
 		}
-			reduce_hp_percent = 1
-			ge_ship_modifier_intercepting = {
-				modifier = ship_tracking_add
-				change = 1
-				multiply = 10
-				#PARA1 = -100
-				DAYS = 2
-			}
-			ge_ship_modifier_intercepting = {
-				modifier = ship_accuracy_add
-				change = 1
-				multiply = 10
-				#PARA1 = -100
-				DAYS = 2
-			}
-			ship_event = {
-				id = ge_skills.201
-				days = 1
-			}
-
+		reduce_hp_percent = 1
+		ge_ship_modifier_intercepting = {
+			modifier = ship_tracking_add
+			change = 1
+			multiply = 10
+			#PARA1 = -100
+			DAYS = 2
+		}
+		ge_ship_modifier_intercepting = {
+			modifier = ship_accuracy_add
+			change = 1
+			multiply = 10
+			#PARA1 = -100
+			DAYS = 2
+		}
+		ship_event = {
+			id = ge_skills.201
+			days = 1
+		}
 	}
 	after = {
-
 	}
 }
-
 
 country_event = {
 	id = ge_skills.210
@@ -778,11 +755,6 @@ country_event = {
 		has_country_flag = roz_kirakishou_get
 	}
 }
-
-
-
-
-
 
 ####################
 ########科学家
@@ -814,8 +786,7 @@ country_event = {
 					has_leader_flag = ge_suigintou_flag
 				}
 			}
-			
-		}		
+		}
 	}
 	immediate = {
 		# random_list = {
@@ -879,7 +850,6 @@ country_event = {
 		# 					value = @tier5researchreward
 		# 					min = @tier5researchmin
 		# 					max = @tier5researchmax
-							
 		# 				}
 		# 			}
 		# 		}
@@ -901,10 +871,9 @@ country_event = {
 			days = 1830
 		}
 		#hidden_effect = {
-			#ge_add_aft_scientist_on_research = yes
-			#科学家领导科研时加好感值
+		#ge_add_aft_scientist_on_research = yes
+		#科学家领导科研时加好感值
 		#}
-		
 	}
 }
 
@@ -936,7 +905,7 @@ country_event = {
 		#set_update_modifiers_batch = begin
 		hidden_effect = {
 			if = {
-				limit = { 
+				limit = {
 					check_variable = {
 						which = ge_sgt_survey_count
 						value <= 50
@@ -954,7 +923,6 @@ country_event = {
 						value <= 100
 					}
 				}
-				
 				while = {
 					count = 2
 					Mercury_lamp_helps_research_current_technology = yes
@@ -967,18 +935,18 @@ country_event = {
 						value > 100
 					}
 				}
-				
 				while = {
-					count = 3 
+					count = 3
 					Mercury_lamp_helps_research_current_technology = yes
 				}
 			}
-		}	
+		}
 		#set_update_modifiers_batch = end
 	}
 }
 
-ship_event = { ##N之领域-scientist	
+ship_event = {
+	##N之领域-scientist	
 	id = ge_skills.12
 	hide_window = yes
 	is_triggered_only = yes
@@ -1011,8 +979,8 @@ ship_event = { ##N之领域-scientist
 	}
 }
 
-
-country_event = { #创生之湖
+country_event = {
+	#创生之湖
 	id = ge_skills.15
 	hide_window = yes
 	is_triggered_only = yes
@@ -1053,7 +1021,7 @@ country_event = { #创生之湖
 			clear_variable = roz_skills_temp_var_fleet
 		}
 		if = {
-			limit = { 
+			limit = {
 				check_variable = {
 					which = roz_skills_temp_var
 					value <= 16
@@ -1157,7 +1125,8 @@ country_event = { #创生之湖
 	}
 }
 
-country_event = { #用不了了
+country_event = {
+	#用不了了
 	id = ge_skills.20
 	is_triggered_only = yes
 	picture = GFX_evt_cosmic_storms_the_storm_speaks
@@ -1171,114 +1140,112 @@ country_event = { #用不了了
 	immediate = {
 		set_country_flag = roz_chronos_leader_sacrifice_setting
 	}
-
 	option = {
 		name = ge_skills.20.aa
 		start_storm_area_placing = {
 			sacrifice_leader_with_ui = yes
 			cosmic_storm = chronos_storm
 			immediate = yes
-
-            reticle_radius = { 
-				base = 100 
+			reticle_radius = {
+				base = 100
 				modifier = {
 					mult = value:storm_area_placing_reticle_radius_multiplier
 				}
 			}
-            max_range = { 
-				base = 2500 
+			max_range = {
+				base = 2500
 				modifier = {
 					mult = value:storm_area_placing_max_range_multiplier
 				}
 			}
-            on_confirm = {
-                add_modifier = {
-                    modifier = tempest_invocator_active_modifier
-                    days = 900
-                }
-                custom_tooltip = relic_triumph_cooldown
-
-                hidden_effect = {
-                    set_country_flag = used_tempest_invocator_relic_achievement
-                    last_created_cosmic_storm = {
-                        every_system_within_storm = {
-                            random_system_planet = {
-                                limit = {
-                                    NOR = {
-                                        has_anomaly = yes
-                                        is_colony = yes
-                                        has_owner = yes
-                                        is_artificial = yes
-                                    }
-                                    NOR = {
-                                        exists = archaeological_site
-                                        has_planet_flag = hatchling_egg
-                                    }
-                                    OR = {
-                                        is_planet_class = pc_molten
-                                        is_planet_class = pc_barren
-                                        is_planet_class = pc_barren_cold
-                                        is_planet_class = pc_toxic
-                                        is_planet_class = pc_frozen
-                                        is_planet_class = pc_nuked
-                                    }
-                                }
-                                change_pc = pc_shattered
-                                clear_deposits = yes
-                                random_list = {
-                                    2 = {
-                                        add_deposit = d_minerals_10
-                                        add_deposit = d_minerals_6
-                                    }
-                                    2 = {
-                                        add_deposit = d_minerals_10
-                                        add_deposit = d_minerals_2
-                                    }
-                                    1 = {
-                                        add_deposit = d_minerals_8
-                                    }
-                                    1 = {
-                                        add_deposit = d_minerals_4
-                                    }
-                                }
-                            }
-                            every_system_planet = {
-                                limit = {
-                                    OR = {
-                                        is_colony = yes
-                                        has_owner = yes
-                                    }
-                                }
-                                while = {
-                                    count = 4
-                                    random_owned_pop = { kill_pop = yes }
-                                }
-                                add_modifier = {
-                                    modifier = roz_chronos_label_planet_effect_stability
-                                    days = 360
-                                }
-                                add_modifier = {
-                                    modifier = roz_chronos_label_planet_effect_product
-                                    days = 360
-                                }
-                            }
-                        }
-                    }
+			on_confirm = {
+				add_modifier = {
+					modifier = tempest_invocator_active_modifier
+					days = 900
+				}
+				custom_tooltip = relic_triumph_cooldown
+				hidden_effect = {
+					set_country_flag = used_tempest_invocator_relic_achievement
+					last_created_cosmic_storm = {
+						every_system_within_storm = {
+							random_system_planet = {
+								limit = {
+									NOR = {
+										has_anomaly = yes
+										is_colony = yes
+										has_owner = yes
+										is_artificial = yes
+									}
+									NOR = {
+										exists = archaeological_site
+										has_planet_flag = hatchling_egg
+									}
+									OR = {
+										is_planet_class = pc_molten
+										is_planet_class = pc_barren
+										is_planet_class = pc_barren_cold
+										is_planet_class = pc_toxic
+										is_planet_class = pc_frozen
+										is_planet_class = pc_nuked
+									}
+								}
+								change_pc = pc_shattered
+								clear_deposits = yes
+								random_list = {
+									2 = {
+										add_deposit = d_minerals_10
+										add_deposit = d_minerals_6
+									}
+									2 = {
+										add_deposit = d_minerals_10
+										add_deposit = d_minerals_2
+									}
+									1 = {
+										add_deposit = d_minerals_8
+									}
+									1 = {
+										add_deposit = d_minerals_4
+									}
+								}
+							}
+							every_system_planet = {
+								limit = {
+									OR = {
+										is_colony = yes
+										has_owner = yes
+									}
+								}
+								while = {
+									count = 4
+									random_owned_pop = {
+										kill_pop = yes
+									}
+								}
+								add_modifier = {
+									modifier = roz_chronos_label_planet_effect_stability
+									days = 360
+								}
+								add_modifier = {
+									modifier = roz_chronos_label_planet_effect_product
+									days = 360
+								}
+							}
+						}
+					}
 					remove_country_flag = "started_placing_storm"
-                }
-            }
-
-            on_cancel = {
-                add_resource = {
-                    sr_dark_matter = 1000
-                    energy = 15000
-                }
+				}
+			}
+			on_cancel = {
+				add_resource = {
+					sr_dark_matter = 1000
+					energy = 15000
+				}
 				remove_country_flag = "started_placing_storm"
-                # remove_modifier = {
-                #     modifier = "relic_activation_cooldown"
-                # }
-            }
-        }
+				# remove_modifier = {
+				#     modifier = "relic_activation_cooldown"
+				# }
+			}
+		}
 	}
 	option = {
 		name = ge_skills.20.bb
@@ -1286,7 +1253,6 @@ country_event = { #用不了了
 			sr_dark_matter = 1000
 			energy = 15000
 		}
-	
 	}
 	after = {
 		hidden_effect = {
@@ -1295,4 +1261,3 @@ country_event = { #用不了了
 		}
 	}
 }
-

@@ -149,11 +149,12 @@ component_set = {
 	icon_frame = 1
 }
 
-component_set = {
-	key = ""
-	icon = ""
-	icon_frame = 1
-}
+#？？？？WHAT
+# component_set = {
+# 	key = ""
+# 	icon = ""
+# 	icon_frame = 1
+# }
 
 component_set = { 
 	key = "GE_PLANET_KILLER_Crasher"

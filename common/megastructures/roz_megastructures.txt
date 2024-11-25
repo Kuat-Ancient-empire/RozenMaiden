@@ -263,9 +263,7 @@ roz_mega_information_remodeler_effect = {
     }
 
     possible = {
-        NOT = {
-            has_country_flag = roz_mega_information_remodeler_active
-        }
+        from = { NOT = { has_country_flag = roz_mega_information_remodeler_active } }
     }
     potential = {
         NOT = {

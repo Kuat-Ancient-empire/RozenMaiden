@@ -53,7 +53,7 @@ entity = {
 	}
 	attach = { sector1 = roz_nemesis_01_quantum_catapult_stage_2_entity }
 }
-
+@quantum_catapult_size = 35
 entity = {
 	name = "roz_nemesis_01_quantum_catapult_stage_2_entity"
 	pdxmesh = "quantum_catapult_stage_2_mesh"
