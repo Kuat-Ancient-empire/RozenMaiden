@@ -4268,6 +4268,7 @@ roz_teaparty_loop_random = { #root = player country
 roz_leader_change_skin_remove_all_flag_effect = {
 	remove_country_flag = ge_$who$_portrait_change_$portrait$_default
 	remove_country_flag = ge_$who$_portrait_change_$portrait$_red
+	remove_country_flag = ge_$who$_portrait_change_$portrait$_1
 	remove_country_flag = ge_$who$_portrait_change_$portrait$_2
 	remove_country_flag = ge_$who$_portrait_change_$portrait$_3
 	remove_country_flag = ge_$who$_portrait_change_$portrait$_4
