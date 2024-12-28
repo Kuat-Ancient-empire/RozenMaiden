@@ -8,7 +8,6 @@ country_event = {
 		
 	}
 	immediate = {
-		set_country_flag = roz_sgt_unknow_flagship_spawn_country
 		if = {
 			limit = {
 				any_planet_within_border = {
@@ -52,10 +51,12 @@ country_event = {
 							name = random
 							design = science
 							graphical_culture = owner
+							effect = {
+								save_event_target_as = roz_sgt_flagship_science_target
+							}
 						}
 						set_owner = root
 						set_location = prev
-						save_event_target_as = roz_sgt_flagship_science_target
 					}
 				}
 			}
@@ -77,6 +78,9 @@ ship_event = {	#发现神秘舰船
 	location = event_target:roz_sgt_flagship_target
 	is_triggered_only = yes
 	immediate = {
+		owner = {
+			set_country_flag = roz_sgt_unknow_flagship_spawn_country
+		}
 			this = {
 				create_ambient_object = {
 					type = ROZ_SSVL_AO
