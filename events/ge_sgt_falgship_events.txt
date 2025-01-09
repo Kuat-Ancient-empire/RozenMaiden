@@ -5,7 +5,9 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		
+		NOT = {
+			has_country_flag = roz_sgt_unknow_flagship_spawn_country
+		}
 	}
 	immediate = {
 		if = {

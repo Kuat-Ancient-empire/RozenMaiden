@@ -1,0 +1,35 @@
+objectTypes = {
+	pdxmesh = {
+		name = "TW_mesh"
+		file = "output/TW.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "Tower_Whale_MainBody1Shape"
+			index = 0
+			texture_diffuse = Tower_Whale_2_Diffuse
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "Tower_Whale_MainBody1Shape"
+			index = 1
+			texture_diffuse = Tower_Whale_Diffuse
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "b1Shape"
+			index = 0
+			texture_diffuse = Tower_Whale_paning_light
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "b1Shape"
+			index = 1
+			texture_diffuse = Tower_Whale_Diffuse
+			shader = "PdxMeshShip"
+		}
+	}
+}
