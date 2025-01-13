@@ -1555,7 +1555,7 @@ country_event = {
             type = ROZ_sgt_gal_MESSAGE_TYPE
             localization = MESSAGE_roz_sgt_gal_MESSAGE_TITLE_desc
             days = 15
-            target = event_target:ge_site_sgt_target@root
+            target = this
         }
     }
 }

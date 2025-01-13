@@ -98,7 +98,7 @@ building_roz_nourishment_center = {
     can_be_ruined = no
     icon = building_nourishment_center
 
-    category = resources
+    category = resource
 
     potential = {
         exists = owner
@@ -192,7 +192,7 @@ building_roz_class_5_singularity = {
     can_be_ruined = no
     icon = building_bio_reactor_2
 
-    category = resources
+    category = resource
 
     potential = {
         exists = owner
@@ -473,7 +473,7 @@ building_roz_fe_clinic_2 = {
         }
         upkeep = {
             exotic_gases = 2
-            alloys = @b2_alloy_upkeep
+            alloys = @b2_upkeep
             energy = 15
         }
     }
@@ -557,7 +557,7 @@ building_roz_fe_market_2 = {
         }
         upkeep = {
             rare_crystals = 2
-            alloys = @b2_alloy_upkeep
+            alloys = @b2_upkeep
             energy = 15
         }
     }
@@ -605,7 +605,7 @@ building_roz_fe_silo_2 = {
             alloys = @b3_minerals
         }
         upkeep = {
-            alloys = @b2_alloy_upkeep
+            alloys = @b2_upkeep
             energy = 15
         }
     }
@@ -636,7 +636,7 @@ building_roz_fe_entertainment_2 = {
         }
         upkeep = {
             rare_crystals = 2
-            alloys = @b2_alloy_upkeep
+            alloys = @b2_upkeep
             energy = 15
         }
     }
@@ -682,7 +682,7 @@ building_roz_fe_lab_2 = {
         }
         upkeep = {
             exotic_gases = 2
-            alloys = @b3_alloy_upkeep
+            alloys = @b3_upkeep
             energy = 30
         }
         produces = {
@@ -829,7 +829,7 @@ building_roz_fe_mine_2 = {
         }
         upkeep = {
             volatile_motes = 2
-            alloys = @b3_alloy_upkeep
+            alloys = @b3_upkeep
             energy = 30
         }
         produces = {

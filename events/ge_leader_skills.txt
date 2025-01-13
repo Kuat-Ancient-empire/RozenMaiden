@@ -519,18 +519,6 @@ country_event = {
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
-		if = {
-			limit = {
-				fromfrom = {
-					leader = {
-						OR = {
-							has_trait = leader_trait_ge_mercury_lamp
-							has_trait = leader_trait_ge_azoth
-						}
-					}
-				}
-			}
-		}
 		fromfrom = {
 			#set_fleet_flag = ge_skill_azoth_activated_flag
 			add_modifier = {
@@ -572,24 +560,11 @@ country_event = {
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
-		if = {
-			limit = {
-				fromfrom = {
-					exists = leader
-					leader = {
-						OR = {
-							has_trait = leader_trait_ge_mercury_lamp
-							has_trait = leader_trait_ge_N_field
-						}
-					}
-				}
-			}
-			fromfrom = {
-				#set_fleet_flag = ge_skill_nfield_friendly_activated_flag
-				add_modifier = {
-					modifier = ge_modifier_nfield_friendly
-					days = 130
-				}
+		fromfrom = {
+			#set_fleet_flag = ge_skill_nfield_friendly_activated_flag
+			add_modifier = {
+				modifier = ge_modifier_nfield_friendly
+				days = 130
 			}
 		}
 		fromfromfrom = {
@@ -619,6 +594,7 @@ country_event = {
 				}
 			}
 		}
+		from = { is_invisable_faction = no }
 	}
 	immediate = {
 		fromfrom = {
@@ -1125,139 +1101,140 @@ country_event = {
 	}
 }
 
-country_event = {
-	#用不了了
-	id = ge_skills.20
-	is_triggered_only = yes
-	picture = GFX_evt_cosmic_storms_the_storm_speaks
-	title = ge_skills.20.title
-	desc = ge_skills.20.desc
-	trigger = {
-		NOT = {
-			has_country_flag = roz_chronos_leader_sacrifice_setting
-		}
-	}
-	immediate = {
-		set_country_flag = roz_chronos_leader_sacrifice_setting
-	}
-	option = {
-		name = ge_skills.20.aa
-		start_storm_area_placing = {
-			sacrifice_leader_with_ui = yes
-			cosmic_storm = chronos_storm
-			immediate = yes
-			reticle_radius = {
-				base = 100
-				modifier = {
-					mult = value:storm_area_placing_reticle_radius_multiplier
-				}
-			}
-			max_range = {
-				base = 2500
-				modifier = {
-					mult = value:storm_area_placing_max_range_multiplier
-				}
-			}
-			on_confirm = {
-				add_modifier = {
-					modifier = tempest_invocator_active_modifier
-					days = 900
-				}
-				custom_tooltip = relic_triumph_cooldown
-				hidden_effect = {
-					set_country_flag = used_tempest_invocator_relic_achievement
-					last_created_cosmic_storm = {
-						every_system_within_storm = {
-							random_system_planet = {
-								limit = {
-									NOR = {
-										has_anomaly = yes
-										is_colony = yes
-										has_owner = yes
-										is_artificial = yes
-									}
-									NOR = {
-										exists = archaeological_site
-										has_planet_flag = hatchling_egg
-									}
-									OR = {
-										is_planet_class = pc_molten
-										is_planet_class = pc_barren
-										is_planet_class = pc_barren_cold
-										is_planet_class = pc_toxic
-										is_planet_class = pc_frozen
-										is_planet_class = pc_nuked
-									}
-								}
-								change_pc = pc_shattered
-								clear_deposits = yes
-								random_list = {
-									2 = {
-										add_deposit = d_minerals_10
-										add_deposit = d_minerals_6
-									}
-									2 = {
-										add_deposit = d_minerals_10
-										add_deposit = d_minerals_2
-									}
-									1 = {
-										add_deposit = d_minerals_8
-									}
-									1 = {
-										add_deposit = d_minerals_4
-									}
-								}
-							}
-							every_system_planet = {
-								limit = {
-									OR = {
-										is_colony = yes
-										has_owner = yes
-									}
-								}
-								while = {
-									count = 4
-									random_owned_pop = {
-										kill_pop = yes
-									}
-								}
-								add_modifier = {
-									modifier = roz_chronos_label_planet_effect_stability
-									days = 360
-								}
-								add_modifier = {
-									modifier = roz_chronos_label_planet_effect_product
-									days = 360
-								}
-							}
-						}
-					}
-					remove_country_flag = "started_placing_storm"
-				}
-			}
-			on_cancel = {
-				add_resource = {
-					sr_dark_matter = 1000
-					energy = 15000
-				}
-				remove_country_flag = "started_placing_storm"
-				# remove_modifier = {
-				#     modifier = "relic_activation_cooldown"
-				# }
-			}
-		}
-	}
-	option = {
-		name = ge_skills.20.bb
-		add_resource = {
-			sr_dark_matter = 1000
-			energy = 15000
-		}
-	}
-	after = {
-		hidden_effect = {
-			remove_country_flag = started_placing_storm
-			remove_country_flag = roz_chronos_leader_sacrifice_setting
-		}
-	}
-}
+# 暂时不能用
+# country_event = {
+# 	#用不了了
+# 	id = ge_skills.20
+# 	is_triggered_only = yes
+# 	picture = GFX_evt_cosmic_storms_the_storm_speaks
+# 	title = ge_skills.20.title
+# 	desc = ge_skills.20.desc
+# 	trigger = {
+# 		NOT = {
+# 			has_country_flag = roz_chronos_leader_sacrifice_setting
+# 		}
+# 	}
+# 	immediate = {
+# 		set_country_flag = roz_chronos_leader_sacrifice_setting
+# 	}
+# 	option = {
+# 		name = ge_skills.20.aa
+# 		start_storm_area_placing = {
+# 			sacrifice_leader_with_ui = yes
+# 			cosmic_storm = chronos_storm
+# 			immediate = yes
+# 			reticle_radius = {
+# 				base = 100
+# 				modifier = {
+# 					mult = value:storm_area_placing_reticle_radius_multiplier
+# 				}
+# 			}
+# 			max_range = {
+# 				base = 2500
+# 				modifier = {
+# 					mult = value:storm_area_placing_max_range_multiplier
+# 				}
+# 			}
+# 			on_confirm = {
+# 				add_modifier = {
+# 					modifier = tempest_invocator_active_modifier
+# 					days = 900
+# 				}
+# 				custom_tooltip = relic_triumph_cooldown
+# 				hidden_effect = {
+# 					set_country_flag = used_tempest_invocator_relic_achievement
+# 					last_created_cosmic_storm = {
+# 						every_system_within_storm = {
+# 							random_system_planet = {
+# 								limit = {
+# 									NOR = {
+# 										has_anomaly = yes
+# 										is_colony = yes
+# 										has_owner = yes
+# 										is_artificial = yes
+# 									}
+# 									NOR = {
+# 										exists = archaeological_site
+# 										has_planet_flag = hatchling_egg
+# 									}
+# 									OR = {
+# 										is_planet_class = pc_molten
+# 										is_planet_class = pc_barren
+# 										is_planet_class = pc_barren_cold
+# 										is_planet_class = pc_toxic
+# 										is_planet_class = pc_frozen
+# 										is_planet_class = pc_nuked
+# 									}
+# 								}
+# 								change_pc = pc_shattered
+# 								clear_deposits = yes
+# 								random_list = {
+# 									2 = {
+# 										add_deposit = d_minerals_10
+# 										add_deposit = d_minerals_6
+# 									}
+# 									2 = {
+# 										add_deposit = d_minerals_10
+# 										add_deposit = d_minerals_2
+# 									}
+# 									1 = {
+# 										add_deposit = d_minerals_8
+# 									}
+# 									1 = {
+# 										add_deposit = d_minerals_4
+# 									}
+# 								}
+# 							}
+# 							every_system_planet = {
+# 								limit = {
+# 									OR = {
+# 										is_colony = yes
+# 										has_owner = yes
+# 									}
+# 								}
+# 								while = {
+# 									count = 4
+# 									random_owned_pop = {
+# 										kill_pop = yes
+# 									}
+# 								}
+# 								add_modifier = {
+# 									modifier = roz_chronos_label_planet_effect_stability
+# 									days = 360
+# 								}
+# 								add_modifier = {
+# 									modifier = roz_chronos_label_planet_effect_product
+# 									days = 360
+# 								}
+# 							}
+# 						}
+# 					}
+# 					remove_country_flag = "started_placing_storm"
+# 				}
+# 			}
+# 			on_cancel = {
+# 				add_resource = {
+# 					sr_dark_matter = 1000
+# 					energy = 15000
+# 				}
+# 				remove_country_flag = "started_placing_storm"
+# 				# remove_modifier = {
+# 				#     modifier = "relic_activation_cooldown"
+# 				# }
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = ge_skills.20.bb
+# 		add_resource = {
+# 			sr_dark_matter = 1000
+# 			energy = 15000
+# 		}
+# 	}
+# 	after = {
+# 		hidden_effect = {
+# 			remove_country_flag = started_placing_storm
+# 			remove_country_flag = roz_chronos_leader_sacrifice_setting
+# 		}
+# 	}
+# }

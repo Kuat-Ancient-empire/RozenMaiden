@@ -1720,7 +1720,6 @@ country_event = {	#血舞
         }
         hidden_effect = {
             event_target:roz_n_field_site_target@root = {
-                save_event_target_as = ge_site_sgt_target
                 solar_system = {
                     create_ge_defense_fleet = yes
                 }
@@ -1761,7 +1760,6 @@ country_event = {	#陷落 #局势开始
         remove_modifier = ge_gravity_knowledge
         hidden_effect = {
             event_target:roz_n_field_site_target@root = {
-                save_event_target_as = ge_site_sgt_target
                 create_ge_kirakishou_hostile_ship = yes
                 last_created_country = {
                     last_created_fleet = {
@@ -1992,9 +1990,8 @@ country_event = {	#成龙.jpg
         }
         ####幽默save，不过懒得改了
         event_target:roz_n_field_site_target@root = {
-            save_event_target_as = ge_site_sgt_target
+            create_ge_stg_bwd_ship = yes
         }
-        create_ge_stg_bwd_ship = yes
         #让水银灯指挥刚召唤的黑羽龙
         #owner = {
         #    create_leader = {
@@ -2382,9 +2379,6 @@ country_event = {
         hidden_effect = {
             ##唉
             event_target:roz_n_field_site_target@root = {
-                save_event_target_as = ge_site_sgt_target
-            }
-            event_target:kirakishou_hostile_country@root = {
                 create_ge_kirakishou_hostile_ship_stage2 = yes
             }
         }
@@ -2475,9 +2469,6 @@ country_event = {
         hidden_effect = {
             set_country_flag = roz_bf_stage3_flag
             event_target:roz_n_field_site_target@root = {
-                save_event_target_as = ge_site_sgt_target
-            }
-            event_target:kirakishou_hostile_country@root = {
                 create_ge_kirakishou_hostile_ship_stage3 = yes
                 event_target:krks_bf_situation_target@root = {
                     add_situation_progress = -25
@@ -2552,15 +2543,10 @@ country_event = {
     immediate = {
         set_country_flag = roz_bf_stage4_flag
         event_target:roz_n_field_site_target@root = {
-            save_event_target_as = ge_site_sgt_target
-        }
-        event_target:kirakishou_hostile_country@root = {
             create_ge_kirakishou_hostile_ship_stage4 = yes
             event_target:krks_bf_situation_target@root = {
                 add_situation_progress = -25
             }
-        }
-        event_target:kirakishou_hostile_country@root = {
             every_owned_fleet = {
                 add_modifier = {
                     modifier = ge_modifier_time_freeze

@@ -260,7 +260,7 @@ fleet_event = {
 			#}
 			if = {
 				limit = {
-
+					always = yes
 				}
 				solar_system = {
 					random_system_planet = {

@@ -1144,28 +1144,28 @@ create_ge_defense_fleet = {
 			random_list = {
 				25 = {
 					set_location = {
-						target = event_target:ge_site_sgt_target
+						target = prevprev
 						distance = 30
 						angle = random
 					}
 				}
 				25 = {
 					set_location = {
-						target = event_target:ge_site_sgt_target
+						target = prevprev
 						distance = 40
 						angle = random
 					}
 				}
 				25 = {
 					set_location = {
-						target = event_target:ge_site_sgt_target
+						target = prevprev
 						distance = 50
 						angle = random
 					}
 				}
 				25 = {
 					set_location = {
-						target = event_target:ge_site_sgt_target
+						target = prevprev
 						distance = 55
 						angle = random
 					}
@@ -1196,7 +1196,7 @@ create_ge_stg_bwd_ship = {
 				design = "NAME_ge_stg_black_dragon"
 			}
 			set_location = {
-				target = event_target:ge_site_sgt_target
+				target = prev
 				distance = 10
 				angle = random
 			}
@@ -1335,7 +1335,7 @@ create_ge_kirakishou_hostile_ship = {
 								#}
 							}
 						}
-						set_location = event_target:ge_site_sgt_target
+						set_location = prevprev
 						set_fleet_stance = aggressive
 						set_aggro_range_measure_from = return_point
 						set_aggro_range = 300
@@ -1383,7 +1383,7 @@ create_ge_kirakishou_hostile_ship_stage2 = {
 				}
 			}
 			set_location = {
-				target = event_target:ge_site_sgt_target
+				target = prev
 				angle = random
 				distance = 1
 			}
@@ -1442,7 +1442,7 @@ create_ge_kirakishou_hostile_ship_stage2 = {
 							#}
 						}
 					}
-					set_location = event_target:ge_site_sgt_target
+					set_location = event_target:roz_n_field_site_target@root
 					set_fleet_stance = aggressive
 					set_aggro_range_measure_from = return_point
 					set_aggro_range = 300
@@ -1489,7 +1489,7 @@ create_ge_kirakishou_hostile_ship_stage3 = {
 				}
 			}
 			set_location = {
-				target = event_target:ge_site_sgt_target
+				target = prev
 				angle = random
 				distance = 1
 			}
@@ -1551,14 +1551,14 @@ create_ge_kirakishou_hostile_ship_stage3 = {
 							#}
 						}
 					}
-					set_location = event_target:ge_site_sgt_target
-					set_fleet_stance = aggressive
-					set_aggro_range_measure_from = return_point
-					set_aggro_range = 300
-
-					add_modifier = {
-						modifier = roz_krks_bf_stage1_HK_buff
-					}
+				}
+				set_location = prev
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = return_point
+				set_aggro_range = 300
+				
+				add_modifier = {
+					modifier = roz_krks_bf_stage1_HK_buff
 				}
 			}
 
@@ -1568,6 +1568,7 @@ create_ge_kirakishou_hostile_ship_stage3 = {
 						has_country_flag = roz_krks_dl_early_flag
 					}
 				}
+				no_events = yes
 			}
 
 		}
@@ -1598,7 +1599,7 @@ create_ge_kirakishou_hostile_ship_stage4 = {
 				}
 			}
 			set_location = {
-				target = event_target:ge_site_sgt_target
+				target = prev
 				angle = random
 				distance = 1
 			}
@@ -1662,14 +1663,14 @@ create_ge_kirakishou_hostile_ship_stage4 = {
 							#}
 						}
 					}
-					set_location = event_target:ge_site_sgt_target
-					set_fleet_stance = aggressive
-					set_aggro_range_measure_from = return_point
-					set_aggro_range = 300
+				}
+				set_location = prev
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = return_point
+				set_aggro_range = 300
 
-					add_modifier = {
-						modifier = roz_krks_bf_stage1_HK_buff
-					}
+				add_modifier = {
+					modifier = roz_krks_bf_stage1_HK_buff
 				}
 			}
 

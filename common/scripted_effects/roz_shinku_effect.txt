@@ -121,14 +121,14 @@ roz_madgod_fleet_jtcl_create_direct = {
                         design = "NAME_Corrupted_Avatar"
                         effect = { }
                     }
-                    set_location = event_target:roz_n_field_site_target@root
-                    set_fleet_stance = aggressive
-                    set_aggro_range_measure_from = return_point
-                    set_aggro_range = 300
-                    add_modifier = {
-                        modifier = roz_krks_bf_stage1_HK_buff
-                        mult = 0.75
-                    }
+                }
+                set_location = event_target:roz_n_field_site_target@root
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = return_point
+                set_aggro_range = 300
+                add_modifier = {
+                    modifier = roz_krks_bf_stage1_HK_buff
+                    mult = 0.75
                 }
             }
         }
@@ -153,14 +153,14 @@ roz_madgod_fleet_jtcl_create_decoy = {
                         design = "NAME_Corrupted_Avatar"
                         effect = { }
                     }
-                    set_location = event_target:roz_n_field_site_target@root
-                    set_fleet_stance = aggressive
-                    set_aggro_range_measure_from = return_point
-                    set_aggro_range = 300
-                    add_modifier = {
-                        modifier = roz_krks_bf_stage1_HK_buff
-                        mult = 0.5
-                    }
+                }
+                set_location = event_target:roz_n_field_site_target@root
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = return_point
+                set_aggro_range = 300
+                add_modifier = {
+                    modifier = roz_krks_bf_stage1_HK_buff
+                    mult = 0.5
                 }
             }
         }

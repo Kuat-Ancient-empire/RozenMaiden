@@ -522,7 +522,7 @@ country_event = {
             type = ROZ_krks_gal_MESSAGE_TYPE
             localization = MESSAGE_ROZ_krks_gal_MESSAGE_desc
             days = 15
-            target = event_target:ge_site_sgt_target@root
+            target = this
         }
     }
 }
