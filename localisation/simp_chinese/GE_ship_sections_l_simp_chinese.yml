@@ -34,6 +34,8 @@ ge_aura_ship_core_DESC:0 "首都航天工程院负责设计的一款专为战场
 roz_flagship_slot:0 "虚空领舰核心"
 roz_flagship_slot_DESC:0 "庞大的舰体赋予了无与伦比的火力和装甲，以及复杂而高效的辅助模块。"
 
+ge_shippart_default_roz_flagship_slot: "空槽"
+
 ge_sgt_ship_core: "罪与罚"
 ge_sgt_ship_core_DESC: "接受爱丽丝的制裁吧！"
 

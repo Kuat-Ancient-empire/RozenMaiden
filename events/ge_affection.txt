@@ -382,34 +382,34 @@ country_event = {
 				random = 15
 			}
 		}
-		if = { 	#反隐形探测压制
-			limit = {
-				has_country_flag = ge_leader_suigintou_get
-				NOR = {
-					has_country_flag = ge_tech_reactor_get
-					has_country_flag = roz_kirakishou_get
-				}
-			}
-			every_country = {
-				limit = {
-					OR = {
-						is_fallen_empire_machine = yes
-						is_fallen_empire = yes
-					}
-					NOT = { has_modifier = roz_anti_Stealth_suppress_to_fallen_empire }
-				}
-				add_modifier = {
-					modifier = roz_anti_Stealth_suppress_to_fallen_empire
-				}
-				every_owned_starbase = {
-					fleet = {
-						add_modifier = {
-							modifier = roz_anti_Stealth_suppress_to_fallen_empire
-						}
-					}
-				}
-			}
-		}
+		# if = { 	#反隐形探测压制
+		# 	limit = {
+		# 		has_country_flag = ge_leader_suigintou_get
+		# 		NOR = {
+		# 			has_country_flag = ge_tech_reactor_get
+		# 			has_country_flag = roz_kirakishou_get
+		# 		}
+		# 	}
+		# 	every_country = {
+		# 		limit = {
+		# 			OR = {
+		# 				is_fallen_empire_machine = yes
+		# 				is_fallen_empire = yes
+		# 			}
+		# 			NOT = { has_modifier = roz_anti_Stealth_suppress_to_fallen_empire }
+		# 		}
+		# 		add_modifier = {
+		# 			modifier = roz_anti_Stealth_suppress_to_fallen_empire
+		# 		}
+		# 		every_owned_starbase = {
+		# 			fleet = {
+		# 				add_modifier = {
+		# 					modifier = roz_anti_Stealth_suppress_to_fallen_empire
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
 		# if = {
 		# 	limit = {
 		# 		NOR = {

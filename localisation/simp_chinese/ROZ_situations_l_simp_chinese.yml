@@ -127,8 +127,8 @@ roz_sgc_selection_2: "Time is on our side."
 roz_sgc_selection_3: "All in!"
 
 roz_ves_state_grid_shock_situation_monthly_change_tooltip: ""
-roz_ves_state_grid_shock_situaiton_type: "能源危机的负面影响"
-mod_roz_ves_state_grid_shock_situaiton_type: "能源危机的负面影响"
+roz_ves_state_grid_shock_situation_type: "能源危机的负面影响"
+mod_roz_ves_state_grid_shock_situation_type: "能源危机的负面影响"
 
 #######局势：制作真红
 roz_shuukan_shoujonotsukurikata_situation: "周刊——少女的制作方法"

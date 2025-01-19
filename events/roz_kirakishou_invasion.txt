@@ -1742,6 +1742,9 @@ country_event = {	#陷落 #局势开始
     is_triggered_only = yes
     picture = GFX_evt_small_space_battle
     show_sound = event_space_battle
+    trigger = {
+        is_ai = no
+    }
     immediate = {
         every_owned_planet = {
             limit = { is_under_colonization = no }
