@@ -2033,6 +2033,10 @@ utility_component_template = {
 			id = ge_shippart_titian_A_aura1_Debuff
 			priority = 20
 		}
+		limit = {
+			is_in_combat = yes
+			owner = { is_invisable_faction = no }
+		}
 		damage_per_day = {
 			accuracy = 1
 			damage = {
