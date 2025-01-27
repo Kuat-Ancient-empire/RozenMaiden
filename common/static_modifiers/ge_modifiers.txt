@@ -697,6 +697,14 @@ roz_SK_ec_boundaries_of_science_frustrated = {
 	country_produces_mult = 0.05
 }
 
+roz_SK_xiling_enhanced_buff = {
+	physics_tech_cost_mult = -0.1
+	engineering_tech_cost_mult = -0.1
+	society_tech_cost_mult = -0.1
+}
+
+
+
 
 #############################
 ####特殊计划：卷土重来
@@ -717,5 +725,9 @@ roz_mega_information_remodeler_active_bonus = {
 	PLANET_BUILDING_BUILD_SPEED_MULT = 0.25
 	MEGASTRUCTURE_BUILD_SPEED_MULT = 0.25
 }
+
+
+
+
 
 

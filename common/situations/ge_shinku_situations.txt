@@ -564,6 +564,11 @@ roz_SK_4_madgod_invasion_placard = {
             icon_background = GFX_situation_stage_frame_red
             custom_tooltip = "roz_SK_4_madgod_invasion_placard_stage_minus_two_ct"
             end = 20
+            on_first_enter = {
+                owner = {
+
+                }
+            }
         }
         roz_SK_4_madgod_invasion_placard_stage_minus_one ={
             icon = GFX_situation_stage_icon_roz_SK4_minus-one

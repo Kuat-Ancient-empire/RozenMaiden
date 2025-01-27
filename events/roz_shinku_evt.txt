@@ -1623,7 +1623,7 @@ country_event = {
     }
     option = {
         name = roz_shinku_evt.513.aa
-        play_sound = { sound = event_big_door_opening location = capital_scope }
+        play_sound = event_big_door_opening
         country_event = {
             id = roz_shinku_evt.514
             days = 1
@@ -1700,6 +1700,10 @@ country_event = {
         default_hide_option = yes
     }
     after = {
+        add_modifier = {
+            modifier = roz_SK_xiling_enhanced_buff
+            days = 720
+        }
         country_event = {
             id = roz_shinku_evt.516
             days = 1
@@ -1837,7 +1841,7 @@ country_event = {   #抵达
 
 
 ###boss战局势阶段事件
-country_event = {   #抵达
+country_event = {   ##1转2
     id = roz_shinku_evt.610
     title = roz_shinku_evt.610.title
     desc = roz_shinku_evt.610.desc
@@ -1856,15 +1860,430 @@ country_event = {   #抵达
     }
 }
 
+country_event = {   ##2转3
+    id = roz_shinku_evt.611
+    title = roz_shinku_evt.611.title
+    desc = roz_shinku_evt.611.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    location = event_target:roz_outland_planet@root
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.611.aa
+
+    }
+}
+
+country_event = {   ##3转4
+    id = roz_shinku_evt.612
+    title = roz_shinku_evt.612.title
+    desc = roz_shinku_evt.612.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    location = event_target:roz_outland_planet@root
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.612.aa
+
+    }
+}
+
+country_event = {   ##4转5
+    id = roz_shinku_evt.613
+    title = roz_shinku_evt.613.title
+    desc = roz_shinku_evt.613.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    location = event_target:roz_outland_planet@root
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.613.aa
+
+    }
+}
+
+country_event = {   ##5转4
+    id = roz_shinku_evt.614
+    title = roz_shinku_evt.614.title
+    desc = roz_shinku_evt.614.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    location = event_target:roz_outland_planet@root
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.614.aa
+
+    }
+}
+
+country_event = {   ##4转3
+    id = roz_shinku_evt.615
+    title = roz_shinku_evt.615.title
+    desc = roz_shinku_evt.615.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    location = event_target:roz_outland_planet@root
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.615.aa
+
+    }
+}
+
+country_event = {   ##3转2
+    id = roz_shinku_evt.616
+    title = roz_shinku_evt.616.title
+    desc = roz_shinku_evt.616.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    location = event_target:roz_outland_planet@root
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.616.aa
+
+    }
+}
+
+country_event = {   ##2转1
+    id = roz_shinku_evt.617
+    title = roz_shinku_evt.617.title
+    desc = roz_shinku_evt.617.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    location = event_target:roz_outland_planet@root
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.617.aa
+
+    }
+}
+
+country_event = {   ##背水一战, 首次进入1
+    id = roz_shinku_evt.618
+    title = roz_shinku_evt.618.title
+    desc = roz_shinku_evt.618.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    location = event_target:roz_outland_planet@root
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.618.aa
+    }
+}
+
+country_event = {   ##局势-好结局路线
+    id = roz_shinku_evt.619
+    title = roz_shinku_evt.619.title
+    desc = roz_shinku_evt.619.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    location = event_target:roz_outland_planet@root
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.619.aa
+    }
+    option = {
+        name = roz_shinku_evt.619.bb
+    }
+}
+
+country_event = {   ##局势-#坏路线
+    id = roz_shinku_evt.630
+    title = roz_shinku_evt.630.title
+    desc = roz_shinku_evt.630.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    location = event_target:roz_outland_planet@root
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.630.aa
+    }
+    option = {
+        name = roz_shinku_evt.630.bb
+    }
+    option = {
+        name = roz_shinku_evt.630.cc
+    }
+}
+
+country_event = {   ##坏路线-至暗时刻
+    id = roz_shinku_evt.631
+    title = roz_shinku_evt.631.title
+    desc = roz_shinku_evt.631.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.631.aa
+        custom_tooltip = roz_shinku_evt.631.ct
+    }
+    option = {
+        name = roz_shinku_evt.631.bb
+        custom_tooltip = roz_shinku_evt.631.ct
+    }
+}
+
+country_event = {   ##坏路线-蚍蜉撼树
+    id = roz_shinku_evt.632
+    title = roz_shinku_evt.632.title
+    desc = roz_shinku_evt.632.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.632.aa
+    }
+}
+
+country_event = {   ##坏路线-希望的曙光
+    id = roz_shinku_evt.6321
+    title = roz_shinku_evt.6321.title
+    desc = roz_shinku_evt.6321.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.6321.aa
+    }
+}
+
+country_event = {   ##坏路线-击碎绝望
+    id = roz_shinku_evt.633
+    title = roz_shinku_evt.633.title
+    desc = roz_shinku_evt.633.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.633.aa
+    }
+    option = {
+        name = roz_shinku_evt.633.bb
+    }
+}
+
+country_event = {   ##路线收束：万事俱备
+    id = roz_shinku_evt.650
+    title = roz_shinku_evt.650.title
+    desc = roz_shinku_evt.650.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.650.aa
+        custom_tooltip = roz_shinku_evt.650.ct
+    }
+}
+
+###
+country_event = {   ##禁忌领域
+    id = roz_shinku_evt.651
+    title = roz_shinku_evt.651.title
+    desc = roz_shinku_evt.651.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.651.aa
+    }
+}
+
+country_event = {   ##长阶尽头
+    id = roz_shinku_evt.652
+    title = roz_shinku_evt.652.title
+    desc = roz_shinku_evt.652.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+
+    }
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.652.aa
+        is_dialog_only = yes
+        response_text = roz_shinku_evt.652.aa.res
+    }
+    option = {
+        name = roz_shinku_evt.652.bb
+        is_dialog_only = yes
+        response_text = roz_shinku_evt.652.bb.res
+    }
+    option = {
+        name = roz_shinku_evt.652.cc
+        default_hide_option = yes
+        response_text = roz_shinku_evt.652.cc.res
+    }
+}
+
+country_event = {   ##复现奇迹
+    id = roz_shinku_evt.654
+    title = roz_shinku_evt.654.title
+    desc = roz_shinku_evt.654.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.654.aa
+    }
+    option = {
+        name = roz_shinku_evt.654.bb
+    }
+}
+
+country_event = {   ##蔷薇圣母
+    id = roz_shinku_evt.655
+    title = roz_shinku_evt.655.title
+    desc = roz_shinku_evt.655.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.655.aa
+    }
+    option = {
+        name = roz_shinku_evt.655.bb
+    }
+    option = {
+        name = roz_shinku_evt.655.cc
+    }
+}
 
 
+#真红苏醒
+country_event = {
+    id = roz_shinku_evt.660
+    title = roz_shinku_evt.660.title
+    desc = roz_shinku_evt.660.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
 
+    }
+    option = {
+        name = roz_shinku_evt.660.aa
+    }
+    option = {
+        name = roz_shinku_evt.660.bb
+    }
+}
 
+country_event = {   #
+    id = roz_shinku_evt.661
+    title = roz_shinku_evt.661.title
+    desc = roz_shinku_evt.661.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
 
-
-
-
-
+    }
+    option = {
+        name = roz_shinku_evt.661.aa
+    }
+    option = {
+        name = roz_shinku_evt.661.bb
+    }
+}
 
 
 
