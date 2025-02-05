@@ -1314,7 +1314,8 @@ country_event = {
 			has_country_flag = ge_affection_23_cd_flag
 		}
 		any_owned_leader = {
-			is_councilor_type = councilor_research
+			#is_councilor_type = councilor_research
+			is_councilor = yes
 			OR = {
 				has_trait = leader_trait_ge_mercury_lamp_scientist
 				has_leader_flag = ge_suigintou_flag

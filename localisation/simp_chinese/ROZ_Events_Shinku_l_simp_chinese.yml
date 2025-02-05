@@ -386,6 +386,22 @@ roz_shinku_evt.522.title: "抵达"
 roz_shinku_evt.522.desc: "一道亚空间裂隙凭空开启在[roz_outland_planet@root.solar_system.GetName]星系内，其内部漆黑一片无法直视，异常强大的深渊能量不断从中涌出汇聚，是深渊感染体！\n就像一滴墨水落在纸上溅射出的无数细小墨滴，与此同时，传感器侦测到[Root.GETNAME]边境周围的多处的深渊信号，应该是墨水人的深渊仆从军。它们实力强劲，却跟没头苍蝇一样乱转，依靠某种本能感染破坏着周边的一切。万幸的是，在前车之鉴下经过多次仔细筛查，深渊信徒在我们的殖民地上无法立足，之前雪华绮晶入侵事件中的亵渎仪式没有再出现。\n几乎所有通讯频道中都充斥着混乱和嘶鸣，得益于加装的通讯安全设备和提前预防训练，这些干扰并没有对我们的舰队设备和人员造成太大的实质性破坏。情报部门从这些毫无规律的信息乱流中努力分离出最主要和清晰的通讯信息。"
 roz_shinku_evt.522.aa: "显示在屏幕上"
 
+roz_shinku_evt.523.title: "混乱通讯"
+roz_shinku_evt.523.desc: "褰掓潵濡傛垜涓€鑸棯鐢碉紒å¥½ä¹…ä¸è§ï¼Œä½ ä»¬å˜å¾—æ›´åŠ ç¾Žå‘³å¤šæ±ï¼Œè¿˜æžæ¥å¥½å¤šæ–°çŽ©å…·ï¼Œå¤ªæ„‰å¿«äº†姘撮摱鐏紝闆崕缁櫠锛岃繕鏈夐洀鑾撲篃鍦æçåœæ¥æ©æé¢èšïŒèŽéé¡œæ浣嗘垜鐭ラ亾浣犱滑鏃╂櫄浼氳鎴戝悓鍖栨蹈鏌擄紝灏卞儚浠栦滑涓€鏍璧锋潵鍚э紝鎴戠殑浠嗕粠锛"
+roz_shinku_evt.523.aa: "这说的都是什么"
+roz_shinku_evt.523.aa.ct: "不愧是本尊，说的胡话比被附身的雪华还难听"
+roz_shinku_evt.523.aa.rec: "（以下是我们的破译团队赶制出的解码信息）\n\n般归闪如一来我电！\n女孒镹囨覞，倪钔鲠咖美味多汁，还搞来好多新玩具，冭揄駃叻\n银灯，雪华绮晶，辶罘ィ冇雛莓竾菑，何等体贴！！！\nωǒ鍀歸萊皁宥予頁訁...负隅顽抗......\n柦偶椥檤厼ィ门皁曰免徻被我同化浸染，⒐鱌ㄒ乜菛⒈ホ羊\n走已涞鈀，我的仆从！"
+roz_shinku_evt.523.bb: "感觉不妙……"
+roz_shinku_evt.523.bb.res: "浣犱滑杩欐槸鑷姝昏矾锛"
+
+roz_shinku_evt.525.title: "外邦惊诧"
+roz_shinku_evt.525.desc.aggressive: "[Root.GetName]疆域中发生的一系列深渊灾害已经蔓延至星际舞台，许多非我方的舰船、人员乃至星球都遭到了外溢的深渊感染，损失极其惨重，影响极其恶劣。\n但是，以[roz_SK_invasion_dip_aggressive_ai_target.GetName]为首的一共[root.roz_SK_invasion_dip_aggressive_ai]个国家愿意为我方提供支持，“长期友好的邻国突遭变故，此刻正是身为星海共同体一员的我们鼎立相助的时候。唇亡齿寒，如果不能战胜威胁，深渊感染最终会消灭我们所有人。”\n支持我们的国家给我们送来了各类援助，帮助我们共同抵抗深渊入侵。"
+roz_shinku_evt.525.desc.negative: "[Root.GetName]疆域中发生的一系列深渊灾害已经蔓延至星际舞台，许多非我方的舰船、人员乃至星球都遭到了外溢的深渊感染，损失极其惨重，影响极其恶劣。\n在众多要求[capital_scope.GetName]方面为此负责的声音中，[roz_SK_invasion_dip_negative_ai_target.GetName]及其所代表的[root.roz_SK_invasion_dip_negative_ai]个国家组成了反对[Root.GetName]的团体，“罪恶的[Root.GetSpeciesNameInsult]终于犯下了弥天大错！”\n尽管我们或许可以无视掉大部分的指责意见，这些负面观点还是会不可避免地对我们的国际形象和国民热情产生些许损害。"
+roz_shinku_evt.525.desc.neutral: "近日[Root.GetName]疆域中发生的一系列深渊灾害已经蔓延至星际舞台，许多非我方的舰船、人员乃至星球都遭到了外溢的深渊感染，损失极其惨重，影响极其恶劣。\n在众多要求[capital_scope.GetName]方面为此负责的声音中，[roz_SK_invasion_dip_negative_ai_target.GetName]及其所代表的[root.roz_SK_invasion_dip_negative_ai]个国家组成了反对[Root.GetSpeciesName]的团体，“一向飞扬跋扈妄自尊大的[Root.GetSpeciesNameInsult]最近犯下了弥天大错！”\n尽管我们或许可以无视掉大部分的指责意见。\n\n但是，也有以[roz_SK_invasion_dip_aggressive_ai_target.GetName]为首的一共[root.roz_SK_invasion_dip_aggressive_ai]个国家选择站在我们一方，“长期友好的邻国突遭变故，此刻正是身为星海共同体一员的我们鼎立相助的时候。唇亡齿寒，如果不能战胜威胁，深渊感染最终会消灭我们所有人。”\n支持我们的国家给我们送来了各类援助，帮助我们共同抵抗深渊入侵。"
+roz_shinku_evt.525.desc.none: "一系列深渊灾害已经蔓延至星际舞台。但截至目前，我们尚未收到任何提请支援或者正式抗议的外交文书。我们的外星朋友总体来说对此漠不关心，没准他们根本就不存在？"
+roz_shinku_evt.525.aa: "[Root.GetSpeciesName]会记住这些的"
+roz_shinku_evt.525.ct: "在深渊感染体入侵事件中，支持方和反对方阵营会为我们提供可叠加的正负面国家修正，您可以在情报日志中查看更多信息"
+
 #boss战局势阶段事件
 #1转2
 roz_shinku_evt.610.title: "深渊感染体入侵：$roz_SK_4_madgod_invasion_placard_stage_minus_one$"

@@ -55,7 +55,8 @@ country_event = {
 		# 	days = 7200
 		# }
 		set_country_flag = roz_leader_name_jp_flag #开局设置，设定领袖名为片假名
-
+		
+		
 
 
 	}

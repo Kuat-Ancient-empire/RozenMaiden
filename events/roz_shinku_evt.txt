@@ -1834,14 +1834,232 @@ country_event = {   #抵达
     }
     option = {
         name = roz_shinku_evt.522.aa
-        
+        country_event = {
+            id = roz_shinku_evt.523
+        }
     }
 }
 
+country_event = {   #混乱通讯
+    id = roz_shinku_evt.523
+    title = roz_shinku_evt.523.title
+    desc = roz_shinku_evt.523.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        
+    }
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        
+    }
+    option = {
+        name = roz_shinku_evt.523.aa
+        custom_tooltip = roz_shinku_evt.523.aa.ct
+        is_dialog_only = yes
+        response_text = roz_shinku_evt.523.aa.rec
+    }
+    option = {
+        name = roz_shinku_evt.523.bb
+        response_text = roz_shinku_evt.523.bb.rec
+    }
+}
 
+country_event = {
+    id = roz_shinku_evt.524
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+    }
+    immediate = {   #比较ai态度并计数
+        roz_SK_invasion_dip_effect = {  #支持者
+            sign = ">="
+            opinion = aggressive
+        }
+        roz_SK_invasion_dip_effect = {  #反对者
+            sign = "<="
+            opinion = negative
+        }
+        roz_SK_invasion_dip_effect = {  #中立者
+            sign = "="
+            opinion = neutral
+        }
+        
+        #开始对比
+        if = {  #各持己见，中立
+            limit = {
+                NAND = {    #此条件不能全中立
+                    check_variable = { which = roz_SK_invasion_dip_negative_ai value = 0 }
+                    check_variable = { which = roz_SK_invasion_dip_aggressive_ai value = 0 }
+                }
+                OR = {
+                    check_variable_arithmetic = {   #中立国家较多
+                        which = roz_SK_invasion_dip_neutral_ai
+                        subtract = roz_SK_invasion_dip_negative_ai
+                        subtract = roz_SK_invasion_dip_aggressive_ai
+                        value > 0
+                    }
+                    check_variable_arithmetic = {   #支持者与反对者战平
+                        which = roz_SK_invasion_dip_aggressive_ai
+                        subtract = roz_SK_invasion_dip_negative_ai
+                        value = 0
+                    }
+                }
+            }
+            set_country_flag = roz_SK_invasion_dip_compare_neutral_flag
+        }
+        else_if = { #总体结果为反对
+            limit = {
+                check_variable_arithmetic = {
+                    which = roz_SK_invasion_dip_negative_ai
+                    subtract = roz_SK_invasion_dip_aggressive_ai
+                    value > 0
+                }
+            }
+            set_country_flag = roz_SK_invasion_dip_compare_negative_flag
+        }
+        else_if = { #总体结果为支持
+            limit = {
+                check_variable_arithmetic = {
+                    which = roz_SK_invasion_dip_aggressive_ai
+                    subtract = roz_SK_invasion_dip_negative_ai
+                    value > 0
+                }
+            }
+            set_country_flag = roz_SK_invasion_dip_compare_aggressive_flag
+        }
+        else_if = {  #缺省
+            limit = {
+                OR = {
+                    AND = { #只有中立
+                        is_variable_set = roz_SK_invasion_dip_neutral_ai
+                        check_variable = {
+                            which = roz_SK_invasion_dip_negative_ai
+                            value = 0
+                        }
+                        check_variable = {
+                            which = roz_SK_invasion_dip_aggressive_ai
+                            value = 0
+                        }
+                    }
+                    NAND = {    #没一个是人
+                        is_variable_set = roz_SK_invasion_dip_neutral_ai
+                        is_variable_set = roz_SK_invasion_dip_negative_ai
+                        is_variable_set = roz_SK_invasion_dip_aggressive_ai
+                    }
+                }
+            }
+            set_country_flag = roz_SK_invasion_dip_compare_none_flag
+        }
+    }
+}
+
+country_event = {
+    id = roz_shinku_evt.525
+    title = roz_shinku_evt.525.title
+    desc = {
+        trigger = {
+            has_country_flag = roz_SK_invasion_dip_compare_aggressive_flag
+        }
+        text = roz_shinku_evt.525.desc.aggressive
+    }
+    desc = {
+        trigger = {
+            has_country_flag = roz_SK_invasion_dip_compare_negative_flag
+        }
+        text = roz_shinku_evt.525.desc.negative
+    }
+    desc = {
+        trigger = {
+            has_country_flag = roz_SK_invasion_dip_compare_neutral_flag
+        }
+        text = roz_shinku_evt.525.desc.neutral
+    }
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        random_playable_country = {
+            limit = {
+                has_country_flag = roz_SK_invasion_dip_aggressive_ai_flag
+            }
+            save_event_target_as = roz_SK_invasion_dip_aggressive_ai_target
+        }
+        random_playable_country = {
+            limit = {
+                has_country_flag = roz_SK_invasion_dip_negative_ai_flag
+            }
+            save_event_target_as = roz_SK_invasion_dip_negative_ai_target
+        }
+    }
+    after = {
+        begin_event_chain = {
+            event_chain = roz_SK_madgod_invasion_main
+        }
+        ###清除临时数据
+        clear_variable = roz_SK_invasion_dip_neutral_ai
+        clear_variable = roz_SK_invasion_dip_negative_ai
+        clear_variable = roz_SK_invasion_dip_aggressive_ai
+        every_playable_country = {
+            remove_country_flag = roz_SK_invasion_dip_aggressive_ai_flag
+            remove_country_flag = roz_SK_invasion_dip_negative_ai_flag
+            remove_country_flag = roz_SK_invasion_dip_neutral_ai_flag
+        }
+        #启动循环事件更新数据
+        country_event = {
+            id = roz_shinku_evt.526
+            days = 30
+        }
+        set_country_flag = roz_SK_invasion_dip_refresh_active_flag
+    }
+}
+
+country_event = {
+    id = roz_shinku_evt.526
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+        has_country_flag = roz_SK_invasion_dip_refresh_active_flag
+    }
+    immediate = {
+        ###清除临时数据
+        clear_variable = roz_SK_invasion_dip_neutral_ai
+        clear_variable = roz_SK_invasion_dip_negative_ai
+        clear_variable = roz_SK_invasion_dip_aggressive_ai
+        every_playable_country = {
+            remove_country_flag = roz_SK_invasion_dip_aggressive_ai_flag
+            remove_country_flag = roz_SK_invasion_dip_negative_ai_flag
+            remove_country_flag = roz_SK_invasion_dip_neutral_ai_flag
+        }
+        ###
+        roz_SK_invasion_dip_effect = {  #支持者
+            sign = ">="
+            opinion = aggressive
+        }
+        roz_SK_invasion_dip_effect = {  #反对者
+            sign = "<="
+            opinion = negative
+        }
+        roz_SK_invasion_dip_effect = {  #中立者
+            sign = "="
+            opinion = neutral
+        }
+        ###
+        country_event = {
+            id = roz_shinku_evt.526
+            days = 30
+        }
+    }
+}
 
 ###boss战局势阶段事件
-country_event = {   ##1转2
+country_event = {   #深渊感染体入侵
     id = roz_shinku_evt.610
     title = roz_shinku_evt.610.title
     desc = roz_shinku_evt.610.desc

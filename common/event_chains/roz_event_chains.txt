@@ -14,7 +14,12 @@ roz_outland_system_chain = {
 	}
 }
 
-# TODO
+roz_SK_madgod_invasion_main = {
+	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
+	picture = GFX_
+}
+
+#TODO
 # ge_sgt_flagship_proj_chain = {
 # 	icon = ""
 # 	picture = GFX
