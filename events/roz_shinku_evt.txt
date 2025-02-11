@@ -2058,6 +2058,124 @@ country_event = {
     }
 }
 
+#墨水人首次被击败
+country_event = {
+    id = roz_shinku_evt.550
+    title = roz_shinku_evt.550.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        
+    }
+    option = {
+        name = roz_shinku_evt.550.aa
+    }
+}
+
+#诡异通讯
+country_event = {
+    id = roz_shinku_evt.551
+    title = roz_shinku_evt.551.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        
+    }
+    option = {
+        name = roz_shinku_evt.551.aa
+    }
+}
+
+#击杀墨水人后复活时
+country_event = {
+    id = roz_shinku_evt.555
+    title = roz_shinku_evt.555.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        
+    }
+    option = {
+        name = roz_shinku_evt.555.aa
+    }
+    option = {
+        name = roz_shinku_SK_invasion_ignore
+        custom_tooltip = roz_shinku_evt.SK_invasion_ignore.ct
+    }
+}
+
+#神国星系沦陷
+country_event = {
+    id = roz_shinku_evt.560
+    title = roz_shinku_evt.560.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        
+    }
+    option = {
+        name = roz_shinku_evt.560.aa
+    }
+    option = {
+        name = roz_shinku_SK_invasion_ignore
+        custom_tooltip = roz_shinku_evt.SK_invasion_ignore.ct
+    }
+}
+
+#深渊分遣舰队再次出现
+country_event = {
+    id = roz_shinku_evt.563
+    title = roz_shinku_evt.563.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        
+    }
+    option = {
+        name = roz_shinku_evt.563.aa
+    }
+    option = {
+        name = roz_shinku_SK_invasion_ignore
+        custom_tooltip = roz_shinku_evt.SK_invasion_ignore.ct
+    }
+}
+
+#占领殖民地星系
+country_event = {
+    id = roz_shinku_evt.566
+    title = roz_shinku_evt.566.desc
+    is_triggered_only = yes
+    picture = GFX_
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        
+    }
+    option = {
+        name = roz_shinku_evt.566.aa
+    }
+    option = {
+        name = roz_shinku_SK_invasion_ignore
+        custom_tooltip = roz_shinku_evt.SK_invasion_ignore.ct
+    }
+}
+
 ###boss战局势阶段事件
 country_event = {   #深渊感染体入侵
     id = roz_shinku_evt.610
