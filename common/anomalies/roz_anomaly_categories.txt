@@ -5,12 +5,12 @@ roz_unknow_crashed_flagship_category = {
 	level = 8
 	should_ai_use = no
 	#max_once_global = yes
-	max_once = yes
+	#max_once = yes
 	null_spawn_chance = 0
 	spawn_chance = {
-		base = 0
+		base = 1
 		modifier = {
-			add = 100
+			add = 1000
 			from.owner = {
 				has_country_flag = ge_leader_suigintou_get
 				is_ai = no
@@ -18,13 +18,12 @@ roz_unknow_crashed_flagship_category = {
 		}
 		modifier = {
 			add = -10000000
-			add = 0
 			from.owner = {
 				has_country_flag = roz_sgt_unknow_flagship_spawn_country
 			}
 		}
 		modifier = {
-			factor = 0
+			mult = 0
 			from.owner = {
 				has_country_flag = roz_sgt_unknow_flagship_spawn_country
 			}
@@ -34,14 +33,15 @@ roz_unknow_crashed_flagship_category = {
 		# this = {
 		# 	save_event_target_as = roz_sgt_flagship_target
 		# }
-		# from = {
-		# 	ship_event = {
-		# 		id = ge_sgt_falgship_events.100
-		# 	}
-		# }
+		from = {
+			ship_event = {
+				id = ge_sgt_falgship_events.100
+			}
+		}
 		from.owner = {
 			set_country_flag = roz_sgt_unknow_flagship_spawn_country
 		}
+		save_event_target_as = roz_sgt_flagship_target
 	}
 	on_success = {
 		1 = ge_sgt_falgship_events.101

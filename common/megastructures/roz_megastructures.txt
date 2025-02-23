@@ -20,7 +20,6 @@ roz_mega_wanxiangtianyin = {
         produces = {
             sr_void_core = 60
             alloys = 35
-
             mult = value:roz_mega_wanxiangtianyin_trigger_values
         }
     }

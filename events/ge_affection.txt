@@ -1007,7 +1007,7 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = roz_aft_fleet_combat_win_timed_flag
-			days = 2
+			days = 1
 		}
 		fromfromfrom = {
 			save_event_target_as = roz_aft_enemy_fleet_target
@@ -1046,25 +1046,25 @@ country_event = {
 				}
 				divide_variable = {#设置倍率
 					which = ge_leader_aft_temp_number
-					value = 20000
+					value = 10000
 				}
 				if = {
 					limit = {
 						check_variable = {#设置一次性获得的最大上限
 							which = ge_leader_aft_temp_number
-							value >= 1.2
+							value >= 2.0
 						}
 					}
 					change_variable = {
 						which = ge_leader_affection
-						value = 1.2
+						value = 2.0
 					}
 				}
 				else_if = {
 					limit = {
 						check_variable = {
 							which = ge_leader_aft_temp_number
-							value < 1.2
+							value < 2.0
 						}
 						check_variable = {
 							which = ge_leader_aft_temp_number

@@ -5,9 +5,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		NOT = {
-			has_country_flag = roz_sgt_unknow_flagship_spawn_country
-		}
+		NOT = { has_country_flag = roz_sgt_unknow_flagship_spawn_country }
 	}
 	immediate = {
 		if = {
@@ -27,7 +25,7 @@ country_event = {
 				}
 				add_anomaly = {
 					category = roz_unknow_crashed_flagship_category
-					target = solar_system.owner
+					target = root
 				}
 				save_event_target_as = roz_sgt_flagship_target
 			}
@@ -47,26 +45,24 @@ country_event = {
 					target = solar_system.owner
 				}
 				save_event_target_as = roz_sgt_flagship_target
-				create_fleet = {
+			}
+		}
+		create_fleet = {
+			effect = {
+				create_ship = {
+					name = random
+					random_existing_design = science
+					graphical_culture = owner
 					effect = {
-						create_ship = {
-							name = random
-							design = science
-							graphical_culture = owner
-							effect = {
-								save_event_target_as = roz_sgt_flagship_science_target
-							}
-						}
-						set_owner = root
-						set_location = prev
+						save_event_target_as = roz_sgt_flagship_science_target
 					}
 				}
+				set_owner = prev
+				set_location = event_target:roz_sgt_flagship_target
 			}
 		}
 		event_target:roz_sgt_flagship_science_target = {
-			ship_event = {
-				id = ge_sgt_falgship_events.100
-			}
+			ship_event = { id = ge_sgt_falgship_events.100 }
 		}
 	}
 }
@@ -80,39 +76,43 @@ ship_event = {	#发现神秘舰船
 	location = event_target:roz_sgt_flagship_target
 	is_triggered_only = yes
 	immediate = {
-		owner = {
-			set_country_flag = roz_sgt_unknow_flagship_spawn_country
-		}
-			this = {
-				create_ambient_object = {
-					type = ROZ_SSVL_AO
-					location = event_target:roz_sgt_flagship_target
-					scale = 0.4
-					entity_scale_to_size = no
-					use_3d_location = yes
-					entity_offset = { min = 1 max = 3 }
-					entity_offset_angle = { min = 10 max = 180 }
-					entity_offset_height = { min = 6 max = 10 }
+		owner = { 
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = roz_sgt_unknow_flagship_spawn_country
+					}
 				}
-				last_created_ambient_object = {
-					save_global_event_target_as = ROZ_SSVL_AO_target@root.owner
-				}
-				create_ambient_object = {
-					type = nebula_1
-					scale = 2
-					location = event_target:roz_sgt_flagship_target
-
-				}
-				root.owner = {
-					set_country_flag = roz_sgt_unknow_flagship_spawn_country
-				}
+				set_country_flag = roz_sgt_unknow_flagship_spawn_country
 			}
+		}
+		create_ambient_object = {
+			type = ROZ_SSVL_AO
+			location = event_target:roz_sgt_flagship_target
+			scale = 0.4
+			entity_scale_to_size = no
+			use_3d_location = yes
+			entity_offset = { min = 1 max = 3 }
+			entity_offset_angle = { min = 10 max = 180 }
+			entity_offset_height = { min = 6 max = 10 }
+		}
+		last_created_ambient_object = {
+			save_global_event_target_as = ROZ_SSVL_AO_target@root.owner
+		}
+		create_ambient_object = {
+			type = nebula_planet_smoke
+			scale = 3
+			location = event_target:roz_sgt_flagship_target
+		}
+		if = {
+			limit = {
+				exists = event_target:roz_sgt_flagship_science_target
+			}
+			destroy_ship = event_target:roz_sgt_flagship_science_target
+		}
 	}
 	option = {
 		name = ge_sgt_falgship_events.100.a
-		prev = {
-			
-		}
 	}
 	
 }
@@ -125,6 +125,11 @@ ship_event = {	#进展
 	show_sound = event_encrypted_comms
 	location = from
 	is_triggered_only = yes
+	trigger = {
+        owner = {
+            is_ai = no
+        }
+    }
 	option = {
 		name = ge_sgt_falgship_events.101.a
 		hidden_effect = {

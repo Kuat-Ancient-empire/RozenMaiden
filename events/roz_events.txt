@@ -47,8 +47,8 @@ country_event = {
 		}
 		country_event = {
 			id = ge_sgt_falgship_events.99
-			days = 720
-			random = 10800
+			days = 1080
+			random = 144000
 		}
 		# set_timed_country_flag = {	#计时，防止刷不出异常点 # 不计
 		# 	flag = roz_sgt_flagship_spawn_timed_flag

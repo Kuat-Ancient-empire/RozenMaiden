@@ -921,11 +921,21 @@ country_event = { #控制台effect测试区
 		 #effect ={ every_owned_fleet = {limit = {is_ship_size = ge_black_dragon }solar_system = {create_ambient_object = {type = "star_explosion"duration = 5entity_scale_to_size = no use_3d_location = yes entity_offset = { min = 0 max = 0 } entity_offset_angle = { min = 0 max = 0 }entity_offset_height = { min = 0 max = 0 }scale = 4 location = this }create_ambient_object = { type = nebula_1 duration = 30 entity_scale_to_size = no use_3d_location = yes entity_offset = { min = 0 max = 0 } entity_offset_angle = { min = 0 max = 0 }entity_offset_height = { min = 0 max = 0 }scale = 2 location = this } }  unassign_leader = event_target:roz_suigintou_bwg_leader_target@root exile_leader_as = this.leader destroy_fleet = this }event_target:roz_suigintou_bwg_leader_target@root = { unassign_leader = this exile_leader_as = this } }
 
 		
+		#remove_hyperlane
+		#add_hyperlane
+		#effect save_global_event_target_as = hptar_begin
+		#effect save_global_event_target_as = hptar_end
+		#effect add_hyperlane = { from = event_target:hptar_begin.solar_system to = event_target:hptar_end.solar_system }
+		#effect remove_hyperlane = { from = event_target:hptar_begin.solar_system  to = event_target:hptar_end.solar_system }
+
+		#effect = clear_global_event_target = hptar_begin  clear_global_event_target = hptar_end
+		# remove_hyperlane = { 
+		# 	from = event_target:hptar_begin
+		# 	to = event_target:hptar_end
+		# }
 
 
-
-
-
+		
 	}
 }
 
