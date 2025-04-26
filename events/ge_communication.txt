@@ -639,6 +639,7 @@ country_event = {
 		is_dialog_only = yes
 	}
 	option = {
+		#对狡涅托宝具
 		name = ge_communication.100.eliminate_capital_hostile_army
 		trigger = {
 			capital_scope = {

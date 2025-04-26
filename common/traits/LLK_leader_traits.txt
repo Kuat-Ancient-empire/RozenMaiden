@@ -14,7 +14,12 @@ leader_trait_roz_kirakishou_main = {
 	#force_councilor_trait = yes
 	#is_councilor_trait_for_ruler = yes
 	leader_trait_type = destiny
-
+	on_gained_effect = {
+		if = {
+			limit = { NOT = { has_leader_flag = roz_kirakishou_flag } }
+			remove_trait = leader_trait_roz_kirakishou_main
+		}
+	}
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -132,6 +137,13 @@ leader_trait_roz_kirakishou_nightmare = {
 		RARITY = krks_nightmare
 		COUNCIL = triggered
 		TIER = none
+	}
+
+	on_gained_effect = {
+		if = {
+			limit = { NOT = { has_leader_flag = roz_kirakishou_flag } }
+			remove_trait = leader_trait_roz_kirakishou_nightmare
+		}
 	}
 
 	triggered_modifier = {
@@ -273,6 +285,14 @@ leader_trait_ge_mind_drain = {
 		COUNCIL = triggered
 		TIER = none
 	}
+
+	on_gained_effect = {
+		if = {
+			limit = { NOT = { has_leader_flag = roz_kirakishou_flag } }
+			remove_trait = leader_trait_ge_mind_drain
+		}
+	}
+
 	leader_class = { commander }
 	notify_on_gained = no
 	modifier = {  }
@@ -573,6 +593,13 @@ leader_trait_ge_mercury_lamp = {
 	destiny_trait = yes
 	force_councilor_trait = yes
 
+	on_gained_effect = {
+		if = {
+			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
+			remove_trait = leader_trait_ge_mercury_lamp
+		}
+	}
+
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -661,6 +688,14 @@ leader_trait_ge_Blackwinged_Dragon = {
 	#modification = no	# 可否修改
 	randomized = no	# 可否随机
 	#immortal_leaders = yes
+
+	on_gained_effect = {
+		if = {
+			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
+			remove_trait = leader_trait_ge_Blackwinged_Dragon
+		}
+	}
+
 	triggered_modifier = {
 		potential = {
 			NOT = {
@@ -714,6 +749,14 @@ leader_trait_ge_azoth = {
 	#modification = no	# 可否修改
 	randomized = no	# 可否随机
 	#immortal_leaders = yes
+
+	on_gained_effect = {
+		if = {
+			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
+			remove_trait = leader_trait_ge_azoth
+		}
+	}
+
 	triggered_modifier = {
 		potential = {
 			NOT = {
@@ -767,6 +810,12 @@ leader_trait_ge_N_field = {
 	randomized = no	# 可否随机
 	#immortal_leaders = yes
 
+	on_gained_effect = {
+		if = {
+			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
+			remove_trait = leader_trait_ge_N_field
+		}
+	}
 
 	inline_script = {
 		script = trait/icon
@@ -913,19 +962,19 @@ leader_trait_ge_N_field = {
 
 ################雪华绮晶技能
 
-leader_trait_ge_mind_drain = {
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_roz_krks_md.dds"
-	initial = no
-	randomized = no
-	modifier = {
-		ship_fire_rate_mult = 0.25
-		ship_speed_mult = 0.15
-	}
-	leader_class = {
-		commander
-	}
-}
+#leader_trait_ge_mind_drain = {
+#	cost = 0
+#	icon = "gfx/interface/icons/traits/leader_trait_roz_krks_md.dds"
+#	initial = no
+#	randomized = no
+#	modifier = {
+#		ship_fire_rate_mult = 0.25
+#		ship_speed_mult = 0.15
+#	}
+#	leader_class = {
+#		commander
+#	}
+#}
 
 
 
@@ -1078,6 +1127,13 @@ leader_trait_ge_mercury_lamp_scientist = {
 	destiny_background_icon = "GFX_leader_background_destiny_1"
 	force_councilor_trait = yes
 
+	on_gained_effect = {
+		if = {
+			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
+			remove_trait = leader_trait_ge_mercury_lamp_scientist
+		}
+	}
+
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -1185,7 +1241,12 @@ leader_trait_ge_N_field_scientist = {
 		scientist
 	}
 
-
+	on_gained_effect = {
+		if = {
+			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
+			remove_trait = leader_trait_ge_N_field_scientist
+		}
+	}
 
 	inline_script = {
 		script = trait/icon
@@ -1331,6 +1392,12 @@ leader_trait_ge_meimei_scientist = {
 	#	scientist
 	#}
 
+	on_gained_effect = {
+		if = {
+			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
+			remove_trait = leader_trait_ge_meimei_scientist
+		}
+	}
 
 	inline_script = {
 		script = trait/icon

@@ -810,7 +810,7 @@ country_event = { #控制台effect测试区
 		#effect = { set_country_flag = roz_sgt_unknow_flagship_spawn_country give_technology = { tech = tech_ge_sgt_flagship } add_modifier = { modifier = roz_sgt_flagship_completed_buff days = -1 } home_planet = { solar_system = { starbase = { create_ambient_object = { type = ROZ_SSVL_AO location = this scale = 0.4 use_3d_location = yes entity_offset = { min = 5 max = 20 } entity_offset_height = { min = 5 max = 5 } } last_created_ambient_object = { save_global_event_target_as =ROZ_SSVL_AO_home_target } } } } set_country_flag = ge_sgt_flagship_project_enable event_target:ROZ_SSVL_AO_target@owner = { destroy_ambient_object = this } country_event = { id = ge_sgt_falgship_events.10 days = 720 random = 1800 } }
 
 
-		#effect = add_event_chain_counter = { amount = 1 counter = specimens_collected event_chain = roz_outland_system_chain } country_event = { id = roz_krks_leader_evt.55 }
+		#effect = {add_event_chain_counter = { amount = 4 counter = specimens_collected event_chain = roz_outland_system_chain } country_event = { id = roz_krks_leader_evt.55 }}
 
 		#effect = {every_country = { limit = { is_hostile = yes } every_controlled_fleet = { destroy_fleet = this } }}
 
@@ -933,6 +933,31 @@ country_event = { #控制台effect测试区
 		# 	from = event_target:hptar_begin
 		# 	to = event_target:hptar_end
 		# }
+		
+
+		capital_scope = {
+			create_fleet = {
+				name = "NAME_sgt"
+				settings = {
+					spawn_debris = no
+					is_boss = no
+				}
+				effect = {
+					set_owner = ROOT
+					create_ship = {
+						name = NAME_sgt
+						design = KZ_VOY_BS
+						graphical_culture = owner
+						prefix = no
+					}
+					set_location = {
+						target = PREV
+						distance = 45
+						angle = random
+					}
+				}
+			}
+		}
 
 
 		

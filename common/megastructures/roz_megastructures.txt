@@ -40,7 +40,7 @@ roz_mega_wanxiangtianyin = {
     }
 
     country_modifier = {
-        diplo_weight_mult = 0.250
+        #diplo_weight_mult = 0.250
     }
 }
 

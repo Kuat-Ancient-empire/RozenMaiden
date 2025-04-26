@@ -7,6 +7,7 @@ entity = {
 
     default_state = "idle"
     state = { name = "idle" state_time = 5 looping = no
+
         event = { time = 0.25 particle = "roz_t_beam_hit_effect_particle" keep_particle = yes #sound = { soundeffect = titan_laser_hit }
         }
         #start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }

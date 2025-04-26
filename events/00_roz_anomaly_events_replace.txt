@@ -8,6 +8,7 @@ namespace = anomaly
 
 ship_event = {
 	##非常坏事件，流放可怜汞灯
+	###流放什么，不许流放，大不了不要船了
 	id = anomaly.6855
 	title = "anomaly.6855.name"
 	desc = {
@@ -29,30 +30,32 @@ ship_event = {
 
 	is_triggered_only = yes
 	immediate = {
-		if = {
-			limit = {
-				this.Leader = {
-					NOR = {
-						has_leader_flag = ge_suigintou_flag
-						has_leader_flag = legendary_leader
-						is_event_leader = yes
-						has_skill >= 8
-					}
-				}
-			}
-			set_disabled = yes
-			this.Leader = {
-				save_global_event_target_as = trapped_in_storm
-				exile_leader_as = trapped_in_storm
-			}
-		}
-		else = {
-			set_disabled = yes
-			this.Leader = {
-				save_global_event_target_as = trapped_in_storm
-				unassign_leader = this
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		this.Leader = {
+		# 			NOR = {
+		# 				has_leader_flag = ge_suigintou_flag
+		# 				has_leader_flag = legendary_leader
+		# 				is_event_leader = yes
+		# 				has_skill >= 5
+		# 			}
+		# 		}
+		# 	}
+		# 	set_disabled = yes
+		# 	this.Leader = {
+		# 		save_global_event_target_as = trapped_in_storm
+		# 		exile_leader_as = trapped_in_storm
+		# 	}
+		# }
+		# else = {
+		# 	set_disabled = yes
+		# 	this.Leader = {
+		# 		save_global_event_target_as = trapped_in_storm
+		# 		unassign_leader = this
+		# 	}
+		# }
+		set_disabled = yes
+		unassign_leader = this.leader
 
 	}
 	option = {
@@ -71,4 +74,8 @@ ship_event = {
 		from = { set_deposit = d_physics_7 }
 	}
 }
+
+
+
+
 

@@ -676,7 +676,7 @@ ship_event = {
 						has_ship_flag = roz_krks_mind_drain_flag
 					}
 					NOT = {
-						owner = {
+						owner = {	#对拥有水银灯的国家无效
 							has_country_flag = ge_leader_suigintou_get
 						}
 					}
@@ -689,7 +689,21 @@ ship_event = {
 					DAYS = 2
 				}
 				ge_ship_modifier_intercepting = {
+					modifier = ship_tracking_mult
+					change = 1
+					multiply = 10
+					#PARA1 = -100
+					DAYS = 2
+				}
+				ge_ship_modifier_intercepting = {
 					modifier = ship_accuracy_add
+					change = 1
+					multiply = 10
+					#PARA1 = -100
+					DAYS = 2
+				}
+				ge_ship_modifier_intercepting = {
+					modifier = ship_accuracy_mult
 					change = 1
 					multiply = 10
 					#PARA1 = -100

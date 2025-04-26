@@ -30,7 +30,7 @@ ge_flagship_ships_limit = {
 	}
 	
 	base = 48 # 1 * ge_flagship's size_multiplier
-	max = 2000 # 10 * 48
+	max = 20000 # 10 * 48
 	naval_cap_fraction = 0.25
 	
 	show = {
@@ -44,7 +44,7 @@ Ge_Ragnarok_ships_limit = {
 	ship_types = { 
 		Ge_Ragnarok
 	}
-	base = 4000 # 1 * Ge_Ragnarok's size_multiplier
+	base = 200 # 1 * Ge_Ragnarok's size_multiplier
 	max = 20000
 	naval_cap_fraction = 0.05
 	show = {

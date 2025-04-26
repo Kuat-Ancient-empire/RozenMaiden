@@ -448,7 +448,8 @@ ge_military_constructor = {
 	is_space_station = no
 	icon = ship_size_constructor
 	base_buildtime = @construction_build_time
-	entity = lithoid_01_meteor_colonyship_entity
+	#entity = lithoid_01_meteor_colonyship_entity
+	entity = ROZ_Infinite_Large_ship_entity
 	combat_disengage_chance = 1.5
 
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
@@ -501,7 +502,8 @@ ge_military_science = {
 	icon = ship_size_science
 	base_buildtime = @science_build_time
 
-	entity = mammalian_01_science_entity
+	#entity = mammalian_01_science_entity
+	entity = ROZ_Infinite_Large_ship_entity
 	combat_disengage_chance = 2.5
 
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start

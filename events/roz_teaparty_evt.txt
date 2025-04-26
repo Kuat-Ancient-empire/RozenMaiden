@@ -1,6 +1,7 @@
 namespace = roz_teaparty_evt
 
-#这里是茶会循环事件池，前两次茶会写在roz_kirakishou_leader_evt.txt
+#这里是茶会循环事件池，特殊的茶会写在其他地方
+
 
 country_event = {
     id = roz_teaparty_evt.10

@@ -2601,7 +2601,7 @@ country_event = {
     }
 }
 
-country_event = {   #
+country_event = {   #"HAPPY ENDDING?
     id = roz_shinku_evt.661
     title = roz_shinku_evt.661.title
     desc = roz_shinku_evt.661.desc
@@ -2620,6 +2620,77 @@ country_event = {   #
         name = roz_shinku_evt.661.bb
     }
 }
+
+
+
+####真红危机后日谈，四人茶会
+
+country_event = {   #
+    id = roz_shinku_evt.701
+    title = roz_shinku_evt.701.title
+    desc = roz_shinku_evt.701.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = no_video_feed_room
+        #portrait = 
+    }
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.701.aa
+        is_dialog_only = yes
+        response_text = roz_shinku_evt.701.aa.res
+    }
+    option = {
+        name = roz_shinku_evt.701.bb
+        is_dialog_only = yes
+        response_text = roz_shinku_evt.701.bb.res
+    }
+    option = {
+        name = roz_shinku_evt.701.cc
+        is_dialog_only = yes
+        response_text = roz_shinku_evt.701.cc.res
+    }
+    option = {
+        name = roz_shinku_evt.701.dd
+        is_dialog_only = yes
+        response_text = roz_shinku_evt.701.dd.res
+    }
+    option = {
+        name = roz_shinku_evt.701.ee
+        is_dialog_only = yes
+        response_text = roz_shinku_evt.701.ee.res
+    }
+    option = {
+        name = roz_shinku_evt.701.ff
+        is_dialog_only = yes
+        default_hide_option = yes
+        response_text = roz_shinku_evt.701.ff.res
+        custom_tooltip = roz_shinku_evt.701.ff.ct
+    }
+
+    after = {
+        
+    }
+}
+
+
+########————真红：通讯界面和真红阶段茶会事件————#########
+
+
+
+
+
+
+
+
+
+
 
 
 
