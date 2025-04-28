@@ -101,7 +101,7 @@ create_ge_suigintou_scientist = {
 			show_notification = no
 		}
 	}
-	owner = {
+	owner = {  #没必要再owner一次，但写就写了吧
 		if = {
 			limit = { 
 				event_target:ge_suigintou_country@root = {
@@ -266,6 +266,7 @@ create_ge_suigintou_admiral = {
 }
 
 ###clone suigintou
+###真红后将该效果重新封装了，水银灯和雪华的暂时没有换
 roz_suigintou_clone_scientist_from_cache_country = {
 	clone_leader = {#从临时国家取科学家水银灯到玩家国家
 		target = event_target:ge_suigintou_scientist_inactive_temp@root

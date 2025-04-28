@@ -106,9 +106,13 @@ portraits = {
 
 	}
 
-
-
-
+	######真红
+	roz_shinku_20th = {
+		textureFile = "gfx/models/portraits/00_roz_shinku/roz_sk_20th.dds"
+	}
+	roz_shinku_01 = {
+		textureFile = "gfx/models/portraits/00_roz_shinku/roz_sk_01.dds"
+	}
 
 
 

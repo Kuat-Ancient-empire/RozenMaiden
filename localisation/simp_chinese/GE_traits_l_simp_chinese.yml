@@ -4,6 +4,8 @@
 ##   _desc:0 ""
 
 ##########species
+leader_trait_roz_test: "——测试中——"
+
 trait_cor_great_culture:0 "博大文化"
 trait_cor_great_culture_desc:0 ""
 
@@ -98,12 +100,13 @@ leader_trait_ge_N_field_scientist_desc:0 "与现实世界连接且互为表里�
 leader_trait_ge_meimei_scientist:0 "人工精灵：冥冥"
 leader_trait_ge_meimei_scientist_desc:0 "人工精灵如同使魔一般的存在，它们是蔷薇少女不可或缺的帮手。"
 
- leader_trait_roz_battered: "心理阴影"
- leader_trait_roz_battered_desc: "这位科学家曾遭遇极为可怕的变故，这使得他宁愿走马观花也不愿意去接触任何异常事件了。"
+leader_trait_roz_battered: "心理阴影"
+leader_trait_roz_battered_desc: "这位科学家曾遭遇极为可怕的变故，这使得他宁愿走马观花也不愿意去接触任何异常事件了。"
 
-
-
-
+ ######################
+ #真红
+leader_trait_roz_shinku_main: "§R真红§!"
+leader_trait_roz_shinku_main_desc: "$leader_trait_roz_test$"
 
 
 
@@ -152,6 +155,7 @@ leader_trait_ge_scientist_a_love_desc:0 "对蔷薇少女们来说，哪怕是死
  leader_trait_krks_general_a_love_desc:0 "§R病名为爱§!\n\n§d目前雪华绮晶的好感度为: [event_target:ge_suigintou_owner0.roz_leader_aft_krks_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
 
 ############################################
+
 
  suigintou_leader_trait:1 "§M命定特质§!"
  suigintou_admiral_trait:1 "§M命定特质§!\n£admiral£§c舰队司令类别§!"

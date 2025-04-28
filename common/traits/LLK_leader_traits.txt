@@ -4,6 +4,29 @@
 
 ###############
 
+#真红
+leader_trait_roz_shinku_main = {
+	initial = no	        # 开局可用
+	randomized = no
+	immortal_leaders = yes	# 领袖永生
+	#icon = "gfx/interface/icons/traits/trait_cor_dragon_totem.dds"	# 图标路径
+
+	#force_councilor_trait = yes
+	#is_councilor_trait_for_ruler = yes
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_blank"
+		RARITY = shinku
+		COUNCIL = triggered
+		TIER = none
+	}
+	leader_class = { commander official scientist }
+	notify_on_gained = no
+}	
+
+
 #雪华绮晶
 leader_trait_roz_kirakishou_main = {
 	initial = no	        # 开局可用
