@@ -90,7 +90,7 @@ country_event = {
             roz_leader_change_skin_set_flag_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 leader_flag = roz_kirakishou_flag
                 portrait_key = roz_kirakishou_default
             }
@@ -238,7 +238,7 @@ country_event = {
                     roz_leader_change_skin_set_flag_effect = {
                         who = krks
                         portrait = roz_kirakishou
-                        flag = ge_krks_portrait_change
+                        flag = roz_krks_portrait_change
                         leader_flag = roz_kirakishou_flag
                         portrait_key = roz_kirakishou_default
                     }
@@ -907,7 +907,7 @@ country_event = { ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 leader_flag = roz_kirakishou_flag
                 portrait_key = roz_kirakishou_20th
             }
@@ -921,7 +921,7 @@ country_event = { ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 leader_flag = roz_kirakishou_flag
                 portrait_key = roz_kirakishou_default
             }
@@ -935,7 +935,7 @@ country_event = { ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 leader_flag = roz_kirakishou_flag
                 portrait_key = roz_kirakishou_1
             }
@@ -949,7 +949,7 @@ country_event = { ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 leader_flag = roz_kirakishou_flag
                 portrait_key = roz_kirakishou_2
             }
@@ -963,7 +963,7 @@ country_event = { ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 leader_flag = roz_kirakishou_flag
                 portrait_key = roz_kirakishou_3
             }
@@ -977,7 +977,7 @@ country_event = { ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 leader_flag = roz_kirakishou_flag
                 portrait_key = roz_kirakishou_4
             }
@@ -991,7 +991,7 @@ country_event = { ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 leader_flag = roz_kirakishou_flag
                 portrait_key = roz_kirakishou_5
             }
@@ -1005,7 +1005,7 @@ country_event = { ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 leader_flag = roz_kirakishou_flag
                 portrait_key = roz_kirakishou_6
             }

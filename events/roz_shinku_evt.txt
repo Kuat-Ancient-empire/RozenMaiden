@@ -2675,10 +2675,133 @@ country_event = {   #
     }
 
     after = {
-        
+        hidden_effect = {
+            
+        }
     }
 }
 
+country_event = {
+    id = roz_shinku_evt.702
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        save_global_event_target_as = roz_leader_shinku_global_target@root
+        create_country = {
+            name = "NAME_nfield_sk"
+            type = ge_N_Field
+            flag = {
+                icon = {
+                    category = "nfield_sk_flags"
+                    file = "flag_roz_sk.dds"
+                }
+                background = {
+                    category = "backgrounds"
+                    file = "inverted_v.dds"
+                }
+                colors = {
+                    "black"
+                    "black"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                save_global_event_target_as = roz_shinku_global_country@root
+            }
+        }
+        last_created_country = {
+            establish_communications_no_message = root
+        }
+        event_target:roz_shinku_global_country@root = {
+            owner = {
+                clone_leader = {
+                    target = event_target:roz_leader_shinku_global_target@root
+                    effect = {
+                        save_global_event_target_as = roz_shinku_commander_inactive_temp@root
+                        #set_leader_flag = roz_shinku_flag
+                        set_name = NAME_shinku
+                        unassign_leader = this
+                        set_owner = event_target:roz_shinku_global_country@root
+                    }
+                }
+
+                create_leader = {
+                    class = commander
+                    name = "NAME_shinku"
+                    skill = 2
+                    gender = female
+                    species = owner_main_species
+                    immortal = yes
+                    event_leader = yes
+                    set_age = 0
+                    traits = {  }
+                    #randomize_traits = no
+                    hide_age = yes
+                    skip_background_generation = yes
+                    custom_catch_phrase = shinku_gov_catch_phrase
+                    custom_description = shinku_backstory
+                    effect = {
+                        add_skill_without_trait_selection = 1
+                        remove_all_traits = yes
+                        roz_leader_name_set_effect = {
+                            who_jp = shinku
+                            who_sc = zhenhong
+                        }
+                    }
+                }
+                last_created_leader = {
+                    save_global_event_target_as = roz_shinku_admiral_inactive_temp@root
+                    unassign_leader = this
+                    set_variable = {
+                        ##好感状态初始化
+                        which = roz_shinku_affection
+                        value = 60
+                    }
+                    add_trait = leader_trait_roz_shinku_main
+                    random_list = {
+                        1 = { add_trait = leader_trait_armorer }
+                        1 = { add_trait = leader_trait_military_overseer }
+                        1 = { add_trait = leader_trait_master_gunner }
+                        1 = { add_trait = leader_trait_destiny_engineer }
+                        2 = { add_trait = leader_trait_guerilla_tactics }
+                        1 = { add_trait = leader_trait_survivalist }
+                        1 = { add_trait = leader_trait_maven_of_war }
+                        1 = { add_trait = leader_trait_peacekeeper }
+                    }
+                    random_list = {
+                        1 = { add_trait = leader_trait_taskmaster }
+                        1 = { add_trait = leader_trait_fortress_cracker }
+                        2 = { add_trait = leader_trait_chainbreaker }
+                        1 = { add_trait = leader_trait_chainbreaker }
+                        1 = { add_trait = leader_trait_honored_warmaster }
+                        1 = { add_trait = leader_trait_academia_recruiter }
+                        1 = { add_trait = leader_trait_supreme_warrior }
+                        1 = { add_trait = leader_trait_spymaster }
+                        1 = { add_trait = leader_trait_totalitarian }
+                        1 = { add_trait = leader_trait_bellicose }
+                    }
+                    freeze_leader_age = yes
+                    set_leader_flag = roz_shinku_flag
+                    set_leader_flag = legendary_leader
+                    set_leader_flag = immune_to_negative_traits
+                    roz_leader_change_skin_set_flag_effect = {
+                        who = krks
+                        portrait = roz_shinku
+                        flag = roz_krks_portrait_change
+                        leader_flag = roz_shinku_flag
+                        portrait_key = roz_shinku_default
+                    }
+                }
+            }
+        }
+        set_timed_country_flag = { flag = roz_shinku_diplomatic_initialize_flag
+        days = 31}
+    }
+}
 
 ########————真红：通讯界面和真红阶段茶会事件————#########
 

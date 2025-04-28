@@ -88,7 +88,7 @@ create_roz_kirakishou_governor = {
     #roz_leader_change_skin_set_flag_effect = {
     #    who = krks
     #    portrait = roz_kirakishou
-    #    flag = ge_krks_portrait_change
+    #    flag = roz_krks_portrait_change
     #    leader_flag = roz_kirakishou_flag
     #    portrait_key = roz_kirakishou_default
     #}
@@ -183,7 +183,7 @@ create_roz_kirakishou_admiral = {
     #roz_leader_change_skin_set_flag_effect = {
     #    who = krks
     #    portrait = roz_kirakishou
-    #    flag = ge_krks_portrait_change
+    #    flag = roz_krks_portrait_change
     #    leader_flag = roz_kirakishou_flag
     #    portrait_key = roz_kirakishou_default
     #}
@@ -415,7 +415,7 @@ create_roz_kirakishou_admiral = {
 #    roz_leader_change_skin_set_flag_effect = {
 #        who = krks
 #        portrait = roz_kirakishou
-#        flag = ge_krks_portrait_change
+#        flag = roz_krks_portrait_change
 #        leader_flag = roz_kirakishou_flag
 #        portrait_key = roz_kirakishou_default
 #    }
@@ -427,74 +427,74 @@ create_roz_kirakishou_admiral = {
 roz_leader_change_skin_reset_kirakisho_effect = {
     switch = {
         trigger = has_country_flag
-        ge_krks_portrait_change_roz_kirakishou_20th = {
+        roz_krks_portrait_change_roz_kirakishou_20th = {
             roz_leader_change_skin_flag_locate_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 portrait_key = roz_kirakishou_20th
                 leader_flag = roz_kirakishou_flag
             }
         }
-        ge_krks_portrait_change_roz_kirakishou_default = {
+        roz_krks_portrait_change_roz_kirakishou_default = {
             roz_leader_change_skin_flag_locate_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 portrait_key = roz_kirakishou_default
                 leader_flag = roz_kirakishou_flag
             }
         }
-        ge_krks_portrait_change_roz_kirakishou_1 = {
+        roz_krks_portrait_change_roz_kirakishou_1 = {
             roz_leader_change_skin_flag_locate_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 portrait_key = roz_kirakishou_1
                 leader_flag = roz_kirakishou_flag
             }
         }
-        ge_krks_portrait_change_roz_kirakishou_2 = {
+        roz_krks_portrait_change_roz_kirakishou_2 = {
             roz_leader_change_skin_flag_locate_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 portrait_key = roz_kirakishou_2
                 leader_flag = roz_kirakishou_flag
             }
         }
-        ge_krks_portrait_change_roz_kirakishou_3 = {
+        roz_krks_portrait_change_roz_kirakishou_3 = {
             roz_leader_change_skin_flag_locate_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 portrait_key = roz_kirakishou_3
                 leader_flag = roz_kirakishou_flag
             }
         }
-        ge_krks_portrait_change_roz_kirakishou_4 = {
+        roz_krks_portrait_change_roz_kirakishou_4 = {
             roz_leader_change_skin_flag_locate_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 portrait_key = roz_kirakishou_4
                 leader_flag = roz_kirakishou_flag
             }
         }
-        ge_krks_portrait_change_roz_kirakishou_5 = {
+        roz_krks_portrait_change_roz_kirakishou_5 = {
             roz_leader_change_skin_flag_locate_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 portrait_key = roz_kirakishou_5
                 leader_flag = roz_kirakishou_flag
             }
         }
-        ge_krks_portrait_change_roz_kirakishou_6 = {
+        roz_krks_portrait_change_roz_kirakishou_6 = {
             roz_leader_change_skin_flag_locate_effect = {
                 who = krks
                 portrait = roz_kirakishou
-                flag = ge_krks_portrait_change
+                flag = roz_krks_portrait_change
                 portrait_key = roz_kirakishou_6
                 leader_flag = roz_kirakishou_flag
             }
@@ -685,7 +685,7 @@ roz_kirakishou_revive_reset_offcial = {
     roz_leader_change_skin_set_flag_effect = {
         who = krks
         portrait = roz_kirakishou
-        flag = ge_krks_portrait_change
+        flag = roz_krks_portrait_change
         leader_flag = roz_kirakishou_flag
         portrait_key = roz_kirakishou_default
     }
@@ -833,7 +833,7 @@ roz_kirakishou_revive_reset_commander = {
     roz_leader_change_skin_set_flag_effect = {
         who = krks
         portrait = roz_kirakishou
-        flag = ge_krks_portrait_change
+        flag = roz_krks_portrait_change
         leader_flag = roz_kirakishou_flag
         portrait_key = roz_kirakishou_default
     }

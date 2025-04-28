@@ -55,7 +55,7 @@ country_event = {   ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = sgt
                 portrait = ge_suigintou
-                flag = ge_sgt_portrait_change
+                flag = roz_sgt_portrait_change
                 leader_flag = ge_suigintou_flag
                 portrait_key = ge_suigintou_20th
             }
@@ -69,7 +69,7 @@ country_event = {   ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = sgt
                 portrait = ge_suigintou
-                flag = ge_sgt_portrait_change
+                flag = roz_sgt_portrait_change
                 leader_flag = ge_suigintou_flag
                 portrait_key = ge_suigintou_20
             }
@@ -83,7 +83,7 @@ country_event = {   ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = sgt
                 portrait = ge_suigintou
-                flag = ge_sgt_portrait_change
+                flag = roz_sgt_portrait_change
                 leader_flag = ge_suigintou_flag
                 portrait_key = ge_suigintou_21
             }
@@ -97,7 +97,7 @@ country_event = {   ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = sgt
                 portrait = ge_suigintou
-                flag = ge_sgt_portrait_change
+                flag = roz_sgt_portrait_change
                 leader_flag = ge_suigintou_flag
                 portrait_key = ge_suigintou_22
             }
@@ -134,7 +134,7 @@ country_event = {   ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = sgt
                 portrait = ge_suigintou
-                flag = ge_sgt_portrait_change
+                flag = roz_sgt_portrait_change
                 leader_flag = ge_suigintou_flag
                 portrait_key = ge_suigintou_4
             }
@@ -171,7 +171,7 @@ country_event = {   ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = sgt
                 portrait = ge_suigintou
-                flag = ge_sgt_portrait_change
+                flag = roz_sgt_portrait_change
                 leader_flag = ge_suigintou_flag
                 portrait_key = ge_suigintou_6
             }
@@ -186,7 +186,7 @@ country_event = {   ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = sgt
                 portrait = ge_suigintou
-                flag = ge_sgt_portrait_change
+                flag = roz_sgt_portrait_change
                 leader_flag = ge_suigintou_flag
                 portrait_key = ge_suigintou_61
             }
@@ -224,7 +224,7 @@ country_event = {   ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = sgt
                 portrait = ge_suigintou
-                flag = ge_sgt_portrait_change
+                flag = roz_sgt_portrait_change
                 leader_flag = ge_suigintou_flag
                 portrait_key = ge_suigintou_8
             }
@@ -261,7 +261,7 @@ country_event = {   ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = sgt
                 portrait = ge_suigintou
-                flag = ge_sgt_portrait_change
+                flag = roz_sgt_portrait_change
                 leader_flag = ge_suigintou_flag
                 portrait_key = ge_suigintou_10
             }
@@ -322,7 +322,7 @@ country_event = {   ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = sgt
                 portrait = ge_suigintou
-                flag = ge_sgt_portrait_change
+                flag = roz_sgt_portrait_change
                 leader_flag = ge_suigintou_flag
                 portrait_key = ge_suigintou_15
             }
@@ -337,7 +337,7 @@ country_event = {   ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = sgt
                 portrait = ge_suigintou
-                flag = ge_sgt_portrait_change
+                flag = roz_sgt_portrait_change
                 leader_flag = ge_suigintou_flag
                 portrait_key = ge_suigintou_14
             }
@@ -361,7 +361,7 @@ country_event = {   ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = sgt
                 portrait = ge_suigintou
-                flag = ge_sgt_portrait_change
+                flag = roz_sgt_portrait_change
                 leader_flag = ge_suigintou_flag
                 portrait_key = ge_suigintou_sp1
             }
@@ -383,7 +383,7 @@ country_event = {   ###换装
             roz_leader_change_skin_set_flag_effect = {
                 who = sgt
                 portrait = ge_suigintou
-                flag = ge_sgt_portrait_change
+                flag = roz_sgt_portrait_change
                 leader_flag = ge_suigintou_flag
                 portrait_key = ge_suigintou_sp2
             }

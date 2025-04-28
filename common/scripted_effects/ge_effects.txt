@@ -40,14 +40,14 @@ generate_sgt_site_on_game_start = {
 					limit = {
 						roz_sgt_site_planet_select_condition = yes
 					}
-					set_name = "NAME_ge_sgt_site_planet"
+					set_name = "NAME_roz_sgt_site_planet"
 					change_pc = pc_black_hole
 					set_planet_size = 1
 					clear_deposits = yes
 					set_planet_flag = ge_planet_flag_sgt@root
-					create_archaeological_site = ge_sgt_site
+					create_archaeological_site = roz_sgt_site
 					root = {
-						set_country_flag = ge_sgt_site_owner_flag_for_multiplayer
+						set_country_flag = roz_sgt_site_owner_flag_for_multiplayer
 					}
 				}
 			}
@@ -340,7 +340,7 @@ roz_suigintou_initialize_scientist = {
 	#roz_leader_change_skin_set_flag_effect = {
 	#	who = sgt
 	#	portrait = ge_suigintou
-	#	flag = ge_sgt_portrait_change
+	#	flag = roz_sgt_portrait_change
 	#	leader_flag = ge_suigintou_flag
 	#	portrait_key = ge_suigintou_6
 	#}
@@ -378,7 +378,7 @@ roz_suigintou_initialize_admiral = {
 	#roz_leader_change_skin_set_flag_effect = {
 	#	who = sgt
 	#	portrait = ge_suigintou
-	#	flag = ge_sgt_portrait_change
+	#	flag = roz_sgt_portrait_change
 	#	leader_flag = ge_suigintou_flag
 	#	portrait_key = ge_suigintou_6
 	#}
@@ -622,7 +622,7 @@ roz_suigintou_revive_reset_scientist = {
 		roz_leader_change_skin_set_flag_effect = {
 			who = sgt
 			portrait = ge_suigintou
-			flag = ge_sgt_portrait_change
+			flag = roz_sgt_portrait_change
 			leader_flag = ge_suigintou_flag
 			portrait_key = ge_suigintou_6
 		}
@@ -704,7 +704,7 @@ roz_suigintou_revive_reset_admiral = {
 		roz_leader_change_skin_set_flag_effect = {
 			who = sgt
 			portrait = ge_suigintou
-			flag = ge_sgt_portrait_change
+			flag = roz_sgt_portrait_change
 			leader_flag = ge_suigintou_flag
 			portrait_key = ge_suigintou_6
 		}
@@ -4274,30 +4274,30 @@ roz_teaparty_loop_random = { #root = player country
 
 
 roz_leader_change_skin_remove_all_flag_effect = {
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_default
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_red
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_1
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_2
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_3
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_4
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_5
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_6
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_61
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_7
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_8
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_9
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_10
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_11
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_12
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_13
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_14
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_15
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_20
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_21
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_22
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_sp1
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_sp2
-	remove_country_flag = ge_$who$_portrait_change_$portrait$_20th
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_default
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_red
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_1
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_2
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_3
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_4
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_5
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_6
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_61
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_7
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_8
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_9
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_10
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_11
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_12
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_13
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_14
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_15
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_20
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_21
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_22
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_sp1
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_sp2
+	remove_country_flag = roz_$who$_portrait_change_$portrait$_20th
 }
 
 roz_leader_change_skin_set_flag_effect = {
@@ -4332,209 +4332,209 @@ roz_leader_change_skin_flag_locate_effect = {
 roz_leader_change_skin_reset_suigintou_effect = {
 	switch = {
 		trigger = has_country_flag
-		ge_sgt_portrait_change_ge_suigintou_20th = {
+		roz_sgt_portrait_change_ge_suigintou_20th = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_20th
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_default = {
+		roz_sgt_portrait_change_ge_suigintou_default = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_default
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_red = {
+		roz_sgt_portrait_change_ge_suigintou_red = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_red
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_2 = {
+		roz_sgt_portrait_change_ge_suigintou_2 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_2
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_3 = {
+		roz_sgt_portrait_change_ge_suigintou_3 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_3
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_4 = {
+		roz_sgt_portrait_change_ge_suigintou_4 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_4
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_5 = {
+		roz_sgt_portrait_change_ge_suigintou_5 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_5
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_6 = {
+		roz_sgt_portrait_change_ge_suigintou_6 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_6
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_61 = {
+		roz_sgt_portrait_change_ge_suigintou_61 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_61
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_7 = {
+		roz_sgt_portrait_change_ge_suigintou_7 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_7
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_8 = {
+		roz_sgt_portrait_change_ge_suigintou_8 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_8
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_9 = {
+		roz_sgt_portrait_change_ge_suigintou_9 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_9
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_10 = {
+		roz_sgt_portrait_change_ge_suigintou_10 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_10
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_11 = {
+		roz_sgt_portrait_change_ge_suigintou_11 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_11
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_12 = {
+		roz_sgt_portrait_change_ge_suigintou_12 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_12
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_13 = {
+		roz_sgt_portrait_change_ge_suigintou_13 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_13
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_14 = {
+		roz_sgt_portrait_change_ge_suigintou_14 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_14
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_15 = {
+		roz_sgt_portrait_change_ge_suigintou_15 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_15
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_20 = {
+		roz_sgt_portrait_change_ge_suigintou_20 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_20
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_21 = {
+		roz_sgt_portrait_change_ge_suigintou_21 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_21
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_22 = {
+		roz_sgt_portrait_change_ge_suigintou_22 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_22
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_sp1 = {
+		roz_sgt_portrait_change_ge_suigintou_sp1 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_sp1
 				leader_flag = ge_suigintou_flag
 			}
 		}
-		ge_sgt_portrait_change_ge_suigintou_sp2 = {
+		roz_sgt_portrait_change_ge_suigintou_sp2 = {
 			roz_leader_change_skin_flag_locate_effect = {
 				who = sgt
 				portrait = ge_suigintou
-				flag = ge_sgt_portrait_change
+				flag = roz_sgt_portrait_change
 				portrait_key = ge_suigintou_sp2
 				leader_flag = ge_suigintou_flag
 			}
@@ -4542,7 +4542,7 @@ roz_leader_change_skin_reset_suigintou_effect = {
 	}
 }
 
-roz_leader_name_set_effect = {
+roz_leader_name_set_effect = {	#领袖名语种切换
 	#root = player_country
 	#this = leader
 	if = {

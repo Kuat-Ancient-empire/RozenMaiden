@@ -287,115 +287,117 @@ roz_SK_invasion_dip_effect = {
 # }
 
 ###真红初始化
-create_roz_shinku_scientist = {
-	###真红-做科学家
+
+###真红-切换科学家职位
+roz_shinku_leader_type_switch_scientist = {
 	optimize_memory
 	set_country_flag = roz_shinku_scientist_active
+	remove_country_flag = roz_shinku_admiral_active
 	every_owned_leader = {#取当前真红为临时target
 		limit = {
 			has_leader_flag = roz_shinku_flag
 		}
-		save_event_target_as = roz_leader_shinku_target_temp 
-	}
-	#缓存国家目标领袖更新替换,当前真红为舰队司令，要转科学家,先kill了再说
-	event_target:roz_shinku_admiral_inactive_temp@root = { #令临时存储国家的舰队司令真红消失
-		kill_leader = {
-			show_notification = no
-		}
+		save_event_target_as = roz_leader_shinku_target_temp
 	}
 	#若当前真红职位为指挥官
-	clone_leader = {
-		#替换，event_target:roz_shinku_country是真红的缓存国家
-		#target = event_target:roz_leader_shinku_global_target #这个global target是玩家的真红
-		target = event_target:roz_leader_shinku_target_temp   #刚刚存的target
-		effect = {
-			save_global_event_target_as = roz_shinku_admiral_inactive_temp@root
-			unassign_leader = this
-			set_leader_flag = roz_shinku_flag
-			set_owner = event_target:roz_shinku_country@root #存到临时存储国家
-			freeze_leader_age = yes
-			roz_leader_name_set_effect = {
-				who_jp = shinku
-				who_sc = zhenhong
-			}
-		}
-	}
-	every_owned_leader = {
+	if = {
 		limit = {
-			OR = {
-				has_trait = leader_trait_ge_mercury_lamp_scientist
-				has_trait = leader_trait_ge_mercury_lamp
-				has_leader_flag = roz_shinku_flag
-				is_variable_set = ge_leader_affection
+			event_target:roz_leader_shinku_target_temp = {
+				leader_class = commander
 			}
 		}
-		unassign_leader = this
+		#缓存国家目标领袖更新替换, 先kill了再说
+		event_target:roz_shinku_admiral_inactive_temp@root = { #令临时存储国家的舰队司令真红消失
 		kill_leader = {
-			show_notification = no
+				show_notification = no
+			}
+		}
+		clone_leader = {
+			#替换，event_target:roz_shinku_country是真红的缓存国家
+			#target = event_target:roz_leader_shinku_global_target #这个global target是玩家的真红
+			target = event_target:roz_leader_shinku_target_temp   #刚刚存的target
+			effect = {
+				save_global_event_target_as = roz_shinku_admiral_inactive_temp@root
+				roz_leader_type_switch_clone_standard_effect = {
+					leader = shinku
+					leader_sc = zhenhong
+				}
+			}
+		}
+		roz_leader_type_switch_kill_standard_effect = {
+			leader = shinku
+			symbolic_trait_1 = leader_trait_roz_shinku_main
+			symbolic_trait_2 = leader_trait_roz
+		}	
+		roz_leader_type_switch_create_leader_standard_effect = {
+			leader = shinku
+			leader_sc = zhenhong
+			leader_type = commander
+			symbolic_trait_1 = leader_trait_roz_shinku_main
+			symbolic_trait_2 = leader_trait_roz
+			symbolic_trait_3 = leader_trait_roz
+		}
+		set_country_flag = roz_shinku_portrait_change_roz_shinku_20th
+		roz_leader_initialize_after_create_effect = {
+			leader = shinku
+			leader_sc = zhenhong
 		}
 	}
-	owner = { 
-		if = {
-			limit = { 
-				event_target:roz_shinku_country@root = {
-					any_owned_leader = {
-						leader_class = scientist
-						has_trait = leader_trait_ge_mercury_lamp_scientist
-					}
-				}
-			}
-			roz_suigintou_clone_scientist_from_cache_country = yes
-		}
-		else_if = {
-			limit = { }
-			create_leader = {
-				class = scientist
-				name = "NAME_Suigintou"
-				skill = 1
-				gender = female
-				species = owner_main_species
-				immortal = yes
-				event_leader = yes
-				set_age = 17
-				traits = { }
-				skip_background_generation = yes
-				custom_catch_phrase = suigintou_sci_catch_phrase
-				custom_description = suigintou_backstory
-				effect = {
-					add_skill_without_trait_selection = 1
-					remove_all_traits = yes
-					#change_leader_portrait = roz_shinku_6
-					set_variable = {
-						which = ge_leader_affection
-						value = owner.ge_leader_aft_sgt
-					}
-				}
-			}
-			last_created_leader = {
-				add_trait = leader_trait_ge_meimei_scientist
-				add_trait = leader_trait_ge_N_field_scientist
-				add_trait = leader_trait_ge_mercury_lamp_scientist
-				random_list = {
-					1 = { add_trait = leader_trait_surveyor }
-					1 = { add_trait = leader_trait_midas_touch }
-					1 = { add_trait = leader_trait_knowledge_for_the_masses }
-					1 = { add_trait = leader_trait_great_researcher }
-					1 = { add_trait = leader_trait_truth_seeker }
-					1 = { add_trait = leader_trait_brilliant_shipwright }
-					1 = { add_trait = leader_trait_frontier_adventurer }
-					1 = { add_trait = leader_trait_xeno_cataloger }
-					1 = { add_trait = leader_trait_knowledge_for_the_masses }
-				}
-				freeze_leader_age = yes
+
+	#若当前真红职位为行政官
+	if = {
+		limit = {
+			event_target:roz_leader_shinku_target_temp = {
+				leader_class = official
 			}
 		}
-		
+		#缓存国家目标领袖更新替换, 先kill了再说
+		event_target:roz_shinku_admiral_inactive_temp@root = { #令临时存储国家的舰队司令真红消失
+		kill_leader = {
+				show_notification = no
+			}
+		}
+		clone_leader = {
+			#替换，event_target:roz_shinku_country是真红的缓存国家
+			#target = event_target:roz_leader_shinku_global_target #这个global target是玩家的真红
+			target = event_target:roz_leader_shinku_target_temp   #刚刚存的target
+			effect = {
+				save_global_event_target_as = roz_shinku_official_inactive_temp@root
+				roz_leader_type_switch_clone_standard_effect = {
+					leader = shinku
+					leader_sc = zhenhong
+				}
+			}
+		}
+		roz_leader_type_switch_kill_standard_effect = {
+			leader = shinku
+			symbolic_trait_1 = leader_trait_roz_shinku_main
+			symbolic_trait_2 = leader_trait_roz
+		}	
+		roz_leader_type_switch_create_leader_standard_effect = {
+			leader = shinku
+			leader_sc = zhenhong
+			leader_type = official
+			symbolic_trait_1 = leader_trait_roz_shinku_main
+			symbolic_trait_2 = leader_trait_roz
+			symbolic_trait_3 = leader_trait_roz
+		}
+		set_country_flag = roz_shinku_portrait_change_roz_shinku_20th
+		roz_leader_initialize_after_create_effect = {
+			leader = shinku
+			leader_sc = zhenhong
+		}
 	}
-	roz_suigintou_initialize_scientist = yes
-	remove_country_flag = roz_shinku_admiral_active
 }
 
-roz_leader_type_switch_clone_standard_effect = {
+
+
+
+
+
+
+####封装####
+roz_leader_type_switch_clone_standard_effect = {	#在clone leader内使用
 	unassign_leader = this
 	freeze_leader_age = yes
 	set_leader_flag = roz_$leader$_flag
@@ -406,7 +408,7 @@ roz_leader_type_switch_clone_standard_effect = {
 	}
 }
 
-roz_leader_type_switch_kill_standard_effect = {
+roz_leader_type_switch_kill_standard_effect = {	#remove将被切换职位的领袖
 	every_owned_leader = {
 		limit = {
 			OR = {
@@ -423,7 +425,7 @@ roz_leader_type_switch_kill_standard_effect = {
 	}
 }	
 
-roz_leader_type_switch_create_leader_standard_effect = {
+roz_leader_type_switch_create_leader_standard_effect = {	#生成领袖
 	if = {
 		limit = { 
 			event_target:roz_$leader$_country@root = {
@@ -500,6 +502,158 @@ roz_leader_type_switch_clone_from_cache_country_effect = {
 	}
 }
 
+###必须已经新创建领袖（非克隆）才能用, 需要先清楚领袖外貌flag（country）再设置，然后再执行该封装
+roz_leader_initialize_after_create_effect = {
+	last_created_leader = {
+		set_leader_flag = roz_$leader$_flag
+		set_leader_flag = legendary_leader
+		set_leader_flag = immune_to_negative_traits
+		set_leader_flag = leader_death_events_blocked
+		#set_leader_flag = has_gained_level_trait
+		roz_leader_name_set_effect = {
+			who_jp = $leader$
+			who_sc = $leader_sc$
+		}
+		save_global_event_target_as = roz_leader_$leader$_global_target@root
+		set_variable = {
+			which = ge_leader_affection
+			value = root.ge_leader_aft_$leader$
+		}
+		if = {
+			limit = { check_variable = { which = ge_leader_affection value >= 90 } }
+			add_trait = leader_trait_ge_scientist_a_love
+		}
+		else_if = {
+			limit = { check_variable = { which = ge_leader_affection value >= 60 } }
+			add_trait = leader_trait_ge_scientist_a_like
+		}
+		else_if = {
+			limit = { check_variable = { which = ge_leader_affection value >= 30 } }
+			add_trait = leader_trait_ge_scientist_a_friendly
+		}
+		else_if = {
+			limit = { check_variable = { which = ge_leader_affection value < 30 } }
+			add_trait = leader_trait_ge_scientist_a_strangeness
+		}
+		freeze_leader_age = yes
+	}
+	#roz_leader_change_skin_reset_suigintou_effect = yes
+	roz_leader_change_skin_reset_effect = {
+		leader = $leader$
+		skin_index1 = 01
+		skin_index2 = 02
+		skin_index3 = 03
+		skin_index4 = 04
+		skin_index5 = 05
+		skin_index6 = 06
+		skin_index7 = 07
+		skin_index8 = 08
+		skin_index9 = 09
+		skin_index10 = 20th
+	}
+	
+}
+
+
+
+
+
+
+roz_leader_change_skin_reset_effect = {	#scope = country
+    switch = {
+        trigger = has_country_flag
+        roz_$leader$_portrait_change_roz_$leader$_$skin_index1$ = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = $leader$
+                portrait = roz_$leader$
+                flag = roz_$leader$_portrait_change
+                portrait_key = roz_$leader$_$skin_index1$
+                leader_flag = roz_$leader$_flag
+            }
+        }    
+		roz_$leader$_portrait_change_roz_$leader$_$skin_index2$ = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = $leader$
+                portrait = roz_$leader$
+                flag = roz_$leader$_portrait_change
+                portrait_key = roz_$leader$_$skin_index2$
+                leader_flag = roz_$leader$_flag
+            }
+        }
+		roz_$leader$_portrait_change_roz_$leader$_$skin_index3$ = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = $leader$
+                portrait = roz_$leader$
+                flag = roz_$leader$_portrait_change
+                portrait_key = roz_$leader$_$skin_index3$
+                leader_flag = roz_$leader$_flag
+            }
+        }
+		roz_$leader$_portrait_change_roz_$leader$_$skin_index4$ = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = $leader$
+                portrait = roz_$leader$
+                flag = roz_$leader$_portrait_change
+                portrait_key = roz_$leader$_$skin_index4$
+                leader_flag = roz_$leader$_flag
+            }
+        }
+		roz_$leader$_portrait_change_roz_$leader$_$skin_index5$ = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = $leader$
+                portrait = roz_$leader$
+                flag = roz_$leader$_portrait_change
+                portrait_key = roz_$leader$_$skin_index5$
+                leader_flag = roz_$leader$_flag
+            }
+        }
+		roz_$leader$_portrait_change_roz_$leader$_$skin_index6$ = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = $leader$
+                portrait = roz_$leader$
+                flag = roz_$leader$_portrait_change
+                portrait_key = roz_$leader$_$skin_index6$
+                leader_flag = roz_$leader$_flag
+            }
+        }
+		roz_$leader$_portrait_change_roz_$leader$_$skin_index7$ = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = $leader$
+                portrait = roz_$leader$
+                flag = roz_$leader$_portrait_change
+                portrait_key = roz_$leader$_$skin_index7$
+                leader_flag = roz_$leader$_flag
+            }
+        }
+		roz_$leader$_portrait_change_roz_$leader$_$skin_index8$ = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = $leader$
+                portrait = roz_$leader$
+                flag = roz_$leader$_portrait_change
+                portrait_key = roz_$leader$_$skin_index9$
+                leader_flag = roz_$leader$_flag
+            }
+        }
+		roz_$leader$_portrait_change_roz_$leader$_$skin_index9$ = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = $leader$
+                portrait = roz_$leader$
+                flag = roz_$leader$_portrait_change
+                portrait_key = roz_$leader$_$skin_index9$
+                leader_flag = roz_$leader$_flag
+            }
+        }
+		roz_$leader$_portrait_change_roz_$leader$_$skin_index10$ = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = $leader$
+                portrait = roz_$leader$
+                flag = roz_$leader$_portrait_change
+                portrait_key = roz_$leader$_$skin_index10$
+                leader_flag = roz_$leader$_flag
+            }
+        }
+    }
+}
 
 
 

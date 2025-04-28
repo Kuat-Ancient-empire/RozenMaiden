@@ -104,7 +104,7 @@ country_event = {
 				roz_leader_change_skin_set_flag_effect = {
 					who = sgt
 					portrait = ge_suigintou
-					flag = ge_sgt_portrait_change
+					flag = roz_sgt_portrait_change
 					leader_flag = ge_suigintou_flag
 					portrait_key = ge_suigintou_6
 				}
