@@ -122,6 +122,7 @@ on_custom_diplomacy = {
 		roz_krks_leader_evt.101
 		#ge_leader_event.3
 		ge_communication.102
+		roz_shinku_evt.1001
 	}
 }
 

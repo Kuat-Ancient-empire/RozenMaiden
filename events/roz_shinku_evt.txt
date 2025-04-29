@@ -2717,85 +2717,84 @@ country_event = {
             establish_communications_no_message = root
         }
         event_target:roz_shinku_global_country@root = {
-            owner = {
-                clone_leader = {
-                    target = event_target:roz_leader_shinku_global_target@root
-                    effect = {
-                        save_global_event_target_as = roz_shinku_commander_inactive_temp@root
-                        #set_leader_flag = roz_shinku_flag
-                        set_name = NAME_shinku
-                        unassign_leader = this
-                        set_owner = event_target:roz_shinku_global_country@root
-                    }
+            
+        }
+        create_leader = {
+            class = commander
+            name = "NAME_shinku"
+            skill = 3
+            gender = female
+            species = owner_main_species
+            immortal = yes
+            event_leader = yes
+            set_age = 17
+            traits = {  }
+            #randomize_traits = no
+            hide_age = yes
+            skip_background_generation = yes
+            custom_catch_phrase = shinku_gov_catch_phrase
+            custom_description = shinku_backstory
+            effect = {
+                add_skill_without_trait_selection = 1
+                remove_all_traits = yes
+                roz_leader_name_set_effect = {
+                    who_jp = shinku
+                    who_sc = zhenhong
                 }
-
-                create_leader = {
-                    class = commander
-                    name = "NAME_shinku"
-                    skill = 2
-                    gender = female
-                    species = owner_main_species
-                    immortal = yes
-                    event_leader = yes
-                    set_age = 0
-                    traits = {  }
-                    #randomize_traits = no
-                    hide_age = yes
-                    skip_background_generation = yes
-                    custom_catch_phrase = shinku_gov_catch_phrase
-                    custom_description = shinku_backstory
-                    effect = {
-                        add_skill_without_trait_selection = 1
-                        remove_all_traits = yes
-                        roz_leader_name_set_effect = {
-                            who_jp = shinku
-                            who_sc = zhenhong
-                        }
-                    }
-                }
-                last_created_leader = {
-                    save_global_event_target_as = roz_shinku_admiral_inactive_temp@root
-                    unassign_leader = this
-                    set_variable = {
-                        ##好感状态初始化
-                        which = roz_shinku_affection
-                        value = 60
-                    }
-                    add_trait = leader_trait_roz_shinku_main
-                    random_list = {
-                        1 = { add_trait = leader_trait_armorer }
-                        1 = { add_trait = leader_trait_military_overseer }
-                        1 = { add_trait = leader_trait_master_gunner }
-                        1 = { add_trait = leader_trait_destiny_engineer }
-                        2 = { add_trait = leader_trait_guerilla_tactics }
-                        1 = { add_trait = leader_trait_survivalist }
-                        1 = { add_trait = leader_trait_maven_of_war }
-                        1 = { add_trait = leader_trait_peacekeeper }
-                    }
-                    random_list = {
-                        1 = { add_trait = leader_trait_taskmaster }
-                        1 = { add_trait = leader_trait_fortress_cracker }
-                        2 = { add_trait = leader_trait_chainbreaker }
-                        1 = { add_trait = leader_trait_chainbreaker }
-                        1 = { add_trait = leader_trait_honored_warmaster }
-                        1 = { add_trait = leader_trait_academia_recruiter }
-                        1 = { add_trait = leader_trait_supreme_warrior }
-                        1 = { add_trait = leader_trait_spymaster }
-                        1 = { add_trait = leader_trait_totalitarian }
-                        1 = { add_trait = leader_trait_bellicose }
-                    }
-                    freeze_leader_age = yes
-                    set_leader_flag = roz_shinku_flag
-                    set_leader_flag = legendary_leader
-                    set_leader_flag = immune_to_negative_traits
-                    roz_leader_change_skin_set_flag_effect = {
-                        who = krks
-                        portrait = roz_shinku
-                        flag = roz_krks_portrait_change
-                        leader_flag = roz_shinku_flag
-                        portrait_key = roz_shinku_default
-                    }
-                }
+                change_leader_portrait = roz_shinku_20th
+            }
+        }
+        last_created_leader = {
+            save_global_event_target_as = roz_leader_shinku_global_target@root
+            unassign_leader = this
+            set_variable = {
+                ##好感状态初始化
+                which = roz_shinku_affection
+                value = 5
+            }
+            add_trait = leader_trait_roz_shinku_main
+            random_list = {
+                1 = { add_trait = leader_trait_armorer }
+                1 = { add_trait = leader_trait_military_overseer }
+                1 = { add_trait = leader_trait_master_gunner }
+                1 = { add_trait = leader_trait_destiny_engineer }
+                2 = { add_trait = leader_trait_guerilla_tactics }
+                1 = { add_trait = leader_trait_survivalist }
+                1 = { add_trait = leader_trait_maven_of_war }
+                1 = { add_trait = leader_trait_peacekeeper }
+            }
+            random_list = {
+                1 = { add_trait = leader_trait_taskmaster }
+                1 = { add_trait = leader_trait_fortress_cracker }
+                2 = { add_trait = leader_trait_chainbreaker }
+                1 = { add_trait = leader_trait_chainbreaker }
+                1 = { add_trait = leader_trait_honored_warmaster }
+                1 = { add_trait = leader_trait_academia_recruiter }
+                1 = { add_trait = leader_trait_supreme_warrior }
+                1 = { add_trait = leader_trait_spymaster }
+                1 = { add_trait = leader_trait_totalitarian }
+                1 = { add_trait = leader_trait_bellicose }
+            }
+            freeze_leader_age = yes
+            set_leader_flag = roz_shinku_flag
+            set_leader_flag = legendary_leader
+            set_leader_flag = immune_to_negative_traits
+        }
+        roz_leader_change_skin_set_flag_effect = {
+            who = shinku
+            portrait = roz_shinku
+            flag = roz_shinku_portrait_change
+            leader_flag = roz_shinku_flag
+            portrait_key = roz_shinku_20th
+        }
+        clone_leader = {
+            target = event_target:roz_leader_shinku_global_target@root
+            effect = {
+                save_global_event_target_as = roz_shinku_commander_inactive_temp@root
+                #set_leader_flag = roz_shinku_flag
+                set_name = NAME_shinku
+                unassign_leader = this
+                set_owner = event_target:roz_shinku_global_country@root
             }
         }
         set_timed_country_flag = { flag = roz_shinku_diplomatic_initialize_flag
@@ -2805,7 +2804,149 @@ country_event = {
 
 ########————真红：通讯界面和真红阶段茶会事件————#########
 
+country_event = {   #真红通讯主界面
+    id = roz_shinku_evt.1001
+    is_triggered_only = yes
+    diplomatic = yes
+    picture_event_data = {
+        room = roz_shinku_main_room
+        portrait = event_target:ge_leader
+    }
+    event_window_type = leader_recruit
 
+    title = roz_shinku_evt.1001.title
+    ###正常好感度
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value < 40 } }
+        text = roz_shinku_evt.1001.desc_normal1
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value > 0 } }
+        text = roz_shinku_evt.1001.desc_normal2
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value > 0 } }
+        text = roz_shinku_evt.1001.desc_normal3
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value < 40 } }
+        text = roz_shinku_evt.1001.desc_normal4
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value < 40 } }
+        text = roz_shinku_evt.1001.desc_normal5
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value < 40 } }
+        text = roz_shinku_evt.1001.desc_normal6
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value < 40 } }
+        text = roz_shinku_evt.1001.desc_normal7
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value < 40 } }
+        text = roz_shinku_evt.1001.desc_normal_hide
+    }
+    ##高好感度
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value >= 40 } }
+        text = roz_shinku_evt.1001.desc_aggressive1
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value >= 40 } }
+        text = roz_shinku_evt.1001.desc_aggressive2
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value >= 40 } }
+        text = roz_shinku_evt.1001.desc_aggressive3
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value >= 40 } }
+        text = roz_shinku_evt.1001.desc_aggressive4
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value >= 40 } }
+        text = roz_shinku_evt.1001.desc_aggressive5
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value >= 40 } }
+        text = roz_shinku_evt.1001.desc_aggressive6
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value >= 40 } }
+        text = roz_shinku_evt.1001.desc_aggressive7
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value >= 40 } }
+        text = roz_shinku_evt.1001.desc_aggressive8
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value >= 40 } }
+        text = roz_shinku_evt.1001.desc_aggressive9
+    }
+    desc = {
+        trigger = { check_variable = { which = roz_leader_aft_shinku_reduced_score value >= 40 } }
+        text = roz_shinku_evt.1001.desc_aggressive10
+    }
+
+    trigger = {
+        NOT = {
+            has_country_flag = ge_nfield_diplomacy_activated
+        }
+        from = {
+            is_country_type = ge_N_Field
+            is_same_value = event_target:roz_shinku_global_country@root
+        }
+    }
+    immediate = {
+        set_country_flag = ge_nfield_diplomacy_activated
+        get_ge_leader_target = {
+            flag = roz_shinku_flag
+        }
+    }   
+    after = {
+        if = {
+            limit = {
+                has_country_flag = ge_nfield_diplomacy_activated
+            }
+            remove_country_flag = ge_nfield_diplomacy_activated
+        }
+    }
+    option = {  #换装
+        name = roz_shinku_evt.1001.aa
+    }
+    option = {  #约会
+        name = roz_shinku_evt.1001.bb
+    }
+    option = {  #行政官
+        name = roz_shinku_evt.1001.cc
+    }
+    option = {  #科学家
+        name = roz_shinku_evt.1001.dd
+    }
+    option = {  #指挥官
+        name = roz_shinku_evt.1001.ee
+    }   
+    option = {
+        #退出
+        name = roz_shinku_evt.1001.zz
+        tag = dismiss_leader
+        #tag = hire_leader
+        default_hide_option = yes
+        hidden_effect = {
+            remove_country_flag = ge_nfield_diplomacy_activated
+        }
+    } 
+    option = {
+        #查询好感度
+        name = roz_shinku_evt.1001.af
+        response_text = roz_shinku_evt.1001.af.desc
+        is_dialog_only = yes
+        tag = hire_leader
+    }
+    
+}
 
 
 

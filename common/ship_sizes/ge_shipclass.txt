@@ -547,6 +547,8 @@ Ge_Vampirilis_Ortaam = {	#斗士
 	prerequisites = {
 		tech_ge_sgt_flagship
 	}
+	#potential_country = { has_global_flag = ge_test_activated }
+	potential_construction = { has_global_flag = ge_test_activated }
 	combat_disengage_chance = 1.25
 	construction_type = starbase_shipyard
 	required_component_set = "power_core"

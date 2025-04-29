@@ -245,9 +245,6 @@ country_event = {
                 }
             }
         }
-        event_target:ge_suigintou_country@root = {
-
-        }
         set_timed_country_flag = { flag = roz_kirakishou_diplomatic_initialize_flag
         days = 31}
     }
@@ -515,7 +512,7 @@ country_event = {
 
 
 
-country_event = {
+country_event = {   #雪华绮晶通讯主界面
     id = roz_krks_leader_evt.100
     title = "roz_krks_leader_evt.100.title"
 
@@ -687,7 +684,7 @@ country_event = {
         tag = hire_leader
     }
 
-    option = {
+    option = {  #约会
         name = roz_krks_leader_evt.100.date
         allow = {
             NOT = { has_country_flag = roz_krks_date_cd }

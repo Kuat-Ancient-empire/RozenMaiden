@@ -18,7 +18,7 @@ leader_trait_roz_shinku_main = {
 		script = trait/icon
 		CLASS = leader
 		ICON = "GFX_leader_trait_blank"
-		RARITY = shinku
+		RARITY = roz_shinku
 		COUNCIL = triggered
 		TIER = none
 	}
