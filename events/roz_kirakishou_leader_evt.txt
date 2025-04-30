@@ -840,7 +840,7 @@ country_event = {
                 limit = {
                     has_country_flag = roz_kirakishou_governor_active
                 }
-                roz_kirakishou_revive_reset_offcial = yes
+                roz_kirakishou_revive_reset_official = yes
             }
             else_if = {
                 limit = {

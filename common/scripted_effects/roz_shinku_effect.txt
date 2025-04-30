@@ -293,46 +293,43 @@ roz_shinku_leader_type_switch_scientist = {
 	optimize_memory
 	set_country_flag = roz_shinku_scientist_active
 	remove_country_flag = roz_shinku_admiral_active
-	every_owned_leader = {#取当前真红为临时target
-		limit = {
-			has_leader_flag = roz_shinku_flag
-		}
-		save_event_target_as = roz_leader_shinku_target_temp
-	}
 	#若当前真红职位为指挥官
 	if = {
 		limit = {
-			event_target:roz_leader_shinku_target_temp = {
+			event_target:roz_leader_shinku_global_target = {
 				leader_class = commander
 			}
 		}
-		#缓存国家目标领袖更新替换, 先kill了再说
-		event_target:roz_shinku_admiral_inactive_temp@root = { #令临时存储国家的舰队司令真红消失
+		#缓存国家目标领袖更新替换
+		event_target:roz_shinku_admiral_inactive_temp@root = { 
 		kill_leader = {
 				show_notification = no
 			}
 		}
 		clone_leader = {
-			#替换，event_target:roz_shinku_country是真红的缓存国家
+			#event_target:roz_shinku_country是真红的缓存国家
 			#target = event_target:roz_leader_shinku_global_target #这个global target是玩家的真红
-			target = event_target:roz_leader_shinku_target_temp   #刚刚存的target
+			target = event_target:roz_leader_shinku_global_target   
 			effect = {
 				save_global_event_target_as = roz_shinku_admiral_inactive_temp@root
-				roz_leader_type_switch_clone_standard_effect = {
+				roz_leader_type_switch_clone_initiate_effect = {
 					leader = shinku
 					leader_sc = zhenhong
+					country = shinku_country
 				}
 			}
 		}
-		roz_leader_type_switch_kill_standard_effect = {
-			leader = shinku
-			symbolic_trait_1 = leader_trait_roz_shinku_main
-			symbolic_trait_2 = leader_trait_roz
-		}	
-		roz_leader_type_switch_create_leader_standard_effect = {
+		#移除玩家的指挥官真红
+		event_target:roz_leader_shinku_global_target = {
+			kill_leader = {
+				show_notification = no
+			}
+		}
+		#创建或从缓存国家复制科学家真红
+		roz_leader_type_switch_create_leader_initiate_effect = {
 			leader = shinku
 			leader_sc = zhenhong
-			leader_type = commander
+			leader_type = scientist
 			symbolic_trait_1 = leader_trait_roz_shinku_main
 			symbolic_trait_2 = leader_trait_roz
 			symbolic_trait_3 = leader_trait_roz
@@ -347,12 +344,12 @@ roz_shinku_leader_type_switch_scientist = {
 	#若当前真红职位为行政官
 	if = {
 		limit = {
-			event_target:roz_leader_shinku_target_temp = {
+			event_target:roz_leader_shinku_global_target = {
 				leader_class = official
 			}
 		}
 		#缓存国家目标领袖更新替换, 先kill了再说
-		event_target:roz_shinku_admiral_inactive_temp@root = { #令临时存储国家的舰队司令真红消失
+		event_target:roz_shinku_official_inactive_temp@root = { #令临时存储国家的舰队司令真红消失
 		kill_leader = {
 				show_notification = no
 			}
@@ -360,21 +357,22 @@ roz_shinku_leader_type_switch_scientist = {
 		clone_leader = {
 			#替换，event_target:roz_shinku_country是真红的缓存国家
 			#target = event_target:roz_leader_shinku_global_target #这个global target是玩家的真红
-			target = event_target:roz_leader_shinku_target_temp   #刚刚存的target
+			target = event_target:roz_leader_shinku_global_target   #刚刚存的target
 			effect = {
 				save_global_event_target_as = roz_shinku_official_inactive_temp@root
-				roz_leader_type_switch_clone_standard_effect = {
+				roz_leader_type_switch_clone_initiate_effect = {
 					leader = shinku
 					leader_sc = zhenhong
+					country = shinku_country
 				}
 			}
 		}
-		roz_leader_type_switch_kill_standard_effect = {
+		roz_leader_type_switch_kill_initiate_effect = {
 			leader = shinku
 			symbolic_trait_1 = leader_trait_roz_shinku_main
 			symbolic_trait_2 = leader_trait_roz
 		}	
-		roz_leader_type_switch_create_leader_standard_effect = {
+		roz_leader_type_switch_create_leader_initiate_effect = {
 			leader = shinku
 			leader_sc = zhenhong
 			leader_type = official
@@ -397,42 +395,45 @@ roz_shinku_leader_type_switch_scientist = {
 
 
 ####封装####
-roz_leader_type_switch_clone_standard_effect = {	#在clone leader内使用
+roz_leader_type_switch_clone_initiate_effect = {	#在clone leader内使用
 	unassign_leader = this
 	freeze_leader_age = yes
 	set_leader_flag = roz_$leader$_flag
-	set_owner = event_target:roz_$leader$_country@root
+	set_owner = event_target:roz_$country$@root
 	roz_leader_name_set_effect = {
 		who_jp = $leader$
 		who_sc = $leader_sc$
 	}
 }
 
-roz_leader_type_switch_kill_standard_effect = {	#remove将被切换职位的领袖
-	every_owned_leader = {
-		limit = {
-			OR = {
-				has_trait = $symbolic_trait_1$
-				has_trait = $symbolic_trait_2$ #select to use
-				has_leader_flag = roz_$leader$_flag
-				is_variable_set = ge_leader_affection
-			}
-		}
-		unassign_leader = this
-		kill_leader = {
-			show_notification = no
-		}
-	}
-}	
+# roz_leader_type_switch_kill_initiate_effect = {	#remove将被切换职位的领袖
+# 	every_owned_leader = {
+# 		limit = {
+# 			OR = {
+# 				has_trait = $symbolic_trait_1$
+# 				has_trait = $symbolic_trait_2$ #select to use
+# 				has_leader_flag = roz_$leader$_flag
+# 			}
+# 			is_variable_set = ge_leader_affection
+# 		}
+# 		unassign_leader = this
+# 		kill_leader = {
+# 			show_notification = no
+# 		}
+# 	}
+# }	
 
-roz_leader_type_switch_create_leader_standard_effect = {	#生成领袖
+roz_leader_type_switch_create_leader_initiate_effect = {	#生成领袖
 	if = {
 		limit = { 
-			event_target:roz_$leader$_country@root = {
-				any_owned_leader = {
-					leader_class = $leader_type$
-					has_trait = $symbolic_trait_1$
+			OR = {
+				event_target:roz_$leader$_country@root = {
+					any_owned_leader = {
+						leader_class = $leader_type$
+						has_trait = $symbolic_trait_1$
+					}
 				}
+				exists = event_target:roz_$leader$_$leader_type$_inactive_temp@root
 			}
 		}
 		roz_leader_type_switch_clone_from_cache_country_effect = {
@@ -442,7 +443,8 @@ roz_leader_type_switch_create_leader_standard_effect = {	#生成领袖
 		}
 	}
 	else_if = {
-		limit = { }
+		limit = { #或许以后用得到
+		}
 		create_leader = {
 			class = $leader_type$
 			name = "NAME_$leader$"

@@ -579,7 +579,7 @@ roz_krks_official_backup = {
     }
 }
 
-roz_kirakishou_revive_reset_offcial = {
+roz_kirakishou_revive_reset_official = {
     if = {
         limit = {
             exists = event_target:roz_kirakishou_governor_inactive_temp@root

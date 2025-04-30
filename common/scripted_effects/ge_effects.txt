@@ -93,8 +93,8 @@ create_ge_suigintou_scientist = {
 				has_trait = leader_trait_ge_mercury_lamp_scientist
 				has_trait = leader_trait_ge_mercury_lamp
 				has_leader_flag = ge_suigintou_flag
-				is_variable_set = ge_leader_affection
 			}
+			is_variable_set = ge_leader_affection
 		}
 		unassign_leader = this
 		kill_leader = {
@@ -194,8 +194,8 @@ create_ge_suigintou_admiral = {
 				has_trait = leader_trait_ge_mercury_lamp_scientist
 				has_trait = leader_trait_ge_mercury_lamp
 				has_leader_flag = ge_suigintou_flag
-				is_variable_set = ge_leader_affection
 			}
+			is_variable_set = ge_leader_affection
 		}
 		unassign_leader = this
 		kill_leader = {
@@ -403,8 +403,8 @@ roz_leader_suigintou_counting_check = {
 					has_trait = leader_trait_ge_mercury_lamp_scientist
 					has_trait = leader_trait_ge_mercury_lamp
 					has_leader_flag = ge_suigintou_flag
-					is_variable_set = ge_leader_affection
 				}
+				is_variable_set = ge_leader_affection
 				NOT = {
 					has_leader_flag = roz_suigintou_checking_flag
 				}

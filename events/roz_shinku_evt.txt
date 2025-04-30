@@ -2676,7 +2676,10 @@ country_event = {   #
 
     after = {
         hidden_effect = {
-            
+            country_event = {
+                id = roz_shinku_evt.702
+                days = 1
+            }
         }
     }
 }
@@ -2689,7 +2692,7 @@ country_event = {
         is_ai = no
     }
     immediate = {
-        save_global_event_target_as = roz_leader_shinku_global_target@root
+        save_global_event_target_as = roz_shinku_owner@root
         create_country = {
             name = "NAME_nfield_sk"
             type = ge_N_Field
@@ -2716,9 +2719,7 @@ country_event = {
         last_created_country = {
             establish_communications_no_message = root
         }
-        event_target:roz_shinku_global_country@root = {
-            
-        }
+        event_target:roz_shinku_global_country@root = { }
         create_leader = {
             class = commander
             name = "NAME_shinku"
@@ -2921,12 +2922,30 @@ country_event = {   #真红通讯主界面
     }
     option = {  #行政官
         name = roz_shinku_evt.1001.cc
+        is_dialog_only = yes
+        response_text = roz_shinku_evt.1001.cc.res1
+        response_text = roz_shinku_evt.1001.cc.res2
+        response_text = roz_shinku_evt.1001.cc.res3
+        response_text = roz_shinku_evt.1001.cc.res4
     }
     option = {  #科学家
         name = roz_shinku_evt.1001.dd
+        is_dialog_only = yes
+        response_text = roz_shinku_evt.1001.dd.res1
+        response_text = roz_shinku_evt.1001.dd.res2
+        response_text = roz_shinku_evt.1001.dd.res3
+        response_text = roz_shinku_evt.1001.dd.res4
     }
     option = {  #指挥官
         name = roz_shinku_evt.1001.ee
+        is_dialog_only = yes
+        response_text = roz_shinku_evt.1001.ee.res1
+        response_text = roz_shinku_evt.1001.ee.res2
+        response_text = roz_shinku_evt.1001.ee.res3
+        response_text = roz_shinku_evt.1001.ee.res4
+        response_text = roz_shinku_evt.1001.ee.res5
+        response_text = roz_shinku_evt.1001.ee.res6
+        response_text = roz_shinku_evt.1001.ee.res7
     }   
     option = {
         #退出
