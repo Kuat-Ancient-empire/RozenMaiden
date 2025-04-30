@@ -78,7 +78,6 @@ country_event = {
 		# 	id = ge_affection.13
 		# 	days = 1
 		# }
-
 		every_owned_leader = {
 			if = {
 				###汞灯好感度计数
@@ -88,7 +87,6 @@ country_event = {
 						has_trait = leader_trait_ge_mercury_lamp_scientist
 						has_trait = leader_trait_ge_mercury_lamp
 					}
-					
 				}
 				#save_global_event_target_as = ge_sgt_aft@root
 				root = {
@@ -119,7 +117,6 @@ country_event = {
 					clear_variable = ge_leader_aft_sgt_temp_1
 				}
 			}
-
 			if = {
 				###雪华绮晶好感度计数
 				limit = {
@@ -147,11 +144,47 @@ country_event = {
 						which = roz_leader_aft_krks_temp_1
 						value = 0.1
 					}
-					set_variable = { #roz_leader_aft_krks_reduced_score
+					set_variable = {
+						#roz_leader_aft_krks_reduced_score
 						which = roz_leader_aft_krks_reduced_score
 						value = roz_leader_aft_krks_temp_1
 					}
 					clear_variable = roz_leader_aft_krks_temp_1
+				}
+			}
+			if = {
+				###真红好感度计数
+				limit = {
+					OR = {
+						has_leader_flag = roz_shinku_flag
+						has_trait = leader_trait_roz_shinku_main
+					}
+				}
+				root = {
+					set_variable = {
+						which = roz_leader_aft_shinku
+						value = prev.roz_shinku_affection
+					}
+					##化简小数
+					set_variable = {
+						which = roz_leader_aft_shinku_temp_1
+						value = roz_leader_aft_shinku
+					}
+					multiply_variable = {
+						which = roz_leader_aft_shinku_temp_1
+						value = 10
+					}
+					round_variable = roz_leader_aft_shinku_temp_1
+					multiply_variable = {
+						which = roz_leader_aft_shinku_temp_1
+						value = 0.1
+					}
+					set_variable = {
+						#roz_leader_aft_shinku_reduced_score
+						which = roz_leader_aft_shinku_reduced_score
+						value = roz_leader_aft_shinku_temp_1
+					}
+					clear_variable = roz_leader_aft_shinku_temp_1
 				}
 			}
 			if = {
@@ -200,16 +233,16 @@ country_event = {
 				id = ge_communication.501
 			}
 		}
-
 		###portraits_reset
 		#suigintou
 		roz_leader_change_skin_reset_suigintou_effect = yes
 		#kirakishou
-		roz_leader_change_skin_reset_kirakisho_effect = yes
-
-
+		roz_leader_change_skin_reset_kirakishou_effect = yes
+		#shinku
+		roz_leader_change_skin_reset_shinku_effect = yes
 		#####leader suigintou backup
-		if = {	#每月备份
+		if = {
+			#每月备份
 			limit = {
 				#exists = event_target:ge_suigintou_admiral_inactive_temp@root
 				exists = event_target:ge_leader_suigintou_global_target@root
@@ -224,9 +257,8 @@ country_event = {
 			roz_suigintou_admiral_backup = yes
 			roz_suigintou_scientist_backup = yes
 		}
-		if = {	
-			#科学家
-			#若备份和本体都失去，则初始化领袖，这将导致领袖特质与等级重置
+		if = {
+			#科学家 #若备份和本体都失去，则初始化领袖，这将导致领袖特质与等级重置
 			limit = {
 				has_country_flag = ge_leader_suigintou_get
 				has_country_flag = ge_suigintou_scientist_active
@@ -242,15 +274,15 @@ country_event = {
 						ge_communication.0
 					}
 				}
-				NOT = { #在决战墨水人
+				NOT = {
+					#在决战墨水人
 					has_country_flag = unholy_invasion_defend_proj_aggressive
 				}
 			}
 			roz_suigintou_revive_reset_scientist = yes
 		}
-		if = {	
-			#舰队司令
-			#若备份和本体都失去，则初始化领袖，这将导致领袖特质与等级重置
+		if = {
+			#舰队司令 #若备份和本体都失去，则初始化领袖，这将导致领袖特质与等级重置
 			limit = {
 				has_country_flag = ge_leader_suigintou_get
 				has_country_flag = ge_suigintou_admiral_active
@@ -266,7 +298,8 @@ country_event = {
 						ge_communication.0
 					}
 				}
-				NOT = { #决战墨水人
+				NOT = {
+					#决战墨水人
 					has_country_flag = unholy_invasion_defend_proj_aggressive
 				}
 			}
@@ -275,14 +308,19 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = ge_leader_suigintou_get
-				AND = { #为应对某些奇怪的情况下会导致flag出问题
+				AND = {
+					#为应对某些奇怪的情况下会导致flag出问题
 					has_country_flag = ge_suigintou_admiral_active
 					has_country_flag = ge_suigintou_scientist_active
 				}
 			}
 			random_list = {
-				1 = { remove_country_flag = ge_suigintou_admiral_active }
-				1 = { remove_country_flag = ge_suigintou_scientist_active }
+				1 = {
+					remove_country_flag = ge_suigintou_admiral_active
+				}
+				1 = {
+					remove_country_flag = ge_suigintou_scientist_active
+				}
 			}
 		}
 		###检测水银灯是否重复
@@ -296,15 +334,25 @@ country_event = {
 		}
 		#####leader kirakishou backup
 		if = {
+			#每月备份
 			limit = {
 				has_country_flag = ge_leader_suigintou_get
 				exists = event_target:roz_leader_kirakishou_global_target@root
-				NOT = { #在决战墨水人
+				NOT = {
+					#在决战墨水人
 					has_country_flag = unholy_invasion_defend_proj_aggressive
 				}
 			}
 			roz_krks_official_backup = yes
 			roz_krks_commander_backup = yes
+		}
+		#####leader shinku backup
+		if = {
+			limit = {
+				has_country_flag = ge_leader_suigintou_get
+				has_country_flag = roz_leader_shinku_get
+			}
+			roz_shinku_leader_backup = yes
 		}
 	}
 }
@@ -326,10 +374,10 @@ country_event = {
 			flag = ge_affection_1_cd_flag
 			months = 3
 		}
-
 		#messages
 		if = {
-			limit = {	#if两次，防止遍历科技导致的卡顿
+			limit = {
+				#if两次，防止遍历科技导致的卡顿
 				NOT = {
 					has_country_flag = roz_tech_ge_section_get
 				}
@@ -344,17 +392,18 @@ country_event = {
 				}
 			}
 		}
-
 		#没必要的东西
 		#以前有人反馈过丢失flag的神秘问题
 		if = {
 			limit = {
-				NOT = { has_country_flag = ge_leader_suigintou_get }
+				NOT = {
+					has_country_flag = ge_leader_suigintou_get
+				}
 			}
 			set_country_flag = ge_leader_suigintou_get
 		}
-
-		if = {	#雪华绮晶事件链触发（提前触发模式）
+		if = {
+			#雪华绮晶事件链触发（提前触发模式）
 			limit = {
 				check_variable = {
 					which = ge_leader_aft_sgt_reduced_score
@@ -370,7 +419,6 @@ country_event = {
 							has_country_flag = roz_kirakishou_get
 						}
 					}
-
 				}
 			}
 			event_target:roz_n_field_site_target@root = {
@@ -438,7 +486,7 @@ country_event = {
 		# }
 		#水银灯在星球上任职时,增加好感度
 		if = {
-			limit = { 
+			limit = {
 				has_country_flag = ge_leader_suigintou_get
 				check_variable = {
 					which = ge_leader_aft_sgt_reduced_score
@@ -473,7 +521,6 @@ country_event = {
 	}
 }
 
-
 country_event = {
 	##on_leader_death
 	id = ge_affection.10
@@ -500,7 +547,8 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		every_owned_leader = {	#水银灯好感度后初始化
+		every_owned_leader = {
+			#水银灯好感度后初始化
 			limit = {
 				has_leader_flag = ge_suigintou_flag
 				NOT = {
@@ -512,7 +560,8 @@ country_event = {
 				value = 0
 			}
 		}
-		every_owned_leader = { #雪华绮晶好感度后初始化
+		every_owned_leader = {
+			#雪华绮晶好感度后初始化
 			limit = {
 				has_leader_flag = roz_kirakishou_flag
 				NOT = {
@@ -524,9 +573,21 @@ country_event = {
 				value = 60
 			}
 		}
-
-
-		every_owned_leader = {	#水银灯-检查没有好感度特性的领袖并加特性
+		every_owned_leader = {
+			#真红好感度后初始化 #感觉不是很用得上
+			limit = {
+				has_leader_flag = roz_shinku_flag
+				NOT = {
+					is_variable_set = roz_shinku_affection
+				}
+			}
+			set_variable = {
+				which = roz_shinku_affection
+				value = 5
+			}
+		}
+		every_owned_leader = {
+			#水银灯-检查没有好感度特性的领袖并加特性
 			if = {
 				limit = {
 					has_leader_flag = ge_suigintou_flag
@@ -538,7 +599,6 @@ country_event = {
 						which = ge_leader_affection
 						value < 30
 					}
-					
 				}
 				switch = {
 					trigger = leader_class
@@ -554,7 +614,8 @@ country_event = {
 				}
 			}
 		}
-		every_owned_leader = {	#雪华绮晶-检查没有好感度特性的领袖并加特性
+		every_owned_leader = {
+			#雪华绮晶-检查没有好感度特性的领袖并加特性
 			if = {
 				limit = {
 					has_leader_flag = roz_kirakishou_flag
@@ -601,9 +662,33 @@ country_event = {
 				}
 			}
 		}
-
-
-		if = { #添加飞升特质（完成二段飞升）
+		every_owned_leader = {
+			#真红-检查没有好感度特性的领袖并加特性
+			if = {
+				limit = {
+					has_leader_flag = roz_shinku_flag
+					has_rozen_affection_trait = no
+					check_variable = {
+						which = roz_shinku_affection
+						value < 30
+					}
+				}
+				switch = {
+					trigger = leader_class
+					scientist = {
+						add_trait = leader_trait_ge_scientist_a_strangeness
+					}
+					commander = {
+						add_trait = leader_trait_ge_admiral_a_strangeness
+					}
+					official = {
+						add_trait = leader_trait_roz_official_a_strangeness
+					}
+				}
+			}
+		}
+		if = {
+			#添加飞升特质（完成二段飞升）
 			limit = {
 				owner_main_species = {
 					has_trait = trait_cor_dragon_totem
@@ -611,7 +696,7 @@ country_event = {
 			}
 			every_owned_leader = {
 				limit = {
-					NOT= {
+					NOT = {
 						has_trait = leader_trait_ge_ruler_bond
 					}
 				}
@@ -656,7 +741,6 @@ country_event = {
 				remove_trait = leader_trait_ge_admiral_a_friendly
 				remove_trait = leader_trait_ge_admiral_a_like
 				remove_trait = leader_trait_ge_admiral_a_love
-
 				add_trait = leader_trait_ge_admiral_a_friendly
 			}
 			else_if = {
@@ -675,7 +759,6 @@ country_event = {
 				remove_trait = leader_trait_ge_admiral_a_friendly
 				remove_trait = leader_trait_ge_admiral_a_like
 				remove_trait = leader_trait_ge_admiral_a_love
-
 				add_trait = leader_trait_ge_admiral_a_like
 			}
 			else_if = {
@@ -694,7 +777,6 @@ country_event = {
 				remove_trait = leader_trait_ge_admiral_a_friendly
 				remove_trait = leader_trait_ge_admiral_a_like
 				remove_trait = leader_trait_ge_admiral_a_love
-
 				add_trait = leader_trait_ge_admiral_a_love
 			}
 			###############scientist
@@ -714,7 +796,6 @@ country_event = {
 				remove_trait = leader_trait_ge_scientist_a_friendly
 				remove_trait = leader_trait_ge_scientist_a_like
 				remove_trait = leader_trait_ge_scientist_a_love
-
 				add_trait = leader_trait_ge_scientist_a_friendly
 			}
 			else_if = {
@@ -733,7 +814,6 @@ country_event = {
 				remove_trait = leader_trait_ge_scientist_a_friendly
 				remove_trait = leader_trait_ge_scientist_a_like
 				remove_trait = leader_trait_ge_scientist_a_love
-
 				add_trait = leader_trait_ge_scientist_a_like
 			}
 			else_if = {
@@ -752,129 +832,9 @@ country_event = {
 				remove_trait = leader_trait_ge_scientist_a_friendly
 				remove_trait = leader_trait_ge_scientist_a_like
 				remove_trait = leader_trait_ge_scientist_a_love
-
 				add_trait = leader_trait_ge_scientist_a_love
 			}
 		}
-		#every_owned_leader = { #水银灯
-		#	########admiral
-		#	if = {
-		#		###lv2
-		#		limit = {
-		#			leader_class = commander
-		#			has_trait = leader_trait_ge_admiral_a_strangeness
-		#			ge_affection_frindly_trigger = yes
-		#			#NOR = {
-		#			#	has_trait = leader_trait_ge_admiral_a_friendly
-		#			#	has_trait = leader_trait_ge_admiral_a_like
-		#			#	has_trait = leader_trait_ge_admiral_a_love
-		#			#}
-		#		}
-		#		remove_trait = leader_trait_ge_admiral_a_strangeness
-		#		remove_trait = leader_trait_ge_admiral_a_friendly
-		#		remove_trait = leader_trait_ge_admiral_a_like
-		#		remove_trait = leader_trait_ge_admiral_a_love
-		#
-		#		add_trait = leader_trait_ge_admiral_a_friendly
-		#	}
-		#	else_if = {
-		#		###lv3
-		#		limit = {
-		#			leader_class = commander
-		#			has_trait = leader_trait_ge_admiral_a_friendly
-		#			ge_affection_like_trigger = yes
-		#			#NOR = {
-		#			#	has_trait = leader_trait_ge_admiral_a_strangeness
-		#			#	has_trait = leader_trait_ge_admiral_a_love
-		#			#	has_trait = leader_trait_ge_admiral_a_like
-		#			#}
-		#		}
-		#		remove_trait = leader_trait_ge_admiral_a_strangeness
-		#		remove_trait = leader_trait_ge_admiral_a_friendly
-		#		remove_trait = leader_trait_ge_admiral_a_like
-		#		remove_trait = leader_trait_ge_admiral_a_love
-		#
-		#		add_trait = leader_trait_ge_admiral_a_like
-		#	}
-		#	else_if = {
-		#		###lv4
-		#		limit = {
-		#			leader_class = commander
-		#			has_trait = leader_trait_ge_admiral_a_like
-		#			ge_affection_love_trigger = yes
-		#			#NOR = {
-		#			#	has_trait = leader_trait_ge_admiral_a_strangeness
-		#			#	has_trait = leader_trait_ge_admiral_a_love
-		#			#	has_trait = leader_trait_ge_admiral_a_friendly
-		#			#}
-		#		}
-		#		remove_trait = leader_trait_ge_admiral_a_strangeness
-		#		remove_trait = leader_trait_ge_admiral_a_friendly
-		#		remove_trait = leader_trait_ge_admiral_a_like
-		#		remove_trait = leader_trait_ge_admiral_a_love
-		#
-		#		add_trait = leader_trait_ge_admiral_a_love
-		#	}
-		#	###############scientist
-		#	else_if = {
-		#		###lv2
-		#		limit = {
-		#			leader_class = scientist
-		#			has_trait = leader_trait_ge_scientist_a_strangeness
-		#			ge_affection_frindly_trigger = yes
-		#			#NOR = {
-		#			#	has_trait = leader_trait_ge_scientist_a_friendly
-		#			#	has_trait = leader_trait_ge_scientist_a_like
-		#			#	has_trait = leader_trait_ge_scientist_a_love
-		#			#}
-		#		}
-		#		remove_trait = leader_trait_ge_scientist_a_strangeness
-		#		remove_trait = leader_trait_ge_scientist_a_friendly
-		#		remove_trait = leader_trait_ge_scientist_a_like
-		#		remove_trait = leader_trait_ge_scientist_a_love
-		#
-		#		add_trait = leader_trait_ge_scientist_a_friendly
-		#	}
-		#	else_if = {
-		#		###lv3
-		#		limit = {
-		#			leader_class = scientist
-		#			has_trait = leader_trait_ge_scientist_a_friendly
-		#			ge_affection_like_trigger = yes
-		#			#NOR = {
-		#			#	has_trait = leader_trait_ge_scientist_a_strangeness
-		#			#	has_trait = leader_trait_ge_scientist_a_love
-		#			#	has_trait = leader_trait_ge_scientist_a_like
-		#			#}
-		#		}
-		#		remove_trait = leader_trait_ge_scientist_a_strangeness
-		#		remove_trait = leader_trait_ge_scientist_a_friendly
-		#		remove_trait = leader_trait_ge_scientist_a_like
-		#		remove_trait = leader_trait_ge_scientist_a_love
-		#
-		#		add_trait = leader_trait_ge_scientist_a_like
-		#	}
-		#	else_if = {
-		#		###lv4
-		#		limit = {
-		#			leader_class = scientist
-		#			has_trait = leader_trait_ge_scientist_a_like
-		#			ge_affection_love_trigger = yes
-		#			#NOR = {
-		#			#	has_trait = leader_trait_ge_scientist_a_strangeness
-		#			#	has_trait = leader_trait_ge_scientist_a_love
-		#			#	has_trait = leader_trait_ge_scientist_a_friendly
-		#			#}
-		#		}
-		#		remove_trait = leader_trait_ge_scientist_a_strangeness
-		#		remove_trait = leader_trait_ge_scientist_a_friendly
-		#		remove_trait = leader_trait_ge_scientist_a_like
-		#		remove_trait = leader_trait_ge_scientist_a_love
-		#
-		#		add_trait = leader_trait_ge_scientist_a_love
-		#	}
-		#}
-
 		event_target:roz_leader_kirakishou_global_target@root = {
 			if = {
 				###lv4
@@ -891,23 +851,6 @@ country_event = {
 				add_trait = leader_trait_krks_governor_a_love
 			}
 		}
-		#every_owned_leader = { #雪华绮晶
-		#	########governor
-		#	if = {
-		#		###lv4
-		#		limit = {
-		#			leader_class = official
-		#			has_trait = leader_trait_krks_governor_a_like
-		#			has_leader_flag = roz_kirakishou_flag
-		#			is_variable_set = roz_kirakishou_affection
-		#			check_variable = {
-		#				which = roz_kirakishou_affection
-		#				value >= 90
-		#			}
-		#		}
-		#		add_trait = leader_trait_krks_governor_a_love
-		#	}
-		#}
 	}
 }
 
@@ -949,17 +892,20 @@ country_event = {
 			}
 			FromFromFrom = {
 				save_event_target_as = roz_aft_enemy_fleet_target
-				export_trigger_value_to_variable = {#敌方舰队舰船计数
+				export_trigger_value_to_variable = {
+					#敌方舰队舰船计数
 					#居然不能prev.num_ships
 					trigger = num_ships
 					variable = roz_aft_num_ships_in_enemy_fleet
 				}
-				export_trigger_value_to_variable = {#敌方舰队战力计数
+				export_trigger_value_to_variable = {
+					#敌方舰队战力计数
 					trigger = fleet_power
 					variable = roz_aft_enemy_fleet_power
 				}
-				if = {	#如果敌方舰队战力溢出为负数，则转为正数
-					limit = { 
+				if = {
+					#如果敌方舰队战力溢出为负数，则转为正数
+					limit = {
 						check_variable = {
 							which = roz_aft_enemy_fleet_power
 							value < 0
@@ -971,15 +917,15 @@ country_event = {
 					}
 				}
 			}
-			
 			this = {
-				change_variable = {#舰船计数转存至country域
+				change_variable = {
+					#舰船计数转存至country域
 					which = roz_aft_num_ships_in_enemy_fleet_check
 					value = event_target:roz_aft_enemy_fleet_target.roz_aft_num_ships_in_enemy_fleet
 				}
 			}
-
-			event_target:roz_aft_enemy_fleet_target = {#清除敌方舰队的舰船计数
+			event_target:roz_aft_enemy_fleet_target = {
+				#清除敌方舰队的舰船计数
 				clear_variable = roz_aft_num_ships_in_enemy_fleet
 			}
 		}
@@ -996,7 +942,6 @@ country_event = {
 		fromfrom = {
 			exists = leader
 			leader = {
-				
 				has_leader_flag = ge_suigintou_flag
 			}
 		}
@@ -1015,21 +960,23 @@ country_event = {
 				trigger = num_ships
 				variable = roz_aft_num_ships_in_enemy_fleet_end
 			}
-			
 		}
 		this = {
-			subtract_variable = { #水银灯摧毁舰船数量计数
+			subtract_variable = {
+				#水银灯摧毁舰船数量计数
 				which = roz_aft_num_ships_in_enemy_fleet_check
 				value = root.fromfromfrom.roz_aft_num_ships_in_enemy_fleet_end
 			}
 		}
 		fromfrom = {
 			leader = {
-				change_variable = { #摧毁敌舰数
+				change_variable = {
+					#摧毁敌舰数
 					which = roz_aft_num_ships_destroy_value
 					value = root.roz_aft_num_ships_in_enemy_fleet_check
 				}
-				divide_variable = { #倍率
+				divide_variable = {
+					#倍率
 					which = roz_aft_num_ships_destroy_value
 					value = 400
 				}
@@ -1038,40 +985,42 @@ country_event = {
 					value = roz_aft_num_ships_destroy_value
 				}
 				clear_variable = roz_aft_num_ships_destroy_value
-
-
-				change_variable = {#提取预先存储的战力计数
+				change_variable = {
+					#提取预先存储的战力计数
 					which = ge_leader_aft_temp_number
 					value = event_target:roz_aft_enemy_fleet_target.roz_aft_enemy_fleet_power
 				}
-				divide_variable = {#设置倍率
+				divide_variable = {
+					#设置倍率
 					which = ge_leader_aft_temp_number
 					value = 10000
 				}
 				if = {
 					limit = {
-						check_variable = {#设置一次性获得的最大上限
+						check_variable = {
+							#设置一次性获得的最大上限
 							which = ge_leader_aft_temp_number
-							value >= 2.0
+							value >= 2
 						}
 					}
 					change_variable = {
 						which = ge_leader_affection
-						value = 2.0
+						value = 2
 					}
 				}
 				else_if = {
 					limit = {
 						check_variable = {
 							which = ge_leader_aft_temp_number
-							value < 2.0
+							value < 2
 						}
 						check_variable = {
 							which = ge_leader_aft_temp_number
 							value > 0
 						}
 					}
-					change_variable = {#根据战力水平增加好感度
+					change_variable = {
+						#根据战力水平增加好感度
 						which = ge_leader_affection
 						value = ge_leader_aft_temp_number
 					}
@@ -1083,7 +1032,8 @@ country_event = {
 							value < 0
 						}
 					}
-					change_variable = {#根据战力水平增加好感度
+					change_variable = {
+						#根据战力水平增加好感度
 						which = ge_leader_affection
 						value = 0.1
 					}
@@ -1091,7 +1041,6 @@ country_event = {
 				clear_variable = ge_leader_aft_temp_number
 			}
 		}
-
 		clear_variable = roz_aft_num_ships_in_enemy_fleet_check
 		event_target:roz_aft_enemy_fleet_target = {
 			clear_variable = roz_aft_num_ships_in_enemy_fleet_end
@@ -1117,43 +1066,46 @@ country_event = {
 		NOT = {
 			has_country_flag = roz_aft_fleet_combat_lose_timed_flag
 		}
-
 	}
 	immediate = {
 		set_timed_country_flag = {
 			flag = roz_aft_fleet_combat_lose_timed_flag
 			days = 1
 		}
-
 		fromfromfrom = {
 			save_event_target_as = roz_aft_enemy_fleet_target
-			export_trigger_value_to_variable = {#敌方舰队当前剩余的舰船数量
+			export_trigger_value_to_variable = {
+				#敌方舰队当前剩余的舰船数量
 				trigger = num_ships
 				variable = roz_aft_num_ships_in_enemy_fleet_end
 			}
-			export_trigger_value_to_variable = {#敌方舰队当前剩余的战斗力
+			export_trigger_value_to_variable = {
+				#敌方舰队当前剩余的战斗力
 				trigger = fleet_power
 				variable = roz_aft_enemy_fleet_power_end
 			}
-			subtract_variable = {#敌方舰队损失的战斗力
+			subtract_variable = {
+				#敌方舰队损失的战斗力
 				which = roz_aft_enemy_fleet_power
 				value = roz_aft_enemy_fleet_power_end
 			}
 		}
 		this = {
-			subtract_variable = { #水银灯摧毁舰船数量计数
+			subtract_variable = {
+				#水银灯摧毁舰船数量计数
 				which = roz_aft_num_ships_in_enemy_fleet_check
 				value = fromfromfrom.roz_aft_num_ships_in_enemy_fleet_end
 			}
 		}
 		fromfrom = {
 			leader = {
-
-				change_variable = { #摧毁敌舰数
+				change_variable = {
+					#摧毁敌舰数
 					which = roz_aft_num_ships_destroy_value
 					value = root.roz_aft_num_ships_in_enemy_fleet_check
 				}
-				divide_variable = { #倍率
+				divide_variable = {
+					#倍率
 					which = roz_aft_num_ships_destroy_value
 					value = 400
 				}
@@ -1162,20 +1114,20 @@ country_event = {
 					value = roz_aft_num_ships_destroy_value
 				}
 				clear_variable = roz_aft_num_ships_destroy_value
-
-
-
-				change_variable = {#提取预先存储的战力计数
+				change_variable = {
+					#提取预先存储的战力计数
 					which = ge_leader_aft_temp_number
 					value = event_target:roz_aft_enemy_fleet_target.roz_aft_enemy_fleet_power
 				}
-				divide_variable = {#设置倍率
+				divide_variable = {
+					#设置倍率
 					which = ge_leader_aft_temp_number
 					value = 40000
 				}
 				if = {
 					limit = {
-						check_variable = {#设置一次性获得的最大上限
+						check_variable = {
+							#设置一次性获得的最大上限
 							which = ge_leader_aft_temp_number
 							value >= 0.6
 						}
@@ -1196,7 +1148,8 @@ country_event = {
 							value > 0
 						}
 					}
-					change_variable = {#根据战力水平增加好感度
+					change_variable = {
+						#根据战力水平增加好感度
 						which = ge_leader_affection
 						value = ge_leader_aft_temp_number
 					}
@@ -1208,7 +1161,8 @@ country_event = {
 							value < 0
 						}
 					}
-					change_variable = { #理论最小值
+					change_variable = {
+						#理论最小值
 						which = ge_leader_affection
 						value = 0.05
 					}
@@ -1217,7 +1171,8 @@ country_event = {
 			}
 		}
 		this = {
-			subtract_variable = { #水银灯摧毁舰船数量计数
+			subtract_variable = {
+				#水银灯摧毁舰船数量计数
 				which = roz_aft_num_ships_in_enemy_fleet_check
 				value = roz_aft_num_ships_in_enemy_fleet_end
 			}
@@ -1256,7 +1211,6 @@ fleet_event = {
 				}
 				#ge_add_random_affection_admiral = yes
 				ge_add_aft_admiral_wander = yes
-
 			}
 		}
 	}
@@ -1285,7 +1239,6 @@ ship_event = {
 						has_leader_flag = ge_suigintou_flag
 						has_trait = leader_trait_ge_mercury_lamp_scientist
 					}
-					
 				}
 				ge_add_aft_scientist_on_survey = yes
 			}
@@ -1340,10 +1293,7 @@ country_event = {
 				# 	has_rozen_affection_trait = yes
 				# }			
 			}
-
 			ge_add_aft_scientist_on_research = yes
 		}
 	}
 }
-
-

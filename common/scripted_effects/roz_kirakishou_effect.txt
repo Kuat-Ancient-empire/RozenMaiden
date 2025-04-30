@@ -92,7 +92,7 @@ create_roz_kirakishou_governor = {
     #    leader_flag = roz_kirakishou_flag
     #    portrait_key = roz_kirakishou_default
     #}
-    roz_leader_change_skin_reset_kirakisho_effect = yes
+    roz_leader_change_skin_reset_kirakishou_effect = yes
     remove_country_flag = roz_kirakishou_admiral_active
 }
 
@@ -187,7 +187,7 @@ create_roz_kirakishou_admiral = {
     #    leader_flag = roz_kirakishou_flag
     #    portrait_key = roz_kirakishou_default
     #}
-    roz_leader_change_skin_reset_kirakisho_effect = yes
+    roz_leader_change_skin_reset_kirakishou_effect = yes
     remove_country_flag = roz_kirakishou_governor_active
 }
 
@@ -424,7 +424,7 @@ create_roz_kirakishou_admiral = {
 #}
 
 
-roz_leader_change_skin_reset_kirakisho_effect = {
+roz_leader_change_skin_reset_kirakishou_effect = {
     switch = {
         trigger = has_country_flag
         roz_krks_portrait_change_roz_kirakishou_20th = {

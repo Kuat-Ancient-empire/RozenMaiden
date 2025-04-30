@@ -292,26 +292,27 @@ roz_SK_invasion_dip_effect = {
 roz_shinku_leader_type_switch_scientist = {
 	optimize_memory
 	set_country_flag = roz_shinku_scientist_active
-	remove_country_flag = roz_shinku_admiral_active
 	#若当前真红职位为指挥官
 	if = {
 		limit = {
-			event_target:roz_leader_shinku_global_target = {
+			event_target:roz_leader_shinku_global_target@root = {
 				leader_class = commander
 			}
 		}
+		remove_country_flag = roz_shinku_commander_active
 		#缓存国家目标领袖更新替换
-		event_target:roz_shinku_admiral_inactive_temp@root = { 
+		event_target:roz_shinku_commander_inactive_temp@root = { 
 		kill_leader = {
 				show_notification = no
 			}
 		}
+		clear_global_event_target = roz_shinku_commander_inactive_temp@root
 		clone_leader = {
 			#event_target:roz_shinku_country是真红的缓存国家
-			#target = event_target:roz_leader_shinku_global_target #这个global target是玩家的真红
-			target = event_target:roz_leader_shinku_global_target   
+			#target = event_target:roz_leader_shinku_global_target@root #这个global target是玩家的真红
+			target = event_target:roz_leader_shinku_global_target@root   
 			effect = {
-				save_global_event_target_as = roz_shinku_admiral_inactive_temp@root
+				save_global_event_target_as = roz_shinku_commander_inactive_temp@root
 				roz_leader_type_switch_clone_initiate_effect = {
 					leader = shinku
 					leader_sc = zhenhong
@@ -320,7 +321,7 @@ roz_shinku_leader_type_switch_scientist = {
 			}
 		}
 		#移除玩家的指挥官真红
-		event_target:roz_leader_shinku_global_target = {
+		event_target:roz_leader_shinku_global_target@root = {
 			kill_leader = {
 				show_notification = no
 			}
@@ -334,7 +335,7 @@ roz_shinku_leader_type_switch_scientist = {
 			symbolic_trait_2 = leader_trait_roz
 			symbolic_trait_3 = leader_trait_roz
 		}
-		set_country_flag = roz_shinku_portrait_change_roz_shinku_20th
+		
 		roz_leader_initialize_after_create_effect = {
 			leader = shinku
 			leader_sc = zhenhong
@@ -344,20 +345,22 @@ roz_shinku_leader_type_switch_scientist = {
 	#若当前真红职位为行政官
 	if = {
 		limit = {
-			event_target:roz_leader_shinku_global_target = {
+			event_target:roz_leader_shinku_global_target@root = {
 				leader_class = official
 			}
 		}
+		remove_country_flag = roz_shinku_official_active
 		#缓存国家目标领袖更新替换, 先kill了再说
 		event_target:roz_shinku_official_inactive_temp@root = { #令临时存储国家的舰队司令真红消失
 		kill_leader = {
 				show_notification = no
 			}
 		}
+		clear_global_event_target = roz_shinku_official_inactive_temp@root
 		clone_leader = {
 			#替换，event_target:roz_shinku_country是真红的缓存国家
-			#target = event_target:roz_leader_shinku_global_target #这个global target是玩家的真红
-			target = event_target:roz_leader_shinku_global_target   #刚刚存的target
+			#target = event_target:roz_leader_shinku_global_target@root #这个global target是玩家的真红
+			target = event_target:roz_leader_shinku_global_target@root   #刚刚存的target
 			effect = {
 				save_global_event_target_as = roz_shinku_official_inactive_temp@root
 				roz_leader_type_switch_clone_initiate_effect = {
@@ -367,11 +370,12 @@ roz_shinku_leader_type_switch_scientist = {
 				}
 			}
 		}
-		roz_leader_type_switch_kill_initiate_effect = {
-			leader = shinku
-			symbolic_trait_1 = leader_trait_roz_shinku_main
-			symbolic_trait_2 = leader_trait_roz
-		}	
+		#移除玩家的指挥官真红
+		event_target:roz_leader_shinku_global_target@root = {
+			kill_leader = {
+				show_notification = no
+			}
+		}
 		roz_leader_type_switch_create_leader_initiate_effect = {
 			leader = shinku
 			leader_sc = zhenhong
@@ -380,7 +384,7 @@ roz_shinku_leader_type_switch_scientist = {
 			symbolic_trait_2 = leader_trait_roz
 			symbolic_trait_3 = leader_trait_roz
 		}
-		set_country_flag = roz_shinku_portrait_change_roz_shinku_20th
+		
 		roz_leader_initialize_after_create_effect = {
 			leader = shinku
 			leader_sc = zhenhong
@@ -388,9 +392,213 @@ roz_shinku_leader_type_switch_scientist = {
 	}
 }
 
+###真红-切换指挥官职位
+roz_shinku_leader_type_switch_commander = {
+	optimize_memory
+	set_country_flag = roz_shinku_scientist_active
+	#若当前真红职位为科学家
+	if = {
+		limit = {
+			event_target:roz_leader_shinku_global_target@root = {
+				leader_class = scientist
+			}
+		}
+		remove_country_flag = roz_shinku_commander_active
+		#缓存国家目标领袖更新替换
+		event_target:roz_shinku_scientist_inactive_temp@root = { 
+		kill_leader = {
+				show_notification = no
+			}
+		}
+		clear_global_event_target = roz_shinku_scientist_inactive_temp@root
+		clone_leader = {
+			#event_target:roz_shinku_country是真红的缓存国家
+			#target = event_target:roz_leader_shinku_global_target@root #这个global target是玩家的真红
+			target = event_target:roz_leader_shinku_global_target@root   
+			effect = {
+				save_global_event_target_as = roz_shinku_scientist_inactive_temp@root
+				roz_leader_type_switch_clone_initiate_effect = {
+					leader = shinku
+					leader_sc = zhenhong
+					country = shinku_country
+				}
+			}
+		}
+		#移除玩家的科学家真红
+		event_target:roz_leader_shinku_global_target@root = {
+			kill_leader = {
+				show_notification = no
+			}
+		}
+		#创建或从缓存国家复制指挥官真红
+		roz_leader_type_switch_create_leader_initiate_effect = {
+			leader = shinku
+			leader_sc = zhenhong
+			leader_type = commander
+			symbolic_trait_1 = leader_trait_roz_shinku_main
+			symbolic_trait_2 = leader_trait_roz
+			symbolic_trait_3 = leader_trait_roz
+		}
+		
+		roz_leader_initialize_after_create_effect = {
+			leader = shinku
+			leader_sc = zhenhong
+		}
+	}
 
+	#若当前真红职位为行政官
+	if = {
+		limit = {
+			event_target:roz_leader_shinku_global_target@root = {
+				leader_class = official
+			}
+		}
+		remove_country_flag = roz_shinku_official_active
+		#缓存国家目标领袖更新替换, 先kill了再说
+		event_target:roz_shinku_official_inactive_temp@root = { #令临时存储国家的舰队司令真红消失
+		kill_leader = {
+				show_notification = no
+			}
+		}
+		clear_global_event_target = roz_shinku_official_inactive_temp@root
+		clone_leader = {
+			#替换，event_target:roz_shinku_country是真红的缓存国家
+			#target = event_target:roz_leader_shinku_global_target@root #这个global target是玩家的真红
+			target = event_target:roz_leader_shinku_global_target@root
+			effect = {
+				save_global_event_target_as = roz_shinku_official_inactive_temp@root
+				roz_leader_type_switch_clone_initiate_effect = {
+					leader = shinku
+					leader_sc = zhenhong
+					country = shinku_country
+				}
+			}
+		}
+		#移除玩家的指挥官真红
+		event_target:roz_leader_shinku_global_target@root = {
+			kill_leader = {
+				show_notification = no
+			}
+		}
+		roz_leader_type_switch_create_leader_initiate_effect = {
+			leader = shinku
+			leader_sc = zhenhong
+			leader_type = official
+			symbolic_trait_1 = leader_trait_roz_shinku_main
+			symbolic_trait_2 = leader_trait_roz
+			symbolic_trait_3 = leader_trait_roz
+		}
+		
+		roz_leader_initialize_after_create_effect = {
+			leader = shinku
+			leader_sc = zhenhong
+		}
+	}
+}
 
+###真红-切换行政官职位
+roz_shinku_leader_type_switch_official = {
+	optimize_memory
+	set_country_flag = roz_shinku_official_active
+	#若当前真红职位为科学家
+	if = {
+		limit = {
+			event_target:roz_leader_shinku_global_target@root = {
+				leader_class = scientist
+			}
+		}
+		remove_country_flag = roz_shinku_scientist_active
+		#缓存国家目标领袖更新替换
+		event_target:roz_shinku_scientist_inactive_temp@root = { 
+		kill_leader = {
+				show_notification = no
+			}
+		}
+		clear_global_event_target = roz_shinku_scientist_inactive_temp@root
+		clone_leader = {
+			#event_target:roz_shinku_country是真红的缓存国家
+			#target = event_target:roz_leader_shinku_global_target@root #这个global target是玩家的真红
+			target = event_target:roz_leader_shinku_global_target@root   
+			effect = {
+				save_global_event_target_as = roz_shinku_scientist_inactive_temp@root
+				roz_leader_type_switch_clone_initiate_effect = {
+					leader = shinku
+					leader_sc = zhenhong
+					country = shinku_country
+				}
+			}
+		}
+		#移除玩家的科学家真红
+		event_target:roz_leader_shinku_global_target@root = {
+			kill_leader = {
+				show_notification = no
+			}
+		}
+		#创建或从缓存国家复制行政官真红
+		roz_leader_type_switch_create_leader_initiate_effect = {
+			leader = shinku
+			leader_sc = zhenhong
+			leader_type = commander
+			symbolic_trait_1 = leader_trait_roz_shinku_main
+			symbolic_trait_2 = leader_trait_roz
+			symbolic_trait_3 = leader_trait_roz
+		}
+		
+		roz_leader_initialize_after_create_effect = {
+			leader = shinku
+			leader_sc = zhenhong
+		}
+	}
 
+	#若当前真红职位为指挥官
+	if = {
+		limit = {
+			event_target:roz_leader_shinku_global_target@root = {
+				leader_class = commander
+			}
+		}
+		remove_country_flag = roz_shinku_commander_active
+		#缓存国家目标领袖更新替换, 先kill了再说
+		event_target:roz_shinku_commander_inactive_temp@root = { #令临时存储国家的舰队司令真红消失
+		kill_leader = {
+				show_notification = no
+			}
+		}
+		clear_global_event_target = roz_shinku_commander_inactive_temp@root
+		clone_leader = {
+			#替换，event_target:roz_shinku_country是真红的缓存国家
+			#target = event_target:roz_leader_shinku_global_target@root #这个global target是玩家的真红
+			target = event_target:roz_leader_shinku_global_target@root
+			effect = {
+				save_global_event_target_as = roz_shinku_commander_inactive_temp@root
+				roz_leader_type_switch_clone_initiate_effect = {
+					leader = shinku
+					leader_sc = zhenhong
+					country = shinku_country
+				}
+			}
+		}
+		#移除玩家的指挥官真红
+		event_target:roz_leader_shinku_global_target@root = {
+			kill_leader = {
+				show_notification = no
+			}
+		}
+		roz_leader_type_switch_create_leader_initiate_effect = {
+			leader = shinku
+			leader_sc = zhenhong
+			leader_type = official
+			symbolic_trait_1 = leader_trait_roz_shinku_main
+			symbolic_trait_2 = leader_trait_roz
+			symbolic_trait_3 = leader_trait_roz
+		}
+		
+		roz_leader_initialize_after_create_effect = {
+			leader = shinku
+			leader_sc = zhenhong
+		}
+	}
+}
 
 
 
@@ -414,7 +622,7 @@ roz_leader_type_switch_clone_initiate_effect = {	#在clone leader内使用
 # 				has_trait = $symbolic_trait_2$ #select to use
 # 				has_leader_flag = roz_$leader$_flag
 # 			}
-# 			is_variable_set = ge_leader_affection
+# 			is_variable_set = roz_shinku_affection
 # 		}
 # 		unassign_leader = this
 # 		kill_leader = {
@@ -462,8 +670,8 @@ roz_leader_type_switch_create_leader_initiate_effect = {	#生成领袖
 				add_skill_without_trait_selection = 1
 				remove_all_traits = yes
 				set_variable = {
-					which = ge_leader_affection
-					value = owner.ge_leader_aft_$leader$
+					which = roz_shinku_affection
+					value = owner.roz_leader_aft_$leader$
 				}
 			}
 		}
@@ -518,23 +726,23 @@ roz_leader_initialize_after_create_effect = {
 		}
 		save_global_event_target_as = roz_leader_$leader$_global_target@root
 		set_variable = {
-			which = ge_leader_affection
-			value = root.ge_leader_aft_$leader$
+			which = roz_$leader$_affection
+			value = root.roz_leader_aft_$leader$
 		}
 		if = {
-			limit = { check_variable = { which = ge_leader_affection value >= 90 } }
+			limit = { check_variable = { which = roz_$leader$_affection value >= 90 } }
 			add_trait = leader_trait_ge_scientist_a_love
 		}
 		else_if = {
-			limit = { check_variable = { which = ge_leader_affection value >= 60 } }
+			limit = { check_variable = { which = roz_$leader$_affection value >= 60 } }
 			add_trait = leader_trait_ge_scientist_a_like
 		}
 		else_if = {
-			limit = { check_variable = { which = ge_leader_affection value >= 30 } }
+			limit = { check_variable = { which = roz_$leader$_affection value >= 30 } }
 			add_trait = leader_trait_ge_scientist_a_friendly
 		}
 		else_if = {
-			limit = { check_variable = { which = ge_leader_affection value < 30 } }
+			limit = { check_variable = { which = roz_$leader$_affection value < 30 } }
 			add_trait = leader_trait_ge_scientist_a_strangeness
 		}
 		freeze_leader_age = yes
@@ -556,8 +764,81 @@ roz_leader_initialize_after_create_effect = {
 	
 }
 
-
-
+###真红月检备份（或者说是更新备份）
+roz_shinku_leader_backup = {
+    if = {	#指挥官备份
+        limit = {
+            event_target:roz_leader_shinku_global_target@root = {
+                leader_class = commander
+            }
+        }
+        event_target:roz_shinku_commander_inactive_temp@root = { #去掉全局国家的缓存真红
+            kill_leader = {
+                show_notification = no
+            }
+        }
+        clear_global_event_target = roz_shinku_commander_inactive_temp@root
+        clone_leader = { #替换当前的真红（指挥官）到全局国家
+            target = event_target:roz_leader_shinku_global_target@root
+            effect = {
+                save_global_event_target_as = roz_shinku_commander_inactive_temp@root
+                roz_leader_type_switch_clone_initiate_effect = {
+					leader = shinku
+					leader_sc = zhenhong
+					country = shinku_country
+				}
+            }
+        }
+    }
+	if = {	#科学家备份
+        limit = {
+            event_target:roz_leader_shinku_global_target@root = {
+                leader_class = scientist
+            }
+        }
+        event_target:roz_shinku_scientist_inactive_temp@root = { #去掉全局国家的缓存真红
+            kill_leader = {
+                show_notification = no
+            }
+        }
+        clear_global_event_target = roz_shinku_scientist_inactive_temp@root
+        clone_leader = { #替换当前的真红（指挥官）到全局国家
+            target = event_target:roz_leader_shinku_global_target@root
+            effect = {
+                save_global_event_target_as = roz_shinku_scientist_inactive_temp@root
+                roz_leader_type_switch_clone_initiate_effect = {
+					leader = shinku
+					leader_sc = zhenhong
+					country = shinku_country
+				}
+            }
+        }
+    }
+	if = {	#行政官备份
+        limit = {
+            event_target:roz_leader_shinku_global_target@root = {
+                leader_class = official
+            }
+        }
+        event_target:roz_shinku_official_inactive_temp@root = { #去掉全局国家的缓存真红
+            kill_leader = {
+                show_notification = no
+            }
+        }
+        clear_global_event_target = roz_shinku_official_inactive_temp@root
+        clone_leader = { #替换当前的真红（指挥官）到全局国家
+            target = event_target:roz_leader_shinku_global_target@root
+            effect = {
+                save_global_event_target_as = roz_shinku_official_inactive_temp@root
+                roz_leader_type_switch_clone_initiate_effect = {
+					leader = shinku
+					leader_sc = zhenhong
+					country = shinku_country
+				}
+            }
+        }
+    }
+}
 
 
 
@@ -657,5 +938,27 @@ roz_leader_change_skin_reset_effect = {	#scope = country
     }
 }
 
-
+roz_leader_change_skin_reset_shinku_effect = {
+    switch = {
+        trigger = has_country_flag
+        roz_shinku_portrait_change_roz_shinku_20th = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = shinku
+                portrait = roz_shinku
+                flag = roz_shinku_portrait_change
+                portrait_key = roz_shinku_20th
+                leader_flag = roz_shinku_flag
+            }
+        }
+        roz_shinku_portrait_change_roz_shinku_01 = {
+            roz_leader_change_skin_flag_locate_effect = {
+                who = shinku
+                portrait = roz_shinku
+                flag = roz_shinku_portrait_change
+                portrait_key = roz_shinku_01
+                leader_flag = roz_shinku_flag
+            }
+        }
+    }
+}
 

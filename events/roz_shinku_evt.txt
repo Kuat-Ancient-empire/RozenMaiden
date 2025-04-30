@@ -2693,6 +2693,8 @@ country_event = {
     }
     immediate = {
         save_global_event_target_as = roz_shinku_owner@root
+        set_country_flag = roz_shinku_commander_active
+        set_country_flag = roz_leader_shinku_get
         create_country = {
             name = "NAME_nfield_sk"
             type = ge_N_Field
@@ -2922,7 +2924,10 @@ country_event = {   #真红通讯主界面
     }
     option = {  #行政官
         name = roz_shinku_evt.1001.cc
-        is_dialog_only = yes
+        hidden_effect = {
+            roz_shinku_leader_type_switch_official = yes
+        }
+        #is_dialog_only = yes
         response_text = roz_shinku_evt.1001.cc.res1
         response_text = roz_shinku_evt.1001.cc.res2
         response_text = roz_shinku_evt.1001.cc.res3
@@ -2930,7 +2935,10 @@ country_event = {   #真红通讯主界面
     }
     option = {  #科学家
         name = roz_shinku_evt.1001.dd
-        is_dialog_only = yes
+        hidden_effect = {
+            roz_shinku_leader_type_switch_scientist = yes
+        }
+        #is_dialog_only = yes
         response_text = roz_shinku_evt.1001.dd.res1
         response_text = roz_shinku_evt.1001.dd.res2
         response_text = roz_shinku_evt.1001.dd.res3
@@ -2938,7 +2946,10 @@ country_event = {   #真红通讯主界面
     }
     option = {  #指挥官
         name = roz_shinku_evt.1001.ee
-        is_dialog_only = yes
+        hidden_effect = {
+            roz_shinku_leader_type_switch_commander = yes
+        }
+        #is_dialog_only = yes
         response_text = roz_shinku_evt.1001.ee.res1
         response_text = roz_shinku_evt.1001.ee.res2
         response_text = roz_shinku_evt.1001.ee.res3
