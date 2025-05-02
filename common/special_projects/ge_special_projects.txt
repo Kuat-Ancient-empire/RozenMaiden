@@ -75,7 +75,7 @@ special_project = {
 	}
 
 	on_success = {
-		event_target:ge_suigintou_owner@space_owner = {
+		event_target:roz_suigintou_owner@space_owner = {
 			set_country_flag = roz_ve_proj_s1a_flag
 			#
 			country_event = {
@@ -104,7 +104,7 @@ special_project = {
 	event_scope = planet_event
 
 	on_success = {
-		event_target:ge_suigintou_owner@space_owner = {
+		event_target:roz_suigintou_owner@space_owner = {
 			country_event = {
 				id = ge_event.43
 			}
@@ -139,7 +139,7 @@ special_project = {
 		#has_country_flag = queen_snatched
 	}
 	on_success = {
-		event_target:ge_suigintou_owner@space_owner = {
+		event_target:roz_suigintou_owner@space_owner = {
 			country_event = {
 				id = ge_event.44
 			}
@@ -175,7 +175,7 @@ special_project = {
 	}
 
 	on_success = {
-		event_target:ge_suigintou_owner@space_owner = {
+		event_target:roz_suigintou_owner@space_owner = {
 			country_event = {
 				id = ge_event.451
 			}
@@ -212,7 +212,7 @@ special_project = {
 	}
 
 	on_success = {
-		event_target:ge_suigintou_owner@space_owner = {
+		event_target:roz_suigintou_owner@space_owner = {
 			remove_country_flag = ge_wait_zero_point
 			set_country_flag = roz_zpe_support
 			#add_tech_progress = {
@@ -260,7 +260,7 @@ special_project = {
 
 	on_success = {
 		remove_country_flag = ge_wait_zero_point
-		event_target:ge_suigintou_owner@space_owner = {
+		event_target:roz_suigintou_owner@space_owner = {
 			set_country_flag = roz_zpe_support
 			country_event = {
 				id = ge_event.452
@@ -333,14 +333,14 @@ special_project = {		###ap2
 #	on_start = {
 #		owner = {
 #			country_event = {
-#				id = ge_sgt_falgship_events.102
+#				id = ge_sgt_flagship_events.102
 #			}
 #		}
 #
 #	}
 #	on_success = {
 #		planet_event = {
-#			id = ge_sgt_falgship_events.1
+#			id = ge_sgt_flagship_events.1
 #		}
 #	}
 #}
@@ -361,7 +361,7 @@ special_project = {		###ap2
 #	event_scope = planet_event
 #	on_success = {
 #		planet_event = {
-#			id = ge_sgt_falgship_events.2
+#			id = ge_sgt_flagship_events.2
 #		}
 #	}
 #}
@@ -385,10 +385,33 @@ special_project = {		###ap2
 #	}
 #	on_success = {
 #		planet_event = {
-#			id = ge_sgt_falgship_events.3
+#			id = ge_sgt_flagship_events.3
 #		}
 #	}
 #}
+
+special_project = {
+	key = ge_sgt_flagship_proj_start
+	event_scope = ship_event
+	desc = {
+		text = roz_unknow_crashed_flagship_category_desc
+		trigger = {
+			exists = owner
+		}
+	}
+	picture = GFX_evt_ship_in_orbit
+	icon = gfx/interface/icons/situation_log/situation_log_engineering.dds
+	days_to_research = 180
+	location = yes
+	requirements = {
+		shipclass_science_ship = 1
+	}
+	on_success = {
+		ship_event = {
+			id = ge_sgt_flagship_events.101
+		}
+	}
+}
 
 special_project = {		####王座守卫
 	key = "ge_sgt_flagship_proj_1"
@@ -416,7 +439,7 @@ special_project = {		####王座守卫
 		}
 		owner = {
 			country_event = {
-				id = ge_sgt_falgship_events.11
+				id = ge_sgt_flagship_events.11
 			}
 			give_technology = {
 				tech = tech_ge_sgt_flagship_normal
@@ -507,7 +530,7 @@ special_project = {		####
 			add_deposit = d_energy_10
 			add_deposit = d_physics_10
 		}
-		event_target:ge_suigintou_owner@owner = {
+		event_target:roz_suigintou_owner@owner = {
 			add_event_chain_counter = {
 				amount = 1
 				counter = specimens_collected
@@ -546,7 +569,7 @@ special_project = {		####
 		planet = {
 			add_deposit = d_minerals_10
 		}
-		event_target:ge_suigintou_owner@owner = {
+		event_target:roz_suigintou_owner@owner = {
 			add_event_chain_counter = {
 				amount = 1
 				counter = specimens_collected
@@ -586,7 +609,7 @@ special_project = {		####
 			add_deposit = d_physics_10
 			add_deposit = d_engineering_10
 		}
-		event_target:ge_suigintou_owner@owner = {
+		event_target:roz_suigintou_owner@owner = {
 			add_event_chain_counter = {
 				amount = 1
 				counter = specimens_collected
@@ -622,7 +645,7 @@ special_project = {		####
 		shipclass_science_ship = 1
 	}
 	on_success = {
-		event_target:ge_suigintou_owner@owner = {
+		event_target:roz_suigintou_owner@owner = {
 			add_event_chain_counter = {
 				amount = 1
 				counter = specimens_collected
@@ -669,7 +692,7 @@ special_project = {		####
 	icon = gfx/interface/icons/situation_log/situation_log_society.dds
 	event_scope = planet_event
 	on_success = {
-		event_target:ge_suigintou_owner@owner = {
+		event_target:roz_suigintou_owner@owner = {
 
 		}
 		space_owner = {
@@ -736,7 +759,7 @@ special_project = {
 		remove_country_flag = ge_nfield_diplomacy_activated
 		owner = {
 			set_leader = event_target:roz_leader_kirakishou_global_target@root
-			set_leader = event_target:ge_leader_suigintou_global_target@root
+			set_leader = event_target:roz_leader_suigintou_global_target@root
 			set_leader = event_target:roz_ruler_target_temp@root
 		}
 		clear_global_event_target = roz_ruler_target_temp@root

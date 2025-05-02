@@ -13,7 +13,7 @@ country_event = {   ###换装
     desc = "ge_communication.110.desc"
     diplomatic = yes
     picture_event_data = {
-        #portrait = ge_suigintou_6
+        #portrait = roz_suigintou_6
         portrait = event_target:ge_leader
         room = ge_sgt_main_room
     }
@@ -22,14 +22,14 @@ country_event = {   ###换装
         #防止连点
         NOT = { has_country_flag = sgt_changing_skin_note_flag }
         any_owned_leader = {
-            has_leader_flag = ge_suigintou_flag
+            has_leader_flag = roz_suigintou_flag
         }
     }
     immediate = {
         set_country_flag = sgt_changing_skin_note_flag
 
         get_ge_leader_target = {
-            flag = ge_suigintou_flag
+            flag = roz_suigintou_flag
 
         }
     }
@@ -53,11 +53,11 @@ country_event = {   ###换装
         is_dialog_only = yes
         hidden_effect = {
             roz_leader_change_skin_set_flag_effect = {
-                who = sgt
-                portrait = ge_suigintou
-                flag = roz_sgt_portrait_change
-                leader_flag = ge_suigintou_flag
-                portrait_key = ge_suigintou_20th
+                who = suigintou
+                portrait = roz_suigintou
+                flag = roz_suigintou_portrait_change
+                leader_flag = roz_suigintou_flag
+                portrait_key = roz_suigintou_20th
             }
         }
     }
@@ -67,11 +67,11 @@ country_event = {   ###换装
         is_dialog_only = yes
         hidden_effect = {
             roz_leader_change_skin_set_flag_effect = {
-                who = sgt
-                portrait = ge_suigintou
-                flag = roz_sgt_portrait_change
-                leader_flag = ge_suigintou_flag
-                portrait_key = ge_suigintou_20
+                who = suigintou
+                portrait = roz_suigintou
+                flag = roz_suigintou_portrait_change
+                leader_flag = roz_suigintou_flag
+                portrait_key = roz_suigintou_20
             }
         }
     }
@@ -81,11 +81,11 @@ country_event = {   ###换装
         is_dialog_only = yes
         hidden_effect = {
             roz_leader_change_skin_set_flag_effect = {
-                who = sgt
-                portrait = ge_suigintou
-                flag = roz_sgt_portrait_change
-                leader_flag = ge_suigintou_flag
-                portrait_key = ge_suigintou_21
+                who = suigintou
+                portrait = roz_suigintou
+                flag = roz_suigintou_portrait_change
+                leader_flag = roz_suigintou_flag
+                portrait_key = roz_suigintou_21
             }
         }
     }
@@ -95,11 +95,11 @@ country_event = {   ###换装
         is_dialog_only = yes
         hidden_effect = {
             roz_leader_change_skin_set_flag_effect = {
-                who = sgt
-                portrait = ge_suigintou
-                flag = roz_sgt_portrait_change
-                leader_flag = ge_suigintou_flag
-                portrait_key = ge_suigintou_22
+                who = suigintou
+                portrait = roz_suigintou
+                flag = roz_suigintou_portrait_change
+                leader_flag = roz_suigintou_flag
+                portrait_key = roz_suigintou_22
             }
         }
     }
@@ -112,16 +112,16 @@ country_event = {   ###换装
     #        if = {
     #            limit = {
     #                any_owned_leader = {
-    #                    has_leader_flag = ge_suigintou_flag
+    #                    has_leader_flag = roz_suigintou_flag
     #                    is_event_leader = yes
     #                }
     #            }
     #        }
     #        every_owned_leader = {
     #            limit = {
-    #                has_leader_flag = ge_suigintou_flag
+    #                has_leader_flag = roz_suigintou_flag
     #            }
-    #            change_leader_portrait = ge_suigintou_3
+    #            change_leader_portrait = roz_suigintou_3
     #        }
     #    }
     #}
@@ -132,11 +132,11 @@ country_event = {   ###换装
         is_dialog_only = yes
         hidden_effect = {
             roz_leader_change_skin_set_flag_effect = {
-                who = sgt
-                portrait = ge_suigintou
-                flag = roz_sgt_portrait_change
-                leader_flag = ge_suigintou_flag
-                portrait_key = ge_suigintou_4
+                who = suigintou
+                portrait = roz_suigintou
+                flag = roz_suigintou_portrait_change
+                leader_flag = roz_suigintou_flag
+                portrait_key = roz_suigintou_4
             }
         }
     }
@@ -149,16 +149,16 @@ country_event = {   ###换装
     #        if = {
     #            limit = {
     #                any_owned_leader = {
-    #                    has_leader_flag = ge_suigintou_flag
+    #                    has_leader_flag = roz_suigintou_flag
     #                    is_event_leader = yes
     #                }
     #            }
     #        }
     #        every_owned_leader = {
     #            limit = {
-    #                has_leader_flag = ge_suigintou_flag
+    #                has_leader_flag = roz_suigintou_flag
     #            }
-    #            change_leader_portrait = ge_suigintou_5
+    #            change_leader_portrait = roz_suigintou_5
     #        }
     #    }
     #}
@@ -169,11 +169,11 @@ country_event = {   ###换装
         is_dialog_only = yes
         hidden_effect = {
             roz_leader_change_skin_set_flag_effect = {
-                who = sgt
-                portrait = ge_suigintou
-                flag = roz_sgt_portrait_change
-                leader_flag = ge_suigintou_flag
-                portrait_key = ge_suigintou_6
+                who = suigintou
+                portrait = roz_suigintou
+                flag = roz_suigintou_portrait_change
+                leader_flag = roz_suigintou_flag
+                portrait_key = roz_suigintou_6
             }
         }
     }
@@ -184,11 +184,11 @@ country_event = {   ###换装
         is_dialog_only = yes
         hidden_effect = {
             roz_leader_change_skin_set_flag_effect = {
-                who = sgt
-                portrait = ge_suigintou
-                flag = roz_sgt_portrait_change
-                leader_flag = ge_suigintou_flag
-                portrait_key = ge_suigintou_61
+                who = suigintou
+                portrait = roz_suigintou
+                flag = roz_suigintou_portrait_change
+                leader_flag = roz_suigintou_flag
+                portrait_key = roz_suigintou_61
             }
         }
     }
@@ -202,16 +202,16 @@ country_event = {   ###换装
     #        if = {
     #            limit = {
     #                any_owned_leader = {
-    #                    has_leader_flag = ge_suigintou_flag
+    #                    has_leader_flag = roz_suigintou_flag
     #                    is_event_leader = yes
     #                }
     #            }
     #        }
     #        every_owned_leader = {
     #            limit = {
-    #                has_leader_flag = ge_suigintou_flag
+    #                has_leader_flag = roz_suigintou_flag
     #            }
-    #            change_leader_portrait = ge_suigintou_7
+    #            change_leader_portrait = roz_suigintou_7
     #        }
     #    }
     #}
@@ -222,11 +222,11 @@ country_event = {   ###换装
         is_dialog_only = yes
         hidden_effect = {
             roz_leader_change_skin_set_flag_effect = {
-                who = sgt
-                portrait = ge_suigintou
-                flag = roz_sgt_portrait_change
-                leader_flag = ge_suigintou_flag
-                portrait_key = ge_suigintou_8
+                who = suigintou
+                portrait = roz_suigintou
+                flag = roz_suigintou_portrait_change
+                leader_flag = roz_suigintou_flag
+                portrait_key = roz_suigintou_8
             }
         }
     }
@@ -239,16 +239,16 @@ country_event = {   ###换装
     #        if = {
     #            limit = {
     #                any_owned_leader = {
-    #                    has_leader_flag = ge_suigintou_flag
+    #                    has_leader_flag = roz_suigintou_flag
     #                    is_event_leader = yes
     #                }
     #            }
     #        }
     #        every_owned_leader = {
     #            limit = {
-    #                has_leader_flag = ge_suigintou_flag
+    #                has_leader_flag = roz_suigintou_flag
     #            }
-    #            change_leader_portrait = ge_suigintou_9
+    #            change_leader_portrait = roz_suigintou_9
     #        }
     #    }
     #}
@@ -259,11 +259,11 @@ country_event = {   ###换装
         is_dialog_only = yes
         hidden_effect = {
             roz_leader_change_skin_set_flag_effect = {
-                who = sgt
-                portrait = ge_suigintou
-                flag = roz_sgt_portrait_change
-                leader_flag = ge_suigintou_flag
-                portrait_key = ge_suigintou_10
+                who = suigintou
+                portrait = roz_suigintou
+                flag = roz_suigintou_portrait_change
+                leader_flag = roz_suigintou_flag
+                portrait_key = roz_suigintou_10
             }
         }
     }
@@ -277,16 +277,16 @@ country_event = {   ###换装
     #        if = {
     #            limit = {
     #                any_owned_leader = {
-    #                    has_leader_flag = ge_suigintou_flag
+    #                    has_leader_flag = roz_suigintou_flag
     #                    is_event_leader = yes
     #                }
     #            }
     #        }
     #        every_owned_leader = {
     #            limit = {
-    #                has_leader_flag = ge_suigintou_flag
+    #                has_leader_flag = roz_suigintou_flag
     #            }
-    #            change_leader_portrait = ge_suigintou_12
+    #            change_leader_portrait = roz_suigintou_12
     #        }
     #    }
     #}
@@ -299,16 +299,16 @@ country_event = {   ###换装
     #        if = {
     #            limit = {
     #                any_owned_leader = {
-    #                    has_leader_flag = ge_suigintou_flag
+    #                    has_leader_flag = roz_suigintou_flag
     #                    is_event_leader = yes
     #                }
     #            }
     #        }
     #        every_owned_leader = {
     #            limit = {
-    #                has_leader_flag = ge_suigintou_flag
+    #                has_leader_flag = roz_suigintou_flag
     #            }
-    #            change_leader_portrait = ge_suigintou_13
+    #            change_leader_portrait = roz_suigintou_13
     #        }
     #    }
     #}
@@ -320,11 +320,11 @@ country_event = {   ###换装
         is_dialog_only = yes
         hidden_effect = {
             roz_leader_change_skin_set_flag_effect = {
-                who = sgt
-                portrait = ge_suigintou
-                flag = roz_sgt_portrait_change
-                leader_flag = ge_suigintou_flag
-                portrait_key = ge_suigintou_15
+                who = suigintou
+                portrait = roz_suigintou
+                flag = roz_suigintou_portrait_change
+                leader_flag = roz_suigintou_flag
+                portrait_key = roz_suigintou_15
             }
         }
     }
@@ -335,11 +335,11 @@ country_event = {   ###换装
         is_dialog_only = yes
         hidden_effect = {
             roz_leader_change_skin_set_flag_effect = {
-                who = sgt
-                portrait = ge_suigintou
-                flag = roz_sgt_portrait_change
-                leader_flag = ge_suigintou_flag
-                portrait_key = ge_suigintou_14
+                who = suigintou
+                portrait = roz_suigintou
+                flag = roz_suigintou_portrait_change
+                leader_flag = roz_suigintou_flag
+                portrait_key = roz_suigintou_14
             }
         }
     }
@@ -351,7 +351,7 @@ country_event = {   ###换装
         trigger = {
             OR = {
                 check_variable = {
-                    which = ge_leader_aft_sgt
+                    which = roz_leader_aft_suigintou
                     value > 90
                 }
                 has_country_flag = ge_suigintou_sp1_event
@@ -359,11 +359,11 @@ country_event = {   ###换装
         }
         hidden_effect = {
             roz_leader_change_skin_set_flag_effect = {
-                who = sgt
-                portrait = ge_suigintou
-                flag = roz_sgt_portrait_change
-                leader_flag = ge_suigintou_flag
-                portrait_key = ge_suigintou_sp1
+                who = suigintou
+                portrait = roz_suigintou
+                flag = roz_suigintou_portrait_change
+                leader_flag = roz_suigintou_flag
+                portrait_key = roz_suigintou_sp1
             }
         }
     }
@@ -374,18 +374,18 @@ country_event = {   ###换装
         is_dialog_only = yes
         trigger = {
             check_variable = {
-                which = ge_leader_aft_sgt
+                which = roz_leader_aft_suigintou
                 value > 90
             }
             #always = no
         }
         hidden_effect = {
             roz_leader_change_skin_set_flag_effect = {
-                who = sgt
-                portrait = ge_suigintou
-                flag = roz_sgt_portrait_change
-                leader_flag = ge_suigintou_flag
-                portrait_key = ge_suigintou_sp2
+                who = suigintou
+                portrait = roz_suigintou
+                flag = roz_suigintou_portrait_change
+                leader_flag = roz_suigintou_flag
+                portrait_key = roz_suigintou_sp2
             }
         }
     }

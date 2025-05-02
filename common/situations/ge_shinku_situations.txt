@@ -244,7 +244,7 @@ roz_shuukan_shoujonotsukurikata_situation = {
         #modifier = {
         #    desc = roz_
         #    owner = {
-        #        has_country_flag = ge_leader_suigintou_get
+        #        has_country_flag = roz_leader_suigintou_get
         #    }
         #    add = 0.5
         #}

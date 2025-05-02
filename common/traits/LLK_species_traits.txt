@@ -111,7 +111,7 @@ trait_cor_dragon_totem = {
 					has_civic = civic_cor_celestial_military
 					has_civic = civic_cor_time_honored
 				}
-				has_country_flag = ge_leader_suigintou_get
+				has_country_flag = roz_leader_suigintou_get
 				has_country_flag = ge_final_ascension_project_completed
 			}
 		}
@@ -124,7 +124,7 @@ trait_cor_dragon_totem = {
 					has_civic = civic_cor_celestial_military
 					has_civic = civic_cor_time_honored
 				}
-				has_country_flag = ge_leader_suigintou_get
+				has_country_flag = roz_leader_suigintou_get
 				has_country_flag = ge_final_ascension_project_completed
 			}
 		}

@@ -5,7 +5,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		has_country_flag = ge_leader_suigintou_get
+		has_country_flag = roz_leader_suigintou_get
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
@@ -72,7 +72,7 @@ country_event = {
 # 	is_triggered_only = yes
 # 	hide_window = yes
 # 	trigger = {
-# 		has_country_flag = ge_leader_suigintou_get
+# 		has_country_flag = roz_leader_suigintou_get
 # 	}
 # 	immediate = {
 # 		fromfrom = {
@@ -97,7 +97,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		has_country_flag = ge_leader_suigintou_get
+		has_country_flag = roz_leader_suigintou_get
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
@@ -164,7 +164,7 @@ country_event = {
 # 	is_triggered_only = yes
 # 	hide_window = yes
 # 	trigger = {
-# 		has_country_flag = ge_leader_suigintou_get
+# 		has_country_flag = roz_leader_suigintou_get
 # 	}
 # 	immediate = {
 # 		fromfrom = {
@@ -189,7 +189,7 @@ country_event = {
 #	hide_window = yes
 #	trigger = {
 #		is_ai = no
-#		has_country_flag = ge_leader_suigintou_get
+#		has_country_flag = roz_leader_suigintou_get
 #	}
 #	immediate = {
 #
@@ -629,7 +629,7 @@ country_event = {
 			#	every_ship_in_system = {
 			#		limit = {
 			#			NOT = { has_ship_flag = roz_krks_mind_drain_flag }
-			#			NOT = { owner = { has_country_flag = ge_leader_suigintou_get } }
+			#			NOT = { owner = { has_country_flag = roz_leader_suigintou_get } }
 			#		}
 			#		set_variable = {
 			#			which = roz_krks_level_var
@@ -677,7 +677,7 @@ ship_event = {
 					}
 					NOT = {
 						owner = {	#对拥有水银灯的国家无效
-							has_country_flag = ge_leader_suigintou_get
+							has_country_flag = roz_leader_suigintou_get
 						}
 					}
 				}
@@ -764,7 +764,7 @@ country_event = {
 			#	area = society
 			#	OR = {
 			#		has_trait = leader_trait_ge_mercury_lamp_scientist
-			#		has_leader_flag = ge_suigintou_flag
+			#		has_leader_flag = roz_suigintou_flag
 			#	}
 			#}
 			any_owned_leader = {
@@ -773,7 +773,7 @@ country_event = {
 				leader_class = scientist
 				OR = {
 					has_trait = leader_trait_ge_mercury_lamp_scientist
-					has_leader_flag = ge_suigintou_flag
+					has_leader_flag = roz_suigintou_flag
 				}
 			}
 		}
@@ -879,14 +879,14 @@ country_event = {
 		#	area = society
 		#	OR = {
 		#		has_trait = leader_trait_ge_mercury_lamp_scientist
-		#		has_leader_flag = ge_suigintou_flag
+		#		has_leader_flag = roz_suigintou_flag
 		#	}
 		#}
 		any_owned_leader = {
 			is_councilor = yes
 			OR = {
 				has_trait = leader_trait_ge_mercury_lamp_scientist
-				has_leader_flag = ge_suigintou_flag
+				has_leader_flag = roz_suigintou_flag
 			}
 		}
 	}
@@ -943,7 +943,7 @@ ship_event = {
 	trigger = {
 		exists = leader
 		leader = {
-			has_leader_flag = ge_suigintou_flag
+			has_leader_flag = roz_suigintou_flag
 			has_trait = leader_trait_ge_N_field_scientist
 		}
 	}
@@ -977,7 +977,7 @@ country_event = {
 	trigger = {
 		fromfrom = {
 			#leader = {
-			#	has_leader_flag = ge_suigintou_flag
+			#	has_leader_flag = roz_suigintou_flag
 			#}
 			any_owned_ship = {
 				has_component = ge_shippart_genesis_lake

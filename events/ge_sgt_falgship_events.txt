@@ -1,7 +1,7 @@
-namespace = ge_sgt_falgship_events
+namespace = ge_sgt_flagship_events
 ###anomaly
 country_event = {
-	id = ge_sgt_falgship_events.99
+	id = ge_sgt_flagship_events.99
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -23,11 +23,11 @@ country_event = {
 					is_colony = no
 					has_anomaly = no
 				}
-				add_anomaly = {
-					category = roz_unknow_crashed_flagship_category
-					target = root
-				}
-				save_event_target_as = roz_sgt_flagship_target
+				# add_anomaly = {
+				# 	category = roz_unknow_crashed_flagship_category
+				# 	target = root
+				# }
+				save_event_target_as = roz_sgt_flagship_target@root
 			}
 		}
 		else_if = {
@@ -44,83 +44,70 @@ country_event = {
 					category = roz_unknow_crashed_flagship_category
 					target = solar_system.owner
 				}
-				save_event_target_as = roz_sgt_flagship_target
+				save_event_target_as = roz_sgt_flagship_target@root
 			}
 		}
-		create_fleet = {
-			effect = {
-				create_ship = {
-					name = random
-					random_existing_design = science
-					graphical_culture = owner
-					effect = {
-						save_event_target_as = roz_sgt_flagship_science_target
-					}
-				}
-				set_owner = prev
-				set_location = event_target:roz_sgt_flagship_target
-			}
-		}
-		event_target:roz_sgt_flagship_science_target = {
-			ship_event = { id = ge_sgt_falgship_events.100 }
+		country_event = {
+			id = ge_sgt_flagship_events.100
 		}
 	}
 }
 
-ship_event = {	#发现神秘舰船
-	id = ge_sgt_falgship_events.100
-	title = "ge_sgt_falgship_events.100.name"
-	desc = "ge_sgt_falgship_events.100.desc"
+country_event = {	#发现神秘舰船
+	id = ge_sgt_flagship_events.100
+	title = "ge_sgt_flagship_events.100.name"
+	desc = "ge_sgt_flagship_events.100.desc"
 	picture = GFX_evt_ship_in_orbit
 	show_sound = event_radio_chatter_02
-	location = event_target:roz_sgt_flagship_target
+	location = event_target:roz_sgt_flagship_target@root
 	is_triggered_only = yes
 	immediate = {
-		owner = { 
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = roz_sgt_unknow_flagship_spawn_country
-					}
-				}
-				set_country_flag = roz_sgt_unknow_flagship_spawn_country
-			}
-		}
-		create_ambient_object = {
-			type = ROZ_SSVL_AO
-			location = event_target:roz_sgt_flagship_target
-			scale = 0.4
-			entity_scale_to_size = no
-			use_3d_location = yes
-			entity_offset = { min = 1 max = 3 }
-			entity_offset_angle = { min = 10 max = 180 }
-			entity_offset_height = { min = 6 max = 10 }
-		}
-		last_created_ambient_object = {
-			save_global_event_target_as = ROZ_SSVL_AO_target@root.owner
-		}
-		create_ambient_object = {
-			type = nebula_planet_smoke
-			scale = 3
-			location = event_target:roz_sgt_flagship_target
-		}
 		if = {
 			limit = {
-				exists = event_target:roz_sgt_flagship_science_target
+				NOT = {
+					has_country_flag = roz_sgt_unknow_flagship_spawn_country
+				}
 			}
-			destroy_ship = event_target:roz_sgt_flagship_science_target
+			set_country_flag = roz_sgt_unknow_flagship_spawn_country
+		}
+		event_target:roz_sgt_flagship_target@root = {
+			create_ambient_object = {
+				type = ROZ_SSVL_AO
+				location = event_target:roz_sgt_flagship_target@root
+				scale = 0.4
+				entity_scale_to_size = no
+				use_3d_location = yes
+				entity_offset = { min = 1 max = 3 }
+				entity_offset_angle = { min = 10 max = 180 }
+				entity_offset_height = { min = 6 max = 10 }
+			}
+			last_created_ambient_object = {
+				save_global_event_target_as = ROZ_SSVL_AO_target@root
+			}
+			create_ambient_object = {
+				type = nebula_planet_smoke
+				scale = 3
+				location = event_target:roz_sgt_flagship_target@root
+			}
 		}
 	}
 	option = {
-		name = ge_sgt_falgship_events.100.a
+		name = ge_sgt_flagship_events.100.a
+		enable_special_project = {
+			name = ge_sgt_flagship_proj_start
+			location = event_target:ROZ_SSVL_AO_target@root
+		}
+		add_resource = {
+			influence = 15
+		}
 	}
 	
 }
 
 ship_event = {	#进展
-	id = ge_sgt_falgship_events.101
-	title = "ge_sgt_falgship_events.101.name"
-	desc = "ge_sgt_falgship_events.101.desc"
+	id = ge_sgt_flagship_events.101
+	title = "ge_sgt_flagship_events.101.name"
+	desc = "ge_sgt_flagship_events.101.desc"
 	picture = GFX_roz_sgt_flagship_dark
 	show_sound = event_encrypted_comms
 	location = from
@@ -131,7 +118,7 @@ ship_event = {	#进展
         }
     }
 	option = {
-		name = ge_sgt_falgship_events.101.a
+		name = ge_sgt_flagship_events.101.a
 		hidden_effect = {
 			owner = {
 				start_situation = {
@@ -144,32 +131,32 @@ ship_event = {	#进展
 		}
 	}
 	#option = {
-	#	name = ge_sgt_falgship_events.101.b
+	#	name = ge_sgt_flagship_events.101.b
 	#}
 }
 
 country_event = {	#局势起步事件
-	id = ge_sgt_falgship_events.110
-	title = "ge_sgt_falgship_events.110.name"
-	desc = "ge_sgt_falgship_events.110.desc"
+	id = ge_sgt_flagship_events.110
+	title = "ge_sgt_flagship_events.110.name"
+	desc = "ge_sgt_flagship_events.110.desc"
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_evt_
 	
 	option = {
-		name = ge_sgt_falgship_events.110.a
+		name = ge_sgt_flagship_events.110.a
 		default_hide_option = yes
 	}
 }
 
 situation_event = {
-	id = ge_sgt_falgship_events.111
+	id = ge_sgt_flagship_events.111
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
 		owner = {
 			get_ge_leader_target = { 
-				flag = ge_suigintou_flag 
+				flag = roz_suigintou_flag 
 			}
 		}
 		
@@ -181,10 +168,10 @@ situation_event = {
 		owner = {
 			if = {
 				limit = { 
-					has_country_flag = ge_leader_suigintou_get
+					has_country_flag = roz_leader_suigintou_get
 				}
 				country_event = {
-					id = ge_sgt_falgship_events.1111
+					id = ge_sgt_flagship_events.1111
 				}
 			}		
 		}
@@ -194,9 +181,9 @@ situation_event = {
 }
 
 country_event = {	#局势stage1	水银灯对话
-	id = ge_sgt_falgship_events.1111
-	title = "ge_sgt_falgship_events.1111.name"
-	desc = "ge_sgt_falgship_events.1111.desc"
+	id = ge_sgt_flagship_events.1111
+	title = "ge_sgt_flagship_events.1111.name"
+	desc = "ge_sgt_flagship_events.1111.desc"
 	is_triggered_only = yes
 	fire_only_once = yes
 	diplomatic = yes
@@ -205,25 +192,25 @@ country_event = {	#局势stage1	水银灯对话
 		room = ge_sgt_main_room
 	}
 	trigger = {
-		has_country_flag = ge_leader_suigintou_get
+		has_country_flag = roz_leader_suigintou_get
 	}
 	immediate = {
 		get_ge_leader_target = { 
-			flag = ge_suigintou_flag 
+			flag = roz_suigintou_flag 
 		}
 		
 	}
 	option = {
-		name = ge_sgt_falgship_events.1111.a
+		name = ge_sgt_flagship_events.1111.a
 		default_hide_option = yes
-		custom_tooltip = ge_sgt_falgship_events.1111.a.ct			
+		custom_tooltip = ge_sgt_flagship_events.1111.a.ct			
 	}
 }
 
 situation_event = {	#局势stage2
-	id = ge_sgt_falgship_events.112
-	title = "ge_sgt_falgship_events.112.name"
-	desc = "ge_sgt_falgship_events.112.desc"
+	id = ge_sgt_flagship_events.112
+	title = "ge_sgt_flagship_events.112.name"
+	desc = "ge_sgt_flagship_events.112.desc"
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_evt_discovered_hidden_door
@@ -235,13 +222,13 @@ situation_event = {	#局势stage2
 		remove_situation_flag = triggered_ge_sgt_falgship_5
 	}
 	option = {
-		name = ge_sgt_falgship_events.112.a
+		name = ge_sgt_flagship_events.112.a
 		default_hide_option = yes
 		
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = ge_sgt_falgship_events.1121
+					id = ge_sgt_flagship_events.1121
 					days = 60
 				}
 			}
@@ -250,18 +237,18 @@ situation_event = {	#局势stage2
 }
 
 country_event = {	#stage2后续1
-	id = ge_sgt_falgship_events.1121
-	title = "ge_sgt_falgship_events.1121.name"
-	desc = "ge_sgt_falgship_events.1121.desc"
+	id = ge_sgt_flagship_events.1121
+	title = "ge_sgt_flagship_events.1121.name"
+	desc = "ge_sgt_flagship_events.1121.desc"
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_evt_scholarium_anomaly
 	show_sound = event_ancient_drone
 	option = {
-		name = ge_sgt_falgship_events.1121.a
+		name = ge_sgt_flagship_events.1121.a
 		hidden_effect = {
 			country_event = {
-				id = ge_sgt_falgship_events.1122
+				id = ge_sgt_flagship_events.1122
 				days = 10
 			}
 		}
@@ -269,14 +256,14 @@ country_event = {	#stage2后续1
 }
 
 country_event = {	#stage2后续2
-	id = ge_sgt_falgship_events.1122
-	title = "ge_sgt_falgship_events.1122.name"
-	desc = "ge_sgt_falgship_events.1122.desc"
+	id = ge_sgt_flagship_events.1122
+	title = "ge_sgt_flagship_events.1122.name"
+	desc = "ge_sgt_flagship_events.1122.desc"
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_evt_scholarium_cache_engineering
 	option = {
-		name = ge_sgt_falgship_events.1122.a
+		name = ge_sgt_flagship_events.1122.a
 		owner = {		
 			#set_update_modifiers_batch = begin
 			add_resource = {
@@ -298,9 +285,9 @@ country_event = {	#stage2后续2
 }
 
 situation_event = {	#局势stage3
-	id = ge_sgt_falgship_events.113
-	title = "ge_sgt_falgship_events.113.name"
-	desc = "ge_sgt_falgship_events.113.desc"
+	id = ge_sgt_flagship_events.113
+	title = "ge_sgt_flagship_events.113.name"
+	desc = "ge_sgt_flagship_events.113.desc"
 	is_triggered_only = yes
 	picture = GFX_evt_roz_space_1
 	immediate = {
@@ -311,16 +298,16 @@ situation_event = {	#局势stage3
 		remove_situation_flag = triggered_ge_sgt_falgship_5
 	}
 	option = {
-		name = ge_sgt_falgship_events.113.a
+		name = ge_sgt_flagship_events.113.a
 		default_hide_option = yes
 		
 	}
 }
 
 situation_event = {	#局势stage4
-	id = ge_sgt_falgship_events.114
-	title = "ge_sgt_falgship_events.114.name"
-	desc = "ge_sgt_falgship_events.114.desc"
+	id = ge_sgt_flagship_events.114
+	title = "ge_sgt_flagship_events.114.name"
+	desc = "ge_sgt_flagship_events.114.desc"
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_evt_roz_imperial
@@ -332,11 +319,11 @@ situation_event = {	#局势stage4
 		remove_situation_flag = triggered_ge_sgt_falgship_5
 	}
 	option = {
-		name = ge_sgt_falgship_events.114.a
+		name = ge_sgt_flagship_events.114.a
 		default_hide_option = yes
 		owner = {
 			country_event = {
-				id = ge_sgt_falgship_events.1141
+				id = ge_sgt_flagship_events.1141
 			}
 		}
 		
@@ -344,36 +331,36 @@ situation_event = {	#局势stage4
 	}
 }
 country_event = {
-	id = ge_sgt_falgship_events.1141
-	title = "ge_sgt_falgship_events.1141.name"
-	desc = "ge_sgt_falgship_events.1141.desc"
+	id = ge_sgt_flagship_events.1141
+	title = "ge_sgt_flagship_events.1141.name"
+	desc = "ge_sgt_flagship_events.1141.desc"
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_evt_roz_imperial
 	option = {
-		name = ge_sgt_falgship_events.1141.a
+		name = ge_sgt_flagship_events.1141.a
 		country_event = {
-			id = ge_sgt_falgship_events.1142
+			id = ge_sgt_flagship_events.1142
 		}
 	}
 }
 
 country_event = {
-	id = ge_sgt_falgship_events.1142
-	title = "ge_sgt_falgship_events.1142.name"
-	desc = "ge_sgt_falgship_events.1142.desc"
+	id = ge_sgt_flagship_events.1142
+	title = "ge_sgt_flagship_events.1142.name"
+	desc = "ge_sgt_flagship_events.1142.desc"
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_evt_enclave_overlord
 	option = {
-		name = ge_sgt_falgship_events.1142.a
+		name = ge_sgt_flagship_events.1142.a
 	}
 }
 
 situation_event = {	#局势stage5
-	id = ge_sgt_falgship_events.115
-	title = "ge_sgt_falgship_events.115.name"
-	desc = "ge_sgt_falgship_events.115.desc"
+	id = ge_sgt_flagship_events.115
+	title = "ge_sgt_flagship_events.115.name"
+	desc = "ge_sgt_flagship_events.115.desc"
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_evt_ancient_databank
@@ -385,7 +372,7 @@ situation_event = {	#局势stage5
 		set_situation_flag = triggered_ge_sgt_falgship_5
 	}
 	option = {
-		name = ge_sgt_falgship_events.115.a
+		name = ge_sgt_flagship_events.115.a
 		default_hide_option = yes
 		owner = {
 			#set_update_modifiers_batch = begin
@@ -395,37 +382,37 @@ situation_event = {	#局势stage5
 			#set_update_modifiers_batch = end
 		}
 		situation_event = {
-			id = ge_sgt_falgship_events.1151
+			id = ge_sgt_flagship_events.1151
 		}
 		
 	}
 }
 
 situation_event = {
-	id = ge_sgt_falgship_events.1151
-	title = "ge_sgt_falgship_events.1151.name"
-	desc = "ge_sgt_falgship_events.1151.desc"
+	id = ge_sgt_flagship_events.1151
+	title = "ge_sgt_flagship_events.1151.name"
+	desc = "ge_sgt_flagship_events.1151.desc"
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_evt_shroudwalker_enclave
 	option = {
-		name = ge_sgt_falgship_events.1151.a
+		name = ge_sgt_flagship_events.1151.a
 		situation_event = {
-			id = ge_sgt_falgship_events.1152
+			id = ge_sgt_flagship_events.1152
 		}
 	}
 }
 
 situation_event = {
-	id = ge_sgt_falgship_events.1152
-	title = "ge_sgt_falgship_events.1152.name"
-	desc = "ge_sgt_falgship_events.1152.desc"
+	id = ge_sgt_flagship_events.1152
+	title = "ge_sgt_flagship_events.1152.name"
+	desc = "ge_sgt_flagship_events.1152.desc"
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_roz_sgt_flagship_dark
 	option = {
-		name = ge_sgt_falgship_events.1152.a
-		custom_tooltip = ge_sgt_falgship_events.1152.a.ct
+		name = ge_sgt_flagship_events.1152.a
+		custom_tooltip = ge_sgt_flagship_events.1152.a.ct
 		hidden_effect = {
 			add_situation_progress = 25
 			owner = {
@@ -479,9 +466,9 @@ situation_event = {
 }
 
 situation_event = {	#stage1随机事件-舰桥数据中心
-	id = ge_sgt_falgship_events.121
-	title = "ge_sgt_falgship_events.121.name"
-	desc = "ge_sgt_falgship_events.121.desc"
+	id = ge_sgt_flagship_events.121
+	title = "ge_sgt_flagship_events.121.name"
+	desc = "ge_sgt_flagship_events.121.desc"
 	is_triggered_only = yes
 	#fire_only_once = yes
 	picture = GFX_evt_satellite_in_orbit
@@ -500,17 +487,17 @@ situation_event = {	#stage1随机事件-舰桥数据中心
 		}
 	}
 	option = {
-		name = ge_sgt_falgship_events.121.b
+		name = ge_sgt_flagship_events.121.b
 		trigger = {
 			owner = {
-				has_country_flag = ge_leader_suigintou_get
+				has_country_flag = roz_leader_suigintou_get
 			}
 		}
 		add_situation_progress = 2
 	}
 
 	option = {
-		name = ge_sgt_falgship_events.121.a
+		name = ge_sgt_flagship_events.121.a
 		owner = {
 			#set_update_modifiers_batch = begin
 			add_modifier = {
@@ -529,9 +516,9 @@ situation_event = {	#stage1随机事件-舰桥数据中心
 }
 
 situation_event = {	#stage2随机事件-舰载工坊-获得科技冶金技术1
-	id = ge_sgt_falgship_events.122
-	title = "ge_sgt_falgship_events.122.name"
-	desc = "ge_sgt_falgship_events.122.desc"
+	id = ge_sgt_flagship_events.122
+	title = "ge_sgt_flagship_events.122.name"
+	desc = "ge_sgt_flagship_events.122.desc"
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_evt_
@@ -539,7 +526,7 @@ situation_event = {	#stage2随机事件-舰载工坊-获得科技冶金技术1
 		has_situation_flag = triggered_ge_sgt_falgship_2
 	}
 	option = {
-		name = ge_sgt_falgship_events.122.a
+		name = ge_sgt_flagship_events.122.a
 		owner = {
 			give_technology = {
 				tech = tech_advanced_metallurgy_1
@@ -549,9 +536,9 @@ situation_event = {	#stage2随机事件-舰载工坊-获得科技冶金技术1
 }
 
 situation_event = {	#stage3随机事件-猜谜
-	id = ge_sgt_falgship_events.123
-	title = "ge_sgt_falgship_events.123.name"
-	desc = "ge_sgt_falgship_events.123.desc"
+	id = ge_sgt_flagship_events.123
+	title = "ge_sgt_flagship_events.123.name"
+	desc = "ge_sgt_flagship_events.123.desc"
 	is_triggered_only = yes
 	picture = GFX_evt_
 	trigger = {
@@ -561,21 +548,21 @@ situation_event = {	#stage3随机事件-猜谜
 		}
 	}
 	option = {
-		name = ge_sgt_falgship_events.123.a
+		name = ge_sgt_flagship_events.123.a
 					
 	}
 	option = {
-		name = ge_sgt_falgship_events.123.b
+		name = ge_sgt_flagship_events.123.b
 					
 	}
 	option = {	#正确选项
-		name = ge_sgt_falgship_events.123.c
+		name = ge_sgt_flagship_events.123.c
 		hidden_effect = {
 			set_situation_flag = triggered_ge_sgt_falgship_3_success
 		}
 	}
 	option = {	
-		name = ge_sgt_falgship_events.123.d
+		name = ge_sgt_flagship_events.123.d
 					
 	}
 }
@@ -586,9 +573,9 @@ situation_event = {	#stage3随机事件-猜谜
 
 ###
 planet_event = {	##特殊计划完成
-	id = ge_sgt_falgship_events.1
-	title = "ge_sgt_falgship_events.1.name"
-	desc = "ge_sgt_falgship_events.1.desc"
+	id = ge_sgt_flagship_events.1
+	title = "ge_sgt_flagship_events.1.name"
+	desc = "ge_sgt_flagship_events.1.desc"
 	picture = GFX_evt_
 	show_sound = event_radio_chatter
 	location = from
@@ -602,8 +589,8 @@ planet_event = {	##特殊计划完成
 		}
 	}
 	option = {
-		name = "ge_sgt_falgship_events.1.a"
-		custom_tooltip = ge_sgt_falgship_events_1
+		name = "ge_sgt_flagship_events.1.a"
+		custom_tooltip = ge_sgt_flagship_events_1
 		hidden_effect = {
 			solar_system.space_owner = {
 				enable_special_project = {
@@ -615,9 +602,9 @@ planet_event = {	##特殊计划完成
 }
 
 planet_event = {
-	id = ge_sgt_falgship_events.2
-	title = "ge_sgt_falgship_events.2.name"
-	desc = "ge_sgt_falgship_events.2.desc"
+	id = ge_sgt_flagship_events.2
+	title = "ge_sgt_flagship_events.2.name"
+	desc = "ge_sgt_flagship_events.2.desc"
 	picture = GFX_evt_
 	show_sound = event_radio_chatter
 	location = from
@@ -631,8 +618,8 @@ planet_event = {
 		}
 	}
 	option = {
-		name = "ge_sgt_falgship_events.2.a"
-		custom_tooltip = ge_sgt_falgship_events_2
+		name = "ge_sgt_flagship_events.2.a"
+		custom_tooltip = ge_sgt_flagship_events_2
 		hidden_effect = {
 			solar_system.space_owner = {
 				enable_special_project = {
@@ -644,9 +631,9 @@ planet_event = {
 }
 
 planet_event = {
-	id = ge_sgt_falgship_events.3
-	title = "ge_sgt_falgship_events.3.name"
-	desc = "ge_sgt_falgship_events.3.desc"
+	id = ge_sgt_flagship_events.3
+	title = "ge_sgt_flagship_events.3.name"
+	desc = "ge_sgt_flagship_events.3.desc"
 	picture = GFX_evt_
 	show_sound = event_radio_chatter
 	location = from
@@ -660,8 +647,8 @@ planet_event = {
 		}
 	}
 	option = {
-		name = "ge_sgt_falgship_events.3.a"
-		custom_tooltip = ge_sgt_falgship_events_3
+		name = "ge_sgt_flagship_events.3.a"
+		custom_tooltip = ge_sgt_flagship_events_3
 		hidden_effect = {
 			root.owner = {
 				#test
@@ -714,9 +701,9 @@ planet_event = {
 					limit = {
 						root.owner = {
 							any_owned_leader = {
-								has_leader_flag = ge_suigintou_flag
+								has_leader_flag = roz_suigintou_flag
 							}
-							has_country_flag = ge_suigintou_admiral_active
+							has_country_flag = roz_suigintou_commander_active
 						}
 					}
 					assign_leader = event_target:ge_suigintou
@@ -732,9 +719,9 @@ planet_event = {
 
 country_event = {
 	#船被干掉，全星系舰队扣血（一般不会死，除非还有狡猾.jpg
-	id = ge_sgt_falgship_events.4
-	title = "ge_sgt_falgship_events.4.name"
-	desc = "ge_sgt_falgship_events.4.desc"
+	id = ge_sgt_flagship_events.4
+	title = "ge_sgt_flagship_events.4.name"
+	desc = "ge_sgt_flagship_events.4.desc"
 	picture = GFX_evt_exploding_ship
 	show_sound = event_super_explosion
 	is_triggered_only = yes
@@ -795,21 +782,21 @@ country_event = {
 		}
 	}
 	option = {
-		name = "ge_sgt_falgship_events.4.a"
+		name = "ge_sgt_flagship_events.4.a"
 		fromfrom = {
 			leader = {
 				add_experience = 500
 			}
 		}
-		custom_tooltip = ge_sgt_falgship_events_4_ct
+		custom_tooltip = ge_sgt_flagship_events_4_ct
 	}
 }
 
 country_event = {
 	#船被干掉，全星系舰队扣血（一般不会死，除非还有狡猾.jpg
-	id = ge_sgt_falgship_events.5
-	title = "ge_sgt_falgship_events.4.name"
-	desc = "ge_sgt_falgship_events.4.desc"
+	id = ge_sgt_flagship_events.5
+	title = "ge_sgt_flagship_events.4.name"
+	desc = "ge_sgt_flagship_events.4.desc"
 	picture = GFX_evt_exploding_ship
 	show_sound = event_super_explosion
 	is_triggered_only = yes
@@ -872,14 +859,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = "ge_sgt_falgship_events.4.a"
-		custom_tooltip = ge_sgt_falgship_events_4_ct
+		name = "ge_sgt_flagship_events.4.a"
+		custom_tooltip = ge_sgt_flagship_events_4_ct
 	}
 }
 
 
 country_event = {
-	id = ge_sgt_falgship_events.9
+	id = ge_sgt_flagship_events.9
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
@@ -898,9 +885,9 @@ country_event = {
 }
 
 country_event = {
-	id = ge_sgt_falgship_events.10
-	title = "ge_sgt_falgship_events.10.title"
-	desc = "ge_sgt_falgship_events.10.desc"
+	id = ge_sgt_flagship_events.10
+	title = "ge_sgt_flagship_events.10.title"
+	desc = "ge_sgt_flagship_events.10.desc"
 	is_triggered_only = yes
 	picture = GFX_evt_roz_evt_letum_1
 	trigger = {
@@ -916,7 +903,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "ge_sgt_falgship_events.10.aa"
+		name = "ge_sgt_flagship_events.10.aa"
 		enable_special_project = {
 			name = ge_sgt_flagship_proj_1
 			owner = root
@@ -925,27 +912,27 @@ country_event = {
 		add_resource = {
 			energy = -2500
 		}
-		custom_tooltip = ge_sgt_falgship_events.10.aa.ct
+		custom_tooltip = ge_sgt_flagship_events.10.aa.ct
 	}
 }
 
 country_event = {
-	id = ge_sgt_falgship_events.11
-	title = "ge_sgt_falgship_events.11.title"
-	desc = "ge_sgt_falgship_events.11.desc"
+	id = ge_sgt_flagship_events.11
+	title = "ge_sgt_flagship_events.11.title"
+	desc = "ge_sgt_flagship_events.11.desc"
 	is_triggered_only = yes
 	picture = GFX_evt_roz_evt_letum_2
 	trigger = {
 		is_ai = no
 	}
 	option = {
-		name = "ge_sgt_falgship_events.11.aa"
+		name = "ge_sgt_flagship_events.11.aa"
 		add_resource = {
 			engineering_research = 2500
 		}
 	}
 	option = {
-		name = "ge_sgt_falgship_events.11.bb"
+		name = "ge_sgt_flagship_events.11.bb"
 		add_resource = {
 			unity = 2500
 		}
@@ -955,9 +942,9 @@ country_event = {
 ###################
 #N之领域见闻录
 country_event = {
-	id = ge_sgt_falgship_events.200
-	title = "ge_sgt_falgship_events.200.title"
-	desc = "ge_sgt_falgship_events.200.desc"
+	id = ge_sgt_flagship_events.200
+	title = "ge_sgt_flagship_events.200.title"
+	desc = "ge_sgt_flagship_events.200.desc"
 	is_triggered_only = yes
 	show_sound = event_ship_thrusters
 	picture = GFX_evt_
@@ -965,15 +952,15 @@ country_event = {
 
 	}
 	option = {
-		name = "ge_sgt_falgship_events.200.aa"
-		custom_tooltip = ge_sgt_falgship_events.200.ct1
+		name = "ge_sgt_flagship_events.200.aa"
+		custom_tooltip = ge_sgt_flagship_events.200.ct1
 		hidden_effect = {
 
 		}
 	}
 	option = {
-		name = "ge_sgt_falgship_events.200.bb"
-		custom_tooltip = ge_sgt_falgship_events.200.ct2
+		name = "ge_sgt_flagship_events.200.bb"
+		custom_tooltip = ge_sgt_flagship_events.200.ct2
 		add_resource = {
 			influence = 150
 		}
@@ -981,9 +968,9 @@ country_event = {
 }
 
 country_event = {
-	id = ge_sgt_falgship_events.201
-	title = "ge_sgt_falgship_events.201.title"
-	desc = "ge_sgt_falgship_events.201.desc"
+	id = ge_sgt_flagship_events.201
+	title = "ge_sgt_flagship_events.201.title"
+	desc = "ge_sgt_flagship_events.201.desc"
 	is_triggered_only = yes
 	show_sound = event_
 	picture = GFX_evt_
@@ -991,33 +978,33 @@ country_event = {
 
 	}
 	option = {
-		name = "ge_sgt_falgship_events.201.aa"
-		custom_tooltip = ge_sgt_falgship_events.201.res1
+		name = "ge_sgt_flagship_events.201.aa"
+		custom_tooltip = ge_sgt_flagship_events.201.res1
 
 	}
 	option = {
-		name = "ge_sgt_falgship_events.201.bb"
-		custom_tooltip = ge_sgt_falgship_events.201.res2
+		name = "ge_sgt_flagship_events.201.bb"
+		custom_tooltip = ge_sgt_flagship_events.201.res2
 
 	}
 	option = {
-		name = "ge_sgt_falgship_events.201.cc"
-		custom_tooltip = ge_sgt_falgship_events.201.res3
+		name = "ge_sgt_flagship_events.201.cc"
+		custom_tooltip = ge_sgt_flagship_events.201.res3
 
 	}
 	option = {
-		name = "ge_sgt_falgship_events.201.dd"
-		custom_tooltip = ge_sgt_falgship_events.201.res4
+		name = "ge_sgt_flagship_events.201.dd"
+		custom_tooltip = ge_sgt_flagship_events.201.res4
 
 	}
 	option = {
-		name = "ge_sgt_falgship_events.201.ee"
-		custom_tooltip = ge_sgt_falgship_events.201.res5
+		name = "ge_sgt_flagship_events.201.ee"
+		custom_tooltip = ge_sgt_flagship_events.201.res5
 
 	}
 	option = {
-		name = "ge_sgt_falgship_events.201.ff"
-		custom_tooltip = ge_sgt_falgship_events.201.res6
+		name = "ge_sgt_flagship_events.201.ff"
+		custom_tooltip = ge_sgt_flagship_events.201.res6
 
 	}
 }

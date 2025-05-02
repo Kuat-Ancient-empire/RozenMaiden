@@ -253,7 +253,7 @@ country_event = { #控制台effect测试区
 		
 	}
 	# trigger = {
-	# 	event_target:ge_suigintou_country@root = {
+	# 	event_target:roz_suigintou_global_country@root = {
 	# 		any_owned_leader = {
 	# 			leader_class = commander
 	# 			has_trait = leader_trait_ge_mercury_lamp			
@@ -263,7 +263,7 @@ country_event = { #控制台effect测试区
 	immediate = {
 		# save_global_event_target_as = roz_test
 		# event_target:roz_test = {
-		# 	set_player = event_target:ge_suigintou_owner@root
+		# 	set_player = event_target:roz_suigintou_owner@root
 		# }
 
 		# every_cosmic_storm = {
@@ -290,7 +290,7 @@ country_event = { #控制台effect测试区
 		#				name = "NAME_ge_sgt_ship"
 		#				design = last_created_design
 		#				graphical_culture = owner
-		#				#prefix = "Suigintou"
+		#				#prefix = "suigintou"
 		#				prefix = no
 		#			}
 		#			set_location = {
@@ -789,7 +789,7 @@ country_event = { #控制台effect测试区
 		#every_owned_pop = {
 		#	set_pop_flag = 1111
 		#}
-		#effect = {create_leader = {	class = scientist	name = "NAME_Suigintou"	skill = 2	gender = female	species = owner_main_species	immortal = yes	event_leader = yes   	set_age = 17	traits = {	trait = leader_trait_ge_meimei_scientist	trait = leader_trait_ge_N_field_scientist	trait = leader_trait_ge_mercury_lamp_scientist}	effect = {	change_leader_portrait = ge_suigintou_6	}}	last_created_leader = {set_leader_flag = ge_suigintou_flag set_variable = {which = ge_leader_affection value = root.ge_leader_affection_count}}}
+		#effect = {create_leader = {	class = scientist	name = "NAME_suigintou"	skill = 2	gender = female	species = owner_main_species	immortal = yes	event_leader = yes   	set_age = 17	traits = {	trait = leader_trait_ge_meimei_scientist	trait = leader_trait_ge_N_field_scientist	trait = leader_trait_ge_mercury_lamp_scientist}	effect = {	change_leader_portrait = roz_suigintou_6	}}	last_created_leader = {set_leader_flag = roz_suigintou_flag set_variable = {which = roz_suigintou_affection value = root.roz_suigintou_affection_count}}}
 		#effect = { ruler = { change_leader_portrait = event_target:roz_player_country_ruler_global_target } }
 		#effect = { ruler = { change_leader_portrait = random } }
 
@@ -807,7 +807,7 @@ country_event = { #控制台effect测试区
 		#effect =  {queue_actions = { find_closest_system = { trigger = { id = KZ_VOY_demon_fleet_action_trigger.1 any_system_planet = { is_colony = yes num_pops > 0 is_KZ_VOY_Demon_Castle = no } } found_system = { move_to = this find_closest_planet = { trigger = { id = KZ_VOY_demon_fleet_action_trigger.2 is_colony = yes num_pops > 0 is_KZ_VOY_Demon_Castle = no } found_planet = { move_to = this orbit_planet = this } } } }}}
 
 		#effect = {set_ship_design = {  design = corvette random_existing_design = 1 }}
-		#effect = { set_country_flag = roz_sgt_unknow_flagship_spawn_country give_technology = { tech = tech_ge_sgt_flagship } add_modifier = { modifier = roz_sgt_flagship_completed_buff days = -1 } home_planet = { solar_system = { starbase = { create_ambient_object = { type = ROZ_SSVL_AO location = this scale = 0.4 use_3d_location = yes entity_offset = { min = 5 max = 20 } entity_offset_height = { min = 5 max = 5 } } last_created_ambient_object = { save_global_event_target_as =ROZ_SSVL_AO_home_target } } } } set_country_flag = ge_sgt_flagship_project_enable event_target:ROZ_SSVL_AO_target@owner = { destroy_ambient_object = this } country_event = { id = ge_sgt_falgship_events.10 days = 720 random = 1800 } }
+		#effect = { set_country_flag = roz_sgt_unknow_flagship_spawn_country give_technology = { tech = tech_ge_sgt_flagship } add_modifier = { modifier = roz_sgt_flagship_completed_buff days = -1 } home_planet = { solar_system = { starbase = { create_ambient_object = { type = ROZ_SSVL_AO location = this scale = 0.4 use_3d_location = yes entity_offset = { min = 5 max = 20 } entity_offset_height = { min = 5 max = 5 } } last_created_ambient_object = { save_global_event_target_as =ROZ_SSVL_AO_home_target } } } } set_country_flag = ge_sgt_flagship_project_enable event_target:ROZ_SSVL_AO_target@owner = { destroy_ambient_object = this } country_event = { id = ge_sgt_flagship_events.10 days = 720 random = 1800 } }
 
 
 		#effect = {add_event_chain_counter = { amount = 4 counter = specimens_collected event_chain = roz_outland_system_chain } country_event = { id = roz_krks_leader_evt.55 }}
@@ -906,7 +906,7 @@ country_event = { #控制台effect测试区
 		#给每个拥有的星系刷出超空间中继器
 		#effect = {every_owned_starbase = { limit = { NOT = { solar_system = { has_megastructure = hyper_relay } } } solar_system = { spawn_megastructure = { type = hyper_relay orbit_angle = 0 orbit_distance = 0 owner = root graphical_culture = root random_pos = yes init_effect = {} } } }}
 		#
-		#effect = {random_owned_leader = { limit = { has_leader_flag = ge_suigintou_flag } remove_leader_flag = leader_BA_30 }}
+		#effect = {random_owned_leader = { limit = { has_leader_flag = roz_suigintou_flag } remove_leader_flag = leader_BA_30 }}
 
 		#tech_cloaking_1
 
@@ -933,7 +933,21 @@ country_event = { #控制台effect测试区
 		# 	from = event_target:hptar_begin
 		# 	to = event_target:hptar_end
 		# }
-		
+
+		#effect = { clone_leader = {target = event_target:roz_leader_shinku_global_target0}}
+		#trigger exists = event_target:roz_leader_shinku_global_target0
+		#trigger event_target:roz_leader_shinku_global_target0 = { leader_class = official }
+		#effect remove_country_flag = roz_suigintou_diplomatic_initialize_flag
+		#trigger has_country_flag = roz_suigintou_diplomatic_initialize_flag
+		#trigger = event_target:roz_suigintou_scientist_inactive_temp0 = { has_leader_flag = roz_suigintou_flag }
+		if = {
+			limit = { 
+				trigger event_target:roz_suigintou_commander_inactive_temp0 = { has_trait = leader_trait_ge_mercury_lamp }
+				trigger event_target:roz_leader_suigintou_global_target0 = { has_leader_flag = roz_suigintou_flag }
+				trigger any_owned_leader = { has_leader_flag = roz_suigintou_flag has_rozen_affection_trait = yes }
+			}
+		}
+
 
 		capital_scope = {
 			create_fleet = {
@@ -1279,7 +1293,6 @@ country_event = {
 	show_sound = greetings_arthopoid_special
 	picture = GFX_evt_l-gateway
 	immediate = {
-		
 		event_target:graygoo_factory_system = {
 			set_name = NAME_roz_lgate_starbase
 			create_starbase = {
@@ -1314,7 +1327,11 @@ country_event = {
 				}
 
 			}
-
+		}
+	}
+	option = {
+		name = ge_test_event.201.aa
+		hidden_effect = {
 			if = {
 				limit = { 
 					has_country_flag = enable_roz_cheat
@@ -1322,29 +1339,6 @@ country_event = {
 				roz_lgate_create_reward_planet = yes
 			}
 		}
-	}
-	option = {
-		name = ge_test_event.201.aa
-		every_megastructure = {
-			limit = {
-				any_fleet_in_orbit = {
-
-				}
-			}
-		}
-		capital_scope = {
-
-			#set_owner = root
-			#while = {
-			#	count = 10
-			#	create_pop = {
-			#		species = space_owner
-			#		ethos = space_owner
-			#	}
-			#}
-
-		}
-
 	}
 }
 
@@ -1383,9 +1377,9 @@ country_event = { # Remove Date Distortion
 #	is_triggered_only = yes
 #	hide_window = yes
 #	trigger = {
-#		has_country_flag = ge_suigintou_scientist_active
+#		has_country_flag = roz_suigintou_scientist_active
 #		from = {
-#			has_leader_flag = ge_suigintou_flag
+#			has_leader_flag = roz_suigintou_flag
 #		}
 #			from = {
 #				fleet = {
@@ -1406,11 +1400,11 @@ country_event = { # Remove Date Distortion
 #			clone_leader = {
 #				target = this
 #				effect = {
-#					save_global_event_target_as = ge_suigintou_scientist_inactive_temp@root
-#					#set_leader_flag = ge_suigintou_flag
+#					save_global_event_target_as = roz_suigintou_scientist_inactive_temp@root
+#					#set_leader_flag = roz_suigintou_flag
 #					unassign_leader = this
-#					set_name = "NAME_Suigintou"
-#					set_owner = event_target:ge_suigintou_country@root
+#					set_name = "NAME_suigintou"
+#					set_owner = event_target:roz_suigintou_global_country@root
 #
 #					freeze_leader_age = yes
 #
@@ -1454,7 +1448,7 @@ country_event = {
 				}
 			}
 			effect = {
-				save_global_event_target_as = ge_suigintou_country_test
+				save_global_event_target_as = roz_suigintou_global_country_test
 				establish_communications_no_message = prev
 				set_graphical_culture = prev
 				set_faction_hostility = {

@@ -692,7 +692,7 @@ country_event = {
 		NOR = {
 			has_country_flag = ge_sgt_site_find_flag
 			has_country_flag = ge_sgt_site_find_2_flag
-			has_country_flag = ge_leader_suigintou_get
+			has_country_flag = roz_leader_suigintou_get
 			solar_system = {
 				any_system_planet = {
 					has_planet_flag = ge_planet_flag_sgt@root
@@ -1215,7 +1215,7 @@ fleet_event = {
 		name = ge_sites.407.bb
 		trigger = {
 			owner = {
-				has_country_flag = ge_leader_suigintou_get
+				has_country_flag = roz_leader_suigintou_get
 			}
 		}
 		owner = {
@@ -1254,10 +1254,10 @@ fleet_event = {
 			hidden_effect = {
 				every_owned_leader = {
 					limit = {
-						has_leader_flag = ge_suigintou_flag
+						has_leader_flag = roz_suigintou_flag
 					}
 					change_variable = {
-						which = ge_leader_affection
+						which = roz_suigintou_affection
 						value = 1
 					}
 				}

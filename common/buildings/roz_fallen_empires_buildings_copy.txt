@@ -25,7 +25,7 @@ building_roz_ancient_palace = {
     planet_modifier = {
         planet_housing_add = 20
         planet_amenities_add = 150
-        planet_max_buildings_add = 30
+        planet_max_buildings_add = 16
     }
 
     triggered_planet_modifier = {

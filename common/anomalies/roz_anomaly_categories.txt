@@ -1,5 +1,5 @@
 
-roz_unknow_crashed_flagship_category = {
+roz_unknow_crashed_flagship_category = {	#abandon
 	desc = roz_unknow_crashed_flagship_category_desc
 	picture = GFX_evt_ship_in_orbit
 	level = 8
@@ -8,43 +8,43 @@ roz_unknow_crashed_flagship_category = {
 	#max_once = yes
 	null_spawn_chance = 0
 	spawn_chance = {
-		base = 1
-		modifier = {
-			add = 1000
-			from.owner = {
-				has_country_flag = ge_leader_suigintou_get
-				is_ai = no
-			}
-		}
-		modifier = {
-			add = -10000000
-			from.owner = {
-				has_country_flag = roz_sgt_unknow_flagship_spawn_country
-			}
-		}
-		modifier = {
-			mult = 0
-			from.owner = {
-				has_country_flag = roz_sgt_unknow_flagship_spawn_country
-			}
-		}
+		base = -10
+		# modifier = {
+		# 	add = 1000
+		# 	from.owner = {
+		# 		has_country_flag = roz_leader_suigintou_get
+		# 		is_ai = no
+		# 	}
+		# }
+		# modifier = {
+		# 	add = -10000000
+		# 	from.owner = {
+		# 		has_country_flag = roz_sgt_unknow_flagship_spawn_country
+		# 	}
+		# }
+		# modifier = {
+		# 	mult = 0
+		# 	from.owner = {
+		# 		has_country_flag = roz_sgt_unknow_flagship_spawn_country
+		# 	}
+		# }
 	}
 	on_spawn = {
 		# this = {
 		# 	save_event_target_as = roz_sgt_flagship_target
 		# }
-		from = {
-			ship_event = {
-				id = ge_sgt_falgship_events.100
-			}
-		}
+		# from = {
+		# 	ship_event = {
+		# 		id = ge_sgt_flagship_events.100
+		# 	}
+		# }
 		from.owner = {
 			set_country_flag = roz_sgt_unknow_flagship_spawn_country
 		}
 		save_event_target_as = roz_sgt_flagship_target
 	}
 	on_success = {
-		1 = ge_sgt_falgship_events.101
+		1 = ge_sgt_flagship_events.101
 	}
 }
 
@@ -61,7 +61,7 @@ roz_destroyed_planet_anomaly = { #不明灵能源
 			add = 2
 			from = {
 				leader = {
-					has_leader_flag = ge_suigintou_flag
+					has_leader_flag = roz_suigintou_flag
 				}
 			}
 			from.owner = {

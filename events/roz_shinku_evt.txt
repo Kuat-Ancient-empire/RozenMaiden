@@ -36,7 +36,7 @@ country_event = {
     }
     immediate = {
         get_ge_leader_target = {
-            flag = ge_suigintou_flag
+            flag = roz_suigintou_flag
         }
     }
     option = {
@@ -238,11 +238,11 @@ country_event = {
     is_triggered_only = yes
     trigger = {
         has_country_flag = roz_kirakishou_get
-        has_country_flag = ge_leader_suigintou_get
+        has_country_flag = roz_leader_suigintou_get
     }
     immediate = {
         get_ge_leader_target = {
-            flag = ge_suigintou_flag
+            flag = roz_suigintou_flag
         }
     }
     option = {
@@ -292,11 +292,11 @@ country_event = {
     }
     trigger = {
         is_ai = no
-        has_country_flag = ge_leader_suigintou_get
+        has_country_flag = roz_leader_suigintou_get
     }
     immediate = {
         get_ge_leader_target = {
-            flag = ge_suigintou_flag
+            flag = roz_suigintou_flag
         }
     }
     option = {
@@ -405,7 +405,7 @@ country_event = {
          room = ge_sgt_main_room
     }
     trigger = {
-        #has_country_flag = ge_leader_suigintou_get
+        #has_country_flag = roz_leader_suigintou_get
         is_ai = no
     }
     immediate = {
@@ -877,7 +877,7 @@ country_event = {
             event_target:roz_leader_kirakishou_global_target@root = {
                 exile_leader_as = this
             }
-            event_target:ge_leader_suigintou_global_target@root = {
+            event_target:roz_leader_suigintou_global_target@root = {
                 exile_leader_as = this
             }
             ruler = {
@@ -1144,7 +1144,7 @@ country_event = {
         }
         From = {    #player country
             has_country_flag = roz_unholy_invasion_defend_flag
-            has_country_flag = ge_leader_suigintou_get
+            has_country_flag = roz_leader_suigintou_get
             is_ai = no
         }
         FromFrom = {    #enemy fleet
@@ -2668,7 +2668,7 @@ country_event = {   #
     }
     option = {
         name = roz_shinku_evt.701.ff
-        is_dialog_only = yes
+        #is_dialog_only = yes
         default_hide_option = yes
         response_text = roz_shinku_evt.701.ff.res
         custom_tooltip = roz_shinku_evt.701.ff.ct
@@ -2725,7 +2725,7 @@ country_event = {
         create_leader = {
             class = commander
             name = "NAME_shinku"
-            skill = 3
+            skill = 1
             gender = female
             species = owner_main_species
             immortal = yes
@@ -2738,7 +2738,7 @@ country_event = {
             custom_catch_phrase = shinku_gov_catch_phrase
             custom_description = shinku_backstory
             effect = {
-                add_skill_without_trait_selection = 1
+                add_skill_without_trait_selection = 2
                 remove_all_traits = yes
                 roz_leader_name_set_effect = {
                     who_jp = shinku
@@ -2924,10 +2924,15 @@ country_event = {   #真红通讯主界面
     }
     option = {  #行政官
         name = roz_shinku_evt.1001.cc
+        trigger = {
+            NOT = {
+                has_country_flag = roz_shinku_official_active
+            }
+        }
         hidden_effect = {
             roz_shinku_leader_type_switch_official = yes
         }
-        #is_dialog_only = yes
+        is_dialog_only = yes
         response_text = roz_shinku_evt.1001.cc.res1
         response_text = roz_shinku_evt.1001.cc.res2
         response_text = roz_shinku_evt.1001.cc.res3
@@ -2935,10 +2940,15 @@ country_event = {   #真红通讯主界面
     }
     option = {  #科学家
         name = roz_shinku_evt.1001.dd
+        trigger = {
+            NOT = {
+                has_country_flag = roz_shinku_scientist_active
+            }
+        }
         hidden_effect = {
             roz_shinku_leader_type_switch_scientist = yes
         }
-        #is_dialog_only = yes
+        is_dialog_only = yes
         response_text = roz_shinku_evt.1001.dd.res1
         response_text = roz_shinku_evt.1001.dd.res2
         response_text = roz_shinku_evt.1001.dd.res3
@@ -2946,10 +2956,15 @@ country_event = {   #真红通讯主界面
     }
     option = {  #指挥官
         name = roz_shinku_evt.1001.ee
+        trigger = {
+            NOT = {
+                has_country_flag = roz_shinku_commander_active
+            }
+        }
         hidden_effect = {
             roz_shinku_leader_type_switch_commander = yes
         }
-        #is_dialog_only = yes
+        is_dialog_only = yes
         response_text = roz_shinku_evt.1001.ee.res1
         response_text = roz_shinku_evt.1001.ee.res2
         response_text = roz_shinku_evt.1001.ee.res3

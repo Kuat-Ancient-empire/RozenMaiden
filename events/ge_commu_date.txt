@@ -10,7 +10,7 @@ country_event = {
             any_owned_leader = {
                 is_rozen_leader = yes
                 check_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value > 0
                 }
             }
@@ -22,7 +22,7 @@ country_event = {
             any_owned_leader = {
                 is_rozen_leader = yes
                 check_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value > 60
                 }
             }
@@ -45,7 +45,7 @@ country_event = {
             flag = ge_sgt_date_cd
             days = 90
         }
-        get_ge_leader_target = { flag = ge_suigintou_flag }
+        get_ge_leader_target = { flag = roz_suigintou_flag }
 
     }
     after = {
@@ -302,10 +302,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -317,10 +317,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -366,10 +366,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -381,10 +381,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -410,10 +410,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -455,10 +455,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -572,10 +572,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -600,10 +600,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -616,10 +616,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -645,10 +645,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -664,10 +664,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -683,10 +683,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -699,10 +699,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -715,10 +715,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -1080,10 +1080,10 @@ country_event = {	##X村爱情故事
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -1106,10 +1106,10 @@ country_event = {	###小S代
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 0.5
                 }
             }
@@ -1132,10 +1132,10 @@ country_event = {	##君の名は。
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -1159,10 +1159,10 @@ country_event = {	##S甘岭
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1.5
                 }
             }
@@ -1186,10 +1186,10 @@ country_event = {	##流浪地球2
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1.0
                 }
             }
@@ -1213,10 +1213,10 @@ country_event = {	##满江红
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1.0
                 }
             }
@@ -1240,10 +1240,10 @@ country_event = {	###让子弹F
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -1266,10 +1266,10 @@ country_event = {	##奇Y博士2
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -1292,10 +1292,10 @@ country_event = {	###绿P书
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -1334,10 +1334,10 @@ country_event = {	###魂断L桥
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 5
                 }
             }
@@ -1398,10 +1398,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -1424,10 +1424,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -1480,10 +1480,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }
@@ -1506,10 +1506,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1.5
                 }
             }
@@ -1535,10 +1535,10 @@ country_event = {
         hidden_effect = {
             every_owned_leader = {
                 limit = {
-                    has_leader_flag = ge_suigintou_flag
+                    has_leader_flag = roz_suigintou_flag
                 }
                 change_variable = {
-                    which = ge_leader_affection
+                    which = roz_suigintou_affection
                     value = 1
                 }
             }

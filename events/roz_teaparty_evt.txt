@@ -265,7 +265,7 @@ country_event = {
         NOT = {
             has_country_flag = roz_teaparty_loop_cd
         }
-        has_country_flag = ge_leader_suigintou_get
+        has_country_flag = roz_leader_suigintou_get
         has_country_flag = roz_kirakishou_get
         has_country_flag = roz_teaparty_loop_begin
     }

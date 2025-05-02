@@ -15,7 +15,7 @@ country_event = {
 		is_ai = no
 	}
 	immediate = {
-		get_ge_leader_target = { flag = ge_suigintou_flag }
+		get_ge_leader_target = { flag = roz_suigintou_flag }
 	}
 	option = {
 		name = roz_nf_discovery.0.aa

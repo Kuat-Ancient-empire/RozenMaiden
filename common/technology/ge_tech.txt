@@ -974,7 +974,7 @@ tech_ge_sgt_flagship = {
 	}
 	potential = {
 		#has_country_flag = ge_sgt_flagship_enable_flag
-		has_country_flag = ge_leader_suigintou_get
+		has_country_flag = roz_leader_suigintou_get
 		#has_global_flag = roz_sgt_unknow_flagship_spawn
 		has_country_flag = roz_sgt_unknow_flagship_spawn_country
 	}
@@ -1021,7 +1021,7 @@ tech_ge_sgt_flagship_normal = {
 		voidcraft
 	}
 	potential = {
-		#has_country_flag = ge_leader_suigintou_get
+		#has_country_flag = roz_leader_suigintou_get
 		#has_global_flag = roz_sgt_unknow_flagship_spawn
 		has_country_flag = ge_sgt_flagship_proj_complete_flag
 	}

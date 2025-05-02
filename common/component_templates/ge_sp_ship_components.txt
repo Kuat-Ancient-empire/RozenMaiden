@@ -384,7 +384,7 @@ utility_component_template = {
 		limit = {
 			fleet = {
 				leader = {
-					has_leader_flag = ge_suigintou_flag
+					has_leader_flag = roz_suigintou_flag
 				}
 			}
 		}

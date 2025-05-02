@@ -86,7 +86,7 @@ roz_the_fields_of_growth_site = {
 		exists = leader
 		custom_tooltip = a
 		leader = {
-			has_leader_flag = ge_suigintou_flag
+			has_leader_flag = roz_suigintou_flag
 		}
 	}
 	visible = {

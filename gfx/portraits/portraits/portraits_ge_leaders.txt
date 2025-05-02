@@ -1,72 +1,72 @@
 portraits = {
-	ge_suigintou_default = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou.dds"
+	roz_suigintou_default = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou.dds"
 	}
-	ge_suigintou_red = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_red.dds"
+	roz_suigintou_red = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_red.dds"
 	}
-	ge_suigintou_2 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_2.dds"
+	roz_suigintou_2 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_2.dds"
 	}
-	ge_suigintou_3 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_3.dds"
+	roz_suigintou_3 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_3.dds"
 	}
-	ge_suigintou_4 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_4.dds"
+	roz_suigintou_4 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_4.dds"
 	}
-	ge_suigintou_5 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_5.dds"
+	roz_suigintou_5 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_5.dds"
 	}
-	ge_suigintou_6 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_6.dds"
+	roz_suigintou_6 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_6.dds"
 	}
-	ge_suigintou_61 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_61.dds"
+	roz_suigintou_61 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_61.dds"
 	}
-	ge_suigintou_7 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_7.dds"
+	roz_suigintou_7 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_7.dds"
 	}
-	ge_suigintou_8 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_8.dds"
+	roz_suigintou_8 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_8.dds"
 	}
-	ge_suigintou_9 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_9.dds"
+	roz_suigintou_9 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_9.dds"
 	}
-	ge_suigintou_10 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_10.dds"
+	roz_suigintou_10 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_10.dds"
 	}
-	ge_suigintou_11 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_11.dds"
+	roz_suigintou_11 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_11.dds"
 	}
-	ge_suigintou_12 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_12.dds"
+	roz_suigintou_12 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_12.dds"
 	}
-	ge_suigintou_13 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_13.dds"
+	roz_suigintou_13 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_13.dds"
 	}
-	ge_suigintou_14 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_14.dds"
+	roz_suigintou_14 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_14.dds"
 	}
-	ge_suigintou_15 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_15.dds"
+	roz_suigintou_15 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_15.dds"
 	}
-	ge_suigintou_20 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_20.dds"
+	roz_suigintou_20 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_20.dds"
 	}
-	ge_suigintou_21 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_21.dds"
+	roz_suigintou_21 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_21.dds"
 	}
-	ge_suigintou_22 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_22.dds"
+	roz_suigintou_22 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_22.dds"
 	}
-	ge_suigintou_sp1 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_sp1.dds"
+	roz_suigintou_sp1 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_sp1.dds"
 	}
-	ge_suigintou_sp2 = {
-		textureFile = "gfx/models/portraits/00_ge_leader/ge_suigintou_sp2.dds"
+	roz_suigintou_sp2 = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_sp2.dds"
 	}
-	ge_suigintou_20th = {
-		textureFile = "gfx/models/portraits/00_ge_leader/roz_suigintou_20th.dds"
+	roz_suigintou_20th = {
+		textureFile = "gfx/models/portraits/00_roz_leader/roz_suigintou_20th.dds"
 	}
 
 
@@ -110,8 +110,8 @@ portraits = {
 	roz_shinku_20th = {
 		textureFile = "gfx/models/portraits/00_roz_shinku/roz_sk_20th.dds"
 	}
-	roz_shinku_01 = {
-		textureFile = "gfx/models/portraits/00_roz_shinku/roz_sk_01.dds"
+	roz_shinku_1 = {
+		textureFile = "gfx/models/portraits/00_roz_shinku/roz_sk_1.dds"
 	}
 
 

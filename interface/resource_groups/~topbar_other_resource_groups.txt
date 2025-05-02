@@ -653,7 +653,7 @@ tb_others_group = {
 			ichor_blue_crystals
 			ichor_green
 			ichor_blue
-			# "2776070504 Rozen Maiden Suigintou Leader Pack"
+			# "2776070504 Rozen Maiden suigintou Leader Pack"
 			sr_rosa_mystica
 			sr_void_core
 			# "2775968897 Real Space - Planetary Stations"

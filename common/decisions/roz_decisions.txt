@@ -6,7 +6,7 @@ decision_roz_N_field_main_entrance = {
 		always = no
 		exists = owner
 		owner = {
-			has_country_flag = ge_leader_suigintou_get
+			has_country_flag = roz_leader_suigintou_get
 		}
 	}
 	allow = {

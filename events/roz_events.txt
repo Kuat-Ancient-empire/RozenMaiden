@@ -1,12 +1,13 @@
 namespace = ge_event
-country_event = {
+country_event = {	
 	#开局
 	id = ge_event.0
-	title = ge_event.0.name
-	desc = ge_event.0.desc
-	picture = GFX_ge_rz_start3
-	location = root
-	show_sound = select_click
+	hide_window = yes
+	#title = ge_event.0.name
+	#desc = ge_event.0.desc
+	#picture = GFX_ge_rz_start3
+	#location = root
+	#show_sound = select_click
 	#fire_only_once = yes 
 	is_triggered_only = yes
 	# mean_time_to_happen = {
@@ -42,108 +43,22 @@ country_event = {
 
 		country_event = { #特别内容，Warhammer 40K
 			id = ge_sites.410
-			days = 10800
-			random = 3600
+			days = 5400
+			random = 10800
 		}
 		country_event = {
-			id = ge_sgt_falgship_events.99
+			id = ge_sgt_flagship_events.99
 			days = 1080
-			random = 144000
+			random = 10800
 		}
 		# set_timed_country_flag = {	#计时，防止刷不出异常点 # 不计
 		# 	flag = roz_sgt_flagship_spawn_timed_flag
 		# 	days = 7200
 		# }
 		set_country_flag = roz_leader_name_jp_flag #开局设置，设定领袖名为片假名
-		
-		
 
-
-	}
-	option = {
-		name = ge_event.0.aa
-		default_hide_option = yes
-		trigger = {
-			has_global_flag = ge_test_activated
-		}
-	}
-	option = {
-		name = ge_event.0.bb
-		default_hide_option = yes
-		trigger = {
-			has_global_flag = ge_test_activated
-		}
-		give_technology = {
-			tech = GE_tech_reactor
-		}
-		give_technology = {
-			tech = tech_ge_pd
-		}
-		give_technology = {
-			tech = tech_ge_xl_beam
-		}
-		give_technology = {
-			tech = tech_ge_t_beam
-		}
-		give_technology = {
-			tech = tech_ge_laser_cannon
-		}
-		give_technology = {
-			tech = tech_ge_kinetic_gun
-		}
-		give_technology = {
-			tech = tech_ge_energy_torpedo
-		}
-		give_technology = {
-			tech = tech_ge_strike_craft_bomber
-		}
-		give_technology = {
-			tech = tech_ge_strike_craft_fighter
-		}
-		give_technology = {
-			tech = tech_ge_strike_craft_xuefeng
-		}
-		give_technology = {
-			tech = tech_ge_bhmissile
-		}
-		give_technology = {
-			tech = tech_ge_wtorpedo
-		}
-		give_technology = {
-			tech = tech_ge_planet_killer
-		}
-		give_technology = {
-			tech = tech_ge_sf_armor
-		}
-		give_technology = {
-			tech = tech_ge_shield
-		}
-		give_technology = {
-			tech = tech_ge_warp_drive
-		}
-		give_technology = {
-			tech = tech_ge_thruster
-		}
-		give_technology = {
-			tech = tech_ge_computer
-		}
-		give_technology = {
-			tech = tech_ge_rds
-		}
-		give_technology = {
-			tech = tech_ge_cb
-		}
-		give_technology = {
-			tech = tech_ge_sensor
-		}
-		give_technology = {
-			tech = tech_ge_shippart_titian_aura
-		}
-	}
-	option = {
-		name = ge_event.0.cc
 		country_event = {
-			id = ge_event.1
+			id = ge_event.7777
 		}
 		hidden_effect = {
 			create_ship_design = { design = ROZ_ITQ_design }
@@ -151,8 +66,92 @@ country_event = {
 			create_ship_design = { design = roz_juggernaut_wanxiang_design }
 			add_ship_design = last_created_design
 		}
-		
 	}
+	# option = {
+	# 	name = ge_event.0.bb
+	# 	default_hide_option = yes
+	# 	trigger = {
+	# 		has_global_flag = ge_test_activated
+	# 	}
+	# 	give_technology = {
+	# 		tech = GE_tech_reactor
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_pd
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_xl_beam
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_t_beam
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_laser_cannon
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_kinetic_gun
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_energy_torpedo
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_strike_craft_bomber
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_strike_craft_fighter
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_strike_craft_xuefeng
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_bhmissile
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_wtorpedo
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_planet_killer
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_sf_armor
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_shield
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_warp_drive
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_thruster
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_computer
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_rds
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_cb
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_sensor
+	# 	}
+	# 	give_technology = {
+	# 		tech = tech_ge_shippart_titian_aura
+	# 	}
+	# }
+	# option = {
+	# 	name = ge_event.0.cc
+	# 	country_event = {
+	# 		id = ge_event.1
+	# 	}
+	# 	hidden_effect = {
+	# 		create_ship_design = { design = ROZ_ITQ_design }
+	# 		add_ship_design = last_created_design
+	# 		create_ship_design = { design = roz_juggernaut_wanxiang_design }
+	# 		add_ship_design = last_created_design
+	# 	}
+	# }
 }
 
 ##new setup ui
@@ -734,7 +733,7 @@ country_event = {	###a17瓶颈
 	desc = "ge_event.47.desc"
 	is_triggered_only = yes
 	show_sound = event_power_down
-	picture = GFX_evt_physics_research
+	picture = GFX_evt_roz_research_accident_‌bottleneck
 	trigger = {
 		has_country_flag = ge_tech_continue
 		NOT = {
@@ -820,7 +819,7 @@ country_event = {	###sa殊途同归
 	desc = "ge_event.48.desc"
 	#is_triggered_only = yes
 	show_sound = event_power_down
-	picture = GFX_evt_wormhole
+	picture = GFX_evt_roz_research_accident_‌defytheodds‌
 	mean_time_to_happen = { #虚空科技起源-研究片段4触发（暗物质科技）
 		months = 6
 	}
@@ -855,7 +854,7 @@ country_event = {	###a23逆流而上
 	#fire_only_once = yes
 	
 	show_sound = event_activating_unknown_technology
-	picture = GFX_evt_ancient_databank
+	picture = GFX_evt_roz_research_accident_‌defytheodds‌
 	trigger = {
 		has_country_flag = ge_tech_continue
 		NOT = {
@@ -1026,7 +1025,7 @@ country_event = {
 		#clone_leader = {	#这是干啥的。。。？
 		#	target = event_target:roz_player_country_ruler_target
 		#	effect = {
-		#		set_owner = event_target:ge_suigintou_country@root
+		#		set_owner = event_target:roz_suigintou_global_country@root
 		#		save_global_event_target_as = roz_player_country_ruler_global_target@root
 		#	}
 		#}
@@ -1298,7 +1297,7 @@ country_event = {
 			set_country_flag = ge_final_ascension_project_completed
 			every_country = {
 				limit = {
-					has_country_flag = ge_leader_suigintou_get 
+					has_country_flag = roz_leader_suigintou_get 
 				}
 				every_owned_leader = {
 					limit = {

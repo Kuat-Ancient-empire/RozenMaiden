@@ -45,7 +45,7 @@ can_destroy_planet_with_roz_juggernaut_wanxiang_deployer = {
 	is_star = yes
 	starbase = {
 		owner = {
-			#is_same_value = event_target:ge_suigintou_owner
+			#is_same_value = event_target:roz_suigintou_owner
 			is_ai = no
 		}
 	}

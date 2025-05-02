@@ -272,7 +272,7 @@ country_event = {
     desc =  roz_krks_leader_evt.13.desc
     diplomatic = yes
     picture_event_data = {
-        portrait = ge_suigintou_61
+        portrait = roz_suigintou_61
         room = ge_sgt_main_room
     }
     immediate = {
@@ -303,9 +303,9 @@ country_event = {
         hidden_effect = {
             if = {  #恢复水银灯
                 limit = {
-                    NOT = { has_country_flag = ge_leader_suigintou_get }
+                    NOT = { has_country_flag = roz_leader_suigintou_get }
                 }
-                set_country_flag = ge_leader_suigintou_get
+                set_country_flag = roz_leader_suigintou_get
             }
             remove_country_flag = ge_sgt_busy
             remove_country_flag = ge_nfield_diplomacy_activated
@@ -349,7 +349,7 @@ country_event = {
             #             exists != this
             #         }
             #     }
-            #     event_target:ge_suigintou_country@root = {
+            #     event_target:roz_suigintou_global_country@root = {
             #         random_system_planet = {
             #             save_event_target_as = roz_location_temp_target
             #         }
@@ -384,66 +384,66 @@ country_event = {
             #     }
             #     #ruler = { unassign_leader = this }
 
-            #     #remove_country_flag = ge_suigintou_scientist_active
-            #     #set_country_flag = ge_suigintou_admiral_active
+            #     #remove_country_flag = roz_suigintou_scientist_active
+            #     #set_country_flag = roz_suigintou_commander_active
             #     #clone_leader = {
-            #     #    target = event_target:ge_suigintou_admiral_inactive_temp@root
+            #     #    target = event_target:roz_suigintou_commander_inactive_temp@root
             #     #    effect = {
-            #     #        set_name = "NAME_Suigintou"
+            #     #        set_name = "NAME_suigintou"
             #     #    }
             #     #}
             #     #last_created_leader = {
-            #     #    set_leader_flag = ge_suigintou_flag
+            #     #    set_leader_flag = roz_suigintou_flag
             #     #    set_leader_flag = legendary_leader
             #     #    set_leader_flag = immune_to_negative_traits
-            #     #    save_global_event_target_as = ge_leader_suigintou_global_target@root
+            #     #    save_global_event_target_as = roz_leader_suigintou_global_target@root
             #     #    #set_is_female = yes
-            #     #    #get_ge_leader_target = {flag = ge_suigintou_flag}
+            #     #    #get_ge_leader_target = {flag = roz_suigintou_flag}
             #     #    set_variable = {
-            #     #        which = ge_leader_affection
-            #     #        value = root.ge_leader_affection_temp
+            #     #        which = roz_suigintou_affection
+            #     #        value = root.roz_suigintou_affection_temp
             #     #    }
             #     #    if = {
             #     #        limit = {
             #     #            check_variable = {
-            #     #                which = ge_leader_affection
+            #     #                which = roz_suigintou_affection
             #     #                value >= 90
             #     #            }
             #     #        }
-            #     #        add_trait = leader_trait_ge_admiral_a_love
+            #     #        add_trait = leader_trait_roz_a_love
             #     #    }
             #     #    else_if = {
             #     #        limit = {
             #     #            check_variable = {
-            #     #                which = ge_leader_affection
+            #     #                which = roz_suigintou_affection
             #     #                value >= 60
             #     #            }
             #     #        }
-            #     #        add_trait = leader_trait_ge_admiral_a_like
+            #     #        add_trait = leader_trait_roz_a_like
             #     #    }
             #     #    else_if = {
             #     #        limit = {
             #     #            check_variable = {
-            #     #                which = ge_leader_affection
+            #     #                which = roz_suigintou_affection
             #     #                value >= 30
             #     #            }
             #     #        }
-            #     #        add_trait = leader_trait_ge_admiral_a_friendly
+            #     #        add_trait = leader_trait_roz_a_friendly
             #     #    }
             #     #    else_if = {
             #     #        limit = {
             #     #            check_variable = {
-            #     #                which = ge_leader_affection
+            #     #                which = roz_suigintou_affection
             #     #                value < 30
             #     #            }
             #     #        }
-            #     #        add_trait = leader_trait_ge_admiral_a_strangeness
+            #     #        add_trait = leader_trait_roz_a_strangeness
             #     #    }
             #     #
             #     #
             #     #    freeze_leader_age = yes
             #     #}
-            #     #clear_variable = ge_leader_affection_temp
+            #     #clear_variable = roz_suigintou_affection_temp
             # }
             clear_global_event_target = roz_suigintou_bwg_leader_target
             #第一次茶会
@@ -629,7 +629,7 @@ country_event = {   #雪华绮晶通讯主界面
         from = {
             is_country_type = ge_N_Field
             is_same_value = event_target:roz_kirakishou_global_country@root
-            NOT = { is_same_value = event_target:ge_suigintou_country@root }
+            NOT = { is_same_value = event_target:roz_suigintou_global_country@root }
         }
         has_country_flag = roz_kirakishou_get
         exists = event_target:roz_leader_kirakishou_global_target@root
@@ -810,7 +810,7 @@ country_event = {
         from = {
             is_country_type = ge_N_Field
             is_same_value = event_target:roz_kirakishou_global_country@root
-            NOT = { is_same_value = event_target:ge_suigintou_country@root }
+            NOT = { is_same_value = event_target:roz_suigintou_global_country@root }
         }
         has_country_flag = roz_kirakishou_get
         NOT = {

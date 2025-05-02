@@ -95,7 +95,7 @@ leader_trait_ge_mercury_lamp_scientist_desc:0 "\n\n\n\n\n£roz_traits_pic_suigin
 #其中§H31%§!概率获得§GT2科技§!的§H15%§!进度；§H21%§!的概率获得§BT3科技§!的§H15%进度；§H11%§!的概率获得§MT4科技§!的§H15%§!进度，§H2%§!的概率获得§RT5科技§!§H15%§!的进度。§!§R35%的概率将不会获得额外进度。§!
 
 leader_trait_ge_N_field_scientist:0 "N之领域"
-leader_trait_ge_N_field_scientist_desc:0 "与现实世界连接且互为表里的虚幻空间，这里优秀的实验环境给国家科研机构带来了极大的便利. 同时水银灯可以利用自己的N之领域增强科研船性能的同时通过N之领域传送门来瞬移外星土特产. 虽然这有些费时，但是在科技展览会展出的这些千奇百态的土特产能提振国民的对太空探索的热情. \n§B当水银灯进行星系探索时，每探索完一个星球，都将获得3xN点凝聚力和0.2xN单位的稀有文物。§!§c（系数N为水银灯已经探索的星球的数量）§!\n\n§Y水银灯至今已探索[event_target:ge_suigintou_owner0.ge_sgt_survey_count]个星球.§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+leader_trait_ge_N_field_scientist_desc:0 "与现实世界连接且互为表里的虚幻空间，这里优秀的实验环境给国家科研机构带来了极大的便利. 同时水银灯可以利用自己的N之领域增强科研船性能的同时通过N之领域传送门来瞬移外星土特产. 虽然这有些费时，但是在科技展览会展出的这些千奇百态的土特产能提振国民的对太空探索的热情. \n§B当水银灯进行星系探索时，每探索完一个星球，都将获得3xN点凝聚力和0.2xN单位的稀有文物。§!§c（系数N为水银灯已经探索的星球的数量）§!\n\n§Y水银灯至今已探索[event_target:roz_suigintou_owner0.ge_sgt_survey_count]个星球.§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
 
 leader_trait_ge_meimei_scientist:0 "人工精灵：冥冥"
 leader_trait_ge_meimei_scientist_desc:0 "人工精灵如同使魔一般的存在，它们是蔷薇少女不可或缺的帮手。"
@@ -116,43 +116,61 @@ leader_trait_roz_shinku_main_desc: "$leader_trait_roz_test$"
 
 ###舰队司令
 leader_trait_ge_admiral_a_strangeness:0 "陌生"
-leader_trait_ge_admiral_a_strangeness_desc:0 "她初来乍到，对我们还不太熟悉。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+leader_trait_ge_admiral_a_strangeness_desc:0 "她初来乍到，对我们还不太熟悉。\n\n§d目前水银灯的好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_suigintou_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
 
 leader_trait_ge_admiral_a_friendly:0 "友好"
-leader_trait_ge_admiral_a_friendly_desc:0 "她逐渐认可了你，并把你视作好朋友。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+leader_trait_ge_admiral_a_friendly_desc:0 "她逐渐认可了你，并把你视作好朋友。\n\n§d目前水银灯的好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_suigintou_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
 
 leader_trait_ge_admiral_a_like:0 "喜欢"
-leader_trait_ge_admiral_a_like_desc:0 "你们之间的关系逐渐加深，现在她只要待在你身边就会觉得很开心。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+leader_trait_ge_admiral_a_like_desc:0 "你们之间的关系逐渐加深，现在她只要待在你身边就会觉得很开心。\n\n§d目前水银灯的好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_suigintou_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
 
-leader_trait_ge_admiral_a_love:0 "爱意"
-leader_trait_ge_admiral_a_love_desc:0 "对蔷薇少女们来说，哪怕是死亡也无法动摇她们与你的感情。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+leader_trait_roz_a_love:0 "爱意"
+leader_trait_roz_a_love_desc:0 "对蔷薇少女们来说，哪怕是死亡也无法动摇她们与你的感情。\n\n§d目前水银灯的好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_suigintou_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
 
 ###科学家
 leader_trait_ge_scientist_a_strangeness:0 "陌生"
-leader_trait_ge_scientist_a_strangeness_desc:0 "她初来乍到，对我们还不太熟悉。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+leader_trait_ge_scientist_a_strangeness_desc:0 "她初来乍到，对我们还不太熟悉。\n\n§d目前水银灯的好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_suigintou_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
 
 leader_trait_ge_scientist_a_friendly:0 "友好"
-leader_trait_ge_scientist_a_friendly_desc:0 "她逐渐认可了你，并把你视作好朋友。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+leader_trait_ge_scientist_a_friendly_desc:0 "她逐渐认可了你，并把你视作好朋友。\n\n§d目前水银灯的好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_suigintou_reduced_score]§\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
 
 leader_trait_ge_scientist_a_like:0 "喜欢"
-leader_trait_ge_scientist_a_like_desc:0 "你们之间的关系逐渐加深，现在她只要待在你身边就会觉得很开心。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+leader_trait_ge_scientist_a_like_desc:0 "你们之间的关系逐渐加深，现在她只要待在你身边就会觉得很开心。\n\n§d目前水银灯的好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_suigintou_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
 
 leader_trait_ge_scientist_a_love:0 "爱意"
-leader_trait_ge_scientist_a_love_desc:0 "对蔷薇少女们来说，哪怕是死亡也无法动摇她们与你的感情。\n\n§d目前水银灯的好感度为: [event_target:ge_suigintou_owner0.ge_leader_aft_sgt_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+leader_trait_ge_scientist_a_love_desc:0 "对蔷薇少女们来说，哪怕是死亡也无法动摇她们与你的感情。\n\n§d目前水银灯的好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_suigintou_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+###三合一特质
+leader_trait_roz_a_strangeness:0 "陌生"
+leader_trait_roz_a_strangeness_desc:0 "她初来乍到，对我们还不太熟悉。\n\n§d目前好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_suigintou_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+leader_trait_roz_a_friendly:0 "友好"
+leader_trait_roz_a_friendly_desc:0 "她逐渐认可了你，并把你视作好朋友。\n\n§d目前好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_suigintou_reduced_score]§\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+leader_trait_roz_a_like:0 "喜欢"
+leader_trait_roz_a_like_desc:0 "你们之间的关系逐渐加深，现在的她只要待在你身边就会觉得很开心。\n\n§d目前好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_suigintou_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+leader_trait_roz_a_love:0 "爱意"
+leader_trait_roz_a_love_desc:0 "对蔷薇少女们来说，哪怕是死亡也无法动摇她们与你的感情。\n\n§d目前好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_suigintou_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+
+
+
+
+
 
  ################################################
  ##########雪华绮晶
  ###总督
  leader_trait_krks_governor_a_like:0 "喜欢"
- leader_trait_krks_governor_a_like_desc:0 "猛烈而深刻爱并不是所有人都可以承受的。\n\n§d目前雪华绮晶的好感度为: [event_target:ge_suigintou_owner0.roz_leader_aft_krks_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+ leader_trait_krks_governor_a_like_desc:0 "猛烈而深刻爱并不是所有人都可以承受的。\n\n§d目前雪华绮晶的好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_krks_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
  leader_trait_krks_governor_a_love:0 "爱意"
- leader_trait_krks_governor_a_love_desc:0 "§R病名为爱§!\n\n§d目前雪华绮晶的好感度为: [event_target:ge_suigintou_owner0.roz_leader_aft_krks_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+ leader_trait_krks_governor_a_love_desc:0 "§R病名为爱§!\n\n§d目前雪华绮晶的好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_krks_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
 
  ###将军
  leader_trait_krks_general_a_like:0 "喜欢"
- leader_trait_krks_general_a_like_desc:0 "猛烈而深刻爱并不是所有人都可以承受的。\n\n§d目前雪华绮晶的好感度为: [event_target:ge_suigintou_owner0.roz_leader_aft_krks_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+ leader_trait_krks_general_a_like_desc:0 "猛烈而深刻爱并不是所有人都可以承受的。\n\n§d目前雪华绮晶的好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_krks_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
  leader_trait_krks_general_a_love:0 "爱意"
- leader_trait_krks_general_a_love_desc:0 "§R病名为爱§!\n\n§d目前雪华绮晶的好感度为: [event_target:ge_suigintou_owner0.roz_leader_aft_krks_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
+ leader_trait_krks_general_a_love_desc:0 "§R病名为爱§!\n\n§d目前雪华绮晶的好感度为: [event_target:roz_suigintou_owner0.roz_leader_aft_krks_reduced_score]§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
 
 ############################################
 

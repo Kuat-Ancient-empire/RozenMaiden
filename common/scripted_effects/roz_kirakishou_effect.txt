@@ -57,7 +57,7 @@ create_roz_kirakishou_governor = {
                     who_sc = xuehuaqijing
                 }
                 freeze_leader_age = yes
-                set_owner = event_target:ge_suigintou_owner@root
+                set_owner = event_target:roz_suigintou_owner@root
             }
         }
     }
@@ -151,7 +151,7 @@ create_roz_kirakishou_admiral = {
                         who_jp = Kirakishou
                         who_sc = xuehuaqijing
                     }
-                    set_owner = event_target:ge_suigintou_owner@root
+                    set_owner = event_target:roz_suigintou_owner@root
                 }
             }
         }
@@ -326,8 +326,8 @@ create_roz_kirakishou_admiral = {
 #                    remove_all_traits = yes
 #                    change_leader_portrait = roz_kirakishou_default
 #                    #set_variable = {
-#                    #    which = ge_leader_affection
-#                    #    value = owner.ge_leader_aft_sgt
+#                    #    which = roz_suigintou_affection
+#                    #    value = owner.roz_leader_aft_suigintou
 #                    #}
 #                    roz_leader_name_set_effect = {
 #                        who_jp = Kirakishou

@@ -1,6 +1,6 @@
 is_rozen_leader = {
 	OR = {
-		has_leader_flag = ge_suigintou_flag
+		has_leader_flag = roz_suigintou_flag
 		#has_leader_flag = roz_kanaria_flag
 		#has_leader_flag = roz_suiseiseki_flag
 		#has_leader_flag = roz_souseiseki_flag
@@ -44,55 +44,51 @@ roz_sgt_site_planet_select_condition = { ##scope:solar system
 
 has_rozen_affection_trait = {
 	OR = {
-		has_trait = leader_trait_ge_admiral_a_strangeness
-		has_trait = leader_trait_ge_admiral_a_friendly
-		has_trait = leader_trait_ge_admiral_a_like
-		has_trait = leader_trait_ge_admiral_a_love
-		has_trait = leader_trait_ge_scientist_a_strangeness
-		has_trait = leader_trait_ge_scientist_a_friendly
-		has_trait = leader_trait_ge_scientist_a_like
-		has_trait = leader_trait_ge_scientist_a_love
+		has_trait = leader_trait_roz_a_strangeness
+		has_trait = leader_trait_roz_a_friendly
+		has_trait = leader_trait_roz_a_like
+		has_trait = leader_trait_roz_a_love
 	}
 }
 
 #strangeness
 ge_affection_strangeness_trigger = {
-	is_variable_set = ge_leader_affection
+	is_variable_set = roz_suigintou_affection
 	check_variable = {
-		which = ge_leader_affection
+		which = roz_suigintou_affection
 		value >= 0
 	}
 }
 
 #frindly
 ge_affection_frindly_trigger = {
-	is_variable_set = ge_leader_affection
+	is_variable_set = roz_suigintou_affection
 	is_rozen_leader = yes
 	has_rozen_affection_trait = yes
 	check_variable = {
-		which = ge_leader_affection
+		which = roz_suigintou_affection
 		value >= 30
 	}
 }
 
 #like
 ge_affection_like_trigger = {
-	is_variable_set = ge_leader_affection
+	is_variable_set = roz_suigintou_affection
 	is_rozen_leader = yes
 	has_rozen_affection_trait = yes
 	check_variable = {
-		which = ge_leader_affection
+		which = roz_suigintou_affection
 		value >= 60
 	}
 }
 
 #love
 ge_affection_love_trigger = {
-	is_variable_set = ge_leader_affection
+	is_variable_set = roz_suigintou_affection
 	is_rozen_leader = yes
 	has_rozen_affection_trait = yes
 	check_variable = {
-		which = ge_leader_affection
+		which = roz_suigintou_affection
 		value >= 90
 	}
 }
@@ -102,7 +98,7 @@ ge_aft_fri = {
 	is_rozen_leader = yes
 	has_rozen_affection_trait = yes
 	check_variable = {
-		which = ge_leader_affection
+		which = roz_suigintou_affection
 		value >= 30
 	}
 }
@@ -112,7 +108,7 @@ ge_aft_lik = {
 	is_rozen_leader = yes
 	has_rozen_affection_trait = yes
 	check_variable = {
-		which = ge_leader_affection
+		which = roz_suigintou_affection
 		value >= 60
 	}
 }
@@ -122,7 +118,7 @@ ge_aft_lov = {
 	is_rozen_leader = yes
 	has_rozen_affection_trait = yes
 	check_variable = {
-		which = ge_leader_affection
+		which = roz_suigintou_affection
 		value >= 90
 	}
 }

@@ -22,7 +22,7 @@ roz_void_energy_research_project_stage_2: "第二阶段-方案提出"
 roz_void_energy_research_project_stage_2_desc: "鉴于神秘能源的不可接触性，水银灯提出了一个构想——利用引力场耦合光点能量并对其进行干预。我们应该对此方案的可行性进行论证"
 
 roz_void_energy_research_project_stage_3_a: "第三阶段(2)-零点反应堆预研"
-roz_void_energy_research_project_stage_3_a_desc: "我们还没有真正创造出实用的真空零点能的设备，不过科研人员为将来实验时可能面对的极端情况提供了解决方案，预想中的零点反应堆将为了短时间的过载运行而完全舍弃长时的稳定性，同时还必须能够在短时间内承受超过其自身功率上限数倍的能量冲击而不损毁。这个特殊计划将会与零点反应堆的研发工作同步进行，我们的科研人员坚定的相信他们的计算没有差错，零点反应堆一定能完成任务。\n（服役一代，研制一代，预研一代.jpg）"
+roz_void_energy_research_project_stage_3_a_desc: "我们还没有真正创造出实用的真空零点能设备，不过科研人员为将来实验时可能面对的极端情况提供了解决方案，预想中的零点反应堆将为了短时间的过载运行而完全舍弃长时的稳定性，同时还必须能够在短时间内承受超过其自身功率上限数倍的能量冲击而不损毁。这个特殊计划将会与零点反应堆的研发工作同步进行，我们的科研人员坚定的相信他们的计算没有差错，零点反应堆一定能完成任务。\n（服役一代，研制一代，预研一代.jpg）"
 roz_void_energy_research_project_stage_3_a2: "第三阶段(2)-零点反应堆适配性改装"
 roz_void_energy_research_project_stage_3_a2_desc: "我们的科研人员对可能面临的极端情况做了估计，以此对零点反应堆进行特殊改装，这个特制的零点反应堆为了短时间的过载运行而完全舍弃了长时的稳定性，同时还必须能够在短时间内承受超过其自身功率上限数倍的能量冲击而不损毁。"
 roz_void_energy_research_project_stage_3_1: "第三阶段(1)-分析光点能量的属性"
@@ -39,8 +39,10 @@ roz_void_energy_research_project_stage_4_a_desc: ""
 
 
   #################################
-  ge_sgt_flagship_proj_1: "§Y王座守卫计划§!"
-  ge_sgt_flagship_proj_1_DESC: "由水银灯牵头，国家星舰设计局负责科研攻坚的大型计划. 我们在那艘战舰的数据库中找到了不少完整可用的舰载武装，还有一份残缺的舰船设计，其设计风格与\"王座\"类似，但似乎是简化削弱过后的次级版本. 这也意味着我们将有能力量产它们。"
+ge_sgt_flagship_proj_start: "§R诡异暗影§!"
+
+ge_sgt_flagship_proj_1: "§Y王座守卫计划§!"
+ge_sgt_flagship_proj_1_DESC: "由水银灯牵头，国家星舰设计局负责科研攻坚的大型计划. 我们在那艘战舰的数据库中找到了不少完整可用的舰载武装，还有一份残缺的舰船设计，其设计风格与\"王座\"类似，但似乎是简化削弱过后的次级版本. 这也意味着我们将有能力量产它们。"
   #ge_sgt_flagship_proj_2: "虚空核心激活"
   #ge_sgt_flagship_proj_2_DESC: ""
   #ge_sgt_flagship_proj_3: "全舰改装计划"

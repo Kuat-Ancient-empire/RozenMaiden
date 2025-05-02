@@ -202,7 +202,7 @@ on_fleet_destroyed_victim = {
 		ge_event.3060	#雪华绮晶boss战-三阶段
 		ge_event.3070	#雪华绮晶boss战-四阶段
 		ge_event.3049
-		#ge_sgt_falgship_events.5
+		#ge_sgt_flagship_events.5
 
 		roz_shinku_evt.439		##真红事件链-卷土重来(事件跳转)
 	}
@@ -216,7 +216,7 @@ on_fleet_destroyed_perp = {
 	events = {
 		ge_event.2062
 
-		#ge_sgt_falgship_events.5
+		#ge_sgt_flagship_events.5
 	}
 }
 
@@ -227,13 +227,13 @@ on_leader_death = {  }
 # FromFromFrom = ship 2
 on_ship_destroyed_perp = {
 	events = {
-		#ge_sgt_falgship_events.4
+		#ge_sgt_flagship_events.4
 	}
 }
 
 on_ship_destroyed_victim = {
 	events = {
-		ge_sgt_falgship_events.4
+		ge_sgt_flagship_events.4
 	}
 }
 

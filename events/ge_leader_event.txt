@@ -10,9 +10,9 @@ country_event = {
 	trigger = {
 		is_ai = no
 		NOR = {
-			has_country_flag = ge_leader_suigintou_get
+			has_country_flag = roz_leader_suigintou_get
 			any_owned_leader = {
-				has_leader_flag = ge_suigintou_flag
+				has_leader_flag = roz_suigintou_flag
 			}
 		}
 	}
@@ -27,17 +27,17 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
-			set_country_flag = ge_suigintou_admiral_active
+			set_country_flag = roz_suigintou_commander_active
 			if = {
 				limit = {
 					NOT = {
-						has_country_flag = ge_leader_suigintou_get
+						has_country_flag = roz_leader_suigintou_get
 					}
 				}
-				set_country_flag = ge_leader_suigintou_get
+				set_country_flag = roz_leader_suigintou_get
 				create_leader = {
 					class = commander
-					name = "NAME_Suigintou"
+					name = "NAME_suigintou"
 					skill = 1
 					gender = female
 					species = owner_main_species
@@ -52,21 +52,21 @@ country_event = {
 					custom_description = suigintou_backstory
 					effect = {
 						roz_leader_name_set_effect = {
-							who_jp = Suigintou
+							who_jp = suigintou
 							who_sc = shuiyindeng
 						}
 					}
 				}
 				last_created_leader = {
-					set_leader_flag = ge_suigintou_flag
+					set_leader_flag = roz_suigintou_flag
 					set_leader_flag = legendary_leader
 					set_leader_flag = immune_to_negative_traits
 					set_leader_flag = leader_death_events_blocked
-					save_global_event_target_as = ge_leader_suigintou_global_target@root
+					save_global_event_target_as = roz_leader_suigintou_global_target@root
 					unassign_leader = this
 					set_variable = {
 						##好感度初始化
-						which = ge_leader_affection
+						which = roz_suigintou_affection
 						value = 0
 					}
 					add_trait = leader_trait_ge_mercury_lamp
@@ -102,11 +102,11 @@ country_event = {
 					freeze_leader_age = yes
 				}
 				roz_leader_change_skin_set_flag_effect = {
-					who = sgt
-					portrait = ge_suigintou
-					flag = roz_sgt_portrait_change
-					leader_flag = ge_suigintou_flag
-					portrait_key = ge_suigintou_6
+					who = suigintou
+					portrait = roz_suigintou
+					flag = roz_suigintou_portrait_change
+					leader_flag = roz_suigintou_flag
+					portrait_key = roz_suigintou_6
 				}
 			}
 			country_event = {
@@ -154,7 +154,7 @@ country_event = {
 		# 	resource = sr_rosa_mystica
 		# 	value >= 1
 		# }
-		has_country_flag = ge_leader_suigintou_get
+		has_country_flag = roz_leader_suigintou_get
 	}
 	immediate = {
 		set_country_flag = q_sgt_army_get
@@ -219,21 +219,21 @@ country_event = {
 # 	desc = "ge_leader_event.333.desc"
 # 	diplomatic = yes
 # 	picture_event_data = {
-# 		#portrait = ge_suigintou_6
+# 		#portrait = roz_suigintou_6
 #         portrait = event_target:ge_leader
 # 		room = enclave_curator_room
 # 	}
 # 	trigger = {
 # 		is_ai = no
 # 		from = {
-# 			has_leader_flag = ge_suigintou_flag
+# 			has_leader_flag = roz_suigintou_flag
 # 			is_country_type = ge_N_Field
 # 		}
 # 	}
 # 	immediate = {
 # 		set_country_flag = suigintou_diplomacy_activated
 # 		get_ge_leader_target = {
-# 			flag = ge_suigintou_flag
+# 			flag = roz_suigintou_flag
 # 		}
 # 	}
 # 	# after = {
@@ -247,16 +247,16 @@ country_event = {
 #             if = {
 # 				limit = {
 # 					any_owned_leader = {
-# 						has_leader_flag = ge_suigintou_flag
+# 						has_leader_flag = roz_suigintou_flag
 # 						is_event_leader = yes
 # 					}
 # 				}
 # 			}
 # 			every_owned_leader = {
 # 				limit = {
-# 					has_leader_flag = ge_suigintou_flag
+# 					has_leader_flag = roz_suigintou_flag
 # 				}
-# 				change_leader_portrait = ge_suigintou_default
+# 				change_leader_portrait = roz_suigintou_default
 # 			}
 # 		}
 # 	}
@@ -268,16 +268,16 @@ country_event = {
 #             if = {
 # 				limit = {
 # 					any_owned_leader = {
-# 						has_leader_flag = ge_suigintou_flag
+# 						has_leader_flag = roz_suigintou_flag
 # 						is_event_leader = yes
 # 					}
 # 				}
 # 			}
 # 			every_owned_leader = {
 # 				limit = {
-# 					has_leader_flag = ge_suigintou_flag
+# 					has_leader_flag = roz_suigintou_flag
 # 				}
-# 				change_leader_portrait = ge_suigintou_2
+# 				change_leader_portrait = roz_suigintou_2
 # 			}
 # 		}
 # 	}
@@ -289,16 +289,16 @@ country_event = {
 #             if = {
 # 				limit = {
 # 					any_owned_leader = {
-# 						has_leader_flag = ge_suigintou_flag
+# 						has_leader_flag = roz_suigintou_flag
 # 						is_event_leader = yes
 # 					}
 # 				}
 # 			}
 # 			every_owned_leader = {
 # 				limit = {
-# 					has_leader_flag = ge_suigintou_flag
+# 					has_leader_flag = roz_suigintou_flag
 # 				}
-# 				change_leader_portrait = ge_suigintou_333
+# 				change_leader_portrait = roz_suigintou_333
 # 			}
 # 		}
 # 	}
@@ -310,16 +310,16 @@ country_event = {
 # 			if = {
 # 				limit = {
 # 					any_owned_leader = {
-# 						has_leader_flag = ge_suigintou_flag
+# 						has_leader_flag = roz_suigintou_flag
 # 						is_event_leader = yes
 # 					}
 # 				}
 # 			}
 # 			every_owned_leader = {
 # 				limit = {
-# 					has_leader_flag = ge_suigintou_flag
+# 					has_leader_flag = roz_suigintou_flag
 # 				}
-# 				change_leader_portrait = ge_suigintou_4
+# 				change_leader_portrait = roz_suigintou_4
 # 			}
 # 		}
 # 	}
@@ -331,16 +331,16 @@ country_event = {
 # 			if = {
 # 				limit = {
 # 					any_owned_leader = {
-# 						has_leader_flag = ge_suigintou_flag
+# 						has_leader_flag = roz_suigintou_flag
 # 						is_event_leader = yes
 # 					}
 # 				}
 # 			}
 # 			every_owned_leader = {
 # 				limit = {
-# 					has_leader_flag = ge_suigintou_flag
+# 					has_leader_flag = roz_suigintou_flag
 # 				}
-# 				change_leader_portrait = ge_suigintou_5
+# 				change_leader_portrait = roz_suigintou_5
 # 			}
 # 		}
 # 	}
@@ -352,16 +352,16 @@ country_event = {
 # 			if = {
 # 				limit = {
 # 					any_owned_leader = {
-# 						has_leader_flag = ge_suigintou_flag
+# 						has_leader_flag = roz_suigintou_flag
 # 						is_event_leader = yes
 # 					}
 # 				}
 # 			}
 # 			every_owned_leader = {
 # 				limit = {
-# 					has_leader_flag = ge_suigintou_flag
+# 					has_leader_flag = roz_suigintou_flag
 # 				}
-# 				change_leader_portrait = ge_suigintou_6
+# 				change_leader_portrait = roz_suigintou_6
 # 			}
 # 		}
 # 	}
@@ -373,16 +373,16 @@ country_event = {
 # 			if = {
 # 				limit = {
 # 					any_owned_leader = {
-# 						has_leader_flag = ge_suigintou_flag
+# 						has_leader_flag = roz_suigintou_flag
 # 						is_event_leader = yes
 # 					}
 # 				}
 # 			}
 # 			every_owned_leader = {
 # 				limit = {
-# 					has_leader_flag = ge_suigintou_flag
+# 					has_leader_flag = roz_suigintou_flag
 # 				}
-# 				change_leader_portrait = ge_suigintou_7
+# 				change_leader_portrait = roz_suigintou_7
 # 			}
 # 		}
 # 	}
@@ -394,16 +394,16 @@ country_event = {
 # 			if = {
 # 				limit = {
 # 					any_owned_leader = {
-# 						has_leader_flag = ge_suigintou_flag
+# 						has_leader_flag = roz_suigintou_flag
 # 						is_event_leader = yes
 # 					}
 # 				}
 # 			}
 # 			every_owned_leader = {
 # 				limit = {
-# 					has_leader_flag = ge_suigintou_flag
+# 					has_leader_flag = roz_suigintou_flag
 # 				}
-# 				change_leader_portrait = ge_suigintou_8
+# 				change_leader_portrait = roz_suigintou_8
 # 			}
 # 		}
 # 	}

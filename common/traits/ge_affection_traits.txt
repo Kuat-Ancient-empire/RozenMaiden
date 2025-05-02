@@ -2,244 +2,244 @@
 
 ###舰队司令##指挥官
 
-leader_trait_ge_admiral_a_strangeness = {	###陌生
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_ge_a_strangeness.dds"
-	modifier = {
-		ship_rank_experienced = 0.01
-	}
+# leader_trait_ge_admiral_a_strangeness = {	###陌生
+# 	cost = 0
+# 	icon = "gfx/interface/icons/traits/leader_trait_ge_a_strangeness.dds"
+# 	modifier = {
+# 		ship_rank_experienced = 0.01
+# 	}
 
-	#destiny_background_icon = "GFX_leader_background_destiny_1"
-	#destiny_trait = yes
-	#
-	#inline_script = {
-	#	script = trait/icon
-	#	CLASS = admiral
-	#	ICON = GFX_leader_trait_life_support_systems
-	#	RARITY = paragon
-	#	COUNCIL = no
-	#	TIER = none
-	#}
+# 	#destiny_background_icon = "GFX_leader_background_destiny_1"
+# 	#destiny_trait = yes
+# 	#
+# 	#inline_script = {
+# 	#	script = trait/icon
+# 	#	CLASS = admiral
+# 	#	ICON = GFX_leader_trait_life_support_systems
+# 	#	RARITY = paragon
+# 	#	COUNCIL = no
+# 	#	TIER = none
+# 	#}
 	
-	leader_class = { commander }
-	initial = no
-	randomized = no
-}
+# 	leader_class = { commander }
+# 	initial = no
+# 	randomized = no
+# }
 
-leader_trait_ge_admiral_a_friendly = {	###友好
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_ge_a_friendly.dds"
-	modifier = {
-		ship_rank_experienced = 0.30
-	}
+# leader_trait_ge_admiral_a_friendly = {	###友好
+# 	cost = 0
+# 	icon = "gfx/interface/icons/traits/leader_trait_ge_a_friendly.dds"
+# 	modifier = {
+# 		ship_rank_experienced = 0.30
+# 	}
 
-	#destiny_background_icon = "GFX_leader_background_destiny_1"
-	#destiny_trait = yes
-	#
-	#inline_script = {
-	#	script = trait/icon
-	#	CLASS = admiral
-	#	ICON = GFX_leader_trait_life_support_systems
-	#	RARITY = paragon
-	#	COUNCIL = no
-	#	TIER = none
-	#}
+# 	#destiny_background_icon = "GFX_leader_background_destiny_1"
+# 	#destiny_trait = yes
+# 	#
+# 	#inline_script = {
+# 	#	script = trait/icon
+# 	#	CLASS = admiral
+# 	#	ICON = GFX_leader_trait_life_support_systems
+# 	#	RARITY = paragon
+# 	#	COUNCIL = no
+# 	#	TIER = none
+# 	#}
 	
 	
-	leader_class = { commander }
-	initial = no
-	randomized = no
-}
+# 	leader_class = { commander }
+# 	initial = no
+# 	randomized = no
+# }
 
-leader_trait_ge_admiral_a_like = {	###喜欢
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_ge_a_like.dds"
-	modifier = {
-		ship_rank_experienced = 0.60
-	}
+# leader_trait_ge_admiral_a_like = {	###喜欢
+# 	cost = 0
+# 	icon = "gfx/interface/icons/traits/leader_trait_ge_a_like.dds"
+# 	modifier = {
+# 		ship_rank_experienced = 0.60
+# 	}
 
-	#destiny_background_icon = "GFX_leader_background_destiny_1"
-	#destiny_trait = yes
-	#
-	#inline_script = {
-	#	script = trait/icon
-	#	CLASS = admiral
-	#	ICON = GFX_leader_trait_life_support_systems
-	#	RARITY = paragon
-	#	COUNCIL = no
-	#	TIER = none
-	#}
-
-	
-	leader_class = { commander }
-	initial = no
-	randomized = no
-}
-
-leader_trait_ge_admiral_a_love = {	###爱意
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_ge_a_love.dds"
-	modifier = {
-		ship_rank_experienced = 1.0
-	}
-
-	#destiny_background_icon = "GFX_leader_background_destiny_1"
-	#destiny_trait = yes
-	#
-	#inline_script = {
-	#	script = trait/icon
-	#	CLASS = admiral
-	#	ICON = GFX_leader_trait_life_support_systems
-	#	RARITY = paragon
-	#	COUNCIL = no
-	#	TIER = none
-	#}
+# 	#destiny_background_icon = "GFX_leader_background_destiny_1"
+# 	#destiny_trait = yes
+# 	#
+# 	#inline_script = {
+# 	#	script = trait/icon
+# 	#	CLASS = admiral
+# 	#	ICON = GFX_leader_trait_life_support_systems
+# 	#	RARITY = paragon
+# 	#	COUNCIL = no
+# 	#	TIER = none
+# 	#}
 
 	
-	leader_class = { commander }
-	initial = no
-	randomized = no
-}
+# 	leader_class = { commander }
+# 	initial = no
+# 	randomized = no
+# }
+
+# leader_trait_roz_a_love = {	###爱意
+# 	cost = 0
+# 	icon = "gfx/interface/icons/traits/leader_trait_ge_a_love.dds"
+# 	modifier = {
+# 		ship_rank_experienced = 1.0
+# 	}
+
+# 	#destiny_background_icon = "GFX_leader_background_destiny_1"
+# 	#destiny_trait = yes
+# 	#
+# 	#inline_script = {
+# 	#	script = trait/icon
+# 	#	CLASS = admiral
+# 	#	ICON = GFX_leader_trait_life_support_systems
+# 	#	RARITY = paragon
+# 	#	COUNCIL = no
+# 	#	TIER = none
+# 	#}
+
+	
+# 	leader_class = { commander }
+# 	initial = no
+# 	randomized = no
+# }
 
 ###########################################
 #######				科学家			#######
 ###########################################
 
-leader_trait_ge_scientist_a_strangeness = {	###陌生
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_ge_a_strangeness.dds"
-	councilor_modifier = {
-		all_technology_research_speed = 0.01
-	}
+# leader_trait_ge_admiral_a_strangeness = {	###陌生
+# 	cost = 0
+# 	icon = "gfx/interface/icons/traits/leader_trait_ge_a_strangeness.dds"
+# 	councilor_modifier = {
+# 		all_technology_research_speed = 0.01
+# 	}
 
-	#destiny_background_icon = "GFX_leader_background_destiny_1"
-	#destiny_trait = yes
-	#
-	#inline_script = {
-	#	script = trait/icon
-	#	CLASS = scientist
-	#	ICON = GFX_leader_trait_life_support_systems
-	#	RARITY = paragon
-	#	COUNCIL = no
-	#	TIER = none
-	#}
-
-	
-	leader_class = { scientist }
-	initial = no
-	randomized = no
-}
-
-leader_trait_ge_scientist_a_friendly = {	###友好
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_ge_a_friendly.dds"
-	councilor_modifier = {
-		all_technology_research_speed = 0.02
-	}
-
-	#destiny_background_icon = "GFX_leader_background_destiny_1"
-	#destiny_trait = yes
-	#
-	#inline_script = {
-	#	script = trait/icon
-	#	CLASS = scientist
-	#	ICON = GFX_leader_trait_life_support_systems
-	#	RARITY = paragon
-	#	COUNCIL = no
-	#	TIER = none
-	#}
+# 	#destiny_background_icon = "GFX_leader_background_destiny_1"
+# 	#destiny_trait = yes
+# 	#
+# 	#inline_script = {
+# 	#	script = trait/icon
+# 	#	CLASS = scientist
+# 	#	ICON = GFX_leader_trait_life_support_systems
+# 	#	RARITY = paragon
+# 	#	COUNCIL = no
+# 	#	TIER = none
+# 	#}
 
 	
-	leader_class = { scientist }
-	initial = no
-	randomized = no
-}
+# 	leader_class = { scientist }
+# 	initial = no
+# 	randomized = no
+# }
 
-leader_trait_ge_scientist_a_like = {	###喜欢
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_ge_a_like.dds"
-	councilor_modifier = {
-		all_technology_research_speed = 0.03
-	}
+# leader_trait_ge_scientist_a_friendly = {	###友好
+# 	cost = 0
+# 	icon = "gfx/interface/icons/traits/leader_trait_ge_a_friendly.dds"
+# 	councilor_modifier = {
+# 		all_technology_research_speed = 0.02
+# 	}
 
-	#destiny_background_icon = "GFX_leader_background_destiny_1"
-	#destiny_trait = yes
-	#
-	#inline_script = {
-	#	script = trait/icon
-	#	CLASS = scientist
-	#	ICON = GFX_leader_trait_life_support_systems
-	#	RARITY = paragon
-	#	COUNCIL = no
-	#	TIER = none
-	#}
-
-	
-	leader_class = { scientist }
-	initial = no
-	randomized = no
-}
-
-leader_trait_ge_scientist_a_love = {	###爱意
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_ge_a_love.dds"
-	councilor_modifier = {
-		all_technology_research_speed = 0.04
-	}
-
-	#destiny_background_icon = "GFX_leader_background_destiny_1"
-	#destiny_trait = yes
-	#
-	#inline_script = {
-	#	script = trait/icon
-	#	CLASS = scientist
-	#	ICON = GFX_leader_trait_life_support_systems
-	#	RARITY = paragon
-	#	COUNCIL = no
-	#	TIER = none
-	#}
+# 	#destiny_background_icon = "GFX_leader_background_destiny_1"
+# 	#destiny_trait = yes
+# 	#
+# 	#inline_script = {
+# 	#	script = trait/icon
+# 	#	CLASS = scientist
+# 	#	ICON = GFX_leader_trait_life_support_systems
+# 	#	RARITY = paragon
+# 	#	COUNCIL = no
+# 	#	TIER = none
+# 	#}
 
 	
-	leader_class = { scientist }
-	initial = no
-	randomized = no
-}
+# 	leader_class = { scientist }
+# 	initial = no
+# 	randomized = no
+# }
 
-leader_trait_roz_official_a_strangeness = {	###陌生
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_ge_a_strangeness"
-	councilor_modifier = { }
-	leader_class = { official }
-	initial = no
-	randomized = no
-}
+# leader_trait_ge_scientist_a_like = {	###喜欢
+# 	cost = 0
+# 	icon = "gfx/interface/icons/traits/leader_trait_ge_a_like.dds"
+# 	councilor_modifier = {
+# 		all_technology_research_speed = 0.03
+# 	}
 
-leader_trait_roz_official_a_friendly = {	###友好
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_ge_a_friendly.dds"
-	councilor_modifier = { }
-	leader_class = { official }
-	initial = no
-	randomized = no
-}
+# 	#destiny_background_icon = "GFX_leader_background_destiny_1"
+# 	#destiny_trait = yes
+# 	#
+# 	#inline_script = {
+# 	#	script = trait/icon
+# 	#	CLASS = scientist
+# 	#	ICON = GFX_leader_trait_life_support_systems
+# 	#	RARITY = paragon
+# 	#	COUNCIL = no
+# 	#	TIER = none
+# 	#}
 
-leader_trait_roz_official_a_like = {	###喜欢
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_ge_a_like.dds"
-	councilor_modifier = { }
-	leader_class = { official }
-	initial = no
-	randomized = no
-}
+	
+# 	leader_class = { scientist }
+# 	initial = no
+# 	randomized = no
+# }
 
-leader_trait_roz_official_a_love = {	###爱意
-	cost = 0
-	icon = "gfx/interface/icons/traits/leader_trait_ge_a_love.dds"
-	councilor_modifier = { }
-	leader_class = { official }
-	initial = no
-	randomized = no
-}
+# leader_trait_ge_scientist_a_love = {	###爱意
+# 	cost = 0
+# 	icon = "gfx/interface/icons/traits/leader_trait_ge_a_love.dds"
+# 	councilor_modifier = {
+# 		all_technology_research_speed = 0.04
+# 	}
+
+# 	#destiny_background_icon = "GFX_leader_background_destiny_1"
+# 	#destiny_trait = yes
+# 	#
+# 	#inline_script = {
+# 	#	script = trait/icon
+# 	#	CLASS = scientist
+# 	#	ICON = GFX_leader_trait_life_support_systems
+# 	#	RARITY = paragon
+# 	#	COUNCIL = no
+# 	#	TIER = none
+# 	#}
+
+	
+# 	leader_class = { scientist }
+# 	initial = no
+# 	randomized = no
+# }
+
+# leader_trait_roz_official_a_strangeness = {	###陌生
+# 	cost = 0
+# 	icon = "gfx/interface/icons/traits/leader_trait_ge_a_strangeness"
+# 	councilor_modifier = { }
+# 	leader_class = { official }
+# 	initial = no
+# 	randomized = no
+# }
+
+# leader_trait_roz_official_a_friendly = {	###友好
+# 	cost = 0
+# 	icon = "gfx/interface/icons/traits/leader_trait_ge_a_friendly.dds"
+# 	councilor_modifier = { }
+# 	leader_class = { official }
+# 	initial = no
+# 	randomized = no
+# }
+
+# leader_trait_roz_official_a_like = {	###喜欢
+# 	cost = 0
+# 	icon = "gfx/interface/icons/traits/leader_trait_ge_a_like.dds"
+# 	councilor_modifier = { }
+# 	leader_class = { official }
+# 	initial = no
+# 	randomized = no
+# }
+
+# leader_trait_roz_official_a_love = {	###爱意
+# 	cost = 0
+# 	icon = "gfx/interface/icons/traits/leader_trait_ge_a_love.dds"
+# 	councilor_modifier = { }
+# 	leader_class = { official }
+# 	initial = no
+# 	randomized = no
+# }
 
 
 ##############################
@@ -328,8 +328,150 @@ leader_trait_krks_general_a_love = {	###喜欢
 
 
 
+#########################################
+leader_trait_roz_a_strangeness = {	###陌生
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_trait_ge_a_strangeness.dds"
+	#指挥官
+	triggered_modifier = {
+		potential = {
+			leader_class = commander
+		}
+		ship_rank_experienced = 0.05
+	}
+	#科学家
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.05
+	}
+	#行政官
+	triggered_modifier = {
+		potential = {
+			leader_class = official
+		}
+		planet_jobs_produces_mult = 0.05
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = official
+		}
+		country_admin_cap_mult = 0.05
+	}
+	#
+	leader_class = { official commander scientist }
+	initial = no
+	randomized = no
+}
 
+leader_trait_roz_a_friendly = {	###友好
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_trait_ge_a_friendly.dds"
+	#指挥官
+	triggered_modifier = {
+		potential = {
+			leader_class = commander
+		}
+		ship_rank_experienced = 0.20
+	}
+	#科学家
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.10
+	}
+	#行政官
+	triggered_modifier = {
+		potential = {
+			leader_class = official
+		}
+		planet_jobs_produces_mult = 0.10
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = official
+		}
+		country_admin_cap_mult = 0.10
+	}
+	#
+	leader_class = { official commander scientist }
+	initial = no
+	randomized = no
+}
 
+leader_trait_roz_a_like = {	###喜欢
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_trait_ge_a_like.dds"
+	#指挥官
+	triggered_modifier = {
+		potential = {
+			leader_class = commander
+		}
+		ship_rank_experienced = 0.40
+	}
+	#科学家
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.20
+	}
+	#行政官
+	triggered_modifier = {
+		potential = {
+			leader_class = official
+		}
+		planet_jobs_produces_mult = 0.15
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = official
+		}
+		country_admin_cap_mult = 0.15
+	}
+	#
+	leader_class = { official commander scientist }
+	initial = no
+	randomized = no
+}
+
+leader_trait_roz_a_love = {	###爱意
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_trait_ge_a_love.dds"
+	#指挥官
+	triggered_modifier = {
+		potential = {
+			leader_class = commander
+		}
+		ship_rank_experienced = 1
+	}
+	#科学家
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.30
+	}
+	#行政官
+	triggered_modifier = {
+		potential = {
+			leader_class = official
+		}
+		planet_jobs_produces_mult = 0.25
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = official
+		}
+		country_admin_cap_mult = 0.25
+	}
+	#
+	leader_class = { official commander scientist }
+	initial = no
+	randomized = no
+}
 
 
 

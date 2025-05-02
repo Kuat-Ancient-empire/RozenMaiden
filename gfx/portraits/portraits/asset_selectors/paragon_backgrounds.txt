@@ -2,7 +2,7 @@ paragon_background_selector = {
     default = "default_background"
     leader = {
         legendary_bg_suigintou = {
-            has_leader_flag = ge_suigintou_flag
+            has_leader_flag = roz_suigintou_flag
         }
         legendary_bg_azaryn = {
             has_leader_flag = azaryn

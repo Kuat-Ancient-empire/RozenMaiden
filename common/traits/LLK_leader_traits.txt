@@ -1,16 +1,11 @@
-
 @llk_categorybuff = 0.25
-
-
 ###############
-
 #真红
 leader_trait_roz_shinku_main = {
-	initial = no	        # 开局可用
+	initial = no	# 开局可用
 	randomized = no
 	immortal_leaders = yes	# 领袖永生
 	#icon = "gfx/interface/icons/traits/trait_cor_dragon_totem.dds"	# 图标路径
-
 	#force_councilor_trait = yes
 	#is_councilor_trait_for_ruler = yes
 	leader_trait_type = destiny
@@ -22,27 +17,33 @@ leader_trait_roz_shinku_main = {
 		COUNCIL = triggered
 		TIER = none
 	}
-	leader_class = { commander official scientist }
+	leader_class = {
+		commander
+		official
+		scientist
+	}
 	notify_on_gained = no
-}	
-
+}
 
 #雪华绮晶
 leader_trait_roz_kirakishou_main = {
-	initial = no	        # 开局可用
+	initial = no	# 开局可用
 	randomized = no
 	immortal_leaders = yes	# 领袖永生
 	#icon = "gfx/interface/icons/traits/trait_cor_dragon_totem.dds"	# 图标路径
-
 	#force_councilor_trait = yes
 	#is_councilor_trait_for_ruler = yes
 	leader_trait_type = destiny
-	on_gained_effect = {
-		if = {
-			limit = { NOT = { has_leader_flag = roz_kirakishou_flag } }
-			remove_trait = leader_trait_roz_kirakishou_main
-		}
-	}
+	# on_gained_effect = {	#此效果执行优先度非常高，会直接插进正在执行的代码块中
+	# 	if = {
+	# 		limit = {
+	# 			NOT = {
+	# 				has_leader_flag = roz_kirakishou_flag
+	# 			}
+	# 		}
+	# 		remove_trait = leader_trait_roz_kirakishou_main
+	# 	}
+	# }
 	inline_script = {
 		script = trait/icon
 		CLASS = leader
@@ -51,15 +52,12 @@ leader_trait_roz_kirakishou_main = {
 		COUNCIL = triggered
 		TIER = none
 	}
-
 	triggered_councilor_modifier = {
 		potential = {
 			is_ruler = yes
 		}
-		leader_cost_empire_size_mult = -0.20
+		leader_cost_empire_size_mult = -0.2
 	}
-
-
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
@@ -71,9 +69,8 @@ leader_trait_roz_kirakishou_main = {
 			}
 		}
 		planet_jobs_produces_mult = 0.45
-		biological_pop_happiness = -0.20
-		planet_amenities_no_happiness_mult = -0.20
-
+		biological_pop_happiness = -0.2
+		planet_amenities_no_happiness_mult = -0.2
 	}
 	triggered_desc = {
 		trigger = {
@@ -82,7 +79,6 @@ leader_trait_roz_kirakishou_main = {
 		}
 		text = leader_trait_kirakishou_gov_tt
 	}
-
 	triggered_modifier = {
 		potential = {
 			owner = {
@@ -91,11 +87,9 @@ leader_trait_roz_kirakishou_main = {
 			leader_class = official
 		}
 		planet_jobs_produces_mult = 0.35
-		biological_pop_happiness = 0.10
-		planet_amenities_no_happiness_mult = 0.10
+		biological_pop_happiness = 0.1
+		planet_amenities_no_happiness_mult = 0.1
 	}
-
-
 	triggered_councilor_modifier = {
 		potential = {
 			is_ruler = no
@@ -109,9 +103,9 @@ leader_trait_roz_kirakishou_main = {
 		ship_shield_add = 10000
 		ship_accuracy_mult = 0.1
 		ship_tracking_mult = 0.1
-		ship_hull_damage_mult = 0.50
-		spy_network_daily_value_mult = 5.0
-		operations_cost_mult = -0.50
+		ship_hull_damage_mult = 0.5
+		spy_network_daily_value_mult = 5
+		operations_cost_mult = -0.5
 		spy_network_levels_add = 15
 	}
 	triggered_desc = {
@@ -121,7 +115,6 @@ leader_trait_roz_kirakishou_main = {
 		}
 		text = leader_trait_kirakishou_gen_tt
 	}
-
 	triggered_councilor_modifier = {
 		potential = {
 			owner = {
@@ -133,23 +126,24 @@ leader_trait_roz_kirakishou_main = {
 		ship_shield_add = 25000
 		ship_accuracy_mult = 0.2
 		ship_tracking_mult = 0.2
-		ship_hull_damage_mult = 1.00
-		ship_experience_gain_mult = 2.0
-		spy_network_daily_value_mult = 5.0
-		operations_cost_mult = -0.40
+		ship_hull_damage_mult = 1
+		ship_experience_gain_mult = 2
+		spy_network_daily_value_mult = 5
+		operations_cost_mult = -0.4
 		spy_network_levels_add = 20
 	}
-
 	#modifier = {
 	#	leader_commanders_sr_zro_produces_add = -5
 	#}
-
-	leader_class = { commander official }
+	leader_class = {
+		commander
+		official
+	}
 	notify_on_gained = no
 }
 
 leader_trait_roz_kirakishou_nightmare = {
-	initial = no	        # 开局可用
+	initial = no	# 开局可用
 	randomized = no
 	#immortal_leaders = yes	# 领袖永生
 	#icon = "gfx/interface/icons/traits/.dds"	# 图标路径
@@ -161,14 +155,16 @@ leader_trait_roz_kirakishou_nightmare = {
 		COUNCIL = triggered
 		TIER = none
 	}
-
-	on_gained_effect = {
-		if = {
-			limit = { NOT = { has_leader_flag = roz_kirakishou_flag } }
-			remove_trait = leader_trait_roz_kirakishou_nightmare
-		}
-	}
-
+	# on_gained_effect = {
+	# 	if = {
+	# 		limit = {
+	# 			NOT = {
+	# 				has_leader_flag = roz_kirakishou_flag
+	# 			}
+	# 		}
+	# 		remove_trait = leader_trait_roz_kirakishou_nightmare
+	# 	}
+	# }
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
@@ -180,7 +176,7 @@ leader_trait_roz_kirakishou_nightmare = {
 			}
 		}
 		biological_pop_growth_speed_reduction = -0.5
-		biological_pop_growth_speed = 0.30
+		biological_pop_growth_speed = 0.3
 		planet_stability_add = -20
 	}
 	triggered_modifier = {
@@ -196,9 +192,8 @@ leader_trait_roz_kirakishou_nightmare = {
 		army_damage_mult = 0.5
 		army_collateral_damage_mult = 5
 		ship_fire_rate_mult = 0.25
-		ship_weapon_range_mult = 0.20
+		ship_weapon_range_mult = 0.2
 	}
-
 	#开启指定法令
 	triggered_modifier = {
 		potential = {
@@ -209,7 +204,7 @@ leader_trait_roz_kirakishou_nightmare = {
 			}
 		}
 		biological_pop_growth_speed_reduction = -0.25
-		biological_pop_growth_speed = 0.40
+		biological_pop_growth_speed = 0.4
 		planet_stability_add = -10
 	}
 	triggered_modifier = {
@@ -220,14 +215,11 @@ leader_trait_roz_kirakishou_nightmare = {
 				has_country_flag = roz_rosa_mystica_enhance_flag
 			}
 		}
-		army_damage_mult = 1.00
+		army_damage_mult = 1
 		army_collateral_damage_mult = 8
-		ship_fire_rate_mult = 0.40
+		ship_fire_rate_mult = 0.4
 		ship_weapon_range_mult = 0.25
 	}
-
-
-
 	triggered_self_modifier = {
 		potential = {
 			is_ruler = no
@@ -240,7 +232,6 @@ leader_trait_roz_kirakishou_nightmare = {
 		}
 		leaders_upkeep_mult = -0.5
 		#leader_governors_society_research_produces_add = 15
-
 		mult = trigger:has_skill
 	}
 	triggered_self_modifier = {
@@ -286,19 +277,18 @@ leader_trait_roz_kirakishou_nightmare = {
 		#leader_commanders_energy_produces_add = 20
 		mult = trigger:has_skill
 	}
-
-
-
 	modifier = {
 		leader_commanders_sr_rosa_mystica_produces_add = -0.8
 	}
-
-	leader_class = { official commander }
+	leader_class = {
+		official
+		commander
+	}
 	notify_on_gained = no
 }
 
 leader_trait_ge_mind_drain = {
-	initial = no	        # 开局可用
+	initial = no	# 开局可用
 	randomized = no
 	inline_script = {
 		script = trait/icon
@@ -308,33 +298,32 @@ leader_trait_ge_mind_drain = {
 		COUNCIL = triggered
 		TIER = none
 	}
-
-	on_gained_effect = {
-		if = {
-			limit = { NOT = { has_leader_flag = roz_kirakishou_flag } }
-			remove_trait = leader_trait_ge_mind_drain
-		}
+	# on_gained_effect = {
+	# 	if = {
+	# 		limit = {
+	# 			NOT = {
+	# 				has_leader_flag = roz_kirakishou_flag
+	# 			}
+	# 		}
+	# 		remove_trait = leader_trait_ge_mind_drain
+	# 	}
+	# }
+	leader_class = {
+		commander
 	}
-
-	leader_class = { commander }
 	notify_on_gained = no
-	modifier = {  }
+	modifier = {
+	}
 }
 
-
-
-
 #####飞升特质#####
-
 ############### 统治者 ###############
-
 #主飞升特质
 leader_trait_ge_ruler_bond = {
-	initial = no	        # 开局可用
+	initial = no	# 开局可用
 	randomized = no
 	immortal_leaders = yes	# 领袖永生
 	#icon = "gfx/interface/icons/traits/trait_cor_dragon_totem.dds"	# 图标路径
-
 	#is_councilor_trait_for_ruler = yes
 	inline_script = {
 		script = trait/icon
@@ -344,12 +333,11 @@ leader_trait_ge_ruler_bond = {
 		COUNCIL = triggered
 		TIER = none
 	}
-
 	triggered_councilor_modifier = {
 		potential = {
 			is_ruler = yes
 		}
-		country_claim_influence_cost_mult = -0.20
+		country_claim_influence_cost_mult = -0.2
 		# 宣称影响力花费
 		country_unity_produces_mult = 0.15
 		# 每月凝聚力
@@ -357,49 +345,44 @@ leader_trait_ge_ruler_bond = {
 		# 附属国信任上限
 		country_leader_pool_size = 5
 		# 领袖池规模
-		leader_cost_empire_size_mult = -0.20
+		leader_cost_empire_size_mult = -0.2
 	}
-
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
 			leader_class = commander
 		}
-		ship_weapon_damage = 0.20
-		ship_weapon_range_mult = 0.10
-		ship_disengage_chance_mult = 0.20
+		ship_weapon_damage = 0.2
+		ship_weapon_range_mult = 0.1
+		ship_disengage_chance_mult = 0.2
 		ship_speed_mult = 0.15
-		army_damage_mult = 0.40
+		army_damage_mult = 0.4
 		army_morale = 0.25
-		army_morale_damage_mult = 0.40
+		army_morale_damage_mult = 0.4
 	}
-
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
 			leader_class = scientist
 		}
-		ship_archaeological_site_excavation_speed_mult = 0.20
+		ship_archaeological_site_excavation_speed_mult = 0.2
 		ship_archaeological_site_clues_add = 1
-		ship_anomaly_fail_risk = -0.10
-		ship_anomaly_research_speed_mult = 0.20
-		science_ship_survey_speed = 0.10
-		species_leader_exp_gain = 0.10
+		ship_anomaly_fail_risk = -0.1
+		ship_anomaly_research_speed_mult = 0.2
+		science_ship_survey_speed = 0.1
+		species_leader_exp_gain = 0.1
 	}
-
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
 			leader_class = official
 		}
-		planet_jobs_produces_mult = 0.10
-		planet_jobs_upkeep_mult = -0.10
-		planet_crime_add = -10                                #犯罪率
-		planet_army_build_time_mult = -0.10
-		army_defense_health_mult = 0.20
+		planet_jobs_produces_mult = 0.1
+		planet_jobs_upkeep_mult = -0.1
+		planet_crime_add = -10		#犯罪率
+		planet_army_build_time_mult = -0.1
+		army_defense_health_mult = 0.2
 	}
-
-
 	triggered_self_modifier = {
 		potential = {
 			is_ruler = no
@@ -444,20 +427,18 @@ leader_trait_ge_ruler_bond = {
 		}
 		leader_scientists_sr_void_core_produces_add = 1
 	}
-
-
 	modifier = {
-
 	}
-
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 	notify_on_gained = no
 	#requires_traits = {
 	#	trait_cor_dragon_totem
 	#}
-
 }
-
 
 #星耀之光
 #leader_trait_ge_ruler_star_light = {
@@ -477,14 +458,7 @@ leader_trait_ge_ruler_bond = {
 #		country_leader_pool_size = 2		            # 领袖池规模
 #	}
 #}
-
-
-
-
-
-
 ############### 舰队司令 ###############
-
 ##例
 #leader_trait_llk_admiral_example = {
 #	cost = 0	# 特质点数花费
@@ -541,8 +515,6 @@ leader_trait_ge_ruler_bond = {
 #		weight = 2000
 #	}
 #}
-
-
 #神州的意志连接着我们mindlink
 #leader_trait_ge_cor_admiral = {
 #	cost = 0	# 特质点数花费
@@ -579,17 +551,14 @@ leader_trait_ge_ruler_bond = {
 #		weight = 2000
 #	}
 #}
-
-
-leader_trait_ge_time_freeze = {		###Time Freeze Ready!
+leader_trait_ge_time_freeze = {
+	###Time Freeze Ready!
 	cost = 0	# 特质点数花费
 	icon = "gfx/interface/icons/traits/leader_trait_ge_time_freeze.dds"	# 图标路径
 	initial = no	# 开局可用
 	randomized = no	# 可否随机
 	immortal_leaders = yes
 	modifier = {
-
-		
 	}
 	# 领袖特质类型 舰队司令
 	leader_class = {
@@ -602,27 +571,26 @@ leader_trait_ge_time_freeze = {		###Time Freeze Ready!
 ####汞灯技能
 ####
 leader_trait_ge_mercury_lamp = {
-
 	custom_subtitle = leader_trait_ge_mercury_lamp_title
-
 	cost = 0	# 特质点数花费
 	#icon = "gfx/interface/icons/traits/leader_trait_ge_mercury_lamp.dds"	# 图标路径
 	initial = no	# 开局可用
 	randomized = no	# 可否随机
 	immortal_leaders = yes
-
 	leader_trait_type = destiny
 	destiny_background_icon = "GFX_leader_background_destiny_1"
 	destiny_trait = yes
 	force_councilor_trait = yes
-
-	on_gained_effect = {
-		if = {
-			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
-			remove_trait = leader_trait_ge_mercury_lamp
-		}
-	}
-
+	# on_gained_effect = {
+	# 	if = {
+	# 		limit = {
+	# 			NOT = {
+	# 				has_leader_flag = roz_suigintou_flag
+	# 			}
+	# 		}
+	# 		remove_trait = leader_trait_ge_mercury_lamp
+	# 	}
+	# }
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -631,7 +599,6 @@ leader_trait_ge_mercury_lamp = {
 		COUNCIL = yes
 		TIER = none
 	}
-
 	triggered_modifier = {
 		potential = {
 			NOT = {
@@ -640,11 +607,11 @@ leader_trait_ge_mercury_lamp = {
 				}
 			}
 		}
-		ship_windup_mult = -0.50
+		ship_windup_mult = -0.5
 		ship_ftl_jumpdrive_range_mult = 0.25
-		army_attack_health_mult = 1.0
-		ship_experience_gain_mult = 0.50
-		army_experience_gain_mult = 0.50
+		army_attack_health_mult = 1
+		ship_experience_gain_mult = 0.5
+		army_experience_gain_mult = 0.5
 		#command_limit_add =
 	}
 	triggered_modifier = {
@@ -660,40 +627,36 @@ leader_trait_ge_mercury_lamp = {
 		ship_accuracy_add = -15
 		ship_fire_rate_mult = 0.25
 	}
-
 	triggered_modifier = {
 		potential = {
-				owner = {
-					has_country_flag = roz_rosa_mystica_enhance_flag
-
+			owner = {
+				has_country_flag = roz_rosa_mystica_enhance_flag
 			}
 		}
 		ship_windup_mult = -0.75
-		ship_ftl_jumpdrive_range_mult = 1.0
-		army_attack_health_mult = 2.0
-		ship_experience_gain_mult = 1.0
-		army_experience_gain_mult = 1.0
+		ship_ftl_jumpdrive_range_mult = 1
+		army_attack_health_mult = 2
+		ship_experience_gain_mult = 1
+		army_experience_gain_mult = 1
 		#command_limit_add =
 	}
 	triggered_modifier = {
 		potential = {
 			is_councilor = no
-				owner = {
-					has_country_flag = roz_rosa_mystica_enhance_flag
-
+			owner = {
+				has_country_flag = roz_rosa_mystica_enhance_flag
 			}
 		}
 		ship_tracking_add = -10
 		ship_accuracy_add = -10
 		ship_fire_rate_mult = 0.35
 	}
-
 	triggered_desc = {
-		trigger = { is_councilor = yes }
+		trigger = {
+			is_councilor = yes
+		}
 		text = leader_trait_suigintou_adm_1_tt
 	}
-
-
 	#leader_trait = {
 	#	admiral
 	#}
@@ -711,25 +674,26 @@ leader_trait_ge_Blackwinged_Dragon = {
 	#modification = no	# 可否修改
 	randomized = no	# 可否随机
 	#immortal_leaders = yes
-
-	on_gained_effect = {
-		if = {
-			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
-			remove_trait = leader_trait_ge_Blackwinged_Dragon
-		}
-	}
-
+	# on_gained_effect = {
+	# 	if = {
+	# 		limit = {
+	# 			NOT = {
+	# 				has_leader_flag = roz_suigintou_flag
+	# 			}
+	# 		}
+	# 		remove_trait = leader_trait_ge_Blackwinged_Dragon
+	# 	}
+	# }
 	triggered_modifier = {
 		potential = {
 			NOT = {
 				owner = {
 					has_country_flag = roz_rosa_mystica_enhance_flag
-
 				}
 			}
 		}
-		ship_weapon_damage = 0.20
-		ship_weapon_range_mult = 0.10
+		ship_weapon_damage = 0.2
+		ship_weapon_range_mult = 0.1
 		ship_speed_mult = 0.15
 		ship_base_speed_mult = 0.15
 	}
@@ -739,10 +703,10 @@ leader_trait_ge_Blackwinged_Dragon = {
 				has_country_flag = roz_rosa_mystica_enhance_flag
 			}
 		}
-		ship_weapon_damage = 0.40
-		ship_weapon_range_mult = 0.20
-		ship_speed_mult = 0.20
-		ship_base_speed_mult = 0.20
+		ship_weapon_damage = 0.4
+		ship_weapon_range_mult = 0.2
+		ship_speed_mult = 0.2
+		ship_base_speed_mult = 0.2
 	}
 	inline_script = {
 		script = trait/icon
@@ -752,8 +716,6 @@ leader_trait_ge_Blackwinged_Dragon = {
 		COUNCIL = no
 		TIER = none
 	}
-
-
 	#leader_trait = {
 	#	admiral
 	#}
@@ -764,7 +726,6 @@ leader_trait_ge_Blackwinged_Dragon = {
 	# 领袖类别
 }
 
-
 leader_trait_ge_azoth = {
 	cost = 0	# 特质点数花费
 	#icon = "gfx/interface/icons/traits/leader_trait_ge_azoth.dds"	# 图标路径
@@ -772,39 +733,38 @@ leader_trait_ge_azoth = {
 	#modification = no	# 可否修改
 	randomized = no	# 可否随机
 	#immortal_leaders = yes
-
-	on_gained_effect = {
-		if = {
-			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
-			remove_trait = leader_trait_ge_azoth
-		}
-	}
-
+	# on_gained_effect = {
+	# 	if = {
+	# 		limit = {
+	# 			NOT = {
+	# 				has_leader_flag = roz_suigintou_flag
+	# 			}
+	# 		}
+	# 		remove_trait = leader_trait_ge_azoth
+	# 	}
+	# }
 	triggered_modifier = {
 		potential = {
 			NOT = {
 				owner = {
 					has_country_flag = roz_rosa_mystica_enhance_flag
-
 				}
 			}
 		}
-		ship_hull_damage_mult = 0.30
+		ship_hull_damage_mult = 0.3
 		ship_shield_damage_mult = 0.25
 		ship_armor_damage_mult = 0.25
 	}
 	triggered_modifier = {
 		potential = {
-				owner = {
-					has_country_flag = roz_rosa_mystica_enhance_flag
-
-				}
+			owner = {
+				has_country_flag = roz_rosa_mystica_enhance_flag
+			}
 		}
-		ship_hull_damage_mult = 0.80
-		ship_shield_damage_mult = 0.60
-		ship_armor_damage_mult = 0.60
+		ship_hull_damage_mult = 0.8
+		ship_shield_damage_mult = 0.6
+		ship_armor_damage_mult = 0.6
 	}
-
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -813,8 +773,6 @@ leader_trait_ge_azoth = {
 		COUNCIL = no
 		TIER = none
 	}
-
-
 	#leader_trait = {
 	#	admiral
 	#}
@@ -832,14 +790,16 @@ leader_trait_ge_N_field = {
 	#modification = no	# 可否修改
 	randomized = no	# 可否随机
 	#immortal_leaders = yes
-
-	on_gained_effect = {
-		if = {
-			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
-			remove_trait = leader_trait_ge_N_field
-		}
-	}
-
+	# on_gained_effect = {
+	# 	if = {
+	# 		limit = {
+	# 			NOT = {
+	# 				has_leader_flag = roz_suigintou_flag
+	# 			}
+	# 		}
+	# 		remove_trait = leader_trait_ge_N_field
+	# 	}
+	# }
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -848,8 +808,6 @@ leader_trait_ge_N_field = {
 		COUNCIL = no
 		TIER = none
 	}
-
-
 	#inline_script = {
 	#	script = paragon/leader_resource_produces
 	#	RESOURCE = volatile_motes
@@ -880,17 +838,15 @@ leader_trait_ge_N_field = {
 	#	RESOURCE = consumer_goods
 	#	AMOUNT = 3
 	#}
-
 	triggered_self_modifier = {
 		potential = {
-				owner = {
-					NOT = {
-						has_country_flag = roz_rosa_mystica_enhance_flag
-					}
-					is_gestalt = yes
+			owner = {
+				NOT = {
+					has_country_flag = roz_rosa_mystica_enhance_flag
 				}
+				is_gestalt = yes
+			}
 		}
-
 		leader_commanders_volatile_motes_produces_add = 0.5
 		leader_commanders_exotic_gases_produces_add = 0.5
 		leader_commanders_rare_crystals_produces_add = 0.5
@@ -914,7 +870,6 @@ leader_trait_ge_N_field = {
 		leader_commanders_consumer_goods_upkeep_add = 1
 		mult = trigger:has_skill
 	}
-
 	triggered_self_modifier = {
 		potential = {
 			owner = {
@@ -922,7 +877,6 @@ leader_trait_ge_N_field = {
 				is_gestalt = yes
 			}
 		}
-
 		leader_commanders_volatile_motes_produces_add = 2
 		leader_commanders_exotic_gases_produces_add = 2
 		leader_commanders_rare_crystals_produces_add = 2
@@ -944,7 +898,6 @@ leader_trait_ge_N_field = {
 		leader_commanders_consumer_goods_upkeep_add = 0.5
 		mult = trigger:has_skill
 	}
-
 	triggered_modifier = {
 		potential = {
 			owner = {
@@ -953,9 +906,9 @@ leader_trait_ge_N_field = {
 				}
 			}
 		}
-		ship_emergency_ftl_min_days_mult = -1.00
-        #ship_ftl_jumpdrive_range_mult = 0.50
-		ship_disengage_chance_mult = 0.50
+		ship_emergency_ftl_min_days_mult = -1
+		#ship_ftl_jumpdrive_range_mult = 0.50
+		ship_disengage_chance_mult = 0.5
 		ship_disengage_opportunities_add = 15
 		ship_evasion_mult = 0.15
 		ship_evasion_add = 10
@@ -963,14 +916,14 @@ leader_trait_ge_N_field = {
 	triggered_modifier = {
 		potential = {
 			owner = {
-					has_country_flag = roz_rosa_mystica_enhance_flag
+				has_country_flag = roz_rosa_mystica_enhance_flag
 			}
 		}
-		ship_emergency_ftl_min_days_mult = -1.00
+		ship_emergency_ftl_min_days_mult = -1
 		#ship_ftl_jumpdrive_range_mult = 0.50
 		ship_disengage_chance_mult = 0.8
 		ship_disengage_opportunities_add = 30
-		ship_evasion_mult = 0.30
+		ship_evasion_mult = 0.3
 		ship_evasion_add = 30
 	}
 	#leader_trait = {
@@ -984,7 +937,6 @@ leader_trait_ge_N_field = {
 }
 
 ################雪华绮晶技能
-
 #leader_trait_ge_mind_drain = {
 #	cost = 0
 #	icon = "gfx/interface/icons/traits/leader_trait_roz_krks_md.dds"
@@ -998,14 +950,7 @@ leader_trait_ge_N_field = {
 #		commander
 #	}
 #}
-
-
-
-
-
-
 ############### 陆军司令 ###############
-
 #白坤电网
 leader_trait_cor_baikun_power_network = {
 	cost = 0
@@ -1014,9 +959,9 @@ leader_trait_cor_baikun_power_network = {
 	randomized = no
 	immortal_leaders = yes	# 领袖永生
 	councilor_modifier = {
-		country_energy_produces_mult = 0.20
-		planet_jobs_energy_produces_mult = 0.20
-		category_industry_research_speed_mult = 0.20
+		country_energy_produces_mult = 0.2
+		planet_jobs_energy_produces_mult = 0.2
+		category_industry_research_speed_mult = 0.2
 	}
 	# 领袖特质类型 陆军司令
 	leader_class = {
@@ -1048,26 +993,7 @@ leader_trait_cor_baikun_power_network = {
 #}
 #
 #
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ############### 科学家 ###############
-
 ##十项全能allround_scientist
 #leader_trait_ge_cor_scientist = {
 #	cost = 0	# 特质点数花费
@@ -1127,16 +1053,12 @@ leader_trait_cor_baikun_power_network = {
 #		weight = 400
 #	}
 #}
-
 ######
 ####汞灯技能/科学家
 ######
-
 leader_trait_ge_mercury_lamp_scientist = {
 	cost = 0	# 特质点数花费
-
 	custom_subtitle = leader_trait_ge_mercury_lamp_title
-
 	#icon = "gfx/interface/icons/traits/leader_trait_ge_mercury_lamp.dds"	# 图标路径
 	initial = no	# 开局可用
 	randomized = no	# 可否随机
@@ -1144,19 +1066,20 @@ leader_trait_ge_mercury_lamp_scientist = {
 	leader_class = {
 		scientist
 	}
-
 	leader_trait_type = destiny
 	destiny_trait = yes
 	destiny_background_icon = "GFX_leader_background_destiny_1"
 	force_councilor_trait = yes
-
-	on_gained_effect = {
-		if = {
-			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
-			remove_trait = leader_trait_ge_mercury_lamp_scientist
-		}
-	}
-
+	# on_gained_effect = {
+	# 	if = {
+	# 		limit = {
+	# 			NOT = {
+	# 				has_leader_flag = roz_suigintou_flag
+	# 			}
+	# 		}
+	# 		remove_trait = leader_trait_ge_mercury_lamp_scientist
+	# 	}
+	# }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -1165,7 +1088,6 @@ leader_trait_ge_mercury_lamp_scientist = {
 		COUNCIL = yes
 		TIER = none
 	}
-
 	triggered_self_modifier = {
 		potential = {
 			is_councilor = yes
@@ -1175,7 +1097,7 @@ leader_trait_ge_mercury_lamp_scientist = {
 				}
 			}
 		}
-		species_leader_exp_gain = 0.10
+		species_leader_exp_gain = 0.1
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -1187,10 +1109,11 @@ leader_trait_ge_mercury_lamp_scientist = {
 		species_leader_exp_gain = 0.25
 	}
 	triggered_desc = {
-		trigger = { is_councilor = no }
+		trigger = {
+			is_councilor = no
+		}
 		text = leader_trait_suigintou_1_tt
 	}
-
 	triggered_self_modifier = {
 		potential = {
 			is_councilor = no
@@ -1200,8 +1123,8 @@ leader_trait_ge_mercury_lamp_scientist = {
 				}
 			}
 		}
-		leaders_upkeep_mult = -0.50
-		ship_archaeological_site_excavation_speed_mult = 0.30      # 考古速度
+		leaders_upkeep_mult = -0.5
+		ship_archaeological_site_excavation_speed_mult = 0.3		# 考古速度
 		ship_archaeological_site_clues_add = 3
 	}
 	triggered_self_modifier = {
@@ -1211,16 +1134,16 @@ leader_trait_ge_mercury_lamp_scientist = {
 				has_country_flag = roz_rosa_mystica_enhance_flag
 			}
 		}
-		leaders_upkeep_mult = -0.50
-		ship_archaeological_site_excavation_speed_mult = 0.50   # 考古速度
+		leaders_upkeep_mult = -0.5
+		ship_archaeological_site_excavation_speed_mult = 0.5		# 考古速度
 		ship_archaeological_site_clues_add = 5
 	}
 	triggered_desc = {
-		trigger = { is_councilor = yes }
+		trigger = {
+			is_councilor = yes
+		}
 		text = leader_trait_suigintou_2_tt
 	}
-
-
 	triggered_councilor_modifier = {
 		potential = {
 			NOT = {
@@ -1241,14 +1164,12 @@ leader_trait_ge_mercury_lamp_scientist = {
 				has_country_flag = roz_rosa_mystica_enhance_flag
 			}
 		}
-		all_technology_research_speed = 0.30
-		category_new_worlds_research_speed_mult = 0.30
-		category_biology_research_speed_mult = 0.30
-		category_military_theory_research_speed_mult = 0.30
-		category_psionics_research_speed_mult = 0.30
+		all_technology_research_speed = 0.3
+		category_new_worlds_research_speed_mult = 0.3
+		category_biology_research_speed_mult = 0.3
+		category_military_theory_research_speed_mult = 0.3
+		category_psionics_research_speed_mult = 0.3
 	}
-
-
 }
 
 leader_trait_ge_N_field_scientist = {
@@ -1263,14 +1184,16 @@ leader_trait_ge_N_field_scientist = {
 	leader_class = {
 		scientist
 	}
-
-	on_gained_effect = {
-		if = {
-			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
-			remove_trait = leader_trait_ge_N_field_scientist
-		}
-	}
-
+	# on_gained_effect = {
+	# 	if = {
+	# 		limit = {
+	# 			NOT = {
+	# 				has_leader_flag = roz_suigintou_flag
+	# 			}
+	# 		}
+	# 		remove_trait = leader_trait_ge_N_field_scientist
+	# 	}
+	# }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -1279,8 +1202,6 @@ leader_trait_ge_N_field_scientist = {
 		COUNCIL = no
 		TIER = none
 	}
-
-
 	#inline_script = {
 	#	script = paragon/leader_resource_produces
 	#	RESOURCE = physics_research
@@ -1358,8 +1279,6 @@ leader_trait_ge_N_field_scientist = {
 		leader_scientists_minerals_upkeep_add = 2
 		mult = trigger:has_skill
 	}
-
-
 	#ai_categories = {
 	#	physics
 	#	society
@@ -1377,14 +1296,13 @@ leader_trait_ge_N_field_scientist = {
 				}
 			}
 		}
-		science_ship_survey_speed = -0.20
+		science_ship_survey_speed = -0.2
 		ship_cloaking_detection_add = 6
 		ship_cloaking_strength_add = 8
 		ship_speed_mult = 0.5
 		ship_disengage_chance_mult = 1.5
-		ship_emergency_ftl_min_days_mult = -0.30
-		ship_jumpdrive_cooldown_mult = -0.30
-
+		ship_emergency_ftl_min_days_mult = -0.3
+		ship_jumpdrive_cooldown_mult = -0.3
 	}
 	triggered_modifier = {
 		potential = {
@@ -1396,13 +1314,10 @@ leader_trait_ge_N_field_scientist = {
 		ship_cloaking_detection_add = 10
 		ship_cloaking_strength_add = 10
 		ship_speed_mult = 0.6
-		ship_disengage_chance_mult = 2.0
-		ship_emergency_ftl_min_days_mult = -1.0
-		ship_jumpdrive_cooldown_mult = -1.0
-
+		ship_disengage_chance_mult = 2
+		ship_emergency_ftl_min_days_mult = -1
+		ship_jumpdrive_cooldown_mult = -1
 	}
-
-
 }
 
 leader_trait_ge_meimei_scientist = {
@@ -1414,14 +1329,16 @@ leader_trait_ge_meimei_scientist = {
 	#leader_trait = {
 	#	scientist
 	#}
-
-	on_gained_effect = {
-		if = {
-			limit = { NOT = { has_leader_flag = ge_suigintou_flag } }
-			remove_trait = leader_trait_ge_meimei_scientist
-		}
-	}
-
+	# on_gained_effect = {
+	# 	if = {
+	# 		limit = {
+	# 			NOT = {
+	# 				has_leader_flag = roz_suigintou_flag
+	# 			}
+	# 		}
+	# 		remove_trait = leader_trait_ge_meimei_scientist
+	# 	}
+	# }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -1430,16 +1347,13 @@ leader_trait_ge_meimei_scientist = {
 		COUNCIL = no
 		TIER = none
 	}
-
-
 	leader_class = {
 		scientist
 	}
-
 	ai_categories = {
-		physics	
+		physics
 		society
-		engineering	
+		engineering
 		survey
 	}
 	ai_weight = {
@@ -1453,25 +1367,21 @@ leader_trait_ge_meimei_scientist = {
 				}
 			}
 		}
-		ship_anomaly_generation_chance_mult = 0.15 		        # 异常点发现几率
-		ship_anomaly_research_speed_mult = 0.50   		            # 异常点研究速度
-        ship_anomaly_fail_risk = -0.15
+		ship_anomaly_generation_chance_mult = 0.15		# 异常点发现几率
+		ship_anomaly_research_speed_mult = 0.5		# 异常点研究速度
+		ship_anomaly_fail_risk = -0.15
 	}
-
 	triggered_modifier = {
 		potential = {
 			owner = {
 				has_country_flag = roz_rosa_mystica_enhance_flag
 			}
 		}
-		ship_anomaly_generation_chance_mult = 0.30        # 异常点发现几率
-		ship_anomaly_research_speed_mult = 0.75   		            # 异常点研究速度
-		ship_anomaly_fail_risk = -0.30
+		ship_anomaly_generation_chance_mult = 0.3		# 异常点发现几率
+		ship_anomaly_research_speed_mult = 0.75		# 异常点研究速度
+		ship_anomaly_fail_risk = -0.3
 	}
-
-
 }
-
 
 #leader_trait_ge_test_scientist = {
 #	cost = 0	# 特质点数花费
@@ -1508,28 +1418,23 @@ leader_trait_ge_meimei_scientist = {
 #		weight = 40
 #	}
 #}
-
 #心理阴影
 leader_trait_roz_battered = {
 	cost = 0	# 特质点数花费
 	icon = "gfx/interface/icons/traits/leader_trait_icons/traumatized.dds"	# 图标路径
 	initial = no	# 开局可用
 	randomized = no	# 可否随机
-
 	inline_script = {
 		script = trait/icon_specialist
 		ICON = "GFX_leader_trait_traumatized"
 		COUNCIL = no
 		TIER = none
 	}
-
 	modifier = {
 		science_ship_survey_speed = 0.35
-		ship_anomaly_research_speed_mult = -0.10
+		ship_anomaly_research_speed_mult = -0.1
 		species_leader_exp_gain = -0.05
 	}
-
-
 	# 领袖特质类型 科学家
 	leader_class = {
 		scientist
@@ -1560,20 +1465,3 @@ leader_trait_roz_test_HD = {
 		commander
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

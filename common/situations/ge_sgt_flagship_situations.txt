@@ -17,7 +17,7 @@ sgt_flagship_exploration_situation = {
 			space_owner = {
 				
 				country_event = {
-					id = ge_sgt_falgship_events.110
+					id = ge_sgt_flagship_events.110
 				}
 			}
 		}	
@@ -81,7 +81,7 @@ sgt_flagship_exploration_situation = {
 					destroy_ambient_object = this
 				}
 				country_event = {
-					id = ge_sgt_falgship_events.10
+					id = ge_sgt_flagship_events.10
 					days = 720
 					random = 1800
 				}
@@ -117,9 +117,9 @@ sgt_flagship_exploration_situation = {
 		}
 		random_events = {
 			4 = 0
-			1 = ge_sgt_falgship_events.121
-			#2 = ge_sgt_falgship_events.122
-			#2 = ge_sgt_falgship_events.123
+			1 = ge_sgt_flagship_events.121
+			#2 = ge_sgt_flagship_events.122
+			#2 = ge_sgt_flagship_events.123
 		}
 	}
 	stages = {
@@ -128,7 +128,7 @@ sgt_flagship_exploration_situation = {
 			icon_background = GFX_situation_stage_frame_green
 			on_first_enter = {
 				situation_event = {
-					id = ge_sgt_falgship_events.111
+					id = ge_sgt_flagship_events.111
 				}
 			}
 			custom_tooltip = sgt_flagship_stage_1_ct
@@ -139,7 +139,7 @@ sgt_flagship_exploration_situation = {
 			icon_background = GFX_situation_stage_frame_green
 			on_first_enter = {
 				situation_event = {
-					id = ge_sgt_falgship_events.112
+					id = ge_sgt_flagship_events.112
 				}
 			}
 			custom_tooltip = sgt_flagship_stage_2_ct
@@ -150,7 +150,7 @@ sgt_flagship_exploration_situation = {
 			icon_background = GFX_situation_stage_frame_green
 			on_first_enter = {
 				situation_event = {
-					id = ge_sgt_falgship_events.113
+					id = ge_sgt_flagship_events.113
 				}
 			}
 			
@@ -162,7 +162,7 @@ sgt_flagship_exploration_situation = {
 			icon_background = GFX_situation_stage_frame_green
 			on_first_enter = {
 				situation_event = {
-					id = ge_sgt_falgship_events.114
+					id = ge_sgt_flagship_events.114
 				}
 			}
 			custom_tooltip = sgt_flagship_stage_4_ct
@@ -174,7 +174,7 @@ sgt_flagship_exploration_situation = {
 			#background = GFX_evt_alien_propaganda
 			on_first_enter = {
 				situation_event = {
-					id = ge_sgt_falgship_events.115
+					id = ge_sgt_flagship_events.115
 				}
 			}
 			custom_tooltip = sgt_flagship_stage_5_ct
@@ -224,7 +224,7 @@ sgt_flagship_exploration_situation = {
 		#If this fails, the Approach is greyed out
 		potential = {
 			owner = {
-				has_country_flag = ge_leader_suigintou_get
+				has_country_flag = roz_leader_suigintou_get
 			}
 		}
 		#If this fails, the Approach is not shown
@@ -304,7 +304,7 @@ sgt_flagship_exploration_situation = {
 		modifier = {
 			desc = roz_unknowship_sgt_base_approach
 			owner = {
-				has_country_flag = ge_leader_suigintou_get
+				has_country_flag = roz_leader_suigintou_get
 			}
 			add = 0.5
 		}

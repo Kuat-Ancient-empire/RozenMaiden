@@ -6,7 +6,7 @@ country_event = {
 	force_open = yes
 	diplomatic = yes
 	picture_event_data = {
-		portrait = ge_suigintou_6
+		portrait = roz_suigintou_6
 		room = ge_sgt_main_room
 	}
 	is_triggered_only = yes
@@ -32,9 +32,9 @@ country_event = {
 		#NOT = {
 		#	has_global_flag = ge_nfield_country_set
 		#}
-		#exists = event_target:ge_suigintou_admiral_inactive_temp@root
-		#exists = event_target:ge_suigintou_scientist_inactive_temp@root
-		#exists = event_target:ge_suigintou_country@root
+		#exists = event_target:roz_suigintou_commander_inactive_temp@root
+		#exists = event_target:roz_suigintou_scientist_inactive_temp@root
+		#exists = event_target:roz_suigintou_global_country@root
 	}
 	immediate = {
 		create_country = {
@@ -57,23 +57,23 @@ country_event = {
 				}
 			}
 			effect = {
-				save_global_event_target_as = ge_suigintou_country@root
+				save_global_event_target_as = roz_suigintou_global_country@root
 			}
 		}
 		last_created_country = {
 			establish_communications_no_message = root
 			#set_global_flag = ge_nfield_country_set
 		}
-		save_global_event_target_as = ge_suigintou_owner@root
-		event_target:ge_suigintou_country@root = {
+		save_global_event_target_as = roz_suigintou_owner@root
+		event_target:roz_suigintou_global_country@root = {
 			clone_leader = {
-				target = event_target:ge_leader_suigintou_global_target@root
+				target = event_target:roz_leader_suigintou_global_target@root
 				effect = {
-					save_global_event_target_as = ge_suigintou_admiral_inactive_temp@root
-					#set_leader_flag = ge_suigintou_flag
-					set_name = "NAME_Suigintou"
+					save_global_event_target_as = roz_suigintou_commander_inactive_temp@root
+					#set_leader_flag = roz_suigintou_flag
+					set_name = "NAME_suigintou"
 					unassign_leader = this
-					set_owner = event_target:ge_suigintou_country@root
+					set_owner = event_target:roz_suigintou_global_country@root
 				}
 			}
 		}
@@ -266,7 +266,7 @@ country_event = {
 	picture = GFX_roz_sgt_main_room_evt_2
 	#event_window_type = leader_story
 	picture_event_data = {
-		#portrait = ge_suigintou_6
+		#portrait = roz_suigintou_6
 		portrait = event_target:ge_leader
 		#room = no_video_feed_room
 		#room = enclave_curator_room
@@ -278,26 +278,23 @@ country_event = {
 			has_country_flag = ge_nfield_diplomacy_activated
 			has_country_flag = ge_sgt_busy
 		}
-		#is_same_value = event_target:ge_suigintou_owner
 		from = {
-			OR = {
-				is_country_type = ge_N_Field
-				is_same_value = event_target:ge_suigintou_country@root
-			}
-			NOT = {
+			is_same_value = event_target:roz_suigintou_global_country@root
+			NOR = {
 				is_same_value = event_target:roz_kirakishou_global_country@root
+				is_same_value = event_target:roz_shinku_global_country@root
 			}
 			#has_country_flag = ge_nfield_country_set
 			#is_ai = no
 		}
 		#has_country_flag = ge_sgt_chat
-		has_country_flag = ge_leader_suigintou_get
-		exists = event_target:ge_leader_suigintou_global_target@root
+		has_country_flag = roz_leader_suigintou_get
+		exists = event_target:roz_leader_suigintou_global_target@root
 	}
 	immediate = {
 		set_country_flag = ge_nfield_diplomacy_activated
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	after = {
@@ -359,7 +356,7 @@ country_event = {
 			custom_tooltip = {
 				NOR = {
 					has_country_flag = roz_suigintou_switch_vocation_cd_flag
-					has_country_flag = ge_suigintou_scientist_active
+					has_country_flag = roz_suigintou_scientist_active
 				}
 				fail_text = "Cool Down."
 			}
@@ -369,7 +366,7 @@ country_event = {
 					limit = {
 						leader_class = scientist
 						OR = {
-							has_leader_flag = ge_suigintou_flag
+							has_leader_flag = roz_suigintou_flag
 							has_trait = leader_trait_ge_mercury_lamp_scientist
 						}
 					}
@@ -385,9 +382,9 @@ country_event = {
 		}
 		trigger = {
 			NOT = {
-				has_country_flag = ge_suigintou_scientist_active
+				has_country_flag = roz_suigintou_scientist_active
 			}
-			has_country_flag = ge_leader_suigintou_get
+			has_country_flag = roz_leader_suigintou_get
 		}
 		hidden_effect = {
 			create_ge_suigintou_scientist = yes
@@ -406,7 +403,7 @@ country_event = {
 			custom_tooltip = {
 				NOR = {
 					has_country_flag = roz_suigintou_switch_vocation_cd_flag
-					has_country_flag = ge_suigintou_admiral_active
+					has_country_flag = roz_suigintou_commander_active
 				}
 				fail_text = "Cool Down."
 			}
@@ -416,7 +413,7 @@ country_event = {
 					limit = {
 						leader_class = commander
 						OR = {
-							has_leader_flag = ge_suigintou_flag
+							has_leader_flag = roz_suigintou_flag
 							has_trait = leader_trait_ge_mercury_lamp
 						}
 					}
@@ -432,9 +429,9 @@ country_event = {
 		}
 		trigger = {
 			NOT = {
-				has_country_flag = ge_suigintou_admiral_active
+				has_country_flag = roz_suigintou_commander_active
 			}
-			has_country_flag = ge_leader_suigintou_get
+			has_country_flag = roz_leader_suigintou_get
 		}
 		hidden_effect = {
 			create_ge_suigintou_admiral = yes
@@ -471,9 +468,9 @@ country_event = {
 					has_country_flag = ge_sgt_date_cd
 				}
 				any_owned_leader = {
-					has_leader_flag = ge_suigintou_flag
+					has_leader_flag = roz_suigintou_flag
 					check_variable = {
-						which = ge_leader_affection
+						which = roz_suigintou_affection
 						value >= 10
 					}
 				}
@@ -535,7 +532,7 @@ country_event = {
 			# custom_tooltip = {
 			# 	fail_text = ge_communication.100.g.fail
 			# 	check_variable = {
-			# 		which = ge_leader_affection
+			# 		which = roz_suigintou_affection
 			# 		value > 30
 			# 	}
 			# }
@@ -623,7 +620,7 @@ country_event = {
 			custom_tooltip = {
 				fail_text = ge_communication.100.g.fail
 				check_variable = {
-					which = ge_leader_affection
+					which = roz_suigintou_affection
 					value > 30
 				}
 			}
@@ -722,7 +719,7 @@ country_event = {
 			custom_tooltip = {
 				fail_text = ge_communication.100.e.fail
 				check_variable = {
-					which = ge_leader_aft_sgt
+					which = roz_leader_aft_suigintou
 					value >= 40
 				}
 			}
@@ -747,7 +744,7 @@ country_event = {
 	#		custom_tooltip = {
 	#			fail_text = ge_communication.100.g.fail
 	#			check_variable = {
-	#				which = ge_leader_aft_sgt
+	#				which = roz_leader_aft_suigintou
 	#				value >= 30
 	#			}
 	#		}
@@ -821,7 +818,7 @@ country_event = {
 	desc = "ge_communication.102.desc"
 	picture_event_data = {
 		room = ge_sgt_main_room
-		portrait = ge_suigintou_61
+		portrait = roz_suigintou_61
 	}
 	diplomatic = yes
 	is_triggered_only = yes
@@ -833,19 +830,19 @@ country_event = {
 		from = {
 			OR = {
 				is_country_type = ge_N_Field
-				is_same_value = event_target:ge_suigintou_country@root
+				is_same_value = event_target:roz_suigintou_global_country@root
 			}
 			NOT = {
 				is_same_value = event_target:roz_kirakishou_global_country@root
 			}
 		}
-		has_country_flag = ge_leader_suigintou_get
+		has_country_flag = roz_leader_suigintou_get
 		NOT = {
 			any_owned_leader = {
-				is_same_value = event_target:ge_leader_suigintou_global_target@root
+				is_same_value = event_target:roz_leader_suigintou_global_target@root
 			}
 		}
-		#exists = event_target:ge_leader_suigintou_global_target@root
+		#exists = event_target:roz_leader_suigintou_global_target@root
 	}
 	immediate = {
 		set_country_flag = ge_nfield_diplomacy_activated
@@ -853,11 +850,11 @@ country_event = {
 	after = {
 		remove_country_flag = ge_nfield_diplomacy_activated
 		if = {
-			limit = { exists = event_target:ge_leader_suigintou_global_target@root }
+			limit = { exists = event_target:roz_leader_suigintou_global_target@root }
 			fire_on_action = {
 				on_action = on_custom_diplomacy
 				scopes = {
-					from = event_target:ge_suigintou_country@root
+					from = event_target:roz_suigintou_global_country@root
 				}
 			}
 		}
@@ -868,21 +865,35 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_country_flag = ge_suigintou_scientist_active
+					has_country_flag = roz_suigintou_scientist_active
 				}
-				set_country_flag = ge_suigintou_scientist_active
-				remove_country_flag = ge_suigintou_admiral_active
-				roz_suigintou_clone_scientist_from_cache_country = yes
-				roz_suigintou_initialize_scientist = yes
+				remove_country_flag = roz_suigintou_commander_active
+				roz_leader_type_switch_clone_from_cache_country_effect = {
+					leader = suigintou
+					leader_sc = shuiyindeng
+					leader_type = scientist
+				}
+				roz_leader_initialize_after_create_effect = {
+					leader = suigintou
+					leader_sc = shuiyindeng
+					leader_type = scientist
+				}
 			}
 			else_if = {
 				limit = {
-					has_country_flag = ge_suigintou_admiral_active
+					has_country_flag = roz_suigintou_commander_active
 				}
-				set_country_flag = ge_suigintou_admiral_active
-				remove_country_flag = ge_suigintou_scientist_active
-				roz_suigintou_clone_admiral_from_cache_country = yes
-				roz_suigintou_initialize_admiral = yes
+				remove_country_flag = roz_suigintou_scientist_active
+				roz_leader_type_switch_clone_from_cache_country_effect = {
+					leader = suigintou
+					leader_sc = shuiyindeng
+					leader_type = commander
+				}
+				roz_leader_initialize_after_create_effect = {
+					leader = suigintou
+					leader_sc = shuiyindeng
+					leader_type = scientist
+				}
 			}
 		}
 	}
@@ -904,7 +915,7 @@ country_event = {
 		#if = {
 		#	limit = {
 		#		from = {
-		#			has_leader_flag = ge_suigintou_flag
+		#			has_leader_flag = roz_suigintou_flag
 		#
 		#		}
 		#	}
@@ -913,7 +924,7 @@ country_event = {
 	immediate = {
 		set_country_flag = ge_sgt_chat
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	option = {
@@ -939,7 +950,7 @@ country_event = {
 	}
 	immediate = {
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	option = {
@@ -968,7 +979,7 @@ country_event = {
 		#if = {
 		#	limit = {
 		#		from = {
-		#			has_leader_flag = ge_suigintou_flag
+		#			has_leader_flag = roz_suigintou_flag
 		#
 		#		}
 		#	}
@@ -977,7 +988,7 @@ country_event = {
 	immediate = {
 		set_country_flag = ge_sgt_chat
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	option = {
@@ -1008,7 +1019,7 @@ country_event = {
 		#set_country_flag = suigintou_diplomacy_activated
 		#set_country_flag = ge_sgt_chat
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	option = {
@@ -1041,7 +1052,7 @@ country_event = {
 		#if = {
 		#	limit = {
 		#		from = {
-		#			has_leader_flag = ge_suigintou_flag
+		#			has_leader_flag = roz_suigintou_flag
 		#
 		#		}
 		#	}
@@ -1051,7 +1062,7 @@ country_event = {
 		#set_country_flag = suigintou_diplomacy_activated
 		set_country_flag = ge_sgt_chat
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	option = {
@@ -1075,13 +1086,13 @@ country_event = {
 	is_triggered_only = yes
 	diplomatic = yes
 	picture_event_data = {
-		portrait = ge_suigintou_5
+		portrait = roz_suigintou_5
 		room = ge_sgt_main_room
 	}
 	immediate = {
 		#set_country_flag = suigintou_diplomacy_activated
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	option = {
@@ -1113,7 +1124,7 @@ country_event = {
 		#if = {
 		#	limit = {
 		#		from = {
-		#			has_leader_flag = ge_suigintou_flag
+		#			has_leader_flag = roz_suigintou_flag
 		#
 		#		}
 		#	}
@@ -1126,7 +1137,7 @@ country_event = {
 		set_country_flag = ge_suigintou_sp1_event
 		set_country_flag = ge_sgt_chat
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	option = {
@@ -1152,7 +1163,7 @@ country_event = {
 	}
 	immediate = {
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	option = {
@@ -1181,7 +1192,7 @@ country_event = {
 		#if = {
 		#	limit = {
 		#		from = {
-		#			has_leader_flag = ge_suigintou_flag
+		#			has_leader_flag = roz_suigintou_flag
 		#
 		#		}
 		#	}
@@ -1193,7 +1204,7 @@ country_event = {
 	immediate = {
 		set_country_flag = ge_sgt_chat
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	option = {
@@ -1222,7 +1233,7 @@ country_event = {
 	}
 	immediate = {
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	option = {
@@ -1246,7 +1257,7 @@ country_event = {
 	}
 	immediate = {
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	option = {
@@ -1279,7 +1290,7 @@ country_event = {
 	immediate = {
 		set_country_flag = ge_tech_begin
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	option = {
@@ -1376,7 +1387,7 @@ country_event = {
 			has_country_flag = q_sgt_army
 		}
 		check_variable = {
-			which = ge_leader_aft_sgt_reduced_score
+			which = roz_leader_aft_suigintou_reduced_score
 			value >= 25
 		}
 	}
@@ -1406,7 +1417,7 @@ country_event = {
 	immediate = {
 		set_country_flag = q_sgt_army
 		get_ge_leader_target = {
-			flag = ge_suigintou_flag
+			flag = roz_suigintou_flag
 		}
 	}
 	option = {
@@ -1418,36 +1429,3 @@ country_event = {
 		}
 	}
 }
-
-#################################
-# country_event = {
-# 	id = ge_communication.999
-# 	is_triggered_only = yes
-# 	hide_window = yes
-# 	trigger = {
-# 		has_country_flag = ge_leader_suigintou_get
-# 		from = {
-# 			OR = {
-# 				AND = {
-# 					exists = event_target:ge_leader
-# 					is_same_value = event_target:ge_suigintou_owner
-# 				}
-# 				has_leader_flag = ge_suigintou_flag
-# 				has_trait = leader_trait_ge_mercury_lamp
-# 			}
-# 		}
-# 		NOR = {
-# 			has_country_flag = ge_suigintou_admiral_active
-# 			has_country_flag = ge_suigintou_scientist_active
-# 		}
-# 	}
-# 	immediate = {
-# 		clone_leader = {
-# 			target = from
-# 			effect = {
-# 				set_leader_flag = ge_suigintou_flag
-# 				save_global_event_target_as = clone_ge_leader_sgt
-# 			}
-# 		}
-# 	}
-# }

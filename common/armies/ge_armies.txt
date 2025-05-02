@@ -25,7 +25,7 @@ Q_sgt = {
 	potential = {
 		owner = {
 			
-				has_country_flag = ge_leader_suigintou_get
+				has_country_flag = roz_leader_suigintou_get
 				has_country_flag = q_sgt_army_get
 
 			

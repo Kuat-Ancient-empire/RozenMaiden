@@ -235,7 +235,7 @@ roz_ves_state_grid_shock_situation = {
         #If this fails, the Approach is greyed out
         potential = {
             #owner = {
-            #    has_country_flag = ge_leader_suigintou_get
+            #    has_country_flag = roz_leader_suigintou_get
             #}
         }
         triggered_modifier = {
