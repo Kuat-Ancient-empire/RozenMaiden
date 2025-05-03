@@ -43,9 +43,9 @@ entity = {
     attach = { l2 = leviathan_01_elder_tiyanki_graveyard_entity }
     attach = { l3 = leviathan_01_elder_tiyanki_graveyard_entity }
     attach = { root = toxic_god_debris_entity }
-    attach = { root = krks_halo_star_class_entity }
+    #attach = { root = krks_halo_star_class_entity }
     attach = { l1 = krks_halo_star_class_entity }
-    attach = { u1 = krks_halo_star_class_entity }
+    attach = { u1 = krks_halo_star_class_2_entity }
     attach = { root = krks_halo_star_effect_entity }
 
 }
@@ -59,11 +59,29 @@ entity = {
     default_state = "idle"
     state = {
         name = "idle" animation = "idle"
-        event = { time = 0.0 node = "root" particle = "toxic_class_star_effect"  keep_particle = yes sound = { soundeffect = "tox_amb_star_hum" } }
+        event = { time = 0.0 node = "root" particle = "roz_toxic_class_star_effect"  keep_particle = yes sound = { soundeffect = "tox_amb_star_hum" } }
         event = { time = 0.0 node = "root" particle = "krks_star_effect"  keep_particle = yes  }
 
     }
-    scale = 8
+    scale = 6
+    #cull_radius = 20000
+    attach = { root = "krks_halo_star_entity" }
+    attach = { root = "krks_halo_star_wave_entity" }
+}
+entity = {
+    # krks_halo
+    name = "krks_halo_star_class_2_entity"
+    pdxmesh = "star_mesh"
+    locator = { name = "root"	position = { 0 0 0 } }
+
+    default_state = "idle"
+    state = {
+        name = "idle" animation = "idle"
+        event = { time = 10.0 node = "root" particle = "roz_toxic_class_star_effect"  keep_particle = yes sound = { soundeffect = "tox_amb_star_hum" } }
+        event = { time = 10.0 node = "root" particle = "krks_star_effect"  keep_particle = yes  }
+
+    }
+    scale = 6
     #cull_radius = 20000
     attach = { root = "krks_halo_star_entity" }
     attach = { root = "krks_halo_star_wave_entity" }
@@ -72,7 +90,7 @@ entity = {
 entity = {
     name = "krks_halo_star_entity"
     pdxmesh = "krks_halo_star_mesh"
-    scale = 1.5
+    scale = 0.75
     game_data = {
         shader_type = VFX
 
@@ -111,7 +129,7 @@ entity = {
 entity = {
     name = "krks_halo_star_effect_entity"
     pdxmesh = "toxic_god_effect_mesh"
-    scale = 30
+    scale = 10
     game_data = {
         bloom_factor			= 1
         uv_animation_speed 		= 0.6

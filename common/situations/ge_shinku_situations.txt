@@ -270,7 +270,7 @@ roz_awaken_of_shinku_1_acknowledge_border = {
         text = roz_awaken_of_shinku_1_acknowledge_border_desc
         trigger = { always = yes }
     }
-    picture = GFX_
+    picture = GFX_evt_the_last_stormshelter
     complete_icon = GFX_situation_outcome_meh
     complete_icon_frame = GFX_situation_outcome_frame_blue
     fail_icon = GFX_situation_outcome_unknown

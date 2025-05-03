@@ -940,13 +940,13 @@ country_event = { #控制台effect测试区
 		#effect remove_country_flag = roz_suigintou_diplomatic_initialize_flag
 		#trigger has_country_flag = roz_suigintou_diplomatic_initialize_flag
 		#trigger = event_target:roz_suigintou_scientist_inactive_temp0 = { has_leader_flag = roz_suigintou_flag }
-		if = {
-			limit = { 
-				trigger event_target:roz_suigintou_commander_inactive_temp0 = { has_trait = leader_trait_ge_mercury_lamp }
-				trigger event_target:roz_leader_suigintou_global_target0 = { has_leader_flag = roz_suigintou_flag }
-				trigger any_owned_leader = { has_leader_flag = roz_suigintou_flag has_rozen_affection_trait = yes }
-			}
-		}
+		# if = {
+		# 	limit = { 
+		# 		trigger event_target:roz_suigintou_commander_inactive_temp0 = { has_trait = leader_trait_ge_mercury_lamp }
+		# 		trigger event_target:roz_leader_suigintou_global_target0 = { has_leader_flag = roz_suigintou_flag }
+		# 		trigger any_owned_leader = { has_leader_flag = roz_suigintou_flag has_rozen_affection_trait = yes }
+		# 	}
+		# }
 
 
 		capital_scope = {

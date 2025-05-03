@@ -520,15 +520,36 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_evt_roz_research_accident_‌bottleneck"
-		textureFile = "gfx/event_pictures/evt_roz_research_accident_‌bottleneck.dds"
+		name = "GFX_evt_roz_research_accident_bottleneck"
+		textureFile = "gfx/event_pictures/evt_roz_research_accident_bottleneck.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
 	
 	spriteType = {
-		name = "GFX_evt_roz_research_accident_‌defytheodds‌"
-		textureFile = "gfx/event_pictures/evt_roz_research_accident_‌defytheodds‌.dds"
+		name = "GFX_evt_roz_research_accident_defytheodds"
+		textureFile = "gfx/event_pictures/evt_roz_research_accident_defytheodds.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_junn_phone_1"
+		textureFile = "gfx/event_pictures/evt_roz_junn_phone_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_junn_phone_2"
+		textureFile = "gfx/event_pictures/evt_roz_junn_phone_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_acknowledge_border"
+		textureFile = "gfx/event_pictures/evt_roz_acknowledge_border.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}

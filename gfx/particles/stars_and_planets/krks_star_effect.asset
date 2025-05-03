@@ -23,9 +23,9 @@ particle={
             shader="ParticleAdditive"
         }
         color={
-            x={ 150 20 }
+            x={ 255 20 }
             y={ 255 20 }
-            z=0
+            z=255
             alpha=150,fade_in_out
         }
         position={
@@ -69,9 +69,9 @@ particle={
             shader="ParticleAdditive"
         }
         color={
-            x=170
+            x=200
             y=200
-            z=0
+            z=200
             alpha=150,fade_in_out_flairs
         }
         position={
@@ -112,9 +112,9 @@ particle={
             shader="ParticleAdditive"
         }
         color={
-            x=170
+            x=200
             y=200
-            z=0
+            z=200
             alpha=150,fade_in_out_flairs
         }
         position={
@@ -160,9 +160,9 @@ particle={
             shader="ParticleAdditive"
         }
         color={
-            x=170
+            x=200
             y=200
-            z=0
+            z=200
             alpha=75,smoke_alpha
         }
         position={
@@ -210,9 +210,9 @@ particle={
             shader="ParticleAdditive"
         }
         color={
-            x=170
+            x=200
             y=200
-            z=0
+            z=200
             alpha=80,smoke_alpha
         }
         position={
@@ -257,9 +257,9 @@ particle={
             shader="ParticleAdditive"
         }
         color={
-            x=170
+            x=200
             y=200
-            z=0
+            z=200
             alpha=150,fade_in_out_flairs
         }
         position={
@@ -305,9 +305,9 @@ particle={
             shader="ParticleAdditive"
         }
         color={
-            x=200,fade_in_out
+            x=255,fade_in_out
             y=255,fade_in_out
-            z=0
+            z=255
             alpha=255,fade_in_out_flairs
         }
         position={

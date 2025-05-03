@@ -688,13 +688,10 @@ special_project = {		####
 	tech_department = society_technology
 	cost = 2000
 	event_chain = roz_outland_system_chain
-	picture = GFX_
+	picture = GFX_evt_roz_junn_phone_1
 	icon = gfx/interface/icons/situation_log/situation_log_society.dds
 	event_scope = planet_event
 	on_success = {
-		event_target:roz_suigintou_owner@owner = {
-
-		}
 		space_owner = {
 			country_event = {
 				id = roz_shinku_evt.403

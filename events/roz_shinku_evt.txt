@@ -352,7 +352,7 @@ country_event = {
 
     title = "roz_shinku_evt.401.title"
     desc = "roz_shinku_evt.401.desc"
-    picture = GFX_evt
+    picture = GFX_evt_roz_junn_phone_1‌
     is_triggered_only = yes
     trigger = {
         any_situation = {
@@ -375,13 +375,10 @@ country_event = {
     id = roz_shinku_evt.402
     title = "roz_shinku_evt.402.title"
     desc = "roz_shinku_evt.402.desc"
-    picture = GFX_evt
+    picture = GFX_evt_roz_junn_phone_2
     is_triggered_only = yes
     trigger = {
         is_ai = no
-    }
-    immediate = {
-
     }
     option = {
         name = roz_shinku_evt.402.aa
@@ -401,19 +398,12 @@ country_event = {
     is_triggered_only = yes
     diplomatic = yes
     picture_event_data = {
-        portrait = event_target:
+        portrait = event_target
          room = ge_sgt_main_room
     }
     trigger = {
         #has_country_flag = roz_leader_suigintou_get
         is_ai = no
-    }
-    immediate = {
-        every_owned_ship = {
-            limit = {
-
-            }
-        }
     }
     option = {
         name = roz_shinku_evt.403.aa
@@ -457,6 +447,9 @@ country_event = {
         }
     }
     after = {
+        add_resource = {
+            unity = 1000
+        }
         hidden_effect = {
             roz_junn_country_create = yes
         }
@@ -472,7 +465,7 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.404.title"
     desc = "roz_shinku_evt.404.desc"
-    picture = GFX_evt
+    picture = GFX_evt_roz_acknowledge_border
     trigger = {
         from = {
             is_situation_type = roz_awaken_of_shinku_1_acknowledge_border
