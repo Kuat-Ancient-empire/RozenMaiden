@@ -22,10 +22,6 @@ country_event = {
     picture = GFX_roz_evt_lpls_letter
     immediate = {
         set_country_flag = roz_krks_dl_normal_flag_begin
-        country_event = {
-            id = ge_event.1950
-            days = 60
-        }
     }
     option = {
         name = ge_event.20051.aa
@@ -35,6 +31,14 @@ country_event = {
     }
     option = {
         name = ge_event.20051.cc
+    }
+    after = {
+        hidden_effect = {
+            country_event = {
+                id = ge_event.1950
+                days = 60
+            }
+        }
     }
 
 }
@@ -51,20 +55,8 @@ country_event = {
         has_country_flag = roz_krks_dl_normal_flag
         NOT = { has_country_flag = roz_krks_dl_early_flag }
         has_rozen_leader = yes
-        any_system = {
-            solar_system = {
-                #is_owned_by = root
-                any_system_planet = {
-                    AND = {
-                        has_deposit = ge_site_sgt_deposit
-                        has_deposit = ge_site_vc_deposit
-                        has_planet_flag = ge_planet_flag_sgt@root
-                    }
-                }
-            }
-        }
+        exists = event_target:roz_n_field_site_target@root
         NOT = { has_country_flag = roz_kirakishou_get }
-
     }
     immediate = {
         set_country_flag = ge_nfield_develop_flag
@@ -112,14 +104,31 @@ country_event = {
         }
         set_country_flag = roz_great_development_of_Nfield
         hidden_effect = {
-            if = {
-                limit = {
-                    NOT = { has_country_flag = roz_krks_dl_early_flag }
-
+            random_list = {
+                2 = {
+                    if = {
+                        limit = {
+                            NOT = { has_country_flag = roz_krks_dl_early_flag }
+        
+                        }
+                        country_event = {
+                            id = ge_event.1952
+                            days = 30
+                        }
+                    }
                 }
-                country_event = {
-                    id = ge_event.1952
-                    days = 30
+                1 = {
+                    country_event = {
+                        id = ge_event.2000
+                        days = 720
+                        random = 360
+                    }
+                    random_galaxy_planet = {
+                        limit = {
+                            has_planet_flag = ge_planet_flag_sgt@root
+                        }
+                        set_planet_flag = roz_sgt_site_krksevtc_flag
+                    }
                 }
             }
         }

@@ -69,7 +69,8 @@ ge_mozheng_edicts = {
 	}
 	effect = {
 		country_event = {
-			id = ge_event.1
+			##id = ge_event.1
+			id = ge_event.7777
 		}
 	}
 	ai_weight = {

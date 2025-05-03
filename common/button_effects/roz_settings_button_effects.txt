@@ -89,6 +89,93 @@ roz_settings_difficult_adjust_mode_clear_effect = {
     }
 }
 
+roz_settings_difficult_adjust_mode_clear_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.mode3
+        }
+        hidden_effect = {
+            from = {
+            hidden_effect = {
+                set_variable = {
+                    which = ge_buff_magnification_value
+                    value = 1
+                }
+            }
+        }
+        }
+    }
+}
+
+roz_settings_difficult_adjust_mode_2x_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.mode_2x_ct
+        }
+        hidden_effect = {
+            from = {
+                hidden_effect = {
+                    set_variable = {
+                        which = ge_buff_magnification_value
+                        value = 2
+                    }
+                }
+            }
+        }
+    }
+}
+roz_settings_difficult_adjust_mode_5x_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.mode_5x_ct
+        }
+        hidden_effect = {
+            from = {
+                hidden_effect = {
+                    set_variable = {
+                        which = ge_buff_magnification_value
+                        value = 5
+                    }
+                }
+            }
+        }
+    }
+}
+roz_settings_difficult_adjust_mode_10x_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.mode_10x_ct
+        }
+        hidden_effect = {
+            from = {
+                hidden_effect = {
+                    set_variable = {
+                        which = ge_buff_magnification_value
+                        value = 10
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 # 伤害调整
 roz_settings_difficult_damage_up_effect = {
     potential = { always = yes }
@@ -101,20 +188,28 @@ roz_settings_difficult_damage_up_effect = {
         }
         hidden_effect = { 
             from = {
-                switch = {
-                    trigger = has_country_flag
-                    roz_settings_difficult_adjust_mode_add_flag = {
-                        change_variable = {
-                            which = ge_buff_count
-                            value = ge_buff_magnification_value
-                        }
-                    }
-                    roz_settings_difficult_adjust_mode_mult_flag = {
-                        multiply_variable = {
-                            which = ge_buff_count
-                            value = ge_buff_magnification_value
-                        }
-                    }
+                change_variable = {
+                    which = ge_buff_count
+                    value = ge_buff_magnification_value
+                }
+            } 
+        }
+    }
+}
+roz_settings_difficult_damage_mult_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.ab
+        }
+        hidden_effect = { 
+            from = {
+                multiply_variable = {
+                    which = ge_buff_count
+                    value = ge_buff_magnification_value
                 }
             } 
         }
@@ -131,20 +226,28 @@ roz_settings_difficult_damage_down_effect = {
         }
         hidden_effect = { 
             from = {
-                switch = {
-                    trigger = has_country_flag
-                    roz_settings_difficult_adjust_mode_add_flag = {
-                        subtract_variable = {
-                            which = ge_buff_count
-                            value = ge_buff_magnification_value
-                        }
-                    }
-                    roz_settings_difficult_adjust_mode_mult_flag = {
-                        divide_variable = {
-                            which = ge_buff_count
-                            value = ge_buff_magnification_value
-                        }
-                    }
+                subtract_variable = {
+                    which = ge_buff_count
+                    value = ge_buff_magnification_value
+                }
+            } 
+        }    
+    }
+}
+roz_settings_difficult_damage_devide_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.ab
+        }
+        hidden_effect = { 
+            from = {
+                divide_variable = {
+                    which = ge_buff_count
+                    value = ge_buff_magnification_value
                 }
             } 
         }    
@@ -179,20 +282,28 @@ roz_settings_difficult_fire_rate_up_effect = {
         }
         hidden_effect = { 
             from = {
-                switch = {
-                    trigger = has_country_flag
-                    roz_settings_difficult_adjust_mode_add_flag = {
-                        change_variable = {
-                            which = ge_buff_count_fr
-                            value = ge_buff_magnification_value
-                        }
-                    }
-                    roz_settings_difficult_adjust_mode_mult_flag = {
-                        multiply_variable = {
-                            which = ge_buff_count_fr
-                            value = ge_buff_magnification_value
-                        }
-                    }
+                change_variable = {
+                    which = ge_buff_count_fr
+                    value = ge_buff_magnification_value
+                }
+            }
+        }
+    }
+}
+roz_settings_difficult_fire_rate_mult_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.cd
+        }
+        hidden_effect = { 
+            from = {
+                multiply_variable = {
+                    which = ge_buff_count_fr
+                    value = ge_buff_magnification_value
                 }
             }
         }
@@ -209,20 +320,28 @@ roz_settings_difficult_fire_rate_down_effect = {
         }
         hidden_effect = { 
             from = {
-                switch = {
-                    trigger = has_country_flag
-                    roz_settings_difficult_adjust_mode_add_flag = {
-                        subtract_variable = {
-                            which = ge_buff_count_fr
-                            value = ge_buff_magnification_value
-                        }
-                    }
-                    roz_settings_difficult_adjust_mode_mult_flag = {
-                        divide_variable = {
-                            which = ge_buff_count_fr
-                            value = ge_buff_magnification_value
-                        }
-                    }
+                subtract_variable = {
+                    which = ge_buff_count_fr
+                    value = ge_buff_magnification_value
+                }
+            }
+        }
+    }
+}
+roz_settings_difficult_fire_rate_devide_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.cd
+        }
+        hidden_effect = { 
+            from = {
+                divide_variable = {
+                    which = ge_buff_count_fr
+                    value = ge_buff_magnification_value
                 }
             }
         }
@@ -258,20 +377,28 @@ roz_settings_difficult_fire_range_up_effect = {
         }
         hidden_effect = { 
             from = {
-                switch = {
-                    trigger = has_country_flag
-                    roz_settings_difficult_adjust_mode_add_flag = {
-                        change_variable = {
-                            which = ge_buff_fire_range_count
-                            value = ge_buff_magnification_value
-                        }
-                    }
-                    roz_settings_difficult_adjust_mode_mult_flag = {
-                        multiply_variable = {
-                            which = ge_buff_fire_range_count
-                            value = ge_buff_magnification_value
-                        }
-                    }
+                change_variable = {
+                    which = ge_buff_fire_range_count
+                    value = ge_buff_magnification_value
+                }
+            }
+        }
+    }
+}
+roz_settings_difficult_fire_range_mult_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.ef
+        }
+        hidden_effect = { 
+            from = {
+                multiply_variable = {
+                    which = ge_buff_fire_range_count
+                    value = ge_buff_magnification_value
                 }
             }
         }
@@ -288,20 +415,28 @@ roz_settings_difficult_fire_range_down_effect = {
         }
         hidden_effect = { 
             from = {
-                switch = {
-                    trigger = has_country_flag
-                    roz_settings_difficult_adjust_mode_add_flag = {
-                        subtract_variable = {
-                            which = ge_buff_fire_range_count
-                            value = ge_buff_magnification_value
-                        }
-                    }
-                    roz_settings_difficult_adjust_mode_mult_flag = {
-                        divide_variable = {
-                            which = ge_buff_fire_range_count
-                            value = ge_buff_magnification_value
-                        }
-                    }
+                subtract_variable = {
+                    which = ge_buff_fire_range_count
+                    value = ge_buff_magnification_value
+                }
+            }
+        }
+    }
+}
+roz_settings_difficult_fire_range_devide_effect = {
+    potential = { always = yes }
+    allow = {
+        always = yes
+    }
+    effect = {
+        from = {
+            custom_tooltip = roz_start.7777.ef
+        }
+        hidden_effect = { 
+            from = {
+                divide_variable = {
+                    which = ge_buff_fire_range_count
+                    value = ge_buff_magnification_value
                 }
             }
         }

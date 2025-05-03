@@ -1521,7 +1521,7 @@ create_ge_kirakishou_hostile_ship_stage4 = {
 				add_modifier = {
 					modifier = roz_krks_bf_stage4_HK_buff
 					#time_multiplier = 0.01
-					mult = 0.0005
+					mult = 0.001
 				}
 			}
 			save_global_event_target_as = kirakishou_Avatar_fleet@root
@@ -4504,7 +4504,7 @@ roz_setting_menu_initialize = {
 		which = ge_buff_magnification_value
 		value = 1
 	}
-	set_country_flag = roz_settings_difficult_adjust_mode_add_flag
+	#set_country_flag = roz_settings_difficult_adjust_mode_add_flag
 	if = {
 		limit = {
 			has_modifier = ge_mozheng1
@@ -4536,8 +4536,8 @@ roz_setting_menu_initialize = {
 
 roz_setting_menu_after_effect = {
 	clear_variable = ge_buff_magnification_value
-	remove_country_flag = roz_settings_difficult_adjust_mode_add_flag
-	remove_country_flag = roz_settings_difficult_adjust_mode_mult_flag
+	#remove_country_flag = roz_settings_difficult_adjust_mode_add_flag
+	#remove_country_flag = roz_settings_difficult_adjust_mode_mult_flag
 	add_modifier = {
         modifier = ge_mozheng1
         multiplier = ge_buff_count

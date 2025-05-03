@@ -55,6 +55,11 @@ guiTypes = {
         @button_x_left  = 495
         @button_x_right = 836
 
+        @button_roz_left1  = 495
+        @button_roz_left2  = 645
+        @button_roz_right1  = 809
+        @button_roz_right2  = 959
+
         @button_x_mid1      = 766
         @button_x_mid2      = 801
         @button_y_line_mid1 = 137
@@ -71,8 +76,15 @@ guiTypes = {
         @button_x_4_4 = 975
         @button_y_text1 = 90
         @button_y_line1 = 100
-        @button_y_line2 = 151
-        @button_y_line3 = 204
+        @button_y_line2 = 139
+        @button_y_line3 = 178
+
+        @button_x_mid1_roz = 618
+        @button_x_mid2_roz = 718
+        @button_x_mid3_roz = 818
+        @button_x_mid4_roz = 918
+        @button_y_line_roz = 217
+
         @button_y_text2 = 280
         @button_y_line4 = 290
         @button_y_text3 = 365
@@ -105,28 +117,55 @@ guiTypes = {
             alwaysTransparent = yes
         }
         # 调整模式
+        # effectButtonType = {
+        #     name = "roz_settings_difficult_adjust_mode_add"
+        #     quadTextureSprite = "GFX_button_29_animated"
+        #     position = { x = @button_x_mid1 y = @button_y_line_mid1 }
+		# 	clicksound = interface
+        #     font = "cg_16b"
+        #     text = "roz_start.7777.mode_add"
+        #     effect = "roz_settings_difficult_adjust_mode_add_effect"
+        # }
+        # effectButtonType = {
+        #     name = "roz_settings_difficult_adjust_mode_mult"
+        #     quadTextureSprite = "GFX_button_29_animated"
+        #     position = { x = @button_x_mid2 y = @button_y_line_mid1 }
+		# 	clicksound = interface
+        #     font = "cg_16b"
+        #     text = "roz_start.7777.mode_mult"
+        #     effect = "roz_settings_difficult_adjust_mode_mult_effect"
+        # }
         effectButtonType = {
-            name = "roz_settings_difficult_adjust_mode_add"
-            quadTextureSprite = "GFX_button_29_animated"
-            position = { x = @button_x_mid1 y = @button_y_line_mid1 }
+            name = "roz_settings_difficult_adjust_mode_2x"
+            quadTextureSprite = "GFX_button_60_29"
+            position = { x = @button_x_mid1_roz y = @button_y_line_roz }
 			clicksound = interface
             font = "cg_16b"
-            text = "roz_start.7777.mode_add"
-            effect = "roz_settings_difficult_adjust_mode_add_effect"
+            text = "roz_start.7777.mode_2x"
+            effect = "roz_settings_difficult_adjust_mode_2x_effect"
         }
         effectButtonType = {
-            name = "roz_settings_difficult_adjust_mode_mult"
-            quadTextureSprite = "GFX_button_29_animated"
-            position = { x = @button_x_mid2 y = @button_y_line_mid1 }
+            name = "roz_settings_difficult_adjust_mode_5x"
+            quadTextureSprite = "GFX_button_60_29"
+            position = { x = @button_x_mid2_roz y = @button_y_line_roz }
 			clicksound = interface
             font = "cg_16b"
-            text = "roz_start.7777.mode_mult"
-            effect = "roz_settings_difficult_adjust_mode_mult_effect"
+            text = "roz_start.7777.mode_5x"
+            effect = "roz_settings_difficult_adjust_mode_5x_effect"
+        }
+        effectButtonType = {
+            name = "roz_settings_difficult_adjust_mode_10x"
+            quadTextureSprite = "GFX_button_60_29"
+            position = { x = @button_x_mid3_roz y = @button_y_line_roz }
+			clicksound = interface
+            font = "cg_16b"
+            text = "roz_start.7777.mode_10x"
+            effect = "roz_settings_difficult_adjust_mode_10x_effect"
         }
         effectButtonType = {
             name = "roz_settings_difficult_adjust_mode_clear"
             quadTextureSprite = "GFX_button_60_29"
-            position = { x = @button_x_mid3 y = @button_y_line_mid2 }
+            position = { x = @button_x_mid4_roz y = @button_y_line_roz }
 			clicksound = interface
             font = "cg_16b"
             text = "roz_start.7777.mode_clear"
@@ -135,26 +174,46 @@ guiTypes = {
         # 伤害调整
         effectButtonType = {
             name = "roz_settings_difficult_damage_up"
-            quadTextureSprite = "GFX_button_animated_265_34"
-            position = { x = @button_x_left y = @button_y_line1 }
+            quadTextureSprite = "GFX_standard_button_142_34_button"
+            position = { x = @button_roz_left1 y = @button_y_line1 }
 			clicksound = select_click
             font = "cg_16b"
             text = "roz_start.7777.a"
             effect = "roz_settings_difficult_damage_up_effect"
         }
         effectButtonType = {
+            name = "roz_settings_difficult_damage_mult"
+            quadTextureSprite = "GFX_standard_button_142_34_button"
+            position = { x = @button_roz_left2 y = @button_y_line1 }
+			clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.a2"
+            effect = "roz_settings_difficult_damage_mult_effect"
+        }
+
+        effectButtonType = {
             name = "roz_settings_difficult_damage_down"
-            quadTextureSprite = "GFX_button_animated_265_34"
-            position = { x = @button_x_right y = @button_y_line1 }
+            quadTextureSprite = "GFX_standard_button_142_34_button"
+            position = { x = @button_roz_right1 y = @button_y_line1 }
 			clicksound = ui_deselect
             font = "cg_16b"
             text = "roz_start.7777.b"
             effect = "roz_settings_difficult_damage_down_effect"
         }
         effectButtonType = {
+            name = "roz_settings_difficult_damage_devide"
+            quadTextureSprite = "GFX_standard_button_142_34_button"
+            position = { x = @button_roz_right2 y = @button_y_line1 }
+			clicksound = ui_deselect
+            font = "cg_16b"
+            text = "roz_start.7777.b2"
+            effect = "roz_settings_difficult_damage_devide_effect"
+        }
+
+        effectButtonType = {
             name = "roz_settings_difficult_damage_clear"
             quadTextureSprite = "GFX_button_29_animated"
-            position = { x = @button_x_out y = @button_y_out_mid1 }
+            position = { x = @button_x_out y = @button_y_line1 }
 			clicksound = ui_deselect
             font = "cg_16b"
             text = "roz_start.7777.clear"
@@ -163,26 +222,46 @@ guiTypes = {
         # 射速调整
         effectButtonType = {
             name = "roz_settings_difficult_fire_rate_up"
-            quadTextureSprite = "GFX_button_animated_265_34"
-            position = { x = @button_x_left y = @button_y_line2 }
+            quadTextureSprite = "GFX_standard_button_142_34_button"
+            position = { x = @button_roz_left1 y = @button_y_line2 }
 			clicksound = select_click
             font = "cg_16b"
             text = "roz_start.7777.c"
             effect = "roz_settings_difficult_fire_rate_up_effect"
         }
         effectButtonType = {
+            name = "roz_settings_difficult_fire_rate_mult"
+            quadTextureSprite = "GFX_standard_button_142_34_button"
+            position = { x = @button_roz_left2 y = @button_y_line2 }
+			clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.c2"
+            effect = "roz_settings_difficult_fire_rate_mult_effect"
+        }
+
+        effectButtonType = {
             name = "roz_settings_difficult_fire_rate_down"
-            quadTextureSprite = "GFX_button_animated_265_34"
-            position = { x = @button_x_right y = @button_y_line2 }
+            quadTextureSprite = "GFX_standard_button_142_34_button"
+            position = { x = @button_roz_right1 y = @button_y_line2 }
 			clicksound = ui_deselect
             font = "cg_16b"
             text = "roz_start.7777.d"
             effect = "roz_settings_difficult_fire_rate_down_effect"
         }
         effectButtonType = {
+            name = "roz_settings_difficult_fire_rate_devide"
+            quadTextureSprite = "GFX_standard_button_142_34_button"
+            position = { x = @button_roz_right2 y = @button_y_line2 }
+			clicksound = ui_deselect
+            font = "cg_16b"
+            text = "roz_start.7777.d2"
+            effect = "roz_settings_difficult_fire_rate_devide_effect"
+        }
+
+        effectButtonType = {
             name = "roz_settings_difficult_fire_rate_clear"
             quadTextureSprite = "GFX_button_29_animated"
-            position = { x = @button_x_out y = @button_y_out_mid2 }
+            position = { x = @button_x_out y = @button_y_line2 }
 			clicksound = ui_deselect
             font = "cg_16b"
             text = "roz_start.7777.clear"
@@ -191,26 +270,46 @@ guiTypes = {
         # 射程调整
         effectButtonType = {
             name = "roz_settings_difficult_fire_range_up"
-            quadTextureSprite = "GFX_button_animated_265_34"
-            position = { x = @button_x_left y = @button_y_line3 }
+            quadTextureSprite =  "GFX_standard_button_142_34_button"
+            position = { x = @button_roz_left1 y = @button_y_line3 }
 			clicksound = select_click
             font = "cg_16b"
             text = "roz_start.7777.e"
             effect = "roz_settings_difficult_fire_range_up_effect"
         }
         effectButtonType = {
+            name = "roz_settings_difficult_fire_range_mult"
+            quadTextureSprite =  "GFX_standard_button_142_34_button"
+            position = { x = @button_roz_left2 y = @button_y_line3 }
+			clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.e2"
+            effect = "roz_settings_difficult_fire_range_up_effect"
+        }
+
+        effectButtonType = {
             name = "roz_settings_difficult_fire_range_down"
-            quadTextureSprite = "GFX_button_animated_265_34"
-            position = { x = @button_x_right y = @button_y_line3 }
+            quadTextureSprite =  "GFX_standard_button_142_34_button"
+            position = { x = @button_roz_right1 y = @button_y_line3 }
             clicksound = ui_deselect
             font = "cg_16b"
             text = "roz_start.7777.f"
             effect = "roz_settings_difficult_fire_range_down_effect"
         }
         effectButtonType = {
+            name = "roz_settings_difficult_fire_range_devide"
+            quadTextureSprite =  "GFX_standard_button_142_34_button"
+            position = { x = @button_roz_right2 y = @button_y_line3 }
+            clicksound = ui_deselect
+            font = "cg_16b"
+            text = "roz_start.7777.f2"
+            effect = "roz_settings_difficult_fire_range_down_effect"
+        }
+
+        effectButtonType = {
             name = "roz_settings_difficult_fire_range_clear"
             quadTextureSprite = "GFX_button_29_animated"
-            position = { x = @button_x_out y = @button_y_out_mid3 }
+            position = { x = @button_x_out y = @button_y_line3 }
 			clicksound = ui_deselect
             font = "cg_16b"
             text = "roz_start.7777.clear"

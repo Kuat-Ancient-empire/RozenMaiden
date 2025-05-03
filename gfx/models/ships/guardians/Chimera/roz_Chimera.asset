@@ -4,7 +4,7 @@
 entity = {
     name = "roz_chimera_hull_krks_entity"
     pdxmesh = "roz_chimera_krks_mesh"
-
+    scale = 0.2
     default_state = "idle"
     state = { name = "idle" animation = "idle" animation_blend_time = 0
         event = { trigger_once = yes sound = { soundeffect = "dimensional_horror_idle" } }
@@ -24,7 +24,6 @@ entity = {
     }
 
     attach = { root = "dimensional_horror_portal_entity" }
-    scale = 0.8
     attach = { root = "dimensional_horror_portal_rings_entity" }
 
     locator = { name = large_gun_01 position = { 0 0 0 } rotation = { 0 0 0 } }
