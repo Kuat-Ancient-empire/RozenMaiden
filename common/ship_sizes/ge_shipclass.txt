@@ -152,7 +152,7 @@ Ge_Ragnarok = {	#永恒之枪
 	}
 	max_hitpoints = 179000
 	combat_size_multiplier = 4
-	size_multiplier = 200
+	size_multiplier = 64
 	fleet_slot_size = 64
 	section_slots = {
 		"mid" = {

@@ -12,17 +12,27 @@ building_llk_paradox_origin = {
     category = research     		#分类，可以让玩家更好的找到该建筑
     allow = {       				#允许，满足下列条件，则该建筑可以被允许建造
         OR = {
-            has_building = building_ancient_palace
-            has_building = building_ancient_control_center
-            has_building = building_hab_fe_capital
-            has_building = building_hab_capital
-            has_building = building_hab_major_capital
+            # has_building = building_ancient_palace
+            # has_building = building_ancient_control_center
+            # has_building = building_hab_fe_capital
+            # has_building = building_hab_capital
+            # has_building = building_hab_major_capital
             has_upgraded_capital = yes
-            num_pops >= 20
+            #num_pops >= 2000
         }
     }
-    potential = {
 
+    building_sets = {
+        farming
+        mining
+		urban
+        factory
+        generator
+        government
+    }
+
+    potential = {
+        exists = owner
     }
     on_queued = {
 
@@ -100,6 +110,16 @@ building_roz_power_core = {
     #allow = {       				#允许，满足下列条件，则该建筑可以被允许建造
     #    has_upgraded_capital = yes
     #}
+
+    building_sets = {
+        farming
+        mining
+		urban
+        factory
+        generator
+        government
+    }
+
     potential = {
         exists = planet
         planet = { is_capital = yes }
@@ -161,6 +181,16 @@ building_roz_dolls_factory = {
     #allow = {       				#允许，满足下列条件，则该建筑可以被允许建造
     #    has_upgraded_capital = yes
     #}
+
+    building_sets = {
+        farming
+        mining
+		urban
+        factory
+        generator
+        government
+    }
+
     potential = {
         exists = planet
         #planet = { is_capital = yes }

@@ -2531,34 +2531,45 @@ utility_component_template = {
 	size_restriction = {
 		Ge_Ragnarok
 	}
-	#prerequisites = {}
+
+	scripted_action = {
+		scope = self
+
+        finish_anim_state = "idle"
+
+		possible = {	#scope:fleet
+			NOT = {
+				has_fleet_flag = roz_time_freeze_clam_flag
+			}
+			custom_tooltip = "roz_time_freeze_cooldown_ct"
+		}
+
+		button_clickable = {
+			custom_tooltip = {
+				fail_text = BLANK_STRING
+				always = yes
+			}
+		}
+
+		name = on_roz_time_freeze_triggered
+		tooltip = roz_time_freeze_ship_button
+		icon = GFX_ge_time_freeze
+		activity_key = roz_time_freeze_activity_key
+		context_menu_name = roz_time_freeze_menu_title
+		progress_activity_key = roz_time_freeze_progress_activity_key
+		required_progress = 1
+		on_click_sound = roz_time_freeze_activited
+
+		cooldown = 60
+		cost = { energy = 20000 sr_void_core = 50 }
+
+		shortcut = "SHIFT+T"
+	}
+
 	ship_modifier = {
 		roz_timefreeze_modifier_tooltip = 0.999999
 	}
 	component_set = ship_aura_components
-	#hidden = yes
-	# hostile_aura = {
-	# 	name = "ge_shippart_titian_time_freeze"
-	# 	
-	# 	system_wide = yes
-	# 	apply_on = ships
-	# 	stack_info = {
-	# 		id = ge_shippart_titian_time_freeze
-	# 		priority = 50
-	# 	}
-	# 	modifier = {
-	# 	}
-	# 	graphics = {
-	# 		area_effect = {
-	# 			entity = "circle_area_entity"
-	# 			dynamic_scale = yes
-	# 		}
-	# 		ship_effect = {
-	# 			entity = "ship_aura_negative_entity"
-	# 			dynamic_scale = no
-	# 		}
-	# 	}
-	# }
 	ai_weight = {
 		weight = 0		#AI权重相关
 	}

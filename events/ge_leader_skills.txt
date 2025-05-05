@@ -225,6 +225,9 @@ country_event = {
 				}
 				#has_fleet_flag = kirakishou_hostile_fleet_flag
 			}
+			NOT = {
+				has_fleet_flag = roz_time_freeze_cooldown_flag
+			}
 		}
 	}
 	immediate = {
@@ -270,6 +273,14 @@ country_event = {
 						days = 30
 					}
 				}
+			}
+			set_timed_fleet_flag = {
+				flag = roz_time_freeze_clam_flag
+				days = 35
+			}
+			set_timed_fleet_flag = {
+				flag = roz_time_freeze_cooldown_flag
+				days = 60
 			}
 		}
 		#set_update_modifiers_batch = end
@@ -377,6 +388,9 @@ fleet_event = {
 		solar_system = {
 			any_fleet_in_system = {
 				any_controlled_ship = {
+					owner = {
+						is_hostile = root.owner
+					}
 					has_component = ge_shippart_time_freeze
 				}
 			}
@@ -398,6 +412,9 @@ fleet_event = {
 		solar_system = {
 			any_fleet_in_system = {
 				any_controlled_ship = {
+					owner = {
+						is_hostile = root.owner
+					}
 					has_component = ge_shippart_time_freeze
 				}
 			}
@@ -419,6 +436,9 @@ fleet_event = {
 		solar_system = {
 			any_fleet_in_system = {
 				any_controlled_ship = {
+					owner = {
+						is_hostile = root.owner
+					}
 					has_component = ge_shippart_time_freeze
 				}
 			}
@@ -428,6 +448,56 @@ fleet_event = {
 		add_modifier = {
 			modifier = ge_modifier_time_freeze
 			days = 27
+		}
+	}
+}
+
+fleet_event = {
+	id = ge_skills.25
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		NOT = {
+			has_fleet_flag = roz_time_freeze_clam_flag
+		}
+	}
+	immediate = {
+		solar_system = {
+			every_fleet_in_system = {
+				limit = {
+					owner = {
+						is_hostile = root.owner
+					}
+					not = {
+						has_fleet_flag = roz_time_freeze_active_flag
+					}
+				}
+				add_modifier = {
+					modifier = ge_modifier_time_freeze
+					days = 30
+				}
+				set_timed_fleet_flag = {
+					flag = roz_time_freeze_active_flag
+					days = 30
+				}
+			}
+		}
+		owner = {
+			create_message = {
+				type = roz_time_freeze_activity
+				localization = roz_time_freeze_activity_desc
+				days = @toast_message_days
+				target = event_target:roz_Ragnarok_time_freeze_system_target
+				variable = {
+					type = name
+					localization = SYSTEM
+					scope = event_target:roz_Ragnarok_time_freeze_system_target
+				}
+				variable = {
+					key = "border"
+					value = GFX_border_legendary
+				}
+			}
 		}
 	}
 }

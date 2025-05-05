@@ -553,6 +553,55 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+
+	spriteType = {
+		name = "GFX_evt_roz_annabelle"
+		textureFile = "gfx/event_pictures/evt_roz_annabelle.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_bright_new_world"
+		textureFile = "gfx/event_pictures/evt_roz_bright_new_world.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_scientific_exhibition"
+		textureFile = "gfx/event_pictures/evt_roz_scientific_exhibition.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_rozen_party"
+		textureFile = "gfx/event_pictures/evt_roz_rozen_party.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_spaceship_bridge"
+		textureFile = "gfx/event_pictures/evt_roz_spaceship_bridge.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}y
+
+	spriteType = {
+		name = "GFX_evt_roz_industrial_factor"
+		textureFile = "gfx/event_pictures/evt_roz_industrial_factor.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_heart_lost_doll"
+		textureFile = "gfx/event_pictures/evt_roz_heart_lost_doll.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 }
 
 

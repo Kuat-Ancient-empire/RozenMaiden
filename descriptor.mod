@@ -9,5 +9,5 @@ tags={
 }
 name="Rozen Maiden suigintou Leader Pack - 蔷薇少女 水银灯领袖包"
 picture="thumbnail.png"
-supported_version="*"
+supported_version="v4.*.*"
 remote_file_id="2776070504"

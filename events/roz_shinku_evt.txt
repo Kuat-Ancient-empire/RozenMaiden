@@ -328,7 +328,7 @@ country_event = {
     id = roz_shinku_evt.400
     title = "roz_shinku_evt.400.title"
     desc = "roz_shinku_evt.400.desc"
-    picture = GFX_evt
+    picture = GFX_evt_roz_heart_lost_doll
     show_sound = resources_capped
     is_triggered_only = yes
     trigger = {
@@ -352,7 +352,8 @@ country_event = {
 
     title = "roz_shinku_evt.401.title"
     desc = "roz_shinku_evt.401.desc"
-    picture = GFX_evt_roz_junn_phone_1‌
+    picture = GFX_evt_roz_junn_phone_1
+    show_sound = event_sensor_ping
     is_triggered_only = yes
     trigger = {
         any_situation = {
@@ -376,6 +377,7 @@ country_event = {
     title = "roz_shinku_evt.402.title"
     desc = "roz_shinku_evt.402.desc"
     picture = GFX_evt_roz_junn_phone_2
+    show_sound = event_announcement
     is_triggered_only = yes
     trigger = {
         is_ai = no
@@ -408,37 +410,52 @@ country_event = {
     option = {
         name = roz_shinku_evt.403.aa
         response_text = roz_shinku_evt.403.aa.res
+        hidden_effect = { set_country_flag = roz_evt_temp_flag_1 }
+        allow = { hidden_trigger = { NOT = { has_country_flag = roz_evt_temp_flag_1 } } }
         is_dialog_only = yes
     }
     option = {
         name = roz_shinku_evt.403.bb
         response_text = roz_shinku_evt.403.bb.res
+        hidden_effect = { set_country_flag = roz_evt_temp_flag_2 }
+        allow = { hidden_trigger = { NOT = { has_country_flag = roz_evt_temp_flag_2 } } }
         is_dialog_only = yes
     }
     option = {
         name = roz_shinku_evt.403.cc
         response_text = roz_shinku_evt.403.cc.res
+        hidden_effect = { set_country_flag = roz_evt_temp_flag_3 }
+        allow = { hidden_trigger = { NOT = { has_country_flag = roz_evt_temp_flag_3 } } }
         is_dialog_only = yes
     }
     option = {
         name = roz_shinku_evt.403.dd
         response_text = roz_shinku_evt.403.dd.res
+        hidden_effect = { set_country_flag = roz_evt_temp_flag_4 }
+        allow = { hidden_trigger = { NOT = { has_country_flag = roz_evt_temp_flag_4 } } }
         is_dialog_only = yes
     }
     option = {
         name = roz_shinku_evt.403.ee
         response_text = roz_shinku_evt.403.ee.res
+        hidden_effect = { set_country_flag = roz_evt_temp_flag_5 }
+        allow = { hidden_trigger = { NOT = { has_country_flag = roz_evt_temp_flag_5 } } }
         is_dialog_only = yes
     }
     option = {
         name = roz_shinku_evt.403.ff
         response_text = roz_shinku_evt.403.ff.res
+        hidden_effect = { set_country_flag = roz_evt_temp_flag_6 }
+        allow = { hidden_trigger = { NOT = { has_country_flag = roz_evt_temp_flag_6 } } }
         is_dialog_only = yes
     }
     option = {
         name = roz_shinku_evt.403.gg
         default_hide_option = yes
         custom_tooltip = roz_shinku_evt.403.gg.ct
+        add_resource = {
+            unity = 1000
+        }
         start_situation = {
             type = roz_awaken_of_shinku_1_acknowledge_border
         }
@@ -447,11 +464,14 @@ country_event = {
         }
     }
     after = {
-        add_resource = {
-            unity = 1000
-        }
         hidden_effect = {
             roz_junn_country_create = yes
+            remove_country_flag = roz_evt_temp_flag_1
+            remove_country_flag = roz_evt_temp_flag_2
+            remove_country_flag = roz_evt_temp_flag_3
+            remove_country_flag = roz_evt_temp_flag_4
+            remove_country_flag = roz_evt_temp_flag_5
+            remove_country_flag = roz_evt_temp_flag_6
         }
     }
 }
@@ -504,18 +524,18 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.411.title"
     desc = "roz_shinku_evt.411.desc"
-    picture = GFX_evt
+    picture = GFX_evt_roz_annabelle
     trigger = {
         NOT = {
             has_relic = r_roz_doll_Annabelle
         }
     }
-    immediate = {
-
-    }
     option = {
         name = roz_shinku_evt.411.aa
         add_relic = r_roz_doll_Annabelle
+        add_resource = {
+            unity = -500
+        }
     }
 }
 
@@ -524,7 +544,7 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.412.title"
     desc = "roz_shinku_evt.412.desc"
-    picture = GFX_evt
+    picture = GFX_evt_roz_bright_new_world
     trigger = {
         is_ai = no
     }
@@ -581,12 +601,10 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.422.title"
     desc = "roz_shinku_evt.422.desc"
-    picture = GFX_evt
+    picture = GFX_evt_astral_rift_genesis_2
+    show_sound = event_lootbox_good
     trigger = {
         is_ai = no
-    }
-    immediate = {
-
     }
     option = {
         name = roz_shinku_evt.422.aa
@@ -618,12 +636,10 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.413.title"
     desc = "roz_shinku_evt.413.desc"
-    picture = GFX_evt
+    picture = GFX_evt_roz_scientific_exhibition
+    show_sound = event_galactic_community
     trigger = {
         is_ai = no
-    }
-    immediate = {
-
     }
     option = {
         name = roz_shinku_evt.413.aa
@@ -639,12 +655,10 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.414.title"
     desc = "roz_shinku_evt.414.desc"
-    picture = GFX_evt
+    picture = GFX_evt_roz_rozen_party
+    show_sound = event_factions
     trigger = {
         is_ai = no
-    }
-    immediate = {
-
     }
     option = {
         name = roz_shinku_evt.414.aa
@@ -660,12 +674,10 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.415.title"
     desc = "roz_shinku_evt.415.desc"
-    picture = GFX_evt
+    picture = GFX_evt_caravaneers
+    show_sound = sfx_caravaneer_cargo_ship_idle
     trigger = {
         NOT = { has_modifier = roz_rosa_analysis_industrial }
-    }
-    immediate = {
-
     }
     option = {
         name = roz_shinku_evt.415.aa
@@ -680,12 +692,10 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.416.title"
     desc = "roz_shinku_evt.416.desc"
-    picture = GFX_evt
+    picture = GFX_evt_cyberization_2
+    show_sound = event_cityscape
     trigger = {
         NOT = { has_modifier = roz_rosa_analysis_research }
-    }
-    immediate = {
-
     }
     option = {
         name = roz_shinku_evt.416.aa
@@ -700,12 +710,10 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.417.title"
     desc = "roz_shinku_evt.417.desc"
-    picture = GFX_evt
+    picture = GFX_evt_roz_spaceship_bridge
+    show_sound = event_ship_bridge
     trigger = {
         NOT = { has_modifier = roz_rosa_analysis_military }
-    }
-    immediate = {
-
     }
     option = {
         name = roz_shinku_evt.417.aa
@@ -720,12 +728,10 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.418.title"
     desc = "roz_shinku_evt.418.desc"
-    picture = GFX_evt
+    picture = GFX_evt_roz_industrial_factor
+    show_sound = event_engineered_evolution
     trigger = {
         NOT = { has_modifier = roz_rosa_analysis_temporary }
-    }
-    immediate = {
-
     }
     option = {
         name = roz_shinku_evt.418.aa
@@ -741,11 +747,10 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.419.title"
     desc = "roz_shinku_evt.419.desc"
-    picture = GFX_evt
+    picture = GFX_evt_smugglers_in_bar
+    show_sound = event_non-empire_contact
     trigger = {
-    }
-    immediate = {
-
+        always = yes
     }
     option = {
         name = roz_shinku_evt.419.aa
@@ -757,18 +762,16 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.420.title"
     desc = "roz_shinku_evt.420.desc"
-    picture = GFX_evt
+    picture = GFX_evt_spy_network
+    show_sound = event_power_down
     trigger = {
         NOT = { has_modifier = roz_rosa_analysis_research_fault }
-    }
-    immediate = {
-
     }
     option = {
         name = roz_shinku_evt.420.aa
         add_modifier = {
             modifier = roz_rosa_analysis_research_fault
-            days = 10
+            days = 30
         }
     }
 }
@@ -778,16 +781,18 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.421.title"
     desc = "roz_shinku_evt.421.desc"
-    picture = GFX_evt
+    picture = GFX_solar_storm
+    show_sound = event_power_down
     trigger = {
         is_ai = no
     }
-    immediate = {
-
-    }
     option = {
         name = roz_shinku_evt.421.aa
-
+        add_resource = {
+            unity = -1000
+            influence = -50
+            society_research = -1000
+        }
     }
 }
 
@@ -796,7 +801,8 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.423.title"
     desc = "roz_shinku_evt.423.desc"
-    picture = GFX_evt
+    picture = GFX_evt_origin_stormchasers_event_progress
+    show_sound = event_laboratory_sound
     trigger = {
         is_ai = no
     }
@@ -821,7 +827,7 @@ country_event = {
     title = "roz_shinku_evt.425.title"
     desc = "roz_shinku_evt.425.desc"
     picture_event_data = {
-        room = roz_junn_room
+        room = no_video_feed_room
     }
     diplomatic = yes
     trigger = {
@@ -919,7 +925,7 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.4301.title"
     desc = "roz_shinku_evt.4301.desc"
-    picture = GFX
+    picture = GFX_evt_cosmic_storms_broadcast_hacking
     trigger = {
         any_situation = {
             is_situation_type = roz_awaken_of_shinku_1_acknowledge_border
@@ -945,12 +951,9 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.431.title"
     desc = "roz_shinku_evt.431.desc"
-    picture = GFX
+    picture = GFX_evt_astral_rift_crystal_3
     trigger = {
         is_ai = no
-    }
-    immediate = {
-
     }
     option = {
         name = roz_shinku_evt.431.aa
@@ -989,7 +992,7 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.432.title"
     desc = "roz_shinku_evt.432.desc"
-    picture = GFX
+    picture = GFX_evt_tradestation_interior
     trigger = {
         is_ai = no
     }

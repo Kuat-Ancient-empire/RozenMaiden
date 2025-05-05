@@ -50,6 +50,9 @@ weapon_component_template = {
 	ai_tag_weight = 0
 
 	size_restriction = { Ge_Ragnarok }
+	potential = {
+		is_ship_size = Ge_Ragnarok
+	}
 
 	ai_weight = { #invi
 		weight = 1

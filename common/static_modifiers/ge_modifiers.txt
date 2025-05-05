@@ -304,6 +304,8 @@ roz_sgt_flagship_gardian_none_tech_modifier = {
 ge_modifier_time_freeze = {		###Commander, we`re listening.
 	#icon = "gfx/interface/icons/"
 	#icon_frame = 1
+	ship_damage_reduction_mult = -0.33
+
 	ship_evasion_add = -10000
 	ship_evasion_mult = -1000
 	ship_fire_rate_mult = -1000
@@ -314,7 +316,6 @@ ge_modifier_time_freeze = {		###Commander, we`re listening.
 	ship_emergency_ftl_min_days_mult = 1000
 	ship_disengage_chance_mult = -1000
 	ship_shield_reduction = 10
-	ship_armor_reduction = 0.5
 	ship_armor_penetration_mult = -1.0
 	ship_shield_penetration_mult = -1.0
 	ship_shield_hardening_add = -1.0
