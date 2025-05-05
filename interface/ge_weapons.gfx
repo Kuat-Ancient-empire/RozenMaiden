@@ -718,7 +718,12 @@ spriteTypes = {
 		}
 	}
 
-  }
+	spriteType = {
+		name = "GFX_ship_skill_roz_phase_cloak"
+		texturefile = "gfx/interface/icons/ship_parts/roz_phase_cloak.PNG"
+	}
+
+}
 
 
 

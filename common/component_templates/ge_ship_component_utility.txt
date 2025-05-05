@@ -2558,12 +2558,12 @@ utility_component_template = {
 		context_menu_name = roz_time_freeze_menu_title
 		progress_activity_key = roz_time_freeze_progress_activity_key
 		required_progress = 1
-		on_click_sound = roz_time_freeze_activited
+		on_click_sound = roz_the_world_available
 
-		cooldown = 60
-		cost = { energy = 20000 sr_void_core = 50 }
+		cooldown = 15
+		cost = { energy = 1000 }
 
-		shortcut = "SHIFT+T"
+		shortcut = "SHIFT+I"
 	}
 
 	ship_modifier = {

@@ -364,20 +364,56 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_ge_ship_part_genesis_lake"
 	icon_frame = 1
-	power = -300
+	power = -25
 	resources = {
 		category = ship_components
-		cost = {
-			alloys = 1500
-			energy = 4500
-		}
-		upkeep = {
-			energy = 25
-		}
+		# cost = {
+		# 	alloys = 1500
+		# 	energy = 4500
+		# }
+		# upkeep = {
+		# 	energy = 25
+		# }
 	}
 	size_restriction = { Ge_Vampirilis_Ortaam }
+	potential = {
+		is_ship_size = Ge_Vampirilis_Ortaam
+	}
 	prerequisites = { tech_ge_sgt_flagship_normal }
 	component_set = "roz_flagship_slot"
+
+	scripted_action = {
+		scope = self
+
+        finish_anim_state = "idle"
+
+		possible = {	#scope:fleet
+			always = yes
+			#custom_tooltip = "roz_phase_cloak_ct"
+		}
+
+		button_clickable = {
+			custom_tooltip = {
+				fail_text = BLANK_STRING
+				always = yes
+			}
+		}
+
+		name = on_roz_phase_cloak_triggered
+		tooltip = roz_phase_cloak_ship_button
+		icon = GFX_ship_skill_roz_phase_cloak
+		activity_key = roz_phase_cloak_activity_key
+		context_menu_name = roz_phase_cloak_menu_title
+		progress_activity_key = roz_phase_cloak_progress_activity_key
+		required_progress = 1
+		on_click_sound = roz_phase_cloak_collision
+
+		cooldown = 60
+		cost = { energy = 20000 sr_void_core = 50 }
+
+		shortcut = "SHIFT+T"
+	}
+
 	friendly_aura = {
 		name = "ge_shippart_genesis_lake_friendly"
 		system_wide = yes

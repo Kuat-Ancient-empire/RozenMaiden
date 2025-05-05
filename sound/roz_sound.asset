@@ -89,7 +89,12 @@ sound = {
 	volume = 0.6
 }
 
-
+sound =
+{
+	name = "roz_phase_cloak_collision"
+	file = "ui/roz_phase_cloak_collision.wav"
+	volume = 0.8
+}
 
 
 
@@ -152,7 +157,7 @@ soundeffect = {
 	
 	max_audible = 1
 	max_audible_behaviour = fail
-	volume = 0.35
+	volume = 0.25
 }
 
 soundeffect = {
@@ -189,8 +194,15 @@ soundeffect = {
 	volume = 0.55
 }
 
-
-
+soundeffect = {
+	name = roz_phase_cloak_collision
+	sounds = {
+		sound = roz_phase_cloak_collision
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.8
+}
 
 
 
