@@ -2,12 +2,12 @@ namespace = ge_event
 country_event = {	
 	#开局
 	id = ge_event.0
-	hide_window = yes
-	#title = ge_event.0.name
-	#desc = ge_event.0.desc
-	#picture = GFX_ge_rz_start3
-	#location = root
-	#show_sound = select_click
+	#hide_window = yes
+	title = ge_event.0.name
+	desc = ge_event.0.desc
+	picture = GFX_ge_rz_start3
+	location = root
+	show_sound = select_click
 	#fire_only_once = yes 
 	is_triggered_only = yes
 	# mean_time_to_happen = {
@@ -57,15 +57,12 @@ country_event = {
 		# }
 		set_country_flag = roz_leader_name_jp_flag #开局设置，设定领袖名为片假名
 
-		country_event = {
-			id = ge_event.7777
-		}
-		hidden_effect = {
-			create_ship_design = { design = ROZ_ITQ_design }
-			add_ship_design = last_created_design
-			create_ship_design = { design = roz_juggernaut_wanxiang_design }
-			add_ship_design = last_created_design
-		}
+		# hidden_effect = {
+		# 	create_ship_design = { design = ROZ_ITQ_design }
+		# 	add_ship_design = last_created_design
+		# 	create_ship_design = { design = roz_juggernaut_wanxiang_design }
+		# 	add_ship_design = last_created_design
+		# }
 	}
 	# option = {
 	# 	name = ge_event.0.bb
@@ -140,18 +137,21 @@ country_event = {
 	# 		tech = tech_ge_shippart_titian_aura
 	# 	}
 	# }
-	# option = {
-	# 	name = ge_event.0.cc
-	# 	country_event = {
-	# 		id = ge_event.1
-	# 	}
-	# 	hidden_effect = {
-	# 		create_ship_design = { design = ROZ_ITQ_design }
-	# 		add_ship_design = last_created_design
-	# 		create_ship_design = { design = roz_juggernaut_wanxiang_design }
-	# 		add_ship_design = last_created_design
-	# 	}
-	# }
+	option = {
+		name = ge_event.0.cc
+		# country_event = {
+		# 	id = ge_event.1
+		# }
+		country_event = {
+			id = ge_event.7777
+		}
+		hidden_effect = {
+			create_ship_design = { design = ROZ_ITQ_design }
+			add_ship_design = last_created_design
+			create_ship_design = { design = roz_juggernaut_wanxiang_design }
+			add_ship_design = last_created_design
+		}
+	}
 }
 
 ##new setup ui

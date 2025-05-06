@@ -329,6 +329,16 @@ ge_modifier_time_freeze = {		###Commander, we`re listening.
 	weapon_type_energy_speed_mult = -1000
 }
 
+###
+roz_phase_cloak_modifier = {
+	ship_weapon_damage = -100
+	ship_fire_rate_mult = -100
+	ship_evasion_mult = 2.0
+	ship_evasion_add = 100
+	ship_damage_reduction_mult = 10
+	ship_target_weight_mult = -0.5
+}
+
 ge_modifier_test = {
 	#icon = "gfx/interface/icons/"
 	#icon_frame = 1

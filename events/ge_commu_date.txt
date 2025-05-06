@@ -1550,6 +1550,7 @@ country_event = {
     id = ge_communication.289
     is_triggered_only = yes
     hide_window = yes
+    
     immediate = {
         create_message = {
             type = ROZ_sgt_gal_MESSAGE_TYPE

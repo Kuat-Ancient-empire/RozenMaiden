@@ -793,7 +793,7 @@ country_event = { #控制台effect测试区
 		#effect = { ruler = { change_leader_portrait = event_target:roz_player_country_ruler_global_target } }
 		#effect = { ruler = { change_leader_portrait = random } }
 
-		#effect = {set_country_flag = ge_tech_reactor_get give_technology = {tech = GE_tech_reactor} remove_country_flag = ge_tech_continue event_target:ge_site_sgt_target = {add_resource = {sr_void_core = 1 }add_deposit = ge_site_vc_deposit }  every_owned_ship = { limit = { is_ship_size = Ge_Vampirilis_Ortaam } remove_modifier = roz_sgt_flagship_none_tech_modifier } every_owned_ship = { limit = { is_ship_size = Ge_Vampirilis_Letum } remove_modifier = roz_sgt_flagship_gardian_none_tech_modifier } start_situation = { type = roz_ves_state_grid_shock_situation }   }
+		#effect = {set_country_flag = ge_tech_reactor_get give_technology = {tech = GE_tech_reactor} remove_country_flag = ge_tech_continue event_target:ge_site_sgt_target = {add_resource = {sr_void_core = 1 }add_deposit = ge_site_vc_deposit }  every_owned_ship = { limit = { is_ship_size = Ge_Vampirilis_Ortaam } remove_modifier = roz_sgt_flagship_none_tech_modifier } every_owned_ship = { limit = { is_ship_size = Ge_Vampirilis_Letum } remove_modifier = roz_sgt_flagship_gardian_none_tech_modifier } start_situation = { type = roz_ves_state_grid_shock_situation } set_country_flag = ge_tech_begin  }
 
 		#effect = {set_country_flag = ge_tech_continue country_event={id=ge_event.47}    }
 
@@ -936,7 +936,10 @@ country_event = { #控制台effect测试区
 
 		#effect = { clone_leader = {target = event_target:roz_leader_shinku_global_target0}}
 		#trigger exists = event_target:roz_leader_shinku_global_target0
+		#trigger exists = event_target:roz_n_field_site_target0
+		#trigger exists = event_target:kirakishou_hostile_country0
 		#trigger event_target:roz_leader_shinku_global_target0 = { leader_class = official }
+		#trigger exists = event_target:lcluster1
 		#effect remove_country_flag = roz_suigintou_diplomatic_initialize_flag
 		#trigger has_country_flag = roz_suigintou_diplomatic_initialize_flag
 		#trigger = event_target:roz_suigintou_scientist_inactive_temp0 = { has_leader_flag = roz_suigintou_flag }
@@ -947,6 +950,22 @@ country_event = { #控制台effect测试区
 		# 		trigger any_owned_leader = { has_leader_flag = roz_suigintou_flag has_rozen_affection_trait = yes }
 		# 	}
 		# }
+		#trigger has_country_flag = enable_roz_cheat
+
+		event_target:lcluster1 = {
+			solar_system = {
+				create_starbase = {
+					owner = root
+					size = starbase_outpost
+					effect = {
+						
+					}
+				}
+			}
+		}
+		#trigger any_planet_within_border = { is_planet_class = pc_gray_goo }
+
+		#effect event_target:artist_enclave_country = { establish_communications_no_message = root }
 
 
 		capital_scope = {
@@ -1188,7 +1207,7 @@ country_event = {
 		remove_global_flag = gray_goo_crisis_set
 		remove_global_flag = dragon_season
 		remove_global_flag = gray_goo_empire_set
-		country_event = { id = distar.11000 }
+		country_event = { id = distar.11000 }	##
 		set_global_flag = lgates_activated_globally
 		# centralized handling of chain and project clean-up
 		every_playable_country = {
@@ -1229,16 +1248,9 @@ country_event = {
 			solar_system = {
 				create_starbase = {
 					owner = root
-					size = starbase_starfortress
+					size = starbase_starport
 					effect = {
-						set_starbase_building = {
-							slot = 1
-							building = dimensional_shrine
-						}
-						set_starbase_building = {
-							slot = 2
-							building = zroni_storm_caster
-						}
+						
 					}
 				}
 			}
@@ -1282,6 +1294,15 @@ country_event = {
 			id = ge_test_event.201
 			days = 1
 		}
+		#create_fallen_empire_starting_navy = yes
+		# add_global_ship_design = "NAME_Enforcer"
+		# add_global_ship_design = "NAME_Savant"
+		# add_global_ship_design = "NAME_Scholar"
+		# add_global_ship_design = "NAME_Sage"
+		# add_global_ship_design = "NAME_Cloaker"
+		# add_global_ship_design = "NAME_Librarian"
+		# add_global_ship_design = "NAME_Seeker"
+		# add_global_ship_design = "NAME_FE_Starbase"
 	}
 }
 
@@ -1296,12 +1317,8 @@ country_event = {
 		event_target:graygoo_factory_system = {
 			set_name = NAME_roz_lgate_starbase
 			create_starbase = {
-				size = starbase_citadel
+				size = starbase_starport
 				owner = root
-				module = shipyard
-				module = shipyard
-				module = shipyard
-				module = shipyard
 				module = shipyard
 				module = shipyard
 				effect = {
@@ -1310,18 +1327,6 @@ country_event = {
 					}
 					set_starbase_building = {
 						slot = 1
-						building = colossus_yards
-					}
-					set_starbase_building = {
-						slot = 2
-						building = fleet_academy
-					}
-					set_starbase_building = {
-						slot = 3
-						building = titan_yards
-					}
-					set_starbase_building = {
-						slot = 4
 						building = naval_logistics_office
 					}
 				}
@@ -1337,7 +1342,26 @@ country_event = {
 					has_country_flag = enable_roz_cheat
 				}
 				roz_lgate_create_reward_planet = yes
+				country_event = {
+					id = ge_test_event.202
+					days = 40
+				}
 			}
+		}
+	}
+}
+
+country_event = {
+	id = ge_test_event.202
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:roz_graygoo_factory_system_gaia@root = {
+			add_building = building_roz_master_archive
+			add_building = building_roz_nano_forge
+			add_building = building_roz_class_5_singularity
+			add_building = building_roz_dimensional_fabricator
+			add_building = building_roz_nourishment_center
 		}
 	}
 }

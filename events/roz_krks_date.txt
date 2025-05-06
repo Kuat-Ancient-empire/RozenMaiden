@@ -517,6 +517,7 @@ country_event = {
     id = roz_krks_leader_evt.499
     hide_window = yes
     is_triggered_only = yes
+    #event_message_type = ROZ_krks_gal_MESSAGE_TYPE
     immediate = {
         create_message = {
             type = ROZ_krks_gal_MESSAGE_TYPE

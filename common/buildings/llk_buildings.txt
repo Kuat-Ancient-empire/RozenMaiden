@@ -60,7 +60,7 @@ building_llk_paradox_origin = {
              }
          }
          modifier = {    						#修正
-             job_llk_over_dimension_add = 3  			#job_<职业ID>_per_pop = xxx 每1/xxx人口提供一个职业
+             job_llk_over_dimension_add = 100  			#
          }
      }
     resources = {   #资源相关

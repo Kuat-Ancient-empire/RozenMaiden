@@ -159,6 +159,13 @@ entity = {
 #	attach = { main_turret_front = "SSV_M_beam_turret_entity" }
 #}
 
+entity = {
+	name = "roz_gev_cloak_ship_section_entity"
+	pdxmesh = "roz_gev_cloak_ship_mesh"
+	default_state = "idle"
+	state = { name = "idle"		animation = "idle" animation_blend_time = 2 looping = no	}
+	scale = 2.05
+}
 
 entity = {
 	name = "Black_Infinite_Large_ship_section_entity"
@@ -166,7 +173,73 @@ entity = {
 	default_state = "failsafe_idle"
 	scale = 2
 	state = { name = "failsafe_idle"		animation = "idle" animation_blend_time = 2 looping = no	}
+	state = { name = "phase_cloak"		animation = "idle" animation_blend_time = 20 looping = no next_state = "idle"	
+		chance = {
+			default = 0
+		}
+
+		event = { time = 0 node = "root" particle = "nebula_planet_smoke" keep_particle = yes trigger_once = yes}
+		event = { time = 5 node = "root" particle = "nebula_planet_smoke" keep_particle = yes trigger_once = yes}
+		event = { time = 10 node = "root" particle = "nebula_planet_smoke" keep_particle = yes trigger_once = yes}
+		event = { time = 15 node = "root" particle = "nebula_planet_smoke" keep_particle = yes trigger_once = yes}
+		event = { time = 20 node = "root" particle = "nebula_planet_smoke" keep_particle = yes trigger_once = yes}
+		event = { time = 25 node = "root" particle = "nebula_planet_smoke" keep_particle = yes trigger_once = yes}
+		
+		event = { time = 0 node = "et01" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et02" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et03" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et04" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et05" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et06" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et07" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et08" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et09" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et10" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
 	
+		event = { time = 0 node = "em01" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em02" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em03" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em04" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em05" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em06" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em07" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em08" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em09" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em10" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+	
+		event = { time = 0 node = "ed01" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "ed02" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "ed03" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "ed04" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "ed05" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "ed06" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+	
+		event = { time = 0 node = "ed01" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "ed02" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+
+		event = { time = 0 node = "AuxLeft00" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft01" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft02" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft03" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft04" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft05" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft06" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft07" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft08" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft09" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		
+		event = { time = 0 node = "AuxRight00" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight01" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight02" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight03" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight04" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight05" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight06" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight07" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight08" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight09" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		
+	}
 	state = { name = "idle"		animation = "idle" animation_blend_time = 4 looping = no next_state = "idle"
 		chance = {
 			if_current_state = {
@@ -703,6 +776,75 @@ entity = {
 	default_state = "failsafe_idle"
 	scale = 2
 	state = { name = "failsafe_idle"		animation = "idle" animation_blend_time = 2 looping = no	}
+
+	state = { name = "phase_cloak"		animation = "idle" animation_blend_time = 20 looping = no next_state = "idle"	
+		chance = {
+			default = 0
+		}
+
+		event = { time = 0 node = "root" particle = "nebula_planet_smoke" keep_particle = yes trigger_once = yes}
+		event = { time = 5 node = "root" particle = "nebula_planet_smoke" keep_particle = yes trigger_once = yes}
+		event = { time = 10 node = "root" particle = "nebula_planet_smoke" keep_particle = yes trigger_once = yes}
+		event = { time = 15 node = "root" particle = "nebula_planet_smoke" keep_particle = yes trigger_once = yes}
+		event = { time = 20 node = "root" particle = "nebula_planet_smoke" keep_particle = yes trigger_once = yes}
+		event = { time = 25 node = "root" particle = "nebula_planet_smoke" keep_particle = yes trigger_once = yes}
+		
+		event = { time = 0 node = "et01" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et02" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et03" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et04" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et05" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et06" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et07" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et08" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et09" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "et10" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+	
+		event = { time = 0 node = "em01" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em02" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em03" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em04" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em05" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em06" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em07" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em08" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em09" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "em10" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+	
+		event = { time = 0 node = "ed01" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "ed02" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "ed03" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "ed04" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "ed05" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "ed06" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+	
+		event = { time = 0 node = "ed01" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "ed02" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes}
+
+		event = { time = 0 node = "AuxLeft00" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft01" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft02" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft03" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft04" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft05" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft06" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft07" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft08" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxLeft09" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		
+		event = { time = 0 node = "AuxRight00" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight01" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight02" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight03" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight04" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight05" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight06" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight07" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight08" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "AuxRight09" particle = "generic_075_exhaust_circle_idle" keep_particle = yes trigger_once = yes}
+		
+	}
+
 
 	state = { name = "idle"		animation = "idle" animation_blend_time = 4 looping = no next_state = "idle"
 		chance = {

@@ -108,7 +108,8 @@ sgt_flagship_exploration_situation = {
 		}
 		custom_tooltip = "sgt_flagship_exploration_situation_fail_ct"
 	}
-	start_value = 5
+	#start_value = 5
+	initial_progress = 6
 	#triggered_target_modifier = {
 		#Modifier applying to the target planet of a Situation, if the triggers are true. Does not work on other scope types!
 	#}

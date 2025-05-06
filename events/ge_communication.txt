@@ -10,6 +10,11 @@ country_event = {
 		room = ge_sgt_main_room
 	}
 	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			exists = event_target:roz_suigintou_global_country@root
+		}
+	}
 	option = {
 		name = ge_communication.0.a
 		response_text = ge_communication.0.a.response
@@ -35,6 +40,9 @@ country_event = {
 		#exists = event_target:roz_suigintou_commander_inactive_temp@root
 		#exists = event_target:roz_suigintou_scientist_inactive_temp@root
 		#exists = event_target:roz_suigintou_global_country@root
+		NOT = {
+			exists = event_target:roz_suigintou_global_country@root
+		}
 	}
 	immediate = {
 		create_country = {
@@ -103,6 +111,7 @@ country_event = {
 country_event = {
 	id = ge_communication.100
 	title = "ge_communication.100.title"
+	# = ROZ_sgt_gal_MESSAGE_TYPE
 	desc = "ge_communication.100.a.n1.desc"
 	desc = "ge_communication.100.a.n2.desc"
 	desc = "ge_communication.100.a.n3.desc"

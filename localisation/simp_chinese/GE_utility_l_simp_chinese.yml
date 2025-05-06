@@ -91,19 +91,6 @@ ge_shippart_default:"空槽"
  GE_CB_L:0 "§R混沌超频器§!"
  GE_CB_L_DESC:0 "§R将虚空反应堆的能量附加在舰载武器上，虽然这并不安全，但是能让我们的攻势无坚不摧。§!"
 
-###############################Ship part#########Section_templates
- ge_flagship_key:0 "虚空领舰"
- ge_flagship:0 "虚空领舰"
- ge_flagship_plural:0 "虚空领舰"
- ge_carrier:0 "重型航母"
- ge_carrier_plural:0 "重型航母"
- Ge_Ragnarok:0 "永恒之枪"
- Ge_Ragnarok_key:0 "永恒之枪"
- Ge_Ragnarok_plural:0 "永恒之枪"
- ge_aura_ship:0 "光环舰"
- ge_aura_ship_key:0 "光环舰"
- ge_aura_ship_plural:0 "光环舰"
-
 ##############################Aura Aux
  ge_shippart_titian_A:0 "维度§R崩毁§!/§B加持§!"
  ge_shippart_titian_A_DESC:0 "范围性规则改写,这套系统的开发难度不在于如何实现，而在于战斗后怎么消弭不良影响。"
@@ -151,7 +138,7 @@ ge_shippart_genesis_lake_DESC: "该组件将为\"§M王座§!\"提供少量\"§P
 ge_shippart_genesis_lake_friendly: "§G创生§!"
 
 roz_phase_cloak_menu_title: "§M相位潜航§!"
-roz_phase_cloak_ship_button: "§M相位潜航§!\n\n§H消耗§!：£energy£1000 \n§H冷却§!：15£time£\n\n命令黑蔷薇王座进行§M相位潜航§!\n处于§M相位潜航§!的状态下，舰船将跃入亚空间中，虽然期间仍会被敌方瞄准，但船体无法与现实的袭击产生交互\n处于§M相位潜航§!的状态下，舰船将停用所用舰载武器，但感应雷区与舰载机不受影响"
+roz_phase_cloak_ship_button: "§M相位潜航§!\n\n§H消耗§!：£energy£1000 \n§H冷却§!：25£time£\n\n命令黑蔷薇王座进行§M相位潜航§!，持续20£time£\n处于§M相位潜航§!的状态下，舰船将跃入亚空间中，虽然期间仍会被敌方瞄准，但船体无法与现实的袭击产生交互\n处于§M相位潜航§!的状态下，舰船将停用所用舰载武器，但感应雷区与舰载机不受影响"
 roz_phase_cloak_activity_key: "§M相位潜航中§!"
  roz_phase_cloak_progress_activity_key: "§M相位潜航中§!"
 

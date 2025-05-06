@@ -110,6 +110,7 @@ country_event = {
 						root = {
 							set_country_flag = ge_sgt_site_owner_flag_for_multiplayer
 						}
+						save_global_event_target_as = roz_n_field_site_target@root
 					}
 				}
 			}
@@ -267,7 +268,7 @@ fleet_event = {
 						limit = {
 							has_planet_flag = ge_planet_flag_sgt@root.owner
 						}
-						save_global_event_target_as = roz_n_field_site_target@root.owner
+						#save_global_event_target_as = roz_n_field_site_target@root.owner
 						set_planet_flag = shroud_storm_changed
 					}
 				}

@@ -1725,7 +1725,6 @@ country_event = {	#血舞
                 which = ge_defense_fleet_count
                 value != 0
             }
-
         }
         hidden_effect = {
             event_target:roz_n_field_site_target@root = {

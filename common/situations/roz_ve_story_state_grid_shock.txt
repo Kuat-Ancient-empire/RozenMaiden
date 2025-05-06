@@ -128,7 +128,8 @@ roz_ves_state_grid_shock_situation = {
         }
         custom_tooltip = "roz_ves_state_grid_shock_situation_fail_ct"
     }
-    start_value = 2
+    #start_value = 2
+    initial_progress = 2
     #triggered_target_modifier = {
     #Modifier applying to the target planet of a Situation, if the triggers are true. Does not work on other scope types!
     #}

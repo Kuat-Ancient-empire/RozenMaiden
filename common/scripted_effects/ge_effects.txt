@@ -4007,91 +4007,72 @@ roz_lgate_create_reward_planet = {
 
 	random_planet_within_border = {
 		limit = {
-			OR = {
-				is_planet_class = pc_gray_goo
+			is_planet_class = pc_gray_goo
+			solar_system = {
+				is_same_value = event_target:graygoo_factory_system
 			}
 			#always = no
 		}
-		set_name = NAME_roz_lgate
-		change_pc = pc_city
+		change_pc = pc_gaia
 		change_planet_size = 25
 		clear_deposits = yes
 		clear_blockers = yes
 		set_owner = space_owner
+		set_controller = space_owner
 		#set_capital = yes
+		save_global_event_target_as = roz_graygoo_factory_system_gaia@root
 		create_colony = {
 			owner = root
+			species = root.owner_main_species
 		}
-		while = {
-			count = 160
-			create_pop = {
-				species = root
-				ethos = root
-			}
+		create_cluster = {
+			id = fe1_cluster
+			radius = 120
+			center = this.solar_system
 		}
+		#remove_all_districts = yes
 		while = {
-			count = 3
-			add_district = district_arcology_civilian_industry
-		}
-		while = {
-			count = 5
-			add_district = district_arcology_arms_industry
-		}
-		while = {
-			count = 5
-			add_district = district_arcology_leisure
-		}
-		while = {
-			count = 5
-			add_district = district_arcology_housing
-		}
-		while = {
-			count = 2
-			limit = {
-				Root = {
-					NOR = {
-						has_ethic = ethic_fanatic_spiritualist
-						has_ethic = ethic_spiritualist
-					}
-				}
-			}
-			add_district = district_arcology_administrative
+			count = 25
+			add_district = district_city
 		}
 
 		while = {
-			count = 3
 			limit = {
-				Root = {
-					OR = {
-						has_ethic = ethic_fanatic_spiritualist
-						has_ethic = ethic_spiritualist
-					}
-				}
+				pop_amount < 20000
+				free_housing > 0
 			}
-			add_district = district_arcology_religious
+			create_pop_group = {
+				species = root.owner_main_species
+			}
 		}
+
+		#add_building = building_capital
 		add_deposit = d_meals_in_pods
 		add_deposit = d_prisoner_intergration
 		add_deposit = d_ancient_particle_accelerator
 		add_deposit = d_alien_sanctuary
 		add_deposit = d_betharian_deposit
-		add_building = building_roz_ancient_palace
+		#remove_building = building_colony_shelter
+
+		#add_building = building_roz_ancient_palace
 		add_building = building_roz_fe_stronghold
-		add_building = building_roz_fe_dome
+		#add_building = building_roz_fe_dome
 		add_building = building_roz_master_archive
 		add_building = building_roz_nano_forge
-		add_building =  building_roz_class_5_singularity
+		add_building = building_roz_class_5_singularity
 		add_building = building_roz_dimensional_fabricator
 		add_building = building_roz_nourishment_center
 		add_building = building_roz_affluence_center
 		add_building = building_roz_fe_administration_2
-		add_building = building_roz_fe_clinic_2
+		#add_building = building_roz_fe_clinic_2
 		add_building = building_roz_fe_market_2
 		add_building = building_roz_fe_silo_2
-		add_building = building_roz_fe_entertainment_2
+		#add_building = building_roz_fe_entertainment_2
 		add_building = building_roz_fe_lab_2
 		add_building = building_roz_fe_mine_2
 
+		set_name = NAME_roz_lgate
+		
 	}
 }
 

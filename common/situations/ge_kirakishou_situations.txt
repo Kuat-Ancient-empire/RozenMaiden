@@ -266,7 +266,8 @@ kirakishou_planet_invasion_situation = {
 	abort_trigger = {
 	}
 	#Trigger for when a Situation should abort, firing on_abort
-	start_value = 6	#Situation will start at this number. Default is 0
+	#start_value = 6	#Situation will start at this number. Default is 0
+	initial_progress = 6
 	modifier = {
 	}
 	#Modifier applying to the country experiencing the situation
@@ -795,7 +796,8 @@ kirakishou_battle_field_situation = {
 	}
 	abort_trigger = {
 	}
-	start_value = 99	#Situation will start at this number. Default is 0
+	#start_value = 99	#Situation will start at this number. Default is 0
+	initial_progress = 99
 	modifier = {
 	}
 	#Modifier applying to the country experiencing the situation

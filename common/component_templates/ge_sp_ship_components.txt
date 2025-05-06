@@ -385,7 +385,7 @@ utility_component_template = {
 	scripted_action = {
 		scope = self
 
-        finish_anim_state = "idle"
+        finish_anim_state = "phase_cloak"
 
 		possible = {	#scope:fleet
 			always = yes
@@ -408,10 +408,10 @@ utility_component_template = {
 		required_progress = 1
 		on_click_sound = roz_phase_cloak_collision
 
-		cooldown = 60
-		cost = { energy = 20000 sr_void_core = 50 }
+		cooldown = 25
+		cost = { energy = 1000 }
 
-		shortcut = "SHIFT+T"
+		shortcut = "SHIFT+P"
 	}
 
 	friendly_aura = {

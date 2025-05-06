@@ -150,7 +150,15 @@ on_destroy_planet_with_GE_PLANET_KILLER_DEVOLUTION_unqueued = {
 #######################
 ###########ship positive skills
 on_roz_time_freeze_triggered = {
-	ge_skills.25
+	events = {
+		ge_skills.25
+	}
+}
+
+on_roz_phase_cloak_triggered = {
+	events = {
+		ge_skills.501
+	}
 }
 
 

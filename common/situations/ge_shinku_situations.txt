@@ -61,7 +61,8 @@ roz_shuukan_shoujonotsukurikata_situation = {
         }
         custom_tooltip = "roz_shuukan_shoujonotsukurikata_situation_fail_ct"
     }
-    start_value = 1
+    #start_value = 1
+    initial_progress = 1
     #triggered_target_modifier = {
     #Modifier applying to the target planet of a Situation, if the triggers are true. Does not work on other scope types!
     #}
@@ -293,7 +294,8 @@ roz_awaken_of_shinku_1_acknowledge_border = {
             }
         }
     }
-    start_value = 0
+    #start_value = 0
+    initial_progress = 0
     stages = {
         roz_awaken_of_shinku_1_acknowledge_border_stage_1 = {
             icon = GFX_situation_stage_1
@@ -484,7 +486,8 @@ roz_SK_4_madgod_invasion_alert = {
     fail_icon =  GFX_situation_outcome_unknown
     fail_icon_frame = GFX_situation_outcome_frame_green
     category = negative
-    start_value = 0
+    #start_value = 0
+    initial_progress = 0
     stages = {
         roz_SK_4_madgod_invasion_alert_stage_end = {
             icon =  GFX_situation_stage_1
@@ -558,7 +561,8 @@ roz_SK_4_madgod_invasion_placard = {
     on_fail = {
         
     }
-    start_value = 50
+    #start_value = 50
+    initial_progress = 50
     stages = {
         roz_SK_4_madgod_invasion_placard_stage_minus_two ={
             icon = GFX_situation_stage_icon_roz_SK4_minus-two

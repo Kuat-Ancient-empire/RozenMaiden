@@ -1322,3 +1322,23 @@ country_event = {
 # 		}
 # 	}
 # }
+
+fleet_event = {
+	id = ge_skills.501
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_ship = {
+			limit = {
+				is_ship_size = Ge_Vampirilis_Ortaam
+				has_component = ge_shippart_genesis_lake
+			}
+			add_modifier = {
+				modifier = roz_phase_cloak_modifier
+				days = 20
+			}
+		}
+	}
+}
+
+

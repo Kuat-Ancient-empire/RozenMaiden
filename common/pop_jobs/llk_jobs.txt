@@ -18,8 +18,8 @@ llk_over_dimension = {   #ID
 		complex_specialist_job_check_trigger = yes
 	}
     planet_modifier = {                                 #星球修正，同建筑
-        planet_amenities_add = 10
-        trade_value_add = 10
+        planet_amenities_add = 0.1
+        trade_value_add = 0.1
     }
     triggered_planet_modifier = {
         potential = {
@@ -33,47 +33,46 @@ llk_over_dimension = {   #ID
         
         category = planet_jobs
 		produces = {
-            minerals = 12
-			alloys = 3
-            consumer_goods = 5
-            unity = 15
-            physics_research = 5
-			engineering_research = 5
-			society_research = 5
-            volatile_motes = 0.3
-            exotic_gases = 0.3
-            rare_crystals = 0.3
-            sr_dark_matter = 0.15
-            sr_zro = 0.15
-            sr_living_metal = 0.15
-            nanites = 0.15
-            sr_void_core = 0.5
-            minor_artifacts = 0.2
-            astral_threads = 0.3
+            minerals = 0.25
+			alloys = 0.05
+            consumer_goods = 0.1
+            unity = 0.25
+            physics_research = 0.1
+			engineering_research = 0.1
+			society_research = 0.1
+            volatile_motes = 0.01
+            exotic_gases = 0.01
+            rare_crystals = 0.01
+            sr_dark_matter = 0.03
+            sr_zro = 0.03
+            sr_living_metal = 0.03
+            nanites = 0.03
+            sr_void_core = 0.05
+            minor_artifacts = 0.05
+            astral_threads = 0.01
             
 		}
 		upkeep = {
             trigger = {
                 
             }
-            energy = 30
-			influence = 0.2
-            time = 42
+            energy = 0.30
+			influence = 0.01
+            time = 0.42
 		}
         upkeep = {
             trigger = {
                 NOT = {
                     has_trait = trait_lithoid
                 }
-               
             }
-            food = 5
+            food = 0.05
         }
         upkeep = {
             trigger = {
                 has_trait = trait_lithoid
             }
-            minerals = 5
+            minerals = 0.05
         }
      }                                                  #同建筑，可以添加生产/消耗等
     #country_modifier = {}                              #同建筑，国家范围内的修正。

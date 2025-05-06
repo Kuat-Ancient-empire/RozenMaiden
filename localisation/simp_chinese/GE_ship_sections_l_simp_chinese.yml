@@ -36,10 +36,24 @@ roz_flagship_slot_DESC:0 "庞大的舰体赋予了无与伦比的火力和装甲
 
 ge_shippart_default_roz_flagship_slot: "空槽"
 
+###############################Ship part#########Section_templates
+ ge_flagship_key:0 "虚空领舰"
+ ge_flagship:0 "虚空领舰"
+ ge_flagship_plural:0 "虚空领舰"
+ ge_carrier:0 "重型航母"
+ ge_carrier_plural:0 "重型航母"
+ Ge_Ragnarok:0 "永恒之枪"
+ Ge_Ragnarok_key:0 "永恒之枪"
+ Ge_Ragnarok_plural:0 "永恒之枪"
+ ge_aura_ship:0 "光环舰"
+ ge_aura_ship_key:0 "光环舰"
+ ge_aura_ship_plural:0 "光环舰"
+
 ge_sgt_ship_core: "罪与罚"
 ge_sgt_ship_core_DESC: "接受爱丽丝的制裁吧！"
 
 Ge_Vampirilis_Ortaam: "§M黑蔷薇的王座§!"
+Ge_Vampirilis_Ortaam_plural: "奥塔姆"
 NAME_sgt_flagship:0 "§M黑蔷薇的王座§!"
 ge_sgt_flagship: "奥塔姆"
  ge_sgt_flagship_T:"权能"
@@ -48,10 +62,12 @@ ge_sgt_flagship_white: "§Y白蔷薇的王座§!"
 ge_sgt_flagship_DESC: "Endless™ Space 2 Ortaam"
  SHIP_GRAPHICS_GE_VAMPIRILIS_ORTAAM_DESC: "Endless™ Space 2 Ortaam"
 
- Ge_Vampirilis_Letum: "§P黑天使的守卫§!"
+Ge_Vampirilis_Letum: "§P黑天使的守卫§!"
+Ge_Vampirilis_Letum_plural: "莱塔姆"
  roz_mass_produced_ship: "莱特姆"
  SHIP_GRAPHICS_GE_VAMPIRILIS_LETUM_DESC: "Endless™ Space 2 Letum"
  roz_mass_produced_ship_2:"基石"
+
  Ge_Vampirilis_Ortaam_normal: "§Y量产版王座§!"
  ge_sgt_flagship_white_normal: "奥塔姆(伪)"
  ge_sgt_flagship_white_normal_2:"权柄"
