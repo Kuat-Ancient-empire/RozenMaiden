@@ -23,12 +23,14 @@ building_llk_paradox_origin = {
     }
 
     building_sets = {
-        farming
-        mining
-		urban
-        factory
-        generator
         government
+        urban
+        entertainment
+        resort
+        industrial
+        research_unity
+        research
+        unity
     }
 
     potential = {
@@ -42,11 +44,11 @@ building_llk_paradox_origin = {
     }
 	planet_modifier = { 
         planet_jobs_produces_mult = 0.15
-		planet_jobs_upkeep_mult = 0.02
+		planet_jobs_upkeep_mult = 0.05
 		planet_max_buildings_add = 5
-		planet_housing_add = 5
-		planet_amenities_add = 5
-        job_llk_over_dimension_add = 3
+		planet_housing_add = 500
+		planet_amenities_add = 1000
+        job_llk_over_dimension_add = 100
      } 				#星球范围内的修正
     country_modifier = {
         ships_upkeep_mult = -0.02
@@ -60,7 +62,7 @@ building_llk_paradox_origin = {
              }
          }
          modifier = {    						#修正
-             job_llk_over_dimension_add = 100  			#
+             job_llk_over_dimension_add = 200  			#
          }
      }
     resources = {   #资源相关
@@ -76,7 +78,7 @@ building_llk_paradox_origin = {
         }
         upkeep = {  #维持，为每月多少
             energy = 35
-            sr_rosa_mystica = 1
+            sr_rosa_mystica = 0.5
         }
     }
 	on_built = {
@@ -112,12 +114,14 @@ building_roz_power_core = {
     #}
 
     building_sets = {
-        farming
-        mining
-		urban
-        factory
-        generator
         government
+        urban
+        entertainment
+        resort
+        industrial
+        research_unity
+        research
+        unity
     }
 
     potential = {
@@ -178,17 +182,18 @@ building_roz_dolls_factory = {
 
     icon = building_roz_dolls_factory
     category = resource     		#分类，可以让玩家更好的找到该建筑
+    #category = planet_buildings
     #allow = {       				#允许，满足下列条件，则该建筑可以被允许建造
     #    has_upgraded_capital = yes
     #}
 
     building_sets = {
-        farming
-        mining
-		urban
-        factory
-        generator
         government
+        urban
+        industrial
+        research_unity
+        research
+        unity
     }
 
     potential = {
@@ -206,7 +211,7 @@ building_roz_dolls_factory = {
     #    tech_roz_power_core
     #}
     planet_modifier = {
-        planet_amenities_no_happiness_add = 10
+        planet_amenities_no_happiness_add = 2000
         biological_pop_growth_speed = 0.15
     } 				#星球范围内的修正
     country_modifier = {

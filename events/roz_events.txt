@@ -733,7 +733,7 @@ country_event = {	###a17瓶颈
 	desc = "ge_event.47.desc"
 	is_triggered_only = yes
 	show_sound = event_power_down
-	picture = GFX_evt_roz_research_accident_‌bottleneck
+	picture = GFX_evt_roz_research_accident_bottleneck
 	trigger = {
 		has_country_flag = ge_tech_continue
 		NOT = {
@@ -819,7 +819,7 @@ country_event = {	###sa殊途同归
 	desc = "ge_event.48.desc"
 	#is_triggered_only = yes
 	show_sound = event_power_down
-	picture = GFX_evt_roz_research_accident_‌defytheodds‌
+	picture = GFX_evt_roz_research_accident_defytheodds
 	mean_time_to_happen = { #虚空科技起源-研究片段4触发（暗物质科技）
 		months = 6
 	}
@@ -854,7 +854,7 @@ country_event = {	###a23逆流而上
 	#fire_only_once = yes
 	
 	show_sound = event_activating_unknown_technology
-	picture = GFX_evt_roz_research_accident_‌defytheodds‌
+	picture = GFX_evt_roz_research_accident_defytheodds
 	trigger = {
 		has_country_flag = ge_tech_continue
 		NOT = {

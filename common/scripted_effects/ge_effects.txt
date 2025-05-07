@@ -4061,10 +4061,10 @@ roz_lgate_create_reward_planet = {
 		add_building = building_roz_nano_forge
 		add_building = building_roz_class_5_singularity
 		add_building = building_roz_dimensional_fabricator
-		add_building = building_roz_nourishment_center
+		#add_building = building_roz_nourishment_center
 		add_building = building_roz_affluence_center
 		add_building = building_roz_fe_administration_2
-		#add_building = building_roz_fe_clinic_2
+		add_building = building_roz_fe_clinic_2
 		add_building = building_roz_fe_market_2
 		add_building = building_roz_fe_silo_2
 		#add_building = building_roz_fe_entertainment_2
@@ -4241,218 +4241,218 @@ roz_leader_change_skin_flag_locate_effect = {
 	}
 }
 
-# roz_leader_change_skin_reset_suigintou_effect = {
-# 	switch = {
-# 		trigger = has_country_flag
-# 		roz_suigintou_portrait_change_ge_suigintou_20th = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_20th
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_default = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_default
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_red = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_red
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_2 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_2
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_3 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_3
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_4 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_4
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_5 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_5
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_roz_suigintou_6 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_6
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_roz_suigintou_61 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_61
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_7 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_7
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_8 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_8
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_9 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_9
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_10 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_10
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_11 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_11
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_12 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_12
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_13 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_13
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_14 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_14
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_15 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_15
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_20 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_20
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_21 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_21
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_22 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_22
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_sp1 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_sp1
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 		roz_suigintou_portrait_change_ge_suigintou_sp2 = {
-# 			roz_leader_change_skin_flag_locate_effect = {
-# 				who = suigintou
-# 				portrait = roz_suigintou
-# 				flag = roz_suigintou_portrait_change
-# 				portrait_key = roz_suigintou_sp2
-# 				leader_flag = roz_suigintou_flag
-# 			}
-# 		}
-# 	}
-# }
+roz_leader_change_skin_reset_suigintou_effect = {
+	switch = {
+		trigger = has_country_flag
+		roz_suigintou_portrait_change_ge_suigintou_20th = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_20th
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_default = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_default
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_red = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_red
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_2 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_2
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_3 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_3
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_4 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_4
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_5 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_5
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_roz_suigintou_6 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_6
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_roz_suigintou_61 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_61
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_7 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_7
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_8 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_8
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_9 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_9
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_10 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_10
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_11 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_11
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_12 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_12
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_13 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_13
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_14 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_14
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_15 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_15
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_20 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_20
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_21 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_21
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_22 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_22
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_sp1 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_sp1
+				leader_flag = roz_suigintou_flag
+			}
+		}
+		roz_suigintou_portrait_change_ge_suigintou_sp2 = {
+			roz_leader_change_skin_flag_locate_effect = {
+				who = suigintou
+				portrait = roz_suigintou
+				flag = roz_suigintou_portrait_change
+				portrait_key = roz_suigintou_sp2
+				leader_flag = roz_suigintou_flag
+			}
+		}
+	}
+}
 
 roz_leader_name_set_effect = {	#领袖名语种切换
 	#root = player_country

@@ -376,9 +376,9 @@ situation_event = {	#局势stage5
 		default_hide_option = yes
 		owner = {
 			#set_update_modifiers_batch = begin
-			add_resource = {
-				sr_void_core_hidden = 1
-			}
+			# add_resource = {
+			# 	sr_void_core_hidden = 1
+			# }
 			#set_update_modifiers_batch = end
 		}
 		situation_event = {

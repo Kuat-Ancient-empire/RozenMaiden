@@ -1,4 +1,4 @@
-version="1.1.9.6"
+version="1.2.1"
 tags={
 	"Buildings"
 	"Events"

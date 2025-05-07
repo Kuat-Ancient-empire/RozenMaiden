@@ -120,7 +120,7 @@ r_roz_doll_Annabelle_desc:"模因：§R不详§!"
  #Beacon of Space-Time
 r_roz_Chronos_Label:"§C时空道标§!"
 r_roz_Chronos_Label_desc:"螺旋状的雾团，拿在手中具有相当的重量。与雪华绮晶建立了灵魂绑定。即使是被封存的状态下也会不断扭曲折叠周围时空，激活状态下可轻松造成IV级时空畸变。\n§C--祂曾是无尽星空的引路者，祂曾被深渊的污染侵蚀，这片残破但纯粹的权柄碎片或许是祂最后的净土§!……\n§R需注意：激活§C时空道标§!会轻微破坏当前时空的连续性，我们将在一段时间内无法获取准确时间！§!"
-r_roz_Chronos_Label_active_effect_tt:"\n在选择的星系中制造一场§C时空风暴§!。伴随风暴产生的时空畸变将§R杀死§!当前风暴范围内的星系殖民地上的4个人口£pop£§!§!，对星球的生产生活造成§R灾难性的破坏§!，并将星系内随机一颗无价值星球破坏为§H破碎星球§!。\n "
+r_roz_Chronos_Label_active_effect_tt:"\n在选择的星系中制造一场§C时空风暴§!。伴随风暴产生的时空畸变将§R杀死§!当前风暴范围内的星系殖民地上的15%的人口£pop£§!§!，对星球的生产生活造成§R灾难性的破坏§!，并将星系内随机一颗无价值星球破坏为§H破碎星球§!。\n "
 r_roz_Chronos_Label_effect:"激活后的一年内，§C时空道标§!将允许所有舰船跳跃，绕过超空间航道。\n激活时,若处于战时，将向所有正在战斗的敌方舰队释放时空乱流，迫使其进行§R紧急超光速跃迁§!。"
 
  ##tps
@@ -312,7 +312,12 @@ MESSAGE_ROZ_sgt_gal_MESSAGE_TYPE_TITLE: "§M来自水银灯的暗示§!"
 MESSAGE_roz_sgt_gal_MESSAGE_TITLE_desc: "看起来，她已经准备好再次和你出去共度时光了"
 
 MESSAGE_ROZ_krks_gal_MESSAGE_TYPE_TITLE: "§M来自雪华绮晶的邀请§!"
+ROZ_sgt_gal_MESSAGE_TYPE: "§M来自雪华绮晶的邀请§!"
+ROZ_sgt_gal_MESSAGE: "§M来自雪华绮晶的邀请§!"
+
 MESSAGE_ROZ_krks_gal_MESSAGE_desc: "看起来，她十分期待接下来的约会"
+ROZ_krks_gal_MESSAGE_TYPE: "看起来，她十分期待接下来的约会"
+ROZ_krks_gal_MESSAGE: "看起来，她十分期待接下来的约会"
 ###########################################
 ###agenda
 

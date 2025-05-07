@@ -9,7 +9,7 @@ roz_outland_system_chain = {
 	picture = GFX_roz_evt_outland
 	counter = {
 		specimens_collected = {
-			max = 4
+			max = 3
 		}
 	}
 }

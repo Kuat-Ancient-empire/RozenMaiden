@@ -3456,6 +3456,32 @@ country_event = {	#战斗结束
                 }
             }
         }
+        home_planet = {
+            switch = {
+                trigger = has_modifier
+                ge_kirakishou_invasion_lv1 = {
+                    remove_modifier = ge_kirakishou_invasion_lv1
+                }
+                ge_kirakishou_invasion_lv2 = {
+                    remove_modifier = ge_kirakishou_invasion_lv2
+                }
+                ge_kirakishou_invasion_lv2.5 = {
+                    remove_modifier = ge_kirakishou_invasion_lv2.5
+                }
+                ge_kirakishou_invasion_lv3 = {
+                    remove_modifier = ge_kirakishou_invasion_lv3
+                }
+                ge_kirakishou_invasion_lv4 = {
+                    remove_modifier = ge_kirakishou_invasion_lv4
+                }
+                ge_kirakishou_invasion_lv5 = {
+                    remove_modifier = ge_kirakishou_invasion_lv5
+                }
+                ge_kirakishou_invasion_lvMAX = {
+                    remove_modifier = ge_kirakishou_invasion_lvMAX
+                }
+            }
+        }
         break = yes
     }
 }

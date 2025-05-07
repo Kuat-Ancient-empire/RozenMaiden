@@ -771,6 +771,12 @@ r_roz_Chronos_Label = {
                                     count = 4
                                     random_owned_pop = { kill_pop = yes }
                                 }
+                                every_owned_pop_group = {
+                                    kill_pop_group = {
+                                        pop_group = this
+                                        amount = 15%
+                                    }
+                                }
                                 add_modifier = {
                                     modifier = roz_chronos_label_planet_effect_stability
                                     days = 360

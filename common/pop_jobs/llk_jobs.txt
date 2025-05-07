@@ -33,32 +33,32 @@ llk_over_dimension = {   #ID
         
         category = planet_jobs
 		produces = {
-            minerals = 0.25
-			alloys = 0.05
-            consumer_goods = 0.1
-            unity = 0.25
-            physics_research = 0.1
-			engineering_research = 0.1
-			society_research = 0.1
-            volatile_motes = 0.01
-            exotic_gases = 0.01
-            rare_crystals = 0.01
-            sr_dark_matter = 0.03
-            sr_zro = 0.03
-            sr_living_metal = 0.03
-            nanites = 0.03
-            sr_void_core = 0.05
-            minor_artifacts = 0.05
-            astral_threads = 0.01
+            minerals = 25
+			alloys = 10
+            consumer_goods = 15
+            unity = 50
+            physics_research = 15
+			engineering_research = 15
+			society_research = 15
+            volatile_motes = 1
+            exotic_gases = 1
+            rare_crystals = 1
+            sr_dark_matter = 0.5
+            sr_zro = 0.5
+            sr_living_metal = 0.5
+            nanites = 0.5
+            sr_void_core = 2
+            minor_artifacts = 0.5
+            astral_threads = 0.25
             
 		}
 		upkeep = {
             trigger = {
                 
             }
-            energy = 0.30
-			influence = 0.01
-            time = 0.42
+            energy = 30
+			influence = 0.25
+            time = 1
 		}
         upkeep = {
             trigger = {

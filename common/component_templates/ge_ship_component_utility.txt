@@ -681,6 +681,9 @@ utility_component_template = {
 	size_restriction = {
 		ion_cannon
 		starbase_starport
+		starbase_deep_space_citadel_1
+		starbase_deep_space_citadel_2
+		starbase_deep_space_citadel_3
 	}
 	ai_weight = {
 		weight = 2000000

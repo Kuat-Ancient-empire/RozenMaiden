@@ -1355,6 +1355,9 @@ country_event = {
 	id = ge_test_event.202
 	hide_window = yes
 	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
 	immediate = {
 		event_target:roz_graygoo_factory_system_gaia@root = {
 			add_building = building_roz_master_archive
