@@ -500,6 +500,9 @@ country_event = {
 	desc = "ge_sites.22.desc"
 	picture = GFX_ge_sgt_oath
 	is_triggered_only = yes
+	immediate = {
+		
+	}
 	option = {
 		name = ge_sites.22.aa
 		#default_hide_option = yes

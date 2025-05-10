@@ -240,23 +240,33 @@ utility_component_template = {
 		"GE_tech_reactor"
 	}
 	component_set = "power_core"
-	size_restriction = {
-		corvette
-		colonizer
-		lithoid_colonizer
-		sponsored_colonizer
-		constructor
-		science
-		transport
-		crisis_corvette
-		mining_station
-		research_station
-		ge_military_constructor
-		ge_military_science
-		ge_aura_ship
-		KZ_VOY_vanguard_escort
-		BA_missile_ship
-		explorationship
+	# size_restriction = {
+	# 	corvette
+	# 	colonizer
+	# 	lithoid_colonizer
+	# 	sponsored_colonizer
+	# 	constructor
+	# 	science
+	# 	transport
+	# 	crisis_corvette
+	# 	mining_station
+	# 	research_station
+	# 	ge_military_constructor
+	# 	ge_military_science
+	# 	ge_aura_ship
+	# 	KZ_VOY_vanguard_escort
+	# 	BA_missile_ship
+	# 	explorationship
+	# }
+	potential = {
+		ship_size_multiplier < 2
+		NOT = { is_ship_class = shipclass_military_station }
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 7000
@@ -300,15 +310,26 @@ utility_component_template = {
 		"GE_tech_reactor"
 	}
 	component_set = "power_core"
-	size_restriction = {
-		destroyer
-		crisis_destroyer
-		azur_nsc_destroyer_A
-		azur_nsc_destroyer_G
-		cosmo_crisis_destroyer
-		KZ_VOY_intelligence_destroyer
-		BA_club_ship
-		scout_UAV
+	# size_restriction = {
+	# 	destroyer
+	# 	crisis_destroyer
+	# 	azur_nsc_destroyer_A
+	# 	azur_nsc_destroyer_G
+	# 	cosmo_crisis_destroyer
+	# 	KZ_VOY_intelligence_destroyer
+	# 	BA_club_ship
+	# 	scout_UAV
+	# }
+	potential = {
+		ship_size_multiplier >= 2
+		ship_size_multiplier < 4
+		NOT = { is_ship_class = shipclass_military_station }
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 7000
@@ -351,20 +372,31 @@ utility_component_template = {
 		"GE_tech_reactor"
 	}
 	component_set = "power_core"
-	size_restriction = {
-		cruiser
-		crisis_cruiser
-		azur_nsc_cruiser_L
-		azur_nsc_cruiser_H
-		azur_nsc_cruiser_S
-		GFnyto_flags
-		KZ_VOY_blockade_cruiser
-		KZ_VOY_exploration_cruiser
-		StrikeCruiser
-		Battlecruiser
-		small_ship_fallen_empire
-		large_ship_fallen_empire
-		massive_ship_fallen_empire
+	# size_restriction = {
+	# 	cruiser
+	# 	crisis_cruiser
+	# 	azur_nsc_cruiser_L
+	# 	azur_nsc_cruiser_H
+	# 	azur_nsc_cruiser_S
+	# 	GFnyto_flags
+	# 	KZ_VOY_blockade_cruiser
+	# 	KZ_VOY_exploration_cruiser
+	# 	StrikeCruiser
+	# 	Battlecruiser
+	# 	small_ship_fallen_empire
+	# 	large_ship_fallen_empire
+	# 	massive_ship_fallen_empire
+	# }
+	potential = {
+		ship_size_multiplier >= 4
+		ship_size_multiplier < 8
+		NOT = { is_ship_class = shipclass_military_station }
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 7000
@@ -407,29 +439,40 @@ utility_component_template = {
 		"GE_tech_reactor"
 	}
 	component_set = "power_core"
-	size_restriction = {
-		battleship
-		azur_nsc_carrier_O
-		azur_nsc_battleship_C
-		azur_nsc_battleship_H
-		azur_nsc_battleship_S
-		azur_nsc_battleship_C
-		ge_carrier
-		Ge_Vampirilis_Letum
-		Ge_Vampirilis_Ortaam_normal
-		cosmo_crisis_battlecruiser
-		GF_nyto_super_battelship
-		GFnyto_Command_ship
-		KZ_VOY_battle_barge
-		KZ_VOY_strike_suppression_battleship
-		Carrier
-		Dreadnought
-		BA_artillery_ship
-		BA_swarm_ship
-		BA_hub_ship
-		BA_defence_cannon
-		wg_heavy_carrier
-		wsg_lady_warship
+	# size_restriction = {
+	# 	battleship
+	# 	azur_nsc_carrier_O
+	# 	azur_nsc_battleship_C
+	# 	azur_nsc_battleship_H
+	# 	azur_nsc_battleship_S
+	# 	azur_nsc_battleship_C
+	# 	ge_carrier
+	# 	Ge_Vampirilis_Letum
+	# 	Ge_Vampirilis_Ortaam_normal
+	# 	cosmo_crisis_battlecruiser
+	# 	GF_nyto_super_battelship
+	# 	GFnyto_Command_ship
+	# 	KZ_VOY_battle_barge
+	# 	KZ_VOY_strike_suppression_battleship
+	# 	Carrier
+	# 	Dreadnought
+	# 	BA_artillery_ship
+	# 	BA_swarm_ship
+	# 	BA_hub_ship
+	# 	BA_defence_cannon
+	# 	wg_heavy_carrier
+	# 	wsg_lady_warship
+	# }
+	potential = {
+		ship_size_multiplier >= 8
+		ship_size_multiplier < 16
+		NOT = { is_ship_class = shipclass_military_station }
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 7000
@@ -472,32 +515,43 @@ utility_component_template = {
 		"GE_tech_reactor"
 	}
 	component_set = "power_core"
-	size_restriction = {
-		titan
-		juggernaut
-		GFnyto_mobile_city
-		GFnyto_shiled_ship
-		small_ship_fallen_empire
-		large_ship_fallen_empire
-		massive_ship_fallen_empire
-		cosmo_crisis_titan
-		KZ_VOY_command_dreadnought
-		starbase_Aris
-		BA_Aris_flagship
-		Flagship
-		dreadnought_carrier
-		mist_dreadnought
-		wg_raider_battleship
-		mo_chrono_prison
-		aerial_fortress_irkalla
-		ff_madman
-		mo_ff_harbinger
-		mo_ff_orcinus
-		ff_boidmachine
-		su_stalins_fist
-		su_chitzkoi
-		su_centurion
-		su_isbm
+	# size_restriction = {
+	# 	titan
+	# 	juggernaut
+	# 	GFnyto_mobile_city
+	# 	GFnyto_shiled_ship
+	# 	small_ship_fallen_empire
+	# 	large_ship_fallen_empire
+	# 	massive_ship_fallen_empire
+	# 	cosmo_crisis_titan
+	# 	KZ_VOY_command_dreadnought
+	# 	starbase_Aris
+	# 	BA_Aris_flagship
+	# 	Flagship
+	# 	dreadnought_carrier
+	# 	mist_dreadnought
+	# 	wg_raider_battleship
+	# 	mo_chrono_prison
+	# 	aerial_fortress_irkalla
+	# 	ff_madman
+	# 	mo_ff_harbinger
+	# 	mo_ff_orcinus
+	# 	ff_boidmachine
+	# 	su_stalins_fist
+	# 	su_chitzkoi
+	# 	su_centurion
+	# 	su_isbm
+	# }
+	potential = {
+		ship_size_multiplier >= 16
+		ship_size_multiplier < 64
+		NOT = { is_ship_class = shipclass_military_station }
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 7000
@@ -540,19 +594,29 @@ utility_component_template = {
 		"GE_tech_reactor"
 	}
 	component_set = "power_core"
-	size_restriction = {
-		colossus
-		star_eater
-		ge_flagship
-		Ge_Ragnarok
-		Ge_Vampirilis_Ortaam
-		ROZ_ITQ
-		roz_juggernaut_wanxiang
-		GFnyto_mather_ship
-		GFnyto_Command_ship
-		KZ_VOY_battle_carrier
-		planetary_ship_1
-		planetary_ship_2
+	# size_restriction = {
+	# 	colossus
+	# 	star_eater
+	# 	ge_flagship
+	# 	Ge_Ragnarok
+	# 	Ge_Vampirilis_Ortaam
+	# 	ROZ_ITQ
+	# 	roz_juggernaut_wanxiang
+	# 	GFnyto_mather_ship
+	# 	GFnyto_Command_ship
+	# 	KZ_VOY_battle_carrier
+	# 	planetary_ship_1
+	# 	planetary_ship_2
+	# }
+	potential = {
+		ship_size_multiplier >= 64
+		NOT = { is_ship_class = shipclass_military_station }
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 7000
@@ -595,8 +659,17 @@ utility_component_template = {
 		"GE_tech_reactor"
 	}
 	component_set = "power_core"
-	class_restriction = {
-		shipclass_military_station
+	# class_restriction = {
+	# 	shipclass_military_station
+	# }
+	potential = {
+		is_ship_class = shipclass_military_station
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 7000
@@ -639,8 +712,20 @@ utility_component_template = {
 		"GE_tech_reactor"
 	}
 	component_set = "power_core"
-	size_restriction = {
-		ion_cannon
+	# size_restriction = {
+	# 	ion_cannon
+	# }
+	potential = {
+		AND = {
+			is_ship_class = shipclass_military_station
+			is_ship_size = ion_cannon
+		}
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 7000
@@ -678,12 +763,28 @@ utility_component_template = {
 		GFnyto_stions_fortress
 		KZ_VOY_battlestar
 	}
+	potential = {
+		OR = {
+			is_ship_class = shipclass_starbase
+			is_ship_size = KZ_VOY_battlestar
+			is_ship_size = GFnyto_stions_fortress
+		}
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
+	}
 	size_restriction = {
 		ion_cannon
 		starbase_starport
 		starbase_deep_space_citadel_1
 		starbase_deep_space_citadel_2
 		starbase_deep_space_citadel_3
+	}
+	target_weights = {
+		
 	}
 	ai_weight = {
 		weight = 2000000
@@ -1016,21 +1117,30 @@ utility_component_template = {
 		ship_speed_mult = 1.5
 		ship_disengage_chance_mult = 0.25
 	}
-	size_restriction = {
-		corvette
-		colonizer
-		sponsored_colonizer
-		constructor
-		science
-		transport
-		ge_military_constructor
-		ge_military_science
-		ge_aura_ship
-		Ge_Vampirilis_Ortaam
-		Ge_Vampirilis_Letum
-		Ge_Vampirilis_Ortaam_normal
-		KZ_VOY_vanguard_escort
-		explorationship
+	# size_restriction = {
+	# 	corvette
+	# 	colonizer
+	# 	sponsored_colonizer
+	# 	constructor
+	# 	science
+	# 	transport
+	# 	ge_military_constructor
+	# 	ge_military_science
+	# 	ge_aura_ship
+	# 	Ge_Vampirilis_Ortaam
+	# 	Ge_Vampirilis_Letum
+	# 	Ge_Vampirilis_Ortaam_normal
+	# 	KZ_VOY_vanguard_escort
+	# 	explorationship
+	# }
+	potential = {
+		ship_size_multiplier < 2
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 5000
@@ -1073,13 +1183,23 @@ utility_component_template = {
 		ship_speed_mult = 1.3
 		ship_disengage_chance_mult = 0.2
 	}
-	size_restriction = {
-		destroyer
-		azur_nsc_destroyer_A
-		azur_nsc_destroyer_G
-		crisis_destroyer
-		cosmo_crisis_destroyer
-		KZ_VOY_intelligence_destroyer
+	# size_restriction = {
+	# 	destroyer
+	# 	azur_nsc_destroyer_A
+	# 	azur_nsc_destroyer_G
+	# 	crisis_destroyer
+	# 	cosmo_crisis_destroyer
+	# 	KZ_VOY_intelligence_destroyer
+	# }
+	potential = {
+		ship_size_multiplier >= 2
+		ship_size_multiplier < 4
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 5000
@@ -1122,20 +1242,30 @@ utility_component_template = {
 		ship_speed_mult = 1.2
 		ship_disengage_chance_mult = 0.15
 	}
-	size_restriction = {
-		cruiser
-		crisis_cruiser
-		azur_nsc_cruiser_L
-		azur_nsc_cruiser_H
-		azur_nsc_cruiser_S
-		GFnyto_flags
-		KZ_VOY_blockade_cruiser
-		KZ_VOY_exploration_cruiser
-		StrikeCruiser
-		Battlecruiser
-		small_ship_fallen_empire
-		large_ship_fallen_empire
-		massive_ship_fallen_empire
+	# size_restriction = {
+	# 	cruiser
+	# 	crisis_cruiser
+	# 	azur_nsc_cruiser_L
+	# 	azur_nsc_cruiser_H
+	# 	azur_nsc_cruiser_S
+	# 	GFnyto_flags
+	# 	KZ_VOY_blockade_cruiser
+	# 	KZ_VOY_exploration_cruiser
+	# 	StrikeCruiser
+	# 	Battlecruiser
+	# 	small_ship_fallen_empire
+	# 	large_ship_fallen_empire
+	# 	massive_ship_fallen_empire
+	# }
+	potential = {
+		ship_size_multiplier >= 4
+		ship_size_multiplier < 8
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 5000
@@ -1178,22 +1308,32 @@ utility_component_template = {
 		ship_speed_mult = 1.15
 		ship_disengage_chance_mult = 0.15
 	}
-	size_restriction = {
-		battleship
-		azur_nsc_carrier_O
-		azur_nsc_battleship_C
-		azur_nsc_battleship_H
-		azur_nsc_battleship_S
-		azur_nsc_battleship_C
-		ge_carrier
-		cosmo_crisis_battlecruiser
-		GFnyto_mather_ship
-		GFnyto_Command_ship
-		GF_nyto_super_battelship
-		KZ_VOY_battle_barge
-		KZ_VOY_strike_suppression_battleship
-		Carrier
-		Dreadnought
+	# size_restriction = {
+	# 	battleship
+	# 	azur_nsc_carrier_O
+	# 	azur_nsc_battleship_C
+	# 	azur_nsc_battleship_H
+	# 	azur_nsc_battleship_S
+	# 	azur_nsc_battleship_C
+	# 	ge_carrier
+	# 	cosmo_crisis_battlecruiser
+	# 	GFnyto_mather_ship
+	# 	GFnyto_Command_ship
+	# 	GF_nyto_super_battelship
+	# 	KZ_VOY_battle_barge
+	# 	KZ_VOY_strike_suppression_battleship
+	# 	Carrier
+	# 	Dreadnought
+	# }
+	potential = {
+		ship_size_multiplier >= 8
+		ship_size_multiplier < 16
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 5000
@@ -1236,19 +1376,28 @@ utility_component_template = {
 		ship_speed_mult = 1.1
 		ship_disengage_chance_mult = 0.15
 	}
-	size_restriction = {
-		titan
-		colossus
-		juggernaut
-		ge_flagship
-		Ge_Ragnarok
-		ROZ_ITQ
-		roz_juggernaut_wanxiang
-		cosmo_crisis_titan
-		GFnyto_mobile_city
-		GFnyto_shiled_ship
-		KZ_VOY_command_dreadnought
-		Flagship
+	# size_restriction = {
+	# 	titan
+	# 	colossus
+	# 	juggernaut
+	# 	ge_flagship
+	# 	Ge_Ragnarok
+	# 	ROZ_ITQ
+	# 	roz_juggernaut_wanxiang
+	# 	cosmo_crisis_titan
+	# 	GFnyto_mobile_city
+	# 	GFnyto_shiled_ship
+	# 	KZ_VOY_command_dreadnought
+	# 	Flagship
+	# }
+	potential = {
+		ship_size_multiplier >= 16
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 5000
@@ -1343,12 +1492,21 @@ utility_component_template = {
 	class_restriction = {
 		shipclass_military
 	}
-	size_restriction = {
-		corvette
-		destroyer
-		azur_nsc_destroyer_A
-		KZ_VOY_vanguard_escort
-		explorationship
+	# size_restriction = {
+	# 	corvette
+	# 	destroyer
+	# 	azur_nsc_destroyer_A
+	# 	KZ_VOY_vanguard_escort
+	# 	explorationship
+	# }
+	potential = {
+		ship_size_multiplier < 6
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	component_set = "combat_computers"
 	ai_weight = {
@@ -1396,16 +1554,25 @@ utility_component_template = {
 	class_restriction = {
 		shipclass_military
 	}
-	size_restriction = {
-		corvette
-		destroyer
-		cruiser
-		azur_nsc_destroyer_A
-		azur_nsc_destroyer_G
-		azur_nsc_cruiser_L
-		cosmo_crisis_destroyer
-		small_ship_fallen_empire
-		KZ_VOY_intelligence_destroyer
+	# size_restriction = {
+	# 	corvette
+	# 	destroyer
+	# 	cruiser
+	# 	azur_nsc_destroyer_A
+	# 	azur_nsc_destroyer_G
+	# 	azur_nsc_cruiser_L
+	# 	cosmo_crisis_destroyer
+	# 	small_ship_fallen_empire
+	# 	KZ_VOY_intelligence_destroyer
+	# }
+	potential = {
+		ship_size_multiplier < 6
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	component_set = "combat_computers"
 	ai_weight = {
@@ -1443,43 +1610,52 @@ utility_component_template = {
 			alloys = 0.005
 		}
 	}
-	modifier = {
-		ship_evasion_mult = 0.05
-		ship_speed_mult = 0.05
-		ship_weapon_damage = 0.1
-		ship_fire_rate_mult = 0.1
-		ship_weapon_range_mult = 0.1
-		ship_tracking_add = 5
-		ship_accuracy_add = 5
-		ship_disengage_chance_mult = 0.15
+	# modifier = {
+	# 	ship_evasion_mult = 0.05
+	# 	ship_speed_mult = 0.05
+	# 	ship_weapon_damage = 0.1
+	# 	ship_fire_rate_mult = 0.1
+	# 	ship_weapon_range_mult = 0.1
+	# 	ship_tracking_add = 5
+	# 	ship_accuracy_add = 5
+	# 	ship_disengage_chance_mult = 0.15
+	# }
+	potential = {
+		ship_size_multiplier >= 4
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	class_restriction = {
 		shipclass_military
 	}
-	size_restriction = {
-		destroyer
-		cruiser
-		battleship
-		Ge_Vampirilis_Ortaam
-		Ge_Vampirilis_Letum
-		Ge_Vampirilis_Ortaam_normal
-		ROZ_ITQ
-		cosmo_crisis_destroyer
-		cosmo_crisis_battlecruiser
-		cosmo_crisis_titan
-		azur_nsc_destroyer_A
-		azur_nsc_destroyer_G
-		azur_nsc_cruiser_L
-		azur_nsc_cruiser_H
-		GFnyto_mather_ship
-		GFnyto_Command_ship
-		GF_nyto_super_battelship
-		large_ship_fallen_empire
-		KZ_VOY_blockade_cruiser
-		KZ_VOY_exploration_cruiser
-		StrikeCruiser
-		Battlecruiser
-	}
+	# size_restriction = {
+	# 	destroyer
+	# 	cruiser
+	# 	battleship
+	# 	Ge_Vampirilis_Ortaam
+	# 	Ge_Vampirilis_Letum
+	# 	Ge_Vampirilis_Ortaam_normal
+	# 	ROZ_ITQ
+	# 	cosmo_crisis_destroyer
+	# 	cosmo_crisis_battlecruiser
+	# 	cosmo_crisis_titan
+	# 	azur_nsc_destroyer_A
+	# 	azur_nsc_destroyer_G
+	# 	azur_nsc_cruiser_L
+	# 	azur_nsc_cruiser_H
+	# 	GFnyto_mather_ship
+	# 	GFnyto_Command_ship
+	# 	GF_nyto_super_battelship
+	# 	large_ship_fallen_empire
+	# 	KZ_VOY_blockade_cruiser
+	# 	KZ_VOY_exploration_cruiser
+	# 	StrikeCruiser
+	# 	Battlecruiser
+	# }
 	component_set = "combat_computers"
 	ai_weight = {
 		weight = 5000
@@ -1526,41 +1702,50 @@ utility_component_template = {
 	class_restriction = {
 		shipclass_military
 	}
-	size_restriction = {
-		cruiser
-		battleship
-		titan
-		juggernaut
-		azur_nsc_destroyer_A
-		azur_nsc_destroyer_G
-		azur_nsc_cruiser_L
-		azur_nsc_cruiser_H
-		azur_nsc_cruiser_S
-		azur_nsc_battleship_C
-		azur_nsc_battleship_H
-		azur_nsc_battleship_S
-		azur_nsc_carrier_L
-		azur_nsc_carrier_O
-		azur_nsc_carrier_S
-		ge_flagship
-		Ge_Ragnarok
-		Ge_Vampirilis_Ortaam
-		Ge_Vampirilis_Letum
-		Ge_Vampirilis_Ortaam_normal
-		ROZ_ITQ
-		GFnyto_mather_ship
-		GFnyto_Command_ship
-		GF_nyto_super_battelship
-		massive_ship_fallen_empire
-		KZ_VOY_battle_barge
-		KZ_VOY_strike_suppression_battleship
-		KZ_VOY_command_dreadnought
-		Carrier
-		Dreadnought
-		Flagship
-		cosmo_crisis_battlecruiser
-		cosmo_crisis_titan
+	potential = {
+		ship_size_multiplier >= 8
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
+	# size_restriction = {
+	# 	cruiser
+	# 	battleship
+	# 	titan
+	# 	juggernaut
+	# 	azur_nsc_destroyer_A
+	# 	azur_nsc_destroyer_G
+	# 	azur_nsc_cruiser_L
+	# 	azur_nsc_cruiser_H
+	# 	azur_nsc_cruiser_S
+	# 	azur_nsc_battleship_C
+	# 	azur_nsc_battleship_H
+	# 	azur_nsc_battleship_S
+	# 	azur_nsc_carrier_L
+	# 	azur_nsc_carrier_O
+	# 	azur_nsc_carrier_S
+	# 	ge_flagship
+	# 	Ge_Ragnarok
+	# 	Ge_Vampirilis_Ortaam
+	# 	Ge_Vampirilis_Letum
+	# 	Ge_Vampirilis_Ortaam_normal
+	# 	ROZ_ITQ
+	# 	GFnyto_mather_ship
+	# 	GFnyto_Command_ship
+	# 	GF_nyto_super_battelship
+	# 	massive_ship_fallen_empire
+	# 	KZ_VOY_battle_barge
+	# 	KZ_VOY_strike_suppression_battleship
+	# 	KZ_VOY_command_dreadnought
+	# 	Carrier
+	# 	Dreadnought
+	# 	Flagship
+	# 	cosmo_crisis_battlecruiser
+	# 	cosmo_crisis_titan
+	# }
 	component_set = "combat_computers"
 	ai_weight = {
 		weight = 5000
@@ -1611,23 +1796,32 @@ utility_component_template = {
 	class_restriction = {
 		shipclass_military
 	}
-	size_restriction = {
-		cruiser
-		battleship
-		titan
-		juggernaut
-		azur_nsc_carrier_L
-		azur_nsc_carrier_O
-		azur_nsc_carrier_S
-		ge_flagship
-		Ge_Ragnarok
-		ge_carrier
-		Ge_Vampirilis_Ortaam
-		GFnyto_mather_ship
-		GFnyto_Command_ship
-		GF_nyto_super_battelship
-		cosmo_crisis_titan
+	potential = {
+		ship_size_multiplier >= 4
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
+	# size_restriction = {
+	# 	cruiser
+	# 	battleship
+	# 	titan
+	# 	juggernaut
+	# 	azur_nsc_carrier_L
+	# 	azur_nsc_carrier_O
+	# 	azur_nsc_carrier_S
+	# 	ge_flagship
+	# 	Ge_Ragnarok
+	# 	ge_carrier
+	# 	Ge_Vampirilis_Ortaam
+	# 	GFnyto_mather_ship
+	# 	GFnyto_Command_ship
+	# 	GF_nyto_super_battelship
+	# 	cosmo_crisis_titan
+	# }
 	component_set = "combat_computers"
 	ai_weight = {
 		weight = 5000
@@ -1671,13 +1865,22 @@ utility_component_template = {
 		ship_accuracy_add = 10
 		ship_tracking_add = 10
 	}
-	class_restriction = {
-		shipclass_military_station
-		shipclass_starbase
-		shipclass_military
-		GFnyto_stions_fortress
-		military_station_small_fallen_empire
-		military_station_large_fallen_empire
+	# class_restriction = {
+	# 	shipclass_military_station
+	# 	shipclass_starbase
+	# 	shipclass_military
+	# 	GFnyto_stions_fortress
+	# 	military_station_small_fallen_empire
+	# 	military_station_large_fallen_empire
+	# }
+	potential = {
+		is_ship_class = shipclass_military_station
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	component_set = "combat_computers"
 	ai_weight = {
@@ -1726,19 +1929,28 @@ utility_component_template = {
 	#class_restriction = {
 	#shipclass_military_special
 	#}
-	size_restriction = {
-		colossus
-		corvette
-		destroyer
-		cruiser
-		battleship
-		titan
-		Ge_Ragnarok
-		Ge_Vampirilis_Ortaam
-		ROZ_ITQ
-		cosmo_crisis_destroyer
-		cosmo_crisis_battlecruiser
-		cosmo_crisis_titan
+	# size_restriction = {
+	# 	colossus
+	# 	corvette
+	# 	destroyer
+	# 	cruiser
+	# 	battleship
+	# 	titan
+	# 	Ge_Ragnarok
+	# 	Ge_Vampirilis_Ortaam
+	# 	ROZ_ITQ
+	# 	cosmo_crisis_destroyer
+	# 	cosmo_crisis_battlecruiser
+	# 	cosmo_crisis_titan
+	# }
+	potential = {
+		NOT = { is_ship_class = shipclass_military_station }
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	component_set = "combat_computers"
 	ai_weight = {
@@ -2106,17 +2318,33 @@ utility_component_template = {
 	}
 	#component_set = "ship_aura_components" 
 	component_set = "ship_aura_components"
-	size_restriction = {
-		titan
-		azur_flagship
-		azur_nsc_carrier_S
-		ge_flagship
-		Ge_Ragnarok
-		Ge_Vampirilis_Ortaam
-		Ge_Vampirilis_Ortaam_normal
-		cosmo_crisis_titan
-		ge_crime_and_punishment
-		ge_void_lord
+	# size_restriction = {
+	# 	titan
+	# 	azur_flagship
+	# 	azur_nsc_carrier_S
+	# 	ge_flagship
+	# 	Ge_Ragnarok
+	# 	Ge_Vampirilis_Ortaam
+	# 	Ge_Vampirilis_Ortaam_normal
+	# 	cosmo_crisis_titan
+	# 	ge_crime_and_punishment
+	# 	ge_void_lord
+	# }
+	potential = {
+		NOR = {
+			is_ship_size = azur_flagship
+			is_ship_size = juggernaut
+			is_ship_size = Ge_Ragnarok
+			is_ship_size = ge_flagship
+			is_ship_size = Ge_Vampirilis_Ortaam
+			is_ship_size = roz_juggernaut_wanxiang
+		}
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	ai_weight = {
 		weight = 0
@@ -2141,14 +2369,30 @@ utility_component_template = {
 			energy = 100
 		}
 	}
-	size_restriction = {
-		azur_flagship
-		juggernaut
-		ge_flagship
-		Ge_Vampirilis_Ortaam_normal
-		roz_juggernaut_wanxiang
-		ge_crime_and_punishment
-		ge_void_lord
+	# size_restriction = {
+	# 	azur_flagship
+	# 	juggernaut
+	# 	ge_flagship
+	# 	Ge_Vampirilis_Ortaam_normal
+	# 	roz_juggernaut_wanxiang
+	# 	ge_crime_and_punishment
+	# 	ge_void_lord
+	# }
+	potential = {
+		NOR = {
+			is_ship_size = azur_flagship
+			is_ship_size = juggernaut
+			is_ship_size = Ge_Ragnarok
+			is_ship_size = ge_flagship
+			is_ship_size = Ge_Vampirilis_Ortaam
+			is_ship_size = roz_juggernaut_wanxiang
+		}
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	component_set = "ship_aura_components"
 	prerequisites = {
@@ -2232,14 +2476,30 @@ utility_component_template = {
 			energy = 100
 		}
 	}
-	size_restriction = {
-		azur_flagship
-		juggernaut
-		ge_flagship
-		roz_juggernaut_wanxiang
-		cosmo_crisis_titan
-		ge_crime_and_punishment
-		ge_void_lord
+	# size_restriction = {
+	# 	azur_flagship
+	# 	juggernaut
+	# 	ge_flagship
+	# 	roz_juggernaut_wanxiang
+	# 	cosmo_crisis_titan
+	# 	ge_crime_and_punishment
+	# 	ge_void_lord
+	# }
+	potential = {
+		NOR = {
+			is_ship_size = azur_flagship
+			is_ship_size = juggernaut
+			is_ship_size = Ge_Ragnarok
+			is_ship_size = ge_flagship
+			is_ship_size = Ge_Vampirilis_Ortaam
+			is_ship_size = roz_juggernaut_wanxiang
+		}
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	component_set = "ship_aura_components"
 	prerequisites = {
@@ -2337,13 +2597,29 @@ utility_component_template = {
 			energy = 100
 		}
 	}
-	size_restriction = {
-		azur_flagship
-		juggernaut
-		ge_flagship
-		Ge_Ragnarok
-		Ge_Vampirilis_Ortaam
-		roz_juggernaut_wanxiang
+	# size_restriction = {
+	# 	azur_flagship
+	# 	juggernaut
+	# 	ge_flagship
+	# 	Ge_Ragnarok
+	# 	Ge_Vampirilis_Ortaam
+	# 	roz_juggernaut_wanxiang
+	# }
+	potential = {
+		OR = {
+			is_ship_size = azur_flagship
+			is_ship_size = juggernaut
+			is_ship_size = Ge_Ragnarok
+			is_ship_size = ge_flagship
+			is_ship_size = Ge_Vampirilis_Ortaam
+			is_ship_size = roz_juggernaut_wanxiang
+		}
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	component_set = "roz_flagship_slot"
 	prerequisites = {
@@ -2427,13 +2703,29 @@ utility_component_template = {
 			energy = 100
 		}
 	}
-	size_restriction = {
-		azur_flagship
-		juggernaut
-		ge_flagship
-		Ge_Ragnarok
-		Ge_Vampirilis_Ortaam
-		roz_juggernaut_wanxiang
+	# size_restriction = {
+	# 	azur_flagship
+	# 	juggernaut
+	# 	ge_flagship
+	# 	Ge_Ragnarok
+	# 	Ge_Vampirilis_Ortaam
+	# 	roz_juggernaut_wanxiang
+	# }
+	potential = {
+		OR = {
+			is_ship_size = azur_flagship
+			is_ship_size = juggernaut
+			is_ship_size = Ge_Ragnarok
+			is_ship_size = ge_flagship
+			is_ship_size = Ge_Vampirilis_Ortaam
+			is_ship_size = roz_juggernaut_wanxiang
+		}
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	component_set = "roz_flagship_slot"
 	prerequisites = {
@@ -2531,8 +2823,17 @@ utility_component_template = {
 			energy = 250
 		}
 	}
-	size_restriction = {
-		Ge_Ragnarok
+	# size_restriction = {
+	# 	Ge_Ragnarok
+	# }
+	potential = {
+		is_ship_size = Ge_Ragnarok
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 
 	scripted_action = {
@@ -2803,13 +3104,30 @@ utility_component_template = {
 			alloys = 15
 		}
 	}
-	size_restriction = {
-		Ge_Ragnarok
-		titan
-		ge_flagship
-		ge_aura_ship
-		Ge_Vampirilis_Ortaam
-		Ge_Vampirilis_Ortaam_normal
+	# size_restriction = {
+	# 	Ge_Ragnarok
+	# 	titan
+	# 	ge_flagship
+	# 	ge_aura_ship
+	# 	Ge_Vampirilis_Ortaam
+	# 	Ge_Vampirilis_Ortaam_normal
+	# }
+	potential = {
+		OR = {
+			is_ship_size = titan
+			is_ship_size = juggernaut
+			is_ship_size = Ge_Ragnarok
+			is_ship_size = ge_flagship
+			is_ship_size = Ge_Vampirilis_Ortaam
+			is_ship_size = Ge_Vampirilis_Ortaam_normal
+			is_ship_size = ge_aura_ship
+		}
+		from = {
+			OR = {
+				country_uses_bio_ships = yes
+				country_uses_bio_ships = no
+			}
+		}
 	}
 	prerequisites = {
 		tech_ge_HTEP

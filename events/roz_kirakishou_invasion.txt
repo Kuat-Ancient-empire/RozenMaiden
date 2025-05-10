@@ -3541,6 +3541,9 @@ country_event = {	#雪华绮晶苏醒
         room = ge_sgt_main_2_room
         portrait = roz_kirakishou_default
     }
+    immediate = {
+        save_event_target_as = this_country
+    }
     option = {
         name = "ge_event.2066.aa"
         is_dialog_only = yes
@@ -3568,7 +3571,15 @@ country_event = {	#雪华绮晶苏醒
             id = roz_krks_leader_evt.10
             days = 2
         }
-
+        add_timeline_event = {
+			type = timeline_milestone
+			override_id = timeline_roz_kirakishou_get
+			override_tooltip = "TIMELINE_EVENT_timeline_roz_kirakishou_get_TOOLTIP"
+			override_types = { country }
+			override_text = { "text:timeline_roz_kirakishou_get" }
+			override_texture = { "background:GFX_evt_roz_krks_get" }
+			targets = { event_target:this_country }
+		}
     }
 }
 

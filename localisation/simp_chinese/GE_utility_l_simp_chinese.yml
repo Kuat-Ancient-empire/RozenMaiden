@@ -138,7 +138,7 @@ ge_shippart_genesis_lake_DESC: "新增舰船能力：§M相位潜航§!\n\n该�
 ge_shippart_genesis_lake_friendly: "§G创生§!"
 
 roz_phase_cloak_menu_title: "§M相位潜航§!"
-roz_phase_cloak_ship_button: "§M相位潜航§!\n\n§H消耗§!：£energy£1000 \n§H冷却§!：25£time£\n\n命令黑蔷薇王座进行§M相位潜航§!，持续20£time£\n处于§M相位潜航§!的状态下，舰船将跃入亚空间中，虽然期间仍会被敌方瞄准，但船体无法与现实的袭击产生交互\n处于§M相位潜航§!的状态下，舰船将停用所用舰载武器，但感应雷区与舰载机不受影响"
+roz_phase_cloak_ship_button: "§M相位潜航§!\n\n§H消耗§!：£energy£1000 \n§H冷却§!：25£time£\n\n命令黑蔷薇王座进行§M相位潜航§!，持续60£time£\n处于§M相位潜航§!的状态下，舰船将跃入亚空间中，虽然期间仍会被敌方瞄准，但船体无法与现实的袭击产生交互\n处于§M相位潜航§!的状态下，舰船将停用所用舰载武器，但感应雷区与舰载机不受影响"
 roz_phase_cloak_activity_key: "§M相位潜航中§!"
  roz_phase_cloak_progress_activity_key: "§M相位潜航中§!"
 

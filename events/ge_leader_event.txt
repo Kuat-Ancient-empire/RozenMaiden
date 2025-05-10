@@ -115,6 +115,19 @@ country_event = {
 			country_event = {
 				id = ge_affection.11
 			}
+			save_event_target_as = this_country
+			add_timeline_event = {
+				type = timeline_milestone
+				override_id = timeline_roz_suigintou_get
+				override_tooltip = "TIMELINE_EVENT_timeline_roz_suigintou_get_TOOLTIP"
+				override_types = { country leader }
+				override_text = { "text:timeline_roz_suigintou_get" }
+				override_texture = { "background:GFX_ge_sgt_wake" }
+				targets = { 
+					event_target:this_country 
+					event_target:roz_leader_suigintou_global_target@root 
+				}
+			}
 			#country_event = {
 			#	id = ge_leader_event.21
 			#	days = 1080

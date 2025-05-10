@@ -728,7 +728,7 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.418.title"
     desc = "roz_shinku_evt.418.desc"
-    picture = GFX_evt_roz_industrial_factor
+    picture = GFX_evt_roz_industrial_factory
     show_sound = event_engineered_evolution
     trigger = {
         NOT = { has_modifier = roz_rosa_analysis_temporary }

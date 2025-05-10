@@ -23,14 +23,15 @@ building_llk_paradox_origin = {
     }
 
     building_sets = {
-        government
-        urban
-        entertainment
-        resort
-        industrial
-        research_unity
-        research
-        unity
+        # government
+        # urban
+        # entertainment
+        # resort
+        # industrial
+        # research_unity
+        # research
+        # unity
+        automation
     }
 
     potential = {
@@ -114,14 +115,15 @@ building_roz_power_core = {
     #}
 
     building_sets = {
-        government
-        urban
-        entertainment
-        resort
-        industrial
-        research_unity
-        research
-        unity
+        # government
+        # urban
+        # entertainment
+        # resort
+        # industrial
+        # research_unity
+        # research
+        # unity
+        automation
     }
 
     potential = {
@@ -188,12 +190,13 @@ building_roz_dolls_factory = {
     #}
 
     building_sets = {
-        government
-        urban
-        industrial
-        research_unity
-        research
-        unity
+        # government
+        # urban
+        # industrial
+        # research_unity
+        # research
+        # unity
+        automation
     }
 
     potential = {
@@ -205,7 +208,6 @@ building_roz_dolls_factory = {
                 has_country_flag = roz_kirakishou_get
             }
         }
-
     }
     #prerequisites = {
     #    tech_roz_power_core

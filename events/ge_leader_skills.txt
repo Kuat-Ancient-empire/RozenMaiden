@@ -1335,7 +1335,7 @@ fleet_event = {
 			}
 			add_modifier = {
 				modifier = roz_phase_cloak_modifier
-				days = 20
+				days = 60
 			}
 		}
 	}

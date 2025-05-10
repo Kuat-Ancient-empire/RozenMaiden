@@ -410,9 +410,27 @@ situation_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_roz_sgt_flagship_dark
+	immediate = {
+		owner = {
+			save_event_target_as = this_country
+		}
+	}
 	option = {
 		name = ge_sgt_flagship_events.1152.a
 		custom_tooltip = ge_sgt_flagship_events.1152.a.ct
+		owner = {
+			add_timeline_event = {
+				type = timeline_milestone
+				override_id = timeline_ge_sgt_flagship_get
+				override_tooltip = "TIMELINE_EVENT_timeline_ge_sgt_flagship_get_TOOLTIP"
+				override_types = { country }
+				override_text = { "text:timeline_ge_sgt_flagship_get" }
+				override_texture = { "background:GFX_roz_sgt_flagship_dark" }
+				targets = { 
+					event_target:this_country 
+				}
+			}
+		}
 		hidden_effect = {
 			add_situation_progress = 25
 			owner = {
@@ -462,6 +480,7 @@ situation_event = {
 				}
 			}
 		}
+
 	}
 }
 

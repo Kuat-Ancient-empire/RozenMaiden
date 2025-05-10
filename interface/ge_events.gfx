@@ -590,8 +590,8 @@ spriteTypes = {
 	}y
 
 	spriteType = {
-		name = "GFX_evt_roz_industrial_factor"
-		textureFile = "gfx/event_pictures/evt_roz_industrial_factor.dds"
+		name = "GFX_evt_roz_industrial_factory"
+		textureFile = "gfx/event_pictures/evt_roz_industrial_factory.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
@@ -599,6 +599,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_evt_roz_heart_lost_doll"
 		textureFile = "gfx/event_pictures/evt_roz_heart_lost_doll.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_krks_get"
+		textureFile = "gfx/event_pictures/evt_roz_krks_get.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}

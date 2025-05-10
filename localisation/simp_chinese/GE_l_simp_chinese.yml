@@ -345,10 +345,21 @@ roz_outland_system_chain_desc: "深渊入侵不仅席卷了我们，它们的爪
 ############light
 sc_roz_dark_box: "§P破败神国§!"
 
+############timeline
+timeline_roz_suigintou_get: "§M第一人偶§!"
+TIMELINE_EVENT_timeline_roz_suigintou_get_TOOLTIP: "§M第一人偶§!\n§Y重要里程碑§!\n\n§L[GetDate]§!，你与水银灯签下契约。"
 
+timeline_ge_sgt_flagship_get: "§B王座——启航§!"
+TIMELINE_EVENT_timeline_ge_sgt_flagship_get_TOOLTIP: "§B王座——启航§!\n§Y里程碑§!\n\n§L[GetDate]§!，蕴含希灵帝国和科技与善意的$Ge_Vampirilis_Ortaam$正式加入[this_country.GetName]。"
 
+timeline_ge_tech_reactor_get: "§d掌控虚空§!"
+TIMELINE_EVENT_timeline_ge_tech_reactor_get_TOOLTIP: "§d掌控虚空§!\n§Y里程碑§!\n\n§L[GetDate]§!，历经困难，[this_country.GetName]终于掌握了虚空能源，这是一个黄金时代的开端——伟大的虚空能源革命，开始了。"
 
+timeline_roz_kirakishou_get: "§P第七人偶§!"
+TIMELINE_EVENT_timeline_roz_kirakishou_get_TOOLTIP: "§P第七人偶§!\n§Y重要里程碑§!\n\n§L[GetDate]§!，你与水银灯成功解救的雪华绮晶，并成为了她的御者。"
 
+timeline_roz_kirakishou_get: "§H第五人偶§!"
+TIMELINE_EVENT_timeline_roz_shinku_get_TOOLTIP: "§H第五人偶§!\n§R夙愿§!\n\n§L[GetDate]§!，[this_country.GetName]完成了无法复现的炼金奇迹——制造了新的蔷薇圣母，并成功复活了真红。"
 
 
 
