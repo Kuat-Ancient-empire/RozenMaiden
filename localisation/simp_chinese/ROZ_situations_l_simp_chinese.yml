@@ -130,7 +130,7 @@ roz_ves_state_grid_shock_situation_monthly_change_tooltip: ""
 roz_ves_state_grid_shock_situation_type: "能源危机的负面影响"
 mod_roz_ves_state_grid_shock_situation_type: "能源危机的负面影响"
 
-#######局势：制作真红
+#######局势：制作真红 （废弃）
 roz_shuukan_shoujonotsukurikata_situation: "周刊——少女的制作方法"
 roz_shuukan_shoujonotsukurikata_situation_type: "周刊——少女的制作方法"
 roz_shuukan_shoujonotsukurikata_text: "虽然写的是周刊，但每次送来的时间都不统一，或许寄件地的时间流速和我们的不一样？"

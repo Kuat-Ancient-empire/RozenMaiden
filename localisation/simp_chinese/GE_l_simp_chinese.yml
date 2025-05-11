@@ -334,8 +334,11 @@ roz_void_energy_research_chain_desc: "针对那扇门的实验所产生的神秘
 
 roz_outland_system_chain_title: "§P破败神国§!"
 roz_outland_system_chain_desc: "那道时空裂缝将我们引领至此，然而这片昏黑的星系并不处于现实宇宙里，视线延伸至深处也只能看到无比深邃的黑暗. 所有人的脑内回档着似有似无的低语声，那犹如濒死之人的呻吟……"
-
 outland_systen_counter: "线索"
+
+roz_shuukan_shoujonotsukurikata_project_chain_title: "少女的制作方法"
+roz_shuukan_shoujonotsukurikata_project_chain_desc: "不知从何而来的神秘包裹，打开后竟然是蔷薇少女的人偶组件，这种漫画故事里的剧情怎么可能成真呢？然而，按照水银灯的说法，因果的大门已经向[Root.GetRulerName]启开，尽管来源和动机仍然成谜，谜之周刊确实已经选定了[Root.GetRulerName]作为收件人。总有一天，第五人偶真红的躯体将会在[Root.GetRulerName]手中复归完整吧。\n\n“§M看你忙活着拼接人偶组件的样子……往事历历在目啊。§!”"
+roz_components_of_shinku: "已收到的人偶组件(周刊)数量"
 
 roz_outland_system_chain: "深渊感染体入侵：情况统计"
 roz_outland_system_chain_desc: "深渊入侵不仅席卷了我们，它们的爪牙也伸向了其他国家，我们获取的支持取决于我们抗击的成果。\n\n当前共有个深渊傀儡国\n[root.roz_SK_invasion_dip_aggressive_ai]个支持阵营国家\n[root.roz_SK_invasion_dip_negative_ai]个反对阵营国家\n另有[root.roz_SK_invasion_dip_neutral_ai]个国家保持中立。"
