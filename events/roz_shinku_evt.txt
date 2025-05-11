@@ -7,17 +7,19 @@ country_event = {
     desc = "roz_shinku_evt.1.desc"
     picture = GFX_roz_evt_shoujonotsukurikata_vol1
     show_sound = roz_open_the_box
+    trigger = {
+        NOT = {
+            has_country_flag = roz_shinku_story_start_flag
+        }
+    }
     immediate = {
         set_country_flag = roz_shinku_story_start_flag
     }
     option = {
         name = roz_shinku_evt.1.aa
-    }
-    option = {
-        name = roz_shinku_evt.1.bb
+        custom_tooltip = roz_shinku_evt.1.ct
     }
     after = {
-        add_relic = roz_shuukan_shoujonotsukurikata_vol1
         country_event = {
             id = roz_shinku_evt.2
         }
@@ -29,86 +31,16 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.2.title"
     desc = "roz_shinku_evt.2.desc"
-    diplomatic = yes
-    picture_event_data = {
-        portrait = event_target:ge_leader
-         room = ge_sgt_main_room
-    }
     immediate = {
-        get_ge_leader_target = {
-            flag = roz_suigintou_flag
-        }
     }
     option = {
         name = roz_shinku_evt.2.aa
-        is_dialog_only = yes
-        response_text = roz_shinku_evt.2.aa.res
-        add_resource = { unity = 200 }
-        hidden_effect = { set_country_flag = roz_evt_temp_flag_1 }
-        allow = {
-            custom_tooltip_fail = {
-                NOT = { has_country_flag = roz_evt_temp_flag_1 }
-                text = "roz_shinku_evt.1.ct"
-            }
-        }
     }
     option = {
         name = roz_shinku_evt.2.bb
-        is_dialog_only = yes
-        response_text = roz_shinku_evt.2.bb.res
-        add_resource = { unity = 200 }
-        hidden_effect = { set_country_flag = roz_evt_temp_flag_2 }
-        allow = {
-            custom_tooltip_fail = {
-                NOT = { has_country_flag = roz_evt_temp_flag_2 }
-                text = "roz_shinku_evt.1.ct"
-            }
-        }
-    }
-    option = {
-        name = roz_shinku_evt.2.cc
-        is_dialog_only = yes
-        response_text = roz_shinku_evt.2.cc.res
-        add_resource = { unity = 200 }
-        hidden_effect = { set_country_flag = roz_evt_temp_flag_3 }
-        allow = {
-            custom_tooltip_fail = {
-                NOT = { has_country_flag = roz_evt_temp_flag_3 }
-                text = "roz_shinku_evt.1.ct"
-            }
-        }
-    }
-    option = {
-        name = roz_shinku_evt.2.dd
-        is_dialog_only = yes
-        response_text = roz_shinku_evt.2.dd.res
-        add_resource = { unity = 200 }
-        hidden_effect = { set_country_flag = roz_evt_temp_flag_4 }
-        allow = {
-            custom_tooltip_fail = {
-                NOT = { has_country_flag = roz_evt_temp_flag_4 }
-                text = "roz_shinku_evt.1.ct"
-            }
-        }
-    }
-    option = {
-        name = roz_shinku_evt.2.ee
-        custom_tooltip = roz_shinku_evt.2.ee.ct
     }
     after = {
-        hidden_effect = {
-            remove_country_flag = roz_evt_temp_flag_1
-            remove_country_flag = roz_evt_temp_flag_2
-            remove_country_flag = roz_evt_temp_flag_3
-            remove_country_flag = roz_evt_temp_flag_4
-            #country_event = {
-            #    id = roz_shinku_evt.10
-            #    days = 15
-            #}
-        }
-        start_situation = {
-            type = roz_shuukan_shoujonotsukurikata_situation
-        }
+        add_relic = roz_shuukan_shoujonotsukurikata_vol1
     }
 }
 
