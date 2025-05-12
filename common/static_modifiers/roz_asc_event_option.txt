@@ -1,7 +1,7 @@
 roz_ge_event_50_aa_modifier = {
     icon = gfx/interface/icons/ethics/ethic_xenophobe.dds
     country_produces_mult = 0.10
-    pop_growth_speed = 0.10
+    logistic_growth_mult = 0.10
     external_leader_pool_add = -1
 }
 

@@ -175,8 +175,7 @@ leader_trait_roz_kirakishou_nightmare = {
 				}
 			}
 		}
-		biological_pop_growth_speed_reduction = -0.5
-		biological_pop_growth_speed = 0.3
+		biological_logistic_growth_mult = 0.3
 		planet_stability_add = -20
 	}
 	triggered_modifier = {
@@ -203,8 +202,7 @@ leader_trait_roz_kirakishou_nightmare = {
 				has_country_flag = roz_rosa_mystica_enhance_flag
 			}
 		}
-		biological_pop_growth_speed_reduction = -0.25
-		biological_pop_growth_speed = 0.4
+		biological_logistic_growth_mult = 0.4
 		planet_stability_add = -10
 	}
 	triggered_modifier = {
