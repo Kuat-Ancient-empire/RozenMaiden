@@ -13,7 +13,16 @@ weapon_component_template = {
 	prerequisites = { "tech_ge_energy_torpedo" }
 	component_set = "GE_GRAVITY_BURST"
 	projectile_gfx = "ge_energy_torpedo_projectile"
-	
+	on_hit = {
+		custom_tooltip = "GE_GRAVITY_BURST_on_hit_s_tt"
+		if = {
+			limit = {
+				this = {	#scope: ship
+					
+				}
+			}
+		}
+	}
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth  }
 	ai_tag_weight = 0
 	resources = {
