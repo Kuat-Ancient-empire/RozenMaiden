@@ -221,6 +221,7 @@ on_fleet_destroyed_perp = {
 }
 
 on_leader_death = {  }
+
 # This = owner of ship 1 (destroyed)
 # From = owner of ship 2 (combatant)
 # FromFrom = ship 1
@@ -231,6 +232,10 @@ on_ship_destroyed_perp = {
 	}
 }
 
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
 on_ship_destroyed_victim = {
 	events = {
 		ge_sgt_flagship_events.4

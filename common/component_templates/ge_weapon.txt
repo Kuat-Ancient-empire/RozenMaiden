@@ -15,7 +15,9 @@ weapon_component_template = {
 	projectile_gfx = "ge_energy_torpedo_projectile"
 	on_hit = {
 		custom_tooltip = "GE_GRAVITY_BURST_on_hit_s_tt"
-		ge_gravity_burst_on_hit_effect = yes
+		hidden_effect = {
+			ge_gravity_burst_on_hit_effect = yes
+		}
 	}
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth  }
 	ai_tag_weight = 0
@@ -83,11 +85,6 @@ weapon_component_template = {
 	prerequisites = { "tech_ge_pd" }  ###
 	component_set = "GE_PD"
 	projectile_gfx = "ge_pd_projectile"
-
-	on_hit = {
-		custom_tooltip = "GE_PD_on_hit_s_tt"
-
-	}
 	
 	ai_tags = { weapon_role_point_defense screen }
 	ai_tag_weight = 0
@@ -171,20 +168,26 @@ weapon_component_template = {
 		}
 	}
 
-	damage = { min = 1453.0 max = 11187.0 }
+	#damage = { min = 1453.0 max = 11187.0 }
+	damage = { min = 1000.0 max = 1000.0 }
 	#windup = { min = 80.0 max = 100.0 }
-	windup = { min = 180.0 max = 200.0 }
-	total_fire_time = 70
+	windup = { min = 140.0 max = 200.0 }
+	total_fire_time = 60
 
-	
+	on_hit = {
+		custom_tooltip = "ge_xl_beam_on_hit_s_tt"
+		hidden_effect = {
+			ge_xl_beam_on_hit_effect = yes
+		}
+	}
 	
 	range = 280.0
 	accuracy = 1.0
 	tracking = 1.0
 	
-	shield_damage = 1.75
+	shield_damage = 1.25
 	armor_damage = 3.00
-	hull_damage = 2.50
+	hull_damage = 1.75
 
 
 	ai_weight = {
@@ -234,6 +237,13 @@ weapon_component_template = {
 	projectile_gfx = "ge_t_beam_projectile"
 	prerequisites = { "tech_ge_t_beam" }
 	component_set = "GE_T_BEAM"
+
+	on_hit = {
+		custom_tooltip = ge_t_beam_on_hit_s_tt
+		hidden_effect = {
+			ge_t_beam_on_hit_effect = yes
+		}
+	}
 
 	power = -3000
 	damage = { min = 20880.50 max = 64880.00 }
@@ -713,15 +723,22 @@ weapon_component_template = {
 			energy = 0.7
 		}
 	}
+
+	on_hit = {
+		custom_tooltip = ge_wtorpedo_on_hit_s_tt
+		hidden_effect = {
+			ge_wtorpedo_on_hit_effect = yes
+		}
+	}
 	
 	power = -400							
 	damage = { min = 17900 max = 19400 }		
-	#windup = { min = 540 max = 560 }
+	windup = { min = 540 max = 560 }
 	windup = { min = 740 max = 860 }
-	total_fire_time = 1000					
+	total_fire_time = 500					
 	hull_damage = 2.5
 	armor_damage = 1.750
-	shield_penetration = 1.0                                                
+	shield_penetration = 1.0
 	tracking = 0.35                        
 	range = 250.00                         
 	accuracy = 1.00                        
@@ -731,7 +748,7 @@ weapon_component_template = {
 	missile_evasion = 0.9					   
 	missile_retarget_range = 150		   
 	missile_speed = 20
-	size_damage_factor = 0.75		   
+	size_damage_factor = 0.8	   
 	
 	prerequisites = { tech_ge_wtorpedo } 
 	component_set = "ge_wtorpedo"	

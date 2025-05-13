@@ -1,16 +1,21 @@
 ﻿l_simp_chinese:
-####Weapons GE_GRAVITY_BURST:0 "§H混沌能星爆§!"
+####Weapons 
+GE_GRAVITY_BURST:0 "§H混沌能星爆§!"
 GE_GRAVITY_BURST_DESC:0 "发射一团外域概念干涉实体，瞬间使敌方护盾发生器过载，无视大部分装甲防护直击舰体结构。\n"
-GE_GRAVITY_BURST_on_hit_s_tt: "命中时，将对目标舰船各个区块造成链锁性毁伤，额外造成1%最大生命值的伤害。\n命中时，将半永久性损伤目标的护盾发生器，护盾最大值将降低1%，持续30£time£(该效果最大可叠加25次)。"
+GE_GRAVITY_BURST_on_hit_s_tt: "命中时，将半永久性损伤目标的护盾发生器，§R护盾最大值将降低1%§!，持续30£time£(该效果最大可叠加25次)。"
 
 GE_PD:0 "§P虚空聚焦点防御§!"
 GE_PD_DESC:0 "这种点防御武器能快速抹消来袭舰载机和弹头。"
-GE_PD_on_hit_s_tt: "命中敌方舰载机时，将降低敌方舰载机的输出。"
+#GE_PD_on_hit_s_tt: "命中敌方舰载机时，将大幅降低敌方舰载机的作战效率。"
 
 GE_XL_BEAM:0 "§G混沌撕裂炮§!"
 GE_XL_BEAM_DESC:0 "在所有已知的能量种类中，虚空能量可以说是最不讲理的存在。利用它们产生的各种规则层面上的衰变效应，我们的武器可以瞬间毁伤敌舰的装甲和船体结构"
+ge_xl_beam_on_hit_s_tt: "命中时，将对目标舰船各个区块造成链锁性毁伤，额外造成§R5%最大生命值§!的伤害。(该伤害不会穿透护盾和装甲)\n"
+
 GE_T_BEAM:0 "§R寂灭原点§!"
 GE_T_BEAM_DESC:0 "§R敢教日月换新天。§!"
+ge_t_beam_on_hit_s_tt: "命中时，狂暴的衰变能量将从船体损伤结构处向外传递，对船体值低于于§H75%§!的目标造成§Y25%§!的§Y易伤效果§!，持续30£time£。(该效果不可叠加)\n\n\n§Y易伤效果§!：使舰船收到的伤害增加，该效果的计算方式为§Y独立乘区§!。"
+
 GE_SMALL_LASER_CANNON:0 "§P小型混沌聚能光束§!"
 GE_MEDIUM_LASER_CANNON:0 "§P中型混沌聚能光束§!"
 GE_LARGE_LASER_CANNON:0 "§P大型混沌聚能光束§!"
@@ -23,8 +28,11 @@ GE_KINETIC_GUN:0 "§M虚空阱发射器§!"
 GE_KINETIC_GUN_DESC:0 "发射前请检查虚空侵蚀指数。"
 ge_bhmissile:0 "§M奇点导弹§!"
 ge_bhmissile_DESC:0 "黑洞打击是在常规宇宙空间作战中的优解"
+
 ge_wtorpedo:0 "§M开天§!"
 ge_wtorpedo_DESC:0 "天地乖离，开辟之星。(某灯：这是什么中二台词。)"
+ge_wtorpedo_on_hit_s_tt: "命中时，有§H50%§!的概率造成该武器命中目标时等值的额外伤害。"
+
 ge_strike_craft_fighter:0 "§L王蛇歼击机§!"
 ge_strike_craft_fighter_DESC:0 "这种歼击机搭载了轻型虚空点防御炮，能抹除来袭舰载机和弹头。"
 ge_strike_craft_bomber:0 "§L狮心王轰炸机§!"

@@ -1,58 +1,66 @@
-roz_mega_wanxiangtianyin_trigger_values = { #roz_tempvar备用
-    base = 1
-    max = 10
-    modifier = {
-        add = value:scripted_modifier_mult|MODIFIER|leader_skill_levels|MODIFIER|leader_initial_skill|VALUE|$roz_tempvar$|
-        capital_scope = {
-            has_building = building_llk_paradox_origin
-        }
-
-    }
-    modifier = {
-        add = 1
-        owner = {
-            check_variable = {
-                which = roz_suigintou_affection
-                value > 40
-            }
-        }
-    }
-    modifier = {
-        add = 1
-        owner = {
-            check_variable = {
-                which = roz_suigintou_affection
-                value > 50
-            }
-        }
-    }
-    modifier = {
-        add = 1
-        owner = {
-            check_variable = {
-                which = roz_suigintou_affection
-                value > 60
-            }
-        }
-    }
-    modifier = {
-        add = 1
-        owner = {
-            check_variable = {
-                which = roz_suigintou_affection
-                value > 70
-            }
-        }
-    }
-    modifier = {
-        add = 1
-        owner = {
-            check_variable = {
-                which = roz_suigintou_affection
-                value > 80
-            }
-        }
-    }
-    floor = yes
+roz_mega_wanxiangtianyin_trigger_values = {
+	#roz_tempvar备用
+	base = 1
+	max = 10
+	modifier = {
+		add = value:scripted_modifier_mult|MODIFIER|leader_skill_levels|MODIFIER|leader_initial_skill|VALUE|$roz_tempvar$|
+		capital_scope = {
+			has_building = building_llk_paradox_origin
+		}
+	}
+	modifier = {
+		add = 1
+		owner = {
+			check_variable = {
+				which = roz_suigintou_affection
+				value > 40
+			}
+		}
+	}
+	modifier = {
+		add = 1
+		owner = {
+			check_variable = {
+				which = roz_suigintou_affection
+				value > 50
+			}
+		}
+	}
+	modifier = {
+		add = 1
+		owner = {
+			check_variable = {
+				which = roz_suigintou_affection
+				value > 60
+			}
+		}
+	}
+	modifier = {
+		add = 1
+		owner = {
+			check_variable = {
+				which = roz_suigintou_affection
+				value > 70
+			}
+		}
+	}
+	modifier = {
+		add = 1
+		owner = {
+			check_variable = {
+				which = roz_suigintou_affection
+				value > 80
+			}
+		}
+	}
+	floor = yes
 }
 
+ge_wtorpedo_damage_modifier_amount = {
+	add = 17900
+	mult = ge_wtorpedo_damage_modifier_ship_weapon_damage
+	mult = ge_wtorpedo_damage_modifier_ship_hull_damage_mult
+	mult = ge_wtorpedo_damage_modifier_weapon_type_explosive_weapon_damage_mult
+	mult = ge_wtorpedo_damage_modifier_weapon_type_ge_void_energy_weapon_damage_mult
+    mult = 2.5
+}

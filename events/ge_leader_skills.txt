@@ -1335,6 +1335,20 @@ ship_event = {
 	}
 }
 
+country_event = {
+	id = ge_skills.32
+	#hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		from = {
+			has_component = GE_XL_BEAM
+		}
+	}
+	immediate = {
+		
+	}
+}
+
 fleet_event = {
 	id = ge_skills.501
 	hide_window = yes
