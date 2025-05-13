@@ -1323,6 +1323,18 @@ country_event = {
 # 	}
 # }
 
+ship_event = {
+	id = ge_skills.31
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_modifier = ge_gravity_burst_on_hit_effect_modifier
+	}
+	immediate = {
+		remove_modifier = ge_gravity_burst_on_hit_effect_modifier
+	}
+}
+
 fleet_event = {
 	id = ge_skills.501
 	hide_window = yes

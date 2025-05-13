@@ -4549,8 +4549,42 @@ chronos_storm_remove = {
 	nexus_storm_apply_aftermath_modifier = yes
 }
 
+###on hit
+ge_gravity_burst_on_hit_effect = {
+	this = {	#scope: ship
+		export_trigger_value_to_variable = {
+			trigger = has_max_hp
+			variable = ge_gravity_burst_damage_ship_count
+		}
+		divide_variable = {
+			which = ge_gravity_burst_damage_ship_count
+			value = 100
+		}
+		damage_ship = value:ge_gravity_burst_damage_ship_count
+		clear_variable = ge_gravity_burst_damage_ship_count
 
-
+		if = {
+			limit = { 
+				check_variable = {
+					which = ge_gravity_burst_on_hit_effect_modifier_count
+					value < 25
+				}
+			}
+			add_modifier = {
+				modifier = ge_gravity_burst_on_hit_effect_modifier
+				days = 60
+			}
+			change_variable = {
+				which = ge_gravity_burst_on_hit_effect_modifier_count
+				value = 1
+			}
+			ship_event = {
+				id = ge_skills.31
+				days = 60
+			}
+		}
+	}
+}
 
 
 

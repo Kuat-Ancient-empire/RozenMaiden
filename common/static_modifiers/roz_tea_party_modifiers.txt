@@ -130,7 +130,10 @@ roz_tp_random_modifier_13 = {
     station_observers_energy_produces_add = 30
 }
 
-
+####on hit modifier
+ge_gravity_burst_on_hit_effect_modifier = {
+    ship_shield_mult = -0.01
+}
 
 
 

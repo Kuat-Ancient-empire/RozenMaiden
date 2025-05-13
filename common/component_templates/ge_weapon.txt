@@ -15,26 +15,20 @@ weapon_component_template = {
 	projectile_gfx = "ge_energy_torpedo_projectile"
 	on_hit = {
 		custom_tooltip = "GE_GRAVITY_BURST_on_hit_s_tt"
-		if = {
-			limit = {
-				this = {	#scope: ship
-					
-				}
-			}
-		}
+		ge_gravity_burst_on_hit_effect = yes
 	}
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth  }
 	ai_tag_weight = 0
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 180
-			energy = 180
+			alloys = 250
+			energy = 250
 			sr_void_core = 1
 		}		
 		upkeep = {
-			energy = 0.2
-			alloys = 0.02
+			energy = 0.5
+			alloys = 0.05
 		}
 	}
 
@@ -89,6 +83,11 @@ weapon_component_template = {
 	prerequisites = { "tech_ge_pd" }  ###
 	component_set = "GE_PD"
 	projectile_gfx = "ge_pd_projectile"
+
+	on_hit = {
+		custom_tooltip = "GE_PD_on_hit_s_tt"
+
+	}
 	
 	ai_tags = { weapon_role_point_defense screen }
 	ai_tag_weight = 0
