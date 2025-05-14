@@ -26,6 +26,8 @@ ge_flagship = {
 			locator = "part1"
 		}
 	}
+	use_shipnames_from = titan
+	available_to_everyone = yes
 	prerequisites = {
 		tech_ge_section
 	}
@@ -163,7 +165,8 @@ Ge_Ragnarok = {	#永恒之枪
 	is_space_station = no
 	icon = roz_ship_sizes_1
 	#icon_frame = 1
-	
+	use_shipnames_from = colossus
+	available_to_everyone = yes
 	#entity = ROZ
 	#entity = "ge_gungnir_entity"
 	entity = ROZ_Infinite_Large_ship_entity
@@ -302,6 +305,8 @@ ge_aura_ship = {
 			locator = "part1"
 		}
 	}
+	use_shipnames_from = cruiser
+	available_to_everyone = yes
 	num_target_locators = 0
 	is_space_station = no
 	icon = ship_size_military_32
@@ -528,6 +533,8 @@ Ge_Vampirilis_Ortaam = {	#斗士
 			locator = "root"
 		}
 	}
+	use_shipnames_from = titan
+	available_to_everyone = yes
 	num_target_locators = 0
 	is_space_station = no
 	icon = roz_ship_sizes_3
@@ -616,6 +623,8 @@ Ge_Vampirilis_Ortaam_normal = {	#斗士
 			locator = "root"
 		}
 	}
+	use_shipnames_from = titan
+	available_to_everyone = yes
 	num_target_locators = 0
 	is_space_station = no
 	icon = roz_ship_sizes_3
@@ -689,6 +698,8 @@ Ge_Vampirilis_Letum = {	#
 			locator = "root"
 		}
 	}
+	use_shipnames_from = battleship
+	available_to_everyone = yes
 	num_target_locators = 0
 	is_space_station = no
 	icon = roz_ship_sizes_4
@@ -763,6 +774,8 @@ ROZ_ITQ = {	#
 			locator = "root"
 		}
 	}
+	use_shipnames_from = battleship
+	available_to_everyone = yes
 	num_target_locators = 0
 	is_space_station = no
 	icon = roz_ship_sizes_6
@@ -850,6 +863,8 @@ roz_juggernaut_wanxiang = {	#万象
 			locator = "root"
 		}
 	}
+	use_shipnames_from = colossus
+	available_to_everyone = yes
 	num_target_locators = 0
 	#is_space_station = yes
 	can_disable = no

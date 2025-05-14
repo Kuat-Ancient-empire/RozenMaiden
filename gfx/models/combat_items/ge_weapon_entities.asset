@@ -145,6 +145,16 @@ entity = {
 	default_state = "explode_med_hp"
 }
 
+#########hit explosion
+entity = {
+	name = ge_t_beam_hit_explosion_entity
+	#pdxmesh = "system_plane_collision_mesh"
+	default_state = "explode"
+	state = { name = "explode" state_time = 10 looping = no 
+		event = { time = 0.0 	particle = "star_explosion_1_effect"  keep_particle = yes trigger_once = no }
+	}
 
+	scale = 0.5
+}
 
 

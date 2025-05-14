@@ -20,3 +20,10 @@ ambient_object = {
 	selectable = no
 	show_name = no
 }
+
+ambient_object = {
+	name = "ge_t_beam_hit_explosion"
+	entity = "ge_t_beam_hit_explosion_entity"
+	selectable = no
+	show_name = no
+}

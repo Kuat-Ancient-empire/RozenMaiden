@@ -4552,22 +4552,22 @@ chronos_storm_remove = {
 ###on hit
 ge_gravity_burst_on_hit_effect = {
 	this = {	#scope: ship
-		
-
 		if = {
 			limit = { 
 				check_variable = {
 					which = ge_gravity_burst_on_hit_effect_modifier_count
-					value < 25
+					value <= 25
 				}
-			}
-			add_modifier = {
-				modifier = ge_gravity_burst_on_hit_effect_modifier
-				days = 60
 			}
 			change_variable = {
 				which = ge_gravity_burst_on_hit_effect_modifier_count
 				value = 1
+			}
+			remove_modifier = ge_gravity_burst_on_hit_effect_modifier
+			add_modifier = {
+				modifier = ge_gravity_burst_on_hit_effect_modifier
+				mult = value:ge_gravity_burst_on_hit_effect_modifier_count
+				days = 60
 			}
 			ship_event = {
 				id = ge_skills.31
@@ -4626,10 +4626,24 @@ ge_wtorpedo_damage_modifier_export = {
 	}
 }
 
+ge_vn_torpedo_damage_modifier_export = {
+	export_modifier_to_variable = {
+		modifier = $modifier$
+		variable = ge_vn_torpedo_damage_modifier_$modifier$
+	}
+}
+
+ge_sgt_torpedo_damage_modifier_export = {
+	export_modifier_to_variable = {
+		modifier = $modifier$
+		variable = ge_sgt_torpedo_damage_modifier_$modifier$
+	}
+}
+
 ge_wtorpedo_on_hit_effect = {
 	random_list = {
-		#1 = {  }
-		1 = {
+		70 = {  }
+		30 = {
 			ge_wtorpedo_damage_modifier_export = {
 				modifier = ship_weapon_damage
 			}
@@ -4673,17 +4687,170 @@ ge_wtorpedo_on_hit_effect = {
 	}
 }
 
+####vn weapon
 
+ge_vn_torpedo_on_hit_effect = {
+	random_list = {
+		1 = {  }
+		3 = {
+			ge_vn_torpedo_damage_modifier_export = {
+				modifier = ship_weapon_damage
+			}
+			ge_vn_torpedo_damage_modifier_export = {
+				modifier = ship_hull_damage_mult
+			}
+			ge_vn_torpedo_damage_modifier_export = {
+				modifier = weapon_type_ge_void_energy_weapon_damage_mult
+			}
+			export_trigger_value_to_variable = {
+				trigger = has_hp
+				variable = ge_vn_torpedo_target_ship_hull
+			}
+			export_trtrigger_value_to_variable = {
+				trigger = has_shield_hp
+				variable = ge_vn_torpedo_target_ship_shield
+			}
+			change_variable = {
+				which = ge_vn_torpedo_target_ship_hull
+				value = ge_vn_torpedo_target_ship_shield
+			}
+			multiply_variable = {
+				which = ge_vn_torpedo_target_ship_hull
+				value = 1.5
+			}
+			if = {
+				limit = { 
+					check_variable = {
+						which = ge_vn_torpedo_target_ship_hull
+						value > value:ge_vn_torpedo_damage_modifier_amount
+					}
+				}
+				damage_ship = value:ge_vn_torpedo_damage_modifier_amount
+			}
+			clear_variable = ge_vn_torpedo_target_ship_hull
+			clear_variable = ge_vn_torpedo_target_ship_shield
+			clear_variable = ge_vn_torpedo_damage_modifier_ship_weapon_damage
+			clear_variable = ge_vn_torpedo_damage_modifier_ship_hull_damage_mult
+			clear_variable = ge_vn_torpedo_damage_modifier_weapon_type_ge_void_energy_weapon_damage_mult
+		}
+	}
+}
 
+ge_vn_main_beam_on_hit_effect = {
+	if = {
+		limit = { 
+			from = {
+				has_component = ge_shippart_time_freeze
+			}
+		}
+		random_list = {
+			4 = {  }
+			6 = {
+				export_trigger_value_to_variable = {
+					trigger = has_shield_hp
+					variable = ge_vn_main_beam_target_ship_shield
+				}
+				repair_armor_amount = -900000000
+				repair_shield_amount = value:ge_vn_main_beam_target_ship_shield
+				clear_variable = ge_vn_main_beam_target_ship_shield
+			}
+		}
+	}
+}
 
+ge_vn_secondary_beam_on_hit_effect = {
+	random_list = {
+		7 = {  }
+		3= {
+			if = {
+				limit = { 
+					has_modifier = ge_modifier_time_freeze
+					ship_size_multiplier >= 8
+				}
+				from = {
+					repair_amount = 400000
+				}
+			}
+		}
+	}
+}
 
+###sp waepon
+ge_stg_laser_on_hit_effect = {
+	if = {
+		limit = { 
+			check_variable = {
+				which = ge_stg_laser_hit_count
+				value < 6
+			}
+		}
+		change_variable = {
+			which = ge_stg_laser_hit_count
+			value = 1
+		}
+		remove_modifier = ge_stg_laser_on_hit_effect_modifier
+		add_modifier = {
+			modifier = ge_stg_laser_on_hit_effect_modifier
+			mult = value:ge_stg_laser_hit_count
+			days = 30
+		}
+		ship_event = {	#清除增加的变量值
+			id = ge_skills.32
+			days = 30
+		}
+	}
+}
 
-
-
-
-
-
-
+ge_sgt_torpedo_on_hit_effect = {
+	random_list = {
+		1 = {  }
+		1 = {
+			ge_sgt_torpedo_damage_modifier_export = {
+				modifier = ship_weapon_damage
+			}
+			ge_sgt_torpedo_damage_modifier_export = {
+				modifier = ship_hull_damage_mult
+			}
+			ge_sgt_torpedo_damage_modifier_export = {
+				modifier = weapon_type_ge_void_energy_weapon_damage_mult
+			}
+			ge_sgt_torpedo_damage_modifier_export = {
+				modifier = weapon_type_explosive_weapon_damage_mult
+			}
+			export_trigger_value_to_variable = {
+				trigger = has_hp
+				variable = ge_sgt_torpedo_target_ship_hull
+			}
+			export_trtrigger_value_to_variable = {
+				trigger = has_shield_hp
+				variable = ge_sgt_torpedo_target_ship_shield
+			}
+			change_variable = {
+				which = ge_sgt_torpedo_target_ship_hull
+				value = ge_sgt_torpedo_target_ship_shield
+			}
+			multiply_variable = {
+				which = ge_sgt_torpedo_target_ship_hull
+				value = 1.5
+			}
+			if = {
+				limit = { 
+					check_variable = {
+						which = ge_sgt_torpedo_target_ship_hull
+						value > value:ge_sgt_torpedo_damage_modifier_amount
+					}
+				}
+				damage_ship = value:ge_sgt_torpedo_damage_modifier_amount
+			}
+			clear_variable = ge_sgt_torpedo_target_ship_hull
+			clear_variable = ge_sgt_torpedo_target_ship_shield
+			clear_variable = ge_sgt_torpedo_damage_modifier_ship_weapon_damage
+			clear_variable = ge_sgt_torpedo_damage_modifier_ship_hull_damage_mult
+			clear_variable = ge_sgt_torpedo_damage_modifier_weapon_type_explosive_weapon_damage_mult
+			clear_variable = ge_sgt_torpedo_damage_modifier_weapon_type_ge_void_energy_weapon_damage_mult
+		}
+	}
+}
 
 
 

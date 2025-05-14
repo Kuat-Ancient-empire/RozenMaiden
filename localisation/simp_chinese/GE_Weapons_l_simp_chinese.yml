@@ -2,7 +2,7 @@
 ####Weapons 
 GE_GRAVITY_BURST:0 "§H混沌能星爆§!"
 GE_GRAVITY_BURST_DESC:0 "发射一团外域概念干涉实体，瞬间使敌方护盾发生器过载，无视大部分装甲防护直击舰体结构。\n"
-GE_GRAVITY_BURST_on_hit_s_tt: "命中时，将半永久性损伤目标的护盾发生器，§R护盾最大值将降低1%§!，持续30£time£(该效果最大可叠加25次)。"
+GE_GRAVITY_BURST_on_hit_s_tt: "命中时，将半永久性损伤目标的护盾发生器，§R£ship_stats_armor£护盾最大值将降低1%§!，持续30£time£(该效果最大可叠加25次)。"
 
 GE_PD:0 "§P虚空聚焦点防御§!"
 GE_PD_DESC:0 "这种点防御武器能快速抹消来袭舰载机和弹头。"
@@ -10,11 +10,11 @@ GE_PD_DESC:0 "这种点防御武器能快速抹消来袭舰载机和弹头。"
 
 GE_XL_BEAM:0 "§G混沌撕裂炮§!"
 GE_XL_BEAM_DESC:0 "在所有已知的能量种类中，虚空能量可以说是最不讲理的存在。利用它们产生的各种规则层面上的衰变效应，我们的武器可以瞬间毁伤敌舰的装甲和船体结构"
-ge_xl_beam_on_hit_s_tt: "命中时，将对目标舰船各个区块造成链锁性毁伤，额外造成§R5%最大生命值§!的伤害。(该伤害不会穿透护盾和装甲)\n"
+ge_xl_beam_on_hit_s_tt: "命中时，将对目标舰船各个区块造成链锁性毁伤，额外造成§R5%最大生命值§!的伤害。(该伤害不会穿透£ship_stats_armor£护盾和£ship_stats_shield£装甲)\n"
 
 GE_T_BEAM:0 "§R寂灭原点§!"
 GE_T_BEAM_DESC:0 "§R敢教日月换新天。§!"
-ge_t_beam_on_hit_s_tt: "命中时，狂暴的衰变能量将从船体损伤结构处向外传递，对船体值低于于§H75%§!的目标造成§Y25%§!的§Y易伤效果§!，持续30£time£。(该效果不可叠加)\n\n\n§Y易伤效果§!：使舰船收到的伤害增加，该效果的计算方式为§Y独立乘区§!。"
+ge_t_beam_on_hit_s_tt: "命中时，狂暴的衰变能量将从船体损伤结构处向外传递，对£ship_stats_hitpoints£船体值低于于§H75%§!的目标造成§Y25%§!的§Y易伤效果§!，持续30£time£。(该效果不可叠加)\n\n\n§Y易伤效果§!：使舰船收到的伤害增加，该效果的计算方式为§Y独立乘区§!。"
 
 GE_SMALL_LASER_CANNON:0 "§P小型混沌聚能光束§!"
 GE_MEDIUM_LASER_CANNON:0 "§P中型混沌聚能光束§!"
@@ -31,7 +31,7 @@ ge_bhmissile_DESC:0 "黑洞打击是在常规宇宙空间作战中的优解"
 
 ge_wtorpedo:0 "§M开天§!"
 ge_wtorpedo_DESC:0 "天地乖离，开辟之星。(某灯：这是什么中二台词。)"
-ge_wtorpedo_on_hit_s_tt: "命中时，有§H50%§!的概率造成该武器命中目标时等值的额外伤害。"
+ge_wtorpedo_on_hit_s_tt: "命中时，有§H30%§!的概率造成该武器命中目标时等值的额外伤害。"
 
 ge_strike_craft_fighter:0 "§L王蛇歼击机§!"
 ge_strike_craft_fighter_DESC:0 "这种歼击机搭载了轻型虚空点防御炮，能抹除来袭舰载机和弹头。"
@@ -74,9 +74,13 @@ FLEETORDER_DESTROY_PLANET_WITH_GE_PLANET_KILLER_Crasher:0 "正在准备焚灭$PL
  ##############################################################
 
 ge_vn_main_beam:0 "§B三联装超重型对舰幽能炮§!-§H星河§!"
-ge_vn_main_beam_DESC:0 "§H星河§!主炮是一种有效口径半公里的高聚能式物质湮灭发生器，在蓄力完成的情况下发射一次的威力接近于一次超新星爆发. 我们的科学家曾警告：鉴于虚空能量的特殊性，在宇宙内多次射击有可能会导致时间连续性崩溃。。"
+ge_vn_main_beam_DESC:0 "§H星河§!主炮是一种有效口径半公里的高聚能式物质湮灭发生器，在蓄力完成的情况下发射一次的威力接近于一次超新星爆发. 我们的科学家曾警告：鉴于虚空能量的特殊性，在宇宙内多次超限度射击有可能会导致时间连续性崩溃……"
+ge_vn_main_beam_on_hit_s_tt: "当永恒之枪装备有$ge_shippart_time_freeze$时，在湮灭能量洪流到来前，目标舰船将受到周围时空连续性崩溃的影响，有§B40%§!的概率§H不再穿透£ship_stats_armor£护盾与£ship_stats_shield£装甲§!，并导致目标舰船£ship_stats_armor£护盾与£ship_stats_shield£装甲的§R耐久值归零§!。（此伤害不会使后续的船体伤害衰减）"
+
 ge_vn_secondary_beam:0 "§B三联装重型对舰幽能炮§!-§E日冕§!"
 ge_vn_secondary_beam_DESC:0 "相比于§H星河§!主炮的震撼人心，§E日冕§!的威力就要减弱很多，但这也意味着我们基本可以毫无顾忌的使用它们来粉碎敌人。"
+ge_vn_secondary_beam_on_hit_s_tt: "命中时，若目标舰船未处于$ge_shippart_time_freeze$的时间静止中且大小至少为战列舰以上，则有§G30%§!的概率§G回复本身少量£ship_stats_armor£护盾值、£ship_stats_shield£装甲值与£ship_stats_hitpoints£船体值§!。"
+
 ge_small_vn_laser:0 "§B幽能单装炮§!"
 ge_small_vn_laser_DESC:0 ""
 ge_medium_vn_laser:0 "§B双联装幽能炮§!"
@@ -85,8 +89,11 @@ ge_large_vn_laser:0 "§B三联装幽能炮§!"
 ge_large_vn_laser_DESC:0 ""
 ge_vn_laser:0 "§B幽能联装炮§!"
 ge_vn_laser_DESC:0 "这一系列的幽能联装炮的口径皆为1000mm，虽然虚空武器的输出与外观口径没有什么关联，不过看着这黑黝黝的庞大炮口，总比那些小水管来得安心多了。"
+
 ge_vn_torpedo:0 "§B幽能内爆弹§!"
 ge_vn_torpedo_DESC:0 "这是开天导弹的改良版，得益于对虚空能量的不断进展，我们解决了开天导弹充能速度慢到令人摆烂的大问题，虽然伤害提升不大，但是射的快多了。"
+ge_vn_torpedo_on_hit_s_tt: "命中时，有§B75%§!的概率造成该武器命中目标时1.5倍伤害数值的额外伤害。"
+
 ge_vn_pd:0 "§B幽能速射机炮§!"
 ge_vn_pd_DESC:0 "这些点防御阵列不仅能轻易解决敌方舰载机和导弹，还能直接杀伤任何敢靠近其射程的小型舰艇。"
 ge_vn_aux:0 "§B损伤定义装置§!/§R幽能深渊§!"
@@ -97,20 +104,25 @@ ge_vn_strike_craft_bomber:0 "§B幽能轰炸机§!"
 ge_vn_strike_craft_bomber_DESC:0 "帝国某高级飞行教官曾表示：以该机型的防护能力，帝国士兵完全可以对敌舰执行跳帮战术，完成对敌舰的俘获。"
 
 #########################################################
- ge_sgt_main_beam:0 "§M星河主炮§!"
- ge_sgt_main_beam_DESC:0 "这是水银灯不知道从哪里得到的神秘主炮，这个玩意儿虽然很强，但是只能用在她的座驾上……"
- ge_sgt_main_T_beam:"§M星河主炮PLUS§!"
- ge_sgt_main_T_beam_DESC:"这是水银灯不知道从哪里得到的神秘主炮，这个玩意儿比那个星河更强，但依旧只能用在她的座驾上……"
- ge_sgt_main_beam_1:0 "§M星河主炮-1号位§!"
- ge_sgt_main_beam_1_DESC:0 "水银灯不知道从哪里得到的神秘主炮，这个玩意儿虽然很强，但是只能用在她的座驾上……"
- ge_medium_stg_laser:0 "§M黑翎羽§!"
- ge_medium_stg_laser_DESC:0 "这明明射出来的是激光，但是水银灯坚持认为这是羽毛动能弹，还直言声称很快这个激光特效就会换成真正的羽毛特效了……"
- ge_small_stg_laser:0 "§M黑翎羽§!"
- ge_small_stg_laser_DESC:0 "这明明射出来的是激光，但是水银灯坚持认为这是羽毛动能弹，还直言声称很快这个激光特效就会换成真正的羽毛特效了……"
- ge_large_stg_laser:0 "§M黑翎羽§!"
- ge_large_stg_laser_DESC:0 "这明明射出来的是激光，但是水银灯坚持认为这是羽毛动能弹，还直言声称很快这个激光特效就会换成真正的羽毛特效了……"
+ge_sgt_main_beam:0 "§M星河主炮§!"
+ge_sgt_main_beam_DESC:0 "这是水银灯不知道从哪里得到的神秘主炮，这个玩意儿虽然很强，但是只能用在她的座驾上……"
+ge_sgt_main_T_beam:"§M星河主炮PLUS§!"
+ge_sgt_main_T_beam_DESC:"这是水银灯不知道从哪里得到的神秘主炮，这个玩意儿比那个星河更强，但依旧只能用在她的座驾上……"
+ge_sgt_main_beam_1:0 "§M星河主炮-1号位§!"
+ge_sgt_main_beam_1_DESC:0 "水银灯不知道从哪里得到的神秘主炮，这个玩意儿虽然很强，但是只能用在她的座驾上……"
+
+ge_medium_stg_laser:0 "§M黑翎羽§!"
+ge_medium_stg_laser_DESC:0 "这明明射出来的是激光，但是水银灯坚持认为这是羽毛动能弹，还直言声称很快这个激光特效就会换成真正的羽毛特效了……"
+ge_small_stg_laser:0 "§M黑翎羽§!"
+ge_small_stg_laser_DESC:0 "这明明射出来的是激光，但是水银灯坚持认为这是羽毛动能弹，还直言声称很快这个激光特效就会换成真正的羽毛特效了……"
+ge_large_stg_laser:0 "§M黑翎羽§!"
+ge_large_stg_laser_DESC:0 "这明明射出来的是激光，但是水银灯坚持认为这是羽毛动能弹，还直言声称很快这个激光特效就会换成真正的羽毛特效了……"
+ge_stg_laser_on_hit_s_tt: "命中时，将降低目标舰船§R10%命中率§!，该效果持续30£time£。（该效果最多叠加5次,不限槽位大小）"
+
 ge_sgt_torpedo:0 "§M虚空炸弹§!"
 ge_sgt_torpedo_DESC:0 "§R警告，虚空隔绝减弱，同质体信息融合度正在上升。§!"
+ge_sgt_torpedo_on_hit_s_tt: "命中时，有§B50%§!的概率造成该武器命中目标时等值的额外伤害。"
+
 ge_sgt_pd:0 "§M虚锋§!"
 ge_sgt_pd_DESC:0 "§M“这是陈老太爷教我的！”§!\n§M“陈老太爷是谁啊？……”§!"
 

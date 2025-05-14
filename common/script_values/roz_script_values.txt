@@ -64,3 +64,20 @@ ge_wtorpedo_damage_modifier_amount = {
 	mult = ge_wtorpedo_damage_modifier_weapon_type_ge_void_energy_weapon_damage_mult
     mult = 2.5
 }
+
+ge_vn_torpedo_damage_modifier_amount = {
+	add = 18500
+	mult = ge_vn_torpedo_damage_modifier_ship_weapon_damage
+	mult = ge_vn_torpedo_damage_modifier_ship_hull_damage_mult
+	mult = ge_vn_torpedo_damage_modifier_weapon_type_ge_void_energy_weapon_damage_mult
+	mult = 4.0
+}
+
+ge_sgt_torpedo_damage_modifier_amount = {
+	add = 800
+	mult = ge_sgt_torpedo_damage_modifier_ship_weapon_damage
+	mult = ge_sgt_torpedo_damage_modifier_ship_hull_damage_mult
+	mult = ge_sgt_torpedo_damage_modifier_weapon_type_explosive_weapon_damage_mult
+	mult = ge_sgt_torpedo_damage_modifier_weapon_type_ge_void_energy_weapon_damage_mult
+	mult = 1.25
+}

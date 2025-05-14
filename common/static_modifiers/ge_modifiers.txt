@@ -757,4 +757,8 @@ ge_t_beam_on_hit_effect_modifier = {
 	ship_damage_reduction_mult = -0.25
 }
 
+ge_stg_laser_on_hit_effect_modifier = {
+	ship_accuracy_mult = -0.1
+	ship_tracking_mult = -0.1
+}
 

@@ -160,6 +160,13 @@ weapon_component_template = {
 	component_set = "ge_medium_stg_laser"
 	projectile_gfx = "ge_vn_laser_m_projectile"
 
+	on_hit = {
+		custom_tooltip = "ge_stg_laser_on_hit_s_tt"
+		hidden_effect = {
+			ge_stg_laser_on_hit_effect = yes
+		}
+	}
+
 	ai_tags = {
 		weapon_role_anti_armor
 		weapon_role_anti_shield
@@ -201,6 +208,13 @@ weapon_component_template = {
     power = -1500	
 	component_set = "ge_medium_stg_laser"
 	projectile_gfx = "ge_vn_laser_m_projectile"
+
+	on_hit = {
+		custom_tooltip = "ge_stg_laser_on_hit_s_tt"
+		hidden_effect = {
+			ge_stg_laser_on_hit_effect = yes
+		}
+	}
 	
 	ai_tags = { 
 		weapon_role_anti_armor 
@@ -244,6 +258,13 @@ weapon_component_template = {
 	component_set = "ge_medium_stg_laser"
 	projectile_gfx = "ge_vn_laser_m_projectile"
 
+	on_hit = {
+		custom_tooltip = "ge_stg_laser_on_hit_s_tt"
+		hidden_effect = {
+			ge_stg_laser_on_hit_effect = yes
+		}
+	}
+
 	ai_tags = {
 		weapon_role_anti_armor
 		weapon_role_anti_shield
@@ -280,6 +301,13 @@ weapon_component_template = {
 	icon = "GFX_ship_part_ge_vn_torpedo"
 	icon_frame = 1
 	#hidden = yes	
+
+	on_hit = {
+		custom_tooltip = ge_sgt_torpedo_on_hit_s_tt
+		hidden_effect = {
+			ge_sgt_torpedo_on_hit_effect = yes
+		}
+	}
 	
 	power = -4000							
 	damage = { min = 618 max = 905 }		
@@ -291,7 +319,7 @@ weapon_component_template = {
 	tracking = 0.80                        
 	range = 250.00                         
 	accuracy = 1.00                        
-	missile_health = 200				   
+	missile_health = 200
 	missile_shield = 320		   
 	missile_armor = 320			   
 	missile_evasion = 0.9					   
