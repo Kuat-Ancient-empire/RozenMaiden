@@ -510,7 +510,7 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	projectile_gfx = "ge_vn_t_beam_projectile"
 	component_set = "ge_sgt_normal_beam"
-	power = -3500
+	power = -1500
 	damage = { min = 2048 max = 4096 }
 	windup = { min = 30 max = 50 }
 	total_fire_time = 20
@@ -555,7 +555,7 @@ weapon_component_template = {
 	icon_frame = 1
 	#hidden = yes
 
-	power = -2500
+	power = -1000
 	component_set = "ge_normal_medium_laser"
 	projectile_gfx = "ge_vn_laser_m_projectile"
 
@@ -612,7 +612,7 @@ weapon_component_template = {
 	icon_frame = 1
 	#hidden = yes
 
-	power = -1750
+	power = -750
 	component_set = "ge_normal_medium_laser"
 	projectile_gfx = "ge_vn_laser_m_projectile"
 
@@ -669,7 +669,7 @@ weapon_component_template = {
 	icon_frame = 1
 	#hidden = yes
 
-	power = -1000
+	power = -500
 	component_set = "ge_normal_medium_laser"
 	projectile_gfx = "ge_vn_laser_m_projectile"
 
