@@ -4005,6 +4005,10 @@ roz_lgate_create_reward_planet = {
 
 	# give_technology = { tech = tech_fe_mine_2 }
 
+	give_technology = { tech = tech_mineral_purification_1 }
+
+	give_technology = { tech = tech_food_processing_1 }
+
 	random_planet_within_border = {
 		limit = {
 			is_planet_class = pc_gray_goo
@@ -4030,10 +4034,80 @@ roz_lgate_create_reward_planet = {
 			radius = 120
 			center = this.solar_system
 		}
-		#remove_all_districts = yes
+
+		remove_all_districts = yes
+		validate_and_repair_planet_buildings_and_districts = yes
+
+		add_deposit = d_meals_in_pods
+		add_deposit = d_prisoner_intergration
+		add_deposit = d_ancient_particle_accelerator
+		add_deposit = d_alien_sanctuary
+		add_deposit = d_betharian_deposit
+		add_deposit = d_underwater_vent
+		add_deposit = d_tempestous_mountain
+		add_deposit = d_submerged_ore_veins
+		add_deposit = d_rich_mountain
+		add_deposit = d_black_soil
+		add_deposit = d_teeming_reef
+
+
 		while = {
 			count = 25
 			add_district = district_city
+		}
+
+		set_variable = {
+			which = energy_districts
+			value = 2
+		}
+		set_variable = {
+			which = mining_districts
+			value = 2
+		}
+		set_variable = {
+			which = farming_districts
+			value = 2
+		}
+		add_district_and_planet_size_if_needed_effect_amount = {
+			amount = energy_districts
+			district = district_generator
+		}
+		add_district_and_planet_size_if_needed_effect_amount = {
+			amount = mining_districts
+			district = district_mining
+		}
+		add_district_and_planet_size_if_needed_effect_amount = {
+			amount = farming_districts
+			district = district_farming
+		}
+		clear_variable = energy_districts
+		clear_variable = mining_districts
+		clear_variable = farming_districts
+
+		add_zone = {
+			district = district_city
+			zone = zone_research_unity
+			zone_slot = 1
+		}
+		add_zone = {
+			district = district_city
+			zone = zone_industrial
+			zone_slot = 2
+		}
+		add_zone = {
+			district = mining_districts
+			zone = zone_minerals
+			zone_slot = 1
+		}
+		add_zone = {
+			district = energy_districts
+			zone = zone_energy
+			zone_slot = 1
+		}
+		add_zone = {
+			district = farming_districts
+			zone = zone_food
+			zone_slot = 1
 		}
 
 		while = {
@@ -4047,29 +4121,78 @@ roz_lgate_create_reward_planet = {
 		}
 
 		#add_building = building_capital
-		add_deposit = d_meals_in_pods
-		add_deposit = d_prisoner_intergration
-		add_deposit = d_ancient_particle_accelerator
-		add_deposit = d_alien_sanctuary
-		add_deposit = d_betharian_deposit
 		#remove_building = building_colony_shelter
 
 		#add_building = building_roz_ancient_palace
 		add_building = building_roz_fe_stronghold
-		#add_building = building_roz_fe_dome
-		add_building = building_roz_master_archive
-		add_building = building_roz_nano_forge
-		add_building = building_roz_class_5_singularity
-		add_building = building_roz_dimensional_fabricator
-		#add_building = building_roz_nourishment_center
-		add_building = building_roz_affluence_center
-		add_building = building_roz_fe_administration_2
+		add_building = building_roz_fe_dome
 		add_building = building_roz_fe_clinic_2
-		add_building = building_roz_fe_market_2
-		add_building = building_roz_fe_silo_2
-		#add_building = building_roz_fe_entertainment_2
-		add_building = building_roz_fe_lab_2
-		add_building = building_roz_fe_mine_2
+
+		add_building = { 
+			building = building_roz_fe_administration_2
+			district = district_city
+			zone = zone_research_unity
+		}
+		add_building = { 
+			building = building_roz_fe_lab_2
+			district = district_city
+			zone = zone_research_unity
+		}
+		add_building = { 
+			building = building_roz_master_archive
+			district = district_city
+			zone = zone_research_unity
+		}
+
+		add_building = { 
+			building = building_roz_dimensional_fabricator
+			district = district_city
+			zone = zone_industrial
+		}
+		add_building = { 
+			building = building_roz_affluence_center
+			district = district_city
+			zone = zone_industrial
+		}
+		add_building = { 
+			building = building_roz_nano_forge
+			district = district_city
+			zone = zone_industrial
+		}
+
+		add_building = { 
+			building = building_roz_class_5_singularity
+			district = energy_districts
+			zone = zone_energy
+		}
+		add_building = { 
+			building = building_roz_fe_market_2
+			district = energy_districts
+			zone = zone_energy
+		}
+
+		add_building = { 
+			building = building_roz_fe_mine_2
+			district = mining_districts
+			zone = zone_minerals
+		}
+		add_building = { 
+			building = building_roz_fe_silo_2
+			district = mining_districts
+			zone = zone_minerals
+		}
+
+		add_building = { 
+			building = building_roz_nourishment_center
+			district = farming_districts
+			zone = zone_food
+		}
+		add_building = { 
+			building = building_roz_fe_entertainment_2
+			district = farming_districts
+			zone = zone_food
+		}
+
 
 		set_name = NAME_roz_lgate
 		

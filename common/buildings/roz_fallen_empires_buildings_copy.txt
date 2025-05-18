@@ -59,8 +59,7 @@ building_roz_affluence_center = {
     can_be_ruined = no
     icon = building_affluence_center
     building_sets = {
-        urban
-        government
+       automation
     }    
     category = manufacturing
     potential = {
@@ -71,7 +70,8 @@ building_roz_affluence_center = {
         owner = { has_country_flag = roz_lgate_create_flag }
     }
     planet_modifier = {
-        planet_amenities_add = 1000
+        planet_amenities_add = 3000
+        planet_artisans_produces_mult = 0.20
     }
     inline_script = {
         script = jobs/factory_add
@@ -80,7 +80,7 @@ building_roz_affluence_center = {
     resources = {
         category = planet_buildings
         produces = {
-            consumer_goods = 100
+            consumer_goods = 150
         }
         upkeep = {
             minerals = 25
@@ -100,8 +100,7 @@ building_roz_nourishment_center = {
     can_be_ruined = no
     icon = building_nourishment_center
     building_sets = {
-        urban
-        government
+        automation
     }  
     category = resource
 
@@ -115,6 +114,7 @@ building_roz_nourishment_center = {
 
     planet_modifier = {
         pop_environment_tolerance = 0.10
+        planet_farmers_produces_mult = 0.20
     }
     inline_script = {
         script = jobs/farmers_add
@@ -124,7 +124,7 @@ building_roz_nourishment_center = {
     resources = {
         category = planet_buildings
         produces = {
-            food = 350
+            food = 400
         }
         upkeep = {
             energy = 20
@@ -143,8 +143,7 @@ building_roz_dimensional_fabricator = {
     can_be_ruined = no
     icon = building_dimensional_fabricator
     building_sets = {
-        urban
-        government
+        automation
     }  
     category = manufacturing
 
@@ -157,20 +156,23 @@ building_roz_dimensional_fabricator = {
     }
 
     planet_modifier = {
-        job_miner_add = 200
+        planet_miners_produces_mult = 0.20
+        planet_farmers_exotic_gases_produces_add = 0.05
+        planet_miner_volatile_motes_produces_add = 0.05
+        planet_technicians_rare_crystals_produces_add = 0.05
     }
 
     resources = {
         category = planet_buildings
         produces = {
-            minerals = 400
+            minerals = 200
             rare_crystals = 15
             exotic_gases = 15
             volatile_motes = 15
-            sr_zro = 2
-            sr_dark_matter = 2
-            sr_living_metal = 2
-            nanites = 2
+            sr_zro = 5
+            sr_dark_matter = 5
+            sr_living_metal = 5
+            nanites = 5
         }
         produces = {
             trigger = {
@@ -181,11 +183,45 @@ building_roz_dimensional_fabricator = {
             sr_living_metal = 2
             minor_artifacts = 1
         }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_KZ_VOY_astral_magic
+                }
+            }
+            KZ_VOY_astraldites = 25
+            KZ_VOY_cavorites = 25
+            KZ_VOY_stellar_core = 10
+            KZ_VOY_astral_sakura = 5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_KZ_VOY_astral_magic
+                    has_technology = tech_KZ_VOY_hyperstructure
+                }
+            }
+            KZ_VOY_hyperstructure_alloys = 10
+        }
         upkeep = {
             energy = 10
             minerals = 10
         }
     }
+
+    triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
+			}
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
+	}
 
     upgrades = {
     }
@@ -199,8 +235,7 @@ building_roz_class_5_singularity = {
     can_be_ruined = no
     icon = building_bio_reactor_2
     building_sets = {
-        urban
-        government
+        automation
     }  
     category = resource
 
@@ -216,14 +251,11 @@ building_roz_class_5_singularity = {
         script = jobs/technicians_add
         AMOUNT = @fe_jobs
     }
-    triggered_planet_modifier = {
-        potential = {
-            
-        }
-    }
     planet_modifier = {
-
+        planet_technician_produces_mult = 0.20
+        #pop_workforce_add = 123456
     }
+
 
     resources = {
         category = planet_buildings
@@ -246,8 +278,7 @@ building_roz_nano_forge = {
     icon = building_nano_forge
     category = manufacturing
     building_sets = {
-        urban
-        government
+        automation
     }  
     potential = {
         exists = owner
@@ -265,19 +296,20 @@ building_roz_nano_forge = {
         AMOUNT = @fe_jobs
     }
     planet_modifier = {
-        planet_structures_upkeep_mult = -0.05
+        planet_structures_upkeep_mult = -0.1
+        planet_metallurgists_produces_mult = 0.15
     }
 
     resources = {
         category = planet_buildings
         produces = {
-            alloys = 50
+            alloys = 75
         }
         upkeep = {
             minerals = 20
             energy = 20
             #volatile_motes = 1
-            #sr_dark_matter = 1
+            sr_dark_matter = 1
         }
     }
 
@@ -295,8 +327,7 @@ building_roz_master_archive = {
     icon = building_syndicate_outreach_office
     category = research
     building_sets = {
-        urban
-        government
+        automation
     }  
     potential = {
         exists = owner
@@ -370,6 +401,16 @@ building_roz_master_archive = {
         planet_jobs_engineering_research_produces_mult = 0.15
     }
 
+    planet_modifier = {
+        planet_physicists_physics_research_produces_add = 2
+		planet_biologists_society_research_produces_add = 2
+		planet_engineers_engineering_research_produces_add = 2
+    }
+
+    country_modifier = {
+		country_scientist_cap_add = 1
+	}
+
     resources = {
         category = planet_buildings
         produces = {
@@ -379,6 +420,7 @@ building_roz_master_archive = {
         }
         upkeep = {
             energy = 30
+            exotic_gases = 1
         }
     }
 
@@ -391,8 +433,7 @@ building_roz_fe_dome = {
     can_build = no
     icon = building_fe_dome
     building_sets = {
-        urban
-        government
+        automation
     }  
     category = amenity
 
@@ -405,10 +446,10 @@ building_roz_fe_dome = {
     }
 
     planet_modifier = {
-		planet_housing_add = 5000
-		planet_amenities_add = 5000
-		planet_pops_upkeep_mult = -0.10
-        planet_crime_add = -10
+		planet_housing_add = 7500
+		planet_amenities_add = 7500
+		planet_pops_upkeep_mult = -0.15
+        planet_crime_add = -25
 	}
 
     triggered_planet_modifier = {
@@ -435,8 +476,7 @@ building_roz_fe_stronghold = {
     can_build = no
     icon = building_fe_fortress
     building_sets = {
-        urban
-        government
+        automation
     }  
     category = army
 
@@ -453,6 +493,10 @@ building_roz_fe_stronghold = {
     }
 
     planetary_ftl_inhibitor = yes
+
+    country_modifier = {
+		ship_shield_hardening_add = 0.2
+	}
 
     triggered_planet_modifier = {
 		potential = {
@@ -487,7 +531,7 @@ building_roz_fe_stronghold = {
 	}
 
 	planet_modifier = {
-		planet_orbital_bombardment_damage = -0.5
+		planet_orbital_bombardment_damage = -0.75
 	}
 
     resources = {
@@ -523,8 +567,7 @@ building_roz_fe_administration_2 = {
     icon = building_fe_administration_2
     category = unity
     building_sets = {
-        urban
-        government
+        automation
     }  
     potential = {
         exists = owner
@@ -540,13 +583,15 @@ building_roz_fe_administration_2 = {
             alloys = @b3_minerals
         }
         produces = {
-            unity = 50
+            unity = 150
         }
     }
 
     planet_modifier = {
         pop_housing_usage_mult = -0.15
         planet_crime_add = -10
+        planet_bureaucrats_unity_produces_add = 2
+        planet_bureaucrats_trade_produces_add = 2
     }
 
     triggered_planet_modifier = {
@@ -632,8 +677,7 @@ building_roz_fe_clinic_2 = {
     icon = building_fe_clinic_2
     category = amenity
     building_sets = {
-        urban
-        government
+        automation
     }  
     potential = {
         exists = owner
@@ -655,28 +699,77 @@ building_roz_fe_clinic_2 = {
         }
     }
 
-    country_modifier = {
-        leader_lifespan_add = 2
-    }
+    # planet_modifier = {
+    #     pop_workforce_add = 2000
+    # }
 
-    inline_script = {
-		script = jobs/spawning_drone_add
-		AMOUNT = @building_static_jobs_high
+    triggered_planet_pop_group_modifier_for_all = {
+		potential = {
+			always= yes
+		}
+		bonus_pop_growth = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_cloning_tradition = yes
+				has_tradition = tr_genetics_efficient_cloning
+			}
+		}
+		fake_pop_growth_mod = 5
 	}
 
     triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_regular_empire = no
-            }
-        }
-        modifier = {
-            job_spawning_drone_add = 3
-        }
-    }
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 200
+		}
+	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				game_start_auto_mod_empire = yes
+			}
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 200
+		}
+	}
+    
+    ##
     triggered_planet_modifier = {
+		potential = {
+			always= yes
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
+	}
+
+	country_modifier = {
+		leader_lifespan_add = 2
+	}
+
+	inline_script = {
+		script = jobs/spawning_drone_add
+		AMOUNT = 300
+	}
+
+	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -684,7 +777,7 @@ building_roz_fe_clinic_2 = {
 			}
 		}
 		modifier = {
-			job_healthcare_add = @fe_jobs
+			job_healthcare_add = 300
 		}
 	}
 
@@ -727,7 +820,7 @@ building_roz_fe_clinic_2 = {
 			}
 		}
 		clone_soldiers_sustained = @clones_sustained_low
-		mult = 4
+		mult = 2
 	}
 
 	triggered_planet_modifier = {
@@ -742,7 +835,7 @@ building_roz_fe_clinic_2 = {
 			}
 		}
 		pop_bonus_workforce_mult = @medical_workforce_mult
-		mult = 4
+		mult = 2
 	}
 
 	triggered_desc = {
@@ -756,6 +849,7 @@ building_roz_fe_clinic_2 = {
 	}
 }
 
+#星际贸易枢纽
 building_roz_fe_market_2 = {
     base_buildtime = @b2_time
     can_build = no
@@ -763,9 +857,7 @@ building_roz_fe_market_2 = {
     category = trade
 
     building_sets = {
-        urban
-        government
-        trade
+        automation
     }  
 
     potential = {
@@ -788,13 +880,26 @@ building_roz_fe_market_2 = {
         }
     }
 
-    inline_script = {
-		script = "jobs/trader_add"
-		AMOUNT = @building_static_jobs
+    triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
+			}
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
 	}
 
-    country_modifier = {
-		country_trade_produces_mult = 0.01
+	inline_script = {
+		script = "jobs/trader_add"
+		AMOUNT = 1200
+	}
+
+	country_modifier = {
+		country_trade_produces_mult = 0.10
+        country_trade_fee = -0.10
 	}
 
 	planet_modifier = {
@@ -823,11 +928,7 @@ building_roz_fe_silo_2 = {
     }
 
     building_sets = {
-		urban
-		generator
-		mining
-		farming
-        government
+		automation
 	}
 
     destroy_trigger = {
@@ -845,8 +946,21 @@ building_roz_fe_silo_2 = {
         }
     }
 
+    triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
+			}
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
+	}
+
     country_modifier = {
-        country_resource_max_add = 300000
+        country_resource_max_add = 400000
+        country_resource_max_minor_artifacts_add = 4000
     }
 }
 
@@ -861,8 +975,7 @@ building_roz_fe_entertainment_2 = {
     }
 
     building_sets = {
-		urban
-        government
+		automation
 	}
 
     destroy_trigger = {
@@ -881,9 +994,22 @@ building_roz_fe_entertainment_2 = {
         }
     }
 
+    triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
+			}
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
+	}
+
     planet_modifier = {
 		job_entertainer_add = @fe_jobs
 		planet_amenities_add = 10000
+        pop_bonus_workforce_mult = 0.10
 	}
 
     triggered_desc = {
@@ -898,102 +1024,67 @@ building_roz_fe_lab_2 = {
     category = research
 
     building_sets = {
-        urban
-		research
-		physics
-		society
-		engineering
-        government
+        automation
 	}
 
     potential = {
         exists = owner
-        NOT = {
-            has_building = building_roz_fe_lab_2
-        }
         num_buildings = {
             type = building_roz_fe_lab_2
-            value = 0
+            value <= 1
         }
-        owner = {
-            has_country_flag = roz_SK_3_start_reward
+        solar_system = {
+            has_star_flag = graygoo_factory_system
         }
+        owner = { has_country_flag = roz_lgate_create_flag }
     }
 
     destroy_trigger = {
         always = no
     }
 
-    inline_script = {
-		script = "jobs/politician_add"
-		AMOUNT = @building_static_jobs
+    resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			exotic_gases = 1
+			alloys = @b3_alloy_upkeep
+			energy = 30
+		}
+		cost = {
+			trigger = {
+				owner = { is_wilderness_empire = yes }
+			}
+			biomass = @b3_biomass
+		}
+		produces = {
+			physics_research = 100
+			society_research = 100
+			engineering_research = 100
+		}
 	}
 
-    resources = {
-        category = planet_buildings
-        cost = {
-            alloys = @b3_minerals
-        }
-        upkeep = {
-            #exotic_gases = 2
-            alloys = @b3_upkeep
-            energy = 30
-        }
-        produces = {
-            physics_research = 75
-            society_research = 75
-            engineering_research = 75
-        }
-    }
-
-    country_modifier = {
-        all_technology_research_speed = 0.05
-    }
-
-    triggered_desc = {
-		trigger = {
+    triggered_planet_modifier = {
+		potential = {
 			exists = owner
 			owner = {
-				is_regular_empire = yes
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
 			}
 		}
-		text = job_head_researcher_desc
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_physicist_add = 400
-			job_biologist_add = 400
-			job_engineer_add = 400
-		}
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @building_static_jobs_high
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			job_calculator_physicist_add = @fe_jobs
-			job_calculator_biologist_add = @fe_jobs
-			job_calculator_engineer_add = @fe_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_calculator_physicist_add = @fe_jobs
-			job_calculator_biologist_add = @fe_jobs
-			job_calculator_engineer_add = @fe_jobs
-		}
+    inline_script = {
+		script = jobs/biologists_add
+		AMOUNT = @building_static_jobs
 	}
 
 	triggered_planet_modifier = {
@@ -1022,32 +1113,8 @@ building_roz_fe_lab_2 = {
 			has_modifier = pm_extradimensional_experimentation
 		}
 		modifier = {
-			job_dimensional_portal_researcher_gestalt_add = 200
+			job_calculator_physicist_add = 200
 		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		text = job_researcher_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		text = job_brain_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_calculator_effect_desc
 	}
 }
 
@@ -1061,8 +1128,7 @@ building_roz_fe_mine_2 = {
         exists = owner
     }
     building_sets = {
-        urban
-        government
+        automation
     }  
     destroy_trigger = {
         always = no
@@ -1088,7 +1154,23 @@ building_roz_fe_mine_2 = {
         }
     }
 
+    planet_modifier = {
+		district_mining_max = @b4_max_districts_add
+	}
+
     triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
+			}
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
+	}
+
+	triggered_planet_modifier = {
 		potential = {
 			NOT = { is_planet_class = pc_shattered_ring_habitable }
 			exists = owner

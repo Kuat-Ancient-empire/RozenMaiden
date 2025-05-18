@@ -308,16 +308,16 @@ roz_time_freeze_activity_desc: "§R警告 - 时间静止已经启动！§!"
 
 roz_agenda_void_core_boost_available_title: "解锁内阁议程：§B能源泄洪§!"
 roz_agenda_void_core_boost_available_desc: ""
-MESSAGE_ROZ_sgt_gal_MESSAGE_TYPE_TITLE: "§M来自水银灯的暗示§!"
+
+ROZ_sgt_gal_MESSAGE: "§M来自水银灯的暗示§!"
+ROZ_sgt_gal_MESSAGE_TYPE: "§M来自水银灯的暗示§!"
+ROZ_sgt_gal_MESSAGE_desc: "看起来，她已经准备好再次和你出去共度时光了"
 MESSAGE_roz_sgt_gal_MESSAGE_TITLE_desc: "看起来，她已经准备好再次和你出去共度时光了"
 
-MESSAGE_ROZ_krks_gal_MESSAGE_TYPE_TITLE: "§M来自雪华绮晶的邀请§!"
-ROZ_sgt_gal_MESSAGE_TYPE: "§M来自雪华绮晶的邀请§!"
-ROZ_sgt_gal_MESSAGE: "§M来自雪华绮晶的邀请§!"
-
-MESSAGE_ROZ_krks_gal_MESSAGE_desc: "看起来，她十分期待接下来的约会"
-ROZ_krks_gal_MESSAGE_TYPE: "看起来，她十分期待接下来的约会"
-ROZ_krks_gal_MESSAGE: "看起来，她十分期待接下来的约会"
+ROZ_krks_gal_MESSAGE: "§P来自雪华绮晶的邀请§!"
+ROZ_krks_gal_MESSAGE_TYPE: "§P来自雪华绮晶的邀请§!"
+ROZ_krks_gal_MESSAGE_desc: "看起来，她十分期待接下来的约会"
+MESSAGE_roz_krks_gal_MESSAGE_TITLE_desc: "看起来，她十分期待接下来的约会"
 ###########################################
 ###agenda
 

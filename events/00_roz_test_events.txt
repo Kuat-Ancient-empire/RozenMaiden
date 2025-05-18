@@ -1339,10 +1339,10 @@ country_event = {
 					has_country_flag = enable_roz_cheat
 				}
 				roz_lgate_create_reward_planet = yes
-				country_event = {
-					id = ge_test_event.202
-					days = 40
-				}
+				# country_event = {
+				# 	id = ge_test_event.202
+				# 	days = 40
+				# }
 			}
 		}
 	}

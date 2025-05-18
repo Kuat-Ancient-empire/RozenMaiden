@@ -1561,6 +1561,13 @@ country_event = {
     }
 }
 
+# country_event = {
+#     id = ge_communication.290
+#     is_triggered_only = yes
+#     event_message_type = ROZ_sgt_gal_MESSAGE_TYPE
+#     message_desc = "ge_communication.281.desc"
+# }
+
 
 #
 #country_event = {	###
