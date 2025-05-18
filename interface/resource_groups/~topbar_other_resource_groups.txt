@@ -1,4 +1,5 @@
-#OTHER#来自伞框架
+#覆盖内容OVERWRITE REPLACE
+#OTHER（来自小伞框架）（清除重复的久远资源）
 
 tb_others_group = {
 	##	罕见
@@ -14,7 +15,7 @@ tb_others_group = {
 	}
 	##	天灾
 	category = {
-		name = "CRISIS_TAB"
+		name = "CRISIS_TAB" 
 		resources = {
 			menace
 		}
@@ -32,8 +33,13 @@ tb_others_group = {
 			sr_zro
 			sr_dark_matter
 			nanites
-
+			
 			##	多刺旧	##############################################################
+			#love_juice
+			#holylight_crystal
+			#excellent_slave
+			#sr_christian
+			#sr_beauty
 			living_tentacles
 			Obscene_separation
 			lust_data
@@ -56,12 +62,14 @@ tb_others_group = {
 			#	皑茵世界旅行指南
 			megami_stone
 			#	久远
-			KZ_VOY_zero_g_crystal
-			KZ_VOY_dilithium_crystal
+			KZ_VOY_astraldites
 			KZ_VOY_stellar_core
+			KZ_VOY_cavorites
 			KZ_VOY_hyperstructure_alloys
-			KZ_VOY_stellar_sakura
-
+			KZ_VOY_astral_sakura
+			#	科学革命
+			conscious_life
+			
 			##	URP	##############################################################
 			# "688086068	ST: New Horizons"
 			sr_latinum
@@ -357,7 +365,7 @@ tb_others_group = {
 			plate_armor		# old
 			gold_coins		# old
 			mind_energy		# old
-			xeno_abled_bodies		# old
+			xeno_abled_bodies		# old	
 			# "2493984024	New Government Mod 2 JP"
 			# ngm_order_of_merit		# duplicate
 			# "2517513764	ThaumStellaris"
@@ -387,7 +395,7 @@ tb_others_group = {
 			# "2538207206	Project SCP (Formerly SCP Anomalies & Events)"
 			# scpanomaly_living_legos		# presumably hidden
 			# "2547826658	Origin Beings"
-			sr_dilithium_crystals
+			sr_astralditess
 			sr_quartz_crystals
 			# archaeological_artifacts	# presumably hidden
 			sr_neutroniumm
@@ -452,7 +460,7 @@ tb_others_group = {
 			# "2665584412	Nomadic lifestyle (3.2)"
 			sr_nomadic_population
 			# "2785989313 Assault Lily Species"
-			# AL_unicorn
+			AL_unicorn
 			AL_magi_crystal
 			AL_magi_crystal_core
 			AL_magi_alloy
@@ -461,10 +469,10 @@ tb_others_group = {
 			# sr_solar_matter
 			AL_lily_diary
 			AL_magic_bullet
-			# "2677473144	StellarisCraft"
+			# "2677473144	StellarisCraft"	
 			sr_khaydarin_pylon
 			sr_terrazine
-			# "2818673378	Vampire The Masquerade - Stellaris Edition"
+			# "2818673378	Vampire The Masquerade - Stellaris Edition"	
 			sr_blood
 			# "2820330517	Secrets of the Shroud"
 			sm_sr_perfect_runic_energy
@@ -569,7 +577,7 @@ tb_others_group = {
 			Adamantium
 			# "1270179464 Robot civic-Paperclip Maximizer"
 			dsa_paperclips
-			# "2090352686 Slightly More Realistic Alloys, Minerals, and Consumer Goods (SMRAMCG)"
+			# "2090352686 Slightly More Realistic Alloys, Minerals, and Consumer Goods (SMRAMCG)"	
 			commercial_materials
 			# "SteamID Smutty Space Ponies"
 			magic_crystals
@@ -578,7 +586,7 @@ tb_others_group = {
 			# "2426344305 SteamID Space Whaling"
 			tiyanki_milk
 			# "1881901372 Stephan's Elemental Economy"
-			sr_hydrogen
+			# sr_hydrogen	# duplicate
 			sr_helium_3
 			sr_carbon
 			sr_ammonia
@@ -653,7 +661,7 @@ tb_others_group = {
 			ichor_blue_crystals
 			ichor_green
 			ichor_blue
-			# "2776070504 Rozen Maiden suigintou Leader Pack"
+			# "2776070504 Rozen Maiden Suigintou Leader Pack"
 			sr_rosa_mystica
 			sr_void_core
 			# "2775968897 Real Space - Planetary Stations"
@@ -714,6 +722,10 @@ tb_others_group = {
 			sxx_pills
 			sxx_gongfa
 			sxx_qiyun
+			sxx_weapon
+			sxx_xuesha
+			sxx_yuanli
+			sxx_world_power
 			# "BlueArchive species pack 2810064268"
 			sr_pyroxenes
 			sr_keystone
@@ -794,6 +806,8 @@ tb_others_group = {
 			sr_cultrobium
 			sr_hydrogen
 			sr_conscious_matter
+			sr_nuclei_soup
+			interdim_insights
 			# "Varied Monster Girls 2929251617"
 			lust_crystal
 			best_slaves
@@ -809,7 +823,86 @@ tb_others_group = {
 			touhou_power
 			touhou_point
 			touhou_bomb
+			# "居民休眠计划 3130538805"
+			stellaris_sleep_rest_cabin_resource
+			# "titan 2667950963"
+			titan_soul
+			# "The Emissary Of Endtime 3104960449"
+			# larva		# duplicate
+			# "Skogen787 SteamID"
+			stz_sr_caerulenite
+			stz_sr_viridisium
+			# "force728 SteamID"
+			purifier_solarite
+			# "DarkSpace 2719075597"
+			ds_sr_cam
+			# "原神（Genshin Impact）|闪耀的群星 2848888776"
+			mola
+			Elemental_crystal_nucleus
+			yuanshi
+			# "Vorpaline Innovations 3116870689"
+			sr_Vorpaline
+			# "SRH SteamID"
+			CR_Element_Crystal_B1
+			CR_Element_Crystal_B2
+			CR_Element_Crystal_B3
+			CR_Element_Crystal_R1
+			CR_Element_Crystal_R2
+			CR_Element_Crystal_G1
+			CR_Element_Crystal_G2
+			CR_Element_Crystal_T
+			CR_Element_Crystal_Y
+			CR_Element_Crystal_W1
+			CR_Element_Crystal_W2
+			CR_Element_Crystal_D1
+			CR_Element_Crystal_D2
+			CR_Element_Crystal_D3
+			CR_Element_Crystal_M
+			CR_Element_Crystal_TR
+			CR_Element_SRH
+			# "Military Enhancements 2.0 [Invasion Events and More] 3213623064"
+			sr_armaments
+			# "THE ABYSS CONTRACT [深渊契约] 2847901464"
+			TAC_time
+			# "Inverse Void Essence SteamID"
+			epoch_sr_ive
+			epoch_sr_voidessence
+			# "Phasetech: Pride of Gods SteamID"
+			pt_phasewave
+			pt_phasemass
+			pt_phase_research
+			# "Ethics and Civics Alternative - FunEFork 2949463581"
+			ecaf_crew
+			# "Helldivers 2 Framework 3303329484"
+			sr_HD2_E_710
+			sr_HD2_common_samples
+			sr_HD2_rare_samples
+			sr_HD2_super_samples
+			# "HRT in Stellaris 3322261057"
+			sr_estrogen
+			sr_testosterone
+			# "异界幻想 迷你故事包 3347194603"
+			OF_magicminerals
+			OF_rune
+			OF_magicalloys
+			# "Interstellar Ballistic Missile And other Things 2778216767"
+			sr_ibm_nuke_warhead
+			sr_ibm_antimatter_warhead
+			sr_ibm_darkmatter_warhead
+			# "Wiirlak Additional Civics & Origins 2425550468"
+			wiirlak_ac_resource_maelstrom_shard
+			# "40k Age of Indomitus 3133787332"
+			promethium
+			electronics
+			military_goods
+			spirit_stones
+			scrap
+			gene_seed
+			slaves
+			gods_favor
 			# "SteamID and mod name unknown"
+			sr_solar_matter
+			sr_dwarven_steel
 			mtp_tanatnim
 			mtp_elementenzyme
 			mtp_soulence
@@ -830,9 +923,10 @@ tb_others_group = {
 		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance < 0 stored >= 1000 stored < 10000 }
 		"RESOURCE_GROUP_DEFAULT_NEG_TOTAL_POS" = { total_balance >= 0 balance < 0 }
 		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX_DEC" = { max > 0 stored >= max total_stored >= 1000 total_stored < 10000 }
 		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
 		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
 
-	minimum_height = 175
+	minimum_height = 300	#控制展开面板高度
 }

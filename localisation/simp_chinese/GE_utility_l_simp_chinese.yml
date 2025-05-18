@@ -71,7 +71,7 @@ GE_DEFAULT_REACTOR:0 "空间站反应堆"
 GE_DEFAULT_REACTOR_DESC:0 "用于资源空间站的定制反应堆，为了给生产设施供能，反应堆设计了大量冗余电力. 经过适当调整后也可以完全兼容一些特殊类别的战舰。"
 
 ge_shippart_default:"空槽"
- ge_shippart_default_DESC:"空槽"
+ge_shippart_default_DESC:"空槽"
 
 ###############################AUX
  GE_WARP_DRIVE:0 "§P次元折跃引擎§!"

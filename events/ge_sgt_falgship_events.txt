@@ -433,52 +433,52 @@ situation_event = {
 		}
 		hidden_effect = {
 			add_situation_progress = 25
-			owner = {
-				create_fleet = {
-					name = "NAME_sgt_flagship"
-					settings = {
-						spawn_debris = no
-						is_boss = no
-					}
-					effect = {
-						set_owner = root
-						create_ship = {
-							name = "NAME_sgt_flagship"
-							design = random_existing_design
-							random_existing_design = Ge_Vampirilis_Ortaam
-							graphical_culture = root
-							prefix = yes
-						}
-						set_location = {
-							target = root.owner.home_planet
-							angle = random
-							distance = 10
-						}
-						set_fleet_flag = roz_sgt_flagship_fleet
-					}
-				}
-				event_target:ROZ_SSVL_AO_home_target@owner = {
-					destroy_ambient_object = this
-				}
-				set_country_flag = ge_sgt_flagship_project_enable
-				last_created_ship = {
-					if = { #没有虚空科技且打开修正时，增加debuff
-						limit = {
-							owner = {
-								NOR = {
-									has_country_flag = ge_tech_reactor_get
-									has_technology = GE_tech_reactor
-								}
-								has_country_flag = roz_sgt_flagship_not_immune_tech_limit
-							}
-						}
-						add_modifier = {
-							modifier = roz_sgt_flagship_none_tech_modifier
-							days = -1
-						}
-					}
-				}
-			}
+			# owner = {
+			# 	create_fleet = {
+			# 		name = "NAME_sgt_flagship"
+			# 		settings = {
+			# 			spawn_debris = no
+			# 			is_boss = no
+			# 		}
+			# 		effect = {
+			# 			set_owner = root
+			# 			create_ship = {
+			# 				name = "NAME_sgt_flagship"
+			# 				design = random_existing_design
+			# 				random_existing_design = Ge_Vampirilis_Ortaam
+			# 				graphical_culture = root
+			# 				prefix = yes
+			# 			}
+			# 			set_location = {
+			# 				target = root.owner.home_planet
+			# 				angle = random
+			# 				distance = 10
+			# 			}
+			# 			set_fleet_flag = roz_sgt_flagship_fleet
+			# 		}
+			# 	}
+			# 	event_target:ROZ_SSVL_AO_home_target@owner = {
+			# 		destroy_ambient_object = this
+			# 	}
+			# 	set_country_flag = ge_sgt_flagship_project_enable
+			# 	last_created_ship = {
+			# 		if = { #没有虚空科技且打开修正时，增加debuff
+			# 			limit = {
+			# 				owner = {
+			# 					NOR = {
+			# 						has_country_flag = ge_tech_reactor_get
+			# 						has_technology = GE_tech_reactor
+			# 					}
+			# 					has_country_flag = roz_sgt_flagship_not_immune_tech_limit
+			# 				}
+			# 			}
+			# 			add_modifier = {
+			# 				modifier = roz_sgt_flagship_none_tech_modifier
+			# 				days = -1
+			# 			}
+			# 		}
+			# 	}
+			# }
 		}
 
 	}

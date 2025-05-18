@@ -952,40 +952,13 @@ country_event = { #控制台effect测试区
 		# }
 		#trigger has_country_flag = enable_roz_cheat
 		#event ancrel.6132
-		
-
-		capital_scope = {
-			create_fleet = {
-				name = "NAME_Zarqlans_Pilgrims"
-				effect = {
-					set_owner = prev.owner
-					while = {
-						count = root.zarqlan_fervor
-						create_fallen_empire_large_ship = yes
-					}
-					while = {
-						count = root.value:zarqlan_fervor_three
-						create_fallen_empire_small_ship = yes
-					}
-					set_location = prev
-				}
-			}
-		}
-		
-		event_target:lcluster1 = {
-			solar_system = {
-				create_starbase = {
-					owner = root
-					size = starbase_outpost
-					effect = {
-						
-					}
-				}
-			}
-		}
+	
 		#trigger any_planet_within_border = { is_planet_class = pc_gray_goo }
 
 		#effect event_target:artist_enclave_country = { establish_communications_no_message = root }
+
+		#trigger any_system = { has_star_flag = ag_ancient_anchor_system }
+		#effect solar_system = { set_star_flag = ag_ancient_anchor_system }
 
 
 		capital_scope = {

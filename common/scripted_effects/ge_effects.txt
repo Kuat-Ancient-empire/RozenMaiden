@@ -4624,6 +4624,18 @@ ge_wtorpedo_damage_modifier_export = {
 		modifier = $modifier$
 		variable = ge_wtorpedo_damage_modifier_$modifier$
 	}
+	if = {
+		limit = { 
+			check_variable = {
+				which = ge_wtorpedo_damage_modifier_$modifier$
+				value < 0
+			}
+		}
+		set_variable = {
+			which = ge_wtorpedo_damage_modifier_$modifier$
+			value = 1
+		}
+	}
 }
 
 ge_vn_torpedo_damage_modifier_export = {
@@ -4631,12 +4643,36 @@ ge_vn_torpedo_damage_modifier_export = {
 		modifier = $modifier$
 		variable = ge_vn_torpedo_damage_modifier_$modifier$
 	}
+	if = {
+		limit = { 
+			check_variable = {
+				which = ge_vn_torpedo_damage_modifier_$modifier$
+				value < 0
+			}
+		}
+		set_variable = {
+			which = ge_vn_torpedo_damage_modifier_$modifier$
+			value = 1
+		}
+	}
 }
 
 ge_sgt_torpedo_damage_modifier_export = {
 	export_modifier_to_variable = {
 		modifier = $modifier$
 		variable = ge_sgt_torpedo_damage_modifier_$modifier$
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				which = ge_sgt_torpedo_damage_modifier_$modifier$
+				value < 0
+			}
+		}
+		set_variable = {
+			which = ge_sgt_torpedo_damage_modifier_$modifier$
+			value = 1
+		}
 	}
 }
 
