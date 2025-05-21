@@ -53,6 +53,9 @@ country_event = {
 						NOT = {
 							has_star_flag = ge_suigintou_site_counted
 						}
+						NOT = {
+							any_fleet_in_system = { owner = { is_hostile = root } }
+						}
 						#_禁止同星系生成
 						has_owner = no
 						has_access_fleet = root

@@ -817,10 +817,18 @@ country_event = { #控制台effect测试区
 
 		#effect = {every_country = { limit = { NOT = { is_same_value = ROOT } is_country_type = extradimensional } destroy_country = yes }}
 
-
+		# random_owned_leader = {
+		# 	limit = {
+		# 		exists = this
+		# 		is_ruler = no
+		# 	}
+		# 	save_event_target_as = this_leader
+		# }
+		# set_leader = event_target:this_leader
 
 		#effect give_technology = { tech = tech_space_cloud_weapon_1 }
 
+		#effect every_owned_ship = { ship_event = { id = graygoo.400 } }
 
 		#effect = { owner = { start_situation = { type = sgt_flagship_exploration_situation } } }
 		#effect = { capital_scope = { enable_special_project = { name = roz_void_energy_research_project_stage_1_a } }}
@@ -884,7 +892,9 @@ country_event = { #控制台effect测试区
 		#effect = { remove_modifier = { modifier = roz_product_modifier_test }}
 
 
-
+		random_owned_leader = {
+			
+		}
 
 
 		#effect = {set_global_flag = roz_sgt_unknow_flagship_spawn}

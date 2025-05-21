@@ -2846,7 +2846,7 @@ utility_component_template = {
 	scripted_action = {
 		scope = self
 
-        finish_anim_state = "idle"
+        finish_anim_state = "attack"
 
 		possible = {	#scope:fleet
 			NOT = {
@@ -2871,7 +2871,7 @@ utility_component_template = {
 		required_progress = 1
 		on_click_sound = roz_the_world_available
 
-		cooldown = 15
+		cooldown = 35
 		cost = { energy = 1000 }
 
 		shortcut = "SHIFT+I"

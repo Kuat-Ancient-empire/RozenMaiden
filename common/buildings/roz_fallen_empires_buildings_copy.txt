@@ -1019,7 +1019,7 @@ building_roz_fe_entertainment_2 = {
 
 building_roz_fe_lab_2 = {
     base_buildtime = @b2_time
-    can_build = yes
+    can_build = no
     icon = building_fe_lab_2
     category = research
 
@@ -1029,9 +1029,8 @@ building_roz_fe_lab_2 = {
 
     potential = {
         exists = owner
-        num_buildings = {
-            type = building_roz_fe_lab_2
-            value <= 1
+        NOT = {
+            has_building = building_roz_fe_lab_2
         }
         solar_system = {
             has_star_flag = graygoo_factory_system
