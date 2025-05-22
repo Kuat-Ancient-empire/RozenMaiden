@@ -6,7 +6,7 @@ building_llk_paradox_origin = {
     can_be_ruined = no    			#能否被废弃
     can_be_disabled = no      		#能否被停止运作
 	position_priority = 1			#位置优先级
-	base_cap_amount = 1				#建造数量
+	planet_limit = 1				#建造数量
     icon = building_ge_paradox_origin
     #icon = building_roz_power_core
     category = research     		#分类，可以让玩家更好的找到该建筑
@@ -106,7 +106,7 @@ building_roz_power_core = {
     can_be_ruined = no    			#能否被废弃
     can_be_disabled = no      		#能否被停止运作
     position_priority = 2			#位置优先级
-    base_cap_amount = 1		        #建造数量
+    planet_limit = 1		        #建造数量
 
     icon = building_roz_power_core
     category = resource     		#分类，可以让玩家更好的找到该建筑
@@ -180,7 +180,7 @@ building_roz_dolls_factory = {
     can_be_ruined = no    			#能否被废弃
     can_be_disabled = yes      		#能否被停止运作
     position_priority = 4			#位置优先级
-    base_cap_amount = 1		        #建造数量
+    planet_limit = 1		        #建造数量
 
     icon = building_roz_dolls_factory
     category = resource     		#分类，可以让玩家更好的找到该建筑
