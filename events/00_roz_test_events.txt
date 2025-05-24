@@ -827,7 +827,9 @@ country_event = { #控制台effect测试区
 		# set_leader = event_target:this_leader
 
 		#effect give_technology = { tech = tech_space_cloud_weapon_1 }
+		#effect every_owned_ship = {set_disabled = yes}
 
+		#trigger any_country = {has_country_flag = 123123}
 		#effect every_owned_ship = { ship_event = { id = graygoo.400 } }
 
 		#effect = { owner = { start_situation = { type = sgt_flagship_exploration_situation } } }
@@ -885,8 +887,18 @@ country_event = { #控制台effect测试区
 		#}
 		#event KZ_VOY_relic_VE.10001
 
+		#effect every_owned_ship = { repair_ship = yes }
+		#effect every_owned_ship = { set_disabled = no }
+		#effect every_owned_ship = { set_disable_at_health = 0.05 }
+		#trigger any_owned_ship = { has_ship_flag = roz_Ragnarok_ship_flag }
+		#effect add_ascension_perk = ap_mind_over_matter
+		#effect save_global_event_target_as = roz_temp_target
+		#effect event_target:roz_temp_target = { return_leader_from_exile = this set_owner = event_target:roz_suigintou_owner0 }
+		#trigger exists = event_target:roz_temp_target
+		#trigger exists = event_target:ROZ_SSVL_AO_target0
+		#trigger exists = event_target:ROZ_SSVL_AO_home_target0
 
-
+		#set_disable_at_health
 
 		#effect = { add_modifier = { modifier = roz_product_modifier_test days = -1 }}
 		#effect = { remove_modifier = { modifier = roz_product_modifier_test }}

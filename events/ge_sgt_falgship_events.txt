@@ -649,93 +649,6 @@ planet_event = {
 	}
 }
 
-planet_event = {
-	id = ge_sgt_flagship_events.3
-	title = "ge_sgt_flagship_events.3.name"
-	desc = "ge_sgt_flagship_events.3.desc"
-	picture = GFX_evt_
-	show_sound = event_radio_chatter
-	location = from
-	is_triggered_only = yes
-	immediate = {
-		solar_system.space_owner = {
-			change_variable = {
-				which = roz_sgt_flagship_proj_count
-				value = 1
-			}
-		}
-	}
-	option = {
-		name = "ge_sgt_flagship_events.3.a"
-		custom_tooltip = ge_sgt_flagship_events_3
-		hidden_effect = {
-			root.owner = {
-				#test
-				if = {
-					limit = {
-						NOT = {
-							has_country_flag = ge_sgt_flagship_enable_flag
-						}
-					}
-					set_country_flag = ge_sgt_flagship_enable_flag
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_technology = tech_ge_sgt_flagship
-						}
-					}
-					give_technology = {
-						tech = tech_ge_sgt_flagship
-					}
-				}
-			}
-			create_fleet = {
-				name = "NAME_sgt_flagship"
-				effect = {
-					set_owner = root.owner
-					set_fleet_flag = ge_sgt_flagship_limit
-					set_location = root
-					save_global_event_target_as = ge_sgt_flagship_target@root
-					owner = {
-						prev = {
-							create_ship = {
-								name = "NAME_sgt_flagship"
-								random_existing_design = Ge_Vampirilis_Ortaam
-								graphical_culture = root.owner
-							}
-						}
-					}
-				}
-				settings = {
-					can_upgrade = yes
-					can_disband = no
-					can_change_composition = no
-					uses_naval_capacity = no
-					can_change_leader = yes
-				}
-			}
-			last_created_fleet = {
-				if = {
-					limit = {
-						root.owner = {
-							any_owned_leader = {
-								has_leader_flag = roz_suigintou_flag
-							}
-							has_country_flag = roz_suigintou_commander_active
-						}
-					}
-					assign_leader = event_target:ge_suigintou
-				}
-			}
-		}
-	}
-}
-
-
-
-
-
 country_event = {
 	#船被干掉，全星系舰队扣血（一般不会死，除非还有狡猾.jpg
 	id = ge_sgt_flagship_events.4
@@ -746,9 +659,8 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		fromfrom = {
-			#has_fleet_flag = ge_sgt_flagship_limit
-			#is_ship_size = Ge_Vampirilis_Ortaam
 			is_ship_size = Ge_Vampirilis_Ortaam
+			NOT = { is_variable_set = roz_sgt_flagship_disable_count }
 		}
 	}
 	immediate = {

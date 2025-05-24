@@ -71,7 +71,10 @@ on_tech_increased = {
 	}
 }
 
-###scope: country
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
 on_entering_battle = {
 	events = {
 		ge_skills.2		#tf
@@ -81,6 +84,7 @@ on_entering_battle = {
 		ge_skills.5		#az
 		ge_skills.6		#nf
 		ge_skills.15		#创生之湖
+
 		#ge_modifier_evt.100
 
 		ge_skills.200		#雪华绮晶，广域精神榨取
@@ -93,6 +97,11 @@ on_entering_battle = {
 	}
 }
 
+# This = owner of fleet 1 (winner)
+# From = owner of fleet 2 (loser)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+# This fires whenever a fleet is finished with a combat through any means (emergency ftl, destroyed, disabled)
 on_space_battle_won = {
 	events = {
 		#ge_skills.999
@@ -145,8 +154,18 @@ on_entering_system = {
 		ge_sites.9
 		roz_krks_leader_evt.54
 		#ge_test_event.1112
+		ge_skills.40	#永恒之枪
 	}
+}
 
+# Checked when a ship be disabled
+# Ship Scope, the ship that be disabled
+# From(Ship Scope), the ship that disabled the victim
+on_ship_disabled = {
+	events = {
+		ge_skills.42	#永恒之枪
+		ge_skills.50	#王座
+	}
 }
 
 on_survey_planet = {  }
@@ -228,7 +247,7 @@ on_leader_death = {  }
 # FromFromFrom = ship 2
 on_ship_destroyed_perp = {
 	events = {
-		#ge_sgt_flagship_events.4
+		
 	}
 }
 
@@ -239,8 +258,10 @@ on_ship_destroyed_perp = {
 on_ship_destroyed_victim = {
 	events = {
 		ge_sgt_flagship_events.4
+		#ge_skills.40
 	}
 }
+
 
 
 # A ship has been built
@@ -248,7 +269,7 @@ on_ship_destroyed_victim = {
 # From = Planet
 on_ship_built = {
 	events = {
-		
+		ge_skills.40
 	}
 }
 

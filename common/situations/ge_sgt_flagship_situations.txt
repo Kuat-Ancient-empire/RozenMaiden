@@ -13,14 +13,11 @@ sgt_flagship_exploration_situation = {
 	fail_icon_frame = GFX_situation_outcome_frame_red
 	category = positive
 	on_start = {
-		event_target:ge_sgt_flagship_target@root = {
-			space_owner = {
-				
-				country_event = {
-					id = ge_sgt_flagship_events.110
-				}
+		owner = {
+			country_event = {
+				id = ge_sgt_flagship_events.110
 			}
-		}	
+		}
 		save_event_target_as = ge_sgt_flagship_situation_target
 		
 	}
@@ -69,72 +66,17 @@ sgt_flagship_exploration_situation = {
 								use_3d_location = yes
 								entity_offset = { min = 5 max = 20 }
 								entity_offset_height = { min = 5 max = 5 }
-								effect = {
-									save_global_event_target_as = ROZ_SSVL_AO_home_target@space_owner
-								}
+								effect = { save_global_event_target_as = ROZ_SSVL_AO_home_target@space_owner }
 							}
 						}
 					}
 				}
-				set_country_flag = ge_sgt_flagship_project_enable
-				event_target:ROZ_SSVL_AO_target@owner = { #@后面的域名不一定要与save的一模一样，只要scope一样就能取到，实际上取的是目标的index
-					destroy_ambient_object = this
-				}
-				country_event = {
-					id = ge_sgt_flagship_events.10
-					days = 720
-					random = 1800
-				}
-
-				###
-				create_fleet = {
-					name = "NAME_sgt_flagship"
-					settings = {
-						spawn_debris = no
-						is_boss = no
-					}
-					effect = {
-						set_owner = prev
-						create_ship = {
-							name = "NAME_sgt_flagship"
-							design = random_existing_design
-							random_existing_design = Ge_Vampirilis_Ortaam
-							graphical_culture = prev
-							prefix = yes
-						}
-						set_location = {
-							target = prev.home_planet
-							angle = random
-							distance = 10
-						}
-						set_fleet_flag = roz_sgt_flagship_fleet
-					}
-				}
-				event_target:ROZ_SSVL_AO_home_target@owner = {
-					destroy_ambient_object = this
-				}
-				set_country_flag = ge_sgt_flagship_project_enable
-				last_created_ship = {
-					if = { #没有虚空科技且打开修正时，增加debuff
-						limit = {
-							owner = {
-								NOR = {
-									has_country_flag = ge_tech_reactor_get
-									has_technology = GE_tech_reactor
-								}
-								has_country_flag = roz_sgt_flagship_not_immune_tech_limit
-							}
-						}
-						add_modifier = {
-							modifier = roz_sgt_flagship_none_tech_modifier
-							days = -1
-						}
-					}
-				}
-
+				event_target:ROZ_SSVL_AO_target@owner = { destroy_ambient_object = this }
+				event_target:ROZ_SSVL_AO_home_target@owner = { destroy_ambient_object = this }
+				roz_sgt_flagship_create_effect = yes
+				country_event = { id = ge_sgt_flagship_events.10 days = 720 random = 1800 }
 			}
 		}
-
 		custom_tooltip = "sgt_flagship_exploration_situation_complete_ct"
 
 	}

@@ -10,52 +10,25 @@ country_event = {
 	immediate = {
 		#set_update_modifiers_batch = begin
 		###
-		every_owned_fleet = {
+		fromfrom = {
+			###黑羽龙机制清除
 			if = {
 				limit = {
 					has_fleet_flag = ge_skill_bwg_activated_flag
 				}
 				remove_fleet_flag = ge_skill_bwg_activated_flag
 			}
+			###永恒之枪复活机制清除
+			if = {
+				limit = { 
+					any_controlled_ship = { is_variable_set = roz_Ragnarok_ship_disable_count }
+				}
+				fleet_event = {
+					id = ge_skills.1001
+					days = 1
+				}
+			}
 		}
-		####
-		#if = {#雪华绮晶技能，精神榨取
-		#	limit = {
-		#		check_variable = {
-		#			which = ge_modifier_count_krks
-		#			value >= 1
-		#		}
-		#	}
-		#	fromfrom = {#owned fleet
-		#		while = {
-		#			count = ge_modifier_count_krks
-		#			remove_modifier = ge_basic_ship_accuracy_add
-		#			remove_modifier = ge_basic_ship_tracking_add
-		#		}
-		#	}
-		#	from = {#enemy country
-		#		while = {
-		#			count = root.ge_modifier_count_krks
-		#			if = {
-		#				limit = {
-		#					any_owned_ship = {
-		#						has_modifier = ge_basic_ship_accuracy_add
-		#					}
-		#				}
-		#				remove_modifier = ge_basic_ship_accuracy_add
-		#			}
-		#			if = {
-		#				limit = {
-		#					any_owned_ship = {
-		#						has_modifier = ge_basic_ship_tracking_add
-		#					}
-		#				}
-		#				remove_modifier = ge_basic_ship_tracking_add
-		#			}
-		#		}
-		#	}
-		#	clear_variable = ge_modifier_count_krks
-		#}
 		FromFromFrom = {
 			remove_fleet_flag = roz_time_freeze_active_flag
 			every_owned_ship = {
@@ -66,31 +39,6 @@ country_event = {
 	}
 }
 
-# country_event = {
-# 	###清除敌方舰队标识win
-# 	id = ge_skills.1001
-# 	is_triggered_only = yes
-# 	hide_window = yes
-# 	trigger = {
-# 		has_country_flag = roz_leader_suigintou_get
-# 	}
-# 	immediate = {
-# 		fromfrom = {
-# 			if = {
-# 				limit = {
-# 					has_fleet_flag = ge_skill_theworld_activated_flag
-# 				}
-# 				remove_fleet_flag = ge_skill_theworld_activated_flag
-# 			}
-# 			if = {
-# 				limit = {
-# 					has_fleet_flag = ge_skill_nfield_hostile_activated_flag
-# 				}
-# 				remove_fleet_flag = ge_skill_nfield_hostile_activated_flag
-# 			}
-# 		}
-# 	}
-# }
 country_event = {
 	######清除舰队标识lose
 	id = ge_skills.2000
@@ -101,53 +49,25 @@ country_event = {
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
-		every_owned_fleet = {
+		fromfrom = {
+			###黑羽龙机制清除
 			if = {
 				limit = {
 					has_fleet_flag = ge_skill_bwg_activated_flag
 				}
 				remove_fleet_flag = ge_skill_bwg_activated_flag
 			}
+			###永恒之枪复活机制清除
+			if = {
+				limit = { 
+					any_controlled_ship = { is_variable_set = roz_Ragnarok_ship_disable_count }
+				}
+				fleet_event = {
+					id = ge_skills.1001
+					days = 1
+				}
+			}
 		}
-		###
-		#if = {#雪华绮晶技能，精神榨取
-		#	limit = {
-		#		check_variable = {#传参变量，报错无视
-		#			which = ge_modifier_count_krks
-		#			value >= 1
-		#		}
-		#	}
-		#	fromfrom = {#owned fleet
-		#		while = {
-		#			count = ge_modifier_count_krks
-		#			remove_modifier = ge_basic_ship_accuracy_add
-		#			remove_modifier = ge_basic_ship_tracking_add
-		#		}
-		#	}
-		#	from = {#enemy country
-		#		while = {
-		#			count = root.ge_modifier_count_krks
-		#			if = {
-		#				limit = {
-		#					any_owned_ship = {
-		#						has_modifier = ge_basic_ship_accuracy_add
-		#					}
-		#				}
-		#				remove_modifier = ge_basic_ship_accuracy_add
-		#			}
-		#			if = {
-		#				limit = {
-		#					any_owned_ship = {
-		#						has_modifier = ge_basic_ship_tracking_add
-		#					}
-		#				}
-		#				remove_modifier = ge_basic_ship_tracking_add
-		#			}
-		#		}
-		#	}
-		#	clear_variable = ge_modifier_count_krks
-		#}
-		###
 		FromFromFrom = {
 			remove_fleet_flag = roz_time_freeze_active_flag
 			every_owned_ship = {
@@ -158,50 +78,17 @@ country_event = {
 	}
 }
 
-# country_event = {
-# 	###清除敌方舰队标识lose
-# 	id = ge_skills.2001
-# 	is_triggered_only = yes
-# 	hide_window = yes
-# 	trigger = {
-# 		has_country_flag = roz_leader_suigintou_get
-# 	}
-# 	immediate = {
-# 		fromfrom = {
-# 			if = {
-# 				limit = {
-# 					has_fleet_flag = ge_skill_theworld_activated_flag
-# 				}
-# 				remove_fleet_flag = ge_skill_theworld_activated_flag
-# 			}
-# 			if = {
-# 				limit = {
-# 					has_fleet_flag = ge_skill_nfield_hostile_activated_flag
-# 				}
-# 				remove_fleet_flag = ge_skill_nfield_hostile_activated_flag
-# 			}
-# 		}
-# 	}
-# }
-#country_event = {
-#	id = ge_skills.1
-#	is_triggered_only = yes
-#	hide_window = yes
-#	trigger = {
-#		is_ai = no
-#		has_country_flag = roz_leader_suigintou_get
-#	}
-#	immediate = {
-#
-#	}
-#}
-fleet_event = {
-	id = ge_skills.25555
+fleet_event = {	###永恒之枪复活机制延迟清除
+	id = ge_skills.1001
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		any_controlled_ship = {
-			has_component = ge_shippart_time_freeze
+		is_in_combat = no
+	}
+	immediate = {
+		every_controlled_ship = {
+			limit = { is_variable_set = roz_Ragnarok_ship_disable_count }
+			roz_time_freeze_protect_remove_effect = yes
 		}
 	}
 }
@@ -256,10 +143,30 @@ country_event = {
 			}
 		}
 		FromFrom = {
+			every_controlled_ship = {
+				limit = {
+					or = {
+						has_ship_flag = roz_Ragnarok_ship_flag
+						is_ship_size = Ge_Ragnarok
+					}
+				}
+				set_disable_at_health = 0.05
+				if = {
+					limit = {
+						NOT = {
+							is_variable_set = roz_Ragnarok_ship_disable_count
+						}
+					}
+					set_variable = {
+						which = roz_Ragnarok_ship_disable_count
+						value = 3
+					}
+				}
+			}
 			solar_system = {
 				every_fleet_in_system = {
 					limit = {
-						is_owned_by = From
+						is_owned_by = From						#enemy
 						not = {
 							has_fleet_flag = roz_time_freeze_active_flag
 						}
@@ -349,11 +256,11 @@ country_event = {
 		fromfrom = {
 			add_modifier = {
 				modifier = ge_modifier_time_freeze
-				days = 30
+				days = 40
 			}
 			set_timed_fleet_flag = {
 				flag = roz_time_freeze_active_flag
-				days = 30
+				days = 45
 			}
 		}
 		FromFromFrom = {
@@ -367,11 +274,11 @@ country_event = {
 					}
 					add_modifier = {
 						modifier = ge_modifier_time_freeze
-						days = 30
+						days = 40
 					}
 					set_timed_fleet_flag = {
 						flag = roz_time_freeze_active_flag
-						days = 30
+						days = 40
 					}
 				}
 			}
@@ -399,7 +306,7 @@ fleet_event = {
 	immediate = {
 		add_modifier = {
 			modifier = ge_modifier_time_freeze
-			days = 29
+			days = 39
 		}
 	}
 }
@@ -423,7 +330,7 @@ fleet_event = {
 	immediate = {
 		add_modifier = {
 			modifier = ge_modifier_time_freeze
-			days = 28
+			days = 38
 		}
 	}
 }
@@ -447,21 +354,26 @@ fleet_event = {
 	immediate = {
 		add_modifier = {
 			modifier = ge_modifier_time_freeze
-			days = 27
+			days = 37
 		}
 	}
 }
 
 fleet_event = {
+	#主动时停
 	id = ge_skills.25
 	is_triggered_only = yes
 	hide_window = yes
-	trigger = {
-		NOT = {
-			has_fleet_flag = roz_time_freeze_clam_flag
-		}
-	}
+	# trigger = {
+	# 	NOT = {
+	# 		has_fleet_flag = roz_time_freeze_clam_flag
+	# 	}
+	# }
 	immediate = {
+		set_timed_fleet_flag = {
+			flag = roz_time_freeze_clam_flag
+			days = 30
+		}
 		solar_system = {
 			every_fleet_in_system = {
 				limit = {
@@ -581,24 +493,16 @@ country_event = {
 						has_trait = leader_trait_ge_azoth
 					}
 				}
-				#NOT = {
-				#has_fleet_flag = ge_skill_azoth_activated_flag
-				#}
 			}
 		}
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
 		fromfrom = {
-			#set_fleet_flag = ge_skill_azoth_activated_flag
 			add_modifier = {
 				modifier = ge_modifier_azoth
 				days = 40
 			}
-			# export_modifier_to_variable = {
-			# 	modifier = ge_modifier_azoth
-			# 	variable = ge_modifier_azoth_var
-			# }
 		}
 		#set_update_modifiers_batch = end
 	}
@@ -618,15 +522,7 @@ country_event = {
 					has_trait = leader_trait_ge_N_field
 				}
 			}
-			# NOT = {
-			# 	has_fleet_flag = ge_skill_nfield_friendly_activated_flag
-			# }
 		}
-		# fromfromfrom = {
-		# 	NOT = {
-		# 		has_fleet_flag = ge_skill_nfield_hostile_activated_flag
-		# 	}
-		# }
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
@@ -664,7 +560,9 @@ country_event = {
 				}
 			}
 		}
-		from = { is_invisable_faction = no }
+		from = {
+			is_invisable_faction = no
+		}
 	}
 	immediate = {
 		fromfrom = {
@@ -695,26 +593,6 @@ country_event = {
 				}
 				clear_variable = roz_krks_level_var
 			}
-			#solar_system = {
-			#	every_ship_in_system = {
-			#		limit = {
-			#			NOT = { has_ship_flag = roz_krks_mind_drain_flag }
-			#			NOT = { owner = { has_country_flag = roz_leader_suigintou_get } }
-			#		}
-			#		set_variable = {
-			#			which = roz_krks_level_var
-			#			value = root.fromfrom.leader.roz_krks_level_var
-			#		}
-			#		set_timed_ship_flag = {
-			#			flag = roz_krks_mind_drain_flag
-			#			days = roz_krks_level_var
-			#		}
-			#		ship_event = {
-			#			id = ge_skills.201
-			#		}
-			#		clear_variable = roz_krks_level_var
-			#	}
-			#}
 		}
 	}
 	after = {
@@ -746,7 +624,8 @@ ship_event = {
 						has_ship_flag = roz_krks_mind_drain_flag
 					}
 					NOT = {
-						owner = {	#对拥有水银灯的国家无效
+						owner = {
+							#对拥有水银灯的国家无效
 							has_country_flag = roz_leader_suigintou_get
 						}
 					}
@@ -805,17 +684,6 @@ ship_event = {
 	}
 }
 
-country_event = {
-	id = ge_skills.210
-	is_triggered_only = yes
-	title = ge_skills.210.t
-	desc = ge_skills.210.d
-	picture = GFX
-	trigger = {
-		has_country_flag = roz_kirakishou_get
-	}
-}
-
 ####################
 ########科学家
 ####################
@@ -828,100 +696,12 @@ country_event = {
 		NOT = {
 			has_country_flag = roz_sgt_scientist_main_skill_timed_flag
 		}
-		root = {
-			#exists = leader
-			#research_leader = {
-			#	area = society
-			#	OR = {
-			#		has_trait = leader_trait_ge_mercury_lamp_scientist
-			#		has_leader_flag = roz_suigintou_flag
-			#	}
-			#}
-			any_owned_leader = {
-				#is_councilor_type = councilor_research
-				is_councilor = yes
-				leader_class = scientist
-				OR = {
-					has_trait = leader_trait_ge_mercury_lamp_scientist
-					has_leader_flag = roz_suigintou_flag
-				}
-			}
+		event_target:roz_leader_suigintou_global_target@root = {
+			is_councilor = yes
+			leader_class = scientist
 		}
 	}
 	immediate = {
-		# random_list = {
-		# 	2 = {
-		# 		add_random_research_option = {
-		# 			add_progress = 0.15
-		# 			area = society
-		# 			ignore_prereqs = no
-		# 			tier = 5
-		# 			fail_effects = {
-		# 				add_monthly_resource_mult = {
-		# 					resource = society_research
-		# 					value = @tier5researchreward
-		# 					min = @tier5researchmin
-		# 					max = @tier5researchmax
-		# 				}
-		# 			}
-		# 		}
-		# 	}
-		# 	11 = {
-		# 		add_random_research_option = {
-		# 			add_progress = 0.15
-		# 			area = society
-		# 			ignore_prereqs = no
-		# 			tier = 4
-		# 			fail_effects = {
-		# 				add_monthly_resource_mult = {
-		# 					resource = society_research
-		# 					value = @tier5researchreward
-		# 					min = @tier5researchmin
-		# 					max = @tier5researchmax
-		# 				}
-		# 			}
-		# 		}
-		# 	}
-		# 	21 = {
-		# 		add_random_research_option = {
-		# 			add_progress = 0.15
-		# 			area = society
-		# 			ignore_prereqs = no
-		# 			tier = 3
-		# 			fail_effects = {
-		# 				add_monthly_resource_mult = {
-		# 					resource = society_research
-		# 					value = @tier5researchreward
-		# 					min = @tier5researchmin
-		# 					max = @tier5researchmax
-		# 				}
-		# 			}
-		# 		}
-		# 	}
-		# 	31 = {
-		# 		add_random_research_option = {
-		# 			add_progress = 0.15
-		# 			area = society
-		# 			ignore_prereqs = no
-		# 			tier = 2
-		# 			fail_effects = {
-		# 				add_monthly_resource_mult = {
-		# 					resource = society_research
-		# 					value = @tier5researchreward
-		# 					min = @tier5researchmin
-		# 					max = @tier5researchmax
-		# 				}
-		# 			}
-		# 		}
-		# 	}
-		# 	35 = {
-		# 		add_random_research_option = {
-		# 			add_progress = 0.0
-		# 			area = society
-		# 			ignore_prereqs = no
-		# 		}
-		# 	}
-		# }
 		country_event = {
 			id = ge_skills.11
 			days = 1830
@@ -930,10 +710,6 @@ country_event = {
 			flag = roz_sgt_scientist_main_skill_timed_flag
 			days = 1830
 		}
-		#hidden_effect = {
-		#ge_add_aft_scientist_on_research = yes
-		#科学家领导科研时加好感值
-		#}
 	}
 }
 
@@ -1178,150 +954,13 @@ country_event = {
 							}
 						}
 					}
+					reroll_random = yes
 				}
 			}
 		}
 		clear_variable = roz_skills_temp_var
 	}
 }
-
-# 暂时不能用
-# country_event = {
-# 	#用不了了
-# 	id = ge_skills.20
-# 	is_triggered_only = yes
-# 	picture = GFX_evt_cosmic_storms_the_storm_speaks
-# 	title = ge_skills.20.title
-# 	desc = ge_skills.20.desc
-# 	trigger = {
-# 		NOT = {
-# 			has_country_flag = roz_chronos_leader_sacrifice_setting
-# 		}
-# 	}
-# 	immediate = {
-# 		set_country_flag = roz_chronos_leader_sacrifice_setting
-# 	}
-# 	option = {
-# 		name = ge_skills.20.aa
-# 		start_storm_area_placing = {
-# 			sacrifice_leader_with_ui = yes
-# 			cosmic_storm = chronos_storm
-# 			immediate = yes
-# 			reticle_radius = {
-# 				base = 100
-# 				modifier = {
-# 					mult = value:storm_area_placing_reticle_radius_multiplier
-# 				}
-# 			}
-# 			max_range = {
-# 				base = 2500
-# 				modifier = {
-# 					mult = value:storm_area_placing_max_range_multiplier
-# 				}
-# 			}
-# 			on_confirm = {
-# 				add_modifier = {
-# 					modifier = tempest_invocator_active_modifier
-# 					days = 900
-# 				}
-# 				custom_tooltip = relic_triumph_cooldown
-# 				hidden_effect = {
-# 					set_country_flag = used_tempest_invocator_relic_achievement
-# 					last_created_cosmic_storm = {
-# 						every_system_within_storm = {
-# 							random_system_planet = {
-# 								limit = {
-# 									NOR = {
-# 										has_anomaly = yes
-# 										is_colony = yes
-# 										has_owner = yes
-# 										is_artificial = yes
-# 									}
-# 									NOR = {
-# 										exists = archaeological_site
-# 										has_planet_flag = hatchling_egg
-# 									}
-# 									OR = {
-# 										is_planet_class = pc_molten
-# 										is_planet_class = pc_barren
-# 										is_planet_class = pc_barren_cold
-# 										is_planet_class = pc_toxic
-# 										is_planet_class = pc_frozen
-# 										is_planet_class = pc_nuked
-# 									}
-# 								}
-# 								change_pc = pc_shattered
-# 								clear_deposits = yes
-# 								random_list = {
-# 									2 = {
-# 										add_deposit = d_minerals_10
-# 										add_deposit = d_minerals_6
-# 									}
-# 									2 = {
-# 										add_deposit = d_minerals_10
-# 										add_deposit = d_minerals_2
-# 									}
-# 									1 = {
-# 										add_deposit = d_minerals_8
-# 									}
-# 									1 = {
-# 										add_deposit = d_minerals_4
-# 									}
-# 								}
-# 							}
-# 							every_system_planet = {
-# 								limit = {
-# 									OR = {
-# 										is_colony = yes
-# 										has_owner = yes
-# 									}
-# 								}
-# 								while = {
-# 									count = 4
-# 									random_owned_pop = {
-# 										kill_pop = yes
-# 									}
-# 								}
-# 								add_modifier = {
-# 									modifier = roz_chronos_label_planet_effect_stability
-# 									days = 360
-# 								}
-# 								add_modifier = {
-# 									modifier = roz_chronos_label_planet_effect_product
-# 									days = 360
-# 								}
-# 							}
-# 						}
-# 					}
-# 					remove_country_flag = "started_placing_storm"
-# 				}
-# 			}
-# 			on_cancel = {
-# 				add_resource = {
-# 					sr_dark_matter = 1000
-# 					energy = 15000
-# 				}
-# 				remove_country_flag = "started_placing_storm"
-# 				# remove_modifier = {
-# 				#     modifier = "relic_activation_cooldown"
-# 				# }
-# 			}
-# 		}
-# 	}
-# 	option = {
-# 		name = ge_skills.20.bb
-# 		add_resource = {
-# 			sr_dark_matter = 1000
-# 			energy = 15000
-# 		}
-# 	}
-# 	after = {
-# 		hidden_effect = {
-# 			remove_country_flag = started_placing_storm
-# 			remove_country_flag = roz_chronos_leader_sacrifice_setting
-# 		}
-# 	}
-# }
 
 ship_event = {
 	id = ge_skills.31
@@ -1359,6 +998,94 @@ country_event = {
 	}
 }
 
+ship_event = {
+	id = ge_skills.40
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ship_size = Ge_Ragnarok
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_ship_flag = roz_Ragnarok_ship_flag
+				}
+			}
+			set_ship_flag = roz_Ragnarok_ship_flag
+		}
+	}
+}
+
+ship_event = {
+	#Ge_Ragnarok disable effect
+	id = ge_skills.42
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ship_size = Ge_Ragnarok
+	}
+	immediate = {
+		if = {
+			limit = {
+				check_variable = {
+					which = roz_Ragnarok_ship_disable_count
+					value > 1
+				}
+			}
+			roz_time_freeze_protect_effect = yes
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = roz_Ragnarok_ship_disable_count
+					value = 1
+				}
+			}
+			roz_time_freeze_protect_remove_effect = yes
+		}
+	}
+}
+
+ship_event = {
+	#Ge_Vampirilis_Ortaam disable effect
+	id = ge_skills.50
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ship_size = Ge_Vampirilis_Ortaam
+	}
+	immediate = {
+		random_list = {
+			100 = {
+				modifier = { check_variable = { which = roz_sgt_flagship_disable_count value != 5 } factor = 0 }
+				roz_sgt_flagship_protect_effect = yes
+			}
+			100 = {
+				modifier = { check_variable = { which = roz_sgt_flagship_disable_count value <= 4 } factor = 0 }
+				if = {
+					limit = {
+						check_variable = { which = roz_sgt_flagship_disable_count value > 1 }
+					}
+					roz_sgt_flagship_protect_effect = yes
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = roz_sgt_flagship_disable_count value = 1 }
+					}
+					roz_sgt_flagship_protect_remove_effect = yes
+				}
+			}
+			25 = {
+				modifier = { check_variable = { which = roz_sgt_flagship_disable_count value <= 4 } factor = 0 }
+				modifier = { check_variable = { which = roz_sgt_flagship_disable_count value <= 3 } factor = 2 }
+				modifier = { check_variable = { which = roz_sgt_flagship_disable_count value <= 2 } factor = 4 }
+				roz_sgt_flagship_protect_remove_effect = yes
+			}
+		}
+	}
+}
+
 fleet_event = {
 	id = ge_skills.501
 	hide_window = yes
@@ -1376,5 +1103,3 @@ fleet_event = {
 		}
 	}
 }
-
-

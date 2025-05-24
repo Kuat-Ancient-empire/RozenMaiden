@@ -503,6 +503,7 @@ roz_suigintou_revive_reset_scientist = {
 				1 = { add_trait = leader_trait_xeno_cataloger }
 				1 = { add_trait = leader_trait_knowledge_for_the_masses }
 			}
+			reroll_random = yes
 			freeze_leader_age = yes
 		}
 		roz_leader_change_skin_set_flag_effect = {
@@ -585,6 +586,7 @@ roz_suigintou_revive_reset_admiral = {
 				1 = { add_trait = leader_trait_maven_of_war }
 				1 = { add_trait = leader_trait_peacekeeper }
 			}
+			reroll_random = yes
 			freeze_leader_age = yes
 		}
 		roz_leader_change_skin_set_flag_effect = {
@@ -764,6 +766,7 @@ ge_add_random_var = {
 			}
 		}
 	}
+	reroll_random = yes
 }
 
 # ge_add_aft_admiral_won = {#废弃
@@ -1070,6 +1073,7 @@ create_ge_defense_fleet = {
 					}
 				}
 			}
+			reroll_random = yes
 		}
 	}
 	last_created_fleet = {
@@ -1917,6 +1921,7 @@ roz_teaparty_random_modifier_list = {
 			}
 		}
 	}
+	reroll_random = yes
 }
 
 
@@ -4305,6 +4310,7 @@ roz_teaparty_loop_random = { #root = player country
 		1 = { country_event = { id = roz_teaparty_evt.107 } }
 		1 = { country_event = { id = roz_teaparty_evt.108 } }
 	}
+	reroll_random = yes
 }
 
 
@@ -5011,14 +5017,99 @@ ge_sgt_torpedo_on_hit_effect = {
 	}
 }
 
+###specialship when disable
+roz_ship_disable_protect_effect = {
+	set_confused = no
+	repair_ship = yes
+	repair_percentage = 1
+	repair_armor_percentage = 1
+	repair_shield_percentage = 1
+	set_disabled = no
+}
 
+###永恒之枪
+roz_time_freeze_protect_effect = {
+	subtract_variable = {
+		which = roz_Ragnarok_ship_disable_count
+		value = 1
+	}
+	roz_ship_disable_protect_effect = yes
+	add_modifier = {
+		modifier = roz_Ragnarok_repair_modifier
+		days = 5
+	}
+}
 
+roz_time_freeze_protect_remove_effect = {
+	clear_variable = roz_Ragnarok_ship_disable_count
+	roz_ship_disable_protect_effect = yes
+	set_disable_at_health = -1	
+}
 
+###黑蔷薇王座创建
+roz_sgt_flagship_create_effect = {
+	set_country_flag = ge_sgt_flagship_project_enable
+	create_fleet = {
+		name = "NAME_sgt_flagship"
+		settings = {
+			spawn_debris = no
+			is_boss = no
+		}
+		effect = {
+			set_owner = root.owner
+			create_ship = {
+				name = "NAME_sgt_flagship"
+				random_existing_design = Ge_Vampirilis_Ortaam
+				graphical_culture = root.owner
+				prefix = yes
+				effect = {
+					save_global_event_target_as = ge_sgt_flagship_target@root
+					set_ship_flag = ge_sgt_flagship_limit
+					set_disable_at_health = 0.05
+					set_variable = {
+						which = roz_sgt_flagship_disable_count
+						value = 5
+					}
+				}
+			}
+			set_location = {
+				target = root.owner.capital_scope
+				angle = random
+				distance = 10
+			}
+		}
+	}
+	last_created_ship = {
+		if = { #没有虚空科技且打开修正时，增加debuff
+			limit = {
+				owner = {
+					NOR = {
+						has_country_flag = ge_tech_reactor_get
+						has_technology = GE_tech_reactor
+					}
+					has_country_flag = roz_sgt_flagship_not_immune_tech_limit
+				}
+			}
+			add_modifier = {
+				modifier = roz_sgt_flagship_none_tech_modifier
+				days = -1
+			}
+		}
+	}
+}
 
+roz_sgt_flagship_protect_effect = {
+	subtract_variable = {
+		which = roz_sgt_flagship_disable_count
+		value = 1
+	}
+	roz_ship_disable_protect_effect = yes
+}
 
-
-
-
-
+roz_sgt_flagship_protect_remove_effect = {
+	clear_variable = roz_sgt_flagship_disable_count
+	roz_ship_disable_protect_effect = yes
+	set_disable_at_health = -1
+}
 
 

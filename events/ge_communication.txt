@@ -446,6 +446,7 @@ country_event = {
 			create_ge_suigintou_admiral = yes
 			remove_country_flag = ge_sgt_chat
 			remove_country_flag = ge_nfield_diplomacy_activated
+
 		}
 		name = ge_communication.100.c
 		response_text = ge_communication.100.c1.response
@@ -524,124 +525,24 @@ country_event = {
 		is_dialog_only = yes
 	}
 	option = {
-		#座驾
+		#座驾召唤
 		name = ge_communication.100.sgtship_build
-		#custom_tooltip = ge_communication.100.sgtship_build.ct
 		trigger = {
 			has_technology = tech_ge_sgt_flagship
-			count_controlled_ship = {
-				count = 0
-				limit = {
-					is_ship_size = Ge_Vampirilis_Ortaam
-				}
-			}
+			count_controlled_ship = { count = 0 limit = { is_ship_size = Ge_Vampirilis_Ortaam } }
 		}
 		allow = {
 			has_existing_ship_design = Ge_Vampirilis_Ortaam
-			# custom_tooltip = {
-			# 	fail_text = ge_communication.100.g.fail
-			# 	check_variable = {
-			# 		which = roz_suigintou_affection
-			# 		value > 30
-			# 	}
-			# }
 			custom_tooltip_fail = {
 				text = "ge_communication.100.sgtship_build.allow.ct"
-				NOT = {
-					has_country_flag = roz_sgt_flagship_spawn_flag
-				}
+				NOT = { has_country_flag = roz_sgt_flagship_spawn_flag }
 			}
 		}
 		hidden_effect = {
-			set_timed_country_flag = {
-				flag = roz_sgt_flagship_spawn_flag
-				days = 720
-			}
-			create_fleet = {
-				name = "NAME_sgt_flagship"
-				settings = {
-					spawn_debris = no
-					is_boss = no
-				}
-				effect = {
-					set_owner = root
-					create_ship = {
-						name = "NAME_sgt_flagship"
-						design = random_existing_design
-						random_existing_design = Ge_Vampirilis_Ortaam
-						graphical_culture = root
-						prefix = yes
-					}
-					set_location = {
-						target = root.capital_scope
-						angle = random
-						distance = 10
-					}
-					set_fleet_flag = roz_sgt_flagship_fleet
-				}
-			}
-			event_target:ROZ_SSVL_AO_home_target = {
-				destroy_ambient_object = this
-			}
-			set_country_flag = ge_sgt_flagship_project_enable
-			last_created_ship = {
-				if = {
-					#没有虚空科技且打开修正时，增加debuff
-					limit = {
-						owner = {
-							NOR = {
-								has_country_flag = ge_tech_reactor_get
-								has_technology = GE_tech_reactor
-							}
-							has_country_flag = roz_sgt_flagship_not_immune_tech_limit
-						}
-					}
-					add_modifier = {
-						modifier = roz_sgt_flagship_none_tech_modifier
-						days = -1
-					}
-				}
-			}
+			set_timed_country_flag = { flag = roz_sgt_flagship_spawn_flag days = 720 }
+			roz_sgt_flagship_create_effect = yes
 		}
 		response_text = ge_communication.100.sgtship.response
-		is_dialog_only = yes
-	}
-	option = {
-		#座驾修复-禁用
-		name = ge_communication.100.sgtship
-		trigger = {
-			NOT = {
-				has_country_flag = ge_sgt_flagship_project_enable
-			}
-			resource_stockpile_compare = {
-				resource = sr_void_core_hidden
-				value = 0
-			}
-			NOT = {
-				any_owned_ship = {
-					#暂定判定
-					is_ship_size = Ge_Vampirilis_Ortaam
-				}
-			}
-			always = no
-		}
-		allow = {
-			custom_tooltip = {
-				fail_text = ge_communication.100.g.fail
-				check_variable = {
-					which = roz_suigintou_affection
-					value > 30
-				}
-			}
-		}
-		enable_special_project = {
-			#TODO
-			name = disappearing_pops_project
-		}
-		hidden_effect = {
-			set_country_flag = ge_sgt_flagship_repair_project_enable
-		}
-		response_text = ge_communication.100.sgtship.repairing.response
 		is_dialog_only = yes
 	}
 	option = {

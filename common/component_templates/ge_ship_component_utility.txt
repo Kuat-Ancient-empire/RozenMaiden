@@ -2849,10 +2849,11 @@ utility_component_template = {
         finish_anim_state = "attack"
 
 		possible = {	#scope:fleet
-			NOT = {
-				has_fleet_flag = roz_time_freeze_clam_flag
-			}
-			custom_tooltip = "roz_time_freeze_cooldown_ct"
+			# NOT = {
+			# 	has_fleet_flag = roz_time_freeze_clam_flag
+			# }
+			always = yes
+			#custom_tooltip = "roz_time_freeze_cooldown_ct"
 		}
 
 		button_clickable = {
@@ -2871,7 +2872,7 @@ utility_component_template = {
 		required_progress = 1
 		on_click_sound = roz_the_world_available
 
-		cooldown = 35
+		cooldown = 30
 		cost = { energy = 1000 }
 
 		shortcut = "SHIFT+I"
