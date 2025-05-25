@@ -897,6 +897,10 @@ country_event = { #控制台effect测试区
 		#trigger exists = event_target:roz_temp_target
 		#trigger exists = event_target:ROZ_SSVL_AO_target0
 		#trigger exists = event_target:ROZ_SSVL_AO_home_target0
+		#trigger any_owned_ship = { is_variable_set = roz_sgt_flagship_disable_count }
+		#effect every_owned_ship = { roz_sgt_flagship_protect_effect = yes }
+		#effect every_owned_ship = { roz_sgt_flagship_protect_remove_effect = yes }
+
 
 		#set_disable_at_health
 
@@ -1334,16 +1338,14 @@ country_event = {
 	picture = GFX_evt_l-gateway
 	immediate = {
 		event_target:graygoo_factory_system = {
-			set_name = NAME_roz_lgate_starbase
 			create_starbase = {
 				size = starbase_starport
 				owner = root
 				module = shipyard
 				module = shipyard
 				effect = {
-					add_starbase_component = {
-						component = "STARBASE_DARK_MATTER_REACTOR"
-					}
+					fleet = { set_name = NAME_roz_lgate_starbase }
+					add_starbase_component = { component = "STARBASE_DARK_MATTER_REACTOR" }
 					set_starbase_building = {
 						slot = 1
 						building = naval_logistics_office

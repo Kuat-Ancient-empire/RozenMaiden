@@ -5099,10 +5099,7 @@ roz_sgt_flagship_create_effect = {
 }
 
 roz_sgt_flagship_protect_effect = {
-	subtract_variable = {
-		which = roz_sgt_flagship_disable_count
-		value = 1
-	}
+	subtract_variable = { which = roz_sgt_flagship_disable_count value = 1 }
 	roz_ship_disable_protect_effect = yes
 }
 

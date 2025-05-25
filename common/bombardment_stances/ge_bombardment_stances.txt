@@ -12,7 +12,7 @@ q_dolls_bombardment = {
 	default = no
 
 	stop_when_armies_dead = no
-	stop_when_ground_combat = yes
+	stop_when_ground_combat = no
 	abduct_pops = no
 	planet_damage = 5
 	army_damage = 25
@@ -52,6 +52,7 @@ q_dolls_armageddon = {
 
 	default = no
 	stop_when_armies_dead = no
+	stop_when_ground_combat = no
 	abduct_pops = no
 
 	planet_damage = 15

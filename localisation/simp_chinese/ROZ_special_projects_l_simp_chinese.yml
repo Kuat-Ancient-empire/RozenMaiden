@@ -168,7 +168,8 @@ roz_unholy_invasion_defproj_decoy_II: "§R诱饵计划II§!"
 roz_unholy_invasion_defproj_decoy_II_DESC: "在解明了第二个希灵结晶体所承载的蓝图数据后，我们仍旧无法理解这个深渊诱饵装置的原理，好在图纸已经贴心而详尽地指导了如何以我们现有的技术水平完成建设工作，并且指名在[roz_outland_planet@root.solar_system.GetName]上以取得最佳的诱饵效果。标在旁边的还有一行小字：放心吧，区区深渊感染体还破坏不了我们的$roz_mega_information_remodeler$。\n仅仅建造并设置墨水人诱饵装置并不是一件特别困难的任务，重要的是，诱饵一旦设置完成便无法回头，[Root.GetRulerTitle]，§R您确定我们已经做好准备了吗？§!"
 
 
-
+  #roz__chain: "深渊感染体入侵：情况统计"
+  #roz__chain_desc: "深渊入侵不仅席卷了我们，它们的爪牙也伸向了其他国家，我们获取的支持取决于我们抗击的成果。\n\n当前共有个深渊傀儡国\n[root.roz_SK_invasion_dip_aggressive_ai]个支持阵营国家\n[root.roz_SK_invasion_dip_negative_ai]个反对阵营国家\n另有[root.roz_SK_invasion_dip_neutral_ai]个国家保持中立。"
 
 
 

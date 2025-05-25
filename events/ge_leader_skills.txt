@@ -1054,34 +1054,20 @@ ship_event = {
 	is_triggered_only = yes
 	trigger = {
 		is_ship_size = Ge_Vampirilis_Ortaam
+		is_variable_set = roz_sgt_flagship_disable_count
 	}
 	immediate = {
-		random_list = {
-			100 = {
-				modifier = { check_variable = { which = roz_sgt_flagship_disable_count value != 5 } factor = 0 }
-				roz_sgt_flagship_protect_effect = yes
+		if = {
+			limit = {
+				check_variable = { which = roz_sgt_flagship_disable_count value > 1 }
 			}
-			100 = {
-				modifier = { check_variable = { which = roz_sgt_flagship_disable_count value <= 4 } factor = 0 }
-				if = {
-					limit = {
-						check_variable = { which = roz_sgt_flagship_disable_count value > 1 }
-					}
-					roz_sgt_flagship_protect_effect = yes
-				}
-				else_if = {
-					limit = {
-						check_variable = { which = roz_sgt_flagship_disable_count value = 1 }
-					}
-					roz_sgt_flagship_protect_remove_effect = yes
-				}
+			roz_sgt_flagship_protect_effect = yes
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = roz_sgt_flagship_disable_count value = 1 }
 			}
-			25 = {
-				modifier = { check_variable = { which = roz_sgt_flagship_disable_count value <= 4 } factor = 0 }
-				modifier = { check_variable = { which = roz_sgt_flagship_disable_count value <= 3 } factor = 2 }
-				modifier = { check_variable = { which = roz_sgt_flagship_disable_count value <= 2 } factor = 4 }
-				roz_sgt_flagship_protect_remove_effect = yes
-			}
+			roz_sgt_flagship_protect_remove_effect = yes
 		}
 	}
 }
