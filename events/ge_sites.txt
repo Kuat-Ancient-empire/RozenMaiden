@@ -322,7 +322,7 @@ fleet_event = {
 	}
 }
 
-#stage3###牢笼与白色藤曼
+#stage3###牢笼与白色藤蔓
 fleet_event = {
 	id = ge_sites.13
 	title = "ge_sites.13.name"

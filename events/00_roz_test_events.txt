@@ -898,6 +898,7 @@ country_event = { #控制台effect测试区
 		#trigger exists = event_target:ROZ_SSVL_AO_target0
 		#trigger exists = event_target:ROZ_SSVL_AO_home_target0
 		#trigger any_owned_ship = { is_variable_set = roz_sgt_flagship_disable_count }
+		#trigger exists = event_target:ag_riikinak_colony_planet
 		#effect every_owned_ship = { roz_sgt_flagship_protect_effect = yes }
 		#effect every_owned_ship = { roz_sgt_flagship_protect_remove_effect = yes }
 
