@@ -175,9 +175,9 @@ weapon_component_template = {
 	total_fire_time = 60
 
 	on_hit = {
-		custom_tooltip = "ge_xl_beam_on_hit_s_tt"
+		custom_tooltip = ge_t_beam_on_hit_s_tt
 		hidden_effect = {
-			ge_xl_beam_on_hit_effect = yes
+			ge_t_beam_on_hit_effect = yes
 		}
 	}
 	
@@ -238,10 +238,11 @@ weapon_component_template = {
 	prerequisites = { "tech_ge_t_beam" }
 	component_set = "GE_T_BEAM"
 
+
 	on_hit = {
-		custom_tooltip = ge_t_beam_on_hit_s_tt
+		custom_tooltip = "ge_xl_beam_on_hit_s_tt"
 		hidden_effect = {
-			ge_t_beam_on_hit_effect = yes
+			ge_xl_beam_on_hit_effect = yes
 		}
 	}
 

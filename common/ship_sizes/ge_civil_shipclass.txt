@@ -455,6 +455,7 @@ ge_military_constructor = {
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
 	enable_3dview_in_ship_browser = no #if yes, ship design will have a 3d view in the ship browser
 	prerequisites = { "tech_ge_section" }
+	potential_country = { always = no }
 	is_civilian = yes
 	is_designable = yes
 	components_add_to_cost = no
@@ -511,6 +512,7 @@ ge_military_science = {
 	is_designable = yes
 	components_add_to_cost = no
 	prerequisites = { "tech_ge_section"}
+	potential_country = { always = no }
 	is_civilian = yes
 	class = shipclass_science_ship
 	construction_type = starbase_shipyard
