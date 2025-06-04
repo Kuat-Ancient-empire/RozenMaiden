@@ -78,11 +78,11 @@ create_roz_kirakishou_governor = {
                     value >= 90
                 }
             }
-            add_trait = leader_trait_krks_governor_a_love
+            add_trait = { trait = leader_trait_krks_governor_a_love }
         }
         else_if = {
             limit = { }
-            add_trait = leader_trait_krks_governor_a_like
+            add_trait = { trait = leader_trait_krks_governor_a_like }
         }
     }
     #roz_leader_change_skin_set_flag_effect = {
@@ -173,11 +173,11 @@ create_roz_kirakishou_admiral = {
                     value >= 90
                 }
             }
-            add_trait = leader_trait_krks_general_a_love
+            add_trait = { trait = leader_trait_krks_general_a_love }
         }
         else_if = {
             limit = { }
-            add_trait = leader_trait_krks_general_a_like
+            add_trait = { trait = leader_trait_krks_general_a_like }
         }
     }
     #roz_leader_change_skin_set_flag_effect = {
@@ -343,43 +343,43 @@ create_roz_kirakishou_admiral = {
 #                    which = roz_kirakishou_affection
 #                    value = 60
 #                }
-#                add_trait = leader_trait_roz_kirakishou_main
-#                add_trait = leader_trait_roz_kirakishou_nightmare
-#                add_trait = leader_trait_supreme_organizer
+#                add_trait = { trait = leader_trait_roz_kirakishou_main }
+#                add_trait = { trait = leader_trait_roz_kirakishou_nightmare }
+#                add_trait = { trait = leader_trait_supreme_organizer }
 #                add_trait = subclass_commander_general
 #                random_list = {
 #                    1 = {
-#                        add_trait = leader_trait_taskmaster
+#                        add_trait = { trait = leader_trait_taskmaster }
 #                    }
 #                    1 = {
-#                        add_trait = leader_trait_fortress_cracker
+#                        add_trait = { trait = leader_trait_fortress_cracker }
 #                    }
 #                    3 = {
-#                        add_trait = leader_trait_chainbreaker
+#                        add_trait = { trait = leader_trait_chainbreaker }
 #                    }
 #                    1 = {
-#                        add_trait = leader_trait_chainbreaker
+#                        add_trait = { trait = leader_trait_chainbreaker }
 #                    }
 #                    1 = {
-#                        add_trait = leader_trait_honored_warmaster
+#                        add_trait = { trait = leader_trait_honored_warmaster }
 #                    }
 #                    1 = {
-#                        add_trait = leader_trait_academia_recruiter
+#                        add_trait = { trait = leader_trait_academia_recruiter }
 #                    }
 #                    #1 = {
-#                    #    add_trait = leader_trait_pilferer
+#                    #    add_trait = { trait = leader_trait_pilferer }
 #                    #}
 #                    1 = {
-#                        add_trait = leader_trait_supreme_warrior
+#                        add_trait = { trait = leader_trait_supreme_warrior }
 #                    }
 #                    1 = {
-#                        add_trait = leader_trait_spymaster
+#                        add_trait = { trait = leader_trait_spymaster }
 #                    }
 #                    1 = {
-#                        add_trait = leader_trait_totalitarian
+#                        add_trait = { trait = leader_trait_totalitarian }
 #                    }
 #                    1 = {
-#                        add_trait = leader_trait_bellicose
+#                        add_trait = { trait = leader_trait_bellicose }
 #                    }
 #                }
 #                freeze_leader_age = yes
@@ -402,11 +402,11 @@ create_roz_kirakishou_admiral = {
 #                    value >= 90
 #                }
 #            }
-#            add_trait = leader_trait_krks_general_a_love
+#            add_trait = { trait = leader_trait_krks_general_a_love }
 #        }
 #        else_if = {
 #            limit = { }
-#            add_trait = leader_trait_krks_general_a_like
+#            add_trait = { trait = leader_trait_krks_general_a_like }
 #        }
 #
 #        freeze_leader_age = yes
@@ -630,30 +630,30 @@ roz_kirakishou_revive_reset_official = {
                 which = roz_kirakishou_affection
                 value = 60
             }
-            add_trait = leader_trait_roz_kirakishou_main
-            add_trait = leader_trait_roz_kirakishou_nightmare
-            add_trait = leader_trait_supreme_organizer
+            add_trait = { trait = leader_trait_roz_kirakishou_main }
+            add_trait = { trait = leader_trait_roz_kirakishou_nightmare }
+            add_trait = { trait = leader_trait_supreme_organizer }
             random_list = {
                 1 = {
-                    add_trait = leader_trait_efficient
+                    add_trait = { trait = leader_trait_efficient }
                 }
                 1 = {
-                    add_trait = leader_trait_arbiter
+                    add_trait = { trait = leader_trait_arbiter }
                 }
                 1 = {
-                    add_trait = leader_trait_utopian_idealist
+                    add_trait = { trait = leader_trait_utopian_idealist }
                 }
                 1 = {
-                    add_trait = leader_trait_mediator
+                    add_trait = { trait = leader_trait_mediator }
                 }
                 1 = {
-                    add_trait = leader_trait_shroud_preacher
+                    add_trait = { trait = leader_trait_shroud_preacher }
                 }
                 1 = {
-                    add_trait = leader_trait_master_diplomat
+                    add_trait = { trait = leader_trait_master_diplomat }
                 }
                 1 = {
-                    add_trait = leader_trait_galvanizer
+                    add_trait = { trait = leader_trait_galvanizer }
                 }
             }
             freeze_leader_age = yes
@@ -675,11 +675,11 @@ roz_kirakishou_revive_reset_official = {
                     value >= 90
                 }
             }
-            add_trait = leader_trait_krks_governor_a_love
+            add_trait = { trait = leader_trait_krks_governor_a_love }
         }
         else_if = {
             limit = { }
-            add_trait = leader_trait_krks_governor_a_like
+            add_trait = { trait = leader_trait_krks_governor_a_like }
         }
     }
     roz_leader_change_skin_set_flag_effect = {
@@ -742,66 +742,66 @@ roz_kirakishou_revive_reset_commander = {
                 which = roz_kirakishou_affection
                 value = 60
             }
-            add_trait = leader_trait_roz_kirakishou_main
-            add_trait = leader_trait_roz_kirakishou_nightmare
-            add_trait = leader_trait_ge_mind_drain
-            add_trait = leader_trait_supreme_organizer
+            add_trait = { trait = leader_trait_roz_kirakishou_main }
+            add_trait = { trait = leader_trait_roz_kirakishou_nightmare }
+            add_trait = { trait = leader_trait_ge_mind_drain }
+            add_trait = { trait = leader_trait_supreme_organizer }
             random_list = {
                 1 = {
-                    add_trait = leader_trait_armorer
+                    add_trait = { trait = leader_trait_armorer }
                 }
                 1 = {
-                    add_trait = leader_trait_military_overseer
+                    add_trait = { trait = leader_trait_military_overseer }
                 }
                 1 = {
-                    add_trait = leader_trait_master_gunner
+                    add_trait = { trait = leader_trait_master_gunner }
                 }
                 1 = {
-                    add_trait = leader_trait_destiny_engineer
+                    add_trait = { trait = leader_trait_destiny_engineer }
                 }
                 2 = {
-                    add_trait = leader_trait_guerilla_tactics
+                    add_trait = { trait = leader_trait_guerilla_tactics }
                 }
                 1 = {
-                    add_trait = leader_trait_survivalist
+                    add_trait = { trait = leader_trait_survivalist }
                 }
                 1 = {
-                    add_trait = leader_trait_maven_of_war
+                    add_trait = { trait = leader_trait_maven_of_war }
                 }
                 1 = {
-                    add_trait = leader_trait_peacekeeper
+                    add_trait = { trait = leader_trait_peacekeeper }
                 }
             }
             random_list = {
                 1 = {
-                    add_trait = leader_trait_taskmaster
+                    add_trait = { trait = leader_trait_taskmaster }
                 }
                 1 = {
-                    add_trait = leader_trait_fortress_cracker
+                    add_trait = { trait = leader_trait_fortress_cracker }
                 }
                 3 = {
-                    add_trait = leader_trait_chainbreaker
+                    add_trait = { trait = leader_trait_chainbreaker }
                 }
                 1 = {
-                    add_trait = leader_trait_chainbreaker
+                    add_trait = { trait = leader_trait_chainbreaker }
                 }
                 1 = {
-                    add_trait = leader_trait_honored_warmaster
+                    add_trait = { trait = leader_trait_honored_warmaster }
                 }
                 1 = {
-                    add_trait = leader_trait_academia_recruiter
+                    add_trait = { trait = leader_trait_academia_recruiter }
                 }
                 1 = {
-                    add_trait = leader_trait_supreme_warrior
+                    add_trait = { trait = leader_trait_supreme_warrior }
                 }
                 1 = {
-                    add_trait = leader_trait_spymaster
+                    add_trait = { trait = leader_trait_spymaster }
                 }
                 1 = {
-                    add_trait = leader_trait_totalitarian
+                    add_trait = { trait = leader_trait_totalitarian }
                 }
                 1 = {
-                    add_trait = leader_trait_bellicose
+                    add_trait = { trait = leader_trait_bellicose }
                 }
             }
             freeze_leader_age = yes
@@ -823,11 +823,11 @@ roz_kirakishou_revive_reset_commander = {
                     value >= 90
                 }
             }
-            add_trait = leader_trait_krks_general_a_love
+            add_trait = { trait = leader_trait_krks_general_a_love }
         }
         else_if = {
             limit = { }
-            add_trait = leader_trait_krks_general_a_like
+            add_trait = { trait = leader_trait_krks_general_a_like }
         }
     }
     roz_leader_change_skin_set_flag_effect = {

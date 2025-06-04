@@ -2683,28 +2683,28 @@ country_event = {
                 which = roz_shinku_affection
                 value = 5
             }
-            add_trait = leader_trait_roz_shinku_main
+            add_trait = { trait = leader_trait_roz_shinku_main }
             random_list = {
-                1 = { add_trait = leader_trait_armorer }
-                1 = { add_trait = leader_trait_military_overseer }
-                1 = { add_trait = leader_trait_master_gunner }
-                1 = { add_trait = leader_trait_destiny_engineer }
-                2 = { add_trait = leader_trait_guerilla_tactics }
-                1 = { add_trait = leader_trait_survivalist }
-                1 = { add_trait = leader_trait_maven_of_war }
-                1 = { add_trait = leader_trait_peacekeeper }
+                1 = { add_trait = { trait = leader_trait_armorer } }
+                1 = { add_trait = { trait = leader_trait_military_overseer } }
+                1 = { add_trait = { trait = leader_trait_master_gunner } }
+                1 = { add_trait = { trait = leader_trait_destiny_engineer } }
+                2 = { add_trait = { trait = leader_trait_guerilla_tactics } }
+                1 = { add_trait = { trait = leader_trait_survivalist } }
+                1 = { add_trait = { trait = leader_trait_maven_of_war } }
+                1 = { add_trait = { trait = leader_trait_peacekeeper } }
             }
             random_list = {
-                1 = { add_trait = leader_trait_taskmaster }
-                1 = { add_trait = leader_trait_fortress_cracker }
-                2 = { add_trait = leader_trait_chainbreaker }
-                1 = { add_trait = leader_trait_chainbreaker }
-                1 = { add_trait = leader_trait_honored_warmaster }
-                1 = { add_trait = leader_trait_academia_recruiter }
-                1 = { add_trait = leader_trait_supreme_warrior }
-                1 = { add_trait = leader_trait_spymaster }
-                1 = { add_trait = leader_trait_totalitarian }
-                1 = { add_trait = leader_trait_bellicose }
+                1 = { add_trait = { trait = leader_trait_taskmaster } }
+                1 = { add_trait = { trait = leader_trait_fortress_cracker } }
+                2 = { add_trait = { trait = leader_trait_chainbreaker } }
+                1 = { add_trait = { trait = leader_trait_chainbreaker } }
+                1 = { add_trait = { trait = leader_trait_honored_warmaster } }
+                1 = { add_trait = { trait = leader_trait_academia_recruiter } }
+                1 = { add_trait = { trait = leader_trait_supreme_warrior } }
+                1 = { add_trait = { trait = leader_trait_spymaster } }
+                1 = { add_trait = { trait = leader_trait_totalitarian } }
+                1 = { add_trait = { trait = leader_trait_bellicose } }
             }
             freeze_leader_age = yes
             set_leader_flag = roz_shinku_flag

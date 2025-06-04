@@ -618,7 +618,7 @@ country_event = {
 					value < 30
 				}
 			}
-			add_trait = leader_trait_roz_a_strangeness
+			add_trait = { trait = leader_trait_roz_a_strangeness }
 		}
 		every_owned_leader = {
 			#雪华绮晶-检查没有好感度特性的领袖并加特性
@@ -641,10 +641,10 @@ country_event = {
 				switch = {
 					trigger = leader_class
 					official = {
-						add_trait = leader_trait_krks_governor_a_like
+						add_trait = { trait = leader_trait_krks_governor_a_like }
 					}
 					commander = {
-						add_trait = leader_trait_krks_general_a_like
+						add_trait = { trait = leader_trait_krks_general_a_like }
 					}
 				}
 			}
@@ -658,10 +658,10 @@ country_event = {
 				switch = {
 					trigger = leader_class
 					official = {
-						add_trait = leader_trait_krks_governor_a_love
+						add_trait = { trait = leader_trait_krks_governor_a_love }
 					}
 					commander = {
-						add_trait = leader_trait_krks_general_a_love
+						add_trait = { trait = leader_trait_krks_general_a_love }
 					}
 				}
 			}
@@ -676,7 +676,7 @@ country_event = {
 					value < 30
 				}
 			}
-			add_trait = leader_trait_roz_a_strangeness
+			add_trait = { trait = leader_trait_roz_a_strangeness }
 		}
 		if = {
 			#添加飞升特质（完成二段飞升）
@@ -691,7 +691,7 @@ country_event = {
 						has_trait = leader_trait_ge_ruler_bond
 					}
 				}
-				add_trait = leader_trait_ge_ruler_bond
+				add_trait = { trait = leader_trait_ge_ruler_bond }
 			}
 			every_pool_leader = {
 				limit = {
@@ -699,7 +699,7 @@ country_event = {
 						has_trait = leader_trait_ge_ruler_bond
 					}
 				}
-				add_trait = leader_trait_ge_ruler_bond
+				add_trait = { trait = leader_trait_ge_ruler_bond }
 			}
 		}
 	}
@@ -731,7 +731,7 @@ country_event = {
 						value >= 90
 					}
 				}
-				add_trait = leader_trait_krks_governor_a_love
+				add_trait = { trait = leader_trait_krks_governor_a_love }
 			}
 		}
 		event_target:roz_leader_shinku_global_target@root = {	#真红

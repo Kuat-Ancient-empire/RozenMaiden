@@ -492,7 +492,7 @@ country_event = { #控制台effect测试区
 		# 		}
 		# 	}
 		# }
-		#effect = {ruler = { save_global_event_target_as = KZ_VOY_star_chosen_target add_trait = leader_trait_KZ_VOY_magic_ruler add_trait = leader_trait_KZ_VOY_star_chosen }}
+		#effect = {ruler = { save_global_event_target_as = KZ_VOY_star_chosen_target add_trait = { trait = leader_trait_KZ_VOY_magic_ruler } add_trait = { trait = leader_trait_KZ_VOY_star_chosen } }}
 		# effect = {
 		# 	#国家初始化
 		# 	KZ_VOY_initialize_country_effect = yes

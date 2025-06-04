@@ -1321,40 +1321,40 @@ country_event = {
 							#has_trait = leader_trait_ge_dominator
 						}
 					}
-					add_trait = leader_trait_ge_ruler_bond
+					add_trait = { trait = leader_trait_ge_ruler_bond }
 					#if = {
 					#	limit = {
 					#		leader_class = admiral
 					#	}
-					#	add_trait = leader_trait_ge_cor_admiral
+					#	add_trait = { trait = leader_trait_ge_cor_admiral }
 					#	add_ruler_trait = leader_trait_ge_ruler_bond
 					#}
 					#if = {
 					#	limit = {
 					#		leader_class = general
 					#	}
-					#	add_trait = leader_trait_ge_cor_general
+					#	add_trait = { trait = leader_trait_ge_cor_general }
 					#	add_ruler_trait = leader_trait_ge_ruler_bond
 					#}
 					#if = {
 					#	limit = {
 					#		leader_class = governor
 					#	}
-					#	add_trait = leader_trait_ge_dominator
+					#	add_trait = { trait = leader_trait_ge_dominator }
 					#	add_ruler_trait = leader_trait_ge_ruler_bond
 					#}
 					#if = {
 					#	limit = {
 					#		leader_class = scientist
 					#	}
-					#	add_trait = leader_trait_ge_cor_scientist
+					#	add_trait = { trait = leader_trait_ge_cor_scientist }
 					#	add_ruler_trait = leader_trait_ge_ruler_bond
 					#}
 					#if = {
 					#	limit = {
 					#		leader_class = ruler
 					#	}
-					#	add_trait = leader_trait_ge_ruler_bond
+					#	add_trait = { trait = leader_trait_ge_ruler_bond }
 					#	add_ruler_trait = leader_trait_ge_ruler_bond
 					#}
 				}
@@ -1371,40 +1371,40 @@ country_event = {
 							has_trait = leader_trait_ge_ruler_bond
 						}
 					}
-					add_trait = leader_trait_ge_ruler_bond
+					add_trait = { trait = leader_trait_ge_ruler_bond }
 					#if = {
 					#	limit = {
 					#		leader_class = admiral
 					#	}
-					#	add_trait = leader_trait_ge_cor_admiral
+					#	add_trait = { trait = leader_trait_ge_cor_admiral }
 					#	add_ruler_trait = leader_trait_ge_ruler_bond
 					#}
 					#if = {
 					#	limit = {
 					#		leader_class = general
 					#	}
-					#	add_trait = leader_trait_ge_cor_general
+					#	add_trait = { trait = leader_trait_ge_cor_general }
 					#	add_ruler_trait = leader_trait_ge_ruler_bond
 					#}
 					#if = {
 					#	limit = {
 					#		leader_class = governor
 					#	}
-					#	add_trait = leader_trait_ge_dominator
+					#	add_trait = { trait = leader_trait_ge_dominator }
 					#	add_ruler_trait = leader_trait_ge_ruler_bond
 					#}
 					#if = {
 					#	limit = {
 					#		leader_class = scientist
 					#	}
-					#	add_trait = leader_trait_ge_cor_scientist
+					#	add_trait = { trait = leader_trait_ge_cor_scientist }
 					#	add_ruler_trait = leader_trait_ge_ruler_bond
 					#}
 					#if = {
 					#	limit = {
 					#		leader_class = ruler
 					#	}
-					#	add_trait = leader_trait_ge_ruler_bond
+					#	add_trait = { trait = leader_trait_ge_ruler_bond }
 					#	add_ruler_trait = leader_trait_ge_ruler_bond
 					#}
 				}
@@ -1430,12 +1430,12 @@ country_event = {
 	}
 	immediate = {
 		from = {
-			add_trait = leader_trait_ge_ruler_bond
+			add_trait = { trait = leader_trait_ge_ruler_bond }
 			#if = {
 			#	limit = {
 			#		leader_class = admiral
 			#	}
-			#	add_trait = leader_trait_ge_cor_admiral
+			#	add_trait = { trait = leader_trait_ge_cor_admiral }
 			#	add_ruler_trait = leader_trait_ge_ruler_bond
 			#	break = yes
 			#}
@@ -1443,7 +1443,7 @@ country_event = {
 			#	limit = {
 			#		leader_class = general
 			#	}
-			#	add_trait = leader_trait_ge_cor_general
+			#	add_trait = { trait = leader_trait_ge_cor_general }
 			#	add_ruler_trait = leader_trait_ge_ruler_bond
 			#	break = yes
 			#}
@@ -1451,7 +1451,7 @@ country_event = {
 			#	limit = {
 			#		leader_class = governor
 			#	}
-			#	add_trait = leader_trait_ge_dominator
+			#	add_trait = { trait = leader_trait_ge_dominator }
 			#	add_ruler_trait = leader_trait_ge_ruler_bond
 			#	break = yes
 			#}
@@ -1459,7 +1459,7 @@ country_event = {
 			#	limit = {
 			#		leader_class = scientist
 			#	}
-			#	add_trait = leader_trait_ge_cor_scientist
+			#	add_trait = { trait = leader_trait_ge_cor_scientist }
 			#	add_ruler_trait = leader_trait_ge_ruler_bond
 			#	break = yes
 			#}
@@ -1467,7 +1467,7 @@ country_event = {
 			#	limit = {
 			#		leader_class = ruler
 			#	}
-			#	add_trait = leader_trait_ge_ruler_bond
+			#	add_trait = { trait = leader_trait_ge_ruler_bond }
 			#	add_ruler_trait = leader_trait_ge_ruler_bond
 			#	break = yes
 			#}

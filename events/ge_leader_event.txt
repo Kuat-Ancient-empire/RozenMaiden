@@ -69,34 +69,34 @@ country_event = {
 						which = roz_suigintou_affection
 						value = 0
 					}
-					add_trait = leader_trait_ge_mercury_lamp
-					add_trait = leader_trait_ge_Blackwinged_Dragon
-					add_trait = leader_trait_ge_azoth
-					add_trait = leader_trait_ge_N_field
+					add_trait = { trait = leader_trait_ge_mercury_lamp }
+					add_trait = { trait = leader_trait_ge_Blackwinged_Dragon }
+					add_trait = { trait = leader_trait_ge_azoth }
+					add_trait = { trait = leader_trait_ge_N_field }
 					random_list = {
 						1 = {
-							add_trait = leader_trait_armorer
+							add_trait = { trait = leader_trait_armorer }
 						}
 						2 = {
-							add_trait = leader_trait_military_overseer
+							add_trait = { trait = leader_trait_military_overseer }
 						}
 						1 = {
-							add_trait = leader_trait_master_gunner
+							add_trait = { trait = leader_trait_master_gunner }
 						}
 						1 = {
-							add_trait = leader_trait_destiny_engineer
+							add_trait = { trait = leader_trait_destiny_engineer }
 						}
 						2 = {
-							add_trait = leader_trait_guerilla_tactics
+							add_trait = { trait = leader_trait_guerilla_tactics }
 						}
 						1 = {
-							add_trait = leader_trait_survivalist
+							add_trait = { trait = leader_trait_survivalist }
 						}
 						1 = {
-							add_trait = leader_trait_maven_of_war
+							add_trait = { trait = leader_trait_maven_of_war }
 						}
 						1 = {
-							add_trait = leader_trait_peacekeeper
+							add_trait = { trait = leader_trait_peacekeeper }
 						}
 					}
 					freeze_leader_age = yes

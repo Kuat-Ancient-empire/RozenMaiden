@@ -705,49 +705,49 @@ roz_leader_type_switch_create_leader_initiate_effect = {	#生成领袖
 				trigger = leader_class
 				scientist = {
 					random_list = {
-						1 = { add_trait = leader_trait_surveyor }
-						1 = { add_trait = leader_trait_midas_touch }
-						1 = { add_trait = leader_trait_knowledge_for_the_masses }
-						1 = { add_trait = leader_trait_great_researcher }
-						1 = { add_trait = leader_trait_truth_seeker }
-						1 = { add_trait = leader_trait_brilliant_shipwright }
-						1 = { add_trait = leader_trait_frontier_adventurer }
-						1 = { add_trait = leader_trait_xeno_cataloger }
-						2 = { add_trait = leader_trait_knowledge_for_the_masses }
+						1 = { add_trait = { trait = leader_trait_surveyor } }
+						1 = { add_trait = { trait = leader_trait_midas_touch } }
+						1 = { add_trait = { trait = leader_trait_knowledge_for_the_masses } }
+						1 = { add_trait = { trait = leader_trait_great_researcher } }
+						1 = { add_trait = { trait = leader_trait_truth_seeker } }
+						1 = { add_trait = { trait = leader_trait_brilliant_shipwright } }
+						1 = { add_trait = { trait = leader_trait_frontier_adventurer } }
+						1 = { add_trait = { trait = leader_trait_xeno_cataloger } }
+						2 = { add_trait = { trait = leader_trait_knowledge_for_the_masses } }
 					}
 				}
 				commander = {
 					random_list = {
-						1 = { add_trait = leader_trait_armorer }
-						1 = { add_trait = leader_trait_military_overseer }
-						1 = { add_trait = leader_trait_master_gunner }
-						1 = { add_trait = leader_trait_destiny_engineer }
-						1 = { add_trait = leader_trait_guerilla_tactics }
-						1 = { add_trait = leader_trait_survivalist }
-						1 = { add_trait = leader_trait_maven_of_war }
-						2 = { add_trait = leader_trait_peacekeeper }
+						1 = { add_trait = { trait = leader_trait_armorer } }
+						1 = { add_trait = { trait = leader_trait_military_overseer } }
+						1 = { add_trait = { trait = leader_trait_master_gunner } }
+						1 = { add_trait = { trait = leader_trait_destiny_engineer } }
+						1 = { add_trait = { trait = leader_trait_guerilla_tactics } }
+						1 = { add_trait = { trait = leader_trait_survivalist } }
+						1 = { add_trait = { trait = leader_trait_maven_of_war } }
+						2 = { add_trait = { trait = leader_trait_peacekeeper } }
 					}
 					random_list = {
-						1 = { add_trait = leader_trait_taskmaster }
-						1 = { add_trait = leader_trait_fortress_cracker }
-						1 = { add_trait = leader_trait_chainbreaker }
-						1 = { add_trait = leader_trait_honored_warmaster }
-						1 = { add_trait = leader_trait_academia_recruiter }
-						1 = { add_trait = leader_trait_supreme_warrior }
-						1 = { add_trait = leader_trait_spymaster }
-						1 = { add_trait = leader_trait_totalitarian }
-						1 = { add_trait = leader_trait_bellicose }
+						1 = { add_trait = { trait = leader_trait_taskmaster } }
+						1 = { add_trait = { trait = leader_trait_fortress_cracker } }
+						1 = { add_trait = { trait = leader_trait_chainbreaker } }
+						1 = { add_trait = { trait = leader_trait_honored_warmaster } }
+						1 = { add_trait = { trait = leader_trait_academia_recruiter } }
+						1 = { add_trait = { trait = leader_trait_supreme_warrior } }
+						1 = { add_trait = { trait = leader_trait_spymaster } }
+						1 = { add_trait = { trait = leader_trait_totalitarian } }
+						1 = { add_trait = { trait = leader_trait_bellicose } }
 					}
 				}
 				official = {
 					random_list = {
-						1 = { add_trait = leader_trait_efficient }
-						1 = { add_trait = leader_trait_arbiter }
-						2 = { add_trait = leader_trait_utopian_idealist }
-						1 = { add_trait = leader_trait_mediator }
-						1 = { add_trait = leader_trait_shroud_preacher }
-						1 = { add_trait = leader_trait_master_diplomat }
-						1 = { add_trait = leader_trait_galvanizer }
+						1 = { add_trait = { trait = leader_trait_efficient } }
+						1 = { add_trait = { trait = leader_trait_arbiter } }
+						2 = { add_trait = { trait = leader_trait_utopian_idealist } }
+						1 = { add_trait = { trait = leader_trait_mediator } }
+						1 = { add_trait = { trait = leader_trait_shroud_preacher } }
+						1 = { add_trait = { trait = leader_trait_master_diplomat } }
+						1 = { add_trait = { trait = leader_trait_galvanizer } }
 					}
 				}
 			}
@@ -799,19 +799,19 @@ roz_leader_initialize_after_create_effect = {
 		}
 		if = {
 			limit = { check_variable = { which = roz_$leader$_affection value >= 90 } }
-			add_trait = leader_trait_roz_a_love
+			add_trait = { trait = leader_trait_roz_a_love }
 		}
 		else_if = {
 			limit = { check_variable = { which = roz_$leader$_affection value >= 60 } }
-			add_trait = leader_trait_roz_a_like
+			add_trait = { trait = leader_trait_roz_a_like }
 		}
 		else_if = {
 			limit = { check_variable = { which = roz_$leader$_affection value >= 30 } }
-			add_trait = leader_trait_roz_a_friendly
+			add_trait = { trait = leader_trait_roz_a_friendly }
 		}
 		else_if = {
 			limit = { check_variable = { which = roz_$leader$_affection value < 30 } }
-			add_trait = leader_trait_roz_a_strangeness
+			add_trait = { trait = leader_trait_roz_a_strangeness }
 		}
 	}
 	roz_leader_change_skin_reset_effect = {

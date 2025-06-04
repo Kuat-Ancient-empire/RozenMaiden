@@ -69,7 +69,7 @@ ship_event = {
                             limit = {
                                 NOT = { has_leader_flag = roz_suigintou_flag }
                             }
-                            add_trait = leader_trait_roz_battered
+                            add_trait = { trait = leader_trait_roz_battered }
                         }
 
                     }
@@ -86,7 +86,7 @@ ship_event = {
                             limit = {
                                 NOT = { has_leader_flag = roz_suigintou_flag }
                             }
-                            add_trait = leader_trait_roz_battered
+                            add_trait = { trait = leader_trait_roz_battered }
                         }
                     }
                 }
@@ -113,7 +113,7 @@ ship_event = {
                     limit = {
                         NOT = { has_leader_flag = roz_suigintou_flag }
                     }
-                    add_trait = leader_trait_roz_battered
+                    add_trait = { trait = leader_trait_roz_battered }
                 }
             }
         }

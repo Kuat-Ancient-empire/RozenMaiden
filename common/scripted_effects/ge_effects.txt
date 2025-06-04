@@ -79,9 +79,9 @@ create_ge_suigintou_scientist = {
 				leader_sc = shuiyindeng
 				country = suigintou_global_country
 			}
-			# add_trait = leader_trait_ge_mercury_lamp
-			# add_trait = leader_trait_ge_azoth
-			# add_trait = leader_trait_ge_N_field
+			# add_trait = { trait = leader_trait_ge_mercury_lamp }
+			# add_trait = { trait = leader_trait_ge_azoth }
+			# add_trait = { trait = leader_trait_ge_N_field }
 		}
 	}
 	#移除玩家的指挥官水银灯
@@ -131,9 +131,9 @@ create_ge_suigintou_admiral = {
 				leader_sc = shuiyindeng
 				country = suigintou_global_country
 			}	
-			# add_trait = leader_trait_ge_meimei_scientist
-			# add_trait = leader_trait_ge_N_field_scientist
-			# add_trait = leader_trait_ge_mercury_lamp_scientist
+			# add_trait = { trait = leader_trait_ge_meimei_scientist }
+			# add_trait = { trait = leader_trait_ge_N_field_scientist }
+			# add_trait = { trait = leader_trait_ge_mercury_lamp_scientist }
 		}
 	}
 	#移除玩家的科学家水银灯
@@ -151,7 +151,7 @@ create_ge_suigintou_admiral = {
 		symbolic_trait_2 = leader_trait_ge_azoth
 		symbolic_trait_3 = leader_trait_ge_N_field
 	}
-	last_created_leader = { add_trait = leader_trait_ge_Blackwinged_Dragon }
+	last_created_leader = { add_trait = { trait = leader_trait_ge_Blackwinged_Dragon } }
 	roz_leader_initialize_after_create_effect = {
 		leader = suigintou
 		leader_sc = shuiyindeng
@@ -215,19 +215,19 @@ roz_suigintou_clone_admiral_from_cache_country = {
 # 		}
 # 		if = {
 # 			limit = { check_variable = { which = roz_suigintou_affection value >= 90 } }
-# 			add_trait = leader_trait_roz_a_love
+# 			add_trait = { trait = leader_trait_roz_a_love }
 # 		}
 # 		else_if = {
 # 			limit = { check_variable = { which = roz_suigintou_affection value >= 60 } }
-# 			add_trait = leader_trait_roz_a_like
+# 			add_trait = { trait = leader_trait_roz_a_like }
 # 		}
 # 		else_if = {
 # 			limit = { check_variable = { which = roz_suigintou_affection value >= 30 } }
-# 			add_trait = leader_trait_roz_a_friendly
+# 			add_trait = { trait = leader_trait_roz_a_friendly }
 # 		}
 # 		else_if = {
 # 			limit = { check_variable = { which = roz_suigintou_affection value < 30 } }
-# 			add_trait = leader_trait_roz_a_strangeness
+# 			add_trait = { trait = leader_trait_roz_a_strangeness }
 # 		}
 # 		freeze_leader_age = yes
 # 	}
@@ -247,18 +247,18 @@ roz_suigintou_clone_admiral_from_cache_country = {
 # 		}
 # 		if = {
 # 			limit = { check_variable = { which = roz_suigintou_affection value >= 90 } }
-# 			add_trait = leader_trait_roz_a_love
+# 			add_trait = { trait = leader_trait_roz_a_love }
 # 		}
 # 		else_if = {
 # 			limit = { check_variable = { which = roz_suigintou_affection value >= 60 } }
-# 			add_trait = leader_trait_roz_a_like
+# 			add_trait = { trait = leader_trait_roz_a_like }
 # 		}
 # 		else_if = {
 # 			limit = { check_variable = { which = roz_suigintou_affection value >= 30 } }
-# 			add_trait = leader_trait_roz_a_friendly
+# 			add_trait = { trait = leader_trait_roz_a_friendly }
 # 		}
 # 		else_if = { limit = { check_variable = { which = roz_suigintou_affection value < 30 } }
-# 			add_trait = leader_trait_roz_a_strangeness
+# 			add_trait = { trait = leader_trait_roz_a_strangeness }
 # 		}
 # 		freeze_leader_age = yes
 # 	}
@@ -472,36 +472,36 @@ roz_suigintou_revive_reset_scientist = {
 			}
 			if = {
 				limit = { check_variable = { which = roz_suigintou_affection value >= 90 } }
-				add_trait = leader_trait_roz_a_love
+				add_trait = { trait = leader_trait_roz_a_love }
 			}
 			else_if = {
 				limit = { check_variable = { which = roz_suigintou_affection value >= 60 } }
-				add_trait = leader_trait_roz_a_like
+				add_trait = { trait = leader_trait_roz_a_like }
 			}
 			else_if = {
 				limit = { check_variable = { which = roz_suigintou_affection value >= 30 } }
-				add_trait = leader_trait_roz_a_friendly
+				add_trait = { trait = leader_trait_roz_a_friendly }
 			}
 			else_if = {
 				limit = { check_variable = { which = roz_suigintou_affection value < 30 } }
-				add_trait = leader_trait_roz_a_strangeness
+				add_trait = { trait = leader_trait_roz_a_strangeness }
 			}
 			freeze_leader_age = yes
 		}
 		last_created_leader = {
-			add_trait = leader_trait_ge_meimei_scientist
-			add_trait = leader_trait_ge_N_field_scientist
-			add_trait = leader_trait_ge_mercury_lamp_scientist
+			add_trait = { trait = leader_trait_ge_meimei_scientist }
+			add_trait = { trait = leader_trait_ge_N_field_scientist }
+			add_trait = { trait = leader_trait_ge_mercury_lamp_scientist }
 			random_list = {
-				1 = { add_trait = leader_trait_surveyor }
-				1 = { add_trait = leader_trait_midas_touch }
-				1 = { add_trait = leader_trait_knowledge_for_the_masses }
-				1 = { add_trait = leader_trait_great_researcher }
-				1 = { add_trait = leader_trait_truth_seeker }
-				1 = { add_trait = leader_trait_brilliant_shipwright }
-				1 = { add_trait = leader_trait_frontier_adventurer }
-				1 = { add_trait = leader_trait_xeno_cataloger }
-				1 = { add_trait = leader_trait_knowledge_for_the_masses }
+				1 = { add_trait = { trait = leader_trait_surveyor } }
+				1 = { add_trait = { trait = leader_trait_midas_touch } }
+				1 = { add_trait = { trait = leader_trait_knowledge_for_the_masses } }
+				1 = { add_trait = { trait = leader_trait_great_researcher } }
+				1 = { add_trait = { trait = leader_trait_truth_seeker } }
+				1 = { add_trait = { trait = leader_trait_brilliant_shipwright } }
+				1 = { add_trait = { trait = leader_trait_frontier_adventurer } }
+				1 = { add_trait = { trait = leader_trait_xeno_cataloger } }
+				1 = { add_trait = { trait = leader_trait_knowledge_for_the_masses } }
 			}
 			reroll_random = yes
 			freeze_leader_age = yes
@@ -556,35 +556,35 @@ roz_suigintou_revive_reset_admiral = {
 			}
 			if = {
 				limit = { check_variable = { which = roz_suigintou_affection value >= 90 } }
-				add_trait = leader_trait_roz_a_love
+				add_trait = { trait = leader_trait_roz_a_love }
 			}
 			else_if = {
 				limit = { check_variable = { which = roz_suigintou_affection value >= 60 } }
-				add_trait = leader_trait_roz_a_like
+				add_trait = { trait = leader_trait_roz_a_like }
 			}
 			else_if = {
 				limit = { check_variable = { which = roz_suigintou_affection value >= 30 } }
-				add_trait = leader_trait_roz_a_friendly
+				add_trait = { trait = leader_trait_roz_a_friendly }
 			}
 			else_if = { limit = { check_variable = { which = roz_suigintou_affection value < 30 } }
-				add_trait = leader_trait_roz_a_strangeness
+				add_trait = { trait = leader_trait_roz_a_strangeness }
 			}
 			freeze_leader_age = yes
 		}
 		last_created_leader = {
-			add_trait = leader_trait_ge_mercury_lamp
-			add_trait = leader_trait_ge_Blackwinged_Dragon
-			add_trait = leader_trait_ge_azoth
-			add_trait = leader_trait_ge_N_field
+			add_trait = { trait = leader_trait_ge_mercury_lamp }
+			add_trait = { trait = leader_trait_ge_Blackwinged_Dragon }
+			add_trait = { trait = leader_trait_ge_azoth }
+			add_trait = { trait = leader_trait_ge_N_field }
 			random_list = {
-				1 = { add_trait = leader_trait_armorer }
-				2 = { add_trait = leader_trait_military_overseer }
-				1 = { add_trait = leader_trait_master_gunner }
-				1 = { add_trait = leader_trait_destiny_engineer }
-				2 = { add_trait = leader_trait_guerilla_tactics }
-				1 = { add_trait = leader_trait_survivalist }
-				1 = { add_trait = leader_trait_maven_of_war }
-				1 = { add_trait = leader_trait_peacekeeper }
+				1 = { add_trait = { trait = leader_trait_armorer } }
+				2 = { add_trait = { trait = leader_trait_military_overseer } }
+				1 = { add_trait = { trait = leader_trait_master_gunner } }
+				1 = { add_trait = { trait = leader_trait_destiny_engineer } }
+				2 = { add_trait = { trait = leader_trait_guerilla_tactics } }
+				1 = { add_trait = { trait = leader_trait_survivalist } }
+				1 = { add_trait = { trait = leader_trait_maven_of_war } }
+				1 = { add_trait = { trait = leader_trait_peacekeeper } }
 			}
 			reroll_random = yes
 			freeze_leader_age = yes
@@ -1771,7 +1771,7 @@ roz_leader_affection_change_effect = {	#scope: leader
 			ge_affection_frindly_trigger = yes
 		}
 		roz_remove_all_affection_traits = yes
-		add_trait = leader_trait_roz_a_friendly
+		add_trait = { trait = leader_trait_roz_a_friendly }
 	}
 	else_if = {
 		###lv3
@@ -1780,7 +1780,7 @@ roz_leader_affection_change_effect = {	#scope: leader
 			ge_affection_like_trigger = yes
 		}
 		roz_remove_all_affection_traits = yes
-		add_trait = leader_trait_roz_a_like
+		add_trait = { trait = leader_trait_roz_a_like }
 	}
 	else_if = {
 		###lv4
@@ -1789,7 +1789,7 @@ roz_leader_affection_change_effect = {	#scope: leader
 			ge_affection_love_trigger = yes
 		}
 		roz_remove_all_affection_traits = yes
-		add_trait = leader_trait_roz_a_love
+		add_trait = { trait = leader_trait_roz_a_love }
 	}
 }
 
