@@ -781,9 +781,9 @@ roz_leader_type_switch_create_leader_initiate_effect = {	#生成领袖
 					}
 				}
 			}
-			add_trait = $symbolic_trait_1$
-			add_trait = $symbolic_trait_2$
-			add_trait = $symbolic_trait_3$
+			add_trait = { trait = $symbolic_trait_1$ }
+			add_trait = { trait = $symbolic_trait_2$ }
+			add_trait = { trait = $symbolic_trait_3$ }
 		}
 	}
 }
