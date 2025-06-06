@@ -668,6 +668,7 @@ r_roz_Chronos_Label = {
         ship_jumpdrive_cooldown_mult = -0.25
         ship_ftl_jumpdrive_range_mult = 0.25
         planet_housing_mult = 0.10
+        SECTOR_MAX_JUMPS_ADD = 1
     }
 
     score = 10000

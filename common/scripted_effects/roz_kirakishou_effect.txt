@@ -28,6 +28,11 @@ create_roz_kirakishou_governor = {
                 who_jp = Kirakishou
                 who_sc = xuehuaqijing
             }
+            #东方繁星录兼容
+            if = {
+                limit = { this = { spth_check_gensokyo_auth = yes } }
+                set_leader_flag = own_th_leader_trait
+            }
         }
     }
 
@@ -58,6 +63,11 @@ create_roz_kirakishou_governor = {
                 }
                 freeze_leader_age = yes
                 set_owner = event_target:roz_suigintou_owner@root
+                #东方繁星录兼容
+                if = {
+                    limit = { this = { spth_check_gensokyo_auth = yes } }
+                    set_leader_flag = own_th_leader_trait
+                }
             }
         }
     }
@@ -128,6 +138,11 @@ create_roz_kirakishou_admiral = {
                 who_jp = Kirakishou
                 who_sc = xuehuaqijing
             }
+            #东方繁星录兼容
+            if = {
+                limit = { this = { spth_check_gensokyo_auth = yes } }
+                set_leader_flag = own_th_leader_trait
+            }
         }
     }
 
@@ -152,6 +167,11 @@ create_roz_kirakishou_admiral = {
                         who_sc = xuehuaqijing
                     }
                     set_owner = event_target:roz_suigintou_owner@root
+                    #东方繁星录兼容
+                    if = {
+                        limit = { this = { spth_check_gensokyo_auth = yes } }
+                        set_leader_flag = own_th_leader_trait
+                    }
                 }
             }
         }
@@ -536,6 +556,11 @@ roz_krks_commander_backup = {
                     who_jp = Kirakishou
                     who_sc = xuehuaqijing
                 }
+                #东方繁星录兼容
+                if = {
+                    limit = { this = { spth_check_gensokyo_auth = yes } }
+                    set_leader_flag = own_th_leader_trait
+                }
             }
         }
     }
@@ -574,6 +599,11 @@ roz_krks_official_backup = {
                     who_jp = Kirakishou
                     who_sc = xuehuaqijing
                 }
+                #东方繁星录兼容
+                if = {
+                    limit = { this = { spth_check_gensokyo_auth = yes } }
+                    set_leader_flag = own_th_leader_trait
+                }
             }
         }
     }
@@ -593,6 +623,11 @@ roz_kirakishou_revive_reset_official = {
                 }
                 #freeze_leader_age = yes
                 save_global_event_target_as = roz_leader_kirakishou_global_target@root
+                #东方繁星录兼容
+                if = {
+                    limit = { this = { spth_check_gensokyo_auth = yes } }
+                    set_leader_flag = own_th_leader_trait
+                }
             }
         }
     }
@@ -704,6 +739,11 @@ roz_kirakishou_revive_reset_commander = {
                 roz_leader_name_set_effect = {
                     who_jp = Kirakishou
                     who_sc = xuehuaqijing
+                }
+                #东方繁星录兼容
+                if = {
+                    limit = { this = { spth_check_gensokyo_auth = yes } }
+                    set_leader_flag = own_th_leader_trait
                 }
             }
         }

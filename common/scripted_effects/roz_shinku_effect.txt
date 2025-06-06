@@ -320,6 +320,11 @@ roz_shinku_leader_type_switch_scientist = {
 					leader_sc = zhenhong
 					country = shinku_global_country
 				}
+				#东方繁星录兼容
+				if = {
+					limit = { this = { spth_check_gensokyo_auth = yes } }
+					set_leader_flag = own_th_leader_trait
+				}
 			}
 		}
 		#移除玩家的指挥官真红
@@ -371,6 +376,11 @@ roz_shinku_leader_type_switch_scientist = {
 					leader = shinku
 					leader_sc = zhenhong
 					country = shinku_global_country
+				}
+				#东方繁星录兼容
+				if = {
+					limit = { this = { spth_check_gensokyo_auth = yes } }
+					set_leader_flag = own_th_leader_trait
 				}
 			}
 		}
@@ -429,6 +439,11 @@ roz_shinku_leader_type_switch_commander = {
 					leader_sc = zhenhong
 					country = shinku_global_country
 				}
+				#东方繁星录兼容
+				if = {
+					limit = { this = { spth_check_gensokyo_auth = yes } }
+					set_leader_flag = own_th_leader_trait
+				}
 			}
 		}
 		#移除玩家的科学家真红
@@ -484,6 +499,11 @@ roz_shinku_leader_type_switch_commander = {
 					leader = shinku
 					leader_sc = zhenhong
 					country = shinku_global_country
+				}
+				#东方繁星录兼容
+				if = {
+					limit = { this = { spth_check_gensokyo_auth = yes } }
+					set_leader_flag = own_th_leader_trait
 				}
 			}
 		}
@@ -546,6 +566,11 @@ roz_shinku_leader_type_switch_official = {
 					leader_sc = zhenhong
 					country = shinku_global_country
 				}
+				#东方繁星录兼容
+				if = {
+					limit = { this = { spth_check_gensokyo_auth = yes } }
+					set_leader_flag = own_th_leader_trait
+				}
 			}
 		}
 		#移除玩家的科学家真红
@@ -597,6 +622,11 @@ roz_shinku_leader_type_switch_official = {
 					leader = shinku
 					leader_sc = zhenhong
 					country = shinku_global_country
+				}
+				#东方繁星录兼容
+				if = {
+					limit = { this = { spth_check_gensokyo_auth = yes } }
+					set_leader_flag = own_th_leader_trait
 				}
 			}
 		}
@@ -771,6 +801,11 @@ roz_leader_type_switch_clone_from_cache_country_effect = {
 			}
 			set_leader_flag = roz_$leader$_flag
 			set_owner = event_target:roz_$leader$_owner@root
+			#东方繁星录兼容
+			if = {
+				limit = { this = { spth_check_gensokyo_auth = yes } }
+				set_leader_flag = own_th_leader_trait
+			}
 		}
 	}
 }
@@ -867,6 +902,11 @@ roz_shinku_leader_backup = {
 					leader_sc = zhenhong
 					country = shinku_global_country
 				}
+				#东方繁星录兼容
+				if = {
+					limit = { this = { spth_check_gensokyo_auth = yes } }
+					set_leader_flag = own_th_leader_trait
+				}
             }
         }
     }
@@ -892,6 +932,11 @@ roz_shinku_leader_backup = {
 					leader_sc = zhenhong
 					country = shinku_global_country
 				}
+				#东方繁星录兼容
+				if = {
+					limit = { this = { spth_check_gensokyo_auth = yes } }
+					set_leader_flag = own_th_leader_trait
+				}
             }
         }
     }
@@ -916,6 +961,11 @@ roz_shinku_leader_backup = {
 					leader = shinku
 					leader_sc = zhenhong
 					country = shinku_global_country
+				}
+				#东方繁星录兼容
+				if = {
+					limit = { this = { spth_check_gensokyo_auth = yes } }
+					set_leader_flag = own_th_leader_trait
 				}
             }
         }

@@ -79,6 +79,11 @@ create_ge_suigintou_scientist = {
 				leader_sc = shuiyindeng
 				country = suigintou_global_country
 			}
+			#东方繁星录兼容
+			if = {
+				limit = { this = { spth_check_gensokyo_auth = yes } }
+				set_leader_flag = own_th_leader_trait
+			}
 			# add_trait = { trait = leader_trait_ge_mercury_lamp }
 			# add_trait = { trait = leader_trait_ge_azoth }
 			# add_trait = { trait = leader_trait_ge_N_field }
@@ -130,7 +135,12 @@ create_ge_suigintou_admiral = {
 				leader = suigintou
 				leader_sc = shuiyindeng
 				country = suigintou_global_country
-			}	
+			}
+			#东方繁星录兼容
+			if = {
+				limit = { this = { spth_check_gensokyo_auth = yes } }
+				set_leader_flag = own_th_leader_trait
+			}
 			# add_trait = { trait = leader_trait_ge_meimei_scientist }
 			# add_trait = { trait = leader_trait_ge_N_field_scientist }
 			# add_trait = { trait = leader_trait_ge_mercury_lamp_scientist }
@@ -174,6 +184,11 @@ roz_suigintou_clone_scientist_from_cache_country = {
 			}
 			set_leader_flag = roz_suigintou_flag
 			set_owner = event_target:roz_suigintou_owner@root
+			#东方繁星录兼容
+			if = {
+				limit = { this = { spth_check_gensokyo_auth = yes } }
+				set_leader_flag = own_th_leader_trait
+			}
 		}
 	}
 }
@@ -192,6 +207,11 @@ roz_suigintou_clone_admiral_from_cache_country = {
 			}
 			set_leader_flag = roz_suigintou_flag
 			set_owner = event_target:roz_suigintou_owner@root
+			#东方繁星录兼容
+			if = {
+				limit = { this = { spth_check_gensokyo_auth = yes } }
+				set_leader_flag = own_th_leader_trait
+			}
 		}
 	}
 }
@@ -391,6 +411,11 @@ roz_suigintou_scientist_backup = {
 					leader_sc = shuiyindeng
 					country = suigintou_global_country
 				}
+				#东方繁星录兼容
+				if = {
+					limit = { this = { spth_check_gensokyo_auth = yes } }
+					set_leader_flag = own_th_leader_trait
+				}
 			}		
 		}		
 	}
@@ -423,6 +448,11 @@ roz_suigintou_admiral_backup = {
 					leader = suigintou
 					leader_sc = shuiyindeng
 					country = suigintou_global_country
+				}
+				#东方繁星录兼容
+				if = {
+					limit = { this = { spth_check_gensokyo_auth = yes } }
+					set_leader_flag = own_th_leader_trait
 				}
 			}
 		}
@@ -2729,6 +2759,129 @@ Mercury_lamp_helps_research_current_technology = {
 			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_supreme_alloy } } add_tech_progress = { tech = tech_supreme_alloy progress = 1 } }
 			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ordered_retreat } } add_tech_progress = { tech = tech_ordered_retreat progress = 1 } }
 			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_temple_of_transportation } } add_tech_progress = { tech = tech_temple_of_transportation progress = 1 } }
+
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_mauler_build_speed } } add_tech_progress = { tech = tech_mauler_build_speed progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_mauler_growth_1 } } add_tech_progress = { tech = tech_mauler_growth_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_mauler_growth_2 } } add_tech_progress = { tech = tech_mauler_growth_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weavers } } add_tech_progress = { tech = tech_weavers progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_build_speed } } add_tech_progress = { tech = tech_weaver_build_speed progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_growth_1 } } add_tech_progress = { tech = tech_weaver_growth_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_growth_2 } } add_tech_progress = { tech = tech_weaver_growth_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_harbingers } } add_tech_progress = { tech = tech_harbingers progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_harbinger_build_speed } } add_tech_progress = { tech = tech_harbinger_build_speed progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_harbinger_growth_1 } } add_tech_progress = { tech = tech_harbinger_growth_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_harbinger_growth_2 } } add_tech_progress = { tech = tech_harbinger_growth_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_stingers } } add_tech_progress = { tech = tech_stingers progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_stinger_build_speed } } add_tech_progress = { tech = tech_stinger_build_speed progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_stinger_growth_1 } } add_tech_progress = { tech = tech_stinger_growth_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_stinger_growth_2 } } add_tech_progress = { tech = tech_stinger_growth_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_growth_chamber_1 } } add_tech_progress = { tech = tech_growth_chamber_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_growth_chamber_2 } } add_tech_progress = { tech = tech_growth_chamber_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_mandibles_2 } } add_tech_progress = { tech = tech_mandibles_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_mandibles_3 } } add_tech_progress = { tech = tech_mandibles_3 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_healing_1 } } add_tech_progress = { tech = tech_weaver_bio_healing_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_healing_1 } } add_tech_progress = { tech = tech_weaver_bio_healing_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_healing_2 } } add_tech_progress = { tech = tech_weaver_bio_healing_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_healing_3 } } add_tech_progress = { tech = tech_weaver_bio_healing_3 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_healing_4 } } add_tech_progress = { tech = tech_weaver_bio_healing_4 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_healing_5 } } add_tech_progress = { tech = tech_weaver_bio_healing_5 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_healing_6 } } add_tech_progress = { tech = tech_weaver_bio_healing_6 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_evasion_1 } } add_tech_progress = { tech = tech_weaver_bio_evasion_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_evasion_2 } } add_tech_progress = { tech = tech_weaver_bio_evasion_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_evasion_3 } } add_tech_progress = { tech = tech_weaver_bio_evasion_3 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_evasion_4 } } add_tech_progress = { tech = tech_weaver_bio_evasion_4 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_evasion_5 } } add_tech_progress = { tech = tech_weaver_bio_evasion_5 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_evasion_6 } } add_tech_progress = { tech = tech_weaver_bio_evasion_6 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_fire_rate_1 } } add_tech_progress = { tech = tech_weaver_bio_fire_rate_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_fire_rate_2 } } add_tech_progress = { tech = tech_weaver_bio_fire_rate_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_fire_rate_3 } } add_tech_progress = { tech = tech_weaver_bio_fire_rate_3 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_fire_rate_4 } } add_tech_progress = { tech = tech_weaver_bio_fire_rate_4 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_fire_rate_5 } } add_tech_progress = { tech = tech_weaver_bio_fire_rate_5 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_fire_rate_6 } } add_tech_progress = { tech = tech_weaver_bio_fire_rate_6 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_confuser_1 } } add_tech_progress = { tech = tech_weaver_bio_confuser_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_confuser_2 } } add_tech_progress = { tech = tech_weaver_bio_confuser_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_confuser_3 } } add_tech_progress = { tech = tech_weaver_bio_confuser_3 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_confuser_4 } } add_tech_progress = { tech = tech_weaver_bio_confuser_4 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_confuser_5 } } add_tech_progress = { tech = tech_weaver_bio_confuser_5 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_confuser_6 } } add_tech_progress = { tech = tech_weaver_bio_confuser_6 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_anti_evasion_1 } } add_tech_progress = { tech = tech_weaver_bio_anti_evasion_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_anti_evasion_2 } } add_tech_progress = { tech = tech_weaver_bio_anti_evasion_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_anti_evasion_3 } } add_tech_progress = { tech = tech_weaver_bio_anti_evasion_3 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_anti_evasion_4 } } add_tech_progress = { tech = tech_weaver_bio_anti_evasion_4 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_anti_evasion_5 } } add_tech_progress = { tech = tech_weaver_bio_anti_evasion_5 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_anti_evasion_6 } } add_tech_progress = { tech = tech_weaver_bio_anti_evasion_6 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_anti_fire_rate_1 } } add_tech_progress = { tech = tech_weaver_bio_anti_fire_rate_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_anti_fire_rate_2 } } add_tech_progress = { tech = tech_weaver_bio_anti_fire_rate_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_anti_fire_rate_3 } } add_tech_progress = { tech = tech_weaver_bio_anti_fire_rate_3 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_anti_fire_rate_4 } } add_tech_progress = { tech = tech_weaver_bio_anti_fire_rate_4 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_anti_fire_rate_5 } } add_tech_progress = { tech = tech_weaver_bio_anti_fire_rate_5 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_weaver_bio_anti_fire_rate_6 } } add_tech_progress = { tech = tech_weaver_bio_anti_fire_rate_6 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_deep_space_citadel } } add_tech_progress = { tech = tech_deep_space_citadel progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_wilderness_terraform } } add_tech_progress = { tech = tech_wilderness_terraform progress = 1 } }
+			#cosmic_storms
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_storm_manipulation } } add_tech_progress = { tech = tech_storm_manipulation progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_advanced_storm_manipulation } } add_tech_progress = { tech = tech_advanced_storm_manipulation progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_industrial_storm_protection } } add_tech_progress = { tech = tech_industrial_storm_protection progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_advanced_industrial_storm_protection } } add_tech_progress = { tech = tech_advanced_industrial_storm_protection progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_storm_prediction_1 } } add_tech_progress = { tech = tech_storm_prediction_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_storm_prediction_2 } } add_tech_progress = { tech = tech_storm_prediction_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ship_hull_storm_breaker_1 } } add_tech_progress = { tech = tech_ship_hull_storm_breaker_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ship_hull_storm_breaker_2 } } add_tech_progress = { tech = tech_ship_hull_storm_breaker_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ship_storm_weapons_1 } } add_tech_progress = { tech = tech_ship_storm_weapons_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ship_storm_weapons_2 } } add_tech_progress = { tech = tech_ship_storm_weapons_2 progress = 1 } }
+			#grand_archive
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_galactic_archivism } } add_tech_progress = { tech = tech_galactic_archivism progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_gravity_wells } } add_tech_progress = { tech = tech_gravity_wells progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_gravity_snare_capacity_1 } } add_tech_progress = { tech = tech_gravity_snare_capacity_1 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_gravity_snare_capacity_2 } } add_tech_progress = { tech = tech_gravity_snare_capacity_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_gravity_snare_capacity_3 } } add_tech_progress = { tech = tech_gravity_snare_capacity_3 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_containment_vessel } } add_tech_progress = { tech = tech_containment_vessel progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_voidworm_immunity } } add_tech_progress = { tech = tech_voidworm_immunity progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_asteroidal_carapace } } add_tech_progress = { tech = tech_asteroidal_carapace progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_alien_cloning } } add_tech_progress = { tech = tech_alien_cloning progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_improved_incubators } } add_tech_progress = { tech = tech_improved_incubators progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_metabolic_gases } } add_tech_progress = { tech = tech_metabolic_gases progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_boarding_cables } } add_tech_progress = { tech = tech_boarding_cables progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_controlled_mutations } } add_tech_progress = { tech = tech_controlled_mutations progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_controlled_mutations_2 } } add_tech_progress = { tech = tech_controlled_mutations_2 progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_unique_mutation_space_amoeba } } add_tech_progress = { tech = tech_unique_mutation_space_amoeba progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_unique_mutation_tiyanki } } add_tech_progress = { tech = tech_unique_mutation_tiyanki progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_unique_mutation_voidworm } } add_tech_progress = { tech = tech_unique_mutation_voidworm progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_unique_mutation_cutholoid } } add_tech_progress = { tech = tech_unique_mutation_cutholoid progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_unique_mutation_crystalline_entity } } add_tech_progress = { tech = tech_unique_mutation_crystalline_entity progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_unique_mutation_restorative_enzymes } } add_tech_progress = { tech = tech_unique_mutation_restorative_enzymes progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_unique_mutation_starborne_biology } } add_tech_progress = { tech = tech_unique_mutation_starborne_biology progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_thrusters_bio_integration } } add_tech_progress = { tech = tech_thrusters_bio_integration progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_hyper_drive_bio_integration } } add_tech_progress = { tech = tech_hyper_drive_bio_integration progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_sensors_bio_integration } } add_tech_progress = { tech = tech_sensors_bio_integration progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_combat_computers_bio_integration } } add_tech_progress = { tech = tech_combat_computers_bio_integration progress = 1 } }
+
+			#rozen
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_sf_armor } } add_tech_progress = { tech = tech_ge_sf_armor progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_shield } } add_tech_progress = { tech = tech_ge_shield progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_warp_drive } } add_tech_progress = { tech = tech_ge_warp_drive progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_thruster } } add_tech_progress = { tech = tech_ge_thruster progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_sensor } } add_tech_progress = { tech = tech_ge_sensor progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_computer } } add_tech_progress = { tech = tech_ge_computer progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_rds } } add_tech_progress = { tech = tech_ge_rds progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_cb } } add_tech_progress = { tech = tech_ge_cb progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_shippart_titian_aura } } add_tech_progress = { tech = tech_ge_shippart_titian_aura progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_cb } } add_tech_progress = { tech = tech_ge_cb progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_pd } } add_tech_progress = { tech = tech_ge_pd progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_xl_beam } } add_tech_progress = { tech = tech_ge_xl_beam progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_t_beam } } add_tech_progress = { tech = tech_ge_t_beam progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_laser_cannon } } add_tech_progress = { tech = tech_ge_laser_cannon progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_kinetic_gun } } add_tech_progress = { tech = tech_ge_kinetic_gun progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_energy_torpedo } } add_tech_progress = { tech = tech_ge_energy_torpedo progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_wtorpedo } } add_tech_progress = { tech = tech_ge_wtorpedo progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_bhmissile } } add_tech_progress = { tech = tech_ge_bhmissile progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_strike_craft_bomber } } add_tech_progress = { tech = tech_ge_strike_craft_bomber progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_strike_craft_fighter } } add_tech_progress = { tech = tech_ge_strike_craft_fighter progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_planet_killer } } add_tech_progress = { tech = tech_ge_planet_killer progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_strike_craft_xuefeng } } add_tech_progress = { tech = tech_ge_strike_craft_xuefeng progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_section } } add_tech_progress = { tech = tech_ge_section progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_HTEP } } add_tech_progress = { tech = tech_ge_HTEP progress = 1 } }
+			100 = { modifier = { factor = 0 NOT = { is_researching_technology = tech_ge_sgt_flagship } } add_tech_progress = { tech = tech_ge_sgt_flagship progress = 1 } }
 
 
 
