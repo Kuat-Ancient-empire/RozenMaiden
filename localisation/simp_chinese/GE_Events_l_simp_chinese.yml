@@ -204,8 +204,12 @@ ge_event.7777.exit: "§G完成调整§!"
 
 
 
-
-
+#####
+ roz_sgt_aft_up_count_0_2: "水银灯好感度增加0.2点"
+ roz_sgt_aft_up_count_1: "水银灯好感度增加1点"
+ roz_sgt_aft_up_count_1_5: "水银灯好感度增加1.5点"
+ roz_sgt_aft_up_count_5: "水银灯好感度增加5点"
+ roz_sgt_aft_down_count_1: "水银灯好感度降低1点"
 
 
 #########################################
@@ -534,9 +538,9 @@ ge_sites.407.title: "终局"
 ge_sites.407.desc: "泰伦§H帝皇§!的意图已然明晰，迫于生存的重压，星海共同体没有选择的余地，他们一致同意了这个疯狂的计划，而混沌诸神也开始了较为\"激烈\"地反扑。\n\n泰伦帝国的星际战士军团面临着自重组以来最大的挑战，无数古老而精锐的亚空间邪魔冲击着防线，它们狰狞的爪牙穿透了§H帝皇§!赐予星际战士们的神圣庇护，撕扯着他们疲惫不堪的身躯，然而在帝国数万年的时光中，忠诚派的星际战士为了泰伦这个种族的兴亡从未停止过抗争，此刻即便是面对令人绝望的敌我差距，这些同样流淌着忠诚血脉的新一代星际战士们更不会向那该死的亚空间渣滓低头！\n\n现实银河中的星海共同体也爆发出了强劲的生产能力，这些异种们再度为了同一个帝国服务，只不过这一次他们不再是卑微的奴隶，他们同样以无畏的斗争意志挽救着他们赖以生存的家园……\n\n十年时间，对于混沌诸神来说不过弹指一瞬，然而就是在这极短的时间内，星海共同体完成了§R以太相引擎§!的建设与调试工作；七十三天，在混沌诸神看来这已经足够祂们在亚空间内将泰伦军团毁灭几十次，然而就是在这度日如年的漫长血战中，泰伦军团却靠着难以想象的牺牲撑到了最后……§g(注:亚空间的时间流速比真实世界慢得多)§!\n\n在意识被混沌诸神完全侵蚀前的那一刻，§H泰伦帝皇§!终于引爆了整个亚空间. 浩瀚磅礴的灵能风暴席卷了这里所有的生物，混沌诸神也难逃被重创的命运. 祂们的残余力量与§H帝皇§!在初生亚空间的作用下互相重组融合，最终演化成了五个更高维度的§M全新意志§!，而祂们中最强的一位甚至可以支配轮回……\n\n最终，泰伦帝国成功重塑了亚空间，他们全体飞升为了更高维度的存在，不过在亚空间被爆破的那一刻，一股当量大到难以置信的亚空间能量从各个§R以太相引擎§!中泄漏出来，它不仅将引擎自身完全摧毁，还通过恒星间的引力联系，横扫并重创了大半个银河系，我们所探索的这颗遗落星球便是首当其冲……\n\n灾难后的星海共同体很快进行了救灾工作，但联合会放弃了继续修复这颗残破的都市星球的计划，他们决定将这里永久保留下来，以纪念那场奇迹般的战争. 而那次冲击的残留下来的恒星间亚空间效应为银河诸国提供了构建全新的FTL方式的机会，他们在曾经帝国网道的\"废墟\"上，打造了一套遍布全银河系的超光速航行网络，他们将这个伟大的造物命名为 §B超空间航道§!。"
 ge_sites.407.aa: "肃然起敬"
 ge_sites.407.bb: "§M这段故事讲述的是过去还是未来呢？§!"
-ge_sites.407.bb.ct: "水银灯好感度增加1点"
+ge_sites.407.bb.ct: "$roz_sgt_aft_up_count_1$"
 ge_sites.407.cc: "§M这段故事讲述的是过去还是未来呢？§!"
-ge_sites.407.cc.ct: "获得大量科研点数和凝聚力\n水银灯好感度增加1点"
+ge_sites.407.cc.ct: "获得大量科研点数和凝聚力\n$roz_sgt_aft_up_count_1$"
 
 ge_sites.408.title: "传承者？"
 ge_sites.408.desc: "探索队成功完成了对这个遗落星球的全面探查，他们确认了这里的宜居性，同时也回收了那个能制造星球级幻象的虚空盾发生器，这或许能为我们所用。\n\n虽然连种族名字都变了,但是我们的历史学家还依旧找到了当年的那个联合会后裔的线索，他们就是如今的失落帝国[roz_sites_fallen_empire_target.GetName]，然而当我们与其分享这段史诗般的故事时，那帮傲慢而固执的[roz_sites_fallen_empire_target.GetSpeciesName]们却表示这段历史完全没有记录在他们的数据库中，并警告我们这些年轻种族别妄图揣测他们的起源。"
@@ -951,7 +955,7 @@ ge_communication.250.ii:0 "去黑洞之门研究站"
 ge_communication.250.ct:0 "未完成，还在编XD"
 
 rrzr:0 ""
-ge_communication.aft1.ct:0 "水银灯好感度提升1点."
+ge_communication.aft1.ct:0 "$roz_sgt_aft_up_count_1$."
 
 ge_communication.2501.title:0 "贝克兰德市东区某咖啡馆" #诡秘之主
 ge_communication.2501.desc:0 "§M拥挤的街道、林立的烟囱、阴沉的天空、麻木的行人，还有这个有些呛人的空气……东区确实不是什么约会的好地方。§!"
@@ -998,8 +1002,8 @@ ge_communication.2507.aa:0 "那是因为他不愿脱去长衫，靠奋斗摆脱�
 ge_communication.2507.bb:0 "是因为万恶的旧社会"
 ge_communication.2507.cc:0 "因为他是阳光开朗孔乙己♫"
 ge_communication.2507.dd:0 "我想听C小调第八号钢琴奏鸣曲"
-ge_communication.2507.cc.ct: "§M？？？§!\n\n水银灯的好感度增加了1点"
-ge_communication.2507.dd.ct: "§M？§!\n\n水银灯的好感度增加了1点"
+ge_communication.2507.cc.ct: "§M？？？§!\n\n$roz_sgt_aft_up_count_1$"
+ge_communication.2507.dd.ct: "§M？§!\n\n$roz_sgt_aft_up_count_1"
 
 
 
@@ -1042,46 +1046,46 @@ ge_communication.251.SP.aa: "购物"
 
 ge_communication.2511.desc:0 "§M这就是田园乡村的生活么...朴素而简单的爱情似乎也挺不错的.§!"
 ge_communication.2511.aa:0 "平凡既是喜乐"
-ge_communication.2511.ct:0 "水银灯好感度提升1点."
+ge_communication.2511.ct:0 "$roz_sgt_aft_up_count_1$."
 
 ge_communication.2512.desc:0 "§M这剧情...无聊而矫情.这种爽片适合给没有踏入社会的小孩子看.§!"
 ge_communication.2512.aa:0 "纸醉金迷，灯红酒绿.却和现实的残酷相差甚远."
-ge_communication.2512.ct:0 "水银灯的好感度上升0.2点"
+ge_communication.2512.ct:0 "$roz_sgt_aft_up_count_0_2$"
 ge_communication.2512.ct2:0 "§R真的是这样的吗§!"
 
 ge_communication.2513.desc:0 "§MEmmmm...你有想过当一回人偶吗? §!"
 ge_communication.2513.aa:0 "哈? "
-ge_communication.2513.ct:0 "水银灯好感度提升1点."
+ge_communication.2513.ct:0 "$roz_sgt_aft_up_count_1$."
 
 ge_communication.2514.desc:0 "§M\"一条大河~波浪宽~~\"§!"
 ge_communication.2514.aa:0 "\"风吹稻花~香两岸~~\""
-ge_communication.2514.ct:0 "水银灯好感度提升1.5点."
+ge_communication.2514.ct:0 "$roz_sgt_aft_up_count_1_5$."
 
  #流浪地球2
 ge_communication.2515.desc:0 "§M团结来之不易，这纷乱的银河诸国估计只有在面临全体生死存亡的挑战才会团结起来的吧……§!"
 ge_communication.2515.aa:0 "可能那时他们还在争论要不要保护太空鲸鱼呢"
-ge_communication.2515.ct:0 "水银灯好感度提升1点."
+ge_communication.2515.ct:0 "$roz_sgt_aft_up_count_1$."
  #满江红
 ge_communication.2516.desc:0 "§M我在原来的那个位面生活的时候，曾经只是听说过这段反侵略战争的历史，原来那个罕见的家伙还念过满江红呀…§!"
 ge_communication.2516.aa:0 "错误的，虚假的，肮脏的"
-ge_communication.2516.ct:0 "水银灯好感度提升1点."
+ge_communication.2516.ct:0 "$roz_sgt_aft_up_count_1$."
 
 #ge_communication.2517.aa:0 ""
 
 ge_communication.2518.desc:0 "§M这部电影值得我细细品味.这种思潮真有意思...§!"
 ge_communication.2518.aa:0 "黑夜终会离去，太阳照常升起."
-ge_communication.2518.ct:0 "水银灯好感度提升1点."
+ge_communication.2518.ct:0 "$roz_sgt_aft_up_count_1$."
 ge_communication.2519.desc:0 "§M这位大法师的实力或许和父亲大人不相上下了...如果没被削弱过的话ww§!"
 ge_communication.2519.aa:0 "日常吃书与剧情需要是§R<错误>§!特色，不得不尝."
-ge_communication.2519.ct:0 "水银灯好感度提升1点."
+ge_communication.2519.ct:0 "$roz_sgt_aft_up_count_1$."
 ge_communication.3611.desc:0 "§M你的文采怎么样? 要不要试着也给我写信? §!"
 ge_communication.3611.aa:0 "你的关注点怎么这么奇怪..."
-ge_communication.3611.ct:0 "水银灯好感度提升1点."
+ge_communication.3611.ct:0 "$roz_sgt_aft_up_count_1$."
 ge_communication.3612.desc:0 "§M那首Auld Lang Syne还真不错啊......真红§!"
 ge_communication.3612.cc:0 "昔日的故事已经完结，结果亦已盖棺定论."
 ge_communication.3612.bb:0 "但是我等的存在证明了新的故事仍在继续."
 ge_communication.3612.aa:0 "我们一定能找回真红的，对吗? "
-ge_communication.3612.aa.ct:0 "§M哼，笨蛋.就知道说漂亮话§!\n\n水银灯好感度提升1点."
+ge_communication.3612.aa.ct:0 "§M哼，笨蛋.就知道说漂亮话§!\n\n$roz_sgt_aft_up_count_5$."
 
 
 
@@ -1100,18 +1104,18 @@ ge_communication.2713.aa:0 "赢了吗? "
 ge_communication.2714.title:0 "并没有..."
 ge_communication.2714.desc:0 "§M罚你去帮我买瓶酸奶！§!"
 ge_communication.2714.aa:0 "大意了，没有闪"
-ge_communication.2714.aa.ct:0 "水银灯好感度提升1点."
+ge_communication.2714.aa.ct:0 "$roz_sgt_aft_up_count_1$."
 ge_communication.2715.title:0 "好耶，赢了！"
 ge_communication.2715.desc:0 "§M啧，还是你更快吗...再来一把！§!\n\n"
 ge_communication.2715.aa:0 "和你在一起玩最好了"
-ge_communication.2715.aa.ct:0 "§M\"什！...\"§!\n\n水银灯好感度提升1.5点."
+ge_communication.2715.aa.ct:0 "§M\"什！...\"§!\n\n$roz_sgt_aft_up_count_1_5$."
 
 
 
 ge_communication.281.title:0 "时装城"
 ge_communication.281.desc:0 "§M服务员，这件衣服我买下来了，嗯...这件我得去试穿一下. [ruler.GetRegnalName]快过来帮我拿着.§!"
 ge_communication.281.aa:0 "挺想看你穿新衣服去上班的"
-ge_communication.281.aa.ct:0 "水银灯好感度提升1点."
+ge_communication.281.aa.ct:0 "$roz_sgt_aft_up_count_1$."
 
 
 ge_communication.9300.title:0 "核心电网调度中心主监控室"
