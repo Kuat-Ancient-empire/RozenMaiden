@@ -1,0 +1,19 @@
+
+roz_shuukan_shoujonotsukurikata_vol1 = {
+    icon = "GFX_r_roz_shuukan_shoujonotsukurikata_vol1"
+    type = historical_item
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = exceptional
+    }
+
+    triggered_country_modifier = {
+        mult = value:historical_item_specimens_modifiers_mult
+        potential = { always = yes }
+        planet_amenities_mult = 0.05
+        councilor_exp_gain = 0.1
+    }
+}
+
+

@@ -914,6 +914,7 @@ country_event = { #控制台effect测试区
 		#effect leader = { add_trait = { trait = leader_trait_KZ_VOY_terranoid } add_trait = { trait = leader_trait_KZ_VOY_magic } } }
 		#event KZ_VOY_relic_VE.100
 
+		#effect give_specimen = { key = roz_shuukan_shoujonotsukurikata_vol1 }
 
 		#effect = {set_global_flag = roz_sgt_unknow_flagship_spawn}
 		#effect = {force_remove_civic = civic_KZ_VOY_hiawatha_family}	

@@ -670,7 +670,26 @@ special_project = {		####
 
 
 ########################真红事件
+special_project = {		####
+	key = roz_shoujonotsukurikata_project_1
+	desc = {
+		text = roz_shoujonotsukurikata_project_1_DESC
+		trigger = { always = yes }
+	}
+	location = yes
+	days_to_research = 60
+	event_chain = roz_shoujonotsukurikata_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
+	event_scope = country_event
+	on_success = {
 
+	}
+}
+
+
+
+###
 special_project = {		####
 	key = roz_shinku_phone_of_junn_analysis
 	desc = {

@@ -1,0 +1,7 @@
+triggered_country_modifier = {  #好没用的东西
+    mult = $SV$
+    potential = { $trigger$ }
+    $modifier$ = $value$
+}
+
+
