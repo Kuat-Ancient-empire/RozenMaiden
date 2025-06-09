@@ -339,7 +339,7 @@ roz_shuukan_shoujonotsukurikata_vol8 = {
 
 roz_shuukan_shoujonotsukurikata_vol9 = {
     activation_duration = 1
-    portrait = "GFX_r_roz_shuukan_shoujonotsukurikata_vol9"
+    portrait = GFX_r_roz_shuukan_shoujonotsukurikata_vol9
     sound = relic_activation_eternal_throne
     resources = {
         category = relics
@@ -367,6 +367,71 @@ roz_shuukan_shoujonotsukurikata_vol9 = {
     }
 }
 
+roz_shuukan_shoujonotsukurikata_vol10 = {
+    activation_duration = 1
+    portrait = GFX_r_roz_shuukan_shoujonotsukurikata_vol10
+    sound = relic_activation_eternal_throne
+    resources = {
+        category = relics
+        # Activation cost
+    }
+    can_be_stolen = no
+    ai_weight = {
+        weight = 0
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+    }
+
+    score = 10
+
+    active_effect = {
+
+    }
+
+    # Possible check for activation
+    possible = {
+    }
+}
+
+roz_shinku's_body_assembly_stage_1 = {
+    activation_duration = 1
+    portrait = GFX_r_roz_shinku's_body_assembly_stage_1
+    sound = relic_activation_eternal_throne
+    resources = {
+        category = relics
+        # Activation cost
+    }
+    can_be_stolen = no
+    ai_weight = {
+        weight = 0
+    }
+    score = 10
+    possible = {
+        custom_tooltip = { always = no text = "roz_shinku's_body_assembly_stage_1_ct" }
+    }
+}
+
+roz_shinku's_body_assembly_stage_2 = {
+    activation_duration = 1
+    portrait = GFX_r_roz_shinku's_body_assembly_stage_2
+    sound = relic_activation_eternal_throne
+    resources = {
+        category = relics
+        # Activation cost
+    }
+    can_be_stolen = no
+    ai_weight = {
+        weight = 0
+    }
+    score = 10
+    possible = {
+        custom_tooltip = { always = no text = "roz_shinku's_body_assembly_stage_2_ct" }
+    }
+}
 
 ####################
 ##Annabelle

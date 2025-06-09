@@ -14,6 +14,16 @@ roz_outland_system_chain = {
 	}
 }
 
+roz_shoujonotsukurikata_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_tutorial.dds"
+	picture = GFX_
+	counter = {
+		roz_shinku_progress = {
+			max = 10
+		}
+	}
+}
+
 roz_SK_madgod_invasion_main = {
 	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
 	picture = GFX_

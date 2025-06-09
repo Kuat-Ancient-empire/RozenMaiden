@@ -103,7 +103,7 @@ building_roz_affluence_center = {
     resources = {
         category = planet_buildings
         produces = {
-            consumer_goods = 250
+            consumer_goods = 500
         }
         upkeep = {
             minerals = 25
@@ -147,7 +147,7 @@ building_roz_nourishment_center = {
     resources = {
         category = planet_buildings
         produces = {
-            food = 500
+            food = 750
         }
         upkeep = {
             energy = 20
@@ -188,23 +188,20 @@ building_roz_dimensional_fabricator = {
     resources = {
         category = planet_buildings
         produces = {
-            minerals = 200
-            rare_crystals = 15
-            exotic_gases = 15
-            volatile_motes = 15
-            sr_zro = 5
-            sr_dark_matter = 5
-            sr_living_metal = 5
-            nanites = 5
+            minerals = 500
+            rare_crystals = 30
+            exotic_gases = 30
+            volatile_motes = 30
+            sr_zro = 10
+            sr_dark_matter = 10
+            sr_living_metal = 10
+            nanites = 10
         }
         produces = {
             trigger = {
                 exists = owner
             }
-            sr_zro = 2
-            sr_dark_matter = 2
-            sr_living_metal = 2
-            minor_artifacts = 1
+            minor_artifacts = 2
         }
         produces = {
             trigger = {
@@ -282,7 +279,7 @@ building_roz_class_5_singularity = {
     resources = {
         category = planet_buildings
         produces = {
-            energy = 750
+            energy = 1000
         }
     }
 
@@ -325,7 +322,7 @@ building_roz_nano_forge = {
     resources = {
         category = planet_buildings
         produces = {
-            alloys = 150
+            alloys = 350
         }
         upkeep = {
             minerals = 20
@@ -436,9 +433,9 @@ building_roz_master_archive = {
     resources = {
         category = planet_buildings
         produces = {
-            physics_research = 250
-            society_research = 250
-            engineering_research = 250
+            physics_research = 350
+            society_research = 350
+            engineering_research = 350
         }
         upkeep = {
             energy = 30
@@ -468,10 +465,10 @@ building_roz_fe_dome = {
     }
 
     planet_modifier = {
-		planet_housing_add = 7500
-		planet_amenities_add = 7500
-		planet_pops_upkeep_mult = -0.15
-        planet_crime_add = -25
+		planet_housing_add = 8000
+		planet_amenities_add = 8000
+		planet_pops_upkeep_mult = -0.20
+        planet_crime_add = -50
 	}
 
     triggered_planet_modifier = {
@@ -529,8 +526,8 @@ building_roz_fe_stronghold = {
     planetary_ftl_inhibitor = yes
 
     country_modifier = {
-		ship_shield_hardening_add = 0.2
-        country_naval_cap_mult = 0.1
+		ship_shield_hardening_add = 0.20
+        country_naval_cap_mult = 0.15
 	}
 
     triggered_planet_modifier = {
@@ -623,8 +620,8 @@ building_roz_fe_administration_2 = {
     }
 
     planet_modifier = {
-        pop_housing_usage_mult = -0.15
-        planet_crime_add = -10
+        pop_housing_usage_mult = -0.20
+        planet_crime_add = -25
         planet_bureaucrats_unity_produces_add = 5
         planet_bureaucrats_trade_produces_add = 2
         planet_jobs_unity_produces_mult = 0.15
@@ -745,7 +742,7 @@ building_roz_fe_clinic_2 = {
 		potential = {
 			always= yes
 		}
-		bonus_pop_growth = 15
+		bonus_pop_growth = 20
 	}
 
 	triggered_planet_modifier = {
@@ -756,7 +753,7 @@ building_roz_fe_clinic_2 = {
 				has_tradition = tr_genetics_efficient_cloning
 			}
 		}
-		fake_pop_growth_mod = 15
+		fake_pop_growth_mod = 20
 	}
 
     triggered_planet_modifier = {
@@ -799,7 +796,7 @@ building_roz_fe_clinic_2 = {
 	}
 
 	country_modifier = {
-		leader_lifespan_add = 15
+		leader_lifespan_add = 25
 	}
 
 	inline_script = {
@@ -808,7 +805,7 @@ building_roz_fe_clinic_2 = {
 	}
 
     planet_modifier = {
-        district_automated_workforce = 0.40
+        district_automated_workforce = 0.25
     }
 
 	triggered_planet_modifier = {
@@ -940,12 +937,12 @@ building_roz_fe_market_2 = {
 	}
 
 	country_modifier = {
-		country_trade_produces_mult = 0.25
+		country_trade_produces_mult = 0.35
         country_trade_fee = -0.10
 	}
 
 	planet_modifier = {
-		planet_traders_trade_produces_add = 2
+		planet_traders_trade_produces_add = 3
         pop_trader_bonus_workforce_mult = 0.15
 	}
 
@@ -1006,8 +1003,8 @@ building_roz_fe_silo_2 = {
 	}
 
     country_modifier = {
-        country_resource_max_add = 500000
-        country_resource_max_minor_artifacts_add = 5000
+        country_resource_max_add = 750000
+        country_resource_max_minor_artifacts_add = 7500
     }
 }
 
@@ -1055,8 +1052,8 @@ building_roz_fe_entertainment_2 = {
 
     planet_modifier = {
 		job_entertainer_add = 1500
-		planet_amenities_add = 10000
-        pop_bonus_workforce_mult = 0.15
+		planet_amenities_add = 12500
+        pop_bonus_workforce_mult = 0.20
         planet_entertainers_upkeep_mult = -0.20
 	}
 
@@ -1107,9 +1104,9 @@ building_roz_fe_lab_2 = {
 			biomass = @b3_biomass
 		}
 		produces = {
-			physics_research = 250
-			society_research = 250
-			engineering_research = 250
+			physics_research = 500
+			society_research = 500
+			engineering_research = 500
 		}
 	}
 
@@ -1201,7 +1198,7 @@ building_roz_fe_mine_2 = {
             energy = 30
         }
         produces = {
-            minerals = 600
+            minerals = 1000
         }
     }
 
