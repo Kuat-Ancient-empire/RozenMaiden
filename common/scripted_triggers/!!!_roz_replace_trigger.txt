@@ -1,0 +1,1 @@
+KZ_VOY_MOD = { optimize_memory always = no }

@@ -1622,6 +1622,10 @@ country_event = {
 		name = ge_sites.5151.aa_1
 		custom_tooltip = roz_krks_leader_evt.55.aa.ct
 		roz_outland_planet_change = yes
+		if = {
+			limit = { NOT = { has_technology = tech_psionic_theory } }
+			add_tech_progress = { tech = tech_psionic_theory progress = 0.1 }
+		}
 		#clear_global_event_target = roz_outland_planet@root
 	}
 }

@@ -679,6 +679,23 @@ special_project = {		####
 	location = yes
 	days_to_research = 60
 	event_chain = roz_shoujonotsukurikata_chain
+	picture = GFX_roz_evt_shoujonotsukurikata_vol1
+	icon = gfx/interface/icons/situation_log/situation_log_roz_shoujonotsukurikata_vol1.dds
+	event_scope = country_event
+	on_success = {
+		add_event_chain_counter = { event_chain = roz_shoujonotsukurikata_chain counter = roz_shinku_progress amount = 1 }
+	}
+}
+
+special_project = {		####
+	key = roz_shoujonotsukurikata_project_2
+	desc = {
+		text = roz_shoujonotsukurikata_project_2_DESC
+		trigger = { always = yes }
+	}
+	location = yes
+	days_to_research = 15
+	event_chain = roz_shoujonotsukurikata_chain
 	picture = GFX_roz_evt_outland
 	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
 	event_scope = country_event
@@ -687,7 +704,141 @@ special_project = {		####
 	}
 }
 
+special_project = {		####
+	key = roz_shoujonotsukurikata_project_3
+	desc = {
+		text = roz_shoujonotsukurikata_project_3_DESC
+		trigger = { always = yes }
+	}
+	location = yes
+	days_to_research = 15
+	event_chain = roz_shoujonotsukurikata_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
+	event_scope = country_event
+	on_success = {
 
+	}
+}
+
+special_project = {		####
+	key = roz_shoujonotsukurikata_project_4
+	desc = {
+		text = roz_shoujonotsukurikata_project_4_DESC
+		trigger = { always = yes }
+	}
+	location = yes
+	days_to_research = 15
+	event_chain = roz_shoujonotsukurikata_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
+	event_scope = country_event
+	on_success = {
+
+	}
+}
+
+special_project = {		####
+	key = roz_shoujonotsukurikata_project_5
+	desc = {
+		text = roz_shoujonotsukurikata_project_5_DESC
+		trigger = { always = yes }
+	}
+	location = yes
+	days_to_research = 15
+	event_chain = roz_shoujonotsukurikata_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
+	event_scope = country_event
+	on_success = {
+
+	}
+}
+
+special_project = {		####
+	key = roz_shoujonotsukurikata_project_6
+	desc = {
+		text = roz_shoujonotsukurikata_project_6_DESC
+		trigger = { always = yes }
+	}
+	location = yes
+	days_to_research = 15
+	event_chain = roz_shoujonotsukurikata_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
+	event_scope = country_event
+	on_success = {
+
+	}
+}
+
+special_project = {		####
+	key = roz_shoujonotsukurikata_project_7
+	desc = {
+		text = roz_shoujonotsukurikata_project_7_DESC
+		trigger = { always = yes }
+	}
+	location = yes
+	days_to_research = 15
+	event_chain = roz_shoujonotsukurikata_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
+	event_scope = country_event
+	on_success = {
+
+	}
+}
+
+special_project = {		####
+	key = roz_shoujonotsukurikata_project_8
+	desc = {
+		text = roz_shoujonotsukurikata_project_8_DESC
+		trigger = { always = yes }
+	}
+	location = yes
+	days_to_research = 15
+	event_chain = roz_shoujonotsukurikata_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
+	event_scope = country_event
+	on_success = {
+
+	}
+}
+
+special_project = {		####
+	key = roz_shoujonotsukurikata_project_9
+	desc = {
+		text = roz_shoujonotsukurikata_project_9_DESC
+		trigger = { always = yes }
+	}
+	location = yes
+	days_to_research = 15
+	event_chain = roz_shoujonotsukurikata_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
+	event_scope = country_event
+	on_success = {
+
+	}
+}
+
+special_project = {		####
+	key = roz_shoujonotsukurikata_project_10
+	desc = {
+		text = roz_shoujonotsukurikata_project_10_DESC
+		trigger = { always = yes }
+	}
+	location = yes
+	days_to_research = 15
+	event_chain = roz_shoujonotsukurikata_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_extradimensional.dds
+	event_scope = country_event
+	on_success = {
+
+	}
+}
 
 ###
 special_project = {		####

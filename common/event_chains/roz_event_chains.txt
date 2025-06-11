@@ -16,7 +16,7 @@ roz_outland_system_chain = {
 
 roz_shoujonotsukurikata_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_tutorial.dds"
-	picture = GFX_
+	picture = GFX_roz_evt_shoujonotsukurikata
 	counter = {
 		roz_shinku_progress = {
 			max = 10

@@ -293,12 +293,10 @@ country_event = {
 				is_same_value = event_target:roz_kirakishou_global_country@root
 				is_same_value = event_target:roz_shinku_global_country@root
 			}
-			#has_country_flag = ge_nfield_country_set
-			#is_ai = no
 		}
-		#has_country_flag = ge_sgt_chat
 		has_country_flag = roz_leader_suigintou_get
 		exists = event_target:roz_leader_suigintou_global_target@root
+		#AND = { check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 35 } has_country_flag = roz_shuukan_vol9_flag }
 	}
 	immediate = {
 		set_country_flag = ge_nfield_diplomacy_activated
@@ -486,7 +484,7 @@ country_event = {
 				}
 			}
 		}
-		#trigger = {}
+		#trigger = { has_country_flag = roz_allow_date_suigintou }
 		hidden_effect = {
 			remove_country_flag = ge_nfield_diplomacy_activated
 			country_event = {

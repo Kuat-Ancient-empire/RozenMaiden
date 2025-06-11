@@ -587,7 +587,7 @@ spriteTypes = {
 		textureFile = "gfx/event_pictures/evt_roz_spaceship_bridge.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
-	}y
+	}
 
 	spriteType = {
 		name = "GFX_evt_roz_industrial_factory"
@@ -606,6 +606,68 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_evt_roz_krks_get"
 		textureFile = "gfx/event_pictures/evt_roz_krks_get.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_roz_evt_shoujonotsukurikata_shinku"
+		textureFile = "gfx/event_pictures/roz_evt_shoujonotsukurikata_shinku.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_shoujonotsukurikata_vol4"
+		textureFile = "gfx/event_pictures/evt_roz_shoujonotsukurikata_vol4.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_shoujonotsukurikata_vol7"
+		textureFile = "gfx/event_pictures/evt_roz_shoujonotsukurikata_vol7.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_shoujonotsukurikata_vol8_1"
+		textureFile = "gfx/event_pictures/evt_roz_shoujonotsukurikata_vol8_1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_roz_shoujonotsukurikata_vol8_2"
+		textureFile = "gfx/event_pictures/evt_roz_shoujonotsukurikata_vol8_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_shoujonotsukurikata_vol9"
+		textureFile = "gfx/event_pictures/evt_roz_shoujonotsukurikata_vol9.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_shoujonotsukurikata_part"
+		textureFile = "gfx/event_pictures/evt_roz_shoujonotsukurikata_part.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_shoujonotsukurikata_end"
+		textureFile = "gfx/event_pictures/evt_roz_shoujonotsukurikata_end.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_the_box"
+		textureFile = "gfx/event_pictures/evt_roz_the_box.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}

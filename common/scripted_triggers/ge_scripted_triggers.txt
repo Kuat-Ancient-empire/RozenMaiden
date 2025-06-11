@@ -1,4 +1,5 @@
 is_rozen_leader = {
+	optimize_memory
 	OR = {
 		has_leader_flag = roz_suigintou_flag
 		#has_leader_flag = roz_kanaria_flag
@@ -11,16 +12,19 @@ is_rozen_leader = {
 }
 
 has_tech_ge_shippart_titian_aura = {
+	optimize_memory
 	has_technology = tech_ge_shippart_titian_aura
 }
 
 has_rozen_leader = {
+	optimize_memory
 	any_owned_leader = {
 		is_rozen_leader = yes			
 	}
 }
 
 roz_sgt_site_planet_select_condition = { ##scope:solar system
+	optimize_memory
 	any_system_planet = {
 		has_owner = no
 		is_colony = no
@@ -43,6 +47,7 @@ roz_sgt_site_planet_select_condition = { ##scope:solar system
 }
 
 has_rozen_affection_trait = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_roz_a_strangeness
 		has_trait = leader_trait_roz_a_friendly
@@ -53,6 +58,7 @@ has_rozen_affection_trait = {
 
 #strangeness
 ge_affection_strangeness_trigger = {
+	optimize_memory
 	is_variable_set = roz_suigintou_affection
 	check_variable = {
 		which = roz_suigintou_affection
@@ -62,6 +68,7 @@ ge_affection_strangeness_trigger = {
 
 #frindly
 ge_affection_frindly_trigger = {
+	optimize_memory
 	is_variable_set = roz_suigintou_affection
 	is_rozen_leader = yes
 	has_rozen_affection_trait = yes
@@ -73,6 +80,7 @@ ge_affection_frindly_trigger = {
 
 #like
 ge_affection_like_trigger = {
+	optimize_memory
 	is_variable_set = roz_suigintou_affection
 	is_rozen_leader = yes
 	has_rozen_affection_trait = yes
@@ -84,6 +92,7 @@ ge_affection_like_trigger = {
 
 #love
 ge_affection_love_trigger = {
+	optimize_memory
 	is_variable_set = roz_suigintou_affection
 	is_rozen_leader = yes
 	has_rozen_affection_trait = yes
@@ -95,6 +104,7 @@ ge_affection_love_trigger = {
 
 #好感度判定：友好
 ge_aft_fri = {
+	optimize_memory
 	is_rozen_leader = yes
 	has_rozen_affection_trait = yes
 	check_variable = {
@@ -105,6 +115,7 @@ ge_aft_fri = {
 
 #好感度判定：喜欢
 ge_aft_lik = {
+	optimize_memory
 	is_rozen_leader = yes
 	has_rozen_affection_trait = yes
 	check_variable = {
@@ -115,6 +126,7 @@ ge_aft_lik = {
 
 #好感度判定：爱意
 ge_aft_lov = {
+	optimize_memory
 	is_rozen_leader = yes
 	has_rozen_affection_trait = yes
 	check_variable = {
@@ -127,6 +139,7 @@ ge_aft_lov = {
 ###舰船部件条件
 
 has_ge_component = {
+	optimize_memory
 	OR = {
 		has_component = CORVETTE_GE_REACTOR
 		has_component = DESTROYER_GE_REACTOR
@@ -141,6 +154,7 @@ has_ge_component = {
 }
 
 has_ge_weapon = {
+	optimize_memory
 	OR = {
 		has_component = GE_SMALL_LASER_CANNON
 		has_component = GE_MEDIUM_LASER_CANNON
@@ -164,6 +178,7 @@ has_ge_weapon = {
 }
 
 has_ge_energy_weapon = {
+	optimize_memory
 	OR = {
 		has_component = GE_SMALL_LASER_CANNON
 		has_component = GE_MEDIUM_LASER_CANNON
@@ -182,6 +197,7 @@ has_ge_energy_weapon = {
 }
 
 has_ge_kinetic_weapon = {
+	optimize_memory
 	OR = {
 		has_component = GE_LARGE_KINETIC_GUN
 		has_component = GE_MEDIUM_KINETIC_GUN
@@ -190,6 +206,7 @@ has_ge_kinetic_weapon = {
 }
 
 has_component_ZERO_POINT_REACTOR = {
+	optimize_memory
 	OR = {
 		has_component = CORVETTE_ZERO_POINT_REACTOR
 		has_component = DESTROYER_ZERO_POINT_REACTOR
@@ -201,6 +218,7 @@ has_component_ZERO_POINT_REACTOR = {
 }
 
 has_component_DARK_MATTER_REACTOR = {
+	optimize_memory
 	OR = {
 		has_component = CORVETTE_DARK_MATTER_REACTOR
 		has_component = DESTROYER_DARK_MATTER_REACTOR
@@ -212,6 +230,7 @@ has_component_DARK_MATTER_REACTOR = {
 }
 
 has_component_GE_REACTOR = {
+	optimize_memory
 	OR = {
 		has_component = CORVETTE_GE_REACTOR
 		has_component = DESTROYER_GE_REACTOR
@@ -224,6 +243,7 @@ has_component_GE_REACTOR = {
 }
 
 is_real_roz_YS_planet = {
+	optimize_memory
 	exists = event_target:roz_outland_planet@root
 	is_same_value = event_target:roz_outland_planet@root
 	is_planet_class = pc_roz_YS_planet
