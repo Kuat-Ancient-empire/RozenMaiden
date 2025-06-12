@@ -630,7 +630,7 @@ roz_suigintou_revive_reset_admiral = {
 	}
 }
 
-#####记录可选择特质数量
+#####记录可选择特质数量, 但好像也不太能记录（
 roz_leader_pending_negative_traits_unmodified_count = {	#scope: cloned leader
 	set_variable = {
 		which = leader_pending_negative_traits_unmodified

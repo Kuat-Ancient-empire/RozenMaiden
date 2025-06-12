@@ -811,6 +811,7 @@ roz_leader_type_switch_clone_from_cache_country_effect = {
 }
 
 ###必须已经新创建领袖（非克隆）才能用, 需要先清除领袖外貌flag（country）再设置，然后再执行该封装
+###并非必须，并非需要，并非然后（
 roz_leader_initialize_after_create_effect = {
 	last_created_leader = {
 		#set_leader_flag = roz_$leader$_flag
@@ -1209,5 +1210,48 @@ roz_leader_change_skin_reset_shinku_effect = {
             }
         }
     }
+}
+
+roz_remove_shinkureilc_random_list_effect = {	#special project没有scope导致的，random不了一点
+	optimize_memory
+	random_list = {
+		1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol3 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol3 }
+		1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol4 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol4 }
+		1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol5 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol5 }
+		1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol6 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol6 }
+		1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol7 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol7 }
+		1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol8 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol8 }
+		1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol9 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol9 }
+	}
+}
+
+roz_remove_shinkureilc_effect = {	#special project没有scope导致的
+	optimize_memory
+	switch = {
+		trigger = has_country_flag
+		roz_shoujonotsukurikata_project_2_complete = { remove_country_flag = roz_shoujonotsukurikata_project_2_complete remove_relic = roz_shuukan_shoujonotsukurikata_vol2 }
+		roz_shoujonotsukurikata_project_3_complete = { remove_country_flag = roz_shoujonotsukurikata_project_3_complete remove_relic = roz_shuukan_shoujonotsukurikata_vol3 }
+		roz_shoujonotsukurikata_project_4_complete = { remove_country_flag = roz_shoujonotsukurikata_project_4_complete remove_relic = roz_shuukan_shoujonotsukurikata_vol4 }
+		roz_shoujonotsukurikata_project_5_complete = { remove_country_flag = roz_shoujonotsukurikata_project_5_complete remove_relic = roz_shuukan_shoujonotsukurikata_vol5 }
+		roz_shoujonotsukurikata_project_6_complete = { remove_country_flag = roz_shoujonotsukurikata_project_6_complete remove_relic = roz_shuukan_shoujonotsukurikata_vol6 }
+		roz_shoujonotsukurikata_project_7_complete = { remove_country_flag = roz_shoujonotsukurikata_project_7_complete remove_relic = roz_shuukan_shoujonotsukurikata_vol7 }
+		roz_shoujonotsukurikata_project_8_complete = { remove_country_flag = roz_shoujonotsukurikata_project_8_complete remove_relic = roz_shuukan_shoujonotsukurikata_vol8 }
+		roz_shoujonotsukurikata_project_9_complete = { remove_country_flag = roz_shoujonotsukurikata_project_9_complete remove_relic = roz_shuukan_shoujonotsukurikata_vol9 }
+		roz_shoujonotsukurikata_project_10_complete = { remove_country_flag = roz_shoujonotsukurikata_project_10_complete remove_relic = roz_shuukan_shoujonotsukurikata_vol10 }
+	}
+}
+
+roz_shoujonotsukurikata_project_common_effect = {
+	optimize_memory
+	if = {
+		limit = { check_variable = { which = roz_shinku_progress_count value = 2 } }
+		country_event = { id = roz_shinku_evt.110 }
+	}
+	else_if = {
+		limit = { check_variable = { which = roz_shinku_progress_count value <= 9 } }
+		country_event = { id = roz_shinku_evt.120 }
+		country_event = { id = roz_shinku_evt.121 }
+	}
+	else = { country_event = { id = roz_shinku_evt.130 } }
 }
 

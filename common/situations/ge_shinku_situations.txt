@@ -354,13 +354,16 @@ roz_awaken_of_shinku_1_acknowledge_border = {
         potential = {
         }
         on_select = {
-            custom_tooltip = roz_roz_awaken_of_shinku_1_acknowledge_border_1_approach_onselect_ct
+            custom_tooltip = roz_awaken_of_shinku_1_acknowledge_border_1_approach_onselect_ct
         }
         default = yes
         resources = {
             category = situations
             upkeep = {
                 energy = 30
+                physics_research = 50
+                society_research = 50
+                engineering_research = 50
             }
         }
         ai_weight = {
@@ -376,13 +379,16 @@ roz_awaken_of_shinku_1_acknowledge_border = {
         potential = {
         }
         on_select = {
-            custom_tooltip = roz_roz_awaken_of_shinku_1_acknowledge_border_2_approach_onselect_ct
+            custom_tooltip = roz_awaken_of_shinku_1_acknowledge_border_2_approach_onselect_ct
         }
         default = yes
         resources = {
             category = situations
             upkeep = {
                 energy = 30
+                physics_research = 30
+                society_research = 30
+                engineering_research = 30
             }
         }
         ai_weight = {
@@ -398,13 +404,16 @@ roz_awaken_of_shinku_1_acknowledge_border = {
         potential = {
         }
         on_select = {
-            custom_tooltip = roz_roz_awaken_of_shinku_1_acknowledge_border_3_approach_onselect_ct
+            custom_tooltip = roz_awaken_of_shinku_1_acknowledge_border_3_approach_onselect_ct
         }
         default = yes
         resources = {
             category = situations
             upkeep = {
-                energy = 30
+                energy = 50
+                physics_research = 30
+                society_research = 30
+                engineering_research = 30
             }
         }
         ai_weight = {
@@ -420,13 +429,13 @@ roz_awaken_of_shinku_1_acknowledge_border = {
         potential = {
         }
         on_select = {
-            custom_tooltip = roz_roz_awaken_of_shinku_1_acknowledge_border_4_approach_onselect_ct
+            custom_tooltip = roz_awaken_of_shinku_1_acknowledge_border_4_approach_onselect_ct
         }
         default = yes
         resources = {
             category = situations
             upkeep = {
-                energy = 0
+                energy = 5
             }
         }
         ai_weight = {
@@ -448,6 +457,26 @@ roz_awaken_of_shinku_1_acknowledge_border = {
             owner  = {
                 has_country_flag = roz_SK_1_kxbj_accelerate
             }
+        }
+        modifier = {
+            factor = 0.5
+            desc = roz_awaken_of_shinku_1_acknowledge_border_1_approach
+            current_situation_approach = roz_awaken_of_shinku_1_acknowledge_border_1_approach
+        }
+        modifier = {
+            factor = 1.0
+            desc = roz_awaken_of_shinku_1_acknowledge_border_2_approach
+            current_situation_approach = roz_awaken_of_shinku_1_acknowledge_border_2_approach
+        }
+        modifier = {
+            factor = 1.0
+            desc = roz_awaken_of_shinku_1_acknowledge_border_3_approach
+            current_situation_approach = roz_awaken_of_shinku_1_acknowledge_border_3_approach
+        }
+        modifier = {
+            factor = 0
+            desc = roz_awaken_of_shinku_1_acknowledge_border_4_approach
+            current_situation_approach = roz_awaken_of_shinku_1_acknowledge_border_4_approach
         }
     }
     on_monthly = {

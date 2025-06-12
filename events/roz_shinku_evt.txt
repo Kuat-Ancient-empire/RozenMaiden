@@ -32,6 +32,7 @@ country_event = {
     title = "roz_shinku_evt.2.title"
     desc = "roz_shinku_evt.2.desc"
     picture = GFX_roz_evt_shoujonotsukurikata_shinku
+    show_sound = event_hand_shake
     trigger = {
         has_country_flag = roz_leader_suigintou_get
     }
@@ -55,6 +56,7 @@ country_event = {
     title = "roz_shinku_evt.20.title"
     desc = "roz_shinku_evt.20.desc"
     picture = GFX_evt_megastructure_construction
+    show_sound = event_default
     is_triggered_only = yes
     trigger = {
         has_country_flag = roz_leader_suigintou_get
@@ -80,6 +82,7 @@ country_event = {
     title = "roz_shinku_evt.30.title"
     desc = "roz_shinku_evt.30.desc"
     picture = GFX_evt_psionics
+    show_sound = event_psionic
     is_triggered_only = yes
     trigger = {
         has_country_flag = roz_leader_suigintou_get
@@ -111,6 +114,7 @@ country_event = {
     desc = "roz_shinku_evt.40.desc"
     picture = GFX_evt_roz_shoujonotsukurikata_vol4
     is_triggered_only = yes
+    show_sound = event_first_contact_molluscoid
     trigger = {
         has_country_flag = roz_leader_suigintou_get
     }
@@ -143,7 +147,11 @@ country_event = {
         name = roz_shinku_evt.50.aa
         custom_tooltip = roz_shinku_evt.50.aa.ct
     }
-    #after = { add_relic = roz_shuukan_shoujonotsukurikata_vol5 }
+
+    after = {  #test
+        add_relic = roz_shuukan_shoujonotsukurikata_vol5
+        enable_special_project = { name = roz_shoujonotsukurikata_project_5 owner = root }
+    }
 }
 
 
@@ -153,6 +161,7 @@ country_event = {
     title = "roz_shinku_evt.60.title"
     desc = "roz_shinku_evt.60.desc"
     picture = GFX_evt_astral_rift_ancient_battlegrounds
+    show_sound = event_sensor_ping
     is_triggered_only = yes
     trigger = {
         has_country_flag = roz_leader_suigintou_get
@@ -179,6 +188,7 @@ country_event = {
     desc = "roz_shinku_evt.70.desc"
     picture = GFX_evt_roz_shoujonotsukurikata_vol7
     is_triggered_only = yes
+    show_sound = event_ancient_drone
     trigger = {
         has_country_flag = roz_leader_suigintou_get
         check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 10 }
@@ -198,6 +208,7 @@ country_event = {
     desc = "roz_shinku_evt.71.desc"
     picture = GFX_evt_roz_shoujonotsukurikata_vol7
     is_triggered_only = yes
+    show_sound = research_click_01
     trigger = {
         has_country_flag = roz_leader_suigintou_get
     }
@@ -223,6 +234,7 @@ country_event = {
     desc = "roz_shinku_evt.80.desc"
     picture = GFX_evt_roz_shoujonotsukurikata_vol8_1
     is_triggered_only = yes
+    show_sound = research_click_01
     trigger = {
         has_country_flag = roz_leader_suigintou_get
         check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 25 }
@@ -233,6 +245,7 @@ country_event = {
     option = {
         name = roz_shinku_evt.80.bb
     }
+    after = { country_event = { id = roz_shinku_evt.81 } }
 }
 
 country_event = {
@@ -241,6 +254,7 @@ country_event = {
     desc = "roz_shinku_evt.81.desc"
     picture = GFX_evt_roz_shoujonotsukurikata_vol8_2
     is_triggered_only = yes
+    show_sound = research_click_01
     trigger = {
         has_country_flag = roz_leader_suigintou_get
     }
@@ -252,7 +266,10 @@ country_event = {
         name = roz_shinku_evt.81.bb
         custom_tooltip = roz_shinku_evt.81.bb.ct
     }
-    after = { add_relic = roz_shuukan_shoujonotsukurikata_vol8 }
+    after = {
+        add_relic = roz_shuukan_shoujonotsukurikata_vol8
+        enable_special_project = { name = roz_shoujonotsukurikata_project_8 owner = root }
+    }
 }
 
 ###第⑨块零件
@@ -298,6 +315,14 @@ country_event = {
 country_event = {
     id = roz_shinku_evt.91
     title = "roz_shinku_evt.91.title"
+    desc = {
+        trigger = { has_country_flag = roz_shinku_evt_91_aa }
+        text = roz_shinku_evt.91.aa.res
+    }
+    desc = {
+        trigger = { has_country_flag = roz_shinku_evt_91_bb }
+        text = roz_shinku_evt.91.bb.res
+    }
     desc = "roz_shinku_evt.91.desc"
     diplomatic = yes
     picture_event_data = {
@@ -315,41 +340,43 @@ country_event = {
     }
     option = {
         name = roz_shinku_evt.91.aa
-        response_text = roz_shinku_evt.91.aa.res
-        is_dialog_only = yes
-        trigger = { NOT = { has_country_flag = roz_shinku_evt_91_aa } }
-        hidden_effect = { set_country_flag = roz_shinku_evt_91_aa }
+        #response_text = roz_shinku_evt.91.aa.res
+        #is_dialog_only = yes
+        trigger = { NOR = { has_country_flag = roz_shinku_evt_91_aa has_country_flag = roz_shinku_evt_91_bb } }
+        hidden_effect = { set_country_flag = roz_shinku_evt_91_aa country_event = { id = roz_shinku_evt.91 } }
     }
     option = {
         name = roz_shinku_evt.91.aa.res.option1
         trigger = {  has_country_flag = roz_shinku_evt_91_aa }
-        hidden_effect = { remove_country_flag = roz_shinku_evt_91_aa }
+        hidden_effect = { hidden_effect = { country_event = { id = roz_shinku_evt.95 } remove_country_flag = roz_shinku_evt_91_aa } }
     }
 
     option = {
         name = roz_shinku_evt.91.bb
-        response_text = roz_shinku_evt.91.bb.res
-        is_dialog_only = yes
-        trigger = { NOT = { has_country_flag = roz_shinku_evt_91_bb } }
-        hidden_effect = { set_country_flag = roz_shinku_evt_91_bb }
+        #response_text = roz_shinku_evt.91.bb.res
+        #is_dialog_only = yes
+        trigger = { NOR = { has_country_flag = roz_shinku_evt_91_bb has_country_flag = roz_shinku_evt_91_aa } }
+        hidden_effect = { set_country_flag = roz_shinku_evt_91_bb country_event = { id = roz_shinku_evt.91 } }
     }
     option = {
         name = roz_shinku_evt.91.bb.res.option1
         trigger = {  has_country_flag = roz_shinku_evt_91_bb }
-        hidden_effect = { remove_country_flag = roz_shinku_evt_91_bb }
+        hidden_effect = { hidden_effect = { country_event = { id = roz_shinku_evt.95 } remove_country_flag = roz_shinku_evt_91_bb } }
     }
     option = {
         name = roz_shinku_evt.91.bb.res.option2
         trigger = {  has_country_flag = roz_shinku_evt_91_bb }
-        hidden_effect = { remove_country_flag = roz_shinku_evt_91_bb }
+        hidden_effect = { hidden_effect = { country_event = { id = roz_shinku_evt.95 } remove_country_flag = roz_shinku_evt_91_bb } }
     }
 
     option = {
         name = roz_shinku_evt.91.cc
         custom_tooltip = roz_shinku_evt.91.cc_ct
+        trigger = { NOR = { has_country_flag = roz_shinku_evt_91_aa has_country_flag = roz_shinku_evt_91_bb } }
+        hidden_effect = { country_event = { id = roz_shinku_evt.95 } }
     }
 
-    after = { hidden_effect = { country_event = { id = roz_shinku_evt.95 } } }
+    #after = { hidden_effect = { country_event = { id = roz_shinku_evt.95 } } }
 }
 
 country_event = {
@@ -358,6 +385,7 @@ country_event = {
     desc = "roz_shinku_evt.95.desc"
     picture = GFX_evt_roz_shoujonotsukurikata_vol9
     is_triggered_only = yes
+    show_sound = research_click_01
     trigger = {
         has_country_flag = roz_leader_suigintou_get
     }
@@ -376,6 +404,7 @@ country_event = {
     desc = "roz_shinku_evt.96.desc"
     picture = GFX_evt_roz_shoujonotsukurikata_vol9
     is_triggered_only = yes
+    show_sound = research_click_01
     trigger = {
         has_country_flag = roz_leader_suigintou_get
     }
@@ -387,7 +416,11 @@ country_event = {
         name = roz_shinku_evt.96.bb
         custom_tooltip = roz_shinku_evt.96.bb.ct
     }
-    after = { add_relic = roz_shuukan_shoujonotsukurikata_vol9 remove_country_flag = ge_nfield_diplomacy_activated }
+    after = {
+        add_relic = roz_shuukan_shoujonotsukurikata_vol9
+        remove_country_flag = ge_nfield_diplomacy_activated
+        enable_special_project = { name = roz_shoujonotsukurikata_project_9 owner = root }
+    }
 }
 
 ###第十块零件
@@ -397,6 +430,7 @@ country_event = {
     desc = "roz_shinku_evt.100.desc"
     picture = GFX_evt_roz_scientific_exhibition
     is_triggered_only = yes
+    show_sound = research_click_01
     trigger = {
         has_country_flag = roz_leader_suigintou_get
     }
@@ -408,11 +442,14 @@ country_event = {
         name = roz_shinku_evt.100.bb
         custom_tooltip = roz_shinku_evt.100.bb.ct
     }
-    after = { add_relic = roz_shuukan_shoujonotsukurikata_vol10 }
+    after = {
+        add_relic = roz_shuukan_shoujonotsukurikata_vol10
+        enable_special_project = { name = roz_shoujonotsukurikata_project_10 owner = root }
+    }
 }
 
 ###少女的制作方法
-#得到第二块组件并完成制作
+#完成第二次制作
 country_event = {
     id = roz_shinku_evt.110
     title = "roz_shinku_evt.110.title"
@@ -428,14 +465,13 @@ country_event = {
     }
     after = {
         remove_relic = roz_shuukan_shoujonotsukurikata_vol1
-        remove_relic = roz_shuukan_shoujonotsukurikata_vol2
+        roz_remove_shinkureilc_effect = yes
         add_relic = roz_shinku's_body_assembly_stage_1
-        set_variable = { which = roz_shinku_progress_count value = 2 }
-        add_event_chain_counter = { event_chain = roz_shoujonotsukurikata_chain amount = 2 counter = roz_shinku_progress }
+        add_event_chain_counter = { event_chain = roz_shoujonotsukurikata_chain amount = 1 counter = roz_shinku_progress }
     }
 }
 
-#第三块到第九块的组件完成制作
+#第三次到第九次完成制作
 country_event = {
     id = roz_shinku_evt.120
     title = "roz_shinku_evt.120.title"
@@ -448,16 +484,11 @@ country_event = {
     }
     option = { name = roz_shinku_evt.120.aa }
     after = {
-        hidden_effect = {
-            random_list = {
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol3 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol3 }
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol4 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol4 }
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol5 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol5 }
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol6 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol6 }
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol7 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol7 }
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol8 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol8 }
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol9 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol9 }
-            }
+        roz_remove_shinkureilc_effect = yes
+        if = {
+            limit = { check_variable = { which = roz_shinku_progress_count value = 7 } has_relic = roz_shinku's_body_assembly_stage_1 }
+            remove_relic = roz_shinku's_body_assembly_stage_1
+            add_relic = roz_shinku's_body_assembly_stage_2
         }
         add_event_chain_counter = { event_chain = roz_shoujonotsukurikata_chain amount = 1 counter = roz_shinku_progress }
     }
@@ -475,18 +506,7 @@ country_event = {
     }
     option = { name = roz_shinku_evt.121.aa }
     after = {
-        hidden_effect = {
-            random_list = {
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol3 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol3 }
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol4 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol4 }
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol5 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol5 }
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol6 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol6 }
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol7 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol7 }
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol8 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol8 }
-                1 = { modifier = { factor = 0 NOT = { has_relic = roz_shuukan_shoujonotsukurikata_vol9 } } remove_relic = roz_shuukan_shoujonotsukurikata_vol9 }
-            }
-            change_variable = { which = roz_shinku_progress_count value = 1 }
-        }
+        roz_remove_shinkureilc_effect = yes
         if = {
             limit = { check_variable = { which = roz_shinku_progress_count value = 7 } has_relic = roz_shinku's_body_assembly_stage_1 }
             remove_relic = roz_shinku's_body_assembly_stage_1
@@ -510,49 +530,39 @@ country_event = {
         name = roz_shinku_evt.130.aa
     }
     after = {
-        remove_relic = roz_shuukan_shoujonotsukurikata_vol10
+        roz_remove_shinkureilc_effect = yes
         add_event_chain_counter = { event_chain = roz_shoujonotsukurikata_chain amount = 1 counter = roz_shinku_progress }
+        country_event = { id = roz_shinku_evt.401 days = 30 }
     }
 }
 
 #####完成局势“周刊《少女的制作方法》”，小纯通讯
 
-country_event = {
-    id = roz_shinku_evt.400
-    title = "roz_shinku_evt.400.title"
-    desc = "roz_shinku_evt.400.desc"
-    picture = GFX_evt_roz_heart_lost_doll
-    show_sound = resources_capped
-    is_triggered_only = yes
-    trigger = {
-        is_ai = no
-    }
-    immediate = {
-
-    }
-    option = {
-        name = roz_shinku_evt.400.aa
-        custom_tooltip = roz_shinku_evt.400.ct
-        add_resource = {
-            unity = 200
-            mult = modifier:country_unity_produces_mult
-        }
-    }
-}
+# country_event = {
+#     id = roz_shinku_evt.400
+#     title = "roz_shinku_evt.400.title"
+#     desc = "roz_shinku_evt.400.desc"
+#     picture = GFX_evt_roz_heart_lost_doll
+#     show_sound = resources_capped
+#     is_triggered_only = yes
+#     trigger = {
+#         is_ai = no
+#     }
+#     immediate = {  }
+#     option = {
+#         name = roz_shinku_evt.400.aa
+#     }
+# }
 
 country_event = {
     id = roz_shinku_evt.401
-
     title = "roz_shinku_evt.401.title"
     desc = "roz_shinku_evt.401.desc"
     picture = GFX_evt_roz_junn_phone_1
     show_sound = event_sensor_ping
     is_triggered_only = yes
     trigger = {
-        any_situation = {
-            NOT = { is_situation_type = roz_shuukan_shoujonotsukurikata_situation }
-
-        }
+        check_variable = { which = roz_shinku_progress_count value >= 10  }
     }
     immediate = {
 
@@ -593,8 +603,7 @@ country_event = {
     is_triggered_only = yes
     diplomatic = yes
     picture_event_data = {
-        portrait = event_target
-         room = ge_sgt_main_room
+         room = roz_junn_room
     }
     trigger = {
         #has_country_flag = roz_leader_suigintou_get
@@ -666,6 +675,7 @@ country_event = {
             remove_country_flag = roz_evt_temp_flag_5
             remove_country_flag = roz_evt_temp_flag_6
         }
+        start_situation = { type = roz_awaken_of_shinku_1_acknowledge_border }
     }
 }
 
@@ -712,84 +722,82 @@ country_event = {
 }
 
 # #月度事件池
-country_event = {
+situation_event = {
     id = roz_shinku_evt.411
     is_triggered_only = yes
     title = "roz_shinku_evt.411.title"
     desc = "roz_shinku_evt.411.desc"
     picture = GFX_evt_roz_annabelle
     trigger = {
-        NOT = {
-            has_relic = r_roz_doll_Annabelle
-        }
+        owner = { NOT = { has_relic = r_roz_doll_Annabelle } }
     }
     option = {
         name = roz_shinku_evt.411.aa
-        add_relic = r_roz_doll_Annabelle
-        add_resource = {
-            unity = -500
+        owner = {
+            add_relic = r_roz_doll_Annabelle
+            add_resource = {
+                unity = -500
+            }
         }
     }
 }
 
-country_event = {
+situation_event = {
     id = roz_shinku_evt.412
     is_triggered_only = yes
     title = "roz_shinku_evt.412.title"
     desc = "roz_shinku_evt.412.desc"
     picture = GFX_evt_roz_bright_new_world
     trigger = {
-        is_ai = no
-    }
-
-    immediate = {
-
+        owner = { is_ai = no }
     }
     option = {
         name = roz_shinku_evt.412.aa
-        random_list = {
-            3 = {
-                add_monthly_resource_mult = {
-                    resource = alloys
-                    value = 3
+        owner = {
+            random_list = {
+                3 = {
+                    add_monthly_resource_mult = {
+                        resource = alloys
+                        value = 3
+                    }
                 }
-            }
-            3 = {
-                add_monthly_resource_mult = {
-                    resource = consumer_goods
-                    value = 3
+                3 = {
+                    add_monthly_resource_mult = {
+                        resource = consumer_goods
+                        value = 3
+                    }
                 }
-            }
-            2 = {
-                add_monthly_resource_mult = {
-                    resource =food
-                    value = 4
+                2 = {
+                    add_monthly_resource_mult = {
+                        resource =food
+                        value = 4
+                    }
                 }
-            }
-            2 = {
-                add_monthly_resource_mult = {
-                    resource = energy
-                    value = 5
+                2 = {
+                    add_monthly_resource_mult = {
+                        resource = energy
+                        value = 5
+                    }
                 }
-            }
-            2 = {
-                add_monthly_resource_mult = {
-                    resource = minerals
-                    value = 4
+                2 = {
+                    add_monthly_resource_mult = {
+                        resource = minerals
+                        value = 4
+                    }
                 }
-            }
-            2 = {
-                add_monthly_resource_mult = {
-                    resource = minor_artifacts
-                    value = 3
+                2 = {
+                    add_monthly_resource_mult = {
+                        resource = minor_artifacts
+                        value = 3
+                    }
                 }
-            }
 
+            }
         }
     }
 }
 
-country_event = {
+situation_event = {
     id = roz_shinku_evt.422
     is_triggered_only = yes
     title = "roz_shinku_evt.422.title"
@@ -797,34 +805,36 @@ country_event = {
     picture = GFX_evt_astral_rift_genesis_2
     show_sound = event_lootbox_good
     trigger = {
-        is_ai = no
+        owner = { is_ai = no }
     }
     option = {
         name = roz_shinku_evt.422.aa
-        random_list = {
-            2 = {
-                add_monthly_resource_mult = {
-                    resource = physics_research
-                    value = 5
+        owner = {
+            random_list = {
+                2 = {
+                    add_monthly_resource_mult = {
+                        resource = physics_research
+                        value = 5
+                    }
                 }
-            }
-            2 = {
-                add_monthly_resource_mult = {
-                    resource = engineering_research
-                    value = 5
+                2 = {
+                    add_monthly_resource_mult = {
+                        resource = engineering_research
+                        value = 5
+                    }
                 }
-            }
-            2 = {
-                add_monthly_resource_mult = {
-                    resource = society_research
-                    value = 5
+                2 = {
+                    add_monthly_resource_mult = {
+                        resource = society_research
+                        value = 5
+                    }
                 }
             }
         }
     }
 }
 
-country_event = {
+situation_event = {
     id = roz_shinku_evt.413
     is_triggered_only = yes
     title = "roz_shinku_evt.413.title"
@@ -832,18 +842,20 @@ country_event = {
     picture = GFX_evt_roz_scientific_exhibition
     show_sound = event_galactic_community
     trigger = {
-        is_ai = no
+        owner = { is_ai = no }
     }
     option = {
         name = roz_shinku_evt.413.aa
-        add_monthly_resource_mult = {
-            resource = unity
-            value = 5
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 5
+            }
         }
     }
 }
 
-country_event = {
+situation_event = {
     id = roz_shinku_evt.414
     is_triggered_only = yes
     title = "roz_shinku_evt.414.title"
@@ -851,18 +863,20 @@ country_event = {
     picture = GFX_evt_roz_rozen_party
     show_sound = event_factions
     trigger = {
-        is_ai = no
+        owner = { is_ai = no }
     }
     option = {
         name = roz_shinku_evt.414.aa
-        add_monthly_resource_mult = {
-            resource = influence
-            value = 4
+        owner = {
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 4
+            }
         }
     }
 }
 
-country_event = {
+situation_event = {
     id = roz_shinku_evt.415
     is_triggered_only = yes
     title = "roz_shinku_evt.415.title"
@@ -870,17 +884,19 @@ country_event = {
     picture = GFX_evt_caravaneers
     show_sound = sfx_caravaneer_cargo_ship_idle
     trigger = {
-        NOT = { has_modifier = roz_rosa_analysis_industrial }
+        owner = { NOT = { has_modifier = roz_rosa_analysis_industrial } }
     }
     option = {
         name = roz_shinku_evt.415.aa
-        add_modifier = {
-            modifier = roz_rosa_analysis_industrial
+        owner = {
+            add_modifier = {
+                modifier = roz_rosa_analysis_industrial
+            }
         }
     }
 }
 
-country_event = {
+situation_event = {
     id = roz_shinku_evt.416
     is_triggered_only = yes
     title = "roz_shinku_evt.416.title"
@@ -888,17 +904,19 @@ country_event = {
     picture = GFX_evt_cyberization_2
     show_sound = event_cityscape
     trigger = {
-        NOT = { has_modifier = roz_rosa_analysis_research }
+        owner = { NOT = { has_modifier = roz_rosa_analysis_research } }
     }
     option = {
         name = roz_shinku_evt.416.aa
-        add_modifier = {
-            modifier = roz_rosa_analysis_research
+        owner = {
+            add_modifier = {
+                modifier = roz_rosa_analysis_research
+            }
         }
     }
 }
 
-country_event = {
+situation_event = {
     id = roz_shinku_evt.417
     is_triggered_only = yes
     title = "roz_shinku_evt.417.title"
@@ -906,17 +924,19 @@ country_event = {
     picture = GFX_evt_roz_spaceship_bridge
     show_sound = event_ship_bridge
     trigger = {
-        NOT = { has_modifier = roz_rosa_analysis_military }
+        owner = { NOT = { has_modifier = roz_rosa_analysis_military } }
     }
     option = {
         name = roz_shinku_evt.417.aa
-        add_modifier = {
-            modifier = roz_rosa_analysis_military
+        owner = {
+            add_modifier = {
+                modifier = roz_rosa_analysis_military
+            }
         }
     }
 }
 
-country_event = {
+situation_event = {
     id = roz_shinku_evt.418
     is_triggered_only = yes
     title = "roz_shinku_evt.418.title"
@@ -924,18 +944,20 @@ country_event = {
     picture = GFX_evt_roz_industrial_factory
     show_sound = event_engineered_evolution
     trigger = {
-        NOT = { has_modifier = roz_rosa_analysis_temporary }
+        owner = { NOT = { has_modifier = roz_rosa_analysis_temporary } }
     }
     option = {
         name = roz_shinku_evt.418.aa
-        add_modifier = {
-            modifier = roz_rosa_analysis_temporary
-            days = 60
+        owner = {
+            add_modifier = {
+                modifier = roz_rosa_analysis_temporary
+                days = 60
+            }
         }
     }
 }
 
-country_event = {
+situation_event = {
     id = roz_shinku_evt.419
     is_triggered_only = yes
     title = "roz_shinku_evt.419.title"
@@ -950,7 +972,7 @@ country_event = {
     }
 }
 
-country_event = {
+situation_event = {
     id = roz_shinku_evt.420
     is_triggered_only = yes
     title = "roz_shinku_evt.420.title"
@@ -958,18 +980,20 @@ country_event = {
     picture = GFX_evt_spy_network
     show_sound = event_power_down
     trigger = {
-        NOT = { has_modifier = roz_rosa_analysis_research_fault }
+       owner = {  NOT = { has_modifier = roz_rosa_analysis_research_fault } }
     }
     option = {
         name = roz_shinku_evt.420.aa
-        add_modifier = {
-            modifier = roz_rosa_analysis_research_fault
-            days = 30
+        owner = {
+            add_modifier = {
+                modifier = roz_rosa_analysis_research_fault
+                days = 30
+            }
         }
     }
 }
 
-country_event = {
+situation_event = {
     id = roz_shinku_evt.421
     is_triggered_only = yes
     title = "roz_shinku_evt.421.title"
@@ -977,19 +1001,21 @@ country_event = {
     picture = GFX_solar_storm
     show_sound = event_power_down
     trigger = {
-        is_ai = no
+        owner = { is_ai = no }
     }
     option = {
         name = roz_shinku_evt.421.aa
-        add_resource = {
-            unity = -1000
-            influence = -50
-            society_research = -1000
+        owner = {
+            add_resource = {
+                unity = -1000
+                influence = -50
+                society_research = -1000
+            }
         }
     }
 }
 
-country_event = {
+situation_event = {
     id = roz_shinku_evt.423
     is_triggered_only = yes
     title = "roz_shinku_evt.423.title"
@@ -997,12 +1023,14 @@ country_event = {
     picture = GFX_evt_origin_stormchasers_event_progress
     show_sound = event_laboratory_sound
     trigger = {
-        is_ai = no
+        owner = { NOT = { has_country_flag = roz_rosa_analysis_negative_flag } }
     }
     immediate = {
-        set_timed_country_flag = {
-            flag = roz_rosa_analysis_negative_flag
-            days = 31
+        owner = {
+            set_timed_country_flag = {
+                flag = roz_rosa_analysis_negative_flag
+                days = 60
+            }
         }
     }
     option = {
@@ -1010,6 +1038,12 @@ country_event = {
         custom_tooltip = roz_shinku_evt.423.ct
     }
 }
+
+
+
+
+
+
 
 #####################
 #二阶段-卷土重来事件链
@@ -1036,6 +1070,7 @@ country_event = {
     }
     option = {
         name = roz_shinku_evt.425.bb
+        country_event = { id = roz_shinku_evt.430 days = 1 }
     }
 }
 
