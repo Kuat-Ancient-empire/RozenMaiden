@@ -318,7 +318,8 @@ country_event = { #控制台effect测试区
 		#effect = { every_country = { establish_contact = { who = this location = root } } }
 		#effect = { force_add_civic = civic_azur_K1 force_add_civic = civic_azur_K2 force_add_civic = civic_azur_K3 }
 		#
-		
+
+		#effect owner_main_species = { change_species_characteristics = { add_trait = trait_malleable_genes } } set_country_flag = manifesti_leading
 		# effect = {
 		# 	if = {
 		# 		limit = {

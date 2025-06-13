@@ -433,6 +433,26 @@ roz_shinku's_body_assembly_stage_2 = {
     }
 }
 
+roz_shinku's_body_assembly_stage_3 = {
+    activation_duration = 1
+    portrait = GFX_r_roz_shinku's_body_assembly_stage_3
+    sound = relic_activation_eternal_throne
+    resources = {
+        category = relics
+        upkeep = {
+            sr_rosa_mystica = 7
+        }
+    }
+    can_be_stolen = no
+    ai_weight = {
+        weight = 0
+    }
+    score = 10
+    possible = {
+        custom_tooltip = { always = no text = "roz_shinku's_body_assembly_stage_3_ct" }
+    }
+}
+
 ####################
 ##Annabelle
 

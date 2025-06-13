@@ -199,6 +199,10 @@ spriteTypes = {
         name = "GFX_r_roz_shinku's_body_assembly_stage_2"
         texturefile = "gfx/interface/icons/relics/r_roz_shinku's_body_assembly_stage_2.dds"
     }
+    SpriteType = {
+        name = "GFX_r_roz_shinku's_body_assembly_stage_3"
+        texturefile = "gfx/interface/icons/relics/r_roz_sleeping_shinku.dds"
+    }
 
     SpriteType = {
         name = "GFX_r_roz_ann"

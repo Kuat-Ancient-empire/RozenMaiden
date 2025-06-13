@@ -355,6 +355,7 @@ roz_awaken_of_shinku_1_acknowledge_border = {
         }
         on_select = {
             custom_tooltip = roz_awaken_of_shinku_1_acknowledge_border_1_approach_onselect_ct
+            hidden_effect = { remove_situation_flag = roz_awaken_of_shinku_1_acknowledge_border_1_cyclic }
         }
         default = yes
         resources = {
@@ -380,6 +381,7 @@ roz_awaken_of_shinku_1_acknowledge_border = {
         }
         on_select = {
             custom_tooltip = roz_awaken_of_shinku_1_acknowledge_border_2_approach_onselect_ct
+            hidden_effect = { remove_situation_flag = roz_awaken_of_shinku_1_acknowledge_border_1_cyclic }
         }
         default = yes
         resources = {
@@ -405,6 +407,7 @@ roz_awaken_of_shinku_1_acknowledge_border = {
         }
         on_select = {
             custom_tooltip = roz_awaken_of_shinku_1_acknowledge_border_3_approach_onselect_ct
+            hidden_effect = { remove_situation_flag = roz_awaken_of_shinku_1_acknowledge_border_1_cyclic }
         }
         default = yes
         resources = {
@@ -430,6 +433,7 @@ roz_awaken_of_shinku_1_acknowledge_border = {
         }
         on_select = {
             custom_tooltip = roz_awaken_of_shinku_1_acknowledge_border_4_approach_onselect_ct
+            hidden_effect = { set_situation_flag = roz_awaken_of_shinku_1_acknowledge_border_1_cyclic }
         }
         default = yes
         resources = {
@@ -443,20 +447,18 @@ roz_awaken_of_shinku_1_acknowledge_border = {
         #AI will pick the one with the highest weight
     }
     monthly_progress = {
-        base = 0.5
-        modifier = {
-            factor = 0.5
-            desc = roz_awaken_of_shinku_1_acknowledge_border_rosa_analysis_negative_flag
-            owner  = {
-                has_country_flag = roz_rosa_analysis_negative_flag
-            }
-        }
+        base = 1
         modifier = {
             add = 1
             desc = roz_shinku_evt.4301.desc
             owner  = {
                 has_country_flag = roz_SK_1_kxbj_accelerate
             }
+        }
+        modifier = {
+            factor = 0.5
+            desc = roz_awaken_of_shinku_1_acknowledge_border_rosa_analysis_negative_flag
+            owner = { has_country_flag = roz_rosa_analysis_negative_flag }
         }
         modifier = {
             factor = 0.5
@@ -469,7 +471,7 @@ roz_awaken_of_shinku_1_acknowledge_border = {
             current_situation_approach = roz_awaken_of_shinku_1_acknowledge_border_2_approach
         }
         modifier = {
-            factor = 1.0
+            factor = 1.5
             desc = roz_awaken_of_shinku_1_acknowledge_border_3_approach
             current_situation_approach = roz_awaken_of_shinku_1_acknowledge_border_3_approach
         }
@@ -480,22 +482,23 @@ roz_awaken_of_shinku_1_acknowledge_border = {
         }
     }
     on_monthly = {
-        random_events = {
-            1 = roz_shinku_evt.411
-            4 = roz_shinku_evt.412
-            4 = roz_shinku_evt.413
-            4 = roz_shinku_evt.414
-            2 = roz_shinku_evt.415
-            2 = roz_shinku_evt.416
-            2 = roz_shinku_evt.417
-            4 = roz_shinku_evt.418
-            6 = roz_shinku_evt.419
-            2 = roz_shinku_evt.420
-            1 = roz_shinku_evt.421
-            4 = roz_shinku_evt.422
-            2 = roz_shinku_evt.423
-            1 = 0
-        }
+        # random_events = {   #不太好用，不如直接触发事件再调用random list
+        #     1 = roz_shinku_evt.411
+        #     4 = roz_shinku_evt.412
+        #     4 = roz_shinku_evt.413
+        #     4 = roz_shinku_evt.414
+        #     2 = roz_shinku_evt.415
+        #     2 = roz_shinku_evt.416
+        #     2 = roz_shinku_evt.417
+        #     4 = roz_shinku_evt.418
+        #     6 = roz_shinku_evt.419
+        #     2 = roz_shinku_evt.420
+        #     1 = roz_shinku_evt.421
+        #     4 = roz_shinku_evt.422
+        #     2 = roz_shinku_evt.423
+        #     1 = 0
+        # }
+        events = { roz_shinku_evt.410 }
     }
 }
 

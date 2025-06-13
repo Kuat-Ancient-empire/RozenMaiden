@@ -129,7 +129,7 @@ roz_madgod_fleet_jtcl_create_direct = {
 				set_aggro_range = 300
 				add_modifier = {
 					modifier = roz_krks_bf_stage1_HK_buff
-					mult = 0.75
+					mult = 1.5
 				}
 			}
 		}
@@ -162,7 +162,7 @@ roz_madgod_fleet_jtcl_create_decoy = {
 				set_aggro_range = 300
 				add_modifier = {
 					modifier = roz_krks_bf_stage1_HK_buff
-					mult = 0.5
+					mult = 1.00
 				}
 			}
 		}
@@ -1250,8 +1250,10 @@ roz_shoujonotsukurikata_project_common_effect = {
 	else_if = {
 		limit = { check_variable = { which = roz_shinku_progress_count value <= 9 } }
 		country_event = { id = roz_shinku_evt.120 }
-		country_event = { id = roz_shinku_evt.121 }
+		country_event = { id = roz_shinku_evt.130 }
 	}
-	else = { country_event = { id = roz_shinku_evt.130 } }
+	else = { country_event = { id = roz_shinku_evt.140 } }
+
+
 }
 

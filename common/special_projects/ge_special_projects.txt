@@ -930,7 +930,7 @@ special_project = {		####
 	#days_to_research = 60
 	tech_department = society_technology
 	cost = 2000
-	event_chain = roz_outland_system_chain
+	event_chain = roz_shoujonotsukurikata_chain
 	picture = GFX_evt_roz_junn_phone_1
 	icon = gfx/interface/icons/situation_log/situation_log_society.dds
 	event_scope = planet_event
@@ -981,7 +981,7 @@ special_project = {
 }
 
 special_project = {
-	#卷土重来：凯旋而归(一方案成功)
+	#卷土重来：一方案
 	key = roz_unholy_invasion_defproj_1
 	desc = {
 		text = roz_unholy_invasion_defproj_1_DESC
@@ -993,16 +993,17 @@ special_project = {
 	picture = GFX_
 	icon = gfx/interface/icons/situation_log/situation_log_astral_rift.dds
 	on_success = {
-		#人偶们前去执行任务
-		remove_country_flag = unholy_invasion_defend_proj_aggressive
-		remove_country_flag = ge_sgt_busy
-		remove_country_flag = ge_nfield_diplomacy_activated
-		owner = {
-			set_leader = event_target:roz_leader_kirakishou_global_target@root
-			set_leader = event_target:roz_leader_suigintou_global_target@root
-			set_leader = event_target:roz_ruler_target_temp@root
+		random_list = {
+			1 = {
+				modifier = { event_target:roz_leader_suigintou_global_target@root = { has_total_skill >= 7 } factor = 1.5 }
+				modifier = { event_target:roz_leader_kirakishou_global_target@root = { has_total_skill >= 5 } factor = 1.5 }
+				country_event = { id = roz_shinku_evt.432 days = 90 }
+			}
+			1 = {
+				country_event = { id = roz_shinku_evt.433 days = 150 }
+				set_country_flag = roz_unholy_invasion_defend_flag
+			}
 		}
-		clear_global_event_target = roz_ruler_target_temp@root
 
 	}
 }
@@ -1021,7 +1022,7 @@ special_project = {
 	days_to_research = 180
 	#event_chain = roz_wake-up_shinku_chain
 	event_scope = planet_event
-	picture = GFX_
+	picture = GFX_evt_cosmic_storms_preparation
 	icon = gfx/interface/icons/situation_log/situation_log_projectile.dds
 	on_success = {
 		owner = {
@@ -1041,15 +1042,14 @@ special_project = {
 		trigger = { is_ai = no }
 	}
 	requirements = {
-		shipclass_military = 1
 		shipclass_science_ship = 1
 	}
 
 	event_scope = planet_event
-	picture = GFX_
+	picture = GFX_evt_astral_rift_ancient_battlegrounds
 	icon = gfx/interface/icons/situation_log/situation_log_ship.dds
 	on_success = {
-
+		owner = { country_event = { id = roz_shinku_evt.441 } }
 	}
 }
 

@@ -1,4 +1,5 @@
-﻿l_simp_chinese:
+﻿#noinspection ParadoxScriptIncorrectFileEncoding
+l_simp_chinese:
  ####
  #special projects
   ##########special projects
@@ -120,7 +121,7 @@ roz_outland_YS_planet_project_DESC: "这颗星球与我们遇到过的虚境星�
   roz_shoujonotsukurikata_chain_desc: "当前已收到的人偶组件：[Root.roz_shuukan_count]\n\n人偶拼接进度：[Root.roz_scetionofdoll_count]\n\n组件拼装顺序不分先后，拥有周刊时即可进行拼装，§H但每次只能组装一个部件(并非)§!，每次拼装完成消耗一个周刊遗珍"
   roz_shinku_progress: "真红制作进度"
   roz_shoujonotsukurikata_project_common_DESC: "打开这次送达的神秘包裹，读罢本期的周刊《少女的制作方法》后，[Root.GetRulerTitle]已经迫不及待地想要按照教程步骤，将蔷薇少女第五人偶——真红亲手制作出来。尚待精细加工的原始组件已经随书附赠，现在，是时候在繁忙国务后的每个夜晚，展现真正的手艺活了。"
-  roz_shoujonotsukurikata_project_common_notice_DESC: "§R注意：由于您本人精力有限，每次只能组装一个部件，§B当然，如果您精力旺盛那就无所谓了~§!§!"
+  roz_shoujonotsukurikata_project_common_notice_DESC: "注意：§R由于您本人精力有限，每次只能组装一个部件，§B当然，您也可以一起做，只要不嫌弹窗太多的话~§!§!"
   roz_shoujonotsukurikata_project_1: "第1块组件"  #自动完成
   roz_shoujonotsukurikata_project_1_DESC: "$roz_shuukan_shoujonotsukurikata_vol1_desc$\n\n$roz_shoujonotsukurikata_project_common_DESC$"
 
@@ -167,7 +168,7 @@ roz_unholy_invasion_defproj_1: "卷土重来"
 roz_unholy_invasion_defproj_1_DESC: "蔷薇圣母的解析项目正如火如荼地进行时，我们突然收到了来自人偶师樱田纯的紧急联络。疑似深渊的未知威胁发现并围困了樱田纯同N之领域的连接通道，旋即联络中断。继承了罗真衣钵的樱田纯，其存在对于蔷薇少女有特殊意义，并且对于我们正在开展的解析蔷薇圣母等一系列科研项目同样不可替代。不论具体采用哪些手段，我们必须营救这位帮助我们不少的人偶师，或许也能借此窥探到某些深渊的情报和秘密也说不定。"
   #卷土重来：二方案-诱饵计划
 roz_unholy_invasion_defproj_1_decoy: "诱饵计划"
-roz_unholy_invasion_defproj_1_decoy_DESC: "为了诱饵计划的顺利实施，工程团队首先要搭建起赝品圣母的存储和超频设施，科研团队则需要在诱饵激活后，时刻照看诱饵能量信号的正常功率。最重要的，我们的舰队要确保部署到位。帝国三大部门伺候它一个敌人，这福分还能小得了嘛。\n\n§R注意：请确保N之大门星系部署有足够实力的舰队！§!"
+roz_unholy_invasion_defproj_1_decoy_DESC: "为了诱饵计划的顺利实施，工程团队首先要搭建起赝品圣母的存储和超频设施，科研团队则需要在诱饵激活后，时刻照看诱饵能量信号的正常功率。最重要的，我们的舰队要确保部署到位。国家三大部门伺候它一个敌人，这福分还能小得了嘛。\n\n§R注意：请确保N之大门星系部署有足够实力的舰队！§!"
   #卷土重来：战斗残骸#国家暴力机器
 roz_unholy_invasion_defproj_2: "卷土重来"
 roz_unholy_invasion_defproj_2_DESC: "蔷薇圣母的解析项目正如火如荼地进行时，我们突然收到了来自人偶师樱田纯的紧急联络。疑似深渊的未知威胁发现并围困了樱田纯同N之领域的连接通道，旋即联络中断。继承了罗真衣钵的樱田纯，其存在对于蔷薇少女有特殊意义，并且对于我们正在开展的解析蔷薇圣母等一系列科研项目同样不可替代。不论具体采用哪些手段，我们必须营救这位帮助我们不少的人偶师，或许也能借此窥探到某些深渊的情报和秘密也说不定。"

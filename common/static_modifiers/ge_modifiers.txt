@@ -726,7 +726,7 @@ roz_SK_xiling_enhanced_buff = {
 ####特殊计划：卷土重来
 roz_unholy_invasion_defproj_1_defender_buff = {
 	icon = gfx/interface/icons/modifiers/mod_weapon_damage_mult.dds
-	ship_weapon_damage = 0.15
+	ship_weapon_damage = 0.35
 	ship_fire_rate_mult = 0.15
 	ship_shield_mult = 0.15
 }
