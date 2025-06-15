@@ -156,6 +156,9 @@ roz_stare_into_the_abyss_DESC: "历经艰辛战斗后，我们终于设法捕获
 roz_junn_rosa_flexible_employment: "赝品圣母灵活就业"
 roz_junn_rosa_flexible_employment_DESC: "人偶师樱田纯提供了一套可以通过加大对£sr_rosa_mystica£$sr_rosa_mystica$的消耗来永久增强蔷薇少女能力的技术，这有效促进了赝品圣母的灵活就业(确信)。"
 
+roz_junn_rosa_enhance: 改进赝品圣母制作工艺"
+roz_junn_rosa_enhance_DESC: "有了上一个项目的经验，我们能进一步开发赝品圣母的用途了！"
+
   ################事件链：真红的觉醒###############
 roz_wake-up_shinku_chain: "真红的觉醒"
 roz_wake-up_shinku_chain_DESC: "我们成功同蔷薇少女第五人偶真红的原契约者，人偶师罗真的继承人樱田纯建立通讯，并与之达成了重新制作真红的蔷薇圣母，从而唤醒真红的合作协议。该项目与水银灯女士对此的热忱也脱不开关系。虽然口头上对自己的这位姐妹不留口德，但水银灯对真红的关心早就在[Root.GetRulerTitle]和一众[Root.GetName]高层官员中成了公开的秘密……言归正传，根据樱田纯提供的情报和建议，[Root.GetName]的许多人员资源调配已经提上日程。我们的技术人员对于这项涉及“因果”的宏大项目激动异常，认为这将是继N之领域初步开发后，通向帝国下一阶段超凡飞升的征程起点。前路未卜，但毫无疑问的是，如此野心勃勃的项目，在推进过程中一定会带来许多意想不到的机遇和挑战。"

@@ -728,6 +728,8 @@ country_event = { #控制台effect测试区
 
 		#copy_survey_data = yes
 
+		#trigger exists = event_target:roz_madgod_force_country@root
+		#trigger any_country = { has_country_flag = roz_madgod_force_country_flag }
 
 
 

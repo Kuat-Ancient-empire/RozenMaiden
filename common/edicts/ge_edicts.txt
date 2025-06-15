@@ -27,12 +27,11 @@ roz_rosa_mystica_enhance_edicts = {
 	length = -1
 	icon = GFX_sgt_edit_icon_2
 	potential = {
-		#has_country_flag = roz_leader_suigintou_get
-		#OR = {
-		#	has_country_flag = q_sgt_army_get
-		#	has_country_flag = roz_kirakishou_get
-		#}
-		always = no
+		has_country_flag = roz_leader_suigintou_get
+		OR = {
+			has_country_flag = q_sgt_army_get
+			has_country_flag = roz_kirakishou_get
+		}
 	}
 	resources = {
 		category = edicts
@@ -45,6 +44,37 @@ roz_rosa_mystica_enhance_edicts = {
 		}
 	}
 
+}
+
+edict_roz_rosa_mystica_enhance_war_edicts = {
+	length = -1
+	icon = GFX_sgt_edit_icon_2
+	potential = { has_country_flag = roz_rosa_mystica_edits_available_flag }
+	resources = {
+		category = edicts
+		cost = { sr_rosa_mystica = 1000 }
+		upkeep = { sr_rosa_mystica = 5 }
+	}
+	modifier = {
+		ship_accuracy_mult = 0.15
+		ship_tracking_mult = 0.15
+		ship_fire_rate_mult = 0.20
+		ship_emergency_ftl_min_days_add = -5
+	}
+}
+
+edict_roz_rosa_mystica_enhance_affairs_edicts = {
+	length = -1
+	icon = GFX_sgt_edit_icon_2
+	potential = { has_country_flag = roz_rosa_mystica_edits_available_flag }
+	resources = {
+		category = edicts
+		cost = { sr_rosa_mystica = 1000 }
+		upkeep = { sr_rosa_mystica = 5 }
+	}
+	modifier = {
+		pop_bonus_workforce_mult = 0.25
+	}
 }
 
 ge_mozheng_edicts = {
@@ -357,6 +387,8 @@ roz_graygoo_enable_edict = {
 		}
 	}
 }
+
+
 
 #@educ=3
 #research_edicts = {

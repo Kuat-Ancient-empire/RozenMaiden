@@ -34,8 +34,12 @@ edict_get_suigintou_site_star_edicts_desc: "如果不想水银灯被ai牛了请�
 edict_roz_mutiplayer_tech_edict: "辅助功能：客机玩家获得虚空科技"
 edict_roz_mutiplayer_tech_edict_desc: "我们联合!"
 
- edict_roz_rosa_mystica_enhance_edicts:0 "淑女们的\"§M下午茶§!\""
- edict_roz_rosa_mystica_enhance_edicts_desc:0 "虽然我们仿制出来的蔷薇圣母遥遥落后于罗真弄出的真货，但它们那相似的性质却能作为蔷薇少女们的优质补品，大幅增强蔷薇圣母的活性。\n\n§B该法令加大幅增强所有蔷薇少女（水银灯、雪华绮晶）的特质属性。§!"
+ edict_roz_rosa_mystica_enhance_war_edicts:0 "£sr_rosa_mystica£赝品圣母增强：魔法战备"
+ edict_roz_rosa_mystica_enhance_edicts_desc:0 "或许是某种魔法黎明？"
+ #虽然我们仿制出来的蔷薇圣母遥遥落后于罗真弄出的真货，但它们那相似的性质却能作为蔷薇少女们的优质补品，大幅增强蔷薇圣母的活性。\n\n§B该法令加大幅增强所有蔷薇少女（水银灯、雪华绮晶）的特质属性。§!
+
+ edict_roz_rosa_mystica_enhance_affairs_edicts: "£sr_rosa_mystica£赝品圣母增强：提高生产"
+ edict_roz_rosa_mystica_enhance_affairs_edicts_desc: "目前统一配发的魔法个人终端虽然还十分简陋，但足以为社会生产提高便利和效率"
 
  edict_roz_lgate_disable_edict:"封锁L星门"
  edict_roz_lgate_disable_edict_desc:"我们可以通过关闭L星门来断绝L星团与银河系的联系，这里将成为我们的秘密花园。直至我们主动解封L星门"

@@ -950,14 +950,37 @@ special_project = {
 		text = roz_junn_rosa_flexible_employment_DESC
 		trigger = { is_ai = no }
 	}
-	picture = GFX_
+	picture = GFX_evt_engineering_bay
 	location = no
 	tech_department = engineering_technology
-	cost = 5000
+	cost = 25000
 	icon = gfx/interface/icons/situation_log/situation_log_engineering.dds
 	event_scope = country_event
 	on_success = {
 		set_country_flag = roz_rosa_mystica_enhance_flag
+		country_event = {
+			id = roz_shinku_evt.4011
+		}
+	}
+}
+
+special_project = {
+	key = "roz_junn_rosa_enhance"
+	desc = {
+		text = roz_junn_rosa_enhance_DESC
+		trigger = { is_ai = no }
+	}
+	picture = GFX_evt_engineering_bay
+	location = no
+	tech_department = engineering_technology
+	cost = 15000
+	icon = gfx/interface/icons/situation_log/situation_log_engineering.dds
+	event_scope = country_event
+	on_success = {
+		set_country_flag = roz_rosa_mystica_edits_available_flag
+		country_event = {
+			id = roz_shinku_evt.4012
+		}
 	}
 }
 
@@ -989,8 +1012,9 @@ special_project = {
 	}
 	#event_chain = roz_wake-up_shinku_chain
 	event_scope = country_event
+	days_to_research = 15
 	location = no
-	picture = GFX_
+	picture = GFX_evt_astral_rift_fluid
 	icon = gfx/interface/icons/situation_log/situation_log_astral_rift.dds
 	on_success = {
 		random_list = {
@@ -1008,8 +1032,8 @@ special_project = {
 	}
 }
 
+#卷土重来：二方案-诱饵计划
 special_project = {
-	#卷土重来：二方案-诱饵计划
 	key = roz_unholy_invasion_defproj_1_decoy
 	desc = {
 		text = roz_unholy_invasion_defproj_1_decoy_DESC
@@ -1019,15 +1043,16 @@ special_project = {
 		shipclass_constructor = 1
 		shipclass_science_ship = 1
 	}
+	location = yes
 	days_to_research = 180
-	#event_chain = roz_wake-up_shinku_chain
-	event_scope = planet_event
-	picture = GFX_evt_cosmic_storms_preparation
-	icon = gfx/interface/icons/situation_log/situation_log_projectile.dds
+	event_scope = ship_event
+	# picture = GFX_evt_cosmic_storms_preparation
+	# icon = gfx/interface/icons/situation_log/situation_log_projectile.dds
 	on_success = {
 		owner = {
 			country_event = {
 				id = roz_shinku_evt.435
+				days = 1
 			}
 		}
 	}
@@ -1044,12 +1069,12 @@ special_project = {
 	requirements = {
 		shipclass_science_ship = 1
 	}
-
-	event_scope = planet_event
+	days_to_research = 45
+	event_scope = ship_event
 	picture = GFX_evt_astral_rift_ancient_battlegrounds
-	icon = gfx/interface/icons/situation_log/situation_log_ship.dds
+	icon = gfx/interface/icons/situation_log/situation_log_debris.dds
 	on_success = {
-		owner = { country_event = { id = roz_shinku_evt.441 } }
+		ship_event = { id = roz_shinku_evt.441 }
 	}
 }
 

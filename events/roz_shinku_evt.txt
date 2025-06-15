@@ -1186,10 +1186,6 @@ country_event = {
     trigger = {
         is_ai = no
     }
-    immediate = {
-        #墨水人国家初始化，后续对其操作都从这里开始
-        roz_madgod_country_initiate = yes
-    }
     option = {
         name = roz_shinku_evt.430.aa
         custom_tooltip = roz_shinku_evt.430.aa.ct
@@ -1267,6 +1263,7 @@ country_event = {
     trigger = {
         is_ai = no
     }
+    location = event_target:roz_n_field_site_target@root
     option = {
         name = roz_shinku_evt.431.aa
         add_monthly_resource_mult = {
@@ -1315,6 +1312,7 @@ country_event = {
     desc = "roz_shinku_evt.432.desc"
     picture = GFX_evt_tradestation_interior
     show_sound = event_celebration
+    location = event_target:roz_n_field_site_target@root
     trigger = {
         is_ai = no
     }
@@ -1362,8 +1360,9 @@ country_event = {
     is_triggered_only = yes
     title = "roz_shinku_evt.433.title"
     desc = "roz_shinku_evt.433.desc"
-    show_sound = event_ship_thrusters
+    show_sound = event_red_alert
     picture = GFX_evt_machine_space_battle
+    location = event_target:roz_n_field_site_target@root
     trigger = {
         is_ai = no
     }
@@ -1385,7 +1384,10 @@ country_event = {
         name =  roz_shinku_evt.433.bb
     }
     after = {
-        hidden_effect = { roz_madgod_fleet_jtcl_create_direct = yes }
+        hidden_effect = { 
+            roz_madgod_country_initiate = yes
+            roz_madgod_fleet_jtcl_create_direct = yes 
+        }
     }
 }
 
@@ -1397,6 +1399,7 @@ country_event = {
     desc = roz_shinku_evt.434.desc
     picture = GFX_evt_board_meeting
     show_sound = event_ship_bridge
+    location = event_target:roz_n_field_site_target@root
     trigger = {
         has_country_flag = roz_unholy_invasion_defend_proj_conservative
     }
@@ -1409,10 +1412,12 @@ country_event = {
             energy = -50000
             sr_rosa_mystica = -5000
         }
-        enable_special_project = {#在n之领域坟头刷
-            name = roz_unholy_invasion_defproj_1_decoy
-            owner = root
-            location = event_target:roz_n_field_site_target@root
+        event_target:roz_n_field_site_target@root = {
+            enable_special_project = {#在n之领域坟头刷
+                name = roz_unholy_invasion_defproj_1_decoy__1
+                owner = root
+                location = this
+            }
         }
     }
 }
@@ -1423,11 +1428,11 @@ country_event = {
     title = roz_shinku_evt.435.title
     desc = roz_shinku_evt.435.desc
     picture = GFX_evt_astral_rift_nomask
+    show_sound = event_construction
+    location = event_target:roz_n_field_site_target@root
     trigger = {
-        has_country_flag = roz_unholy_invasion_defend_proj_conservative
-    }
-    immediate = {
-
+        #has_country_flag = roz_unholy_invasion_defend_proj_conservative
+        always = yes
     }
     option = {
         name =  roz_shinku_evt.435.aa
@@ -1454,6 +1459,8 @@ country_event = {
     title = roz_shinku_evt.436.title
     desc = roz_shinku_evt.436.desc
     picture = GFX_evt_fleet_evil
+    show_sound = event_red_alert
+    location = event_target:roz_n_field_site_target@root
     trigger = {
         has_country_flag = roz_unholy_invasion_defend_proj_conservative
     }
@@ -1468,6 +1475,7 @@ country_event = {
         }
         hidden_effect = {
             set_country_flag = roz_unholy_invasion_defend_flag
+            roz_madgod_country_initiate = yes
             roz_madgod_fleet_jtcl_create_decoy = yes
         }
     }
@@ -1506,6 +1514,8 @@ country_event = {
     is_triggered_only = yes
     title = roz_shinku_evt.440.title
     desc = roz_shinku_evt.440.desc
+    show_sound = event_bad_omen
+    location = event_target:roz_n_field_site_target@root
     picture = GFX_evt_astral_rift_ancient_battlegrounds
     trigger = {
         is_ai = no
@@ -1519,55 +1529,47 @@ country_event = {
         enable_special_project = {
             name = roz_stare_into_the_abyss
             location = event_target:roz_n_field_site_target@root
+            owner = root
         }
     }
 }
 
 ###################卷土重来故事链结束
 ##特殊项目：凝视深渊 完成事件
-country_event = {
+ship_event = {
     id = roz_shinku_evt.441
     is_triggered_only = yes
     title = roz_shinku_evt.441.title
     desc = roz_shinku_evt.441.desc
-    show_sound = event_ship_explosion
+    show_sound = event_alien_abduction
     picture = GFX_evt_exploding_ship
     trigger = {
-        is_ai = no
-    }
-    immediate = {
-        from = {
-            random_fleet_in_orbit = {
-                limit = {
-                    is_ship_size = science
-                    exists = leader
-                }
-                unassign_leader = this
-                destroy_fleet = this
-            }
-        }
+        owner = { is_ai = no }
     }
     option = {
         name =  roz_shinku_evt.441.aa
         custom_tooltip = roz_shinku_evt.441.ct
-        add_modifier = {
-            modifier = roz_stare_into_the_abyss_debuff
-            months = 3
-        }
-        hidden_effect = {
-            country_event = {
-                id = roz_shinku_evt.442
-                days = 1
+        reduce_hp_percent = 0.75
+        owner = {
+            add_modifier = {
+                modifier = roz_stare_into_the_abyss_debuff
+                months = 3
+            }
+            hidden_effect = {
+                country_event = {
+                    id = roz_shinku_evt.445
+                    days = 10
+                }
             }
         }
     }
 }
 
 country_event = {
-    id = roz_shinku_evt.442
+    id = roz_shinku_evt.445
     diplomatic = yes
     title = roz_shinku_evt.442.title
-    desc = roz_shinku_evt.442.desc
+    desc = roz_shinku_evt.442.desc_1
     is_triggered_only = yes
     picture_event_data = {
         room = no_video_feed_room
@@ -1576,33 +1578,60 @@ country_event = {
         is_ai = no
     }
     option = {
+        name =  roz_shinku_evt.442.0
+        trigger = { NOT = { has_country_flag = roz_shinku_evt_442 } }
+        hidden_effect = { set_country_flag = roz_shinku_evt_442 }
+        country_event = { id = roz_shinku_evt.442 }
+    }
+}
+
+country_event = {
+    id = roz_shinku_evt.442
+    diplomatic = yes
+    title = roz_shinku_evt.442.title
+    desc = roz_shinku_evt.442.desc_2
+    show_sound = event_swarm_started
+    is_triggered_only = yes
+    picture_event_data = {
+        room = no_video_feed_room
+    }
+    trigger = {
+        is_ai = no
+    }  
+    option = {
         name =  roz_shinku_evt.442.aa
+        trigger = { has_country_flag = roz_shinku_evt_442 }
         response_text = roz_shinku_evt.442.aa.ct
         is_dialog_only = yes
     }
     option = {
         name =  roz_shinku_evt.442.bb
+        trigger = { has_country_flag = roz_shinku_evt_442 }
         response_text = roz_shinku_evt.442.bb.ct
         is_dialog_only = yes
     }
     option = {
         name =  roz_shinku_evt.442.cc
+        trigger = { has_country_flag = roz_shinku_evt_442 }
         response_text = roz_shinku_evt.442.cc.ct
         is_dialog_only = yes
     }
     option = {
         name =  roz_shinku_evt.442.dd
+        trigger = { has_country_flag = roz_shinku_evt_442 }
         default_hide_option = yes
-        hidden_effect = {
-
-        }
+        hidden_effect = { remove_country_flag = roz_shinku_evt_442 }
     }
 }
 country_event = {
     id = roz_shinku_evt.443
     title = roz_shinku_evt.443.title
     desc = roz_shinku_evt.443.desc
-    picture = GFX
+    show_sound = event_ex_started
+    diplomatic = yes
+    picture_event_data = {
+        room = no_video_feed_room
+    }
     is_triggered_only = yes
     trigger = {
         is_ai = no
@@ -1625,7 +1654,8 @@ country_event = {
     id = roz_shinku_evt.450
     title = roz_shinku_evt.450.title
     desc = roz_shinku_evt.450.desc
-    picture = GFX
+    diplomatic = yes
+    picture_event_data = { room = roz_junn_room }
     is_triggered_only = yes
     trigger = {
         is_ai = no
@@ -1658,7 +1688,7 @@ country_event = {
     id = roz_shinku_evt.451
     title = roz_shinku_evt.451.title
     desc = roz_shinku_evt.451.desc
-    picture = GFX
+    picture = GFX_evt_roz_hinaichiko_visit
     is_triggered_only = yes
     trigger = {
         is_ai = no
@@ -1681,7 +1711,6 @@ country_event = {
     is_triggered_only = yes
     diplomatic = yes
     picture_event_data = {
-         room = rr
         room = no_video_feed_room #TODO NEED REPLACE
     }
     trigger = {
@@ -3454,7 +3483,7 @@ country_event = {
     }
 }
 
-#待补
+#
 country_event = {
     id = roz_shinku_evt.4010
     is_triggered_only = yes
@@ -3498,6 +3527,33 @@ country_event = {
     }
 }
 
+country_event = {
+    id = roz_shinku_evt.4011
+    is_triggered_only = yes
+    title = roz_shinku_evt.4011.title
+    desc = roz_shinku_evt.4011.desc
+    picture = GFX_evt_roz_rozen_party
+    option = {
+        name = roz_shinku_evt.4011.aa
+        custom_tooltip = roz_shinku_evt.4011.ct
+    }
+    option = {
+        name = roz_shinku_evt.4011.bb
+        custom_tooltip = roz_shinku_evt.4011.ct
+    }
+}
+
+country_event = {
+    id = roz_shinku_evt.4012
+    is_triggered_only = yes
+    title = roz_shinku_evt.4012.title
+    desc = roz_shinku_evt.4012.desc
+    picture = GFX_evt_engineering_research
+    option = {
+        name = roz_shinku_evt.4012.aa
+        custom_tooltip = roz_shinku_evt.4012.ct
+    }
+}
 #############
 #通讯界面：N之领域-雏莓
 #真红苏醒前阶段的通讯界面

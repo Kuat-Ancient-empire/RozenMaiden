@@ -1,4 +1,5 @@
 roz_junn_country_create = {
+	optimize_memory
 	create_country = {
 		name = "NAME_nfield_junn"
 		type = ge_N_Field
@@ -33,6 +34,7 @@ roz_junn_country_create = {
 }
 
 roz_hinaichigo_country_create = {
+	optimize_memory
 	create_country = {
 		name = "NAME_nfield_hinaichigo"
 		type = ge_N_Field
@@ -64,9 +66,20 @@ roz_hinaichigo_country_create = {
 }
 
 roz_madgod_country_initiate = {
+	optimize_memory
+	create_species = {
+		name = random
+		class = random_non_machine
+		portrait = random
+		traits = {
+			ideal_planet_class = pc_habitat
+			trait = random_traits
+		}
+	}
 	create_country = {
 		name = NAME_madgod_force_country
 		type = enclave
+		ignore_initial_colony_error = yes
 		authority = "auth_oligarchic"
 		civics = {
 			civic = civic_ancient_preservers
@@ -75,24 +88,24 @@ roz_madgod_country_initiate = {
 		species = last_created_species
 		flag = {
 			icon = {
-				category = special
-				file = "shroudwalkers.dds"
+				category = "enclaves"
+				file = "enclaves_flag_curator.dds"
 			}
 			background = {
 				category = "backgrounds"
 				file = "vertical.dds"
 			}
 			colors = {
-				"red"
+				"white"
 				"red"
 				"null"
 				"null"
 			}
 		}
 		ethos = {
-			ethic = ethic_fanatic_militarist
+			ethic = ethic_fanatic_materialist
+			ethic = ethic_pacifist
 		}
-		ignore_initial_colony_error = yes
 	}
 	last_created_country = {
 		set_country_flag = roz_madgod_force_country_flag
@@ -105,32 +118,31 @@ roz_madgod_country_initiate = {
 
 roz_madgod_fleet_jtcl_create_direct = {
 	#方案一
-	event_target:roz_madgod_force_country@root = {
-		create_fleet = {
-			name = "NAME_roz_krks_zakko"
-			settings = {
-				spawn_debris = no
-				is_boss = yes
+	optimize_memory
+	create_fleet = {
+		name = "NAME_roz_krks_zakko"
+		settings = {
+			spawn_debris = no
+			is_boss = yes
+		}
+		effect = {
+			set_owner = event_target:roz_madgod_force_country@root
+			set_fleet_flag = roz_madgod_jtcl_fleet
+			while = {
+				count = 14
+				create_ship = {
+					name = "NAME_EDDY_ROZ"
+					design = "NAME_Corrupted_Avatar"
+					effect = {  }
+				}
 			}
-			effect = {
-				set_fleet_flag = roz_madgod_jtcl_fleet
-				while = {
-					count = 12
-					create_ship = {
-						name = "NAME_EDDY_ROZ"
-						design = "NAME_Corrupted_Avatar"
-						effect = {
-						}
-					}
-				}
-				set_location = event_target:roz_n_field_site_target@root
-				set_fleet_stance = aggressive
-				set_aggro_range_measure_from = return_point
-				set_aggro_range = 300
-				add_modifier = {
-					modifier = roz_krks_bf_stage1_HK_buff
-					mult = 1.5
-				}
+			set_location = event_target:roz_n_field_site_target@root
+			set_fleet_stance = aggressive
+			set_aggro_range_measure_from = return_point
+			set_aggro_range = 300
+			add_modifier = {
+				modifier = roz_krks_bf_stage3_HK_buff
+				mult = 1.5
 			}
 		}
 	}
@@ -138,35 +150,64 @@ roz_madgod_fleet_jtcl_create_direct = {
 
 roz_madgod_fleet_jtcl_create_decoy = {
 	#方案二
-	event_target:roz_madgod_force_country@root = {
-		create_fleet = {
-			name = "NAME_roz_krks_zakko"
-			settings = {
-				spawn_debris = no
-				is_boss = yes
+	optimize_memory
+	create_fleet = {
+		name = "NAME_roz_krks_zakko"
+		settings = {
+			spawn_debris = no
+			is_boss = yes
+		}
+		effect = {
+			set_owner = event_target:roz_madgod_force_country@root
+			set_fleet_flag = roz_madgod_jtcl_fleet
+			while = {
+				count = 10
+				create_ship = {
+					name = "NAME_EDDY_ROZ"
+					design = "NAME_Corrupted_Avatar"
+					effect = {  }
+				}
 			}
-			effect = {
-				set_fleet_flag = roz_madgod_jtcl_fleet
-				while = {
-					count = 8
-					create_ship = {
-						name = "NAME_EDDY_ROZ"
-						design = "NAME_Corrupted_Avatar"
-						effect = {
-						}
-					}
-				}
-				set_location = event_target:roz_n_field_site_target@root
-				set_fleet_stance = aggressive
-				set_aggro_range_measure_from = return_point
-				set_aggro_range = 300
-				add_modifier = {
-					modifier = roz_krks_bf_stage1_HK_buff
-					mult = 1.00
-				}
+			set_location = event_target:roz_n_field_site_target@root
+			set_fleet_stance = aggressive
+			set_aggro_range_measure_from = return_point
+			set_aggro_range = 300
+			add_modifier = {
+				modifier = roz_krks_bf_stage3_HK_buff
 			}
 		}
 	}
+	# create_fleet = {
+	# 	name = "NAME_roz_krks_zakko"
+	# 	settings = {
+	# 		spawn_debris = no
+	# 		is_boss = yes
+	# 	}
+	# 	effect = {
+	# 		set_owner = event_target:roz_suigintou_owner0
+	# 		while = {
+	# 			count = 3
+	# 			create_ship = {
+	# 				name = "NAME_Corrupted_Avatar"
+	# 				design = "NAME_Corrupted_Avatar"
+	# 				effect = {
+	# 					#set_timed_ship_flag = { #如果你开了mist
+	# 					#	flag = invincible
+	# 					#	days = 3
+	# 					#}
+	# 				}
+	# 			}
+	# 			set_location = prevprev
+	# 			set_fleet_stance = aggressive
+	# 			set_aggro_range_measure_from = return_point
+	# 			set_aggro_range = 300
+	#
+	# 			add_modifier = {
+	# 				modifier = roz_krks_bf_stage1_HK_buff
+	# 			}
+	# 		}
+	# 	}
+	# }
 }
 
 ###感染体入侵

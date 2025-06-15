@@ -767,3 +767,4 @@ ge_stg_laser_on_hit_effect_modifier = {
 	ship_tracking_mult = -0.1
 }
 
+###
