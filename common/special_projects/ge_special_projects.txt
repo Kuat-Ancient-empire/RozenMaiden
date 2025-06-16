@@ -666,7 +666,40 @@ special_project = {		####
 	}
 }
 
-
+#locator
+special_project = {		####
+	key = roz_outland_locator
+	desc = {
+		text = roz_outland_locator_DESC
+		trigger = { is_ai = no }
+	}
+	location = yes
+	days_to_research = 1
+	event_chain = roz_outland_system_chain
+	picture = GFX_roz_evt_outland
+	icon = gfx/interface/icons/situation_log/situation_log_radar.dds
+	event_scope = country_event
+	on_success = {
+		if = {
+			limit = { NOT = { has_country_flag = roz_outland_locator_disable } }
+			event_target:roz_outland_planet@root = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							has_planet_flag = roz_outland_main_black_hole
+						}
+						save_event_target_as = roz_outland_main_black_hole
+					}
+				}
+			}
+			enable_special_project = {
+				name = roz_outland_locator
+				location = event_target:roz_outland_main_black_hole
+				owner = this
+			}
+		}
+	}
+}
 
 
 ########################真红事件

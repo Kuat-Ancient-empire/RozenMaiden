@@ -144,6 +144,10 @@ roz_mega_information_remodeler_base = {
         space_owner = {
             is_ai = no
         }
+        custom_tooltip = {
+            solar_system = { is_same_value = event_target:roz_outland_planet@space_owner }
+            fail_text = "roz_is_roz_outland_planet"
+        }
 	}
     potential = {
         has_country_flag = roz_SK_3_start_reward

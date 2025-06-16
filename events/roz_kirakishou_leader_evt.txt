@@ -1152,7 +1152,7 @@ country_event = {
             # no_scope: makes system positions originate from galactic core
             spawn_system = {
                 min_distance >= 500
-                max_distance <= 800
+                max_distance <= 600
                 min_orientation_angle = 10
                 max_orientation_angle = 270
                 initializer = roz_outland_star_system
@@ -1173,10 +1173,16 @@ country_event = {
                     }
                     save_global_event_target_as = roz_outland_planet@root
                 }
-                #set_surveyed = {
-                #    surveyed = yes
-                #    surveyor = root
-                #}
+                set_surveyed = {
+                   surveyed = yes
+                   surveyor = root
+                }
+                random_system_planet = {
+                    limit = {
+                        has_planet_flag = roz_outland_main_black_hole
+                    }
+                    save_event_target_as = roz_outland_main_black_hole
+                }
             }
         }
         set_spawn_system_batch = end
@@ -1195,7 +1201,11 @@ country_event = {
             event_chain = roz_outland_system_chain
             target = root
         }
-
+        enable_special_project = {
+            name = roz_outland_locator
+            location = event_target:roz_outland_main_black_hole
+            owner = this
+        }
     }
     after = {
         hidden_effect = {
@@ -1277,7 +1287,8 @@ country_event = {
     location = from
     option = {
         name = roz_krks_leader_evt.55.aa
-
+        set_country_flag = roz_outland_locator_disable
+        complete_special_project = { type = roz_outland_locator }
         end_event_chain = roz_outland_system_chain
         event_target:roz_outland_planet@root = {
             solar_system = {

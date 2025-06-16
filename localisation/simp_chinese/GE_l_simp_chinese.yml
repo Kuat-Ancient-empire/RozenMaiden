@@ -1,4 +1,5 @@
-﻿l_simp_chinese:
+﻿#noinspection ALL
+l_simp_chinese:
 ###############################
 
 ######synced
@@ -385,6 +386,7 @@ roz_mega_information_remodeler_base_DESC: "这项来自希灵帝国的超级工�
 #该巨构只能建设在破败神国星系的恒星上。
 roz_mega_information_remodeler: "§B资讯重构仪§!"
 roz_mega_information_remodeler_DESC: "无中生有的神奇技术，超级文明的惊鸿一瞥。超限容晶体-12345型（小公主特供版）作为技术核心，镶嵌于此。"
+roz_is_roz_outland_planet:" "是§P破败神国§!星系"
 
 roz_mega_information_remodeler_effect: "运行中的$roz_mega_information_remodeler$"
 roz_mega_information_remodeler_effect_DESC: "无中生有的神奇技术，超级文明的惊鸿一瞥。超限容晶体-12345型（小公主特供版）作为技术核心，镶嵌于此。"

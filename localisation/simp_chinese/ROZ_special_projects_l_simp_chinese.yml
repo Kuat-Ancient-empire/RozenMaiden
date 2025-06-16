@@ -82,7 +82,8 @@ roz_outland_small_black_hole_project: "§R穷极之门§!"
 roz_outland_small_black_hole_DESC: "这个微型黑洞让我们想起了让我们遇到水银灯的那个黑洞之门……或许这里也是通往N之领域的通道？"
 roz_outland_YS_planet_project: "§M门之钥§!"
 roz_outland_YS_planet_project_DESC: "这颗星球与我们遇到过的虚境星球十分类似，但似乎又些不同：我们没有在其上发现任何虚境灵能反应……"
-
+roz_outland_locator: "定位：§P破败神国§!"
+roz_outland_locator_DESC: "无需研究，我们已经确定该星系的位置，剩下的只需派遣科研船前往N之领域人口出现的虫洞就能抵达目的地了。"
   ############
   weapon_type_ge_void_energy:0 "§B虚空衰变能§!"
   mod_weapon_type_ge_void_energy_weapon_damage_mult:0 "§B虚空衰变能武器伤害§!"

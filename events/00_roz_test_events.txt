@@ -914,6 +914,7 @@ country_event = { #控制台effect测试区
 
 		#effect ruler = { add_trait = { trait = leader_trait_KZ_VOY_star_chosen } add_trait = { trait = leader_trait_KZ_VOY_terranoid } add_trait = { trait = leader_trait_KZ_VOY_magic } }
 		#effect ruler = { add_trait = { trait = subclass_scientist_councilor } }
+		#effect ruler = { add_trait = { trait = subclass_official_economy_councilor } }
 		#effect leader = { add_trait = { trait = leader_trait_KZ_VOY_terranoid } add_trait = { trait = leader_trait_KZ_VOY_magic } } }
 		#event KZ_VOY_relic_VE.100
 

@@ -678,6 +678,27 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+
+	spriteType = {
+		name = "GFX_evt_roz_xiling_meeting"
+		textureFile = "gfx/event_pictures/evt_roz_xiling_meeting.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_megastructure_IR"
+		textureFile = "gfx/event_pictures/evt_roz_megastructure_IR.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_xiling_meeting_2"
+		textureFile = "gfx/event_pictures/evt_roz_xiling_meeting_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 }
 
 
