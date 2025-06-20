@@ -4794,7 +4794,11 @@ roz_setting_menu_initialize = {
 			}
 		}
 		set_country_flag = roz_krks_dl_normal_flag
-	}			
+	}
+	#difficult
+	event_target:global_event_country = {
+		set_variable = { which = roz_unholy_invasion_difficulty value = 2 }
+	}
 }
 
 roz_setting_menu_after_effect = {
@@ -4812,7 +4816,13 @@ roz_setting_menu_after_effect = {
     add_modifier = {
         modifier = ge_mozheng3
         multiplier = ge_buff_fire_range_count
-    }   
+    }
+	# 额外AI创建
+	if = {
+		limit = { has_country_flag = roz_abyss_vass_had_create_available }
+		roz_abyss_vass_create_in_diff = yes
+	}
+	# 机制
 }
 
 chronos_storm_add = {

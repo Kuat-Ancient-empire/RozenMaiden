@@ -1076,6 +1076,7 @@ special_project = {
 		shipclass_constructor = 1
 		shipclass_science_ship = 1
 	}
+	picture = GFX_evt_cosmic_storms_magnetic_storm
 	location = yes
 	days_to_research = 180
 	event_scope = ship_event
@@ -1151,8 +1152,9 @@ special_project = {
 	}
 	cost = 50000
 	tech_department = engineering_technology
-	event_scope = planet_event
-	picture = GFX_
+	event_scope = ship_event
+	picture = GFX_evt_roz_unholy_invasion_decoy
+	location = yes
 	icon = gfx/interface/icons/situation_log/situation_log_precursor.dds
 	on_start = {
 		owner = {
@@ -1169,6 +1171,32 @@ special_project = {
 		}
 	}
 }
+
+###统计面板？
+special_project = {		####
+	key = roz_unholy_invasion_statistics_board
+	desc = {
+		text = roz_unholy_invasion_statistics_board_DESC
+		trigger = { is_ai = no }
+	}
+	location = yes
+	days_to_research = 1
+	event_chain = roz_SK_madgod_invasion_main
+	picture = GFX_
+	icon = gfx/interface/icons/situation_log/situation_log_radar.dds
+	event_scope = country_event
+	on_success = {
+		if = {
+			limit = { NOT = { has_country_flag = roz_outland_locator_disable } }
+			enable_special_project = {
+				name = roz_unholy_invasion_statistics_board
+				location = event_target:roz_outland_main_black_hole@this
+				owner = this
+			}
+		}
+	}
+}
+
 
 
 

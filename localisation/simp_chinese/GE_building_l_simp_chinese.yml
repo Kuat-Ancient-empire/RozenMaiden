@@ -22,6 +22,11 @@ building_roz_power_core_desc: "从远处望去，这座奇观发出的光柱直�
 building_roz_dolls_factory: "§M水银灯的炼金人偶工厂§!"
 building_roz_dolls_factory_desc: "由水银灯一手建立的大型人偶设计与组装工厂，为全银河范围内所有家庭提供着品质卓越的\"儿童玩具\"。借助仿蔷薇圣母的特性，使得这里生产出的人偶都是拥有灵能特征的炼金生物，完全超越了其他类似的人工智能产品。不过有不少社会评论家表示这些高性能人偶可能会被一些别有用心的人拿去开发一些本不该有的功能……§H顺带一提，在其发售的产品中，蔷薇少女系列的真红人偶销量最为火爆，这显然要得益于水银灯对其设计的倾力投入。§!"
 
+ building_roz_abyss_altar: "§R深渊祭坛§!"
+ building_roz_abyss_altar_desc: "一切美好都已逝去，这里已经成为深渊的乐园"
+
+ building_roz_abyss_altar_unknow: "不明建筑物"
+ building_roz_abyss_altar_unknow_desc: "我们尚未知晓这个建筑的用途。"
 ###fe
 building_roz_fe_dome: "§C天堂穹顶§!"
 building_roz_fe_dome_desc: "依托极度先进的反重力科技漂浮在空中的乌托邦。"

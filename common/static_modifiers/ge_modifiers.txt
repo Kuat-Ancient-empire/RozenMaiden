@@ -768,3 +768,19 @@ ge_stg_laser_on_hit_effect_modifier = {
 }
 
 ###
+roz_abyss_vass_combat_negative_modifier = {
+	#they can not run anyway!
+	ship_emergency_ftl_min_days_mult = -10
+	ship_disengage_chance_reduction = 10
+	ship_engagement_range_mult = -10
+}
+
+roz_unholy_invasion_difficult_modifier = {
+	ship_weapon_damage = 1.0
+	ship_fire_rate_mult = 1.0
+	ship_hull_mult = 1.0
+	ship_armor_mult = 1.0
+	ship_shield_mult = 1.0
+	ship_tracking_mult = 1.0
+	ship_accuracy_mult = 1.0
+}

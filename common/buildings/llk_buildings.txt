@@ -267,12 +267,81 @@ building_roz_dolls_factory = {
 }
 
 
+building_roz_abyss_altar = {
+    base_buildtime = 90    			#基础建造时间，单位为天
+    capital = no     				#是否是首都建筑
+    can_build = no    				#是否可修建
+    can_demolish = no 				#是否可被拆除
+    can_be_ruined = no    			#能否被废弃
+    can_be_disabled = no      		#能否被停止运作
+    position_priority = 4			#位置优先级
+    planet_limit = {    #建造数量
+        base = 1
+    }
+    icon = building_whisperers_sanctum
+    category = government     		#分类，可以让玩家更好的找到该建筑
 
+    building_sets = {
+        automation
+    }
 
-######真红手办工厂
-#building_roz_shinku_dolls_factory
+    potential = {
+        exists = planet
+    }
+    planet_modifier = {
+        pop_bonus_workforce_mult = 0.15
+    }
+    resources = {
+        category = planet_buildings
+        upkeep = {  #维持，为每月多少
+            unity = 5
+        }
+    }
+    destroy_trigger = {
 
+    }
+    ai_weight = {   #AI的建造权重
+        weight = 0
+    }
+}
 
+building_roz_abyss_altar_unknow = {
+    base_buildtime = 90
+    capital = no
+    can_build = no
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    position_priority = 4
+    planet_limit = {
+        base = 1
+    }
+    icon = building_whisperers_sanctum
+    category = government
+
+    building_sets = {
+        automation
+    }
+
+    potential = {
+        exists = planet
+    }
+    planet_modifier = {
+        pop_bonus_workforce_mult = 0.15
+    }
+    resources = {
+        category = planet_buildings
+        upkeep = {  #维持，为每月多少
+            unity = 5
+        }
+    }
+    destroy_trigger = {
+
+    }
+    ai_weight = {   #AI的建造权重
+        weight = 0
+    }
+}
 
 
 

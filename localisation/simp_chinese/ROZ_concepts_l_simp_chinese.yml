@@ -29,15 +29,31 @@
  concept_chronos_storm:"$chronos_storm$"
  concept_chronos_storm_desc:"§R这种宇宙风暴似乎不是自然形成的。究竟是何种事物引发了这世界末日般的恐怖威胁？在这恐怖的时空畸变里面没有人能够侥幸获益；光是幸存下去就已经谢天谢地了。§!"
 
+ concept_roz_abyss_faction: "§R深渊势力§!"
+ concept_roz_abyss_faction_desc: "§R深渊势力§!包括其自身和['concept_roz_abyss_vass']"
 
+ concept_roz_abyss_vass: "§P深渊仆从国§!"
+ concept_roz_abyss_vass_desc: "§P深渊仆从国§!归属于['concept_roz_abyss_faction']，但不妨碍§R深渊§!自身会吞噬他们，每个被§R深渊§!摧毁的仆从国舰队都会壮大§R深渊§!的入侵力量。\n所有命运的馈赠，都在暗中标好了价格。他们获得了超过一般文明的发展能力，却最终变为了深渊降临时的养料。即使只是轻度感染，但过程已不可逆转，拯救它们的办法唯有净化。"
 
+ concept_roz_abyss_vass_difficult: "§3难度§!"
+ concept_roz_abyss_vass_difficult_desc: "$roz_start.7777.easy$：额外AI数量为1个\n$roz_start.7777.normal$：额外AI数量为2个\n$roz_start.7777.hard$：额外AI数量为3个\n$roz_start.7777.xiling$：额外AI数量为5个"
 
+ concept_roz_abyss_vass_difficult_2: "§3根据难度§!"
+ concept_roz_abyss_vass_difficult_2_desc: "$roz_start.7777.easy$：被选定的AI被侵蚀概率为50%\n$roz_start.7777.normal$：被选定的AI被侵蚀概率为50%\n$roz_start.7777.hard$：被选定的AI被侵蚀概率为70%\n$roz_start.7777.xiling$：被选定的AI被侵蚀概率为90%"
 
-
-
-
-
-
-
-
-
+ concept_roz_abyss_challenge: "§R真实深渊§!"
+ concept_roz_abyss_challenge_desc: "['concept_roz_abyss_faction']舰队将获得['concept_roz_abyss_challenge_revive']、['concept_roz_abyss_challenge_suppress']和['concept_roz_abyss_challenge_timed']"
+ concept_roz_abyss_challenge_revive: "§_复活机制§!"
+ concept_roz_abyss_challenge_revive_desc: "根据难度，['concept_roz_abyss_faction']舰队将获得有限复活次数"
+ concept_roz_abyss_challenge_revive_2: "§_复活次数§!"
+ concept_roz_abyss_challenge_revive_2_desc: "$roz_start.7777.easy$：['concept_roz_abyss_faction']舰队复活次数为0次\n$roz_start.7777.normal$：['concept_roz_abyss_faction']舰队复活次数为1次\n$roz_start.7777.hard$：['concept_roz_abyss_faction']舰队复活次数为3次\n$roz_start.7777.xiling$：['concept_roz_abyss_faction']舰队复活次数为5次"
+ concept_roz_abyss_challenge_suppress: "§C压制机制§!"
+ concept_roz_abyss_challenge_suppress_desc: "根据难度，['concept_roz_abyss_faction']舰队在交战时将压制对方舰队的['concept_roz_abyss_challenge_suppress_2']"
+ concept_roz_abyss_challenge_suppress_2: "§l战斗能力§!"
+ concept_roz_abyss_challenge_suppress_2_desc: "§l狡猾§!"
+ concept_roz_abyss_challenge_timed: "§P任务限时§!"
+ concept_roz_abyss_challenge_timed_desc: "根据难度，['concept_roz_abyss_challenge_timed_2']内无法击败主要目标，['concept_roz_abyss_faction']届时将对本星系执行['concept_roz_abyss_challenge_timed_return_to_zero']"
+ concept_roz_abyss_challenge_timed_2: "§P指定时间§!"
+ concept_roz_abyss_challenge_timed_2_desc: "$roz_start.7777.easy$：£time£75年\n$roz_start.7777.normal$：£time£50年\n$roz_start.7777.hard$：£time£30年\n$roz_start.7777.xiling$：£time£10年"
+ concept_roz_abyss_challenge_timed_return_to_zero: "§R强制归零§!"
+ concept_roz_abyss_challenge_timed_return_to_zero_desc: "深渊，是虚空为了强制归零而产生的各种现象的集合。强制归零一旦发生，意味着这片星系中所有事物都将被§R抹杀！§!\n\n注意：该效果执行所要执行的数据量§R非常庞大§!，这意味着游戏卡顿很长一段时间，在此之后，地图上将一无所有。"

@@ -79,7 +79,7 @@ edict_roz_rosa_mystica_enhance_affairs_edicts = {
 
 ge_mozheng_edicts = {
 	length = -1
-	icon = GFX_edict_type_policy
+	icon = GFX_sgt_edit_icon_main
 	potential = {
 		#has_technology = GE_tech_reactor
 		always = yes

@@ -691,7 +691,8 @@ country_event = {
         add_resource = {
             unity = 1000
         }
-        #begin_event_chain = { event_chain = roz_wake-up_shinku_chain }
+        begin_event_chain = { event_chain = roz_wake-up_shinku_chain }
+        add_event_chain_counter = { event_chain = roz_wake-up_shinku_chain counter = roz_wake-up_shinku_chain_progress amount = 2 }
         hidden_effect = { start_situation = { type = roz_awaken_of_shinku_1_acknowledge_border } }
     }
     after = {
@@ -1891,6 +1892,7 @@ country_event = {
     }
     option = {
         name = roz_shinku_evt.502.aa
+        add_event_chain_counter = { event_chain = roz_wake-up_shinku_chain counter = roz_wake-up_shinku_chain_progress amount = 1 }
         country_event = {
             id = roz_shinku_evt.503
             days = 3
@@ -2133,12 +2135,19 @@ country_event = {
         is_ai = no
     }
     location = event_target:roz_outland_planet@root.solar_system.star
+    immediate = {
+        event_target:roz_outland_planet@root = {
+            solar_system = {
+                star = { save_global_event_target_as = roz_outland_main_black_hole@root }
+            }
+        }
+    }
     option = {
         name = roz_shinku_evt.517.aa
         custom_tooltip = roz_shinku_evt.517.ct
         enable_special_project = {
             name = roz_unholy_invasion_defproj_decoy_II
-            location = event_target:roz_outland_planet@root
+            location = event_target:roz_outland_main_black_hole@root
             owner = root
         }
         start_situation = {
@@ -2155,19 +2164,20 @@ country_event = {   #部署墨水人诱饵装置
     desc = roz_shinku_evt.520.desc
     is_triggered_only = yes
     show_sound = event_engineered_evolution
-    picture = GFX_evt
+    picture = GFX_evt_ship_in_orbit_3
     trigger = {
         is_ai = no
         NOT = {
             has_country_flag = roz_SK_4_decoyII_start
         }
     }
-    location = event_target:roz_outland_planet@root
+    location = event_target:roz_outland_main_black_hole@root
     immediate = {
         set_country_flag = roz_SK_4_decoyII_start
     }
     option = {
         name = roz_shinku_evt.520.aa
+        add_event_chain_counter = { event_chain = roz_wake-up_shinku_chain counter = roz_wake-up_shinku_chain_progress amount = 1 }
     }
 }
 
@@ -2176,14 +2186,15 @@ country_event = {   #装置部署完成
     title = roz_shinku_evt.521.title
     desc = roz_shinku_evt.521.desc
     is_triggered_only = yes
-    picture = GFX_evt_astral_rift_subnautical_2
+    picture = GFX_evt_cosmic_storms_gravity_storm
     trigger = {
         is_ai = no
     }
-    location = event_target:roz_outland_planet@root
+    show_sound = event_activating_unknown_technology
+    location = event_target:roz_outland_main_black_hole@root
     option = {
         name = roz_shinku_evt.521.aa
-        event_target:roz_outland_planet@root = {
+        event_target:roz_outland_main_black_hole@root = {
             create_ambient_object = {
                 type = roz_SK4_decoyII_beacon
                 location = this
@@ -2204,36 +2215,37 @@ country_event = {   #抵达
     desc = roz_shinku_evt.522.desc
     is_triggered_only = yes
     picture = GFX_evt_fleet_evil
+    show_sound = event_red_alert
     trigger = {
         is_ai = no
     }
-    location = event_target:roz_outland_planet@root
-    immediate = {
-        
-    }
+    location = event_target:roz_outland_main_black_hole@root
     option = {
         name = roz_shinku_evt.522.aa
         country_event = {
             id = roz_shinku_evt.523
         }
+        event_target:roz_madgod_force_country@root = {
+            establish_communications_no_message = root
+        }
     }
 }
 
-country_event = {   #混乱通讯
+country_event = {   #混乱通讯 #深渊入侵正式开始
     id = roz_shinku_evt.523
     title = roz_shinku_evt.523.title
     desc = roz_shinku_evt.523.desc
     is_triggered_only = yes
     diplomatic = yes
     picture_event_data = {
-        
+        portrait = roz_exd_red
+        room = roz_madgod_room
     }
+    show_sound = ap_rift_event_14_centipede_monster_angry
     trigger = {
         is_ai = no
     }
-    immediate = {
-        
-    }
+    immediate = { set_country_flag = roz_abyss_faction_arrival }
     option = {
         name = roz_shinku_evt.523.aa
         custom_tooltip = roz_shinku_evt.523.aa.ct
@@ -2242,7 +2254,12 @@ country_event = {   #混乱通讯
     }
     option = {
         name = roz_shinku_evt.523.bb
-        response_text = roz_shinku_evt.523.bb.rec
+        response_text = roz_shinku_evt.523.bb.res
+        begin_event_chain = { event_chain = roz_SK_madgod_invasion_main target = root }
+    }
+    after = {
+        #随机挑选幸运AI给深渊当狗
+        roz_abyss_vass_select_diff = yes
     }
 }
 
@@ -2254,15 +2271,15 @@ country_event = {
         is_ai = no
     }
     immediate = {   #比较ai态度并计数
-        roz_SK_invasion_dip_effect = {  #支持者
+        roz_unholy_invasion_dip_effect = {  #支持者
             sign = ">="
             opinion = aggressive
         }
-        roz_SK_invasion_dip_effect = {  #反对者
+        roz_unholy_invasion_dip_effect = {  #反对者
             sign = "<="
             opinion = negative
         }
-        roz_SK_invasion_dip_effect = {  #中立者
+        roz_unholy_invasion_dip_effect = {  #中立者
             sign = "="
             opinion = neutral
         }
@@ -2271,67 +2288,67 @@ country_event = {
         if = {  #各持己见，中立
             limit = {
                 NAND = {    #此条件不能全中立
-                    check_variable = { which = roz_SK_invasion_dip_negative_ai value = 0 }
-                    check_variable = { which = roz_SK_invasion_dip_aggressive_ai value = 0 }
+                    check_variable = { which = roz_unholy_invasion_dip_negative_ai value = 0 }
+                    check_variable = { which = roz_unholy_invasion_dip_aggressive_ai value = 0 }
                 }
                 OR = {
                     check_variable_arithmetic = {   #中立国家较多
-                        which = roz_SK_invasion_dip_neutral_ai
-                        subtract = roz_SK_invasion_dip_negative_ai
-                        subtract = roz_SK_invasion_dip_aggressive_ai
+                        which = roz_unholy_invasion_dip_neutral_ai
+                        subtract = roz_unholy_invasion_dip_negative_ai
+                        subtract = roz_unholy_invasion_dip_aggressive_ai
                         value > 0
                     }
                     check_variable_arithmetic = {   #支持者与反对者战平
-                        which = roz_SK_invasion_dip_aggressive_ai
-                        subtract = roz_SK_invasion_dip_negative_ai
+                        which = roz_unholy_invasion_dip_aggressive_ai
+                        subtract = roz_unholy_invasion_dip_negative_ai
                         value = 0
                     }
                 }
             }
-            set_country_flag = roz_SK_invasion_dip_compare_neutral_flag
+            set_country_flag = roz_unholy_invasion_dip_compare_neutral_flag
         }
         else_if = { #总体结果为反对
             limit = {
                 check_variable_arithmetic = {
-                    which = roz_SK_invasion_dip_negative_ai
-                    subtract = roz_SK_invasion_dip_aggressive_ai
+                    which = roz_unholy_invasion_dip_negative_ai
+                    subtract = roz_unholy_invasion_dip_aggressive_ai
                     value > 0
                 }
             }
-            set_country_flag = roz_SK_invasion_dip_compare_negative_flag
+            set_country_flag = roz_unholy_invasion_dip_compare_negative_flag
         }
         else_if = { #总体结果为支持
             limit = {
                 check_variable_arithmetic = {
-                    which = roz_SK_invasion_dip_aggressive_ai
-                    subtract = roz_SK_invasion_dip_negative_ai
+                    which = roz_unholy_invasion_dip_aggressive_ai
+                    subtract = roz_unholy_invasion_dip_negative_ai
                     value > 0
                 }
             }
-            set_country_flag = roz_SK_invasion_dip_compare_aggressive_flag
+            set_country_flag = roz_unholy_invasion_dip_compare_aggressive_flag
         }
         else_if = {  #缺省
             limit = {
                 OR = {
                     AND = { #只有中立
-                        is_variable_set = roz_SK_invasion_dip_neutral_ai
+                        is_variable_set = roz_unholy_invasion_dip_neutral_ai
                         check_variable = {
-                            which = roz_SK_invasion_dip_negative_ai
+                            which = roz_unholy_invasion_dip_negative_ai
                             value = 0
                         }
                         check_variable = {
-                            which = roz_SK_invasion_dip_aggressive_ai
+                            which = roz_unholy_invasion_dip_aggressive_ai
                             value = 0
                         }
                     }
                     NAND = {    #没一个是人
-                        is_variable_set = roz_SK_invasion_dip_neutral_ai
-                        is_variable_set = roz_SK_invasion_dip_negative_ai
-                        is_variable_set = roz_SK_invasion_dip_aggressive_ai
+                        is_variable_set = roz_unholy_invasion_dip_neutral_ai
+                        is_variable_set = roz_unholy_invasion_dip_negative_ai
+                        is_variable_set = roz_unholy_invasion_dip_aggressive_ai
                     }
                 }
             }
-            set_country_flag = roz_SK_invasion_dip_compare_none_flag
+            set_country_flag = roz_unholy_invasion_dip_compare_none_flag
         }
     }
 }
@@ -2341,39 +2358,52 @@ country_event = {
     title = roz_shinku_evt.525.title
     desc = {
         trigger = {
-            has_country_flag = roz_SK_invasion_dip_compare_aggressive_flag
+            has_country_flag = roz_unholy_invasion_dip_compare_aggressive_flag
         }
         text = roz_shinku_evt.525.desc.aggressive
     }
     desc = {
         trigger = {
-            has_country_flag = roz_SK_invasion_dip_compare_negative_flag
+            has_country_flag = roz_unholy_invasion_dip_compare_negative_flag
         }
         text = roz_shinku_evt.525.desc.negative
     }
     desc = {
         trigger = {
-            has_country_flag = roz_SK_invasion_dip_compare_neutral_flag
+            has_country_flag = roz_unholy_invasion_dip_compare_neutral_flag
         }
         text = roz_shinku_evt.525.desc.neutral
     }
     is_triggered_only = yes
-    picture = GFX_
+    picture = GFX_evt_galactic_community
+    show_sound = event_galactic_community
+    trackable = yes
     trigger = {
         is_ai = no
     }
     immediate = {
         random_playable_country = {
             limit = {
-                has_country_flag = roz_SK_invasion_dip_aggressive_ai_flag
+                has_country_flag = roz_unholy_invasion_dip_aggressive_ai_flag
             }
-            save_event_target_as = roz_SK_invasion_dip_aggressive_ai_target
+            save_event_target_as = roz_unholy_invasion_dip_aggressive_ai_target
         }
         random_playable_country = {
             limit = {
-                has_country_flag = roz_SK_invasion_dip_negative_ai_flag
+                has_country_flag = roz_unholy_invasion_dip_negative_ai_flag
             }
-            save_event_target_as = roz_SK_invasion_dip_negative_ai_target
+            save_event_target_as = roz_unholy_invasion_dip_negative_ai_target
+        }
+        every_country = {
+            limit = {
+                OR = {
+                    is_country_type = default
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                    is_ai = yes
+                }
+            }
+            establish_communications_no_message = event_target:roz_madgod_force_country@root
         }
     }
     after = {
@@ -2381,20 +2411,20 @@ country_event = {
             event_chain = roz_SK_madgod_invasion_main
         }
         ###清除临时数据
-        clear_variable = roz_SK_invasion_dip_neutral_ai
-        clear_variable = roz_SK_invasion_dip_negative_ai
-        clear_variable = roz_SK_invasion_dip_aggressive_ai
+        clear_variable = roz_unholy_invasion_dip_neutral_ai
+        clear_variable = roz_unholy_invasion_dip_negative_ai
+        clear_variable = roz_unholy_invasion_dip_aggressive_ai
         every_playable_country = {
-            remove_country_flag = roz_SK_invasion_dip_aggressive_ai_flag
-            remove_country_flag = roz_SK_invasion_dip_negative_ai_flag
-            remove_country_flag = roz_SK_invasion_dip_neutral_ai_flag
+            remove_country_flag = roz_unholy_invasion_dip_aggressive_ai_flag
+            remove_country_flag = roz_unholy_invasion_dip_negative_ai_flag
+            remove_country_flag = roz_unholy_invasion_dip_neutral_ai_flag
         }
         #启动循环事件更新数据
         country_event = {
             id = roz_shinku_evt.526
             days = 30
         }
-        set_country_flag = roz_SK_invasion_dip_refresh_active_flag
+        set_country_flag = roz_unholy_invasion_dip_refresh_active_flag
     }
 }
 
@@ -2404,28 +2434,28 @@ country_event = {
     is_triggered_only = yes
     trigger = {
         is_ai = no
-        has_country_flag = roz_SK_invasion_dip_refresh_active_flag
+        has_country_flag = roz_unholy_invasion_dip_refresh_active_flag
     }
     immediate = {
         ###清除临时数据
-        clear_variable = roz_SK_invasion_dip_neutral_ai
-        clear_variable = roz_SK_invasion_dip_negative_ai
-        clear_variable = roz_SK_invasion_dip_aggressive_ai
+        clear_variable = roz_unholy_invasion_dip_neutral_ai
+        clear_variable = roz_unholy_invasion_dip_negative_ai
+        clear_variable = roz_unholy_invasion_dip_aggressive_ai
         every_playable_country = {
-            remove_country_flag = roz_SK_invasion_dip_aggressive_ai_flag
-            remove_country_flag = roz_SK_invasion_dip_negative_ai_flag
-            remove_country_flag = roz_SK_invasion_dip_neutral_ai_flag
+            remove_country_flag = roz_unholy_invasion_dip_aggressive_ai_flag
+            remove_country_flag = roz_unholy_invasion_dip_negative_ai_flag
+            remove_country_flag = roz_unholy_invasion_dip_neutral_ai_flag
         }
         ###
-        roz_SK_invasion_dip_effect = {  #支持者
+        roz_unholy_invasion_dip_effect = {  #支持者
             sign = ">="
             opinion = aggressive
         }
-        roz_SK_invasion_dip_effect = {  #反对者
+        roz_unholy_invasion_dip_effect = {  #反对者
             sign = "<="
             opinion = negative
         }
-        roz_SK_invasion_dip_effect = {  #中立者
+        roz_unholy_invasion_dip_effect = {  #中立者
             sign = "="
             opinion = neutral
         }
@@ -2436,6 +2466,82 @@ country_event = {
         }
     }
 }
+
+###深渊阵营被击杀计数
+country_event = {
+    id = roz_shinku_evt.530
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_country_type = roz_madgod_empire
+    }
+    immediate = {
+        if = {
+            limit = {
+                FROM = { has_event_chain = roz_SK_madgod_invasion_main }
+            }
+            FROM = {
+                add_event_chain_counter = {
+                    event_chain = "roz_SK_madgod_invasion_main"
+                    counter = "roz_abyss_kills_us"
+                    amount = 1
+                }
+            }
+        }
+        every_playable_country = {
+            limit = {
+                has_event_chain = "roz_SK_madgod_invasion_main"
+                NOT = { is_same_value = FROM }
+            }
+            add_event_chain_counter = {
+                event_chain = "roz_SK_madgod_invasion_main"
+                counter = "roz_abyss_kills_others"
+                amount = 1
+            }
+        }
+    }
+}
+
+###深渊阵营击杀计数
+# Abyss Victims
+country_event = {
+    id = roz_shinku_evt.531
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_country_type = roz_madgod_empire
+    }
+
+    immediate = {
+        every_playable_country = {
+            limit = { has_event_chain = "roz_SK_madgod_invasion_main" }
+            add_event_chain_counter = {
+                event_chain = "roz_SK_madgod_invasion_main"
+                counter = "roz_abyss_victims"
+                amount = 1
+            }
+        }
+    }
+}
+
+###深渊仆从国buff
+country_event = {
+    id = roz_shinku_evt.532
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = roz_abyss_vass_country
+        fromfrom = { NOT = { has_modifier = roz_abyss_vass_combat_negative_modifier } }
+    }
+    immediate = {
+        fromfrom = {
+            add_modifier = { modifier = roz_abyss_vass_combat_negative_modifier }
+
+        }
+    }
+}
+
+
 
 #墨水人首次被击败
 country_event = {

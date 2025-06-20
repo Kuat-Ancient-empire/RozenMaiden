@@ -78,40 +78,48 @@ roz_madgod_country_initiate = {
 	}
 	create_country = {
 		name = NAME_madgod_force_country
-		type = enclave
+		type = roz_madgod_empire
 		ignore_initial_colony_error = yes
-		authority = "auth_oligarchic"
+		authority = auth_hive_mind
 		civics = {
-			civic = civic_ancient_preservers
+			civic = civic_ancient_memories_of_control
 		}
-		origin = "origin_default"
+		origin = origin_fallen_empire_hive
 		species = last_created_species
 		flag = {
 			icon = {
-				category = "enclaves"
-				file = "enclaves_flag_curator.dds"
+				category = "roz_special"
+				file = "roz_madgod.dds"
 			}
 			background = {
 				category = "backgrounds"
 				file = "vertical.dds"
 			}
 			colors = {
-				"white"
+				"red"
 				"red"
 				"null"
 				"null"
 			}
 		}
 		ethos = {
-			ethic = ethic_fanatic_materialist
-			ethic = ethic_pacifist
+			ethic = ethic_gestalt_consciousness
 		}
 	}
 	last_created_country = {
 		set_country_flag = roz_madgod_force_country_flag
-		set_graphical_culture = necroid_01
+		set_graphical_culture = extra_dimensional_02
 		save_global_event_target_as = roz_madgod_force_country@root
 		set_hostile = root
+		# every_country = {
+		# 	limit = {
+		# 		NOR = {
+		# 			has_country_flag = roz_abyss_vass_country
+		# 			is_hostile = prev
+		# 		}
+		# 	}
+		# 	set_hostile = prev
+		# }
 		establish_communications_no_message = root
 	}
 }
@@ -212,7 +220,7 @@ roz_madgod_fleet_jtcl_create_decoy = {
 
 ###感染体入侵
 ###比较ai态度，计算数量
-roz_SK_invasion_dip_effect = {
+roz_unholy_invasion_dip_effect = {
 	while = {
 		limit = {
 			any_playable_country = {
@@ -221,26 +229,26 @@ roz_SK_invasion_dip_effect = {
 					level $sign$ $opinion$
 				}
 				NOT = {
-					has_country_flag = roz_SK_invasion_dip_$opinion$_ai_flag
+					has_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
 				}
 			}
 		}
 		random_playable_country = {
 			limit = {
 				NOT = {
-					has_country_flag = roz_SK_invasion_dip_$opinion$_ai_flag
+					has_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
 				}
 			}
-			set_country_flag = roz_SK_invasion_dip_$opinion$_ai_flag
+			set_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
 		}
 		change_variable = {
-			which = roz_SK_invasion_dip_$opinion$_ai
+			which = roz_unholy_invasion_dip_$opinion$_ai
 			value = 1
 		}
 	}
 }
 
-# roz_SK_invasion_dip_aggressive_effect = {
+# roz_unholy_invasion_dip_aggressive_effect = {
 # 	while = {
 # 		#支持者
 # 		limit = {
@@ -250,26 +258,26 @@ roz_SK_invasion_dip_effect = {
 # 					level >= good
 # 				}
 # 				NOT = {
-# 					has_country_flag = roz_SK_invasion_dip_aggressive_ai_flag
+# 					has_country_flag = roz_unholy_invasion_dip_aggressive_ai_flag
 # 				}
 # 			}
 # 		}
 # 		random_playable_country = {
 # 			limit = {
 # 				NOT = {
-# 					has_country_flag = roz_SK_invasion_dip_aggressive_ai_flag
+# 					has_country_flag = roz_unholy_invasion_dip_aggressive_ai_flag
 # 				}
 # 			}
-# 			set_country_flag = roz_SK_invasion_dip_aggressive_ai_flag
+# 			set_country_flag = roz_unholy_invasion_dip_aggressive_ai_flag
 # 		}
 # 		change_variable = {
-# 			which = roz_SK_invasion_dip_aggressive_ai
+# 			which = roz_unholy_invasion_dip_aggressive_ai
 # 			value = 1
 # 		}
 # 	}
 # }
 
-# roz_SK_invasion_dip_negative_effect = {
+# roz_unholy_invasion_dip_negative_effect = {
 # 	while = {
 # 		#反对者
 # 		limit = {
@@ -279,26 +287,26 @@ roz_SK_invasion_dip_effect = {
 # 					level <= poor
 # 				}
 # 				NOT = {
-# 					has_country_flag = roz_SK_invasion_dip_negative_ai_flag
+# 					has_country_flag = roz_unholy_invasion_dip_negative_ai_flag
 # 				}
 # 			}
 # 		}
 # 		random_playable_country = {
 # 			limit = {
 # 				NOT = {
-# 					has_country_flag = roz_SK_invasion_dip_negative_ai_flag
+# 					has_country_flag = roz_unholy_invasion_dip_negative_ai_flag
 # 				}
 # 			}
-# 			set_country_flag = roz_SK_invasion_dip_negative_ai_flag
+# 			set_country_flag = roz_unholy_invasion_dip_negative_ai_flag
 # 		}
 # 		change_variable = {
-# 			which = roz_SK_invasion_dip_negative_ai
+# 			which = roz_unholy_invasion_dip_negative_ai
 # 			value = 1
 # 		}
 # 	}
 # }
 
-# roz_SK_invasion_dip_neutral_effect = {
+# roz_unholy_invasion_dip_neutral_effect = {
 # 	while = {
 # 		#中立者
 # 		limit = {
@@ -308,20 +316,20 @@ roz_SK_invasion_dip_effect = {
 # 					level = neutral
 # 				}
 # 				NOT = {
-# 					has_country_flag = roz_SK_invasion_dip_neutral_ai_flag
+# 					has_country_flag = roz_unholy_invasion_dip_neutral_ai_flag
 # 				}
 # 			}
 # 		}
 # 		random_playable_country = {
 # 			limit = {
 # 				NOT = {
-# 					has_country_flag = roz_SK_invasion_dip_neutral_ai_flag
+# 					has_country_flag = roz_unholy_invasion_dip_neutral_ai_flag
 # 				}
 # 			}
-# 			set_country_flag = roz_SK_invasion_dip_neutral_ai_flag
+# 			set_country_flag = roz_unholy_invasion_dip_neutral_ai_flag
 # 		}
 # 		change_variable = {
-# 			which = roz_SK_invasion_dip_neutral_ai
+# 			which = roz_unholy_invasion_dip_neutral_ai
 # 			value = 1
 # 		}
 # 	}
@@ -1294,7 +1302,439 @@ roz_shoujonotsukurikata_project_common_effect = {
 		country_event = { id = roz_shinku_evt.130 }
 	}
 	else = { country_event = { id = roz_shinku_evt.140 } }
-
-
 }
+
+roz_unholy_invision_difficult_modifier_effect = {
+	optimize_memory
+	if = {
+		limit = { check_variable = { which = roz_unholy_invasion_difficulty value = $value$ } }
+		add_modifier = { modifier = roz_unholy_invasion_difficult_modifier mult = $dif_factor$ }
+	}
+}
+
+roz_unholy_invision_difficult_modifier_add_effect = {
+	optimize_memory
+	roz_unholy_invision_difficult_modifier_effect = { value = 1 dif_factor = @roz_UID_easy }
+	roz_unholy_invision_difficult_modifier_effect = { value = 2 dif_factor = @roz_UID_normal }
+	roz_unholy_invision_difficult_modifier_effect = { value = 3 dif_factor = @roz_UID_hard }
+	roz_unholy_invision_difficult_modifier_effect = { value = 4 dif_factor = @roz_UID_xiling }
+}
+
+roz_abyss_vass_select = {
+	optimize_memory
+	if = {
+		limit = { check_variable = { which = roz_unholy_invasion_difficulty value = $value$ } }
+		while = {
+			count = $dif_factor$
+			random_playable_country = {
+				limit = {
+					is_ai = yes
+					is_country_type = default
+					roz_is_regular_authority = yes
+					roz_is_MOD_country = no
+					NOR = {
+						is_roz_abyss_vass_extra_country_global_target = yes
+						has_country_flag = roz_abyss_vass_country
+						is_country_type = roz_madgod_empire
+					}
+				}
+				set_country_flag = roz_abyss_vass_country
+				set_subject_of = {
+					#who = none
+					who = event_target:roz_madgod_force_country@root
+				}
+				#加buff
+				roz_unholy_invision_difficult_modifier_effect = { value = $value$ dif_factor = $dif_factor$ }
+				every_country = { #齐宣王
+					limit = {
+						NOT = { is_at_war_with = prev }
+						is_default_or_fallen = yes
+						NOR = {
+							has_country_flag = roz_abyss_vass_country
+							is_country_type = roz_madgod_empire
+						}
+					}
+					save_event_target_as = roz_abyss_vass_war_target
+					if = { #对所有宗主国宣战
+						limit = { is_subject = no }
+						prev = {
+							declare_war = {
+								target = event_target:roz_abyss_vass_war_target
+								name = { key = roz_abyss_war }
+								attacker_war_goal = wg_roz_abyss_war
+							}
+							add_opinion_modifier = {
+								who = event_target:roz_abyss_vass_war_target
+								modifier = opinion_roz_abyss_vass_hostile
+							}
+						}
+					}
+					else = { join_war = overlord } #所有附属国加入战争
+					if = {
+						limit = { NOT = { is_same_empire = root } }
+						create_point_of_interest = {
+							id = roz_abyss_vass_country
+							name = roz_abyss_vass_country_name
+							desc = roz_abyss_vass_country_desc
+							event_chain = roz_SK_madgod_invasion_main
+							location = prev.capital_scope
+						}
+					}
+					add_opinion_modifier = {
+						who = prev
+						modifier = opinion_roz_abyss_vass
+					}
+					set_hostile = prev
+					set_faction_hostility = { target = prev set_hostile = yes set_neutral = no set_friendly = no }
+				}
+			}
+		}
+	}
+}
+
+roz_abyss_vass_select_diff = {
+	optimize_memory
+	roz_abyss_vass_select = { value = 1 dif_factor = @roz_UID_easy }
+	roz_abyss_vass_select = { value = 2 dif_factor = @roz_UID_normal }
+	roz_abyss_vass_select = { value = 3 dif_factor = @roz_UID_hard }
+	roz_abyss_vass_select = { value = 4 dif_factor = @roz_UID_xiling }
+}
+
+roz_abyss_vass_create = {
+	optimize_memory
+	random_system = {
+		limit = {
+			NOR = {
+				exists = space_owner
+				space_owner = { is_regular_empire = yes }
+				is_fe_cluster = yes
+				has_owner = yes
+				star = {
+					or = {
+						is_planet_class = pc_black_hole
+						is_planet_class = pc_pulsar
+						is_planet_class = pc_neutron_star
+					}
+				}
+				any_neighbor_system = {
+					OR = {
+						exists = space_owner
+						space_owner = { is_regular_empire = yes }
+						has_owner = yes
+						is_fe_cluster = yes
+						any_neighbor_system = {
+							OR = {
+								exists = space_owner
+								space_owner = { is_regular_empire = yes }
+								has_owner = yes
+								is_fe_cluster = yes
+							}
+						}
+					}
+				}
+			}
+		}
+		random_system_planet = {
+			limit = {
+				OR = {
+					is_star = no
+					is_asteroid = no
+					is_primary_star = no
+					is_moon = no
+					is_colony = no
+				}
+				NOR = {
+					is_planet_class = pc_asteroid
+					is_planet_class = pc_ice_asteroid
+				}
+			}
+			change_pc = pc_gaia
+			set_planet_size = 22
+			create_species = {
+				class = random
+				name = random
+				portrait = random
+				traits = {
+					trait = random_presapient_trait
+					trait = random_traits
+					trait = random_traits
+					trait = random_traits
+					trait = random_traits
+					trait = random_traits
+				}
+			}
+			create_country = {
+				type = default
+				name_list = random
+				name = random
+				species = last_created_species
+				ignore_initial_colony_error = yes
+				origin = origin_default
+				ethos = random
+				authority = random
+				civics = { civic = random civic = random }
+				flag = random
+				effect = {
+					create_leader = {
+						class = random_ruler
+						species = owner_main_species
+						name = random
+						skill = 5
+					}
+					copy_techs_from = { target = root }
+					add_resource = {
+						minerals = 10000
+						energy = 10000
+						food = 3000
+						consumer_goods = 1500
+						alloys = 1500
+						unity = 2500
+						influence = 500
+					}
+					#set_graphical_culture = mammalian_01
+					save_global_event_target_as = roz_abyss_vass_extra_$index$_target@root
+					#set_country_flag = roz_abyss_vass_country
+				}
+			}
+			set_owner = last_created_country
+			set_capital = yes
+			set_name = random
+			add_building = building_capital
+			add_building = building_roz_abyss_altar_unknow
+			remove_building = building_colony_shelter
+			while = {
+				count = 30
+				create_pop_group = {
+					species = last_created_species
+				}
+			}
+			while = { count = 8 add_random_non_blocker_deposit = yes }
+			set_variable = {
+				which = energy_districts
+				value = 3
+			}
+			set_variable = {
+				which = mining_districts
+				value = 3
+			}
+			set_variable = {
+				which = farming_districts
+				value = 3
+			}
+			add_district_and_planet_size_if_needed_effect_amount = {
+				amount = energy_districts
+				district = district_generator
+			}
+			add_district_and_planet_size_if_needed_effect_amount = {
+				amount = mining_districts
+				district = district_mining
+			}
+			add_district_and_planet_size_if_needed_effect_amount = {
+				amount = farming_districts
+				district = district_farming
+			}
+			clear_variable = energy_districts
+			clear_variable = mining_districts
+			clear_variable = farming_districts
+
+			add_zone = {
+				district = mining_districts
+				zone = zone_minerals
+				zone_slot = 1
+			}
+			add_zone = {
+				district = energy_districts
+				zone = zone_energy
+				zone_slot = 1
+			}
+			add_zone = {
+				district = farming_districts
+				zone = zone_food
+				zone_slot = 1
+			}
+			last_created_country = {
+				establish_communications_no_message = root
+				set_name = random
+			}
+			solar_system = {
+				create_starbase = {
+					owner = last_created_country
+					size = starbase_starport
+					module = shipyard
+					module = solar_panel_network
+					effect = {
+						set_starbase_building = {
+							slot = 1
+							building = naval_logistics_office
+						}
+					}
+				}
+				create_fleet = {
+					effect = {
+						set_owner = last_created_country
+						create_ship = {
+							name = random
+							random_existing_design = science
+						}
+						set_fleet_stance = evasive
+						set_location = last_created_country.capital_scope.star
+					}
+				}
+				last_created_country = {
+					create_leader = {
+						name = random
+						set_age = 25
+						class = scientist
+						skill = 1
+						traits = { trait = random_trait trait = random_trait }
+						species = owner_main_species
+						effect = { last_created_fleet = { assign_leader = prev } }
+					}
+				}
+				create_fleet = {
+					effect = {
+						set_owner = last_created_country
+						create_ship = {
+							name = random
+							random_existing_design = constructor
+						}
+						set_fleet_stance = evasive
+						set_location = last_created_country.capital_scope.star
+					}
+				}
+				create_fleet = {
+					effect = {
+						set_owner = last_created_country
+						while = {
+							count = 3
+							create_ship = {
+								name = random
+								random_existing_design = corvette
+							}
+						}
+						set_fleet_stance = passive
+						set_location = last_created_country.capital_scope.star
+					}
+				}
+				last_created_country = {
+					create_leader = {
+						name = random
+						set_age = 21
+						class = commander
+						skill = 1
+						traits = { trait = random_trait trait = random_trait }
+						species = owner_main_species
+						effect = { last_created_fleet = { assign_leader = prev } }
+					}
+				}
+				create_fleet = {
+					name = "NAME_sgt"
+					settings = {
+						spawn_debris = no
+						is_boss = no
+					}
+					effect = {
+						set_owner = ROOT
+						create_ship = {
+							name = NAME_sgt
+							design = NAME_sgt
+							graphical_culture = owner
+							prefix = no
+						}
+						set_location = {
+							target = PREV.star
+							distance = 45
+							angle = random
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+roz_abyss_vass_create_in_diff = {
+	optimize_memory
+	if = {
+		limit = {
+			NOT = { has_country_flag = roz_abyss_vass_had_created }
+			has_country_flag = roz_abyss_vass_had_create_available
+		}
+		if = {
+			limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 1 } } }
+			roz_abyss_vass_create = { index = 1 }
+		}
+		if = {
+			limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 2 } } }
+			roz_abyss_vass_create = { index = 2 }
+		}
+		if = {
+			limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 3 } } }
+			roz_abyss_vass_create = { index = 3 }
+		}
+		if = {
+			limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 4 } } }
+			roz_abyss_vass_create = { index = 4 }
+			roz_abyss_vass_create = { index = 5 }
+		}
+		set_country_flag = roz_abyss_vass_had_created
+	}
+}
+
+roz_abyss_vass_extra_awaken = {
+	optimize_memory
+	event_target:roz_abyss_vass_extra_$index$_target@root = {
+		set_country_flag = roz_abyss_vass_country
+		set_subject_of = {
+			who = none
+		}
+		#加buff
+		roz_unholy_invision_difficult_modifier_effect = { value = $value$ dif_factor = $dif_factor$ }
+		every_country = { #齐宣王
+			limit = {
+				NOT = { is_at_war_with = prev }
+				is_default_or_fallen = yes
+				NOR = {
+					has_country_flag = roz_abyss_vass_country
+					is_country_type = roz_madgod_empire
+				}
+			}
+			save_event_target_as = roz_abyss_vass_war_target
+			if = { #对所有宗主国宣战
+				limit = { is_subject = no }
+				prev = {
+					declare_war = {
+						target = prev
+						name = { key = roz_abyss_war }
+						attacker_war_goal = wg_roz_abyss_war
+					}
+					add_opinion_modifier = {
+						who = event_target:roz_abyss_vass_war_target
+						modifier = opinion_roz_abyss_vass_hostile
+					}
+				}
+			}
+			else = { join_war = overlord } #所有附属国加入战争
+			if = {
+				limit = { NOT = { is_same_empire = root } }
+				create_point_of_interest = {
+					id = roz_abyss_vass_country
+					name = roz_abyss_vass_country_name
+					desc = roz_abyss_vass_country_desc
+					event_chain = roz_SK_madgod_invasion_main
+					location = prev.capital_scope
+				}
+			}
+			add_opinion_modifier = {
+				who = prev
+				modifier = opinion_roz_abyss_vass
+			}
+			set_hostile = prev
+			set_faction_hostility = { target = prev set_hostile = yes set_neutral = no set_friendly = no }
+
+		}
+}
+
+
+
 

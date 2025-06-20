@@ -1,0 +1,61 @@
+##############
+# RED
+##############
+
+entity = {
+	name = "roz_portrait_extradimensional_red_entity"
+	pdxmesh = "roz_portrait_extradimensional_red_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"    animation_blend_time = 0 chance = 4.0 looping = no next_state = idle
+		event = { time = 0 node = "spine_2" particle = "extradimensional_portrait_particle"	keep_particle = yes trigger_once = no }
+		start_event = { trigger_once = yes sound = { soundeffect = "incoming_ex_message_state_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "incoming_ex_message_state_03" } }
+	}
+	state = { name = "idle"       animation = "idle2"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle
+		event = { time = 0 node = "spine_2" particle = "extradimensional_portrait_particle"	keep_particle = yes trigger_once = no }
+		event = { trigger_once = yes sound = { soundeffect = "incoming_ex_message_state_02" } }
+	}
+	scale = 0.85
+	
+	attach = { root = "portrait_extradimensional_01_background_01_entity" }
+	attach = { root = "portrait_extradimensional_01_background_02_entity" }
+	attach = { root = "portrait_extradimensional_01_background_03_entity" }
+	attach = { root = "portrait_extradimensional_01_background_04_entity" }
+	
+	attach = { root = "portrait_extradimensional_01_background_details_entity" }
+}
+
+##############
+# orange
+##############
+
+entity = {
+	name = "roz_portrait_extradimensional_orange_entity"
+	pdxmesh = "roz_portrait_extradimensional_orange_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"    animation_blend_time = 0 chance = 4.0 looping = no next_state = idle
+		event = { time = 0 node = "spine_2" particle = "extradimensional_portrait_particle"	keep_particle = yes trigger_once = no }
+		start_event = { trigger_once = yes sound = { soundeffect = "incoming_ex_message_state_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "incoming_ex_message_state_03" } }
+	}
+	state = { name = "idle"       animation = "idle2"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle
+		event = { time = 0 node = "spine_2" particle = "extradimensional_portrait_particle"	keep_particle = yes trigger_once = no }
+		event = { trigger_once = yes sound = { soundeffect = "incoming_ex_message_state_02" } }
+	}
+	scale = 0.85
+
+	attach = { root = "portrait_extradimensional_01_background_01_entity" }
+	attach = { root = "portrait_extradimensional_01_background_02_entity" }
+	attach = { root = "portrait_extradimensional_01_background_03_entity" }
+	attach = { root = "portrait_extradimensional_01_background_04_entity" }
+
+	attach = { root = "portrait_extradimensional_01_background_details_entity" }
+}
+
+
+
+
+
+

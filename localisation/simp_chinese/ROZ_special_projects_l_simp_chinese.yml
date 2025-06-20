@@ -162,8 +162,8 @@ roz_junn_rosa_enhance_DESC: "有了上一个项目的经验，我们能进一步
 
   ################事件链：真红的觉醒###############
 roz_wake-up_shinku_chain: "真红的觉醒"
-roz_wake-up_shinku_chain_DESC: "我们成功同蔷薇少女第五人偶真红的原契约者，人偶师罗真的继承人樱田纯建立通讯，并与之达成了重新制作真红的蔷薇圣母，从而唤醒真红的合作协议。该项目与水银灯女士对此的热忱也脱不开关系。虽然口头上对自己的这位姐妹不留口德，但水银灯对真红的关心早就在[Root.GetRulerTitle]和一众[Root.GetName]高层官员中成了公开的秘密……言归正传，根据樱田纯提供的情报和建议，[Root.GetName]的许多人员资源调配已经提上日程。我们的技术人员对于这项涉及“因果”的宏大项目激动异常，认为这将是继N之领域初步开发后，通向帝国下一阶段超凡飞升的征程起点。前路未卜，但毫无疑问的是，如此野心勃勃的项目，在推进过程中一定会带来许多意想不到的机遇和挑战。"
-
+roz_wake-up_shinku_chain_DESC: "我们成功同蔷薇少女第五人偶真红的原契约者，现蔷薇少女们的监护人，人偶师罗真的继承者樱田纯建立通讯，并与之达成了重新制作真红的蔷薇圣母，从而唤醒真红的合作协议。该项目与水银灯女士对此的热忱也脱不开关系。虽然口头上对自己的这位姐妹不留口德，但水银灯对真红的关心早就在[Root.GetRulerTitle]和一众[Root.GetName]高层官员中成了公开的秘密……言归正传，根据樱田纯提供的情报和建议，[Root.GetName]的许多人员资源调配已经提上日程。我们的技术人员对于这项涉及“因果”的宏大项目激动异常，认为这将是继N之领域初步开发后，通向帝国下一阶段超凡飞升的征程起点。前路未卜，但毫无疑问的是，如此野心勃勃的项目，在推进过程中一定会带来许多意想不到的机遇和挑战。"
+roz_wake-up_shinku_chain_progress: "当前阶段"
   #一
 roz_border_of_technical_proj: "科学边界"
 roz_border_of_technical_proj_DESC: "重新制作真红的蔷薇圣母，需要我们拥有“重写因果”的科技水平——人偶师樱田纯是如此描述的。尽管就如何才能达到这一境界，乃至是否存在这种可能性等等问题上，科学界仍然争论不休，有些老技术认为这已经触及了科学的边界，但主流观点仍然坚信此等难题也终会臣服于帝国的无限进步。庞大的人力物力已经筹措到位，新的突破口仿佛随时会展现在我们眼前。[Root.GetRulerTitle]，请下命令吧！"
@@ -173,7 +173,7 @@ roz_unholy_invasion_defproj_1_DESC: "蔷薇圣母的解析项目正如火如荼�
   #卷土重来：二方案-诱饵计划
 roz_unholy_invasion_defproj_1_decoy: "诱饵计划"
 roz_unholy_invasion_defproj_1_decoy_DESC: "为了诱饵计划的顺利实施，工程团队首先要搭建起赝品圣母的存储和超频设施，科研团队则需要在诱饵激活后，时刻照看诱饵能量信号的正常功率。最重要的，我们的舰队要确保部署到位。国家三大部门伺候它一个敌人，这福分还能小得了嘛。\n\n§R注意：请确保N之大门星系部署有足够实力的舰队！§!"
-  #卷土重来：战斗残骸#国家暴力机器
+  #卷土重来：战斗残骸#
 roz_unholy_invasion_defproj_2: "卷土重来"
 roz_unholy_invasion_defproj_2_DESC: "蔷薇圣母的解析项目正如火如荼地进行时，我们突然收到了来自人偶师樱田纯的紧急联络。疑似深渊的未知威胁发现并围困了樱田纯同N之领域的连接通道，旋即联络中断。继承了罗真衣钵的樱田纯，其存在对于蔷薇少女有特殊意义，并且对于我们正在开展的解析蔷薇圣母等一系列科研项目同样不可替代。不论具体采用哪些手段，我们必须营救这位帮助我们不少的人偶师，或许也能借此窥探到某些深渊的情报和秘密也说不定。"
 
@@ -200,14 +200,20 @@ roz_unholy_invasion_defproj_decoy_II_DESC: "在解明了第二个希灵结晶体
 
 
   #roz__chain: "深渊感染体入侵：情况统计"
-  #roz__chain_desc: "深渊入侵不仅席卷了我们，它们的爪牙也伸向了其他国家，我们获取的支持取决于我们抗击的成果。\n\n当前共有个深渊傀儡国\n[root.roz_SK_invasion_dip_aggressive_ai]个支持阵营国家\n[root.roz_SK_invasion_dip_negative_ai]个反对阵营国家\n另有[root.roz_SK_invasion_dip_neutral_ai]个国家保持中立。"
+  #roz__chain_desc: "深渊入侵不仅席卷了我们，它们的爪牙也伸向了其他国家，我们获取的支持取决于我们抗击的成果。\n\n当前共有个深渊仆从国\n[root.roz_unholy_invasion_dip_aggressive_ai]个支持阵营国家\n[root.roz_unholy_invasion_dip_negative_ai]个反对阵营国家\n另有[root.roz_unholy_invasion_dip_neutral_ai]个国家保持中立。"
+roz_SK_madgod_invasion_main: "深渊感染体入侵：情况统计"
+roz_SK_madgod_invasion_main_DESC: "深渊入侵不仅席卷了我们，它们的爪牙也伸向了其他国家，我们获取的支持取决于我们抗击的成果。"
+#\n\n当前共有[root]个深渊仆从国\n[root.roz_unholy_invasion_dip_aggressive_ai]个支持阵营国家\n[root.roz_unholy_invasion_dip_negative_ai]个反对阵营国家\n另有[root.roz_unholy_invasion_dip_neutral_ai]个国家保持中立。
+roz_abyss_vass_country: "§R深渊仆从国§!"
+roz_SKI_dip_aggressive_ai: "§G支持我们的国家§!"
+roz_SKI_dip_neutral_ai: "§Y中立国家§!"
+roz_SKI_dip_negative_ai: "§R厌恶我们的国家§!"
+roz_abyss_kills_us: "§G被我方湮灭的深渊实体§!"
+roz_abyss_kills_others: "§G被其他国家湮灭的深渊实体§!"
+roz_abyss_victims: "§R被深渊吞噬的船只§!"
 
-
-
-
-
-
-
+roz_abyss_vass_country_name: "§R深渊仆从国§!"
+roz_abyss_vass_country_desc: "['concept_roz_abyss_vass']"
 
 
 

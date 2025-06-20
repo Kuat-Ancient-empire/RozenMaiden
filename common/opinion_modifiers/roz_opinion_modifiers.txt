@@ -59,3 +59,17 @@ opinion_roz_call_the_abyss_hostile = {
 		base = 5
 	}
 }
+
+opinion_roz_abyss_vass = {
+	opinion = {
+		base = -5000
+	}
+	unique = no
+}
+
+opinion_roz_abyss_vass_hostile = {
+	opinion = {
+		base = -5000
+	}
+	unique = no
+}

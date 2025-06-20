@@ -1,0 +1,189 @@
+objectTypes = {
+	#####
+	# RED (standard)
+	#####
+	pdxmesh = {
+		name = "roz_portrait_extradimensional_red_mesh"
+		file = "gfx/models/portraits/extradimensional/roz_extradimensional_01_portrait.mesh"
+		animation = { id = "idle" type = "roz_extradimensional_01_portrait_happy_animation" }
+		animation = { id = "idle2" type = "roz_extradimensional_01_portrait_happy_2_animation" }
+		scale = 1.0
+		meshsettings = {
+			name = "bodyShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+
+		meshsettings = {
+			name = "bodyHeartShape"
+			shader = "PdxMeshPortraitAnimateUV"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+
+		meshsettings = {
+			name = "bodySmokeShape"
+			shader = "PdxMeshPortraitAnimateUV"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+
+		meshsettings = {
+			name = "bodyTorsoShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+
+		meshsettings = {
+			name = "eye_Shape1"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+
+		meshsettings = {
+			name = "eye_Shape2"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+
+		meshsettings = {
+			name = "eye_Shape3"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+
+		meshsettings = {
+			name = "hairShape"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+
+		meshsettings = {
+			name = "headShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+
+		meshsettings = {
+			name = "left_armShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+
+		meshsettings = {
+			name = "right_armShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+
+		meshsettings = {
+			name = "left_legShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+
+		meshsettings = {
+			name = "right_legShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+
+		meshsettings = {
+			name = "waist_crystalsShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_red.dds"
+		}
+	}
+
+	#####
+	# orange (standard)
+	#####
+	pdxmesh = {
+		name = "roz_portrait_extradimensional_orange_mesh"
+		file = "gfx/models/portraits/extradimensional/roz_extradimensional_01_portrait.mesh"
+		animation = { id = "idle" type = "roz_extradimensional_01_portrait_happy_animation" }
+		animation = { id = "idle2" type = "roz_extradimensional_01_portrait_happy_2_animation" }
+		scale = 1.0
+		meshsettings = {
+			name = "bodyShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+
+		meshsettings = {
+			name = "bodyHeartShape"
+			shader = "PdxMeshPortraitAnimateUV"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+
+		meshsettings = {
+			name = "bodySmokeShape"
+			shader = "PdxMeshPortraitAnimateUV"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+
+		meshsettings = {
+			name = "bodyTorsoShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+
+		meshsettings = {
+			name = "eye_Shape1"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+
+		meshsettings = {
+			name = "eye_Shape2"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+
+		meshsettings = {
+			name = "eye_Shape3"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+
+		meshsettings = {
+			name = "hairShape"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+
+		meshsettings = {
+			name = "headShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+
+		meshsettings = {
+			name = "left_armShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+
+		meshsettings = {
+			name = "right_armShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+
+		meshsettings = {
+			name = "left_legShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+
+		meshsettings = {
+			name = "right_legShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+
+		meshsettings = {
+			name = "waist_crystalsShape"
+			shader = "PdxMeshPortrait"
+			texture_diffuse = "roz_extradimensional_orange.dds"
+		}
+	}
+}

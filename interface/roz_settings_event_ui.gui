@@ -368,7 +368,7 @@ guiTypes = {
             effect = "roz_settings_group_button"
         }
         instantTextBoxType = {
-            name = "roz_settings_lunar_crisis_diff_option"
+            name = "roz_settings_unholy_invasion_diff_option"
             font = "cg_16b"
             text_color_code = "H"
             text = "roz_start.7777.crisis_diff"
@@ -381,7 +381,7 @@ guiTypes = {
             alwaysTransparent = yes
         }
         effectButtonType = {
-            name = "roz_settings_lunar_crisis_easy_option"
+            name = "roz_settings_unholy_invasion_easy_option"
             quadTextureSprite = "GFX_button_animated_116"
             position = { x = @button_x_4_1 y = @button_y_line5 }
 			clicksound = queuing_building
@@ -390,7 +390,7 @@ guiTypes = {
             effect = "roz_settings_crisis_easy"
         }
         effectButtonType = {
-            name = "roz_settings_lunar_crisis_normal_option"
+            name = "roz_settings_unholy_invasion_normal_option"
             quadTextureSprite = "GFX_button_animated_116"
             position = { x = @button_x_4_2 y = @button_y_line5 }
             clicksound = queuing_building
@@ -399,7 +399,7 @@ guiTypes = {
             effect = "roz_settings_crisis_normal"
         }
         effectButtonType = {
-            name = "roz_settings_lunar_crisis_hard_option"
+            name = "roz_settings_unholy_invasion_hard_option"
             quadTextureSprite = "GFX_button_animated_116"
             position = { x = @button_x_4_3 y = @button_y_line5 }
             clicksound = queuing_building
@@ -408,7 +408,7 @@ guiTypes = {
             effect = "roz_settings_crisis_hard"
         }
         effectButtonType = {
-            name = "roz_settings_lunar_crisis_lunatic_option"
+            name = "roz_settings_unholy_invasion_lunatic_option"
             quadTextureSprite = "GFX_button_animated_116"
             position = { x = @button_x_4_4 y = @button_y_line5 }
             clicksound = queuing_building
@@ -416,24 +416,43 @@ guiTypes = {
             text = "roz_start.7777.xiling"
             effect = "roz_settings_crisis_xiling"
         }
-        # ??调整
+        # 额外AI调整
         effectButtonType = {
-            name = "roz_settings_crisis_phantasm_on"
+            name = "roz_settings_abyss_vass_had_create_available"
             quadTextureSprite = "GFX_button_animated_265_34"
             position = { x = @button_x_left y = @button_y_line6 }
             clicksound = select_click
             font = "cg_16b"
-            text = "roz_start.7777.placeholder1"
-            effect = "roz_settings_crisis_phantasm_on"
+            text = "roz_start.7777.abyss_vass_create_available"
+            effect = "roz_settings_abyss_vass_had_create_available_effect"
         }
         effectButtonType = {
-            name = "roz_settings_crisis_phantasm_off"
+            name = "roz_settings_abyss_vass_had_create_disable"
+            quadTextureSprite = "GFX_button_animated_265_34"
+            position = { x = @button_x_left y = @button_y_line6 }
+            clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.abyss_vass_create_disable"
+            effect = "roz_settings_abyss_vass_had_create_disable_effect"
+        }
+        ##机制
+        effectButtonType = {
+            name = "roz_settings_abyss_challenge_available"
             quadTextureSprite = "GFX_button_animated_265_34"
             position = { x = @button_x_right y = @button_y_line6 }
             clicksound = ui_deselect
             font = "cg_16b"
-            text = "roz_start.7777.placeholder2"
-            effect = "roz_settings_crisis_phantasm_off"
+            text = "roz_start.7777.abyss_challenge_available"
+            effect = "roz_settings_abyss_challenge_available_effect"
+        }
+        effectButtonType = {
+            name = "roz_settings_abyss_challenge_disable"
+            quadTextureSprite = "GFX_button_animated_265_34"
+            position = { x = @button_x_right y = @button_y_line6 }
+            clicksound = ui_deselect
+            font = "cg_16b"
+            text = "roz_start.7777.abyss_challenge_disable"
+            effect = "roz_settings_abyss_challenge_disable_effect"
         }
         # 实用功能页
         # 448+2*d+53=610, d=109

@@ -293,9 +293,10 @@ opinion_roz_test_postive: "不知道为什么，这帮异种喜欢我们"
 triggered_opinion_roz_test_postive: "不知道为什么，这帮异种喜欢我们"
 opinion_roz_date_dip_dissatisfied: "不满"
 
-opinion_roz_call_the_abyss_hostile: "招致深渊灾祸"
-
-#######Starbase Buildings
+opinion_roz_call_the_abyss_hostile: "招致§R深渊灾祸§!"
+ opinion_roz_abyss_vass: "§R深渊势力§!"
+ opinion_roz_abyss_vass_hostile: "§R侵蚀对象§!"
+ #######Starbase Buildings
 sm_Roz_starbase_placeholder: "§g旗舰限制器§!"
 Roz_starbase_placeholder_desc_modifier: "§g特殊占位符，用来限制座驾舰船的建造§!"
 
@@ -422,4 +423,16 @@ GetRozAdjustModeAddDiffText: "当前调整模式为：§H加算§!\n当前调整
 GetRozAdjustModeMultDiffText: "当前调整模式为：§H乘算§!\n当前调整倍率为：[ge_buff_magnification_value]%"
 ##end
 
+#########war goals
+ wg_roz_abyss_war: "§R深渊入侵§!"
+ wg_roz_abyss_war_desc: "§R深渊入侵§!"
+ cb_roz_abyss_war: "§R深渊侵蚀§!"
+ cb_roz_abyss_war_desc: "§R深渊侵蚀§!"
+ war_goal_wg_roz_abyss_war: "§B涤净深渊§!"
 
+ wg_end_threat_abyss: "§G抵抗深渊入侵§!"
+ wg_end_threat_abyss_desc: "§G抵抗深渊入侵§!"
+ cb_stop_abyss: "§G抵抗深渊侵蚀§!"
+ cb_stop_abyss_desc: "§G抵抗深渊侵蚀§!"
+
+ roz_abyss_war: "§R深渊入侵§!"

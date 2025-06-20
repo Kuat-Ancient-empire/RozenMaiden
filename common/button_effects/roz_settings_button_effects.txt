@@ -542,11 +542,13 @@ roz_settings_kirakishou_eventchain_late_effect = {
     }
 }
 
-# 天灾难度调整
+# 小天灾难度调整
 roz_settings_crisis_info = {
     potential = { always = yes }
     allow = { always = yes }
-    effect = { custom_tooltip = roz_start.7777.crisis.tooltip }
+    effect = {
+        #custom_tooltip = roz_start.7777.crisis.tooltip
+    }
 }
 roz_settings_crisis_easy = {
     potential = { always = yes }
@@ -554,19 +556,19 @@ roz_settings_crisis_easy = {
         custom_tooltip = {
             fail_text = roz_start.7777.is_this_diff
             event_target:global_event_country = {
-                check_variable = { which = roz_lunar_capital_crisis_difficulty value != 1 }
+                check_variable = { which = roz_unholy_invasion_difficulty value != 1 }
             }
         }
         custom_tooltip = {
-            fail_text = roz_start.7777.crisis.tooltip
-            from = { has_origin = origin_roz_story_roz }
+            fail_text = roz_start.7777.abyss_has_come
+            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
         }
     }
     effect = {
         custom_tooltip = roz_start.7777.easy.tooltip
         hidden_effect = {
             event_target:global_event_country = {
-                set_variable = { which = roz_lunar_capital_crisis_difficulty value = 1 }
+                set_variable = { which = roz_unholy_invasion_difficulty value = 1 }
             }
         }
     }
@@ -577,19 +579,19 @@ roz_settings_crisis_normal = {
         custom_tooltip = {
             fail_text = roz_start.7777.is_this_diff
             event_target:global_event_country = {
-                check_variable = { which = roz_lunar_capital_crisis_difficulty value != 2 }
+                check_variable = { which = roz_unholy_invasion_difficulty value != 2 }
             }
         }
         custom_tooltip = {
-            fail_text = roz_start.7777.crisis.tooltip
-            from = { has_origin = origin_roz_story_roz }
+            fail_text = roz_start.7777.abyss_has_come
+            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
         }
     }
     effect = {
         custom_tooltip = roz_start.7777.normal.tooltip
         hidden_effect = {
             event_target:global_event_country = {
-                set_variable = { which = roz_lunar_capital_crisis_difficulty value = 2 }
+                set_variable = { which = roz_unholy_invasion_difficulty value = 2 }
             }
         }
     }
@@ -600,19 +602,19 @@ roz_settings_crisis_hard = {
         custom_tooltip = {
             fail_text = roz_start.7777.is_this_diff
             event_target:global_event_country = {
-                check_variable = { which = roz_lunar_capital_crisis_difficulty value != 3 }
+                check_variable = { which = roz_unholy_invasion_difficulty value != 3 }
             }
         }
         custom_tooltip = {
-            fail_text = roz_start.7777.crisis.tooltip
-            from = { has_origin = origin_roz_story_roz }
+            fail_text = roz_start.7777.abyss_has_come
+            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
         }
     }
     effect = {
         custom_tooltip = roz_start.7777.hard.tooltip
         hidden_effect = {
             event_target:global_event_country = {
-                set_variable = { which = roz_lunar_capital_crisis_difficulty value = 3 }
+                set_variable = { which = roz_unholy_invasion_difficulty value = 3 }
             }
         }
     }
@@ -623,61 +625,75 @@ roz_settings_crisis_xiling = {
         custom_tooltip = {
             fail_text = roz_start.7777.is_this_diff
             event_target:global_event_country = {
-                check_variable = { which = roz_lunar_capital_crisis_difficulty value != 4 }
+                check_variable = { which = roz_unholy_invasion_difficulty value != 4 }
             }
         }
         custom_tooltip = {
-            fail_text = roz_start.7777.crisis.tooltip
-            from = { has_origin = origin_roz_story_roz }
+            fail_text = roz_start.7777.abyss_has_come
+            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
         }
     }
     effect = {
-        custom_tooltip = roz_start.7777.lunatic.tooltip
+        custom_tooltip = roz_start.7777.xiling.tooltip
         hidden_effect = {
             event_target:global_event_country = {
-                set_variable = { which = roz_lunar_capital_crisis_difficulty value = 4 }
+                set_variable = { which = roz_unholy_invasion_difficulty value = 4 }
             }
         }
     }
 }
-roz_settings_crisis_phantasm_on = {
-    potential = { always = yes }
-    allow = {
-        from = {
-            custom_tooltip = {
-                fail_text = roz_start.7777.crisis.tooltip
-                has_origin = origin_roz_story_roz
-            }
-            hidden_trigger = {
-                NOT = { has_global_flag = roz_lunar_capital_crisis_phantasm }
-            }
-        }
+#额外AI
+roz_settings_abyss_vass_had_create_available_effect = {
+    potential = {
+        from = { has_country_flag = roz_abyss_vass_had_create_available }
     }
+    allow = { has_country_flag = roz_abyss_vass_can_create_timed }
     effect = {
-        custom_tooltip = roz_start.7777.phantasm.tooltip
-        from = { set_global_flag = roz_lunar_capital_crisis_phantasm }
+        custom_tooltip = roz_settings_abyss_vass_had_create_available_effect.tooltip
+        from = { remove_country_flag = roz_abyss_vass_had_create_available }
     }
 }
-roz_settings_crisis_phantasm_off = {
-    potential = { always = yes }
-    allow = {
-        from = {
-            custom_tooltip = {
-                fail_text = roz_start.7777.crisis.tooltip
-                has_origin = origin_roz_story_roz
-            }
-            hidden_trigger = {
-                has_global_flag = roz_lunar_capital_crisis_phantasm
-            }
-        }
+roz_settings_abyss_vass_had_create_disable_effect = {
+    potential = {
+        NOT = { from = { has_country_flag = roz_abyss_vass_had_create_available } }
     }
+    allow = { has_country_flag = roz_abyss_vass_can_create_timed }
     effect = {
-        custom_tooltip = roz_start.7777.phantasm.tooltip
+        custom_tooltip = roz_settings_abyss_vass_had_create_disable_effect.tooltip
         hidden_effect = {
-            from = { remove_global_flag = roz_lunar_capital_crisis_phantasm }
+            from = { set_country_flag = roz_abyss_vass_had_create_available }
         }
     }
 }
+
+#机制
+roz_settings_abyss_challenge_available_effect = {
+    potential = {
+        from = { has_country_flag = roz_abyss_challenge_available }
+    }
+    allow = { NOT = { from = { has_country_flag = roz_abyss_faction_arrival } } }
+    effect = {
+        custom_tooltip = roz_settings_abyss_challenge_available_effect.tooltip
+        hidden_effect = {
+            from = { remove_country_flag = roz_abyss_challenge_available }
+        }
+    }
+}
+
+roz_settings_abyss_challenge_disable_effect = {
+    potential = {
+        NOT = { from = { has_country_flag = roz_abyss_challenge_available } }
+    }
+    allow = { NOT = { from = { has_country_flag = roz_abyss_faction_arrival } } }
+    effect = {
+        custom_tooltip = roz_settings_abyss_challenge_disable_effect.tooltip
+        hidden_effect = {
+            from = { set_country_flag = roz_abyss_challenge_available }
+        }
+    }
+}
+
+
 
 #王座系列战力调整
 roz_settings_im1 = {

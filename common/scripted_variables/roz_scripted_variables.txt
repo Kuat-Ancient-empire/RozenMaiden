@@ -1,2 +1,8 @@
 @roz_fe_jobs = 1000
 @ge_roz_mod = 1
+
+@roz_UID_easy = 0
+@roz_UID_normal = 1
+@roz_UID_hard = 3
+@roz_UID_xiling = 5
+

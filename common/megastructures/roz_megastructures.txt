@@ -82,7 +82,7 @@ roz_mega_wanxiangtianyin_undeploy = {
                 create_ship = {
                     name = juggernaut
                     graphical_culture = owner
-                    design = random_existing_design
+                    #design = random_existing_design
                     random_existing_design = roz_juggernaut_wanxiang
                 }
             }

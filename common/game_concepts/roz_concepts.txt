@@ -26,7 +26,26 @@ concept_chronos_storm = {
     icon = gfx/interface/icons/planet_modifiers/pm_chronos_storm.dds
 }
 
+concept_roz_abyss_faction = { }
 
+concept_roz_abyss_vass = { }
 
+concept_roz_abyss_vass_difficult = { }
 
+concept_roz_abyss_vass_difficult_2 = { }
 
+concept_roz_abyss_challenge = { }
+
+concept_roz_abyss_challenge_revive = { }
+
+concept_roz_abyss_challenge_revive_2 = { }
+
+concept_roz_abyss_challenge_suppress = { }
+
+concept_roz_abyss_challenge_suppress_2 = { }
+
+concept_roz_abyss_challenge_timed = { }
+
+concept_roz_abyss_challenge_timed_2 = { }
+
+concept_roz_abyss_challenge_timed_return_to_zero = { }

@@ -1,0 +1,9 @@
+	animation = {
+		name = "roz_extradimensional_01_portrait_happy_animation"
+		file = "roz_extradimensional_01_portrait_happy.anim"
+	}
+	
+	animation = {
+		name = "roz_extradimensional_01_portrait_happy_2_animation"
+		file = "roz_extradimensional_01_portrait_happy_2.anim"
+	}

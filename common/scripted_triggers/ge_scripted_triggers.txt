@@ -249,7 +249,44 @@ is_real_roz_YS_planet = {
 	is_planet_class = pc_roz_YS_planet
 }
 
+is_roz_abyss_vass_extra_country_global_target = {
+	optimize_memory
+	OR = {
+		is_same_value = event_target:roz_abyss_vass_extra_1_target@root
+		is_same_value = event_target:roz_abyss_vass_extra_2_target@root
+		is_same_value = event_target:roz_abyss_vass_extra_3_target@root
+		is_same_value = event_target:roz_abyss_vass_extra_4_target@root
+		is_same_value = event_target:roz_abyss_vass_extra_5_target@root
+	}
+}
 
+roz_is_MOD_country = {
+	optimize_memory
+	OR = {
+		has_authority = auth_warshipgirls
+		has_authority = auth_shenhai
+		has_authority = auth_starshipgirls
+		is_nirvana_empire = yes
+		is_nirvana_empire_dragon = yes
+		is_nirvana_empire_council = yes
+		is_cg_empire = yes
+		is_futa_country = yes
+		is_KANSEN_species = yes
+	}
+}
+
+roz_is_regular_authority = {
+	optimize_memory
+	OR = {
+		has_authority = auth_democratic
+		has_authority = auth_oligarchic
+		has_authority = auth_dictatorial
+		has_authority = auth_imperial
+		has_authority = auth_hive_mind
+		has_authority = auth_machine_intelligence
+		has_authority = auth_corporate
+	}
+}
 
 
 

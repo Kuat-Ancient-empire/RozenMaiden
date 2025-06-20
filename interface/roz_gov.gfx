@@ -8,5 +8,9 @@ spriteTypes = {
 		name = "GFX_sgt_edit_icon_2"
 		texturefile = "gfx/interface/icons/sgt_edit_icon_2.dds"
 	}
+	spriteType = {
+		name = "GFX_sgt_edit_icon_main"
+		texturefile = "gfx/interface/icons/sgt_edit_icon_2.dds"
+	}
 	
 }

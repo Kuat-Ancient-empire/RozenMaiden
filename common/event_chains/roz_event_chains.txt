@@ -24,9 +24,25 @@ roz_shoujonotsukurikata_chain = {
 	}
 }
 
+roz_wake-up_shinku_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_roz_wake-up_shinku_chain.dds"
+	picture = GFX_evt_roz_shoujonotsukurikata_end
+	counter = {
+		roz_wake-up_shinku_chain_progress = {
+			max = 4
+		}
+	}
+}
+
 roz_SK_madgod_invasion_main = {
-	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
-	picture = GFX_
+	icon = "gfx/interface/icons/situation_log/situation_log_roz_SK_madgod_invasion_main.dds"
+	picture = GFX_evt_roz_unholy_invasion_main
+	counter = {
+		roz_abyss_vass_country = {}
+		roz_abyss_kills_us = {}
+		roz_abyss_kills_others = {}
+		roz_abyss_victims = {}
+	}
 }
 
 #TODO
@@ -40,8 +56,5 @@ roz_SK_madgod_invasion_main = {
 # 	picture = GFX
 # }
 
-# roz_wake-up_shinku_chain = {
-# 	icon = ""
-# 	picture = GFX
-# }
+
 

@@ -79,21 +79,12 @@ on_entering_battle = {
 	events = {
 		ge_skills.2		#tf
 		ge_skills.21		#tf, too
-
 		ge_skills.3		#bwg
 		ge_skills.5		#az
 		ge_skills.6		#nf
 		ge_skills.15		#创生之湖
-
-		#ge_modifier_evt.100
-
 		ge_skills.200		#雪华绮晶，广域精神榨取
-
-		#ge_event.2038	#时停debuff flag
-		#ge_event.2048	#时停debuff
-
 		ge_affection.15 #水银灯接战-敌方战力计算
-
 	}
 }
 
@@ -260,6 +251,8 @@ on_ship_destroyed_victim = {
 	events = {
 		ge_sgt_flagship_events.4
 		#ge_skills.40
+		roz_shinku_evt.530
+		roz_shinku_evt.531
 	}
 }
 
