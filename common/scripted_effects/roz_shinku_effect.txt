@@ -1340,54 +1340,55 @@ roz_abyss_vass_select = {
 				}
 				set_country_flag = roz_abyss_vass_country
 				set_subject_of = {
-					#who = none
 					who = event_target:roz_madgod_force_country@root
 				}
 				#加buff
 				roz_unholy_invision_difficult_modifier_effect = { value = $value$ dif_factor = $dif_factor$ }
-				every_country = { #齐宣王
-					limit = {
-						NOT = { is_at_war_with = prev }
-						is_default_or_fallen = yes
-						NOR = {
-							has_country_flag = roz_abyss_vass_country
-							is_country_type = roz_madgod_empire
-						}
+				root = {
+					create_point_of_interest = {
+						id = roz_abyss_vass_country
+						name = roz_abyss_vass_country_name
+						desc = roz_abyss_vass_country_desc
+						event_chain = roz_SK_madgod_invasion_main
+						location = prev.capital_scope
 					}
-					save_event_target_as = roz_abyss_vass_war_target
-					if = { #对所有宗主国宣战
-						limit = { is_subject = no }
-						prev = {
-							declare_war = {
-								target = event_target:roz_abyss_vass_war_target
-								name = { key = roz_abyss_war }
-								attacker_war_goal = wg_roz_abyss_war
-							}
-							add_opinion_modifier = {
-								who = event_target:roz_abyss_vass_war_target
-								modifier = opinion_roz_abyss_vass_hostile
-							}
-						}
-					}
-					else = { join_war = overlord } #所有附属国加入战争
-					if = {
-						limit = { NOT = { is_same_empire = root } }
-						create_point_of_interest = {
-							id = roz_abyss_vass_country
-							name = roz_abyss_vass_country_name
-							desc = roz_abyss_vass_country_desc
-							event_chain = roz_SK_madgod_invasion_main
-							location = prev.capital_scope
-						}
-					}
-					add_opinion_modifier = {
-						who = prev
-						modifier = opinion_roz_abyss_vass
-					}
-					set_hostile = prev
-					set_faction_hostility = { target = prev set_hostile = yes set_neutral = no set_friendly = no }
 				}
 			}
+		}
+	}
+}
+
+roz_abyss_vass_after_select = {
+	optimize_memory
+	every_country = { #齐宣王
+		limit = {
+			NOT = { is_at_war_with = prev }
+			is_default_or_fallen = yes
+			NOR = {
+				has_country_flag = roz_abyss_vass_country
+				is_country_type = roz_madgod_empire
+			}
+		}
+		if = { #所有宗主国对深渊宣战
+			limit = { is_subject = no }
+			declare_war = {
+				target = event_target:roz_madgod_force_country@root
+				name = { key = roz_abyss_war }
+				attacker_war_goal = wg_roz_abyss_war
+			}
+		}
+		else = { join_war = overlord } #所有附属国加入战争
+		every_country = {
+			limit = {
+				has_country_flag = roz_abyss_vass_country
+			}
+			add_opinion_modifier = {
+				who = prev
+				modifier = opinion_roz_abyss_vass
+			}
+			set_hostile = prev
+			set_faction_hostility = { target = prev set_hostile = yes set_neutral = no set_friendly = no }
+			join_war = overlord
 		}
 	}
 }
@@ -1398,6 +1399,7 @@ roz_abyss_vass_select_diff = {
 	roz_abyss_vass_select = { value = 2 dif_factor = @roz_UID_normal }
 	roz_abyss_vass_select = { value = 3 dif_factor = @roz_UID_hard }
 	roz_abyss_vass_select = { value = 4 dif_factor = @roz_UID_xiling }
+	roz_abyss_vass_after_select = yes
 }
 
 roz_abyss_vass_create = {
@@ -1686,11 +1688,12 @@ roz_abyss_vass_extra_awaken = {
 	event_target:roz_abyss_vass_extra_$index$_target@root = {
 		set_country_flag = roz_abyss_vass_country
 		set_subject_of = {
-			who = none
+			who = event_target:roz_madgod_force_country@root
 		}
 		#加buff
 		roz_unholy_invision_difficult_modifier_effect = { value = $value$ dif_factor = $dif_factor$ }
-		every_country = { #齐宣王
+		join_war = overlord
+		every_country = {
 			limit = {
 				NOT = { is_at_war_with = prev }
 				is_default_or_fallen = yes
@@ -1699,40 +1702,10 @@ roz_abyss_vass_extra_awaken = {
 					is_country_type = roz_madgod_empire
 				}
 			}
-			save_event_target_as = roz_abyss_vass_war_target
-			if = { #对所有宗主国宣战
-				limit = { is_subject = no }
-				prev = {
-					declare_war = {
-						target = prev
-						name = { key = roz_abyss_war }
-						attacker_war_goal = wg_roz_abyss_war
-					}
-					add_opinion_modifier = {
-						who = event_target:roz_abyss_vass_war_target
-						modifier = opinion_roz_abyss_vass_hostile
-					}
-				}
-			}
-			else = { join_war = overlord } #所有附属国加入战争
-			if = {
-				limit = { NOT = { is_same_empire = root } }
-				create_point_of_interest = {
-					id = roz_abyss_vass_country
-					name = roz_abyss_vass_country_name
-					desc = roz_abyss_vass_country_desc
-					event_chain = roz_SK_madgod_invasion_main
-					location = prev.capital_scope
-				}
-			}
-			add_opinion_modifier = {
-				who = prev
-				modifier = opinion_roz_abyss_vass
-			}
 			set_hostile = prev
 			set_faction_hostility = { target = prev set_hostile = yes set_neutral = no set_friendly = no }
-
 		}
+	}
 }
 
 

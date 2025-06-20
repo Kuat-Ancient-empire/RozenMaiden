@@ -2260,6 +2260,7 @@ country_event = {   #混乱通讯 #深渊入侵正式开始
     after = {
         #随机挑选幸运AI给深渊当狗
         roz_abyss_vass_select_diff = yes
+        #额外AI给深渊当狗
     }
 }
 

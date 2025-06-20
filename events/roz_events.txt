@@ -44,12 +44,12 @@ country_event = {
 
 		country_event = { #特别内容，Warhammer 40K
 			id = ge_sites.410
-			days = 5400
-			random = 10800
+			days = 180
+			random = 12800
 		}
 		country_event = {
 			id = ge_sgt_flagship_events.99
-			days = 1080
+			days = 60
 			random = 10800
 		}
 		# set_timed_country_flag = {	#计时，防止刷不出异常点 # 不计
