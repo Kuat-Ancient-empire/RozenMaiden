@@ -1,0 +1,124 @@
+objectTypes = {
+    #######  cruiser frame  #######
+    pdxmesh = {
+        name = "roz_crisis_01_cruiser_frame_mesh"
+        file = "gfx/models/ships/necroid_01/necroid_01_cruiser_frame.mesh"
+        animation = { id = "idle"			type = "necroid_01_cruiser_frame_idle_animation" }
+        animation = { id = "death"			type = "necroid_01_cruiser_frame_death1_animation" }
+        animation = { id = "death2"			type = "necroid_01_cruiser_frame_death2_animation" }
+        animation = { id = "death3"			type = "necroid_01_cruiser_frame_death3_animation" }
+        scale = 1.0
+        meshsettings = {
+            shader = "PdxMeshExtraDimensionalShip"
+
+            #Mipmap tweaking
+            #texture_diffuse = "1x1.dds"
+        }
+    }
+
+    #######  cruiser bow sections  #######
+    pdxmesh = {
+        name = "roz_crisis_01_cruiser_bow_M1S2_mesh"
+        file = "gfx/models/ships/necroid_01/necroid_01_cruiser_bow_M1_S2.mesh"
+        scale = 1.0
+        meshsettings = {
+            shader = "PdxMeshExtraDimensionalShip"
+            texture_diffuse = roz_ship_mask_red.dds
+        }
+    }
+
+    #######  cruiser mid sections  #######
+    pdxmesh = {
+        name = "roz_crisis_01_cruiser_mid_S2HB_mesh"
+        file = "gfx/models/ships/necroid_01/necroid_01_cruiser_mid_S2HB.mesh"
+        scale = 1.0
+        meshsettings = {
+            shader = "PdxMeshExtraDimensionalShip"
+            texture_diffuse = roz_ship_mask_red.dds
+        }
+    }
+
+    #######  cruiser stern sections  #######
+    pdxmesh = {
+        name = "roz_crisis_01_cruiser_stern_S2_mesh"
+        file = "gfx/models/ships/necroid_01/necroid_01_cruiser_stern_S2.mesh"
+        scale = 1.0
+        meshsettings = {
+            shader = "PdxMeshExtraDimensionalShip"
+            texture_diffuse = roz_ship_mask_red.dds
+        }
+    }
+
+    ###Stinger-battleship
+    pdxmesh = {
+        name = "roz_crisis_02_stinger_stage_3_mesh"
+        file = "gfx/models/ships/biogenesis_02/biogenesis_02_stinger_stage_3.mesh"
+
+        animation = { id = "idle"			type = "biogenesis_02_stinger_stage_3_idle_animation" }
+
+        meshsettings = {
+            name = "g_biogenesis_02_stinger_stage_3Shape"
+            index = 0
+            texture_diffuse = "roz_ship_mask_red.dds"
+            texture_normal = "biogenesis_02_stinger_normal.dds"
+            texture_specular = "biogenesis_02_stinger_specular.dds"
+            shader = "PdxMeshExtraDimensionalShip"
+        }
+
+    }
+    ###Titan
+    pdxmesh = {
+        name = "roz_crisis_02_titan_frame_mesh"
+        file = "gfx/models/ships/titans/biogenesis_02/biogenesis_02_titan_frame.mesh"
+
+        animation = { id = "idle"						type = "biogenesis_02_titan_frame_idle_animation" }
+        animation = { id = "death"						type = "biogenesis_02_titan_frame_death_animation" }
+    }
+
+    pdxmesh = {
+        name = "roz_crisis_02_titan_bow_mesh"
+        file = "gfx/models/ships/titans/biogenesis_02/biogenesis_02_titan_bow.mesh"
+
+        meshsettings = {
+            name = "g_biogenesis_02_titan_bowShape"
+            index = 0
+            texture_diffuse = "roz_ship_mask_red.dds"
+            texture_normal = "biogenesis_02_titan_normal.dds"
+            texture_specular = "biogenesis_02_titan_specular.dds"
+            shader = "PdxMeshExtraDimensionalShip"
+        }
+    }
+
+    pdxmesh = {
+        name = "roz_crisis_02_titan_mid_mesh"
+        file = "gfx/models/ships/titans/biogenesis_02/biogenesis_02_titan_mid.mesh"
+
+        meshsettings = {
+            name = "g_biogenesis_02_titan_midShape"
+            index = 0
+            texture_diffuse = "roz_ship_mask_red.dds"
+            texture_normal = "biogenesis_02_titan_normal.dds"
+            texture_specular = "biogenesis_02_titan_specular.dds"
+            shader = "PdxMeshExtraDimensionalShip"
+        }
+    }
+    pdxmesh = {
+        name = "roz_crisis_02_titan_stern_mesh"
+        file = "gfx/models/ships/titans/biogenesis_02/biogenesis_02_titan_stern.mesh"
+
+        meshsettings = {
+            name = "g_biogenesis_02_titan_sternShape"
+            index = 0
+            texture_diffuse = "roz_ship_mask_red.dds"
+            texture_normal = "biogenesis_02_titan_normal.dds"
+            texture_specular = "biogenesis_02_titan_specular.dds"
+            shader = "PdxMeshExtraDimensionalShip"
+        }
+    }
+
+
+
+
+
+
+}

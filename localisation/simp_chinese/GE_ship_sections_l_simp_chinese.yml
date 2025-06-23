@@ -122,8 +122,17 @@ gev_platform_DESC:0 "防御平台将保持静止并向射程内的任何敌人�
  ROZ_ITQ_design:"§H日轮§!"
  Ge_Vampirilis_Ortaam_normal_design:"§Y复刻王座§!"
 
-
-
+#############crisis
+###abyss
+ roz_crisis_ship_battlecruiser: "深渊使徒γ型"
+ roz_crisis_ship_battlecruiser_DESC: "深渊使徒γ型"
+ roz_crisis_ship_battlecruiser_section: "扭曲之体"
+ roz_crisis_ship_titan: "深渊使徒ζ型"
+ roz_crisis_ship_titan_DESC: "深渊使徒ζ型"
+ roz_crisis_ship_titan_section: "不详之体"
+ roz_crisis_ship_probe: "深渊信使α型"
+ roz_crisis_ship_probe_DESC: "深渊信使α型"
+ roz_crisis_ship_probe_section: "愉悦之体"
 
 
 ###字体颜色代码

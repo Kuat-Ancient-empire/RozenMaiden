@@ -228,15 +228,17 @@ roz_unholy_invasion_dip_effect = {
 					who = root
 					level $sign$ $opinion$
 				}
-				NOT = {
+				NOR = {
 					has_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
+					has_country_flag = roz_abyss_vass_country
 				}
 			}
 		}
 		random_playable_country = {
 			limit = {
-				NOT = {
+				NOR = {
 					has_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
+					has_country_flag = roz_abyss_vass_country
 				}
 			}
 			set_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
@@ -1399,6 +1401,7 @@ roz_abyss_vass_select_diff = {
 	roz_abyss_vass_select = { value = 2 dif_factor = @roz_UID_normal }
 	roz_abyss_vass_select = { value = 3 dif_factor = @roz_UID_hard }
 	roz_abyss_vass_select = { value = 4 dif_factor = @roz_UID_xiling }
+
 	roz_abyss_vass_after_select = yes
 }
 
@@ -1691,7 +1694,7 @@ roz_abyss_vass_extra_awaken = {
 			who = event_target:roz_madgod_force_country@root
 		}
 		#加buff
-		roz_unholy_invision_difficult_modifier_effect = { value = $value$ dif_factor = $dif_factor$ }
+		roz_unholy_invision_difficult_modifier_add_effect = yes
 		join_war = overlord
 		every_country = {
 			limit = {
@@ -1708,6 +1711,16 @@ roz_abyss_vass_extra_awaken = {
 	}
 }
 
-
+roz_abyss_vass_extra_awaken_in_diff = {
+	optimize_memory
+	if = {
+		limit = { has_country_flag = roz_abyss_vass_had_created }
+		roz_abyss_vass_extra_awaken = { index = 1 }
+		roz_abyss_vass_extra_awaken = { index = 2 }
+		roz_abyss_vass_extra_awaken = { index = 3 }
+		roz_abyss_vass_extra_awaken = { index = 4 }
+		roz_abyss_vass_extra_awaken = { index = 5 }
+	}
+}
 
 

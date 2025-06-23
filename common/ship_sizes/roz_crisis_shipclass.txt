@@ -1,0 +1,90 @@
+
+roz_crisis_ship_battlecruiser = {
+    #entity = roz_crisis_02_stinger_stage_3_entity
+    entity = mauler_stage_1_entity
+    max_speed = 135
+    acceleration = 0.4
+    rotation_speed = 0.4
+    collision_radius = @battleship_collision_radius
+    modifier = {
+        ship_evasion_add = 25
+        ship_armor_add = 4000
+        ship_shield_add = 8000
+        ship_weapon_range_mult = 0.15
+    }
+    max_hitpoints = 15000
+    size_multiplier = 16
+    fleet_slot_size = 16
+    section_slots = { "mid" = { locator = "part1" } }
+    num_target_locators = 0
+    is_space_station = no
+    icon = ship_size_military_16
+
+    class = shipclass_military
+    is_designable = no
+
+    components_add_to_cost = no
+    resources = {
+        category = ships
+    }
+}
+
+roz_crisis_ship_titan = {
+    #entity = roz_crisis_02_titan_entity
+    entity = mauler_stage_1_entity
+    max_speed = 100
+    acceleration = 0.2
+    rotation_speed = 0.15
+    collision_radius = @titan_collision_radius
+    modifier = {
+        ship_evasion_add = 15
+        ship_armor_add = 10000
+        ship_shield_add = 20000
+        ship_weapon_range_mult = 0.25
+    }
+    max_hitpoints = 50000
+    size_multiplier = 16
+    fleet_slot_size = 16
+    section_slots = { "mid" = { locator = "part1" } }
+    num_target_locators = 0
+    is_space_station = no
+    icon = ship_size_military_16
+
+    class = shipclass_military
+    is_designable = no
+
+    components_add_to_cost = no
+    resources = {
+        category = ships
+    }
+}
+
+roz_crisis_ship_probe = {
+    #entity = roz_crisis_02_titan_entity
+    entity = mauler_stage_1_entity
+    max_speed = 200
+    acceleration = 1
+    rotation_speed = 1
+    collision_radius = @titan_collision_radius
+    modifier = {
+        ship_evasion_add = 15
+        ship_armor_add = 3000
+        ship_shield_add = 4500
+        ship_weapon_range_mult = 0.25
+    }
+    max_hitpoints = 7500
+    size_multiplier = 16
+    fleet_slot_size = 16
+    section_slots = { "mid" = { locator = "part1" } }
+    num_target_locators = 0
+    is_space_station = no
+    icon = ship_size_military_16
+
+    class = shipclass_military
+    is_designable = no
+
+    components_add_to_cost = no
+    resources = {
+        category = ships
+    }
+}

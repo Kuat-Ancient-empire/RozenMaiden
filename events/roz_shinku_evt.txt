@@ -2261,6 +2261,12 @@ country_event = {   #混乱通讯 #深渊入侵正式开始
         #随机挑选幸运AI给深渊当狗
         roz_abyss_vass_select_diff = yes
         #额外AI给深渊当狗
+        roz_abyss_vass_extra_awaken_in_diff = yes
+        #
+        every_country = {
+            limit = { has_country_flag = roz_abyss_vass_country }
+            country_event = { id = roz_shinku_evt.532 }
+        }
     }
 }
 
@@ -2416,6 +2422,7 @@ country_event = {
         clear_variable = roz_unholy_invasion_dip_negative_ai
         clear_variable = roz_unholy_invasion_dip_aggressive_ai
         every_playable_country = {
+            limit = { NOT = { has_country_flag = roz_abyss_vass_country } }
             remove_country_flag = roz_unholy_invasion_dip_aggressive_ai_flag
             remove_country_flag = roz_unholy_invasion_dip_negative_ai_flag
             remove_country_flag = roz_unholy_invasion_dip_neutral_ai_flag
@@ -2443,6 +2450,7 @@ country_event = {
         clear_variable = roz_unholy_invasion_dip_negative_ai
         clear_variable = roz_unholy_invasion_dip_aggressive_ai
         every_playable_country = {
+            limit = { NOT = { has_country_flag = roz_abyss_vass_country } }
             remove_country_flag = roz_unholy_invasion_dip_aggressive_ai_flag
             remove_country_flag = roz_unholy_invasion_dip_negative_ai_flag
             remove_country_flag = roz_unholy_invasion_dip_neutral_ai_flag
@@ -2537,7 +2545,6 @@ country_event = {
     immediate = {
         fromfrom = {
             add_modifier = { modifier = roz_abyss_vass_combat_negative_modifier }
-
         }
     }
 }

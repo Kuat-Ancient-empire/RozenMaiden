@@ -5,7 +5,7 @@ entity = {
 		emissive_recolor_crunch = 0
 	}
 	default_state = "idle"
-	scale = 6
+	scale = 5
 	state = {
 		name = "idle"
 		animation = "idle"
