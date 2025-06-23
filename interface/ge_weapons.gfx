@@ -723,6 +723,64 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/ship_parts/roz_phase_cloak.PNG"
 	}
 
+	#starsector
+	spriteType = {
+		name = "GFX_ship_part_roz_abyss_vortex"
+		textureFile = gfx/interface/icons/ship_parts/roz_abyss_vortex.dds
+		animation = {
+			#animationmaskfile = "gfx/interface/icons/ship_parts/roz_abyss_vortex_anim.dds"
+			animationtexturefile = "gfx/interface/icons/ship_parts/roz_abyss_vortex_anim.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.15				# in seconds
+			animationdelay = 6			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_roz_abyss_churning_locus_titan"
+		textureFile = gfx/interface/icons/ship_parts/roz_abyss_churning_locus_titan.dds
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_roz_abyss_rift_cascade_xl"
+		textureFile = gfx/interface/icons/ship_parts/roz_abyss_rift_cascade_xl.dds
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_roz_abyss_vortex_flat"
+		textureFile = gfx/interface/icons/ship_parts/roz_abyss_vortex_flat.dds
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_roz_abyss_maelstrom_flat"
+		textureFile = gfx/interface/icons/ship_parts/roz_abyss_maelstrom_flat.dds
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_roz_abyss_eye_flat"
+		textureFile = gfx/interface/icons/ship_parts/roz_abyss_eye_flat.dds
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_roz_abyss_rift_cascade_L"
+		textureFile = gfx/interface/icons/ship_parts/roz_abyss_rift_cascade_L.dds
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_roz_reality_disruptor"
+		textureFile = gfx/interface/icons/ship_parts/roz_reality_disruptor.dds
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_roz_abyss_eye_flat"
+		textureFile = gfx/interface/icons/ship_parts/roz_abyssal_glare.dds
+	}
+
 }
 
 

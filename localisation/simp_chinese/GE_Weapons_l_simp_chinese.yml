@@ -149,11 +149,11 @@ Kirakishou_Blast: "心灵震爆"
 Kirakishou_Blast_DESC: "在空间极大的宇宙环境中用蔷薇藤蔓来战斗显然十分不聪明，于是雪华绮晶便想到了这个简单粗暴但又不失华丽优雅的攻击方式。"
 
 
-
-
-
-
-
+###abyss crisis
+ ROZ_ABYSS_SET: "§R深渊§!"
+ ROZ_ABYSS_SET_DESC: "§R深渊§!"
+ roz_abyss_rift_cascade_xl: "§_裂隙洪流发射极§!"
+ roz_abyss_rift_cascade_xl_DESC: "请勿好奇。§R了解深渊部件这个行为本身也会招致污染§!"
 
 ##字体颜色代码
 ##§W W白色

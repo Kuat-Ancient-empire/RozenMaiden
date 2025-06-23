@@ -403,7 +403,7 @@ entity = {
 entity = {
     name = "roz_crisis_02_titan_entity"
     pdxmesh = "roz_crisis_02_titan_frame_mesh"
-    scale = 2
+    scale = 1.75
 
     default_state = "idle"
     state = { name = "idle" animation = "idle"
@@ -420,11 +420,10 @@ entity = {
         event = { time = 11.5 node = "part3" particle = "biogenesis_02_5_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "amb_titan_ship_death" } }
     }
 ·
-    locator = { name = ball position = { 0 20 160 } }
-    attach = { "part1" 		 		= "roz_crisis_02_titan_bow_entity" }
-    attach = { "part2" 		 		= "roz_crisis_02_titan_mid_entity" }
-    attach = { "part3" 		 		= "roz_crisis_02_titan_stern_entity" }
-    attach = { "ball"               = "roz_light_ball_large_entity" }
+    #attach = { "part1" 		 		= "roz_crisis_02_titan_bow_entity" }
+    #attach = { "part2" 		 		= "roz_crisis_02_titan_mid_entity" }
+    #attach = { "part3" 		 		= "roz_crisis_02_titan_stern_entity" }
+    attach = { "root"               = "roz_light_ball_large_entity" }
 
     game_data = {
         size = 50
@@ -435,6 +434,7 @@ entity = {
     name = "roz_crisis_02_titan_bow_entity"
     pdxmesh = "roz_crisis_02_titan_bow_mesh"
     default_state = "idle"
+    scale = 1.75
     state = { name = "idle" state_time = 2
 
     }
@@ -444,6 +444,7 @@ entity = {
         event = { time = 7.5 node = "explosion_locator_06" particle = "biogenesis_02_050_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "ship_explosion" } }
 
     }
+
     game_data = {
         emissive_recolor_crunch = 2
         uv_animation_speed 		= 0.2
@@ -455,6 +456,7 @@ entity = {
 entity = {
     name = "roz_crisis_02_titan_mid_entity"
     pdxmesh = "roz_crisis_02_titan_mid_mesh"
+    scale = 1.75
     game_data = {
         emissive_recolor_crunch = 2
     }
@@ -474,6 +476,7 @@ entity = {
         event = { time = 4.2 node = "explosion_locator_12" particle = "biogenesis_02_075_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "ship_explosion" } }
 
     }
+    attach = { "root"               = "roz_light_ball_large_entity" }
     game_data = {
         emissive_recolor_crunch = 2
         uv_animation_speed 		= 0.2
@@ -485,7 +488,7 @@ entity = {
 entity = {
     name = "roz_crisis_02_titan_stern_entity"
     pdxmesh = "roz_crisis_02_titan_stern_mesh"
-
+    scale = 1.75
     state = { name = "idle" state_time = 5
     }
     state = { name = "moving" state_time = 5

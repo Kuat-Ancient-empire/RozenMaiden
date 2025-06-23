@@ -1847,5 +1847,52 @@ ship_design = {
 	required_component = roz_shippart_wx_aura_2
 }
 
+#########crisis abyss
+#
+ship_design = {
+	name = roz_crisis_ship_probe_design_A
+	ship_size = roz_crisis_ship_probe
 
+	section = {
+		template = roz_crisis_ship_probe_section
+		slot = "mid"
+		component = {
+			slot = LARGE_GUN_01
+			template = roz_iqt_gun
+		}
+	}
 
+	required_component = COLOSSUS_GE_REACTOR
+	required_component = "GE_WARP_DRIVE"
+	required_component = CORVETTE_GE_THRUSTER
+	required_component = "GE_SENSOR"
+	required_component = GE_COMBAT_COMPUTER_COLOSSUS
+}
+
+ship_design = {
+	name = roz_crisis_ship_titan_design_A
+	ship_size = roz_crisis_ship_titan
+
+	section = {
+		template = roz_crisis_ship_titan_bow_section
+		slot = "mid"
+		component = {
+			slot = TITANIC_01
+			template = roz_abyss_rift_cascade_xl
+		}
+	}
+	section = {
+		template = roz_crisis_ship_titan_mid_section
+		slot = "mid"
+	}
+	section = {
+		template = roz_crisis_ship_titan_stern_section
+		slot = "mid"
+	}
+
+	required_component = COLOSSUS_GE_REACTOR
+	required_component = "GE_WARP_DRIVE"
+	required_component = CORVETTE_GE_THRUSTER
+	required_component = "GE_SENSOR"
+	required_component = GE_COMBAT_COMPUTER_COLOSSUS
+}

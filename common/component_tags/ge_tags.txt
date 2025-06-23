@@ -4,3 +4,5 @@
 #
 
 weapon_type_ge_void_energy
+
+weapon_type_roz_abyss

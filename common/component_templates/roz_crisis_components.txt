@@ -1,0 +1,44 @@
+
+weapon_component_template = {
+    key = "roz_abyss_rift_cascade_xl"
+    size = large
+    type = instant
+    icon = "GFX_ship_part_roz_abyss_rift_cascade_xl"
+    icon_frame = 1
+
+    firing_arc = 90
+    min_range = 10
+
+    power = -1000
+    component_set = "ROZ_ABYSS_SET"
+    projectile_gfx = "roz_abyss_rift_cascade_xl_projectile"
+    on_hit = {
+    }
+    ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth  }
+    ai_tag_weight = 0
+    resources = {
+        category = ship_components
+    }
+
+    damage = { min = 40.96 max = 81.92 }
+    windup = { min = 150.0 max = 250.0 }
+    total_fire_time = 100
+
+    range = 300.0
+    accuracy = 1.0
+    tracking = 1.0
+
+    armor_penetration = 0.50
+    shield_penetration = 0.50
+    shield_damage = 2.50
+    armor_damage = 2.50
+    hull_damage = 1.50
+    size_damage_factor = 1.0
+
+    tags = { weapon_type_roz_abyss }
+
+
+    ai_weight = {
+        weight = 100
+    }
+}

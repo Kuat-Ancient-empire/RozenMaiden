@@ -226,8 +226,13 @@ component_set = { # Devolving Beam
 	icon_frame = 1
 }
 
+####crisis
+component_set = { # Devolving Beam
+	key = "ROZ_ABYSS_SET"
 
-
+	icon = "GFX_ship_part_roz_abyss_churning_locus_titan"
+	icon_frame = 1
+}
 
 
 

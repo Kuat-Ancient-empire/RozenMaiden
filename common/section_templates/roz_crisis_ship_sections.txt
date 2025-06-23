@@ -116,11 +116,11 @@ ship_section_template = {
 }
 
 ship_section_template = {
-    key = "roz_crisis_ship_titan_section"
+    key = "roz_crisis_ship_titan_bow_section"
     ship_size = roz_crisis_ship_titan
-    fits_on_slot = "mid"
+    fits_on_slot = bow
     #entity = "juggernaut_core_section_entity"
-    entity = roz_crisis_02_titan_entity
+    entity = roz_crisis_02_titan_bow_entity
     icon = "GFX_ship_part_core_mid"
     ai_weight = {
         modifier = {
@@ -132,7 +132,28 @@ ship_section_template = {
         name = "TITANIC_01"
         template = "invisible_titanic_fixed"
         rotation = 0
-        locatorname = root
+        locatorname = "xl_gun_01"
+    }
+
+    large_utility_slots = 14
+    aux_utility_slots = 2
+
+    resources = {
+        category = ship_sections
+    }
+}
+
+ship_section_template = {
+    key = "roz_crisis_ship_titan_mid_section"
+    ship_size = roz_crisis_ship_titan
+    fits_on_slot = mid
+    #entity = "juggernaut_core_section_entity"
+    entity = roz_crisis_02_titan_mid_entity
+    icon = "GFX_ship_part_core_mid"
+    ai_weight = {
+        modifier = {
+            factor = 0
+        }
     }
 
     component_slot = {
@@ -196,6 +217,27 @@ ship_section_template = {
         locatorname = "large_gun_02"
     }
 
+    large_utility_slots = 14
+    aux_utility_slots = 2
+
+    resources = {
+        category = ship_sections
+    }
+}
+
+ship_section_template = {
+    key = "roz_crisis_ship_titan_stern_section"
+    ship_size = roz_crisis_ship_titan
+    fits_on_slot = stern
+    #entity = "juggernaut_core_section_entity"
+    entity = roz_crisis_02_titan_stern_entity
+    icon = "GFX_ship_part_core_mid"
+    ai_weight = {
+        modifier = {
+            factor = 0
+        }
+    }
+
     component_slot = {
         name = "SMALL_GUN_01"
         template = "invisible_point_defence_turret"
@@ -248,8 +290,8 @@ ship_section_template = {
         locatorname = "strike_craft_locator_04"
     }
 
-    large_utility_slots = 42
-    aux_utility_slots = 8
+    large_utility_slots = 14
+    aux_utility_slots = 2
 
     resources = {
         category = ship_sections
@@ -258,7 +300,7 @@ ship_section_template = {
 
 ship_section_template = {
     key = "roz_crisis_ship_probe_section"
-    ship_size = roz_crisis_ship_titan
+    ship_size = roz_crisis_ship_probe
     fits_on_slot = "mid"
     #entity = "juggernaut_core_section_entity"
     entity = roz_crisis_02_titan_entity
