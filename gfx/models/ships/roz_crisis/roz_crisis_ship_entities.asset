@@ -457,9 +457,6 @@ entity = {
     name = "roz_crisis_02_titan_mid_entity"
     pdxmesh = "roz_crisis_02_titan_mid_mesh"
     scale = 1.75
-    game_data = {
-        emissive_recolor_crunch = 2
-    }
 
     default_state = "idle"
     state = { name = "idle" state_time = 5

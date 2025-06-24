@@ -1,7 +1,50 @@
 
 weapon_component_template = {
+    key = "roz_abyss_churning_locus_titan"
+    size = titanic
+    type = instant
+    icon = "GFX_ship_part_roz_abyss_churning_locus_titan"
+    icon_frame = 1
+
+    firing_arc = 180
+    min_range = 10
+
+    power = -5000
+    component_set = "ROZ_ABYSS_SET"
+    projectile_gfx = "roz_abyss_churning_locus_titan_projectiles"
+    on_hit = {
+    }
+    ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth  }
+    ai_tag_weight = 0
+    resources = {
+        category = ship_components
+    }
+    damage = { min = 16384 max = 32768 }
+    windup = { min = 250 max = 350 }
+    total_fire_time = 100
+
+    range = 300.0
+    accuracy = 1.0
+    tracking = 1.0
+
+    armor_penetration = 2.0
+    shield_penetration = 2.0
+    shield_damage = 3.00
+    armor_damage = 3.00
+    hull_damage = 3.00
+    size_damage_factor = 1.0
+
+    tags = { weapon_type_roz_abyss }
+
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+weapon_component_template = {
     key = "roz_abyss_rift_cascade_xl"
-    size = large
+    size = extra_large
     type = instant
     icon = "GFX_ship_part_roz_abyss_rift_cascade_xl"
     icon_frame = 1
@@ -20,11 +63,11 @@ weapon_component_template = {
         category = ship_components
     }
 
-    damage = { min = 40.96 max = 81.92 }
+    damage = { min = 4096 max = 8192 }
     windup = { min = 150.0 max = 250.0 }
     total_fire_time = 100
 
-    range = 300.0
+    range = 250.0
     accuracy = 1.0
     tracking = 1.0
 
@@ -34,6 +77,48 @@ weapon_component_template = {
     armor_damage = 2.50
     hull_damage = 1.50
     size_damage_factor = 1.0
+
+    tags = { weapon_type_roz_abyss }
+
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+weapon_component_template = {
+    key = "roz_abyss_rift_cascade_l"
+    size = large
+    type = instant
+    icon = "GFX_ship_part_roz_abyss_rift_cascade_L"
+    icon_frame = 1
+    { 0.7  0.4  1  0.8 }
+    min_range = 5
+
+    power = -500
+    component_set = "ROZ_ABYSS_SET"
+    projectile_gfx = "roz_abyss_rift_cascade_l_projectile"
+    on_hit = {
+    }
+    ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth  }
+    ai_tag_weight = 0
+    resources = {
+        category = ship_components
+    }
+
+    damage = { min = 512 max = 1024 }
+    windup = { min = 50.0 max = 150.0 }
+    total_fire_time = 50
+
+    range = 180.0
+    accuracy = 1.0
+    tracking = 1.0
+
+    armor_penetration = 0.50
+    shield_penetration = 0.50
+    shield_damage = 1.50
+    armor_damage = 2.00
+    hull_damage = 1.50
 
     tags = { weapon_type_roz_abyss }
 

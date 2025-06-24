@@ -90,9 +90,48 @@ entity = {
     }
 }
 
+entity = {  #give up
+    name = "roz_abyss_rift_cascade_l_projectile_entity"
+    #pdxmesh = "roz_abyss_rift_cascade_l_projectile_mesh"
 
+    cull_radius = 1.0
 
+    default_state = idle
+    state = { name = "idle"
+        event = { time = 0 particle = "large_plasma_cannon_idle_particle" keep_particle = yes }
+        event = { time = 0 particle = "large_plasma_cannon_idle_drops_particle" keep_particle = yes }
+    }
 
+    scale = 1
+}
 
+entity = {
+    name = "roz_abyss_churning_locus_titan_projectiles_entity"
+    pdxmesh = "roz_red_hole_new_mesh"
+    cull_radius = 1.0
+    scale = 1
+    default_state = idle
+    state = { name = "idle"
+        event = { time = 0 particle = "roz_abyss_churning_locus_titan_flare" keep_particle = yes }
+        event = { time = 0 particle = "roz_abyss_churning_locus_titan_trail" keep_particle = yes }
+    }
+}
 
+# entity = {
+#     name = "roz_abyss_black_hole_entity"
+#     pdxmesh = "roz_red_hole_new_mesh"
+#
+#     scale = 0.5
+#     default_state = "idle"
+#     state = { name = "idle" state_time = 5
+#         event = { time = 0 particle = "black_hole_particle" trigger_once = yes keep_particle = yes }
+#         event = { trigger_once = yes sound = { soundeffect = "blackhole_hum_idle" } }
+#     }
+#     locator = { name = "planet" }
+#     game_data = {
+#         size = 1.0
+#         bloom_factor = 5
+#     }
+#     cull_radius = 700
+# }
 

@@ -121,4 +121,18 @@ objectTypes = {
 		scale = 1.0
 	}
 
+	####crisis
+	#titanic
+	pdxparticle = {
+		name = roz_abyss_churning_locus_titan_flare
+		type = roz_abyss_churning_locus_titan_flare_file
+		scale = 15.0
+	}
+
+	pdxparticle = {
+		name = roz_abyss_churning_locus_titan_trail
+		type = roz_abyss_churning_locus_titan_trail_file
+		scale = 15.0
+	}
+
 }	

@@ -1878,12 +1878,20 @@ ship_design = {
 		slot = "mid"
 		component = {
 			slot = TITANIC_01
-			template = roz_abyss_rift_cascade_xl
+			template = roz_abyss_churning_locus_titan
 		}
 	}
 	section = {
 		template = roz_crisis_ship_titan_mid_section
 		slot = "mid"
+		# component = {
+		# 	slot = LARGE_GUN_01
+		# 	template = roz_abyss_rift_cascade_l
+		# }
+		# component = {
+		# 	slot = LARGE_GUN_02
+		# 	template = roz_abyss_rift_cascade_l
+		# }
 	}
 	section = {
 		template = roz_crisis_ship_titan_stern_section

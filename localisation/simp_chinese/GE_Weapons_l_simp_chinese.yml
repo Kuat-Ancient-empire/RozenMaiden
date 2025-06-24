@@ -152,8 +152,12 @@ Kirakishou_Blast_DESC: "在空间极大的宇宙环境中用蔷薇藤蔓来战�
 ###abyss crisis
  ROZ_ABYSS_SET: "§R深渊§!"
  ROZ_ABYSS_SET_DESC: "§R深渊§!"
- roz_abyss_rift_cascade_xl: "§_裂隙洪流发射极§!"
+ roz_abyss_rift_cascade_xl: "§_裂隙洪流炮§!"
  roz_abyss_rift_cascade_xl_DESC: "请勿好奇。§R了解深渊部件这个行为本身也会招致污染§!"
+ roz_abyss_rift_cascade_l: "§_裂隙洪流发射极§!"
+ roz_abyss_rift_cascade_l_DESC: "$roz_abyss_rift_cascade_xl_DESC$"
+ roz_abyss_churning_locus_titan: "§_混沌涡心§!"
+ roz_abyss_churning_locus_titan_DESC: "$roz_abyss_rift_cascade_xl_DESC$"
 
 ##字体颜色代码
 ##§W W白色
