@@ -135,4 +135,11 @@ objectTypes = {
 		scale = 15.0
 	}
 
+	pdxparticle = {
+		name = "roz_abyss_churning_locus_titan_hit_effect"
+		type = "roz_abyss_churning_locus_titan_hit_effect_file"
+
+		scale = 1.0
+	}
+
 }	

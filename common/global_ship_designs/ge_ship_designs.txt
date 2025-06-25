@@ -1847,8 +1847,15 @@ ship_design = {
 	required_component = roz_shippart_wx_aura_2
 }
 
-#########crisis abyss
-#
+
+
+##############################
+##############################
+##############################
+#########crisis abyss#########
+##############################
+##############################
+##############################
 ship_design = {
 	name = roz_crisis_ship_probe_design_A
 	ship_size = roz_crisis_ship_probe
@@ -1857,16 +1864,81 @@ ship_design = {
 		template = roz_crisis_ship_probe_section
 		slot = "mid"
 		component = {
+			slot = G_01
+			template = roz_reality_disruptor
+		}
+		component = {
 			slot = LARGE_GUN_01
-			template = roz_iqt_gun
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_02
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_03
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_04
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = SMALL_GUN_01
+			template = roz_abyssal_glare
+		}
+		component = {
+			slot = SMALL_GUN_02
+			template = roz_abyssal_glare
+		}
+		component = {
+			slot = STRIKE_CRAFT_01
+			template = roz_abyss_swarmers
+		}
+
+		component = {
+			slot = LARGE_UTILITY_1
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_2
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_3
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_4
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_5
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_6
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_7
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_8
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = AUX_UTILITY_1
+			template = roz_abyss_aux
 		}
 	}
 
-	required_component = COLOSSUS_GE_REACTOR
-	required_component = "GE_WARP_DRIVE"
-	required_component = CORVETTE_GE_THRUSTER
-	required_component = "GE_SENSOR"
-	required_component = GE_COMBAT_COMPUTER_COLOSSUS
+	required_component = roz_abyss_power_core
+	required_component = roz_abyss_FTL
+	required_component = roz_abyss_thruster
+	required_component = roz_abyss_sensor
+	required_component = roz_abyss_master_mind_picket
 }
 
 ship_design = {
@@ -1880,27 +1952,488 @@ ship_design = {
 			slot = TITANIC_01
 			template = roz_abyss_churning_locus_titan
 		}
+		component = {
+			slot = G_01
+			template = roz_reality_disruptor
+		}
+		component = {
+			slot = G_02
+			template = roz_reality_disruptor
+		}
+		component = {
+			slot = LARGE_UTILITY_1
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_2
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_3
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_4
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_5
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_6
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_7
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_8
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_9
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_10
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_11
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_12
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_13
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_14
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = AUX_UTILITY_1
+			template = roz_abyss_aux
+		}
 	}
 	section = {
 		template = roz_crisis_ship_titan_mid_section
 		slot = "mid"
-		# component = {
-		# 	slot = LARGE_GUN_01
-		# 	template = roz_abyss_rift_cascade_l
-		# }
-		# component = {
-		# 	slot = LARGE_GUN_02
-		# 	template = roz_abyss_rift_cascade_l
-		# }
+		component = {
+			slot = LARGE_GUN_01
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_02
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_03
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_04
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_05
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_06
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_07
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_08
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_09
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_10
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_11
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_12
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = G_01
+			template = roz_reality_disruptor
+		}
+		component = {
+			slot = G_02
+			template = roz_reality_disruptor
+		}
+		component = {
+			slot = LARGE_UTILITY_1
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_2
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_3
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_4
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_5
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_6
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_7
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_8
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_9
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_10
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_11
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_12
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_13
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_14
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = AUX_UTILITY_1
+			template = roz_abyss_aux
+		}
 	}
 	section = {
 		template = roz_crisis_ship_titan_stern_section
-		slot = "mid"
+		slot = "stern"
+		component = {
+			slot = SMALL_GUN_01
+			template = roz_abyssal_glare
+		}
+		component = {
+			slot = SMALL_GUN_02
+			template = roz_abyssal_glare
+		}
+		component = {
+			slot = SMALL_GUN_03
+			template = roz_abyssal_glare
+		}
+		component = {
+			slot = SMALL_GUN_04
+			template = roz_abyssal_glare
+		}
+		component = {
+			slot = STRIKE_CRAFT_01
+			template = roz_abyss_swarmers
+		}
+		component = {
+			slot = STRIKE_CRAFT_02
+			template = roz_abyss_swarmers
+		}
+		component = {
+			slot = STRIKE_CRAFT_03
+			template = roz_abyss_swarmers
+		}
+		component = {
+			slot = STRIKE_CRAFT_04
+			template = roz_abyss_swarmers
+		}
+		component = {
+			slot = STRIKE_CRAFT_05
+			template = roz_abyss_swarmers
+		}
+		component = {
+			slot = STRIKE_CRAFT_06
+			template = roz_abyss_swarmers
+		}
+
+		component = {
+			slot = LARGE_UTILITY_1
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_2
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_3
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_4
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_5
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_6
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_7
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_8
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_9
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_10
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_11
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_12
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_13
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_14
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = AUX_UTILITY_1
+			template = roz_abyss_aux
+		}
+		component = {
+			slot = AUX_UTILITY_2
+			template = roz_abyss_aux
+		}
 	}
 
-	required_component = COLOSSUS_GE_REACTOR
-	required_component = "GE_WARP_DRIVE"
-	required_component = CORVETTE_GE_THRUSTER
-	required_component = "GE_SENSOR"
-	required_component = GE_COMBAT_COMPUTER_COLOSSUS
+	required_component = roz_abyss_power_core
+	required_component = roz_abyss_FTL
+	required_component = roz_abyss_thruster
+	required_component = roz_abyss_sensor
+	required_component = roz_abyss_master_mind_artillery
+	required_component = roz_abyss_buff_aura
+}
+
+ship_design = {
+	name = roz_crisis_ship_battlecruiser_design_A
+	ship_size = roz_crisis_ship_probe
+
+	section = {
+		template = roz_crisis_ship_battlecruiser_section
+		slot = "mid"
+		component = {
+			slot = G_01
+			template = roz_reality_disruptor
+		}
+		slot = "mid"
+
+		component = {
+			slot = XL_01
+			template = roz_abyss_rift_cascade_xl
+		}
+		component = {
+			slot = G_02
+			template = roz_reality_disruptor
+		}
+		component = {
+			slot = LARGE_GUN_01
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_02
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_03
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_04
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_05
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_06
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_07
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = LARGE_GUN_08
+			template = roz_abyss_rift_cascade_l
+		}
+		component = {
+			slot = SMALL_GUN_01
+			template = roz_abyssal_glare
+		}
+		component = {
+			slot = SMALL_GUN_02
+			template = roz_abyssal_glare
+		}
+		component = {
+			slot = SMALL_GUN_03
+			template = roz_abyssal_glare
+		}
+		component = {
+			slot = SMALL_GUN_04
+			template = roz_abyssal_glare
+		}
+		component = {
+			slot = SMALL_GUN_05
+			template = roz_abyssal_glare
+		}
+		component = {
+			slot = SMALL_GUN_06
+			template = roz_abyssal_glare
+		}
+		component = {
+			slot = STRIKE_CRAFT_01
+			template = roz_abyss_swarmers
+		}
+		component = {
+			slot = STRIKE_CRAFT_02
+			template = roz_abyss_swarmers
+		}
+
+		component = {
+			slot = LARGE_UTILITY_1
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_2
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_3
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_4
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_5
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_6
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_7
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_8
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_9
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_10
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_11
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_12
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_13
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_14
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_15
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_16
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_17
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = LARGE_UTILITY_18
+			template = roz_abyss_armor
+		}
+		component = {
+			slot = AUX_UTILITY_1
+			template = roz_abyss_aux
+		}
+		component = {
+			slot = AUX_UTILITY_2
+			template = roz_abyss_aux
+		}
+		component = {
+			slot = AUX_UTILITY_3
+			template = roz_abyss_aux
+		}
+	}
+
+	required_component = roz_abyss_power_core
+	required_component = roz_abyss_FTL
+	required_component = roz_abyss_thruster
+	required_component = roz_abyss_sensor
+	required_component = roz_abyss_master_mind_line
 }

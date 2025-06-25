@@ -206,7 +206,8 @@ country_event = {
 					set_owner = ROOT
 					create_ship = {
 						name = "NAME_sgt"
-						design = roz_crisis_ship_titan_design_A
+						#design = roz_crisis_ship_titan_design_A
+						design = roz_crisis_ship_probe_design_A
 						graphical_culture = owner
 						prefix = no
 					}

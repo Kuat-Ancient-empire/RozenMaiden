@@ -13,9 +13,9 @@ roz_crisis_ship_battlecruiser = {
         ship_weapon_range_mult = 0.15
     }
     max_hitpoints = 15000
-    size_multiplier = 16
-    fleet_slot_size = 16
-    section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
+    size_multiplier = 10
+    fleet_slot_size = 10
+    section_slots = { "mid" = { locator = "root" } }
     num_target_locators = 0
     is_space_station = no
     icon = ship_size_military_16
@@ -85,8 +85,8 @@ roz_crisis_ship_probe = {
         ship_weapon_range_mult = 0.25
     }
     max_hitpoints = 7500
-    size_multiplier = 16
-    fleet_slot_size = 16
+    size_multiplier = 4
+    fleet_slot_size = 4
     section_slots = { "mid" = { locator = "part1" } }
     num_target_locators = 0
     is_space_station = no
@@ -105,5 +105,5 @@ roz_crisis_ship_probe = {
     required_component_set = "thruster_components"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
-
+    required_component_set = "ship_aura_components"
 }

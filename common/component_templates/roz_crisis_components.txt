@@ -57,7 +57,7 @@ weapon_component_template = {
     projectile_gfx = "roz_abyss_rift_cascade_xl_projectile"
     on_hit = {
     }
-    ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth  }
+    ai_tags = { weapon_role_artillery artillery artillery_stealth }
     ai_tag_weight = 0
     resources = {
         category = ship_components
@@ -92,7 +92,7 @@ weapon_component_template = {
     type = instant
     icon = "GFX_ship_part_roz_abyss_rift_cascade_L"
     icon_frame = 1
-    { 0.7  0.4  1  0.8 }
+    color = { 0.7  0.4  1  0.8 }
     min_range = 5
 
     power = -500
@@ -100,15 +100,15 @@ weapon_component_template = {
     projectile_gfx = "roz_abyss_rift_cascade_l_projectile"
     on_hit = {
     }
-    ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth  }
+    ai_tags = { weapon_role_artillery artillery artillery_stealth }
     ai_tag_weight = 0
     resources = {
         category = ship_components
     }
 
     damage = { min = 512 max = 1024 }
-    windup = { min = 50.0 max = 150.0 }
-    total_fire_time = 50
+    windup = { min = 30.0 max = 100.0 }
+    total_fire_time = 30
 
     range = 180.0
     accuracy = 1.0
@@ -127,3 +127,420 @@ weapon_component_template = {
         weight = 100
     }
 }
+
+weapon_component_template = {
+    key = "roz_abyssal_glare"
+    size = point_defence
+    type = point_defence
+    icon = "GFX_ship_part_roz_abyssal_glare"
+    icon_frame = 1
+    power = -150
+    component_set = "ROZ_ABYSS_SET"
+    projectile_gfx = "ge_pd_projectile"
+    on_hit = {
+    }
+    ai_tags = { weapon_role_point_defense  }
+    ai_tag_weight = 0
+    resources = {
+        category = ship_components
+    }
+
+    damage = { min = 16 max = 64 }
+    windup = { min = 5 max = 5 }
+    total_fire_time = 5
+
+    range = 100.0
+    accuracy = 1.0
+    tracking = 1.0
+
+    armor_penetration = 0.50
+    shield_penetration = 0.50
+    shield_damage = 1.50
+    armor_damage = 2.00
+    hull_damage = 1.50
+
+    tags = { weapon_type_roz_abyss }
+
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+weapon_component_template = {
+    key = "roz_reality_disruptor"
+    size = torpedo
+    type = missile
+    icon = "GFX_ship_part_roz_reality_disruptor"
+    icon_frame = 1
+    power = -150
+    component_set = "ROZ_ABYSS_SET"
+    projectile_gfx = "ge_pd_projectile"
+    on_hit = {
+    }
+    ai_tags = { weapon_role_anti_armor weapon_role_anti_hull weapon_role_artillery  }
+    ai_tag_weight = 0
+    resources = {
+        category = ship_components
+    }
+
+    damage = { min = 1024 max = 2048 }
+    windup = { min = 50 max = 150 }
+    total_fire_time = 50
+    size_damage_factor = 0.5
+    range = 220.0
+    accuracy = 1.0
+    tracking = 1.0
+
+    shield_penetration = 1.00
+    armor_damage = 2.50
+    hull_damage = 2.00
+
+    missile_health = 1000
+    missile_shield = 640
+    missile_armor = 640
+    missile_evasion = 0.9
+    missile_retarget_range = 150
+    missile_speed = 30
+
+    tags = { weapon_type_roz_abyss }
+
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+strike_craft_component_template = {
+    key = "roz_abyss_swarmers"
+    entity = "roz_abyss_swarmers_entity"
+    size = large
+    weapon_type = instant
+    icon = "GFX_mutation_scourge_swarmers"
+    icon_frame = 1
+    ship_behavior = "bombers_behavior"
+    prerequisites = { "tech_swarm_strike_craft_1" }
+    component_set = "ROZ_ABYSS_SET"
+    projectile_gfx = "small_space_amoeba_weapon"
+    tags = { weapon_type_strike_craft weapon_swarm weapon_type_space_fauna }
+
+    count = 10
+    regeneration_per_day = 1
+    launch_time = 1.0
+
+    damage = { min = 50 max = 100 }
+    cooldown = 2
+    range = 10
+    engagement_range = 120
+    accuracy = 1.0
+    tracking = 0.8
+
+    health = 40
+    armor = 20
+    shield = 0
+    evasion = 0.80
+
+    speed = 400
+    rotation_speed = 0.5
+    acceleration = 0.5
+
+    shield_damage = 1.0
+    shield_penetration = 1
+    armor_penetration = 0.66
+}
+
+utility_component_template = {
+    key = "roz_abyss_power_core"
+    size = small
+    icon = "GFX_ship_part_roz_abyss_vortex_flat"
+    icon_frame = 1
+    power = 255000
+    resources = {
+        category = ship_components
+    }
+    modifier = {
+        ship_shield_regen_add_static = -100
+        ship_armor_regen_add_static = -100
+        ship_hull_regen_add_static = -100
+        ship_fire_rate_mult = 0.25
+    }
+    component_set = "power_core"
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        weight = 1000
+    }
+}
+
+utility_component_template = {
+    key = "roz_abyss_sensor"
+    size = small
+    icon = "GFX_ship_part_roz_abyss_eye_circle"
+    icon_frame = 1
+    power = -10
+    resources = {
+        category = ship_components
+    }
+    sensor_range = 24
+    hyperlane_range = 24
+    modifier = {
+        ship_tracking_add = 32
+        ship_accuracy_add = 32
+    }
+    component_set = "power_core"
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        weight = 1000
+    }
+}
+
+utility_component_template = {
+    key = "roz_abyss_FTL"
+    size = small
+    icon = "GFX_ship_part_roz_abyss_maelstrom_flat"
+    icon_frame = 1
+    power = -15
+    component_set = "ftl_components"
+    ftl = yes
+    jumpdrive = yes
+    resources = {
+        category = ship_components
+    }
+    potential = {
+        always = no
+    }
+    ship_modifier = {
+        ship_windup_mult = -1.0
+        ship_ftl_jumpdrive_range_mult = 5.0
+        ship_jumpdrive_cooldown_mult = -1.0
+        ship_disengage_opportunities_add = -999
+    }
+    ai_weight = {
+        weight = 5000
+    }
+}
+
+utility_component_template = {
+    key = "roz_abyss_thruster"
+    size = small
+    icon = "GFX_ship_part_roz_abyss_thruster"
+    icon_frame = 1
+    component_set = "thruster_components"
+    power = -10
+    resources = {
+        category = ship_components
+    }
+    modifier = {
+        ship_base_speed_mult = 0.20
+        ship_evasion_add = 15
+        ship_speed_mult = 0.5
+        ship_disengage_chance_mult = -10
+    }
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        weight = 5000
+    }
+}
+
+utility_component_template = {
+    key = "roz_abyss_master_mind_picket"
+    size = small
+    icon = "GFX_ship_part_roz_abyss_vortex"
+    icon_frame = 1
+    power = -10
+    ship_behavior = "gev_picket_90"
+    resources = {
+        category = ship_components
+    }
+    modifier = {
+        ship_speed_mult = 0.15
+        ship_weapon_damage = 0.10
+        ship_fire_rate_mult = 0.10
+    }
+    class_restriction = {
+        shipclass_military
+    }
+    potential = {
+        always = no
+    }
+    component_set = "combat_computers"
+    ai_weight = {
+        weight = 5000
+    }
+}
+
+utility_component_template = {
+    key = "roz_abyss_master_mind_line"
+    size = small
+    icon = "GFX_ship_part_roz_abyss_vortex"
+    icon_frame = 1
+    power = -10
+    ship_behavior = "gev_line_120"
+    resources = {
+        category = ship_components
+    }
+    modifier = {
+        ship_weapon_damage = 0.1
+        ship_fire_rate_mult = 0.1
+        ship_weapon_range_mult = 0.1
+        ship_tracking_add = 5
+        ship_accuracy_add = 5
+    }
+    potential = {
+        always = no
+    }
+    class_restriction = {
+        shipclass_military
+    }
+    component_set = "combat_computers"
+    ai_weight = {
+        weight = 5000
+    }
+}
+
+utility_component_template = {
+    key = "roz_abyss_master_mind_artillery"
+    size = small
+    icon = "GFX_ship_part_roz_abyss_vortex"
+    icon_frame = 1
+    power = -10
+    ship_behavior = "gev_artillery_150"
+    resources = {
+        category = ship_components
+    }
+    modifier = {
+        ship_weapon_damage = 0.2
+        ship_weapon_range_mult = 0.15
+        ship_tracking_add = 10
+        ship_accuracy_add = 10
+    }
+    class_restriction = {
+        shipclass_military
+    }
+    potential = {
+        always = no
+    }
+    component_set = "combat_computers"
+    ai_weight = {
+        weight = 5000
+    }
+}
+
+utility_component_template = {
+    key = "roz_abyss_buff_aura"
+    size = aux
+    icon = "GFX_ship_part_roz_abyss_eye_flat"
+    icon_frame = 1
+    power = -150
+    resources = {
+        category = ship_components
+    }
+    potential = {
+        always = no
+    }
+    component_set = "ship_aura_components"
+    hostile_aura = {
+        name = "roz_abyss_buff_aura1_Debuff"
+        system_wide = yes
+        apply_on = ships
+        stack_info = {
+            id = roz_abyss_buff_aura1_Debuff
+            priority = 21
+        }
+        modifier = {
+            ship_evasion_add = -50
+            ship_evasion_mult = -1
+            ship_shield_penetration_mult = -0.99
+            ship_armor_penetration_mult = -0.99
+        }
+        graphics = {
+            area_effect = {
+                entity = "circle_area_entity"
+                dynamic_scale = yes
+            }
+            ship_effect = {
+                entity = "ship_aura_negative_entity"
+                dynamic_scale = no
+            }
+        }
+    }
+    friendly_aura = {
+        name = "roz_abyss_buff_aura1_Buff"
+        system_wide = yes
+        apply_on = ships
+        stack_info = {
+            id = roz_abyss_buff_aura1_Buff
+            priority = 22
+        }
+        modifier = {
+            ship_hull_damage_mult = 0.5
+            ship_shield_damage_mult = 0.5
+            ship_armor_damage_mult = 0.5
+            ship_shield_hardening_add = 0.5
+            ship_armor_hardening_add = 0.5
+        }
+        graphics = {
+            area_effect = {
+                entity = "circle_area_entity"
+                dynamic_scale = yes
+            }
+            ship_effect = {
+                entity = "ship_aura_positive_entity"
+                dynamic_scale = no
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0		#AI权重相关
+    }
+}
+
+utility_component_template = {
+	key = "roz_abyss_aux"
+	size = aux
+	icon = "GFX_ship_part_roz_abyss_aux"
+	icon_frame = 1
+    power = -10
+    component_set = "ROZ_ABYSS_SET"
+	resources = {
+		category = ship_components
+	}
+	modifier = {
+		weapon_type_roz_abyss_weapon_damage_mult = 0.25
+	}
+    potential = { always = no }
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+    key = "roz_abyss_armor"
+    size = large
+    icon = "GFX_ship_part_roz_abyss_armor"
+    icon_frame = 1
+    resources = {
+        category = ship_components
+    }
+    power = -1
+    modifier = {
+        ship_shield_add = 25000
+        ship_armor_add = 15000
+        ship_hull_add = 10000
+        ship_hull_regen_add_perc = 0.03
+        ship_armor_regen_add_perc = 0.03
+        ship_hull_regen_add_perc = 0.03
+    }
+    potential = { always = no }
+    component_set = "ROZ_ABYSS_SET"
+    ai_weight = {
+        weight = 5000
+    }
+}
+
+

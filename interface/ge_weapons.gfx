@@ -767,6 +767,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_ship_part_roz_abyss_eye_circle"
+		textureFile = gfx/interface/icons/ship_parts/roz_abyss_eye_circle.dds
+	}
+
+	spriteType = {
 		name = "GFX_ship_part_roz_abyss_rift_cascade_L"
 		textureFile = gfx/interface/icons/ship_parts/roz_abyss_rift_cascade_L.dds
 	}
@@ -777,8 +782,23 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_ship_part_roz_abyss_eye_flat"
+		name = "GFX_ship_part_roz_abyssal_glare"
 		textureFile = gfx/interface/icons/ship_parts/roz_abyssal_glare.dds
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_roz_abyss_thruster"
+		textureFile = gfx/interface/icons/ship_parts/roz_abyss_thruster.dds
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_roz_abyss_aux"
+		textureFile = gfx/interface/icons/ship_parts/roz_abyss_aux.dds
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_roz_abyss_armor"
+		textureFile = gfx/interface/icons/ship_parts/roz_abyss_armor.dds
 	}
 
 }

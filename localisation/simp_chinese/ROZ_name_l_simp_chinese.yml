@@ -1,0 +1,174 @@
+﻿#noinspection ALL
+l_simp_chinese:
+###############################
+
+######synced
+##########
+NAME_nfield:0 "N之领域"
+NAME_nfield_suigintou: "N之领域-水银灯"
+NAME_nfield_krks: "N之领域-雪华绮晶"
+NAME_nfield_junn: "人偶师-樱田纯"
+NAME_nfield_sk: "N之领域-真红"
+NAME_nfield_hinaichigo: "N之领域-雏莓"
+NAME_ge_br:0 "黑蔷薇"
+NAME_ge_vfs:0 "Y*%§R<数据错误>§!恒"
+NAME_ap_ge_0:0 "N之领域的财富"
+
+NAME_suigintou: "すいぎんとう"
+NAME_Kirakishou: "きらきしょう"
+NAME_hinaichigo: "ひないちご"
+NAME_shinku: "しんく"
+NAME_shuiyindeng: "水银灯"
+NAME_xuehuaqijing: "雪华绮晶"
+NAME_chumei: "雏莓"
+NAME_zhenhong: "真红"
+NAME_Mercury_Lamp: "Mercury Lamp"
+
+NAME_ge_stg_black_dragon: "化身之躯"
+NAME_ge_stg_black_dragon_ship: "黑羽龙"
+NAME_ge_bwd: "黑羽龙"
+NAME_kirakishou_hostile_country: "深渊凝视"
+NAME_madgod_force_country: "深渊疯神"
+NAME_ge_kirakishou_hostile_fleet: "苍白蔷薇之海"
+NAME_ge_kirakishou_hostile_ship: "白色恶魔"
+
+NAME_ge_kirakishou_hostile_ship_dh: "化身：维度恶魔"
+NAME_ge_kirakishou_hostile_ship_et: "化身？#￥%祖母？"
+NAME_ge_kirakishou_hostile_ship_everything: "不可名状"
+NAME_roz_krks_zakko: "极端情绪综合体"
+NAME_Corrupted_Avatar_ROZ: "恶堕地狱"
+NAME_EDDY_ROZ: "恶堕地狱"
+
+NAME_kirakishou_neutral: "星灵体世界"
+NAME_ge_krksu: ""
+NAME_ge_kirakishou_neutral_ship: ""
+NAME_ge_sgt_ship: "黑蔷薇"
+
+NAME_roz_flagship_gardian_DK: "§g黑暗天使§!" #Drak Angels
+NAME_roz_flagship_gardian_WS: "§W白色伤疤§!" #White Scars
+NAME_roz_flagship_gardian_SW: "§P太空野狼§!" #Space Wolves
+NAME_roz_flagship_gardian_IF: "§Y帝国之拳§!" #Imperial Fists
+NAME_roz_flagship_gardian_BA: "§R圣血天使§!" #Blood Angels × #Blue Archive √
+NAME_roz_flagship_gardian_IH: "§L钢铁之手§!" #Iron Hands
+NAME_roz_flagship_gardian_U: "§B极限战士§!" #Ultramarines
+NAME_roz_flagship_gardian_S: "§G火蜥蜴§!" #Salamanders
+NAME_roz_flagship_gardian_RG: "§g暗鸦守卫§!" #Raven Guard
+
+roz_dark_box_star: "破败神国"
+roz_outland_star_system: "§R“星空之上”§!"
+NAME_roz_outland_system: "§R“星空之上”§!"
+NAME_roz_outland_planet: "§M门之钥§!"
+NAME_roz_outland_planet_moon: "§R穷极之门§!"
+roz_gateway: "银钥"
+roz_gateway_name_header: "银钥"
+roz_gateway_name_DESC: "通往外域"
+BYPASS_ROZ_GATEWAY: "通往外域"
+
+NAME_sgt: "sgt"
+
+ ###abyss crisis
+ NAME_roz_abyss_small_fleet: "深渊游弋舰队"
+ NAME_roz_abyss_median_fleet: "深渊巡航舰队"
+ NAME_roz_abyss_large_fleet: "深渊主力舰队"
+ NAME_roz_abyss_marvelous_fleet: "神国近卫舰队"
+ NAME_roz_abyss_pioneer_1: "信使"
+
+ suigintou_backstory: "§g来自黑洞之门的神秘存在§!\n§rN之领域的永恒掌控者§!\n§R不可言说的伟岸身躯§!\n§M蔷薇少女第一人偶——水银灯§!"
+suigintou_sci_catch_phrase: "我们穷极一切能到达的宇宙尽头只有这边银河系的边缘了吧…"
+suigintou_adm_catch_phrase: "愿你玩得愉快哦"
+
+kirakishou_backstory: "§rN之领域的心灵梦魇§!\n§W纯净无瑕的苍白蔷薇§!\n§R横亘于历史中的灰暗与诡秘§!\n§P蔷薇少女第七人偶——雪华绮晶§!"
+kirakishou_gov_catch_phrase: ""
+kirakishou_gen_catch_phrase: ""
+
+shinku_backstory: "§r跨越永眠而归的抗争者§!\n§Y优雅高贵的红之女王§!\n§R完美无瑕的爱丽丝§!\n§H蔷薇少女第五人偶——真红§!"
+shinku_gov_catch_phrase: ""
+
+ge_black_dragon: "黑羽龙"
+ge_kirakishou_avatar: "化身"
+
+NAME_ROZ_X:"[Root.GetName]"
+
+NAME_roz_lgate:0 "仙境"
+NAME_roz_lgate_starbase:0 "银河极点"
+
+####name list
+####abyss faction
+ #fleet
+ roz_abyss_faction: "§_深渊阵营§!"
+ roz_abyss_faction_fleet_Deep_Ones_Wrath: "§_深潜者之怒§!"
+ roz_abyss_faction_fleet_Dark_Tide: "‌§_黑潮舰队§!"
+ roz_abyss_faction_fleet_Eternal_Night_Shroud: "§_永夜遮蔽者§!"
+ roz_abyss_faction_fleet_Abyssal_Ambush_Group: "§_‌渊底伏击群§!"
+ roz_abyss_faction_fleet_Corrupted_Beacon_Division: "§_‌腐化信标§!"
+ roz_abyss_faction_fleet_Light-Eaters_Battalion: "‌§_噬光集群§!"
+ roz_abyss_faction_fleet_Recursive_Abyss: "§_递归深渊§!"
+ roz_abyss_faction_fleet_Finality's_Echo: "§_终末回响§!"
+ #ship
+ roz_abyss_faction_ship_Abyssal_Rot_Sentinel: "§R腐渊守望者§!"
+ roz_abyss_faction_ship_Corrosion_Maw: "§R溃蚀之喉§!"
+ roz_abyss_faction_ship_Entropic_Rift: "§R熵化裂隙§!"
+ roz_abyss_faction_ship_Black_Necrosis_Fleet: "§R黑疮舰队§!"
+ roz_abyss_faction_ship_Rust_Oracle: "§R锈蚀先知§!"
+ roz_abyss_faction_ship_Prism_of_Madness: "§R狂乱棱镜§!"
+ roz_abyss_faction_ship_Womb_of_Disorder: "§R无序之胎§!"
+ roz_abyss_faction_ship_Hymn_of_Distortion: "§R扭曲赞美诗§!"
+ roz_abyss_faction_ship_Echo_of_Delirium: "§R癫狂回响§!"
+ roz_abyss_faction_ship_Corrosive_Pulse: "§R侵蚀律动§!"
+ roz_abyss_faction_ship_Festering_Truth: "§R溃烂真理§!"
+ roz_abyss_faction_ship_Pus_Constellation: "§R脓血星芒§!"
+ roz_abyss_faction_ship_Void_Gnawer: "§R虚无啃噬者§!"
+ roz_abyss_faction_ship_Memory_Dissolver: "§R记忆溶解者§!"
+ roz_abyss_faction_ship_Temporal_Abscess: "§R时间脓疡§!"
+ roz_abyss_faction_ship_Reality_Dissociator: "§R现实解离者§!"
+ roz_abyss_faction_ship_Primordial_Festering: "§R太初溃烂§!"
+ roz_abyss_faction_ship_Abyss_Maw: "§R噬渊之喉§!"
+ roz_abyss_faction_ship_Eternal_Dark_Digestor: "§R永暗消化腔§!"
+ roz_abyss_faction_ship_Abyss_Stomach: "§R深渊胃袋§!"
+ roz_abyss_faction_ship_Dark_Tide_Esophagus: "§R黑潮食道§!"
+ roz_abyss_faction_ship_Twisted_Ovum: "§R扭曲之卵§!"
+ roz_abyss_faction_ship_Mad_Proliferator: "§R疯狂增殖体§!"
+ roz_abyss_faction_ship_Rust_Gospel: "§R锈蚀福音§!"
+ roz_abyss_faction_ship_Lead-Tear_Pilgrim: "§R铅泪朝圣者§!"
+ roz_abyss_faction_ship_Skull_Reaper: "§R颅骨收割者§!"
+ roz_abyss_faction_ship_Blade_of_Sacrifice: "§R血祭之刃§!"
+ roz_abyss_faction_ship_Avatar_of_Rage: "§R狂怒化身§!"
+ roz_abyss_faction_ship_Corruptor_of_Lore: "§R知识腐化者§!"
+ roz_abyss_faction_ship_Gospel_of_Rot: "§R腐烂福音§!"
+ roz_abyss_faction_ship_Ecstatic_Torment: "§R极乐折磨§!"
+ roz_abyss_faction_ship_Feast_of_Senses: "§R感官饕餮§!"
+ roz_abyss_faction_ship_Perfect_Degeneracy: "§R完美堕落§!"
+ roz_abyss_faction_ship_Flesh-Iron_Amalgam: "§R血肉钢铁§!"
+ roz_abyss_faction_ship_Screaming_Skull: "§R尖叫颅骨§!"
+ roz_abyss_faction_ship_Abomination_Stitch: "§R憎恶缝合体§!"
+ #planet
+ roz_abyss_faction_planet_Vortex_of_Deceit: "§_诡计漩涡"
+ roz_abyss_faction_planet_Rift_of_Rage: "§_愤怒裂谷§!"
+ roz_abyss_faction_planet_Blood_River_Hell: "§_血河炼狱§!"
+ roz_abyss_faction_planet_Rust_Paradise: "§_锈蚀天堂§!"
+ roz_abyss_faction_planet_Abyss_of_Sensation: "§_感官深渊§!"
+ roz_abyss_faction_planet_Mirror_of_Degeneracy: "§_堕落镜界§!"
+ roz_abyss_faction_planet_Gallery_of_Agony: "§_痛苦画廊§!"
+ roz_abyss_faction_planet_Eye_of_Chaos: "§_混沌之眼§!"
+ roz_abyss_faction_planet_Flesh_Forge: "§_血肉熔炉§!"
+ roz_abyss_faction_planet_Soul_Reaping_Fields: "§_灵魂收割场§!"
+ roz_abyss_faction_planet_Abyssal_Echo: "§_深渊回响§!"
+ roz_abyss_faction_planet_Core_of_Entropy: "§_无序核心§!"
+ roz_abyss_faction_planet_Manifest_Fear: "§_恐惧具现§!"
+ roz_abyss_faction_planet_Law's_Collapse: "§_法则崩坏§!"
+ roz_abyss_faction_planet_Entropy's_End: "§_熵增终末§!"
+ #character
+ roz_abyss_faction_character_Voidreaver: "§R沃德瑞弗§!"
+ roz_abyss_faction_character_Abysswalker: "§R阿比斯沃克§!"
+ roz_abyss_faction_character_Nyxmarrow: "§R尼克斯马洛§!"
+ roz_abyss_faction_character_Oblivious: "§R奥布利维奥斯§!" #我，勿畏遗忘
+ roz_abyss_faction_character_Entropath: "§R恩特罗帕斯§!"
+ roz_abyss_faction_character_Dreadmaw: "§R德雷德莫§!"
+ roz_abyss_faction_character_Nullgrav: "§R纳尔格拉夫§!"
+ roz_abyss_faction_character_Nebulord: "§R内布洛德§!"
+ roz_abyss_faction_character_Vanthar: "§R万萨尔§!"
+ roz_abyss_faction_character_Xal'zoth: "§R萨尔佐斯§!"
+ roz_abyss_faction_character_Zeravox: "§R泽拉沃克斯§!"
+ roz_abyss_faction_character_Vorpex: "§R沃佩克斯§!"
+ roz_abyss_faction_character_Mortis: "§c墨提斯§!"
+

@@ -158,7 +158,12 @@ Kirakishou_Blast_DESC: "在空间极大的宇宙环境中用蔷薇藤蔓来战�
  roz_abyss_rift_cascade_l_DESC: "$roz_abyss_rift_cascade_xl_DESC$"
  roz_abyss_churning_locus_titan: "§_混沌涡心§!"
  roz_abyss_churning_locus_titan_DESC: "$roz_abyss_rift_cascade_xl_DESC$"
-
+ roz_abyssal_glare: "§_深渊眩光§!"
+ roz_abyssal_glare_DESC: "$roz_abyss_rift_cascade_xl_DESC$"
+ roz_reality_disruptor: "§_现实干扰器§!"
+ roz_reality_disruptor_DESC: "$roz_abyss_rift_cascade_xl_DESC$"
+ roz_abyss_swarmers: "§_深渊感染集群§!"
+ roz_abyss_swarmers_DESC: "$roz_abyss_rift_cascade_xl_DESC$"
 ##字体颜色代码
 ##§W W白色
 ##§R R红色

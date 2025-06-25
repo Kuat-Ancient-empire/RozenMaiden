@@ -1,0 +1,101 @@
+﻿#深渊
+roz_abyss_faction = {
+    category = roz_abyss_faction_category
+    #randomized = no
+    should_name_home_system_planets = no
+    ship_names = {
+        generic = {
+            roz_abyss_faction_ship_Abyssal_Rot_Sentinel
+            roz_abyss_faction_ship_Corrosion_Maw
+            roz_abyss_faction_ship_Entropic_Rift
+            roz_abyss_faction_ship_Black_Necrosis_Fleet
+            roz_abyss_faction_ship_Rust_Oracle
+            roz_abyss_faction_ship_Prism_of_Madness
+            roz_abyss_faction_ship_Womb_of_Disorder
+            roz_abyss_faction_ship_Hymn_of_Distortion
+            roz_abyss_faction_ship_Echo_of_Delirium
+            roz_abyss_faction_ship_Corrosive_Pulse
+            roz_abyss_faction_ship_Festering_Truth
+            roz_abyss_faction_ship_Pus_Constellation
+            roz_abyss_faction_ship_Void_Gnawer
+            roz_abyss_faction_ship_Memory_Dissolver
+            roz_abyss_faction_ship_Temporal_Abscess
+            roz_abyss_faction_ship_Reality_Dissociator
+            roz_abyss_faction_ship_Primordial_Festering
+            roz_abyss_faction_ship_Abyss_Maw
+            roz_abyss_faction_ship_Eternal_Dark_Digestor
+            roz_abyss_faction_ship_Abyss_Stomach
+            roz_abyss_faction_ship_Dark_Tide_Esophagus
+            roz_abyss_faction_ship_Twisted_Ovum
+            roz_abyss_faction_ship_Mad_Proliferator
+            roz_abyss_faction_ship_Rust_Gospel
+            roz_abyss_faction_ship_Lead-Tear_Pilgrim
+            roz_abyss_faction_ship_Skull_Reaper
+            roz_abyss_faction_ship_Blade_of_Sacrifice
+            roz_abyss_faction_ship_Avatar_of_Rage
+            roz_abyss_faction_ship_Corruptor_of_Lore
+            roz_abyss_faction_ship_Gospel_of_Rot
+            roz_abyss_faction_ship_Ecstatic_Torment
+            roz_abyss_faction_ship_Feast_of_Senses
+            roz_abyss_faction_ship_Perfect_Degeneracy
+            roz_abyss_faction_ship_Flesh-Iron_Amalgam
+            roz_abyss_faction_ship_Screaming_Skull
+            roz_abyss_faction_ship_Abomination_Stitch
+        }
+    }
+    fleet_names = {
+        random_names = {
+            roz_abyss_faction_fleet_Deep_Ones_Wrath
+            roz_abyss_faction_fleet_Dark_Tide
+            roz_abyss_faction_fleet_Eternal_Night_Shroud
+            roz_abyss_faction_fleet_Abyssal_Ambush_Group
+            roz_abyss_faction_fleet_Corrupted_Beacon_Division
+            roz_abyss_faction_fleet_Light-Eaters_Battalion
+            roz_abyss_faction_fleet_Recursive_Abyss
+            roz_abyss_faction_fleet_Finality's_Echo
+        }
+    }
+    army_names = {
+
+    }
+    planet_names = {
+        generic = {
+            names = {
+                roz_abyss_faction_planet_Vortex_of_Deceit
+                roz_abyss_faction_planet_Rift_of_Rage
+                roz_abyss_faction_planet_Blood_River_Hell
+                roz_abyss_faction_planet_Rust_Paradise
+                roz_abyss_faction_planet_Abyss_of_Sensation
+                roz_abyss_faction_planet_Mirror_of_Degeneracy
+                roz_abyss_faction_planet_Gallery_of_Agony
+                roz_abyss_faction_planet_Eye_of_Chaos
+                roz_abyss_faction_planet_Flesh_Forge
+                roz_abyss_faction_planet_Soul_Reaping_Fields
+                roz_abyss_faction_planet_Abyssal_Echo
+                roz_abyss_faction_planet_Core_of_Entropy
+                roz_abyss_faction_planet_Manifest_Fear
+                roz_abyss_faction_planet_Law's_Collapse
+                roz_abyss_faction_planet_Entropy's_End
+            }
+        }
+    }
+    character_names = {
+        default = {
+            full_names = {
+                roz_abyss_faction_character_Voidreaver
+                roz_abyss_faction_character_Abysswalker
+                roz_abyss_faction_character_Nyxmarrow
+                roz_abyss_faction_character_Oblivious
+                roz_abyss_faction_character_Entropath
+                roz_abyss_faction_character_Dreadmaw
+                roz_abyss_faction_character_Nullgrav
+                roz_abyss_faction_character_Nebulord
+                roz_abyss_faction_character_Vanthar
+                roz_abyss_faction_character_Xal'zoth
+                roz_abyss_faction_character_Zeravox
+                roz_abyss_faction_character_Vorpex
+                roz_abyss_faction_character_Mortis
+            }
+        }
+    }
+}

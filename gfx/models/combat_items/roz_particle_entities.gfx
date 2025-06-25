@@ -1,4 +1,4 @@
-objectTypes = {
+objectTypes = { #不太particle
     pdxmesh = {
         name = "roz_abyss_rift_cascade_l_projectile_mesh"
         file = "gfx/models/combat_items/tracer_round.mesh"
@@ -27,5 +27,19 @@ objectTypes = {
             index = 0
             shader = "PdxMeshAtmosphereStar"
         }
+    }
+
+    pdxmesh = {
+        name = "roz_abyss_swarmers_mesh"
+        file = "gfx/models/ships/other/space_amoeba.mesh"
+        meshsettings = {
+            texture_diffuse = roz_ship_mask_red.dds
+            shader = "PdxMeshExtraDimensionalShip"
+        }
+        animation = { id = "idle"			type = "space_amoeba_idle_animation" }
+        animation = { id = "moving"			type = "space_amoeba_moving_animation" }
+        animation = { id = "death"			type = "space_amoeba_death_animation" }
+
+        scale = 1.0
     }
 }
