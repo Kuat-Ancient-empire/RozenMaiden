@@ -1470,3 +1470,55 @@ leader_trait_roz_test_HD = {
 		commander
 	}
 }
+
+##############abyss crisis
+leader_trait_roz_abyss_leader_1 = {
+	initial = no
+	randomized = no
+	immortal_leaders = yes
+	leader_trait_type = veteran
+	leader_trait_rarity = paragon
+	icon = gfx/interface/icons/traits/leader_trait_roz_abyss_leader_1.dds
+	leader_class = {
+		commander
+		official
+		scientist
+	}
+	triggered_modifier = {
+		potential = {
+			leader_class = commander
+			owner = { has_country_flag = roz_madgod_force_country_flag }
+		}
+		ship_weapon_damage = 0.1
+	}
+	notify_on_gained = no
+}
+
+leader_trait_roz_abyss_leader_Uranus = {
+	initial = no
+	randomized = no
+	immortal_leaders = yes
+	leader_trait_type = destiny
+	leader_trait_rarity = paragon
+	icon = gfx/interface/icons/traits/leader_trait_roz_abyss_leader_Uranus.dds
+	leader_class = {
+		commander
+		official
+		scientist
+	}
+	triggered_modifier = {
+		potential = {
+			leader_class = commander
+			owner = { has_country_flag = roz_madgod_force_country_flag }
+		}
+		ship_weapon_damage = 1.0
+	}
+	notify_on_gained = no
+}
+
+
+
+
+
+
+

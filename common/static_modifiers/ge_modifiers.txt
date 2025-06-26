@@ -784,3 +784,8 @@ roz_unholy_invasion_difficult_modifier = {
 	ship_tracking_mult = 1.0
 	ship_accuracy_mult = 1.0
 }
+
+roz_madgod_country_naval_country_buff = {
+	country_naval_cap_add = 40000
+	command_limit_add = 2000
+}

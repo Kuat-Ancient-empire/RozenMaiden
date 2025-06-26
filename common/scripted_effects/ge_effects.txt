@@ -1,4 +1,5 @@
 get_ge_leader_target = {
+	optimize_memory
 	random_owned_leader = {
 		limit = {
 			has_leader_flag = $flag$
@@ -9,6 +10,7 @@ get_ge_leader_target = {
 
 generate_sgt_site_on_game_start = {
 	##scope = country
+	optimize_memory
 	random_planet_within_border = {
 		weights = {
 			base = 1
@@ -50,6 +52,58 @@ generate_sgt_site_on_game_start = {
 						set_country_flag = roz_sgt_site_owner_flag_for_multiplayer
 					}
 				}
+			}
+		}
+	}
+}
+
+generate_sgt_site_on_game_start_when_singleplayer = {
+	optimize_memory
+	if = {
+		limit = { is_multiplayer = no }
+		spawn_system = {
+			min_distance = 7
+			min_jumps = 0
+			initializer = trinary_init_01
+			hyperlane = yes
+		}
+		last_created_system = {
+			set_name = random
+			set_star_flag = ge_suigintou_site_star_flag
+			set_timed_star_flag = {
+				flag = ge_suigintou_site_counted
+				days = 1
+			}
+			#_[挖掘地sstm隔离debug]
+			random_system_planet = {
+				limit = {
+					has_owner = no
+					is_colony = no
+					has_anomaly = no
+					NOR = {
+						exists = archaeological_site
+						has_planet_flag = hatchling_egg
+					}
+					OR = {
+						is_planet_class = pc_molten
+						is_planet_class = pc_barren
+						is_planet_class = pc_barren_cold
+						is_planet_class = pc_toxic
+						is_planet_class = pc_frozen
+						is_planet_class = pc_nuked
+					}
+				}
+				set_name = "NAME_ge_sgt_site_planet"						#_星球改名
+				change_pc = pc_black_hole
+				set_planet_size = 1
+				clear_deposits = yes
+				#add_deposit = ge_sgt_depo	#_添加deposit
+				set_planet_flag = ge_planet_flag_sgt@root
+				create_archaeological_site = ge_sgt_site
+				root = {
+					set_country_flag = ge_sgt_site_owner_flag_for_multiplayer
+				}
+				save_global_event_target_as = roz_n_field_site_target@root
 			}
 		}
 	}

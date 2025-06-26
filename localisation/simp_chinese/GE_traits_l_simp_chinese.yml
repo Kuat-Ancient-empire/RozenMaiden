@@ -189,13 +189,13 @@ leader_trait_roz_a_love_desc:0 "对蔷薇少女们来说，哪怕是死亡也无
 
 ##############vanilla
 
- councilor_trait:1 "§c领袖特质§!\n£council£理事会" # [LocEditor:ForFutureBatchExport]
- leader_trait:0 "§c领袖特质§!"
- admiral_trait:1 "§c领袖特质§!\n£admiral£舰队司令类别"
- general_trait:1 "§c领袖特质§!\n£general£陆军将领类别"
- scientist_trait:1 "§c领袖特质§!\n£scientist£科学家类别"
- governor_trait:1 "§c领袖特质§!\n£governor£总督类别"
- ruler_trait:0 "统治者特质"
+ # councilor_trait:1 "§c领袖特质§!\n£council£理事会" # [LocEditor:ForFutureBatchExport]
+ # leader_trait:0 "§c领袖特质§!"
+ # admiral_trait:1 "§c领袖特质§!\n£admiral£舰队司令类别"
+ # general_trait:1 "§c领袖特质§!\n£general£陆军将领类别"
+ # scientist_trait:1 "§c领袖特质§!\n£scientist£科学家类别"
+ # governor_trait:1 "§c领袖特质§!\n£governor£总督类别"
+ # ruler_trait:0 "统治者特质"
 
 
 ########################
@@ -203,7 +203,10 @@ leader_trait_roz_a_love_desc:0 "对蔷薇少女们来说，哪怕是死亡也无
  leader_trait_ge_mercury_lamp_title:0 "§r命定特质§!（£council£）"
 
 
-
-
+##############abyss crisis
+ leader_trait_roz_abyss_leader_1: "§_被深渊侵蚀§!"
+ leader_trait_roz_abyss_leader_1_desc: "§P该领袖被深渊侵蚀，它的过去已失去所有意义，它的未来只为银河带来毁灭§!"
+ leader_trait_roz_abyss_leader_Uranus: "§R乌拉诺斯§!"
+ leader_trait_roz_abyss_leader_Uranus_desc: "§P乌拉诺斯，一个象征希望和未来的神名，如今已被疯狂与偏执同化。祂渴望以深渊的力量再行创世，将这个宇宙拖入深渊的怀抱。§!"
 
 

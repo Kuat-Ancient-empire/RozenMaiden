@@ -3,7 +3,6 @@ roz_junn_country_create = {
 	create_country = {
 		name = "NAME_nfield_junn"
 		type = ge_N_Field
-		name_list = roz_abyss_faction
 		flag = {
 			icon = {
 				category = "nfield_junn"
@@ -69,6 +68,7 @@ roz_hinaichigo_country_create = {
 roz_madgod_country_initiate = {
 	optimize_memory
 	create_species = {
+		name_list = roz_abyss_faction
 		name = random
 		class = random_non_machine
 		portrait = random
@@ -78,6 +78,7 @@ roz_madgod_country_initiate = {
 		}
 	}
 	create_country = {
+		name_list = roz_abyss_faction
 		name = NAME_madgod_force_country
 		type = roz_madgod_empire
 		ignore_initial_colony_error = yes
@@ -106,6 +107,7 @@ roz_madgod_country_initiate = {
 		ethos = {
 			ethic = ethic_gestalt_consciousness
 		}
+		effect = { add_modifier = { modifier = roz_madgod_country_naval_country_buff } }
 	}
 	last_created_country = {
 		set_country_flag = roz_madgod_force_country_flag
@@ -1773,6 +1775,29 @@ roz_abyss_ship_create = {
 	}
 }
 
+roz_abyss_leader_create = {
+	optimize_memory
+	event_target:roz_madgod_force_country@root = {
+		create_leader = {
+			name = $name$
+			class = $leader_class$
+			skill = 10
+			set_age = 9527
+			custom_catch_phrase = roz_abyss_leader_ccp
+			custom_description = roz_abyss_leader_cd
+			hide_age = yes
+			immortal = yes
+			randomize_traits = yes
+			skip_background_generation = yes
+			effect = {
+				change_leader_portrait = roz_exd_$color$
+				freeze_leader_age = yes
+				add_trait = { trait = $trait1$ }
+			}
+		}
+	}
+}
+
 roz_abyss_fleet_create_small = {
 	optimize_memory
 	create_fleet = {
@@ -1782,7 +1807,8 @@ roz_abyss_fleet_create_small = {
 			is_boss = no
 		}
 		effect = {
-			set_owner = event_target:roz_madgod_force_country@root
+			set_fleet_flag = roz_abyss_fleet_small
+			set_owner = $owner$
 			roz_abyss_ship_create = {
 				num_ships = 16
 				design = probe_design_A
@@ -1794,11 +1820,18 @@ roz_abyss_fleet_create_small = {
 				name = random
 			}
 			set_location = {
-				target = event_target:roz_n_field_site_target@root
+				target = $location$
 				distance = 45
 				angle = random
 			}
 		}
+	}
+}
+roz_abyss_fleet_create_small_in_diff = {
+	optimize_memory
+	while = {
+		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		roz_abyss_fleet_create_small = { owner = $owner$ location = $location$ }
 	}
 }
 
@@ -1811,7 +1844,8 @@ roz_abyss_fleet_create_median = {
 			is_boss = no
 		}
 		effect = {
-			set_owner = event_target:roz_madgod_force_country@root
+			set_fleet_flag = roz_abyss_fleet_median
+			set_owner = $owner$
 			roz_abyss_ship_create = {
 				num_ships = 16
 				design = probe_design_A
@@ -1828,12 +1862,20 @@ roz_abyss_fleet_create_median = {
 				name = random
 			}
 			set_location = {
-				target = event_target:roz_n_field_site_target@root
+				target = $location$
 				distance = 45
 				angle = random
 			}
 		}
 	}
+}
+roz_abyss_fleet_create_median_in_diff = {
+	optimize_memory
+	while = {
+		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		roz_abyss_fleet_create_median = { owner = $owner$ location = $location$ }
+	}
+
 }
 
 roz_abyss_fleet_create_large = {
@@ -1845,7 +1887,7 @@ roz_abyss_fleet_create_large = {
 			is_boss = no
 		}
 		effect = {
-			set_owner = event_target:roz_madgod_force_country@root
+			set_owner = $owner$
 			roz_abyss_ship_create = {
 				num_ships = 16
 				design = battlecruiser_design_A
@@ -1857,23 +1899,32 @@ roz_abyss_fleet_create_large = {
 				name = random
 			}
 			set_location = {
-				target = event_target:roz_n_field_site_target@root
+				target = $location$
 				distance = 45
 				angle = random
 			}
 		}
 	}
 }
+roz_abyss_fleet_create_large_in_diff = {
+	optimize_memory
+	while = {
+		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		roz_abyss_fleet_create_large = { owner = $owner$ location = $location$ }
+	}
+
+}
 
 roz_abyss_fleet_create_marvelous = {
 	optimize_memory
 	create_fleet = {
-		name = random
+		name = NAME_roz_abyss_marvelous_fleet
 		settings = {
 			spawn_debris = no
 			is_boss = yes
 		}
 		effect = {
+			set_fleet_flag = roz_abyss_fleet_marvelous
 			set_owner = event_target:roz_madgod_force_country@root
 			roz_abyss_ship_create = {
 				num_ships = 24
@@ -1884,6 +1935,43 @@ roz_abyss_fleet_create_marvelous = {
 				num_ships = 12
 				design = titan_design_A
 				name = random
+			}
+			set_location = {
+				target = event_target:roz_n_field_site_target@root
+				distance = 45
+				angle = random
+			}
+		}
+	}
+}
+roz_abyss_fleet_create_marvelous_in_diff = {
+	optimize_memory
+	while = {
+		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		roz_abyss_fleet_create_marvelous = yes
+	}
+}
+
+roz_abyss_fleet_create_madgod_boss = {
+	optimize_memory
+	create_fleet = {
+		name = NAME_roz_abyss_madgod_boss
+		settings = {
+			spawn_debris = no
+			is_boss = yes
+		}
+		effect = {
+			set_fleet_flag = roz_abyss_fleet_madgod_boss
+			set_owner = event_target:roz_madgod_force_country@root
+			roz_abyss_ship_create = {
+				num_ships = 8
+				design = titan_design_A
+				name = random
+			}
+			roz_abyss_ship_create = {
+				num_ships = 1
+				design = madgod_boss_design_A
+				name = NAME_roz_abyss_madgod_boss
 			}
 			set_location = {
 				target = event_target:roz_n_field_site_target@root

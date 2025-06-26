@@ -71,6 +71,7 @@ NAME_sgt: "sgt"
  NAME_roz_abyss_median_fleet: "深渊巡航舰队"
  NAME_roz_abyss_large_fleet: "深渊主力舰队"
  NAME_roz_abyss_marvelous_fleet: "神国近卫舰队"
+ NAME_roz_abyss_madgod_boss: "神躯"
  NAME_roz_abyss_pioneer_1: "信使"
 
  suigintou_backstory: "§g来自黑洞之门的神秘存在§!\n§rN之领域的永恒掌控者§!\n§R不可言说的伟岸身躯§!\n§M蔷薇少女第一人偶——水银灯§!"
@@ -83,6 +84,9 @@ kirakishou_gen_catch_phrase: ""
 
 shinku_backstory: "§r跨越永眠而归的抗争者§!\n§Y优雅高贵的红之女王§!\n§R完美无瑕的爱丽丝§!\n§H蔷薇少女第五人偶——真红§!"
 shinku_gov_catch_phrase: ""
+
+ roz_abyss_leader_ccp: ""
+ roz_abyss_leader_cd: "§_深渊的奴仆§!\n§_疯狂的思绪§!\n§_注定的死亡§!"
 
 ge_black_dragon: "黑羽龙"
 ge_kirakishou_avatar: "化身"
@@ -161,7 +165,7 @@ NAME_roz_lgate_starbase:0 "银河极点"
  roz_abyss_faction_character_Voidreaver: "§R沃德瑞弗§!"
  roz_abyss_faction_character_Abysswalker: "§R阿比斯沃克§!"
  roz_abyss_faction_character_Nyxmarrow: "§R尼克斯马洛§!"
- roz_abyss_faction_character_Oblivious: "§R奥布利维奥斯§!" #我，勿畏遗忘
+ roz_abyss_faction_character_Oblivious: "§R奥布利维奥斯§!" #ob一串字母
  roz_abyss_faction_character_Entropath: "§R恩特罗帕斯§!"
  roz_abyss_faction_character_Dreadmaw: "§R德雷德莫§!"
  roz_abyss_faction_character_Nullgrav: "§R纳尔格拉夫§!"
@@ -170,5 +174,5 @@ NAME_roz_lgate_starbase:0 "银河极点"
  roz_abyss_faction_character_Xal'zoth: "§R萨尔佐斯§!"
  roz_abyss_faction_character_Zeravox: "§R泽拉沃克斯§!"
  roz_abyss_faction_character_Vorpex: "§R沃佩克斯§!"
- roz_abyss_faction_character_Mortis: "§c墨提斯§!"
+ roz_abyss_faction_character_Mortis: "§c墨提斯§!"  #我，勿畏死亡
 

@@ -2549,7 +2549,46 @@ country_event = {
     }
 }
 
+####刷怪
+country_event = {
+    id = roz_shinku_evt.535
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = roz_abyss_faction_arrival
+    }
+    immediate = {
+        #为深渊仆从国刷舰队，该舰队所有者为其本身
+        every_country = {
+            limit = { has_country_flag = roz_abyss_vass_country }
+            while = {
+                count = 2
+                roz_abyss_fleet_create_small_in_diff = {
+                    owner = prev
+                    location = prev.capital_scope
+                }
+                random_owned_planet = {
+                    limit = { is_capital = no }
+                    roz_abyss_fleet_create_small_in_diff = {
+                        owner = prevprev
+                        location = prev
+                    }
+                }
+            }
+            roz_abyss_fleet_create_median_in_diff = {
+                owner = prev
+                location = prev.capital_scope
+            }
+        }
 
+        #刷boss
+        event_target:roz_madgod_force_country@root = {
+            while = { count = 2 roz_abyss_fleet_create_large_in_diff = yes }
+            roz_abyss_fleet_create_marvelous_in_diff = yes
+            roz_abyss_fleet_create_madgod_boss = yes
+        }
+    }
+}
 
 #墨水人首次被击败
 country_event = {

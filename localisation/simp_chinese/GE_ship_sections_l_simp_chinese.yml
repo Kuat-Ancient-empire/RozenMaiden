@@ -146,8 +146,10 @@ gev_platform_DESC:0 "防御平台将保持静止并向射程内的任何敌人�
  roz_crisis_ship_probe_DESC: "$roz_crisis_ship_probe$"
  roz_crisis_ship_probe_cap: "$roz_crisis_ship_probe$"
  roz_crisis_ship_probe_section: "愉悦之体"
-
-
+ roz_crisis_madgod_boss: "深渊感染体"
+ roz_crisis_madgod_boss_DESC: "$roz_crisis_madgod_boss$"
+ roz_crisis_madgod_boss_cap: "$roz_crisis_madgod_boss$"
+ roz_crisis_madgod_boss_section: "混沌神躯"
 ###字体颜色代码
 ##§W W白色
 ##§R R红色

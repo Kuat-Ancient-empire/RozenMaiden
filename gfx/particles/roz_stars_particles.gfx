@@ -5,6 +5,11 @@ objectTypes = {
         scale = 40
     }
     pdxparticle = {
+        name = roz_madgod_star_effect
+        type = roz_madgod_star_effect_file
+        scale = 40
+    }
+    pdxparticle = {
 		name = "roz_toxic_class_star_effect"
 		type = "roz_toxic_class_star_file"
 	
