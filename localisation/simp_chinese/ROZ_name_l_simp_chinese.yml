@@ -4,7 +4,14 @@ l_simp_chinese:
 
 ######synced
 ##########
-NAME_nfield:0 "N之领域"
+ ########name
+ ########
+ NAME_ge_suigintou:0 "§M水银灯§!"
+ NAME_ge_sgt_site_planet:0 "不明黑洞"
+ NAME_ge_sgt_site_planet_after:0 "N之领域入口"
+ NAME_roz_abyss_fleet_outpost: "§_侵蚀据点§!"
+
+ NAME_nfield:0 "N之领域"
 NAME_nfield_suigintou: "N之领域-水银灯"
 NAME_nfield_krks: "N之领域-雪华绮晶"
 NAME_nfield_junn: "人偶师-樱田纯"
@@ -13,6 +20,7 @@ NAME_nfield_hinaichigo: "N之领域-雏莓"
 NAME_ge_br:0 "黑蔷薇"
 NAME_ge_vfs:0 "Y*%§R<数据错误>§!恒"
 NAME_ap_ge_0:0 "N之领域的财富"
+ NAME_roz_Uranus: "§R乌拉诺斯§!"
 
 NAME_suigintou: "すいぎんとう"
 NAME_Kirakishou: "きらきしょう"

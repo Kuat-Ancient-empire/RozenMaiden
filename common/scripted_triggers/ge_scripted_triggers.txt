@@ -288,8 +288,43 @@ roz_is_regular_authority = {
 	}
 }
 
+roz_is_all_abyss_killed_except_madgod_system = {
+	optimize_memory
+	#abyss vass
+	any_playable_country = { NOT = { has_country_flag = roz_abyss_vass_country } }
+	any_system = {
+		has_star_flag = roz_abyss_fleet_outpost_system
+		OR = {
+			NOT = { any_fleet_in_system = { owner = { is_same_value = event_target:roz_madgod_force_country@$scope$ } } }
+			any_fleet_in_system = {
+				NOR = {
+					has_fleet_flag = roz_abyss_fleet_small
+					has_fleet_flag = roz_abyss_fleet_median
+					has_fleet_flag = roz_abyss_fleet_large
+					has_fleet_flag = roz_abyss_fleet_marvelous
+				}
+			}
+		}
+	}
+}
 
-
-
+#可被深渊势力轰炸的星球
+#scope (planet)
+roz_planet_can_bombed_by_abyss_crisis = {
+	optimize_memory
+	is_colony = yes
+	NOT = {
+		any_playable_country = { has_country_flag = roz_abyss_vass_country prev = { is_controlled_by = prev } }
+	}
+	if = { #在星球已经受到轰炸的前提下，排除可能已经被多支舰队锁定为目标的星球
+		limit = { any_fleet_in_orbit = { any_playable_country = { has_country_flag = roz_abyss_vass_country prev = { is_controlled_by = prev } } } }
+		solar_system = {
+			count_fleet_in_system = {
+				limit = { any_playable_country = { has_country_flag = roz_abyss_vass_country prev = { is_controlled_by = prev } } }
+				count < 2
+			}
+		}
+	}
+}
 
 

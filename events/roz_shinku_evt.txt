@@ -2556,6 +2556,9 @@ country_event = {
     is_triggered_only = yes
     trigger = {
         has_country_flag = roz_abyss_faction_arrival
+        any_playable_country = {
+            has_country_flag = roz_abyss_vass_country
+        }
     }
     immediate = {
         #为深渊仆从国刷舰队，该舰队所有者为其本身
@@ -2563,47 +2566,135 @@ country_event = {
             limit = { has_country_flag = roz_abyss_vass_country }
             while = {
                 count = 2
-                roz_abyss_fleet_create_small_in_diff = {
+                roz_abyss_fleet_create_small_defense_in_diff = {
                     owner = prev
                     location = prev.capital_scope
-                }
-                random_owned_planet = {
-                    limit = { is_capital = no }
-                    roz_abyss_fleet_create_small_in_diff = {
-                        owner = prevprev
-                        location = prev
-                    }
+
                 }
             }
-            roz_abyss_fleet_create_median_in_diff = {
+            roz_abyss_fleet_create_median_defense_in_diff = {
                 owner = prev
                 location = prev.capital_scope
             }
+            every_owned_planet = {
+                limit = {
+                    is_capital = no
+                    solar_system = { any_system_planet = { is_colony = yes } }
+                }
+                roz_abyss_fleet_create_small_defense_in_diff = {
+                    owner = prevprev
+                    location = prev
+                }
+            }
         }
-
+        #随机星系刷据点
+        roz_abyss_fleet_outpost_create_in_diff = yes
         #刷boss
         event_target:roz_madgod_force_country@root = {
-            while = { count = 2 roz_abyss_fleet_create_large_in_diff = yes }
-            roz_abyss_fleet_create_marvelous_in_diff = yes
+            while = { count = 2 roz_abyss_fleet_create_large_defense_in_diff = yes }
+            roz_abyss_fleet_create_marvelous_defense_in_diff = yes
             roz_abyss_fleet_create_madgod_boss = yes
         }
     }
 }
 
+#墨水人乌拉诺斯初次复活
+ship_event = {
+    #madgod boss disable effect
+    id = roz_shinku_evt.547
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ship_size = roz_crisis_madgod_boss
+        from = { owner = { NOT = { has_country_flag = roz_crisis_madgod_boss_first_blood } } }
+    }
+    immediate = {
+        #由击败者触发
+        from = { owner = { country_event = { id = roz_shinku_evt.550 } } }
+        #复活
+        if = {  #检测深渊势力是否只剩下boss星系，如果返回yes，则只给予最后一次复活
+            limit = { roz_is_all_abyss_killed_except_madgod_system = { scope = prevprevprev.from } }
+            roz_ship_disable_protect_effect = yes
+            set_disable_at_health = -1
+            from = { owner = {
+                country_event = { id = roz_shinku_evt.555 }
+                set_country_flag = roz_crisis_madgod_boss_last_breath
+            } }
+        }
+        else = {    #否则将无限复活
+            ship_event = { id = roz_shinku_evt.549 days = 5 }
+            from = { owner = { country_event = { id = roz_shinku_evt.555 days = 5 } } }
+        }
+    }
+}
+
+#墨水人乌拉诺斯复活机制
+ship_event = {
+    #madgod boss disable effect
+    id = roz_shinku_evt.548
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ship_size = roz_crisis_madgod_boss
+        from = { owner = { has_country_flag = roz_crisis_madgod_boss_first_blood } }
+    }
+    immediate = {
+        #复活
+        if = {  #检测深渊势力是否只剩下boss星系，如果返回yes，则只给予最后一次复活
+            limit = { roz_is_all_abyss_killed_except_madgod_system = { scope = prevprevprev.from } }
+            roz_ship_disable_protect_effect = yes
+            set_disable_at_health = -1
+            from = { owner = {
+                country_event = { id = roz_shinku_evt.555 }
+                set_country_flag = roz_crisis_madgod_boss_last_breath
+            } }
+        }
+        else = {
+            ship_event = { id = roz_shinku_evt.549 }
+            from = { owner = { country_event = { id = roz_shinku_evt.555 } } }
+        }
+    }
+}
+
+ship_event = {
+    id = roz_shinku_evt.549
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = { is_ship_size = roz_crisis_madgod_boss }
+    immediate = { roz_ship_disable_protect_effect = yes }
+}
+
 #墨水人首次被击败
 country_event = {
     id = roz_shinku_evt.550
-    title = roz_shinku_evt.550.desc
+    title = roz_shinku_evt.550.title
+    desc = roz_shinku_evt.550.desc
     is_triggered_only = yes
-    picture = GFX_
+    show_sound = event_space_battle
+    picture = GFX_evt_large_explosion
     trigger = {
         is_ai = no
+        NOT = { has_country_flag = roz_crisis_madgod_boss_first_blood }
+    }
+    abort_trigger = { has_active_event = { roz_shinku_evt.555 roz_shinku_evt.551 } }
+    abort_effect = {
+        add_resource = { influence = 100 }
+        add_modifier = { modifier = roz_madgod_country_foible }
+        hidden_effect = {
+            if = {
+                limit = { NOT = { has_active_event = { roz_shinku_evt.551 } } }
+                country_event = { id = roz_shinku_evt.551 days = 2 }
+            }
+        }
     }
     immediate = {
-        
+        set_country_flag = roz_crisis_madgod_boss_first_blood
     }
     option = {
         name = roz_shinku_evt.550.aa
+        add_resource = { influence = 100 }
+        add_modifier = { modifier = roz_madgod_country_foible }
+        hidden_effect = { country_event = { id = roz_shinku_evt.551 days = 2 } }
     }
 }
 
@@ -2612,7 +2703,9 @@ country_event = {
     id = roz_shinku_evt.551
     title = roz_shinku_evt.551.desc
     is_triggered_only = yes
-    picture = GFX_
+    diplomatic = yes
+    show_sound = event_screams
+    picture_event_data = { room = roz_madgod_room }
     trigger = {
         is_ai = no
     }
@@ -2627,21 +2720,44 @@ country_event = {
 #击杀墨水人后复活时
 country_event = {
     id = roz_shinku_evt.555
-    title = roz_shinku_evt.555.desc
+    title = roz_shinku_evt.555.title
+    desc = {
+        trigger = { NOT = { has_country_flag = roz_crisis_madgod_boss_last_breath } }
+        text = roz_shinku_evt.555.desc1
+    }
+    desc = {
+        trigger = { has_country_flag = roz_crisis_madgod_boss_last_breath }
+        text = roz_shinku_evt.555.desc2
+    }
     is_triggered_only = yes
-    picture = GFX_
+    picture = GFX_evt_chronos_storm
     trigger = {
-        is_ai = no
+        NOT = { has_active_event = { roz_shinku_evt.555 } }
+        OR = {
+            NOT = { has_country_flag = roz_crisis_madgod_boss_revive_dont_remind }
+            has_country_flag = roz_crisis_madgod_boss_last_breath
+        }
     }
     immediate = {
         
     }
     option = {
         name = roz_shinku_evt.555.aa
+        trigger = { NOT = { has_country_flag = roz_crisis_madgod_boss_last_breath } }
     }
     option = {
-        name = roz_shinku_SK_invasion_ignore
+        name = roz_shinku_evt.SK_invasion_ignore
         custom_tooltip = roz_shinku_evt.SK_invasion_ignore.ct
+        trigger = { NOT = { has_country_flag = roz_crisis_madgod_boss_last_breath } }
+        hidden_effect = { set_country_flag = roz_crisis_madgod_boss_revive_dont_remind }
+    }
+    option = {
+        name = roz_shinku_evt.555.bb
+        trigger = { has_country_flag = roz_crisis_madgod_boss_last_breath }
+        add_resource = { unity = 2500 }
+        hidden_effect = {
+            ###给穷途末路的boss上修正
+        }
     }
 }
 
@@ -2650,9 +2766,15 @@ country_event = {
     id = roz_shinku_evt.560
     title = roz_shinku_evt.560.desc
     is_triggered_only = yes
-    picture = GFX_
+    picture = GFX_evt_roz_madgod_system
     trigger = {
         is_ai = no
+        fromfrom = {
+            exists = starbase
+            solar_system = { is_same_value = event_target:roz_n_field_site_target@root }
+        }
+        NOT = { has_country_flag = roz_crisis_madgod_system_lost_dont_remind }
+        NOT = { has_active_event = { roz_shinku_evt.560 } }
     }
     immediate = {
         
@@ -2661,17 +2783,20 @@ country_event = {
         name = roz_shinku_evt.560.aa
     }
     option = {
-        name = roz_shinku_SK_invasion_ignore
+        name = roz_shinku_evt.SK_invasion_ignore
         custom_tooltip = roz_shinku_evt.SK_invasion_ignore.ct
+        hidden_effect = { set_country_flag = roz_crisis_madgod_system_lost_dont_remind }
     }
 }
 
 #深渊分遣舰队再次出现
+
+
 country_event = {
     id = roz_shinku_evt.563
     title = roz_shinku_evt.563.desc
     is_triggered_only = yes
-    picture = GFX_
+    picture = GFX_evt_roz_evt_subspace_1
     trigger = {
         is_ai = no
     }

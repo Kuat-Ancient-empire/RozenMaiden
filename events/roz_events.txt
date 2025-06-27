@@ -26,6 +26,7 @@ country_event = {
 		}
 	}
 	immediate = {
+		#ruler = { change_background_job = KZ_VOY_star_chosen_job }
 		set_global_flag = roz_global_flag
 		set_timed_country_flag = { flag = roz_abyss_vass_can_create_timed years = 5 }
 		#set_global_flag = ge_test_activated

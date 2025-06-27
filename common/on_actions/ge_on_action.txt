@@ -29,7 +29,6 @@ VOP_on_monthly_pulse_country = {
 		ge_affection.23	#汞灯作为科学家处于内阁时加好感值
 		ge_event.461	#虚空科技起源-研究片段4触发
 		ge_affection.12	#好感度升级
-
 	}
 	random_events = {
 		6 = ge_event.3009	#致敬亚伦·布什内尔
@@ -157,6 +156,8 @@ on_ship_disabled = {
 	events = {
 		ge_skills.42	#永恒之枪
 		ge_skills.50	#王座
+		roz_shinku_evt.547 #墨水人乌拉诺斯初次复活
+		roz_shinku_evt.548 #墨水人乌拉诺斯复活机制
 	}
 }
 
@@ -253,6 +254,7 @@ on_ship_destroyed_victim = {
 		#ge_skills.40
 		roz_shinku_evt.530
 		roz_shinku_evt.531
+		roz_shinku_evt.560	#破败神国星系沦陷
 	}
 }
 

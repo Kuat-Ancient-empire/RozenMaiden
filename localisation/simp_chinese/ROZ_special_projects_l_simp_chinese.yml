@@ -219,7 +219,8 @@ roz_abyss_victims: "§R被深渊吞噬的船只§!"
 
 roz_abyss_vass_country_name: "§R深渊仆从国§!"
 roz_abyss_vass_country_desc: "['concept_roz_abyss_vass']"
-
+roz_abyss_fleet_outpost_target: "$NAME_roz_abyss_fleet_outpost$"
+roz_abyss_fleet_outpost_target_desc: "深渊感染体已将触手伸向了该星球，并把它转化为了联通深渊入侵力量的门户。\n\n§Y肃清该星系内的深渊势力并阻止其反扑力量可以彻底摧毁这处据点。§!"
 
 
 

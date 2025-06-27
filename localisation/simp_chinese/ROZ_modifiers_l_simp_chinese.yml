@@ -50,16 +50,15 @@
  mod_leader_governors_influence_produces_add:"$country_base_influence_produces_add$"
  mod_leader_commanders_sr_rosa_mystica_produces_add:"$mod_country_sr_rosa_mystica_produces_add$"
 
-
  mod_leader_scientists_sr_void_core_produces_add: "每月£sr_void_core£§Y虚空核心§!"
  mod_leader_admirals_sr_zro_produces_add: "每月£sr_zro£§Y泽洛§!"
  mod_country_sr_void_core_produces_mult: "每月£sr_void_core£§Y虚空核心§!"
 
-
  mod_leader_scientists_time_produces_add: "每月£time£时间"
-
  mod_country_resource_max_alloys_add:"£alloys£资源存储上限"
  mod_country_resource_max_energy_add:"£energy£资源存储上限"
+
+ mod_damage_vs_country_type_roz_madgod_empire_mult: "£mod_ship_weapon_damage£§c对深渊感染体伤害§!"
 
  roz_ge_event_50_aa_modifier: "非我族类"
  roz_ge_event_50_bb_modifier: "求同存异"
@@ -83,7 +82,8 @@
  roz_anti_Stealth_suppress_to_fallen_empire:"反隐形探测压制"
  roz_anti_Stealth_suppress_to_fallen_empire_desc:"反隐形探测压制"
  roz_FallenGod_invasion_prepare:"深渊备战"
-
+ roz_madgod_country_foible: "§c深渊感染体对策§!"
+ roz_madgod_country_foible_desc: "击败深渊感染体的过程为我们累计了战斗经验，再次面对祂时我们的作战将更有效率。"
 
  roz_situation_sgt_flagship_bridge_databank_modifier:0 "神秘传感链路"
  mod_roz_situation_sgt_flagship_bridge_databank_modifier:0 "神秘传感链路"

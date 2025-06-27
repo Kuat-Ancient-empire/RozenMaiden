@@ -525,8 +525,8 @@ roz_shinku_evt.525.aa: "[Root.GetSpeciesName]会记住这些的"
 roz_shinku_evt.525.ct: "在深渊感染体入侵事件中，支持方和反对方阵营会为我们提供可叠加的正负面国家修正，您可以在情报日志中查看更多信息"
 
 #乌拉诺斯首次被击败
-roz_shinku_evt.550.title: "乌拉诺斯被击退"
-roz_shinku_evt.550.desc: "位于[roz_outland_planet@root.solar_system.GetName]星系的深渊感染体头目：乌拉诺斯，或者外号墨水人，本次深渊入侵的罪魁祸首，曾经不可一世地叫嚣要消灭我们，但在经过一番艰苦卓绝的战斗后，终于被我们舰队的强大火力击破防御，无法维持稳定形态，狼狈窜回了亚空间裂缝中。显然祂并没有被彻底消灭，事实上我们的科技水平也无法真正消灭掉这样的一个深渊感染体，但这次失败势必能挫其锋芒，削弱力量，为其他战线的战斗争取更大胜机。\n不知何故乌拉诺斯对[roz_outland_planet@root.solar_system.GetName]星系异常执着，一旦祂再次现界，十有八九仍然会选择入侵这里。我们只需在此部署防御力量就好。"
+roz_shinku_evt.550.title: "乌拉诺斯暂时失能"
+roz_shinku_evt.550.desc: "位于[roz_outland_planet@root.solar_system.GetName]星系的深渊感染体头目：乌拉诺斯，或者外号墨水人，本次深渊入侵的罪魁祸首，曾经不可一世地叫嚣要消灭我们，但在经过一番艰苦卓绝的战斗后，终于被我们舰队的强大火力击破防御，无法维持稳定形态，狼狈窜回了亚空间裂缝中，只留下一具残破的身躯。显然祂并没有被彻底消灭，事实上我们的科技水平也无法真正消灭掉这样的一个深渊感染体，但这次失败势必能挫其锋芒，削弱力量，为其他战线的战斗争取更大胜机。\n不知何故乌拉诺斯对[roz_outland_planet@root.solar_system.GetName]星系异常执着，一旦祂再次现界，十有八九仍然会选择入侵这里。我们必须时刻关注。"
 roz_shinku_evt.550.aa: "我们安全了……暂时的"
 
 #诡异通讯
@@ -539,11 +539,13 @@ roz_shinku_evt.551.ct: "关闭通讯"
 #文案提供的翻译：呃啊唉嘿嗬呜吁呼喂 那个地方 不可能，不可能！ 只要到达那个地方 我还会再来 一定要来！ 你等着 我的珍宝......
 
 #首次击杀墨水人后，墨水人每次复活时
-roz_shinku_evt.555.title: "深渊感染体再次入侵"
-roz_shinku_evt.555.desc: "位于[roz_outland_planet@root.solar_system.GetName]的传感器侦测到熟悉的深渊信号，深渊感染体乌拉诺斯的本体对我们的位面发起了又一次入侵。\n星系中的武装力量正在接敌，曾经被许多人视作绝望灾难的深渊并非不可战胜，凭借先前的作战经验，我们的舰队肯定也一定能夺取这一回的胜利果实。"
-roz_shinku_evt.555.aa: "来多少次就打多少次！"
-roz_shinku_evt.SK_invasion_ignore: "已阅，这种事情以后不用再提醒了"
-roz_shinku_evt.SK_invasion_ignore.ct: "将不再收到任何这个疯子复活的提醒"
+ roz_shinku_evt.555.title: "深渊感染体再次入侵"
+ roz_shinku_evt.555.desc1: "位于[roz_outland_planet@root.solar_system.GetName]的传感器侦测到熟悉的深渊信号，深渊感染体乌拉诺斯的本体对我们的位面发起了又一次入侵。\n星系中的武装力量正在接敌，曾经被许多人视作绝望灾难的深渊并非不可战胜，凭借先前的作战经验，我们的舰队肯定也一定能夺取这一回的胜利果实。"
+ roz_shinku_evt.555.desc2: "我们斩断了深渊感染体$NAME_roz_Uranus$的所有羽翼，这将是祂最后一次入侵，祂不再能依托其他深渊侵蚀作为凭依来复活了！在祂的部队喘过气来之前将之彻底歼灭吧！"
+ roz_shinku_evt.555.aa: "来多少次就打多少次！"
+ roz_shinku_evt.SK_invasion_ignore: "已阅，这种事情以后不用再提醒了"
+ roz_shinku_evt.SK_invasion_ignore.ct: "将不再收到任何这个疯子复活的提醒"
+ roz_shinku_evt.555.bb: "这将是最后一击!"
 
 #破败神国星系首次沦陷时，或者夺回后的每次又沦陷时
 roz_shinku_evt.560.title: "[roz_outland_planet@root.solar_system.GetName]星系沦陷"

@@ -1473,6 +1473,7 @@ leader_trait_roz_test_HD = {
 
 ##############abyss crisis
 leader_trait_roz_abyss_leader_1 = {
+	sorting_priority = 100
 	initial = no
 	randomized = no
 	immortal_leaders = yes
@@ -1495,6 +1496,7 @@ leader_trait_roz_abyss_leader_1 = {
 }
 
 leader_trait_roz_abyss_leader_Uranus = {
+	sorting_priority = 100
 	initial = no
 	randomized = no
 	immortal_leaders = yes

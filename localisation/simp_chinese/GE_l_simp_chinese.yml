@@ -149,13 +149,7 @@ ge_site_sgt_deposit_2: "N之领域综合科研基地"
 
 roz_site_hive_museum_deposit: "巢都博物馆"
 roz_site_hive_museum_deposit_desc: "这是远古先驱们遗留下的丰碑，值得我们永远纪念。"
-
-########name
-########
-NAME_ge_suigintou:0 "§M水银灯§!"
-NAME_ge_sgt_site_planet:0 "不明黑洞"
-NAME_ge_sgt_site_planet_after:0 "N之领域入口"
-
+ 
 #######ap
 ap_ge_0:0 "N之领域的财富"
 ap_ge_0_desc:0 "N之领域使我们证实并坚信多元宇宙的存在，无数的门连接着无数的世界，蔷薇少女便是打开那些门的钥匙，无穷的资源与无尽的知识正在向我们招手...\n属于我们的时代来临了！"
