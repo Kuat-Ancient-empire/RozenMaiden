@@ -2561,20 +2561,19 @@ country_event = {
         }
     }
     immediate = {
-        #为深渊仆从国刷舰队，该舰队所有者为其本身
+        #为深渊仆从国刷防御舰队，该舰队所有者为其本身
         every_country = {
             limit = { has_country_flag = roz_abyss_vass_country }
             while = {
                 count = 2
                 roz_abyss_fleet_create_small_defense_in_diff = {
-                    owner = prev
-                    location = prev.capital_scope
-
+                    owner = prevprev
+                    location = prevprev.capital_scope
                 }
             }
             roz_abyss_fleet_create_median_defense_in_diff = {
-                owner = prev
-                location = prev.capital_scope
+                owner = prevprev
+                location = prevprev.capital_scope
             }
             every_owned_planet = {
                 limit = {
@@ -2582,17 +2581,25 @@ country_event = {
                     solar_system = { any_system_planet = { is_colony = yes } }
                 }
                 roz_abyss_fleet_create_small_defense_in_diff = {
-                    owner = prevprev
-                    location = prev
+                    owner = prevprevprev
+                    location = prevprev
                 }
             }
         }
-        #随机星系刷据点
+        #随机星系刷据点和守卫舰队
         roz_abyss_fleet_outpost_create_in_diff = yes
         #刷boss
         event_target:roz_madgod_force_country@root = {
-            while = { count = 2 roz_abyss_fleet_create_large_defense_in_diff = yes }
+            #防御舰队
+            while = { count = 2
+                roz_abyss_fleet_create_large_defense_in_diff = { owner = prevprev location = event_target:roz_n_field_site_target@root }
+            }
             roz_abyss_fleet_create_marvelous_defense_in_diff = yes
+
+            #进攻舰队
+            roz_abyss_fleet_create_marvelous_attack_in_diff = { owner = prevprev location = event_target:roz_n_field_site_target@root }
+
+            #boss
             roz_abyss_fleet_create_madgod_boss = yes
         }
     }
@@ -2764,7 +2771,8 @@ country_event = {
 #神国星系沦陷
 country_event = {
     id = roz_shinku_evt.560
-    title = roz_shinku_evt.560.desc
+    title = roz_shinku_evt.560.title
+    desc = roz_shinku_evt.560.desc
     is_triggered_only = yes
     picture = GFX_evt_roz_madgod_system
     trigger = {
@@ -2789,12 +2797,48 @@ country_event = {
     }
 }
 
+#进入星系寻路轰炸
+ship_event = {
+    id = roz_shinku_evt.561
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        fleet = { roz_is_abyss_attack_fleet = yes }
+    }
+    immediate = {
+        fleet = { roz_abyss_fleet_invision_action_on_entering_system = yes }
+    }
+}
+
+#月检舰队行为继续寻路星系
+country_event = {
+    id = roz_shinku_evt.562
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        if = {
+            limit = { exists = event_target:roz_madgod_force_country@root }
+            event_target:roz_madgod_force_country@root = {
+                every_owned_fleet = {
+                    limit = {
+                        roz_is_abyss_attack_fleet = yes
+                        solar_system = { any_system_planet = { is_colony = no owner = { NOT = { has_country_flag = roz_abyss_vass_country } } } }
+                    }
+                    roz_abyss_fleet_invision_action_1 = yes
+                }
+            }
+        }
+    }
+}
+
 #深渊分遣舰队再次出现
-
-
 country_event = {
     id = roz_shinku_evt.563
-    title = roz_shinku_evt.563.desc
+    title = roz_shinku_evt.563.title
+    desc = roz_shinku_evt.563.desc
     is_triggered_only = yes
     picture = GFX_evt_roz_evt_subspace_1
     trigger = {
@@ -2815,7 +2859,8 @@ country_event = {
 #占领殖民地星系
 country_event = {
     id = roz_shinku_evt.566
-    title = roz_shinku_evt.566.desc
+    title = roz_shinku_evt.566.title
+    desc = roz_shinku_evt.566.desc
     is_triggered_only = yes
     picture = GFX_
     trigger = {

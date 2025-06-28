@@ -123,11 +123,11 @@ country_event = {
 				}
 			}
 		}
-
-
-
 		hidden_effect = {
-
+			country_event = {
+				id = ge_sites.2
+				days = 40
+			}
 		}
 	}
 }

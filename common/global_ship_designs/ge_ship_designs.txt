@@ -2261,7 +2261,7 @@ ship_design = {
 
 ship_design = {
 	name = roz_crisis_ship_battlecruiser_design_A
-	ship_size = roz_crisis_ship_probe
+	ship_size = roz_crisis_ship_battlecruiser
 
 	section = {
 		template = roz_crisis_ship_battlecruiser_section

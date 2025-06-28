@@ -18,7 +18,7 @@ roz_crisis_ship_battlecruiser = {
     section_slots = { "mid" = { locator = "root" } }
     num_target_locators = 0
     is_space_station = no
-    icon = ship_size_military_16
+    icon = ship_size_military_8
 
     class = shipclass_military
     is_designable = no
@@ -72,7 +72,7 @@ roz_crisis_ship_titan = {
 }
 
 roz_crisis_madgod_boss = {
-    entity = mauler_stage_1_entity
+    entity = roz_madgod_hull_entity
     max_speed = 200
     acceleration = 1
     rotation_speed = 1
@@ -89,7 +89,7 @@ roz_crisis_madgod_boss = {
     section_slots = { "mid" = { locator = "part1" } }
     num_target_locators = 0
     is_space_station = no
-    icon = ship_size_military_16
+    icon = ship_size_military_32
 
     class = shipclass_military
     is_designable = no
@@ -109,7 +109,7 @@ roz_crisis_madgod_boss = {
 
 roz_crisis_ship_probe = {
     #entity = roz_crisis_02_titan_entity
-    entity = mauler_stage_1_entity
+    entity = roz_FCR_entity
     max_speed = 200
     acceleration = 1
     rotation_speed = 1
@@ -126,7 +126,7 @@ roz_crisis_ship_probe = {
     section_slots = { "mid" = { locator = "part1" } }
     num_target_locators = 0
     is_space_station = no
-    icon = ship_size_military_16
+    icon = ship_size_military_1
 
     class = shipclass_military
     is_designable = no

@@ -29,6 +29,8 @@ VOP_on_monthly_pulse_country = {
 		ge_affection.23	#汞灯作为科学家处于内阁时加好感值
 		ge_event.461	#虚空科技起源-研究片段4触发
 		ge_affection.12	#好感度升级
+
+		roz_shinku_evt.562 #月检舰队行为继续寻路星系
 	}
 	random_events = {
 		6 = ge_event.3009	#致敬亚伦·布什内尔
@@ -146,6 +148,8 @@ on_entering_system = {
 		roz_krks_leader_evt.54
 		#ge_test_event.1112
 		ge_skills.40	#永恒之枪
+
+		roz_shinku_evt.561 #深渊舰队寻路
 	}
 }
 

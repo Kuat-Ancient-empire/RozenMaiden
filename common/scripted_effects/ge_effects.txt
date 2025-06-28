@@ -68,6 +68,7 @@ generate_sgt_site_on_game_start_when_singleplayer = {
 			hyperlane = yes
 		}
 		last_created_system = {
+			set_surveyed = { surveyed = yes surveyor = root }
 			set_name = random
 			set_star_flag = ge_suigintou_site_star_flag
 			set_timed_star_flag = {

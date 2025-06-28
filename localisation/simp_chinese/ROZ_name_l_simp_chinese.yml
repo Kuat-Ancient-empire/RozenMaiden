@@ -77,6 +77,7 @@ NAME_sgt: "sgt"
  ###abyss crisis
  NAME_roz_abyss_small_fleet: "深渊游弋舰队"
  NAME_roz_abyss_median_fleet: "深渊巡航舰队"
+ NAME_roz_abyss_median_attck_fleet: "深渊猎杀舰队"
  NAME_roz_abyss_large_fleet: "深渊主力舰队"
  NAME_roz_abyss_marvelous_fleet: "神国近卫舰队"
  NAME_roz_abyss_madgod_boss: "神躯"

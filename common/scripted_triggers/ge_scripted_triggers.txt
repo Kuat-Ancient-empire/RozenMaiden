@@ -313,17 +313,17 @@ roz_is_all_abyss_killed_except_madgod_system = {
 roz_planet_can_bombed_by_abyss_crisis = {
 	optimize_memory
 	is_colony = yes
-	NOT = {
-		any_playable_country = { has_country_flag = roz_abyss_vass_country prev = { is_controlled_by = prev } }
-	}
-	if = { #在星球已经受到轰炸的前提下，排除可能已经被多支舰队锁定为目标的星球
-		limit = { any_fleet_in_orbit = { any_playable_country = { has_country_flag = roz_abyss_vass_country prev = { is_controlled_by = prev } } } }
-		solar_system = {
-			count_fleet_in_system = {
-				limit = { any_playable_country = { has_country_flag = roz_abyss_vass_country prev = { is_controlled_by = prev } } }
-				count < 2
-			}
-		}
+	space_owner = { NOT = { has_country_flag = roz_abyss_vass_country } }
+}
+
+#scope (fleet)
+roz_is_abyss_attack_fleet = {
+	optimize_memory
+	OR = {
+		has_fleet_flag = roz_abyss_attack_fleet_small
+		has_fleet_flag = roz_abyss_attack_fleet_median
+		has_fleet_flag = roz_abyss_attack_fleet_large
+		has_fleet_flag = roz_abyss_attack_fleet_marvelous
 	}
 }
 

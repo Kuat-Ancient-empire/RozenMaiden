@@ -73,12 +73,14 @@ roz_madgod_empire = {
 	uses_origins = no
 	government = no
 	ai = {
-		enabled = yes
-		colonizer = yes
-		construction = yes
-		modules = {
-			invaders_military_minister_module
-		}
+		# enabled = yes
+		# colonizer = yes
+		# construction = yes
+		# modules = {
+		# 	invaders_military_minister_module
+		# 	#invaders_interior_minister_module
+		# }
+		enabled = no
 	}
 	faction = {
 		needs_colony = no
