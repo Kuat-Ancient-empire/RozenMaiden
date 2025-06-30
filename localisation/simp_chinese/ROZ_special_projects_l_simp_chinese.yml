@@ -84,40 +84,6 @@ roz_outland_YS_planet_project: "§M门之钥§!"
 roz_outland_YS_planet_project_DESC: "这颗星球与我们遇到过的虚境星球十分类似，但似乎又些不同：我们没有在其上发现任何虚境灵能反应……"
 roz_outland_locator: "定位：§P破败神国§!"
 roz_outland_locator_DESC: "无需研究，我们已经确定该星系的位置，剩下的只需派遣科研船前往N之领域人口出现的虫洞就能抵达目的地了。"
-  ############
-  weapon_type_ge_void_energy:0 "§B虚空衰变能§!"
-  mod_weapon_type_ge_void_energy_weapon_damage_mult:0 "§B虚空衰变能武器伤害§!"
-  mod_weapon_type_ge_void_energy_weapon_fire_rate_mult:0 "§B虚空衰变能武器射速§!"
-
-weapon_type_roz_abyss:0 "§R深渊§!"
-mod_weapon_type_roz_abyss_weapon_damage_mult:0 "§R深渊侵蚀破坏力§!"
-mod_weapon_type_roz_abyss_weapon_fire_rate_mult:0 "§R深渊侵蚀蔓延效率§!"
-
-
-  ge_mozheng1:0 "§Y善良狡猾二相性§!：§H伤害§!"
-  ge_mozheng1_desc:0 "§Y我们的研究人员百思不得其解: 这个东西到底是谁给我们加上的？？§!"
-
-  ge_mozheng2:0 "§Y善良狡猾二相性§!：§H射速§!"
-  ge_mozheng2_desc:0 "§Y不过好像也不是什么坏事嘛（大概）§!"
-
-  ge_mozheng3: "§Y善良狡猾二相性§!：§H射程§!"
-  ge_mozheng3_desc: "§Y那么，代价是什么？§!"
-
-  ###############army
-  Q_sgt:0 "  §MQ版水银灯军团§!"
-  Q_sgt_desc:0 "这些炼金人偶虽然个头小，单兵火力不足，但是胜在数量管够。"
-
-  Q_titan_sgt: "§M泰坦水银灯§!"
-  Q_titan_sgt_desc:0 "外形和Q版水银灯差不多，但是体型极其巨大，举手投足间足以毁天灭地"
-
-  ###############bombardment
-  bombardment_q_dolls_bombardment:0 "§M轨道轰炸魔法阵§!"
-  bombardment_q_dolls_bombardment_name:0 "§M炼金人偶 - 轨道轰炸魔法阵§!"
-  bombardment_q_dolls_bombardment_desc:0 "水银灯的炼金人偶军团可以在近地轨道展开$bombardment_q_dolls_bombardment$，虽然这些人偶可爱的像个小天使，但是她们释放的轰炸却是敌军的末日。\n-对§Y星球§!造成§H大量§!伤害\n-对§Y军队§!造成§R巨量§!伤害\n-对§Y人口§!造成§G一般§!伤害"
-
-  bombardment_q_dolls_armageddon:0 "§R毁灭轰炸魔法阵§!"
-  bombardment_q_dolls_armageddon_name:0 "§R炼金人偶 - 毁灭轰炸魔法阵§!"
-  bombardment_q_dolls_armageddon_desc:0 "水银灯的炼金人偶军团可以在近地轨道展开$bombardment_q_dolls_armageddon$，虽然这些人偶可爱的像个小天使，但是她们释放的轰炸却是这颗星球的末日。\n-对§Y星球§!造成§R巨量§!伤害\n-对§Y军队§!造成§R末日级§!伤害\n-对§Y人口§!造成§R末日级§!伤害"
 
 
  ###################################################################

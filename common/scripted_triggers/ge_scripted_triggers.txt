@@ -327,4 +327,52 @@ roz_is_abyss_attack_fleet = {
 	}
 }
 
+#scope: ship
+roz_is_regular_starbase = {
+	optimize_memory
+	is_ship_class = shipclass_starbase
+	OR = {
+		is_ship_size = starbase_outpost
+		is_ship_size = starbase_starport
+		is_ship_size = starbase_citadel
+		is_ship_size = starbase_fe_outpost
+		is_ship_size = starbase_starfortress
+		is_ship_size = starbase_starhold
+	}
+}
+
+###深渊入侵局势判断
+roz_unholy_invasion_situation_12 = {
+	optimize_memory
+
+}
+roz_unholy_invasion_situation_23 = {
+	optimize_memory
+
+}
+roz_unholy_invasion_situation_34 = {
+	optimize_memory
+
+}
+roz_unholy_invasion_situation_45 = {
+	optimize_memory
+
+}
+
+roz_unholy_invasion_situation_54 = {
+	optimize_memory
+
+}
+roz_unholy_invasion_situation_43 = {
+	optimize_memory
+
+}
+roz_unholy_invasion_situation_32 = {
+	optimize_memory
+
+}
+roz_unholy_invasion_situation_21 = {
+	optimize_memory
+
+}
 

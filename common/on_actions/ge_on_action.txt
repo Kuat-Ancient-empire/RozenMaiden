@@ -31,6 +31,8 @@ VOP_on_monthly_pulse_country = {
 		ge_affection.12	#好感度升级
 
 		roz_shinku_evt.562 #月检舰队行为继续寻路星系
+
+		roz_shinku_evt.563 #月检刷船
 	}
 	random_events = {
 		6 = ge_event.3009	#致敬亚伦·布什内尔
@@ -293,4 +295,15 @@ on_planet_bombarded = {
 
 	}
 }
+
+# A colony has been destroyed. Called just before owner and controller is cleared
+# Scope = Planet
+on_colony_destroyed = {
+	events = {
+		roz_shinku_evt.564
+	}
+}
+
+
+
 

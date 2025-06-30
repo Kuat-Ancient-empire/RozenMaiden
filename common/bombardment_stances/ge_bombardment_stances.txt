@@ -79,4 +79,41 @@ q_dolls_armageddon = {
 	}
 }
 
+roz_crisis_armageddon = {
+	trigger = {
+		owner = {
+			OR = {
+				has_country_flag = roz_abyss_vass_country
+				has_country_flag = roz_madgod_force_country_flag
+			}
+		}
+	}
 
+	default = yes
+	stop_when_armies_dead = no
+	stop_when_ground_combat = no
+	abduct_pops = no
+
+	planet_damage = 25
+	army_damage = 200
+
+	kill_pop_chance = {
+		base = 10
+	}
+	min_pops_to_kill_pop = 0
+
+	# root = fleet
+	# from = planet
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000
+			owner = {
+				OR = {
+					has_country_flag = roz_abyss_vass_country
+					has_country_flag = roz_madgod_force_country_flag
+				}
+			}
+		}
+	}
+}
