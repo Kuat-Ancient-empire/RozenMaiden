@@ -1,5 +1,6 @@
 namespace = roz_shinku_evt
 
+#水银灯加入后360天内随机触发
 country_event = {
     id = roz_shinku_evt.1
     is_triggered_only = yes
@@ -61,6 +62,7 @@ country_event = {
     trigger = {
         has_country_flag = roz_leader_suigintou_get
         has_technology = tech_mega_engineering
+        NOT = { has_country_flag = roz_tech_mega_engineering_get }
     }
     option = {
         name = roz_shinku_evt.20.aa
@@ -73,6 +75,7 @@ country_event = {
     after = {
         add_relic = roz_shuukan_shoujonotsukurikata_vol2
         enable_special_project = { name = roz_shoujonotsukurikata_project_2 owner = root }
+        hidden_effect = { set_country_flag = roz_tech_mega_engineering_get }
     }
 }
 
@@ -86,6 +89,7 @@ country_event = {
     is_triggered_only = yes
     trigger = {
         has_country_flag = roz_leader_suigintou_get
+        NOT = { has_country_flag = roz_psionic_available }
         OR = {
             has_technology = tech_psionic_theory
             is_active_resolution = resolution_galacticstudies_extradimensional_experimentation
@@ -104,10 +108,11 @@ country_event = {
     after = {
         add_relic = roz_shuukan_shoujonotsukurikata_vol3
         enable_special_project = { name = roz_shoujonotsukurikata_project_3 owner = root }
+        hidden_effect = { set_country_flag = roz_psionic_available }
     }
 }
 
-###第四块零件
+###第四块零件 水银灯人偶工坊
 country_event = {
     id = roz_shinku_evt.40
     title = "roz_shinku_evt.40.title"
@@ -132,7 +137,7 @@ country_event = {
     }
 }
 
-###第五块零件，是否联动狐狐
+###第五块零件，是否联动狐狐 todo
 country_event = {
     id = roz_shinku_evt.50
     title = "roz_shinku_evt.50.title"
@@ -155,7 +160,7 @@ country_event = {
 }
 
 
-###第六块零件
+###第六块零件 打完雪华绮晶
 country_event = {
     id = roz_shinku_evt.60
     title = "roz_shinku_evt.60.title"
@@ -181,7 +186,7 @@ country_event = {
     }
 }
 
-###第七块零件
+###第七块零件 15好感
 country_event = {
     id = roz_shinku_evt.70
     title = "roz_shinku_evt.70.title"
@@ -191,15 +196,20 @@ country_event = {
     show_sound = event_ancient_drone
     trigger = {
         has_country_flag = roz_leader_suigintou_get
-        check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 10 }
+        check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 15 }
+        NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol7_get }
     }
+    immediate = { set_country_flag = ge_sgt_busy }
     option = {
         name = roz_shinku_evt.70.aa
     }
     option = {
         name = roz_shinku_evt.70.bb
     }
-    after = { country_event = { id = roz_shinku_evt.71 } }
+    after = {
+        country_event = { id = roz_shinku_evt.71 }
+        hidden_effect = { set_country_flag = roz_shuukan_shoujonotsukurikata_vol7_get }
+    }
 }
 
 country_event = {
@@ -224,10 +234,11 @@ country_event = {
         set_country_flag = roz_allow_date_suigintou
         add_relic = roz_shuukan_shoujonotsukurikata_vol7
         enable_special_project = { name = roz_shoujonotsukurikata_project_7 owner = root }
+        hidden_effect = { remove_country_flag = ge_sgt_busy }
     }
 }
 
-###第八块零件
+###第八块零件 25好感
 country_event = {
     id = roz_shinku_evt.80
     title = "roz_shinku_evt.80.title"
@@ -238,14 +249,19 @@ country_event = {
     trigger = {
         has_country_flag = roz_leader_suigintou_get
         check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 25 }
+        NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol8_get }
     }
+    immediate = { set_country_flag = ge_sgt_busy }
     option = {
         name = roz_shinku_evt.80.aa
     }
     option = {
         name = roz_shinku_evt.80.bb
     }
-    after = { country_event = { id = roz_shinku_evt.81 } }
+    after = {
+        country_event = { id = roz_shinku_evt.81 }
+        hidden_effect = { set_country_flag = roz_shuukan_shoujonotsukurikata_vol8_get }
+    }
 }
 
 country_event = {
@@ -269,10 +285,11 @@ country_event = {
     after = {
         add_relic = roz_shuukan_shoujonotsukurikata_vol8
         enable_special_project = { name = roz_shoujonotsukurikata_project_8 owner = root }
+        hidden_effect = { remove_country_flag = ge_sgt_busy }
     }
 }
 
-###第⑨块零件
+###第⑨块零件 35好感
 country_event = {
     id = roz_shinku_evt.90
     title = "roz_shinku_evt.90.title"
@@ -286,30 +303,19 @@ country_event = {
     trigger = {
         has_country_flag = roz_leader_suigintou_get
         check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 35 }
-        NOR = {
-            has_country_flag = ge_nfield_diplomacy_activated
-            has_country_flag = ge_sgt_busy
-            has_country_flag = roz_shuukan_vol9_flag
-        }
-        from = {
-            is_same_value = event_target:roz_suigintou_global_country@root
-            NOR = {
-                is_same_value = event_target:roz_kirakishou_global_country@root
-                is_same_value = event_target:roz_shinku_global_country@root
-            }
-        }
+        NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol9_get }
     }
     immediate = {
         get_ge_leader_target = {
             flag = roz_suigintou_flag
         }
-        set_country_flag = roz_shuukan_vol9_flag
-        set_country_flag = ge_nfield_diplomacy_activated
+        set_country_flag = ge_sgt_busy
     }
     option = {
         name = roz_shinku_evt.90.aa
         country_event = { id = roz_shinku_evt.91 }
     }
+    after = { hidden_effect = { set_country_flag = roz_shuukan_shoujonotsukurikata_vol9_get } }
 }
 
 country_event = {
@@ -375,8 +381,6 @@ country_event = {
         trigger = { NOR = { has_country_flag = roz_shinku_evt_91_aa has_country_flag = roz_shinku_evt_91_bb } }
         hidden_effect = { country_event = { id = roz_shinku_evt.95 } }
     }
-
-    #after = { hidden_effect = { country_event = { id = roz_shinku_evt.95 } } }
 }
 
 country_event = {
@@ -420,6 +424,7 @@ country_event = {
         add_relic = roz_shuukan_shoujonotsukurikata_vol9
         remove_country_flag = ge_nfield_diplomacy_activated
         enable_special_project = { name = roz_shoujonotsukurikata_project_9 owner = root }
+        hidden_effect = { remove_country_flag = ge_sgt_busy }
     }
 }
 
@@ -472,7 +477,7 @@ country_event = {
 }
 
 #第三次到第九次完成制作
-country_event = {
+country_event = {   #没有雪华的情况
     id = roz_shinku_evt.120
     title = "roz_shinku_evt.120.title"
     desc = "roz_shinku_evt.120.desc"
@@ -486,8 +491,9 @@ country_event = {
         name = roz_shinku_evt.120.aa
         allow = { NOT = { has_active_event = { roz_shinku_evt.110 } } }
         hidden_effect = {
-            remove_country_flag = roz_shoujonotsukurikata_project_3_complete
-            remove_relic = roz_shuukan_shoujonotsukurikata_vol3
+            # remove_country_flag = roz_shoujonotsukurikata_project_3_complete
+            # remove_relic = roz_shuukan_shoujonotsukurikata_vol3
+            roz_remove_shinkureilc_effect = yes
         }
     }
     after = {
@@ -516,7 +522,7 @@ country_event = {
     base = roz_shinku_evt.120
 }
 
-country_event = {
+country_event = {   #有雪华的情况
     id = roz_shinku_evt.130
     title = "roz_shinku_evt.130.title"
     desc = "roz_shinku_evt.130.desc"
@@ -2510,6 +2516,13 @@ country_event = {
                 counter = "roz_abyss_kills_others"
                 amount = 1
             }
+            if = {
+                limit = { country_has_situation = { SITUATION = roz_SK_4_madgod_invasion_placard } }
+                random_situation = {
+                    limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
+                    add_situation_progress = 0.05
+                }
+            }
         }
     }
 }
@@ -2531,6 +2544,13 @@ country_event = {
                 event_chain = "roz_SK_madgod_invasion_main"
                 counter = "roz_abyss_victims"
                 amount = 1
+            }
+            if = {
+                limit = { country_has_situation = { SITUATION = roz_SK_4_madgod_invasion_placard } }
+                random_situation = {
+                    limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
+                    add_situation_progress = -0.05
+                }
             }
         }
     }
@@ -2622,8 +2642,11 @@ ship_event = {
         #由击败者触发
         from = { owner = { country_event = { id = roz_shinku_evt.550 } } }
         #复活
-        if = {  #检测深渊势力是否只剩下boss星系，如果返回yes，则只给予最后一次复活
-            limit = { roz_is_all_abyss_killed_except_madgod_system = { scope = prevprevprev.from } }
+        if = {  #检测深渊势力是否只剩下boss星系且击杀者为非ai，如果返回yes，则只给予最后一次复活
+            limit = {
+                from = { owner = { is_ai = no } }
+                roz_is_all_abyss_killed_except_madgod_system = { scope = prevprevprev.from }
+            }
             roz_ship_disable_protect_effect = yes
             set_disable_at_health = -1
             from = { owner = {
@@ -2872,7 +2895,6 @@ planet_event = {
             limit = { is_ai = no has_country_flag = roz_abyss_faction_arrival }
             change_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 0.2 }
         }
-
     }
 }
 
@@ -3153,10 +3175,30 @@ country_event = {   ##背水一战, 首次进入1
     }
 }
 
+country_event = {
+    id = roz_shinku_evt.620
+    is_triggered_only = yes
+    hide_window = yes
+    trigger = {
+        is_same_value = event_target:roz_madgod_force_country@from
+        from = {
+            is_ai = no
+            NOT = { has_country_flag = roz_fall_in_abyss_flag }
+            is_same_value = event_target:roz_suigintou_owner@this
+            has_country_flag = roz_crisis_madgod_boss_last_breath
+        }
+        fromfrom = { is_ship_size = roz_crisis_madgod_boss }
+    }
+    immediate = {
+        country_event = { id = roz_shinku_evt.628 }
+    }
+}
+
+#局势未推进到0完成战略目标，即走好结局路线
 country_event = {   ##局势-好结局路线
-    id = roz_shinku_evt.619
-    title = roz_shinku_evt.619.title
-    desc = roz_shinku_evt.619.desc
+    id = roz_shinku_evt.628
+    title = roz_shinku_evt.628.title
+    desc = roz_shinku_evt.628.desc
     is_triggered_only = yes
     picture = GFX_evt_roz_ship_bridge
     trigger = {
@@ -3167,10 +3209,10 @@ country_event = {   ##局势-好结局路线
 
     }
     option = {
-        name = roz_shinku_evt.619.aa
+        name = roz_shinku_evt.628.aa
     }
     option = {
-        name = roz_shinku_evt.619.bb
+        name = roz_shinku_evt.628.bb
     }
 }
 
@@ -3185,7 +3227,7 @@ country_event = {   ##局势-#坏路线 局势推进到0时触发
     }
     location = event_target:roz_outland_planet@root
     immediate = {
-
+        set_country_flag = roz_fall_in_abyss_flag
     }
     option = {
         name = roz_shinku_evt.630.aa
@@ -3218,6 +3260,7 @@ country_event = {   ##坏路线-至暗时刻
         name = roz_shinku_evt.631.bb
         custom_tooltip = roz_shinku_evt.631.ct
     }
+    #after = {  }
 }
 
 country_event = {   ##坏路线-蚍蜉撼树

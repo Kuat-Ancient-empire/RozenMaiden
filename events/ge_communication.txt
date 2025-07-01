@@ -11,18 +11,15 @@ country_event = {
 	}
 	is_triggered_only = yes
 	trigger = {
-		NOT = {
-			exists = event_target:roz_suigintou_global_country@root
-		}
+		NOT = { exists = event_target:roz_suigintou_global_country@root }
 	}
 	option = {
 		name = ge_communication.0.a
 		response_text = ge_communication.0.a.response
 		custom_tooltip = ge_communication.0.a_tooltip		#通讯已建立
 		hidden_effect = {
-			country_event = {
-				id = ge_communication.1
-			}
+			country_event = { id = ge_communication.1 }
+			country_event = { id = roz_shinku_evt.1 days = 180 random = 180 }
 		}
 	}
 }
@@ -298,10 +295,36 @@ country_event = {
 		exists = event_target:roz_leader_suigintou_global_target@root
 		#AND = { check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 35 } has_country_flag = roz_shuukan_vol9_flag }
 	}
+	abort_trigger = { has_country_flag = ge_sgt_busy }
+	abort_effect = { remove_country_flag = ge_nfield_diplomacy_activated }
 	immediate = {
 		set_country_flag = ge_nfield_diplomacy_activated
 		get_ge_leader_target = {
 			flag = roz_suigintou_flag
+		}
+		if = {
+			limit = {
+				check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 15 }
+				NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol7_get }
+				NOR = { has_active_event = { roz_shinku_evt.80 roz_shinku_evt.90 } }
+			}
+			country_event = { id = roz_shinku_evt.70 }
+		}
+		if = {
+			limit = {
+				check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 25 }
+				NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol8_get }
+				NOR = { has_active_event = { roz_shinku_evt.70 roz_shinku_evt.90 } }
+			}
+			country_event = { id = roz_shinku_evt.80 }
+		}
+		if = {
+			limit = {
+				check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 35 }
+				NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol9_get }
+				NOR = { has_active_event = { roz_shinku_evt.70 roz_shinku_evt.80 } }
+			}
+			country_event = { id = roz_shinku_evt.90 }
 		}
 	}
 	after = {
@@ -349,6 +372,7 @@ country_event = {
 		name = ge_communication.100.a
 		response_text = ge_communication.100.a.desc
 		is_dialog_only = yes
+		allow = { NOT = { has_country_flag = ge_sgt_busy } }
 		hidden_effect = {
 			set_country_flag = sgt_changing_skin_flag
 			country_event = {
@@ -386,6 +410,7 @@ country_event = {
 					has_country_flag = roz_suigintou_diplomatic_initialize_flag
 				}
 			}
+			NOT = { has_country_flag = ge_sgt_busy }
 		}
 		trigger = {
 			NOT = {
@@ -433,6 +458,7 @@ country_event = {
 					has_country_flag = roz_suigintou_diplomatic_initialize_flag
 				}
 			}
+			NOT = { has_country_flag = ge_sgt_busy }
 		}
 		trigger = {
 			NOT = {
@@ -458,6 +484,7 @@ country_event = {
 		#response_text = ge_communication.100.d.response
 		#is_dialog_only = yes
 		#default_hide_option = yes
+		allow = { NOT = { has_country_flag = ge_sgt_busy } }
 		hidden_effect = {
 			remove_country_flag = ge_nfield_diplomacy_activated
 			country_event = {
@@ -483,6 +510,7 @@ country_event = {
 					}
 				}
 			}
+			NOT = { has_country_flag = ge_sgt_busy }
 		}
 		#trigger = { has_country_flag = roz_allow_date_suigintou }
 		hidden_effect = {
@@ -506,6 +534,7 @@ country_event = {
 				}
 			}
 		}
+		allow = { NOT = { has_country_flag = ge_sgt_busy } }
 		response_text = ge_communication.100.f0.response
 		is_dialog_only = yes
 	}
@@ -519,6 +548,7 @@ country_event = {
 				value >= 1
 			}
 		}
+		allow = { NOT = { has_country_flag = ge_sgt_busy } }
 		response_text = ge_communication.100.f1.response
 		is_dialog_only = yes
 	}
@@ -535,6 +565,7 @@ country_event = {
 				text = "ge_communication.100.sgtship_build.allow.ct"
 				NOT = { has_country_flag = roz_sgt_flagship_spawn_flag }
 			}
+			NOT = { has_country_flag = ge_sgt_busy }
 		}
 		hidden_effect = {
 			set_timed_country_flag = { flag = roz_sgt_flagship_spawn_flag days = 720 }
@@ -555,6 +586,7 @@ country_event = {
 				}
 			}
 		}
+		allow = { NOT = { has_country_flag = ge_sgt_busy } }
 		custom_tooltip = ge_communication.100.eliminate_capital_hostile_army_ct
 		hidden_effect = {
 			capital_scope = {
@@ -587,6 +619,7 @@ country_event = {
 			}
 			#has_technology = tech_titans
 		}
+		allow = { NOT = { has_country_flag = ge_sgt_busy } }
 		country_event = {
 			id = ge_communication.600
 		}
@@ -610,6 +643,7 @@ country_event = {
 				}
 			}
 		}
+		allow = { NOT = { has_country_flag = ge_sgt_busy } }
 		is_dialog_only = yes
 		response_text = ge_communication.100.display_fadian.response
 	}
@@ -631,6 +665,7 @@ country_event = {
 					value >= 40
 				}
 			}
+			NOT = { has_country_flag = ge_sgt_busy }
 		}
 		hidden_effect = {
 			remove_country_flag = ge_sgt_chat

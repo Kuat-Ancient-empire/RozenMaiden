@@ -90,7 +90,7 @@ roz_outland_locator_DESC: "无需研究，我们已经确定该星系的位置�
 ########################真红事件
 ####少女的制作方法
   roz_shoujonotsukurikata_chain_title: "§Y少女的制作方法§!"
-  roz_shoujonotsukurikata_chain_desc: "当前已收到的人偶组件：[Root.roz_shuukan_count]\n\n人偶拼接进度：[Root.roz_scetionofdoll_count]\n\n组件拼装顺序不分先后，拥有周刊时即可进行拼装，§H但每次只能组装一个部件(并非)§!，每次拼装完成消耗一个周刊遗珍"
+  roz_shoujonotsukurikata_chain_desc: "当前已收到的人偶组件：[event_target:roz_suigintou_owner0.roz_shuukan_count]\n\n人偶拼接进度：[event_target:roz_suigintou_owner0.roz_scetionofdoll_count]\n\n组件拼装顺序不分先后，拥有周刊时即可进行拼装，§H但每次只能组装一个部件(并非)§!，每次拼装完成消耗一个周刊遗珍"
   roz_shinku_progress: "真红制作进度"
   roz_shoujonotsukurikata_project_common_DESC: "打开这次送达的神秘包裹，读罢本期的周刊《少女的制作方法》后，[Root.GetRulerTitle]已经迫不及待地想要按照教程步骤，将蔷薇少女第五人偶——真红亲手制作出来。尚待精细加工的原始组件已经随书附赠，现在，是时候在繁忙国务后的每个夜晚，展现真正的手艺活了。"
   roz_shoujonotsukurikata_project_common_notice_DESC: "注意：§R由于您本人精力有限，每次只能组装一个部件，§B当然，您也可以一起做，只要不嫌弹窗太多的话~§!§!"

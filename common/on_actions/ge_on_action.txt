@@ -30,8 +30,10 @@ VOP_on_monthly_pulse_country = {
 		ge_event.461	#虚空科技起源-研究片段4触发
 		ge_affection.12	#好感度升级
 
-		roz_shinku_evt.562 #月检舰队行为继续寻路星系
+		roz_shinku_evt.20	#真红收集第2零件月检
+		roz_shinku_evt.30	#真红收集第3零件月检
 
+		roz_shinku_evt.562 #月检舰队行为继续寻路星系
 		roz_shinku_evt.563 #月检刷船
 	}
 	random_events = {
@@ -127,6 +129,8 @@ on_custom_diplomacy = {
 		ge_communication.102
 		roz_shinku_evt.1001
 		roz_shinku_evt.4001
+
+		roz_shinku_evt.90 #真红收集第9零件月检
 	}
 }
 
@@ -261,6 +265,8 @@ on_ship_destroyed_victim = {
 		roz_shinku_evt.530
 		roz_shinku_evt.531
 		roz_shinku_evt.560	#破败神国星系沦陷
+
+		roz_shinku_evt.620  #检测boss被击杀（好结局）
 	}
 }
 

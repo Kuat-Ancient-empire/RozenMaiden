@@ -470,6 +470,7 @@ country_event = {
             unity = 77777
             #mult = trigger:has_tradition
         }
+        country_event = { id = roz_shinku_evt.60 days = 1 }
     }
 }
 

@@ -177,6 +177,7 @@ country_event = {
 		add_modifier = {
 			modifier = ge_rm_fake_prod
 		}
+		country_event = { id = roz_shinku_evt.40 days = 30 random = 10 }
 	}
 }
 

@@ -46,7 +46,7 @@ country_event = {
 			}
 			solar_system = {
 				closest_system = {
-					min_steps = 3
+					min_steps = 2
 					max_steps = 17
 					use_bypasses = yes
 					limit = {

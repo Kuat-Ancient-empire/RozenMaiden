@@ -1441,9 +1441,12 @@ roz_abyss_vass_create = {
 							}
 						}
 					}
+					NOT = { has_star_flag = roz_abyss_vass_capital_star }
 				}
 			}
+			NOT = { has_star_flag = roz_abyss_vass_capital_star }
 		}
+		set_star_flag = roz_abyss_vass_capital_star
 		random_system_planet = {
 			limit = {
 				OR = {
@@ -1456,6 +1459,7 @@ roz_abyss_vass_create = {
 				NOR = {
 					is_planet_class = pc_asteroid
 					is_planet_class = pc_ice_asteroid
+					has_planet_flag = roz_abyss_vass_capital
 				}
 			}
 			change_pc = pc_gaia
@@ -1509,6 +1513,7 @@ roz_abyss_vass_create = {
 			set_owner = last_created_country
 			set_capital = yes
 			set_name = random
+			set_planet_flag = roz_abyss_vass_capital
 			add_building = building_capital
 			add_building = building_roz_abyss_altar_unknow
 			remove_building = building_colony_shelter
@@ -1635,27 +1640,6 @@ roz_abyss_vass_create = {
 						traits = { trait = random_trait trait = random_trait }
 						species = owner_main_species
 						effect = { last_created_fleet = { assign_leader = prev } }
-					}
-				}
-				create_fleet = {
-					name = "NAME_sgt"
-					settings = {
-						spawn_debris = no
-						is_boss = no
-					}
-					effect = {
-						set_owner = ROOT
-						create_ship = {
-							name = NAME_sgt
-							design = NAME_sgt
-							graphical_culture = owner
-							prefix = no
-						}
-						set_location = {
-							target = PREV.star
-							distance = 45
-							angle = random
-						}
 					}
 				}
 			}

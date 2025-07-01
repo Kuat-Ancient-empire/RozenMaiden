@@ -820,6 +820,7 @@ country_event = {
 	title = "ge_sgt_flagship_events.10.title"
 	desc = "ge_sgt_flagship_events.10.desc"
 	is_triggered_only = yes
+	show_sound = event_engineered_evolution
 	picture = GFX_evt_roz_evt_letum_1
 	trigger = {
 		is_ai = no
@@ -853,6 +854,7 @@ country_event = {
 	desc = "ge_sgt_flagship_events.11.desc"
 	is_triggered_only = yes
 	picture = GFX_evt_roz_evt_letum_2
+	show_sound = event_ship_thrusters
 	trigger = {
 		is_ai = no
 	}

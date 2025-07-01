@@ -53,6 +53,10 @@ country_event = {
 			days = 60
 			random = 10800
 		}
+		country_event = {
+			id = roz_shinku_evt.100
+			years = 23
+		}
 		# set_timed_country_flag = {	#计时，防止刷不出异常点 # 不计
 		# 	flag = roz_sgt_flagship_spawn_timed_flag
 		# 	days = 7200
@@ -192,9 +196,16 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
-			roz_setting_menu_after_effect = yes
+			country_event = { id = ge_event.7778 }
 		}
 	}
+}
+
+country_event = {
+	id = ge_event.7778
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = { roz_setting_menu_after_effect = yes }
 }
 
 

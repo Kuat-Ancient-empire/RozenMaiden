@@ -594,7 +594,7 @@ roz_SK_4_madgod_invasion_placard = {
 
     }
     on_fail = {
-        
+        owner = { country_event = { id = roz_shinku_evt.630 } }
     }
     #start_value = 50
     initial_progress = 50

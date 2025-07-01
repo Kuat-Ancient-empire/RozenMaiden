@@ -647,7 +647,7 @@ roz_settings_abyss_vass_had_create_available_effect = {
     potential = {
         from = { has_country_flag = roz_abyss_vass_had_create_available }
     }
-    allow = { has_country_flag = roz_abyss_vass_can_create_timed }
+    allow = { has_country_flag = roz_abyss_vass_can_create_timed NOT = { has_country_flag = roz_abyss_vass_had_created } }
     effect = {
         custom_tooltip = roz_settings_abyss_vass_had_create_available_effect.tooltip
         from = { remove_country_flag = roz_abyss_vass_had_create_available }
@@ -657,7 +657,7 @@ roz_settings_abyss_vass_had_create_disable_effect = {
     potential = {
         NOT = { from = { has_country_flag = roz_abyss_vass_had_create_available } }
     }
-    allow = { has_country_flag = roz_abyss_vass_can_create_timed }
+    allow = { has_country_flag = roz_abyss_vass_can_create_timed NOT = { has_country_flag = roz_abyss_vass_had_created } }
     effect = {
         custom_tooltip = roz_settings_abyss_vass_had_create_disable_effect.tooltip
         hidden_effect = {
