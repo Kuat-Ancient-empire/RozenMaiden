@@ -8,6 +8,7 @@ ge_flagship = {
 	#entity = "juggernaut_entity"
 	#entity = "ge_void_lord_entity"
 	entity = ROZ_Infinite_Large_ship_entity
+
 	max_hitpoints = 96300
 	modifier = {
 		ship_evasion_add = 5

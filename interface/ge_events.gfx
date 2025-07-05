@@ -741,6 +741,27 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+
+	spriteType = {
+		name = "GFX_roz_evt_rozen_mystica"
+		textureFile = "gfx/event_pictures/roz_evt_rozen_mystica.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_shinku_annoyed"
+		textureFile = "gfx/event_pictures/evt_roz_shinku_annoyed.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_roz_shinku_happyend"
+		textureFile = "gfx/event_pictures/evt_roz_shinku_happyend.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 }
 
 

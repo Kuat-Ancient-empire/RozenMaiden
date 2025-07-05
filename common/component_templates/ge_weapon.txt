@@ -889,7 +889,7 @@ strike_craft_component_template = {
 
 	ship_behavior = "bombers_behavior"   
 	
-	weapon_type = instant				
+	weapon_type = instant
 
 	projectile_gfx = "plasma_cannon_s"	
 	icon_frame = 1
@@ -959,7 +959,7 @@ strike_craft_component_template = {
 
 	ship_behavior = "bombers_behavior"   
 	
-	weapon_type = instant				
+	weapon_type = instant
 
 	projectile_gfx = large_missile
 	icon_frame = 1

@@ -288,6 +288,7 @@ roz_is_regular_authority = {
 	}
 }
 
+#或许是本mod消耗最高的检测了
 roz_is_all_abyss_killed_except_madgod_system = {
 	optimize_memory
 	#abyss vass

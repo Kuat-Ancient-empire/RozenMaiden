@@ -16,7 +16,11 @@ roz_gateway = {
 	ftl_bypass_effect = "gateway_ftl_bypass_effect_entity"
 
 	country_can_use = {
-		is_ai = no
+		OR = {
+			is_ai = no
+			has_country_flag = roz_abyss_vass_country
+			has_country_flag = roz_madgod_force_country_flag
+		}
 	}
 
 	scripted_connection = {

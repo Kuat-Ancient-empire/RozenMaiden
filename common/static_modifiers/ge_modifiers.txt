@@ -793,3 +793,14 @@ roz_madgod_country_naval_country_buff = {
 roz_madgod_country_foible = {
 	damage_vs_country_type_roz_madgod_empire_mult = 0.1
 }
+
+roz_defeat_the_abyss = {
+	country_base_influence_produces_add = 2.5
+	ship_weapon_damage = 0.25
+}
+
+roz_defeat_the_abyss_in_darkest_hour = {
+	country_base_influence_produces_add = 10
+	ship_weapon_damage = 1.0
+	ship_shield_hardening_add = 1.0
+}

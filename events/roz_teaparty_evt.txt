@@ -259,12 +259,9 @@ country_event = {
             has_country_flag = roz_teaparty_holding_3year
             has_country_flag = roz_teaparty_holding_5year
         }
-        NOT = {
-            has_country_flag = roz_teaparty_discontinuance
-        }
-        NOT = {
-            has_country_flag = roz_teaparty_loop_cd
-        }
+        NOT = { has_country_flag = roz_teaparty_discontinuance }
+        NOT = { has_country_flag = roz_teaparty_loop_cd }
+        NOT = { has_country_flag = roz_new_teaparty_available }
         has_country_flag = roz_leader_suigintou_get
         has_country_flag = roz_kirakishou_get
         has_country_flag = roz_teaparty_loop_begin
@@ -435,12 +432,12 @@ country_event = {
     option = {
         name = roz_teaparty_evt.104.aa
         custom_tooltip = roz_teaparty_evt.104.aa.ct
-        roz_teaparty_random_modifier_list = yes
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
     option = {
         name = roz_teaparty_evt.104.bb
         custom_tooltip = roz_teaparty_evt.104.bb.ct
-        roz_teaparty_random_modifier_list = yes
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
 }
 
@@ -463,12 +460,12 @@ country_event = {
     option = {
         name = roz_teaparty_evt.105.aa
         custom_tooltip = roz_teaparty_evt.105.aa.ct
-        roz_teaparty_random_modifier_list = yes
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
     option = {
         name = roz_teaparty_evt.105.bb
         custom_tooltip = roz_teaparty_evt.105.bb.ct
-        roz_teaparty_random_modifier_list = yes
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
 }
 
@@ -491,12 +488,12 @@ country_event = {
     option = {
         name = roz_teaparty_evt.106.aa
         custom_tooltip = roz_teaparty_evt.106.aa.ct
-        roz_teaparty_random_modifier_list = yes
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
     option = {
         name = roz_teaparty_evt.106.bb
         custom_tooltip = roz_teaparty_evt.106.bb.ct
-        roz_teaparty_random_modifier_list = yes
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
 }
 
@@ -547,14 +544,313 @@ country_event = {
     option = {
         name = roz_teaparty_evt.108.aa
         custom_tooltip = roz_teaparty_evt.108.aa.ct
-        roz_teaparty_random_modifier_list = yes
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
     option = {
         name = roz_teaparty_evt.108.bb
         custom_tooltip = roz_teaparty_evt.108.bb.ct
-        roz_teaparty_random_modifier_list = yes
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
 }
 
+###真红到来后新增的事件池
 
+country_event = {
+    id = roz_teaparty_evt.200
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        OR = {
+            has_country_flag = roz_teaparty_holding_180days
+            has_country_flag = roz_teaparty_holding_1year
+            has_country_flag = roz_teaparty_holding_2year
+            has_country_flag = roz_teaparty_holding_3year
+            has_country_flag = roz_teaparty_holding_5year
+        }
+        NOT = { has_country_flag = roz_teaparty_discontinuance }
+        NOT = { has_country_flag = roz_teaparty_loop_cd }
+        has_country_flag = roz_leader_suigintou_get
+        has_country_flag = roz_kirakishou_get
+        has_country_flag = roz_teaparty_loop_begin
+        has_country_flag = roz_new_teaparty_available
+    }
+    immediate = {
+        switch = {
+            trigger = has_country_flag
+            roz_teaparty_holding_180days = { set_timed_country_flag = { flag = roz_teaparty_loop_cd days = 180 } }
+            roz_teaparty_holding_1year= { set_timed_country_flag = { flag = roz_teaparty_loop_cd years = 1 } }
+            roz_teaparty_holding_2year= { set_timed_country_flag = { flag = roz_teaparty_loop_cd years = 2 } }
+            roz_teaparty_holding_3year= { set_timed_country_flag = { flag = roz_teaparty_loop_cd years = 3 } }
+            roz_teaparty_holding_5year= { set_timed_country_flag = { flag = roz_teaparty_loop_cd years = 5 } }
+        }
+        random_list = {
+            1 = { country_event = { id = roz_teaparty_evt.201 } }
+            1 = { country_event = { id = roz_teaparty_evt.202 } }
+            1 = { country_event = { id = roz_teaparty_evt.203 } }
+            1 = { country_event = { id = roz_teaparty_evt.204 } }
+            1 = { country_event = { id = roz_teaparty_evt.205 } }
+            1 = { country_event = { id = roz_teaparty_evt.206 } }
+            #1 = { modifier = { factor = 0 has_relic = r_roz_orgel } country_event = { id = roz_teaparty_evt.107 } }
+        }
+        #roz_teaparty_loop_random = yes
+    }
+}
 
+#烘焙时间
+country_event = {
+    id = roz_teaparty_evt.201
+    title = roz_teaparty_evt.201.title
+    desc = roz_teaparty_evt.201.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_new_teaparty_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_201
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.201.aa
+        custom_tooltip = roz_teaparty_evt.201.aa.ct
+        country_event = { id = roz_teaparty_evt.2011 }
+    }
+}
+country_event = {
+    id = roz_teaparty_evt.2011
+    title = roz_teaparty_evt.2011.title
+    desc = roz_teaparty_evt.2011.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_new_teaparty_room
+    }
+    diplomatic = yes
+    option = {
+        name = roz_teaparty_evt.2011.aa
+        custom_tooltip = roz_teaparty_evt.2011.aa.ct
+        country_event = { id = roz_teaparty_evt.2012 }
+    }
+}
+country_event = {
+    id = roz_teaparty_evt.2012
+    title = roz_teaparty_evt.2012.title
+    desc = roz_teaparty_evt.2012.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_new_teaparty_room
+    }
+    diplomatic = yes
+    option = {
+        name = roz_teaparty_evt.2012.aa
+        custom_tooltip = roz_teaparty_evt.2012.aa.ct
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
+    }
+}
+
+#库库侦探II
+country_event = {
+    id = roz_teaparty_evt.202
+    title = roz_teaparty_evt.202.title
+    desc = roz_teaparty_evt.202.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_new_teaparty_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_202
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.202.aa
+        custom_tooltip = roz_teaparty_evt.202.aa.ct
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
+    }
+    option = {
+        name = roz_teaparty_evt.202.bb
+        custom_tooltip = roz_teaparty_evt.202.bb.ct
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
+    }
+    option = {
+        name = roz_teaparty_evt.202.cc
+        custom_tooltip = roz_teaparty_evt.202.cc.ct
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
+    }
+}
+
+#蔷薇之魂
+country_event = {
+    id = roz_teaparty_evt.203
+    title = roz_teaparty_evt.203.title
+    desc = roz_teaparty_evt.203.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_new_teaparty_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_203
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.203.aa
+        country_event = { id = roz_teaparty_evt.2031 }
+    }
+}
+country_event = {
+    id = roz_teaparty_evt.2031
+    title = roz_teaparty_evt.2031.title
+    desc = roz_teaparty_evt.2031.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_new_teaparty_room
+    }
+    diplomatic = yes
+    option = {
+        name = roz_teaparty_evt.2031.aa
+        custom_tooltip = roz_teaparty_evt.2031.aa.ct
+        country_event = { id = roz_teaparty_evt.2032 }
+    }
+}
+country_event = {
+    id = roz_teaparty_evt.2032
+    title = roz_teaparty_evt.2032.title
+    desc = roz_teaparty_evt.2032.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_new_teaparty_room
+    }
+    diplomatic = yes
+    option = {
+        name = roz_teaparty_evt.2032.aa
+        custom_tooltip = roz_teaparty_evt.2032.aa.ct
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
+    }
+}
+
+#午后小憩
+country_event = {
+    id = roz_teaparty_evt.204
+    title = roz_teaparty_evt.204.title
+    desc = roz_teaparty_evt.204.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_new_teaparty_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_204
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.204.aa
+        custom_tooltip = roz_teaparty_evt.204.aa.ct
+    }
+    option = {
+        name = roz_teaparty_evt.204.bb
+        custom_tooltip = roz_teaparty_evt.204.bb.ct
+    }
+    after = { hidden_effect = { roz_teaparty_random_modifier_list = yes } }
+}
+
+#爱之爱丽丝
+country_event = {
+    id = roz_teaparty_evt.205
+    title = roz_teaparty_evt.205.title
+    desc = roz_teaparty_evt.205.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_new_teaparty_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_205
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.205.aa
+        custom_tooltip = roz_teaparty_evt.205.aa.ct
+    }
+    option = {
+        name = roz_teaparty_evt.205.bb
+    }
+    option = {
+        name = roz_teaparty_evt.205.cc
+    }
+    after = { hidden_effect = { roz_teaparty_random_modifier_list = yes } }
+}
+
+#保留节目II
+country_event = {
+    id = roz_teaparty_evt.206
+    title = roz_teaparty_evt.206.title
+    desc = roz_teaparty_evt.206.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_new_teaparty_room
+    }
+    diplomatic = yes
+    immediate = {
+        set_timed_country_flag = {
+            flag = roz_teaparty_evt_206
+            years = roz_teaparty_loop_cd_2_time
+        }
+    }
+    option = {
+        name = roz_teaparty_evt.206.aa
+        custom_tooltip = roz_teaparty_evt.206.aa.ct
+    }
+    option = {
+        name = roz_teaparty_evt.206.bb
+        custom_tooltip = roz_teaparty_evt.206.bb.ct
+    }
+    after = { country_event = { id = roz_teaparty_evt.2061 } }
+}
+country_event = {
+    id = roz_teaparty_evt.2061
+    title = roz_teaparty_evt.2061.title
+    desc = roz_teaparty_evt.2061.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_new_teaparty_room
+    }
+    diplomatic = yes
+    option = {
+        name = roz_teaparty_evt.2061.aa
+        custom_tooltip = roz_teaparty_evt.2061.aa.ct
+    }
+    option = {
+        name = roz_teaparty_evt.2061.bb
+        custom_tooltip = roz_teaparty_evt.2061.bb.ct
+    }
+    after = { country_event = { id = roz_teaparty_evt.2062 } }
+}
+country_event = {
+    id = roz_teaparty_evt.2062
+    title = roz_teaparty_evt.2062.title
+    desc = roz_teaparty_evt.2062.desc
+    is_triggered_only = yes
+    picture_event_data = {
+        room = roz_new_teaparty_room
+    }
+    diplomatic = yes
+    option = {
+        name = roz_teaparty_evt.2062.aa
+        custom_tooltip = roz_teaparty_evt.2062.aa.ct
+    }
+    option = {
+        name = roz_teaparty_evt.2062.bb
+        custom_tooltip = roz_teaparty_evt.2062.bb.ct
+    }
+    after = { hidden_effect = { roz_teaparty_random_modifier_list = yes } }
+}

@@ -147,7 +147,7 @@ roz_madgod_fleet_jtcl_create_direct = {
 					effect = {  }
 				}
 			}
-			set_location = event_target:roz_n_field_site_target@root
+			set_location = event_target:roz_outland_planet@root
 			set_fleet_stance = aggressive
 			set_aggro_range_measure_from = return_point
 			set_aggro_range = 300
@@ -179,7 +179,7 @@ roz_madgod_fleet_jtcl_create_decoy = {
 					effect = {  }
 				}
 			}
-			set_location = event_target:roz_n_field_site_target@root
+			set_location = event_target:roz_outland_planet@root
 			set_fleet_stance = aggressive
 			set_aggro_range_measure_from = return_point
 			set_aggro_range = 300
@@ -2136,7 +2136,7 @@ roz_abyss_fleet_create_marvelous = {
 					name = random
 				}
 				set_location = {
-					target = event_target:roz_n_field_site_target@root
+					target = event_target:roz_outland_planet@root
 					distance = 45
 					angle = random
 				}
@@ -2207,7 +2207,7 @@ roz_abyss_fleet_create_madgod_boss = {
 					}
 				}
 				set_location = {
-					target = event_target:roz_n_field_site_target@root
+					target = event_target:roz_outland_planet@root
 					distance = 45
 					angle = random
 				}
@@ -2304,7 +2304,7 @@ roz_abyss_madgod_hunter_fleet_create_count_in_diff = {
 
 #scope: country(player)
 #5层了，不能再套娃了
-#哨站挨个刷舰队
+#深渊疯神 哨站挨个刷舰队
 roz_abyss_madgod_hunter_fleet_create_establish_in_diff = {
 	optimize_memory
 	if = {
@@ -2341,7 +2341,7 @@ roz_abyss_madgod_hunter_fleet_create_establish_in_diff = {
 		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 4 outpost = 5  num = 0 num2 = 1 num3 = 1 }
 	}
 }
-
+#执行
 roz_abyss_vass_hunter_fleet_create_count_in_diff = {
 	optimize_memory
 	if = {
@@ -2355,7 +2355,7 @@ roz_abyss_vass_hunter_fleet_create_count_in_diff = {
 }
 
 #scope: country(player)
-#5层了，不能再套娃了
+#深渊仆从刷舰队 5层了，不能再套娃了
 roz_abyss_vass_hunter_fleet_create_establish_in_diff = {
 	optimize_memory
 	roz_abyss_vass_hunter_fleet_create_count_in_diff = { diff = 1 num = 1 num2 = 0 }
@@ -2460,5 +2460,31 @@ roz_SK_4_madgod_invasion_placard_remind_effect = {
 			roz_unholy_invasion_situation_32 = { country_event = { id = roz_shinku_evt.616 days = 0 } }
 			roz_unholy_invasion_situation_21 = { country_event = { id = roz_shinku_evt.617 days = 0 } }
 		}
+	}
+}
+
+##深渊局势失败后，将一次性清空2/3的刷兵次数，如果没有次数剩余那就保底刷一队
+roz_abyss_hunter_fleet_create_when_situation_fail = {
+	optimize_memory
+	if = {
+		limit = { check_variable = { which = roz_abyss_hunter_fleet_create_can_establish value >= 2 } }
+		set_variable = { which = roz_abyss_hunter_fleet_create_can_establish_arithmetic value = roz_abyss_hunter_fleet_create_can_establish }
+		multiply_variable = { which = roz_abyss_hunter_fleet_create_can_establish_arithmetic value = 0.667 }
+		round_variable = roz_abyss_hunter_fleet_create_can_establish_arithmetic
+		subtract_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = roz_abyss_hunter_fleet_create_can_establish_arithmetic }
+		while = {
+			count = roz_abyss_hunter_fleet_create_can_establish_arithmetic
+			roz_abyss_vass_hunter_fleet_create_establish_in_diff = yes
+			roz_abyss_madgod_hunter_fleet_create_establish_in_diff = yes
+		}
+	}
+	else_if = {
+		limit = { check_variable = { which = roz_abyss_hunter_fleet_create_can_establish value < 2 } }
+		while = {
+			count = roz_abyss_hunter_fleet_create_can_establish
+			roz_abyss_vass_hunter_fleet_create_establish_in_diff = yes
+			roz_abyss_madgod_hunter_fleet_create_establish_in_diff = yes
+		}
+		set_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 0 }
 	}
 }
