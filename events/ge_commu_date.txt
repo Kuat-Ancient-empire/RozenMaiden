@@ -782,6 +782,7 @@ country_event = {
                     set_country_flag = roz_date_temp_random_MV_doctorstange
                 }
                 1 = {
+                    modifier = { factor = 0 has_country_flag = roz_leader_shinku_get }
                     set_country_flag = roz_date_temp_random_MV_greenbook
                 }
                 1 = {
@@ -948,6 +949,7 @@ country_event = {	###极乐广场
         trigger = {
             has_country_flag = roz_date_temporary_flag
             has_country_flag = roz_date_temp_random_MV_greenbook
+            NOT = { has_country_flag = roz_leader_shinku_get }
         }
         hidden_effect = {
             country_event = {

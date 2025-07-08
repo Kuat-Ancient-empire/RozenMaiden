@@ -297,5 +297,8 @@ sgt_flagship_exploration_situation = {
 			}
 			add = 0.5
 		}
+		modifier = {
+			desc = roz_unknowship_krks_invision_boost
+		}
 	}
 }

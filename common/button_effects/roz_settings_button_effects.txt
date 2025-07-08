@@ -569,6 +569,7 @@ roz_settings_crisis_easy = {
         hidden_effect = {
             event_target:global_event_country = {
                 set_variable = { which = roz_unholy_invasion_difficulty value = 1 }
+                set_variable = { which = roz_unholy_invasion_explose_the_galaxy value = 900 }
             }
         }
     }
@@ -592,6 +593,7 @@ roz_settings_crisis_normal = {
         hidden_effect = {
             event_target:global_event_country = {
                 set_variable = { which = roz_unholy_invasion_difficulty value = 2 }
+                set_variable = { which = roz_unholy_invasion_explose_the_galaxy value = 600 }
             }
         }
     }
@@ -615,6 +617,7 @@ roz_settings_crisis_hard = {
         hidden_effect = {
             event_target:global_event_country = {
                 set_variable = { which = roz_unholy_invasion_difficulty value = 3 }
+                set_variable = { which = roz_unholy_invasion_explose_the_galaxy value = 360 }
             }
         }
     }
@@ -638,6 +641,7 @@ roz_settings_crisis_xiling = {
         hidden_effect = {
             event_target:global_event_country = {
                 set_variable = { which = roz_unholy_invasion_difficulty value = 4 }
+                set_variable = { which = roz_unholy_invasion_explose_the_galaxy value = 120 }
             }
         }
     }
@@ -669,26 +673,29 @@ roz_settings_abyss_vass_had_create_disable_effect = {
 #机制
 roz_settings_abyss_challenge_available_effect = {
     potential = {
-        from = { has_country_flag = roz_abyss_challenge_available }
+        has_global_flag = roz_abyss_challenge_available
     }
-    allow = { NOT = { from = { has_country_flag = roz_abyss_faction_arrival } } }
+    allow = {
+        NOT = { from = { has_country_flag = roz_abyss_faction_arrival } }
+    }
     effect = {
         custom_tooltip = roz_settings_abyss_challenge_available_effect.tooltip
         hidden_effect = {
-            from = { remove_country_flag = roz_abyss_challenge_available }
+            remove_global_flag = roz_abyss_challenge_available
         }
     }
 }
 
 roz_settings_abyss_challenge_disable_effect = {
     potential = {
-        NOT = { from = { has_country_flag = roz_abyss_challenge_available } }
+        NOT = { has_global_flag = roz_abyss_challenge_available }
     }
     allow = { NOT = { from = { has_country_flag = roz_abyss_faction_arrival } } }
     effect = {
         custom_tooltip = roz_settings_abyss_challenge_disable_effect.tooltip
         hidden_effect = {
             from = { set_country_flag = roz_abyss_challenge_available }
+            set_global_flag = roz_abyss_challenge_available
         }
     }
 }

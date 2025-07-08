@@ -978,6 +978,11 @@ country_event = {	###e17天赐
 	immediate = {
 		set_country_flag = ge_tech_reactor_get
 		save_event_target_as = this_country
+		if = {
+			limit = { NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol5_get } }
+			country_event = { id = roz_shinku_evt.50 days = 30 random = 30 }
+			country_event = { id = roz_shinku_evt.55 days = 30 random = 30 }
+		}
 	}
 	option = {
 		name = ge_event.61.aa

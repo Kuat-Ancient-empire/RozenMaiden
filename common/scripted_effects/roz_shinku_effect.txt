@@ -152,8 +152,8 @@ roz_madgod_fleet_jtcl_create_direct = {
 			set_aggro_range_measure_from = return_point
 			set_aggro_range = 300
 			add_modifier = {
-				modifier = roz_krks_bf_stage3_HK_buff
-				mult = 1.5
+				modifier = roz_krks_bf_stage1_HK_buff
+				mult = 1
 			}
 		}
 	}
@@ -172,7 +172,7 @@ roz_madgod_fleet_jtcl_create_decoy = {
 			set_owner = event_target:roz_madgod_force_country@root
 			set_fleet_flag = roz_madgod_jtcl_fleet
 			while = {
-				count = 10
+				count = 9
 				create_ship = {
 					name = "NAME_EDDY_ROZ"
 					design = "NAME_Corrupted_Avatar"
@@ -184,7 +184,8 @@ roz_madgod_fleet_jtcl_create_decoy = {
 			set_aggro_range_measure_from = return_point
 			set_aggro_range = 300
 			add_modifier = {
-				modifier = roz_krks_bf_stage3_HK_buff
+				modifier = roz_krks_bf_stage1_HK_buff
+				mult = 0.75
 			}
 		}
 	}
@@ -1757,6 +1758,32 @@ roz_abyss_ship_create = {
 			name = $name$
 			design = roz_crisis_ship_$design$
 			prefix = no
+			effect = {
+				set_ship_flag = roz_abyss_ship_flag
+				if = {
+					limit = { has_global_flag = roz_abyss_challenge_available }
+					if = {
+						limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 1 } } }
+						set_disable_at_health = -1
+						set_variable = { which = roz_abyss_ship_revive_count value = 0 }
+					}
+					if = {
+						limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 2 } } }
+						set_disable_at_health = 0.05
+						set_variable = { which = roz_abyss_ship_revive_count value = 1 }
+					}
+					if = {
+						limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 3 } } }
+						set_disable_at_health = 0.05
+						set_variable = { which = roz_abyss_ship_revive_count value = 3 }
+					}
+					if = {
+						limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 4 } } }
+						set_disable_at_health = 0.05
+						set_variable = { which = roz_abyss_ship_revive_count value = 5 }
+					}
+				}
+			}
 		}
 	}
 }
@@ -1910,6 +1937,7 @@ roz_abyss_fleet_create_small = {
 				set_fleet_bombardment_stance = roz_crisis_armageddon
 				set_fleet_stance = aggressive
 				set_fleet_flag = roz_abyss_fleet_small
+				set_fleet_flag = roz_abyss_fleet
 				#clear_fleet_actions = this
 				set_owner = $owner$
 				roz_abyss_ship_create = {
@@ -1978,6 +2006,7 @@ roz_abyss_fleet_create_median = {
 				set_fleet_bombardment_stance = roz_crisis_armageddon
 				set_fleet_stance = aggressive
 				set_fleet_flag = roz_abyss_fleet_median
+				set_fleet_flag = roz_abyss_fleet
 				#clear_fleet_actions = this
 
 				set_owner = $owner$
@@ -2053,6 +2082,7 @@ roz_abyss_fleet_create_large = {
 				set_fleet_bombardment_stance = roz_crisis_armageddon
 				set_fleet_stance = aggressive
 				set_fleet_flag = roz_abyss_fleet_large
+				set_fleet_flag = roz_abyss_fleet
 				#clear_fleet_actions = this
 
 				set_owner = $owner$
@@ -2124,6 +2154,7 @@ roz_abyss_fleet_create_marvelous = {
 				#clear_fleet_actions = this
 				set_fleet_bombardment_stance = roz_crisis_armageddon
 				set_fleet_flag = roz_abyss_fleet_marvelous
+				set_fleet_flag = roz_abyss_fleet
 				set_owner = event_target:roz_madgod_force_country@root
 				roz_abyss_ship_create = {
 					num_ships = 24
@@ -2191,6 +2222,7 @@ roz_abyss_fleet_create_madgod_boss = {
 				set_fleet_bombardment_stance = roz_crisis_armageddon
 				set_fleet_stance = passive
 				set_fleet_flag = roz_abyss_fleet_madgod_boss
+				set_fleet_flag = roz_abyss_fleet
 				set_owner = event_target:roz_madgod_force_country@root
 				roz_abyss_ship_create = {
 					num_ships = 8
@@ -2486,5 +2518,58 @@ roz_abyss_hunter_fleet_create_when_situation_fail = {
 			roz_abyss_madgod_hunter_fleet_create_establish_in_diff = yes
 		}
 		set_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 0 }
+	}
+}
+
+###深渊压制机制(双穿、减伤、舰船伤害)
+#
+roz_abyss_ship_is_suppressed_effect = {
+	optimize_memory
+	if = {
+		limit = {
+			check_modifier_value = {
+				modifier = $modifier$
+				value >= 0
+			}
+		}
+		export_modifier_to_variable = {
+			modifier = $modifier$
+			variable = roz_var_$modifier$
+		}
+		change_variable = {
+			which = roz_var_$modifier$
+			value = $roz_abyss_var_temp_1|1$
+		}
+		add_modifier = {
+			modifier = ge_basic_$modifier$
+			mult = roz_var_$modifier$
+			days = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_modifier_value = {
+				modifier = $modifier$
+				value < 0
+			}
+			check_modifier_value = {
+				modifier = $modifier$
+				value > -1
+			}
+		}
+		add_modifier = {
+			modifier = ge_basic_$modifier$
+			mult = $roz_abyss_var_temp_2|1$
+			days = 1
+		}
+	}
+}
+roz_abyss_fleet_suppress_modifier_effect = {
+	optimize_memory
+	from = {
+		every_owned_ship = {
+			roz_abyss_ship_is_suppressed_effect = { modifier = $modifier$ roz_abyss_var_temp_1 = $roz_abyss_var_temp_1$ roz_abyss_var_temp_2 = $roz_abyss_var_temp_2$ }
+			ship_event = { id = roz_shinku_evt.589 days = 1 }
+		}
 	}
 }

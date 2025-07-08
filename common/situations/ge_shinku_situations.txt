@@ -476,10 +476,15 @@ roz_awaken_of_shinku_1_acknowledge_border = {
             current_situation_approach = roz_awaken_of_shinku_1_acknowledge_border_3_approach
         }
         modifier = {
-            factor = 0
+            factor = 2.0
             desc = roz_awaken_of_shinku_1_acknowledge_border_4_approach
             current_situation_approach = roz_awaken_of_shinku_1_acknowledge_border_4_approach
         }
+        # modifier = {
+        #     factor = 0
+        #     desc = roz_awaken_of_shinku_1_acknowledge_border_wait
+        #     owner = {  }
+        # }
     }
     on_monthly = {
         # random_events = {   #不太好用，不如直接触发事件再调用random list
@@ -578,7 +583,7 @@ roz_SK_4_madgod_invasion_placard = {
             }
         }
     }
-    picture = GFX_
+    picture = GFX_evt_roz_unholy_invasion_main
     complete_icon = GFX_situation_outcome_roz_shinku
     complete_icon_frame = GFX_situation_outcome_frame_blue
     fail_icon = GFX_situation_outcome_negative
@@ -744,8 +749,59 @@ roz_SK_4_madgod_invasion_placard = {
     }
 }
 
-
-
+###真实深渊-毁灭倒计时
+roz_SK_4_madgod_invasion_explose_the_galaxy = {
+    desc = {
+        text = roz_SK_4_madgod_invasion_explose_the_galaxy_1_desc
+        trigger = {
+            owner = { always = yes }
+        }
+    }
+    picture = GFX_evt_supernova
+    complete_icon = GFX_situation_outcome_negative
+    complete_icon_frame = GFX_situation_outcome_frame_red
+    fail_icon = GFX_situation_outcome_negative
+    fail_icon_frame = GFX_situation_outcome_frame_red
+    category = negative
+    on_start = { owner = { country_event = { id = roz_shinku_evt.595 } } }
+    on_progress_complete = {
+        owner = {
+            set_country_flag = roz_end_of_allthings
+            country_event = { id = roz_shinku_evt.596 }
+        }
+    }
+    on_fail = { }
+    initial_progress = 0
+    stages = {
+        roz_SK_4_madgod_invasion_explose_the_galaxy_progress ={
+            icon = GFX_situation_stage_10
+            icon_background = GFX_situation_stage_frame_red
+            custom_tooltip = "roz_SK_4_madgod_invasion_explose_the_galaxy_progress_ct"
+            end = event_target:global_event_country.roz_unholy_invasion_explose_the_galaxy
+        }
+    }
+    # approach = {#方案
+    #     name = roz_SK_4_madgod_invasion_explose_the_galaxy_approach_1
+    #     icon = GFX_situation_approach_encurage_conversation
+    #     icon_background = GFX_situation_approach_bg_red
+    #     allow = {
+    #     }
+    #     potential = {
+    #     }
+    #     on_select = {
+    #         custom_tooltip = roz_SK_4_madgod_invasion_explose_the_galaxy_approach_1_onselect_ct
+    #     }
+    #     default = yes
+    #     modifier = {
+    #         #country_naval_cap_add = 500
+    #     }
+    #     ai_weight = {
+    #     }
+    # }
+    monthly_progress = {
+        base = 1
+    }
+}
 
 
 

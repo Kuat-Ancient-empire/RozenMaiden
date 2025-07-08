@@ -132,9 +132,10 @@ roz_junn_rosa_enhance: 改进赝品圣母制作工艺"
 roz_junn_rosa_enhance_DESC: "有了上一个项目的经验，我们能进一步开发赝品圣母的用途了！"
 
   ################事件链：真红的觉醒###############
-roz_wake-up_shinku_chain: "真红的觉醒"
-roz_wake-up_shinku_chain_DESC: "我们成功同蔷薇少女第五人偶真红的原契约者，现蔷薇少女们的监护人，人偶师罗真的继承者樱田纯建立通讯，并与之达成了重新制作真红的蔷薇圣母，从而唤醒真红的合作协议。该项目与水银灯女士对此的热忱也脱不开关系。虽然口头上对自己的这位姐妹不留口德，但水银灯对真红的关心早就在[Root.GetRulerTitle]和一众[Root.GetName]高层官员中成了公开的秘密……言归正传，根据樱田纯提供的情报和建议，[Root.GetName]的许多人员资源调配已经提上日程。我们的技术人员对于这项涉及“因果”的宏大项目激动异常，认为这将是继N之领域初步开发后，通向帝国下一阶段超凡飞升的征程起点。前路未卜，但毫无疑问的是，如此野心勃勃的项目，在推进过程中一定会带来许多意想不到的机遇和挑战。"
-roz_wake-up_shinku_chain_progress: "当前阶段"
+  #event chain
+ roz_wake-up_shinku_chain_title: "真红的觉醒"
+ roz_wake-up_shinku_chain_desc: "我们成功同蔷薇少女第五人偶真红的原契约者，现蔷薇少女们的监护人，人偶师罗真的继承者樱田纯建立通讯，并与之达成了重新制作真红的蔷薇圣母，从而唤醒真红的合作协议。该项目与水银灯女士对此的热忱也脱不开关系。虽然口头上对自己的这位姐妹不留口德，但水银灯对真红的关心早就在[Root.GetRulerTitle]和一众[Root.GetName]高层官员中成了公开的秘密……言归正传，根据樱田纯提供的情报和建议，[Root.GetName]的许多人员资源调配已经提上日程。我们的技术人员对于这项涉及“因果”的宏大项目激动异常，认为这将是继N之领域初步开发后，通向帝国下一阶段超凡飞升的征程起点。前路未卜，但毫无疑问的是，如此野心勃勃的项目，在推进过程中一定会带来许多意想不到的机遇和挑战。"
+ roz_wake-up_shinku_chain_progress: "当前阶段"
   #一
 roz_border_of_technical_proj: "科学边界"
 roz_border_of_technical_proj_DESC: "重新制作真红的蔷薇圣母，需要我们拥有“重写因果”的科技水平——人偶师樱田纯是如此描述的。尽管就如何才能达到这一境界，乃至是否存在这种可能性等等问题上，科学界仍然争论不休，有些老技术认为这已经触及了科学的边界，但主流观点仍然坚信此等难题也终会臣服于帝国的无限进步。庞大的人力物力已经筹措到位，新的突破口仿佛随时会展现在我们眼前。[Root.GetRulerTitle]，请下命令吧！"
@@ -169,11 +170,14 @@ roz_forbidden_area_proj_DESC: "希灵帝国为我们指明了重新制作真红�
 roz_unholy_invasion_defproj_decoy_II: "§R诱饵计划II§!"
 roz_unholy_invasion_defproj_decoy_II_DESC: "在解明了第二个希灵结晶体所承载的蓝图数据后，我们仍旧无法理解这个深渊诱饵装置的原理，好在图纸已经贴心而详尽地指导了如何以我们现有的技术水平完成建设工作，并且指名在[roz_outland_planet@root.solar_system.GetName]上以取得最佳的诱饵效果。标在旁边的还有一行小字：放心吧，区区深渊感染体还破坏不了我们的$roz_mega_information_remodeler$。\n仅仅建造并设置墨水人诱饵装置并不是一件特别困难的任务，重要的是，诱饵一旦设置完成便无法回头，[Root.GetRulerTitle]，§R您确定我们已经做好准备了吗？§!"
 
+ roz_build_information_remodeler: "建造$roz_mega_information_remodeler$"
+ roz_build_information_remodeler_DESC: "为了进行对蔷薇圣母的研究，我们需要在一个合适的星系内建造巨型结构：$roz_mega_information_remodeler$。"
 
   #roz__chain: "深渊感染体入侵：情况统计"
   #roz__chain_desc: "深渊入侵不仅席卷了我们，它们的爪牙也伸向了其他国家，我们获取的支持取决于我们抗击的成果。\n\n当前共有个深渊仆从国\n[root.roz_unholy_invasion_dip_aggressive_ai]个支持阵营国家\n[root.roz_unholy_invasion_dip_negative_ai]个反对阵营国家\n另有[root.roz_unholy_invasion_dip_neutral_ai]个国家保持中立。"
-roz_SK_madgod_invasion_main: "深渊感染体入侵：情况统计"
-roz_SK_madgod_invasion_main_DESC: "深渊入侵不仅席卷了我们，它们的爪牙也伸向了其他国家，我们获取的支持取决于我们抗击的成果。"
+ #event chain
+roz_SK_madgod_invasion_main_title: "深渊感染体入侵：情况统计"
+roz_SK_madgod_invasion_main_desc: "深渊入侵不仅席卷了我们，它们的爪牙也伸向了其他国家，我们获取的支持取决于我们抗击的成果。"
 #\n\n当前共有[root]个深渊仆从国\n[root.roz_unholy_invasion_dip_aggressive_ai]个支持阵营国家\n[root.roz_unholy_invasion_dip_negative_ai]个反对阵营国家\n另有[root.roz_unholy_invasion_dip_neutral_ai]个国家保持中立。
 roz_abyss_vass_country: "§R深渊仆从国§!"
 roz_SKI_dip_aggressive_ai: "§G支持我们的国家§!"

@@ -70,7 +70,7 @@ generate_sgt_site_on_game_start_when_singleplayer = {
 		last_created_system = {
 			set_surveyed = { surveyed = yes surveyor = root }
 			set_name = random
-			set_star_flag = ge_suigintou_site_star_flag
+			set_star_flag = ge_suigintou_site_star_flag@root
 			set_timed_star_flag = {
 				flag = ge_suigintou_site_counted
 				days = 1
@@ -5262,7 +5262,7 @@ roz_time_freeze_protect_effect = {
 roz_time_freeze_protect_remove_effect = {
 	clear_variable = roz_Ragnarok_ship_disable_count
 	roz_ship_disable_protect_effect = yes
-	set_disable_at_health = -1	
+	set_disable_at_health = -1
 }
 
 ###黑蔷薇王座创建

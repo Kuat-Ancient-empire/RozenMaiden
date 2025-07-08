@@ -164,6 +164,7 @@ mod_roz_ves_state_grid_shock_situation_type: "能源危机的负面影响"
 #############真红的苏醒
 ###########局势：解析蔷薇圣母
 roz_awaken_of_shinku_1_acknowledge_border: "解析蔷薇圣母"
+ roz_awaken_of_shinku_1_acknowledge_border_type: "解析蔷薇圣母"
 roz_awaken_of_shinku_1_acknowledge_border_desc: "我们不可能将蔷薇少女的真品蔷薇圣母提取出来以供研究，科研团队退而求其次，选择水银灯女士引进的炼金人偶技术线上批量生产的赝品蔷薇圣母作为研究对象，并结合樱田纯给出的蔷薇圣母相关技术资料，尝试进行技术解析；另外，N之领域探险队也已整装待发，随时奔赴新的未知世界......谁也不知道技术黑箱中究竟能掏出什么东西，也许上帝并不掷骰子，祂抽卡池。\n\n\n§C注：该局势进行时，每月获取一次研究成果，并根据阶段调整奖励池概率。§!"
 roz_awaken_of_shinku_1_acknowledge_border_1_approach: "细翻深耕"
 roz_awaken_of_shinku_1_acknowledge_border_1_approach_onselect_ct: "时间、资源和待遇都不是问题，慢工出细活，任何琐碎的发现都不放过！\n\n季度报告将以每§G90§!£time£的频率发送。"
@@ -179,6 +180,12 @@ roz_awaken_of_shinku_1_acknowledge_border_stage_2_ct: "科研团队确定了几�
 roz_awaken_of_shinku_1_acknowledge_border_stage_3_ct: "在几个方向的努力都成果喜人，现在我们需要的是融会贯通。提高月度报告中各种正面事件的概率。"
 roz_awaken_of_shinku_1_acknowledge_border_stage_4_ct: "我们已经取得许多突破性进展，更加广阔的前景等待着我们。进一步提高月度报告中各种正面事件的概率。"
 roz_awaken_of_shinku_1_acknowledge_border_stage_end_ct: "无人知晓道路的尽头究竟会有怎样的机遇与危机。"
+ roz_awaken_of_shinku_1_acknowledge_border_stage_1: "阶段I"
+ roz_awaken_of_shinku_1_acknowledge_border_stage_2: "阶段II"
+ roz_awaken_of_shinku_1_acknowledge_border_stage_3: "阶段III"
+ roz_awaken_of_shinku_1_acknowledge_border_stage_4: "阶段IV"
+ roz_awaken_of_shinku_1_acknowledge_border_stage_end: "阶段V"
+
 
 roz_awaken_of_shinku_1_acknowledge_border_rosa_analysis_negative_flag: "学术不端"
 
@@ -192,6 +199,7 @@ roz_SK_4_madgod_invasion_alert_1_onselect_ct: ""
 
 ###局势：Boss战 深渊感染体入侵 
 roz_SK_4_madgod_invasion_placard: "深渊感染体入侵"
+ roz_SK_4_madgod_invasion_placard_type: "深渊感染体入侵"
 roz_SK_4_madgod_invasion_placard_1_desc: "莫名贪求蔷薇少女力量一路尾随而来的深渊感染体终于降临在我们的位面，其化身本体正盘踞在[roz_outland_planet@root.solar_system.GetName]星系积蓄力量，祂麾下的深渊化实体们正在外围侵蚀[owner.GETNAME]的领地，情况危急！我们不能放任初来乍到的深渊感染滋生蔓延，必须要在深渊感染体还未站稳脚跟前，尽可能地削弱祂的实力。直到祂受到重创，希灵帝国才会接手，帮助我们完成唤醒真红的关键一步。"
 
 roz_SK_4_madgod_invasion_placard_stage_minus_two: "黑云压城"
@@ -212,5 +220,8 @@ roz_SK_4_madgod_invasion_placard_approach_2_onselect_ct: "我们可以调拨额�
 roz_SK_4_madgod_invasion_placard_approach_3: "竭尽全力"
 roz_SK_4_madgod_invasion_placard_approach_3_onselect_ct: "没有必要保留了，这个虚境跳大神煞墨水人风水的项目，All in！"
 
-
-
+ roz_SK_4_madgod_invasion_explose_the_galaxy: "§R终焉倒计时§!"
+ roz_SK_4_madgod_invasion_explose_the_galaxy_type: "§R终焉倒计时§!"
+ roz_SK_4_madgod_invasion_explose_the_galaxy_1_desc: "当局势行至终点时，深渊感染体将毁灭一切事物"
+ roz_SK_4_madgod_invasion_explose_the_galaxy_progress: "倒计时"
+ roz_SK_4_madgod_invasion_explose_the_galaxy_progress_ct: "滴答滴答——时间在流逝"

@@ -1441,7 +1441,7 @@ country_event = {
 				module = shipyard
 				module = shipyard
 				effect = {
-					fleet = { set_name = NAME_roz_lgate_starbase }
+					fleet = { every_owned_ship = { set_name = NAME_roz_lgate_starbase } }
 					add_starbase_component = { component = "STARBASE_DARK_MATTER_REACTOR" }
 					set_starbase_building = {
 						slot = 1

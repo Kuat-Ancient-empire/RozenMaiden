@@ -381,7 +381,7 @@ country_event = {
 		}
 	}
 	option = {
-		#变成科学家
+		#变成科学家（未获得真红前）
 		is_dialog_only = yes
 		allow = {
 			custom_tooltip = {
@@ -406,17 +406,14 @@ country_event = {
 			}
 			custom_tooltip_fail = {
 				text = ge_communication.100.diplomatic_initialize
-				NOT = {
-					has_country_flag = roz_suigintou_diplomatic_initialize_flag
-				}
+				NOT = { has_country_flag = roz_suigintou_diplomatic_initialize_flag }
 			}
 			NOT = { has_country_flag = ge_sgt_busy }
 		}
 		trigger = {
-			NOT = {
-				has_country_flag = roz_suigintou_scientist_active
-			}
+			NOT = { has_country_flag = roz_suigintou_scientist_active }
 			has_country_flag = roz_leader_suigintou_get
+			NOT = { has_country_flag = roz_leader_shinku_get }
 		}
 		hidden_effect = {
 			create_ge_suigintou_scientist = yes
@@ -426,6 +423,51 @@ country_event = {
 		name = ge_communication.100.b
 		response_text = ge_communication.100.b1.response
 		response_text = ge_communication.100.b2.response
+		response_text = ge_communication.100.b3.response
+	}
+	option = {
+		#变成科学家（真红来了后）
+		is_dialog_only = yes
+		allow = {
+			custom_tooltip = {
+				NOR = {
+					has_country_flag = roz_suigintou_switch_vocation_cd_flag
+					has_country_flag = roz_suigintou_scientist_active
+				}
+				fail_text = "Cool Down."
+			}
+			custom_tooltip = {
+				count_owned_leader = {
+					count = 0
+					limit = {
+						leader_class = scientist
+						OR = {
+							has_leader_flag = roz_suigintou_flag
+							has_trait = leader_trait_ge_mercury_lamp_scientist
+						}
+					}
+				}
+				fail_text = "NO LEADER"
+			}
+			custom_tooltip_fail = {
+				text = ge_communication.100.diplomatic_initialize
+				NOT = { has_country_flag = roz_suigintou_diplomatic_initialize_flag }
+			}
+			NOT = { has_country_flag = ge_sgt_busy }
+		}
+		trigger = {
+			NOT = { has_country_flag = roz_suigintou_scientist_active }
+			has_country_flag = roz_leader_suigintou_get
+			has_country_flag = roz_leader_shinku_get
+		}
+		hidden_effect = {
+			create_ge_suigintou_scientist = yes
+			remove_country_flag = ge_nfield_diplomacy_activated
+			#set_country_flag = ge_sgt_survey_start_first
+		}
+		name = ge_communication.100.bb
+		response_text = ge_communication.100.b1.response
+		response_text = ge_communication.100.bb2.response
 		response_text = ge_communication.100.b3.response
 	}
 	option = {
@@ -744,7 +786,10 @@ country_event = {
 			3 = {
 				modifier = {
 					factor = 0
-					has_country_flag = roz_kirakishou_get
+					OR = {
+						has_country_flag = roz_kirakishou_get
+						has_country_flag = roz_leader_shinku_get
+					}
 				}
 				country_event = {
 					id = ge_communication.220

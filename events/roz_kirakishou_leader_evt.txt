@@ -1286,9 +1286,10 @@ country_event = {
     picture = GFX_roz_evt_outland_planet
     show_sound = event_solar_fusion
     location = from
+    trigger = { exists = this }
+    immediate = { set_country_flag = roz_outland_locator_disable }
     option = {
         name = roz_krks_leader_evt.55.aa
-        set_country_flag = roz_outland_locator_disable
         complete_special_project = { type = roz_outland_locator }
         end_event_chain = roz_outland_system_chain
         event_target:roz_outland_planet@root = {
