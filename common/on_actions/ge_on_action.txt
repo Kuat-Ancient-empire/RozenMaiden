@@ -133,6 +133,8 @@ on_custom_diplomacy = {
 		ge_communication.102
 		roz_shinku_evt.1001
 		roz_shinku_evt.4001
+		roz_shinku_evt.4501
+		roz_shinku_evt.4510
 
 		roz_shinku_evt.90 #真红收集第9零件月检
 	}

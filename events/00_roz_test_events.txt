@@ -266,6 +266,9 @@ country_event = { #控制台effect测试区
 		# event_target:roz_test = {
 		# 	set_player = event_target:roz_suigintou_owner@root
 		# }
+		# event_target:roz_madgod_force_country@root = {
+		# 	set_player = event_target:roz_suigintou_owner@root
+		# }
 
 		# every_cosmic_storm = {
 		# 	limit = {

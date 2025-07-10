@@ -8,6 +8,16 @@ ambient_object = {
 }
 
 ambient_object = {
+	name = "roz_outland_main_black_hole_station"
+	entity = "sensor_station_01_entity"
+	selectable = yes
+	show_name = yes
+	tooltip = roz_outland_main_black_hole_station_desc
+	description = roz_outland_main_black_hole_station_desc
+}
+
+
+ambient_object = {
 	name = "chronos_storm"
 	entity = "chronos_storm_entity"
 	selectable = no

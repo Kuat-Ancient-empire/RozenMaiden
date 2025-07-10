@@ -22,7 +22,7 @@ roz_outland_star_system = {
 		}
 		has_ring = no
 		init_effect = {
-			#save_event_target_as = roz_outland_main_black_hole
+			#save_global_event_target_as = roz_outland_main_black_hole@root
 			set_planet_flag = roz_outland_main_black_hole
 		}
 	}

@@ -105,9 +105,9 @@ roz_mega_wanxiangtianyin_undeploy = {
 ###资讯重构仪
 #基址
 roz_mega_information_remodeler_base = {
-    entity = ROZ_IRR_stage1_entity
-    construction_entity = ROZ_IRR_stage1_entity
-    portrait = GFX_roz_mega_information_remodeler
+    entity = construction_platform_entity
+    construction_entity = construction_platform_entity
+    portrait = GFX_evt_megastructure_construction
     place_entity_on_planet_plane = yes
     entity_offset = { x = @entity_x y = @entity_y }
     build_time = 1800
@@ -140,17 +140,25 @@ roz_mega_information_remodeler_base = {
 				fail_text = "must_build_around_star"
 				is_star = yes
 			}
+            # custom_tooltip = {
+            #     solar_system = { is_same_value = event_target:roz_outland_main_black_hole@space_owner }
+            #     fail_text = "roz_is_roz_outland_planet"
+            # }
+            custom_tooltip = {
+                fail_text = "roz_must_build_no_more_stars"
+                OR = {
+                    is_trinary_star = no
+                    is_binary_star = no
+                }
+            }
 		}
         space_owner = {
             is_ai = no
         }
-        custom_tooltip = {
-            solar_system = { is_same_value = event_target:roz_outland_planet@space_owner }
-            fail_text = "roz_is_roz_outland_planet"
-        }
 	}
     potential = {
         has_country_flag = roz_SK_3_start_reward
+        NOT = { has_country_flag = roz_mega_information_remodeler_has_been_built }
     }
     country_modifier = {
         country_produces_mult = 0.10
@@ -166,8 +174,8 @@ roz_mega_information_remodeler_base = {
 }
 
 roz_mega_information_remodeler = {
-    entity = ROZ_IRR_main_entity
-    construction_entity = ROZ_IRR_main_entity
+    entity = ROZ_IRR_stage1_entity
+    construction_entity = ROZ_IRR_stage1_entity
     portrait = GFX_roz_mega_information_remodeler
     place_entity_on_planet_plane = yes
     entity_offset = { x = @entity_x y = @entity_y }
@@ -223,21 +231,29 @@ roz_mega_information_remodeler_effect = {
     entity = ROZ_IRR_main_entity
     construction_entity = ROZ_IRR_main_entity
     portrait = GFX_roz_mega_information_remodeler
-    place_entity_on_planet_plane = no
+    place_entity_on_planet_plane = yes
     entity_offset = { x = @entity_x y = @entity_y }
     build_time = 1
     resources = {
         category = megastructures
         cost = {
-            energy = 10000
-            sr_void_core = 100
+            energy = 100000
+            sr_dark_matter = 15000
         }
 
         upkeep = {
         }
 
         produces = {
+            energy = 2000
+            alloys = 1000
+            sr_void_core = 200
         }
+    }
+    country_modifier = {
+        country_produces_mult = 0.40
+        country_naval_cap_add = 5000
+        all_technology_research_speed = 0.30
     }
     possible = {
         from = {
@@ -248,21 +264,22 @@ roz_mega_information_remodeler_effect = {
         roz_mega_information_remodeler
     }
     on_build_complete = {
-        solar_system = {
-            spawn_megastructure = {
-				type = roz_mega_information_remodeler
-				planet = root.star
-				owner = prev.from
-			}
-        }
-        fromfrom = {
-            remove_megastructure = this
-        }
+        # solar_system = {
+        #     spawn_megastructure = {
+		# 		type = roz_mega_information_remodeler
+		# 		planet = root.star
+		# 		owner = prev.from
+		# 	}
+        # }
+        # fromfrom = {
+        #     remove_megastructure = this
+        # }
         from = {
             country_event = {
                 id = roz_shinku_evt.514
             }
         }
+        star = { set_planet_size = 1 }
     }
 
     possible = {
@@ -299,7 +316,7 @@ roz_mega_information_remodeler_destoryed = {
 
         produces = {
             physics_research = 500
-            society_research = 250
+            society_research = 500
             engineering_research = 500
         }
     }

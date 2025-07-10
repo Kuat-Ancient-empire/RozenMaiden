@@ -91,11 +91,17 @@ kirakishou_backstory: "§rN之领域的心灵梦魇§!\n§W纯净无瑕的苍白
 kirakishou_gov_catch_phrase: ""
 kirakishou_gen_catch_phrase: ""
 
-shinku_backstory: "§r跨越永眠而归的抗争者§!\n§Y优雅高贵的红之女王§!\n§R完美无瑕的爱丽丝§!\n§H蔷薇少女第五人偶——真红§!"
+shinku_backstory: "§r跨越永眠而归的抗争者§!\n§Y优雅高贵的红之女王§!\n§R完美无瑕的爱丽丝§!\n§H蔷薇庭园里永不凋零的第五人偶——真红§!"
 shinku_gov_catch_phrase: ""
 
+hinaichigo_backstory: "§H天真草莓的咏叹§!\n§c稚嫩园丁的永恒童话§!\n§Y纯真梦境的金色守护者§!\n§d蔷薇少女第六人偶——雏莓§!"
+hinaichigo_gov_catch_phrase: ""
+
+
+
+
  roz_abyss_leader_ccp: ""
- roz_abyss_leader_cd: "§_深渊的奴仆§!\n§_疯狂的思绪§!\n§_注定的死亡§!"
+ roz_abyss_leader_cd: "§_深渊的奴仆§!\n§_疯狂的思绪§!\n§_注定的消亡§!"
 
 ge_black_dragon: "黑羽龙"
 ge_kirakishou_avatar: "化身"

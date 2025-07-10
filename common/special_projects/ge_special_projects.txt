@@ -693,13 +693,13 @@ special_project = {		####
 						limit = {
 							has_planet_flag = roz_outland_main_black_hole
 						}
-						save_event_target_as = roz_outland_main_black_hole
+						save_global_event_target_as = roz_outland_main_black_hole@root
 					}
 				}
 			}
 			enable_special_project = {
 				name = roz_outland_locator
-				location = event_target:roz_outland_main_black_hole
+				location = event_target:roz_outland_main_black_hole@root
 				owner = this
 			}
 		}
@@ -1203,21 +1203,19 @@ special_project = {
 # }
 
 special_project = {
-	key = "roz_build_information_remodeler"
-	timelimit = -1
 	picture = GFX_evt_roz_megastructure_IR
+	timelimit = -1
 	icon = "gfx/interface/icons/situation_log/situation_log_tick.dds"
-
 	event_scope = country_event
-
+	days_to_research = 123456789
 	requirements = {
 		#handled_by_event_tooltip =
 		has_technology = tech_roz_information_remodeler
 	}
-
 	abort_trigger = {
 		has_country_flag = roz_mega_information_remodeler_has_been_built
 	}
+	key = "roz_build_information_remodeler"
 }
 
 

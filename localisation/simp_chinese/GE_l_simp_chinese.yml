@@ -230,6 +230,8 @@ Roz_starbase_placeholder: "永不"
 ROZ_SSVL_AO: "诡异暗影"
 ROZ_SSVL_AO_tooltip: "这个实体十分神秘，它几乎不反射任何电磁波，我们只能从其外部轮廓上判断出这是一艘船……"
 ROZ_SSVL_AO_object_desc: "这个实体十分神秘，它几乎不反射任何电磁波，我们只能从其外部轮廓上判断出这是一艘船……"
+ roz_outland_main_black_hole_station: "虚空锚点调频器"
+ roz_outland_main_black_hole_station_desc:"用以勾引深渊感染体的特殊设备站点"
 
 ###################
 #opinion
@@ -327,9 +329,10 @@ roz_mega_wanxiangtianyin_DESC: "这座宏伟巨舰正锚定在星系重力井的
 roz_mega_wanxiangtianyin_undeploy: "收起引力锚"
 roz_mega_wanxiangtianyin_undeploy_DESC: "不再锚定星系重力井，让这个庞然大物再次运动起来"
 
-roz_mega_information_remodeler_base: "资讯重构仪基址"
-roz_mega_information_remodeler_base_DESC: "这项来自希灵帝国的超级工程无法为我们所理解，好在我们只需按照图纸依样画葫芦就能进行建设。"
-#该巨构只能建设在破败神国星系的恒星上。
+ roz_mega_information_remodeler_base: "资讯重构仪基址"
+ roz_mega_information_remodeler_base_DESC: "这项来自希灵帝国的超级工程无法为我们所理解，好在我们只需按照图纸依样画葫芦就能进行建设。"
+ roz_mega_information_remodeler_base_MEGASTRUCTURE_DETAILS: "这项来自希灵帝国的超级工程无法为我们所理解，好在我们只需按照图纸依样画葫芦就能进行建设。"
+#
 roz_mega_information_remodeler: "§B资讯重构仪§!"
 roz_mega_information_remodeler_DESC: "无中生有的神奇技术，超级文明的惊鸿一瞥。超限容晶体-12345型（小公主特供版）作为技术核心，镶嵌于此。"
 roz_is_roz_outland_planet:" "是§P破败神国§!星系"

@@ -26,7 +26,9 @@ spriteTypes = {
     }
     spriteType = {
         name = "GFX_roz_mega_information_remodeler"
-        texturefile = "gfx/event_pictures/roz_mega_information_remodeler.dds"
+        texturefile = "gfx/event_pictures/evt_roz_megastructure_IR.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
     }
 
     ###ship_size
@@ -126,4 +128,9 @@ spriteTypes = {
         texturefile = "gfx/interface/icons/situation_log/situations/stages/situation_stage_icon_roz_SK4_two.dds"
     }
 
+    #megastructure
+    spriteType = {
+        name = "GFX_roz_mega_information_remodeler_base_build_icon"
+        textureFile = "gfx/interface/icons/technologies/tech_roz_information_remodeler.dds"
+    }
 }

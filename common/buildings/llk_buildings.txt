@@ -223,7 +223,8 @@ building_roz_dolls_factory = {
     #}
     planet_modifier = {
         planet_amenities_no_happiness_add = 2000
-        biological_logistic_growth_mult = 0.15
+        bonus_pop_growth = 20
+        fake_pop_growth_mod = 20
     } 				#星球范围内的修正
     country_modifier = {
 

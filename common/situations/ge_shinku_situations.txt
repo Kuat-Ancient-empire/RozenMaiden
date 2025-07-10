@@ -721,26 +721,26 @@ roz_SK_4_madgod_invasion_placard = {
     }
     monthly_progress = {
         base = 0
-        modifier = {
-            desc = roz_SK_4_madgod_invasion_placard_approach_monthly_progress_normal
-            add = -0.5
-            owner = {
-                #预计通过check var来判断敌军头目数量
-                #check_variable = {
-                #    which = X
-                #    value < X
-                #}
-            }
-        }
-        modifier = {
-            desc = roz_SK_4_madgod_invasion_placard_approach_monthly_progress_aggressive
-            factor = 0
-            current_stage = roz_SK_4_madgod_invasion_placard_stage_two
-        }
-        modifier = {
-            factor = 0
-            current_stage = roz_SK_4_madgod_invasion_placard_approach_monthly_progress_negative
-        }
+        # modifier = {
+        #     desc = roz_SK_4_madgod_invasion_placard_approach_monthly_progress_normal
+        #     add = -0.5
+        #     owner = {
+        #         #预计通过check var来判断敌军头目数量
+        #         #check_variable = {
+        #         #    which = X
+        #         #    value < X
+        #         #}
+        #     }
+        # }
+        # modifier = {
+        #     desc = roz_SK_4_madgod_invasion_placard_approach_monthly_progress_aggressive
+        #     factor = 0
+        #     current_stage = roz_SK_4_madgod_invasion_placard_stage_two
+        # }
+        # modifier = {
+        #     factor = 0
+        #     current_stage = roz_SK_4_madgod_invasion_placard_approach_monthly_progress_negative
+        # }
     }
     on_monthly = {
         events = {

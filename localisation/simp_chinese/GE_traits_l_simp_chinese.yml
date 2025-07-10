@@ -108,7 +108,9 @@ leader_trait_roz_battered_desc: "这位科学家曾遭遇极为可怕的变故�
 leader_trait_roz_shinku_main: "§R真红§!"
 leader_trait_roz_shinku_main_desc: "$leader_trait_roz_test$"
 
-
+ #雏莓
+ leader_trait_roz_hinaichigo_main: "§d雏莓§!"
+ leader_trait_roz_hinaichigo_main_desc: "$leader_trait_roz_test$"
 
 ###############################
 #######      好感度     ########

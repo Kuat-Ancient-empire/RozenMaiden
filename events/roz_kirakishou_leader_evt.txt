@@ -1182,7 +1182,7 @@ country_event = {
                     limit = {
                         has_planet_flag = roz_outland_main_black_hole
                     }
-                    save_event_target_as = roz_outland_main_black_hole
+                    save_global_event_target_as = roz_outland_main_black_hole@root
                 }
             }
         }
@@ -1204,7 +1204,7 @@ country_event = {
         }
         enable_special_project = {
             name = roz_outland_locator
-            location = event_target:roz_outland_main_black_hole
+            location = event_target:roz_outland_main_black_hole@root
             owner = this
         }
     }
@@ -1239,7 +1239,7 @@ ship_event = {
                 limit = {
                     has_planet_flag = roz_outland_main_black_hole
                 }
-                save_event_target_as = roz_outland_main_black_hole
+                save_global_event_target_as = roz_outland_main_black_hole@root
             }
             random_system_planet = {
                 limit = {
@@ -1260,7 +1260,7 @@ ship_event = {
         owner = {
             enable_special_project = {
                 name = roz_outland_main_black_hole_project
-                location = event_target:roz_outland_main_black_hole
+                location = event_target:roz_outland_main_black_hole@root
             }
             enable_special_project = {
                 name = roz_outland_small_black_hole_project

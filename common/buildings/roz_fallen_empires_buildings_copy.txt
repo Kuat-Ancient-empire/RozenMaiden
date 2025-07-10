@@ -1064,23 +1064,33 @@ building_roz_fe_entertainment_2 = {
 
 building_roz_fe_lab_2 = {
     base_buildtime = @b2_time
-    can_build = no
-    icon = building_fe_lab_2
+    can_build = yes
+    icon = building_roz_fe_lab_2
     category = research
 
     building_sets = {
         automation
 	}
 
+    empire_limit = {
+        base = 3
+        modifier = { add = 1 has_country_flag = roz_lgate_create_flag }
+    }
+
     potential = {
         exists = owner
         NOT = {
             has_building = building_roz_fe_lab_2
         }
-        solar_system = {
-            has_star_flag = graygoo_factory_system
+        OR = {
+            AND = {
+                solar_system = {
+                    has_star_flag = graygoo_factory_system
+                }
+                owner = { has_country_flag = roz_lgate_create_flag }
+            }
+            owner = { has_country_flag = building_roz_fe_lab_2_can_built }
         }
-        owner = { has_country_flag = roz_lgate_create_flag }
     }
 
     destroy_trigger = {
