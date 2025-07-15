@@ -807,3 +807,8 @@ roz_defeat_the_abyss_in_darkest_hour = {
 	ship_weapon_damage = 1.0
 	ship_shield_hardening_add = 1.0
 }
+
+roz_test_intel_modifier = {
+	intel_encryption_add = 100
+	intel_decryption_add = 100
+}

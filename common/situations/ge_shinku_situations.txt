@@ -777,7 +777,8 @@ roz_SK_4_madgod_invasion_explose_the_galaxy = {
             icon = GFX_situation_stage_10
             icon_background = GFX_situation_stage_frame_red
             custom_tooltip = "roz_SK_4_madgod_invasion_explose_the_galaxy_progress_ct"
-            end = event_target:global_event_country.roz_unholy_invasion_explose_the_galaxy
+            #end = event_target:global_event_country.roz_unholy_invasion_explose_the_galaxy
+            end = 480
         }
     }
     # approach = {#方案
@@ -800,6 +801,26 @@ roz_SK_4_madgod_invasion_explose_the_galaxy = {
     # }
     monthly_progress = {
         base = 1
+        modifier = {
+            divide = 1.5
+            desc = roz_SK_4_madgod_invasion_explose_the_galaxy_progress_easy
+            event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 1 } }
+        }
+        modifier = {
+            mult = 1
+            desc = roz_SK_4_madgod_invasion_explose_the_galaxy_progress_normal
+            event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 2 } }
+        }
+        modifier = {
+            mult = 2
+            desc = roz_SK_4_madgod_invasion_explose_the_galaxy_progress_hard
+            event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 3 } }
+        }
+        modifier = {
+            mult = 4
+            desc = roz_SK_4_madgod_invasion_explose_the_galaxy_progress_xiling
+            event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 4 } }
+        }
     }
 }
 

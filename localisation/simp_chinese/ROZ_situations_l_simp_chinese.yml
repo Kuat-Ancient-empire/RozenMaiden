@@ -225,3 +225,8 @@ roz_SK_4_madgod_invasion_placard_approach_3_onselect_ct: "没有必要保留了�
  roz_SK_4_madgod_invasion_explose_the_galaxy_1_desc: "当局势行至终点时，深渊感染体将毁灭一切事物"
  roz_SK_4_madgod_invasion_explose_the_galaxy_progress: "倒计时"
  roz_SK_4_madgod_invasion_explose_the_galaxy_progress_ct: "滴答滴答——时间在流逝"
+ roz_SK_4_madgod_invasion_explose_the_galaxy_progress_easy: "简单难度进度"
+ roz_SK_4_madgod_invasion_explose_the_galaxy_progress_normal: "正常难度进度"
+ roz_SK_4_madgod_invasion_explose_the_galaxy_progress_hard: "困难难度进度"
+ roz_SK_4_madgod_invasion_explose_the_galaxy_progress_xiling: "希灵前线难度进度"
+

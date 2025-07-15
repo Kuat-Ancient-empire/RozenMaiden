@@ -94,11 +94,11 @@ roz_crisis_armageddon = {
 	stop_when_ground_combat = no
 	abduct_pops = no
 
-	planet_damage = 25
-	army_damage = 200
+	planet_damage = 1000
+	army_damage = 2000
 
 	kill_pop_chance = {
-		base = 10
+		base = 1000
 	}
 	min_pops_to_kill_pop = 0
 

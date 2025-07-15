@@ -651,7 +651,16 @@ roz_settings_abyss_vass_had_create_available_effect = {
     potential = {
         from = { has_country_flag = roz_abyss_vass_had_create_available }
     }
-    allow = { has_country_flag = roz_abyss_vass_can_create_timed NOT = { has_country_flag = roz_abyss_vass_had_created } }
+    allow = {
+        custom_tooltip = {
+            fail_text = roz_start.7777.abyss_vass_can_create_timed
+            root = { has_country_flag = roz_abyss_vass_can_create_timed }
+        }
+        custom_tooltip = {
+            fail_text = roz_start.7777.abyss_has_come
+            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
+        }
+    }
     effect = {
         custom_tooltip = roz_settings_abyss_vass_had_create_available_effect.tooltip
         from = { remove_country_flag = roz_abyss_vass_had_create_available }
@@ -661,7 +670,16 @@ roz_settings_abyss_vass_had_create_disable_effect = {
     potential = {
         NOT = { from = { has_country_flag = roz_abyss_vass_had_create_available } }
     }
-    allow = { has_country_flag = roz_abyss_vass_can_create_timed NOT = { has_country_flag = roz_abyss_vass_had_created } }
+    allow = {
+        custom_tooltip = {
+            fail_text = roz_start.7777.abyss_vass_can_create_timed
+            root = { has_country_flag = roz_abyss_vass_can_create_timed }
+        }
+        custom_tooltip = {
+            fail_text = roz_start.7777.abyss_has_come
+            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
+        }
+    }
     effect = {
         custom_tooltip = roz_settings_abyss_vass_had_create_disable_effect.tooltip
         hidden_effect = {
@@ -676,7 +694,10 @@ roz_settings_abyss_challenge_available_effect = {
         has_global_flag = roz_abyss_challenge_available
     }
     allow = {
-        NOT = { from = { has_country_flag = roz_abyss_faction_arrival } }
+        custom_tooltip = {
+            fail_text = roz_start.7777.abyss_has_come
+            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
+        }
     }
     effect = {
         custom_tooltip = roz_settings_abyss_challenge_available_effect.tooltip
@@ -690,7 +711,12 @@ roz_settings_abyss_challenge_disable_effect = {
     potential = {
         NOT = { has_global_flag = roz_abyss_challenge_available }
     }
-    allow = { NOT = { from = { has_country_flag = roz_abyss_faction_arrival } } }
+    allow = {
+        custom_tooltip = {
+            fail_text = roz_start.7777.abyss_has_come
+            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
+        }
+    }
     effect = {
         custom_tooltip = roz_settings_abyss_challenge_disable_effect.tooltip
         hidden_effect = {

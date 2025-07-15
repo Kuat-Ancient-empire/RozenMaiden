@@ -312,6 +312,15 @@ country_event = { #控制台effect测试区
 		#		}
 		#	}
 		#}
+		# event_target:roz_abyss_vass_extra_1_target0 = {
+		# 	set_country_flag = roz_abyss_vass_country
+		# 	set_subject_of = {
+		# 		who = event_target:roz_madgod_force_country0
+		# 	}
+		# 	roz_unholy_invision_difficult_modifier_add_effect = yes
+		# }
+		#trigger event_target:roz_abyss_vass_extra_1_target@root = { exists = this }
+		#trigger event_target:roz_abyss_vass_extra_4_target0 = { exists = this }
 		#effect = { set_country_type = default }
 		#effect = { set_country_type = fallen_empire }
 		#effect = { set_country_type = awakened_fallen_empire }

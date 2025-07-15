@@ -2362,9 +2362,6 @@ country_event = {   #抵达
         country_event = {
             id = roz_shinku_evt.523
         }
-        event_target:roz_madgod_force_country@root = {
-            establish_communications_no_message = root
-        }
     }
 }
 
@@ -2382,7 +2379,10 @@ country_event = {   #混乱通讯 #深渊入侵正式开始
     trigger = {
         is_ai = no
     }
-    immediate = { set_country_flag = roz_abyss_faction_arrival }
+    immediate = {
+        set_country_flag = roz_abyss_faction_arrival
+        event_target:roz_madgod_force_country@root = { establish_communications_no_message = root }
+    }
     option = {
         name = roz_shinku_evt.523.aa
         custom_tooltip = roz_shinku_evt.523.aa.ct
@@ -2403,17 +2403,21 @@ country_event = {   #混乱通讯 #深渊入侵正式开始
             #country_event = { id = roz_shinku_evt.5231 days = 1 }
             #深渊势力刷船次数初始化
             roz_abyss_hunter_fleet_create_can_establish_num_in_diff = yes
-            #
+            ###深渊仆从国buff
             every_country = {
                 limit = { has_country_flag = roz_abyss_vass_country }
                 country_event = { id = roz_shinku_evt.532 }
             }
+            ###限时挑战开启
             if = {
                 limit = { has_global_flag = roz_abyss_challenge_available }
                 start_situation = { type = roz_SK_4_madgod_invasion_explose_the_galaxy target = this }
             }
+            ###深渊主局势
             start_situation = { type = roz_SK_4_madgod_invasion_placard target = root }
+            ###ai外交
             country_event = { id = roz_shinku_evt.524 }
+            ###刷怪
             country_event = { id = roz_shinku_evt.535 }
             ###深渊仆从国计数
             set_variable = { which = roz_abyss_vass_country_amount value = 0 }
@@ -2421,6 +2425,8 @@ country_event = {   #混乱通讯 #深渊入侵正式开始
                 limit = { has_country_flag = roz_abyss_vass_country }
                 root = { change_variable = { which = roz_abyss_vass_country_amount value = 1 } }
             }
+            ###
+            #country_event = { id = roz_shinku_evt.5231 days = 1 }
         }
     }
 }
@@ -2549,7 +2555,7 @@ country_event = {
     is_triggered_only = yes
     picture = GFX_evt_galactic_community
     show_sound = event_galactic_community
-    trackable = yes
+    #trackable = yes
     trigger = {
         is_ai = no
     }
@@ -2578,24 +2584,30 @@ country_event = {
             establish_communications_no_message = event_target:roz_madgod_force_country@root
         }
     }
+    option = {
+        name = roz_shinku_evt.525.aa
+        custom_tooltip = roz_shinku_evt.525.ct
+    }
     after = {
-        #begin_event_chain = { event_chain = roz_SK_madgod_invasion_main }
-        ###清除临时数据
-        clear_variable = roz_unholy_invasion_dip_neutral_ai
-        clear_variable = roz_unholy_invasion_dip_negative_ai
-        clear_variable = roz_unholy_invasion_dip_aggressive_ai
-        every_playable_country = {
-            limit = { NOT = { has_country_flag = roz_abyss_vass_country } }
-            remove_country_flag = roz_unholy_invasion_dip_aggressive_ai_flag
-            remove_country_flag = roz_unholy_invasion_dip_negative_ai_flag
-            remove_country_flag = roz_unholy_invasion_dip_neutral_ai_flag
+        hidden_effect = {
+            #begin_event_chain = { event_chain = roz_SK_madgod_invasion_main }
+            ###清除临时数据
+            clear_variable = roz_unholy_invasion_dip_neutral_ai
+            clear_variable = roz_unholy_invasion_dip_negative_ai
+            clear_variable = roz_unholy_invasion_dip_aggressive_ai
+            every_playable_country = {
+                limit = { NOT = { has_country_flag = roz_abyss_vass_country } }
+                remove_country_flag = roz_unholy_invasion_dip_aggressive_ai_flag
+                remove_country_flag = roz_unholy_invasion_dip_negative_ai_flag
+                remove_country_flag = roz_unholy_invasion_dip_neutral_ai_flag
+            }
+            #启动循环事件更新数据
+            country_event = {
+                id = roz_shinku_evt.526
+                days = 30
+            }
+            set_country_flag = roz_unholy_invasion_dip_refresh_active_flag
         }
-        #启动循环事件更新数据
-        country_event = {
-            id = roz_shinku_evt.526
-            days = 30
-        }
-        set_country_flag = roz_unholy_invasion_dip_refresh_active_flag
     }
 }
 
@@ -2620,22 +2632,25 @@ country_event = {
         }
         ###
         roz_unholy_invasion_dip_effect = {  #支持者
-            sign = ">="
+            sign = ">"
+            opinion_set = neutral
             opinion = aggressive
         }
         roz_unholy_invasion_dip_effect = {  #反对者
-            sign = "<="
+            sign = "<"
+            opinion_set = neutral
             opinion = negative
         }
         roz_unholy_invasion_dip_effect = {  #中立者
             sign = "="
+            opinion_set = neutral
             opinion = neutral
         }
         ###深渊仆从国计数
         set_variable = { which = roz_abyss_vass_country_amount value = 0 }
-        every_playable_country = {
+        every_country = {
             limit = { has_country_flag = roz_abyss_vass_country }
-            prev = { change_variable = { which = roz_abyss_vass_country_amount value = 1 } }
+            root = { change_variable = { which = roz_abyss_vass_country_amount value = 1 } }
         }
         ###
         country_event = {

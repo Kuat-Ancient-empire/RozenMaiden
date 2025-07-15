@@ -23,30 +23,29 @@ ge_highest_reference_frame_edicts = {
 	}
 }
 
-roz_rosa_mystica_enhance_edicts = {
-	length = -1
-	icon = GFX_sgt_edit_icon_2
-	potential = {
-		has_country_flag = roz_leader_suigintou_get
-		OR = {
-			has_country_flag = q_sgt_army_get
-			has_country_flag = roz_kirakishou_get
-		}
-	}
-	resources = {
-		category = edicts
-		cost = {
-			unity = 1000
-			sr_rosa_mystica = 1000
-		}
-		upkeep = {
-			sr_rosa_mystica = 5
-		}
-	}
+# roz_rosa_mystica_enhance_edicts = {
+# 	length = -1
+# 	icon = GFX_sgt_edit_icon_2
+# 	potential = {
+# 		has_country_flag = roz_leader_suigintou_get
+# 		OR = {
+# 			has_country_flag = q_sgt_army_get
+# 			has_country_flag = roz_kirakishou_get
+# 		}
+# 	}
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 			unity = 1000
+# 			sr_rosa_mystica = 1000
+# 		}
+# 		upkeep = {
+# 			sr_rosa_mystica = 5
+# 		}
+# 	}
+# }
 
-}
-
-edict_roz_rosa_mystica_enhance_war_edicts = {
+roz_rosa_mystica_enhance_war_edicts = {
 	length = -1
 	icon = GFX_sgt_edit_icon_2
 	potential = { has_country_flag = roz_rosa_mystica_edits_available_flag }
@@ -63,7 +62,7 @@ edict_roz_rosa_mystica_enhance_war_edicts = {
 	}
 }
 
-edict_roz_rosa_mystica_enhance_affairs_edicts = {
+roz_rosa_mystica_enhance_affairs_edicts = {
 	length = -1
 	icon = GFX_sgt_edit_icon_2
 	potential = { has_country_flag = roz_rosa_mystica_edits_available_flag }
