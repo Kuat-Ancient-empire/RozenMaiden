@@ -8,7 +8,7 @@ get_ge_leader_target = {
 	}
 }
 
-generate_sgt_site_on_game_start = {
+generate_sgt_site_on_game_start = {	#give up
 	##scope = country
 	optimize_memory
 	random_planet_within_border = {
@@ -32,7 +32,7 @@ generate_sgt_site_on_game_start = {
 					roz_sgt_site_planet_select_condition = yes
 				}
 				this = {
-					set_star_flag = ge_suigintou_site_star_flag
+					set_star_flag = ge_suigintou_site_star_flag@root
 				}
 				set_timed_star_flag = {
 					flag = ge_suigintou_site_counted

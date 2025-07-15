@@ -2115,7 +2115,7 @@ country_event = {	#开局时停
                     limit = { is_ship_size = ge_black_dragon }
                 }
                 solar_system = {
-                    has_star_flag = ge_suigintou_site_star_flag
+                    has_star_flag = ge_suigintou_site_star_flag@root
                 }
 
             }

@@ -82,7 +82,7 @@ country_event = {
 					if = {
 						limit = { is_multiplayer = yes }
 						this = {
-							set_star_flag = ge_suigintou_site_star_flag
+							set_star_flag = ge_suigintou_site_star_flag@root
 						}
 						set_timed_star_flag = {
 							flag = ge_suigintou_site_counted
@@ -151,7 +151,7 @@ country_event = {
 	immediate = {
 		random_system = {
 			limit = {
-				has_star_flag = ge_suigintou_site_star_flag
+				has_star_flag = ge_suigintou_site_star_flag@root
 			}
 			create_starbase = {
 				size = starbase_outpost
@@ -183,7 +183,7 @@ ship_event = {
 			}
 		}
 		solar_system = {
-			has_star_flag = ge_suigintou_site_star_flag
+			has_star_flag = ge_suigintou_site_star_flag@root.owner
 		}
 
 	}
