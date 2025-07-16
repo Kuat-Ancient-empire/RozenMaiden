@@ -266,10 +266,19 @@ country_event = { #控制台effect测试区
 		# event_target:roz_test = {
 		# 	set_player = event_target:roz_suigintou_owner@root
 		# }
-		# event_target:roz_madgod_force_country@root = {
-		# 	set_player = event_target:roz_suigintou_owner@root
-		# }
-
+		event_target:roz_madgod_force_country@root = {
+			set_player = event_target:roz_suigintou_owner@root
+		}
+		every_country = {
+			limit = { has_country_flag = roz_abyss_vass_country }
+			destroy_country = yes
+		}
+		event_target:roz_madgod_force_country@root = {
+			every_owned_fleet = {
+				limit = { NOT = { has_fleet_flag = roz_abyss_fleet_madgod_boss } }
+				destroy_fleet = this
+			}
+		}
 		# every_cosmic_storm = {
 		# 	limit = {
 		# 		is_storm_type = chronos_storm
@@ -321,6 +330,7 @@ country_event = { #控制台effect测试区
 		# }
 		#trigger event_target:roz_abyss_vass_extra_1_target@root = { exists = this }
 		#trigger event_target:roz_abyss_vass_extra_4_target0 = { exists = this }
+
 		#effect = { set_country_type = default }
 		#effect = { set_country_type = fallen_empire }
 		#effect = { set_country_type = awakened_fallen_empire }

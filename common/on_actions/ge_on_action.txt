@@ -245,7 +245,7 @@ on_fleet_destroyed_victim = {
 on_fleet_destroyed_perp = {
 	events = {
 		ge_event.2062
-
+		roz_shinku_evt.620  #检测boss被击杀（判断结局）
 		#ge_sgt_flagship_events.5
 	}
 }
@@ -258,7 +258,11 @@ on_leader_death = {  }
 # FromFromFrom = ship 2
 on_ship_destroyed_perp = {
 	events = {
-		
+		roz_shinku_evt.530
+		roz_shinku_evt.531
+		roz_shinku_evt.560	#破败神国星系沦陷
+
+
 	}
 }
 
@@ -270,11 +274,8 @@ on_ship_destroyed_victim = {
 	events = {
 		ge_sgt_flagship_events.4
 		#ge_skills.40
-		roz_shinku_evt.530
-		roz_shinku_evt.531
-		roz_shinku_evt.560	#破败神国星系沦陷
 
-		roz_shinku_evt.620  #检测boss被击杀（好结局）
+
 	}
 }
 

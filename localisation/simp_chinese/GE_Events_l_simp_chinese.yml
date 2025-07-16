@@ -1402,7 +1402,7 @@ ge_test_event.201.aa:"本该如此"
  #message
 
 ge_event.3003.title:"部署完成"
-ge_event.3003.desc:"万象装置成功停靠在[event_target:roz_wx_star_target.GETNAME]轨道上，我们可以充分发挥它的产能了！\n\n§P拉普拉斯魔小贴士：由于蠢驴硬代码的不可抗力，万象装置在部署为巨构后会出一个星系摧毁的提示，还无视它~§!"
+ge_event.3003.desc:"万象装置成功停靠在[event_target:roz_wx_star_target.GetName]轨道上，我们可以充分发挥它的产能了！\n\n§P拉普拉斯魔小贴士：由于蠢驴硬代码的不可抗力，万象装置在部署为巨构后会出一个星系摧毁的提示，还无视它~§!"
 ge_event.3003.aa:"啊哈哈"
 
 ge_event.3020.title:"终极武器"

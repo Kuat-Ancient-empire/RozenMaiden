@@ -130,7 +130,7 @@ gev_platform_DESC:0 "防御平台将保持静止并向射程内的任何敌人�
  roz_crisis_ship_titan_design_A: "$roz_harbinger_type$"
  roz_crisis_ship_probe_design_A: "$roz_harbinger_type$"
  roz_crisis_ship_battlecruiser_design_A: "$roz_harbinger_type$"
-
+ roz_crisis_madgod_boss_design_A: "扭曲集合体"
 
  roz_crisis_ship_battlecruiser: "深渊使徒γ"
  roz_crisis_ship_battlecruiser_DESC: "$roz_crisis_ship_battlecruiser$"

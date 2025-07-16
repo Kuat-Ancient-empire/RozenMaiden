@@ -114,15 +114,15 @@ roz_madgod_country_initiate = {
 		set_graphical_culture = extra_dimensional_02
 		save_global_event_target_as = roz_madgod_force_country@root
 		set_hostile = root
-		# every_country = {
-		# 	limit = {
-		# 		NOR = {
-		# 			has_country_flag = roz_abyss_vass_country
-		# 			is_hostile = prev
-		# 		}
-		# 	}
-		# 	set_hostile = prev
-		# }
+		every_country = {
+			limit = {
+				NOR = {
+					has_country_flag = roz_abyss_vass_country
+					is_country_type = roz_madgod_empire
+				}
+			}
+			set_hostile = prev
+		}
 		establish_communications_no_message = root
 	}
 }
@@ -1978,15 +1978,15 @@ roz_abyss_vass_after_select = {
 		}
 		every_playable_country = {
 			limit = {
-				NOR = { has_country_flag = roz_abyss_vass_country }
+				NOT = { has_country_flag = roz_abyss_vass_country }
 			}
 			set_hostile = prev
 			set_faction_hostility = { target = prev set_hostile = yes set_neutral = no set_friendly = no }
 			add_opinion_modifier = { modifier = opinion_roz_abyss_vass who = prev }
 			prev = { add_opinion_modifier = { modifier = opinion_roz_abyss_vass_hostile who = this } }
 		}
-		set_hostile = prev
-		set_faction_hostility = { target = prev set_hostile = yes set_neutral = no set_friendly = no }
+		#set_hostile = prev
+		#set_faction_hostility = { target = prev set_hostile = yes set_neutral = no set_friendly = no }
 		join_war = overlord
 		# root = {
 		# 	create_point_of_interest = {
@@ -2679,8 +2679,8 @@ roz_abyss_vass_hunter_fleet_create_count_in_diff = {
 		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = $diff$ } } }
 		every_playable_country = {
 			limit = { has_country_flag = roz_abyss_vass_country }
-			while = { count = $num2$ roz_abyss_fleet_create_median_defense_in_diff = { owner = prevprevprev location = prevprevprev.capital_scope } }
-			while = { count = $num$ roz_abyss_fleet_create_small_defense_in_diff  = { owner = prevprevprev location = prevprevprev.capital_scope } }
+			while = { count = $num2$ roz_abyss_fleet_create_median_defense_in_diff = { owner = prevprev location = prevprev.capital_scope } }
+			while = { count = $num$ roz_abyss_fleet_create_small_defense_in_diff  = { owner = prevprev location = prevprev.capital_scope } }
 		}
 	}
 }

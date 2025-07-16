@@ -2135,10 +2135,10 @@ country_event = {
     option = {
         name = roz_shinku_evt.513.aa
         play_sound = event_big_door_opening
-        # country_event = {
-        #     id = roz_shinku_evt.514
-        #     days = 1
-        # }
+        country_event = {
+            id = roz_shinku_evt.514
+            days = 1
+        }
     }
     after = {
         add_resource = {
@@ -2666,9 +2666,13 @@ country_event = {
     hide_window = yes
     is_triggered_only = yes
     trigger = {
-        is_country_type = roz_madgod_empire
+        OR = {
+            is_country_type = roz_madgod_empire
+            has_country_flag = roz_abyss_vass_country
+        }
     }
     immediate = {
+        #from = { country_event = { id = ge_event.1 } }
         if = {
             limit = {
                 FROM = { has_event_chain = roz_SK_madgod_invasion_main }
@@ -2731,7 +2735,7 @@ country_event = {
     }
 }
 
-###深渊仆从国buff
+###深渊仆从国buff，绝不后退buff
 country_event = {
     id = roz_shinku_evt.532
     hide_window = yes
@@ -2910,7 +2914,8 @@ country_event = {
 #诡异通讯
 country_event = {
     id = roz_shinku_evt.551
-    title = roz_shinku_evt.551.desc
+    title = roz_shinku_evt.551.title
+    desc = roz_shinku_evt.551.desc
     is_triggered_only = yes
     diplomatic = yes
     show_sound = event_screams
@@ -2942,13 +2947,14 @@ country_event = {
     picture = GFX_evt_chronos_storm
     trigger = {
         NOT = { has_active_event = { roz_shinku_evt.555 } }
+        NOT = { has_country_flag = roz_crisis_madgod_boss_revive_remind_cd }
         OR = {
             NOT = { has_country_flag = roz_crisis_madgod_boss_revive_dont_remind }
             has_country_flag = roz_crisis_madgod_boss_last_breath
         }
     }
     immediate = {
-        
+        set_timed_country_flag = { flag = roz_crisis_madgod_boss_revive_remind_cd months = 1 }
     }
     option = {
         name = roz_shinku_evt.555.aa
@@ -3554,21 +3560,57 @@ country_event = {   ##背水一战, 首次进入1
 
 #局势未推进到0完成战略目标，即走好结局路线
 #若在局势失败后依旧斩杀boss，则触发坏结局结尾
-country_event = {
+# country_event = {     #on_ship_destroyed_perp
+#     id = roz_shinku_evt.620
+#     is_triggered_only = yes
+#     hide_window = yes
+#     trigger = {
+#         is_country_type = roz_madgod_empire
+#         from = {
+#             is_ai = no
+#             #NOT = { has_country_flag = roz_fall_in_abyss_flag }
+#             is_same_value = event_target:roz_suigintou_owner@this
+#             has_country_flag = roz_crisis_madgod_boss_last_breath
+#         }
+#         fromfrom = { is_ship_size = roz_crisis_madgod_boss }
+#     }
+#     immediate = {
+#         from = {
+#             if = {
+#                 limit = { NOR = { has_country_flag = roz_unholy_invasion_darkest_hour_flag } }
+#                 country_event = { id = roz_shinku_evt.628 }
+#             }
+#             else_if = {
+#                 limit = { has_country_flag = roz_unholy_invasion_darkest_hour_flag }
+#                 country_event = { id = roz_shinku_evt.633 }
+#             }
+#         }
+#     }
+# }
+country_event = {   #on_fleet_destroyed_perp
     id = roz_shinku_evt.620
     is_triggered_only = yes
     hide_window = yes
     trigger = {
-        is_same_value = event_target:roz_madgod_force_country@from
-        from = {
+        from = { is_country_type = roz_madgod_empire }
+        this = {
             is_ai = no
-            NOT = { has_country_flag = roz_fall_in_abyss_flag }
+            #NOT = { has_country_flag = roz_fall_in_abyss_flag }
             is_same_value = event_target:roz_suigintou_owner@this
             has_country_flag = roz_crisis_madgod_boss_last_breath
         }
-        fromfrom = { is_ship_size = roz_crisis_madgod_boss }
+        fromfromfrom = { has_fleet_flag = roz_abyss_fleet_madgod_boss }
     }
     immediate = {
+        remove_country_flag = roz_mega_information_remodeler_active
+        random_situation = {
+            limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
+            destroy_situation = this
+        }
+        random_situation = {
+            limit = { is_situation_type = roz_SK_4_madgod_invasion_explose_the_galaxy }
+            destroy_situation = this
+        }
         if = {
             limit = { NOR = { has_country_flag = roz_unholy_invasion_darkest_hour_flag } }
             country_event = { id = roz_shinku_evt.628 }
@@ -3868,6 +3910,9 @@ country_event = {
     trigger = {
         is_ai = no
     }
+    immediate = {
+        set_country_flag = roz_mega_information_remodeler_disable
+    }
     option = {
         name = roz_shinku_evt.660.aa
     }
@@ -3875,6 +3920,27 @@ country_event = {
         name = roz_shinku_evt.660.bb
     }
     after = {
+        random_owned_megastructure = {
+            limit = { is_megastructure_type = roz_mega_information_remodeler_effect }
+            remove_megastructure = this
+            solar_system = {
+                create_ambient_object = {
+                    type = "star_explosion"
+                    duration = 5
+                    #play_animation_once = yes
+                    entity_scale_to_size = no
+                    use_3d_location = yes
+                    entity_offset = { min = 0 max = 0 }
+                    entity_offset_angle = { min = 0 max = 0 }
+                    entity_offset_height = { min = 0 max = 0 }
+                    scale = 3
+                    location = this
+                }
+                spawn_megastructure = {
+                    type = roz_mega_information_remodeler_destoryed
+                }
+            }
+        }
         end_event_chain = roz_shoujonotsukurikata_chain
         end_event_chain = roz_wake-up_shinku_chain
         end_event_chain = roz_SK_madgod_invasion_main

@@ -85,6 +85,7 @@ roz_madgod_empire = {
 	faction = {
 		needs_colony = no
 		#hostile = yes
+		hostile = no
 		needs_border_access = no
 		auto_delete = no
 	}

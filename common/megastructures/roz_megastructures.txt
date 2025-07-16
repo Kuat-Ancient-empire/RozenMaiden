@@ -157,6 +157,7 @@ roz_mega_information_remodeler_base = {
         }
 	}
     potential = {
+        NOT = { has_country_flag = roz_mega_information_remodeler_disable }
         has_country_flag = roz_SK_3_start_reward
         NOT = { has_country_flag = roz_mega_information_remodeler_has_been_built }
     }
@@ -224,6 +225,7 @@ roz_mega_information_remodeler = {
                 days = 2
             }
         }
+        star = { set_planet_size = 1 }
     }
 }
 
@@ -257,8 +259,13 @@ roz_mega_information_remodeler_effect = {
     }
     possible = {
         from = {
+            NOT = { has_country_flag = roz_mega_information_remodeler_active }
             has_country_flag = roz_SK_IR_enable
         }
+    }
+    potential = {
+        NOT = { has_country_flag = roz_mega_information_remodeler_active }
+        has_country_flag = roz_SK_IR_enable
     }
     upgrade_from = {
         roz_mega_information_remodeler
@@ -276,18 +283,8 @@ roz_mega_information_remodeler_effect = {
         # }
         from = {
             country_event = {
-                id = roz_shinku_evt.514
+                id = roz_shinku_evt.651
             }
-        }
-        star = { set_planet_size = 1 }
-    }
-
-    possible = {
-        from = { NOT = { has_country_flag = roz_mega_information_remodeler_active } }
-    }
-    potential = {
-        NOT = {
-            has_country_flag = roz_mega_information_remodeler_active
         }
     }
 

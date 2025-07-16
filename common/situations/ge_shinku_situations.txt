@@ -293,6 +293,7 @@ roz_awaken_of_shinku_1_acknowledge_border = {
                 days = 1
             }
         }
+        destroy_situation = this
     }
     #start_value = 0
     initial_progress = 0
@@ -451,9 +452,7 @@ roz_awaken_of_shinku_1_acknowledge_border = {
         modifier = {
             add = 1
             desc = roz_shinku_evt.4301.desc
-            owner  = {
-                has_country_flag = roz_SK_1_kxbj_accelerate
-            }
+            owner  = { has_country_flag = roz_SK_1_kxbj_accelerate }
         }
         modifier = {
             factor = 0.5
@@ -763,7 +762,12 @@ roz_SK_4_madgod_invasion_explose_the_galaxy = {
     fail_icon = GFX_situation_outcome_negative
     fail_icon_frame = GFX_situation_outcome_frame_red
     category = negative
-    on_start = { owner = { country_event = { id = roz_shinku_evt.595 } } }
+    on_start = {
+        owner = {
+            country_event = { id = roz_shinku_evt.595 }
+            set_variable = { which = roz_unholy_invasion_difficulty value = event_target:global_event_country.roz_unholy_invasion_difficulty }
+        }
+    }
     on_progress_complete = {
         owner = {
             set_country_flag = roz_end_of_allthings
@@ -804,22 +808,22 @@ roz_SK_4_madgod_invasion_explose_the_galaxy = {
         modifier = {
             divide = 1.5
             desc = roz_SK_4_madgod_invasion_explose_the_galaxy_progress_easy
-            event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 1 } }
+            owner = { check_variable = { which = roz_unholy_invasion_difficulty value = 1 } }
         }
         modifier = {
             mult = 1
             desc = roz_SK_4_madgod_invasion_explose_the_galaxy_progress_normal
-            event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 2 } }
+            owner = { check_variable = { which = roz_unholy_invasion_difficulty value = 2 } }
         }
         modifier = {
             mult = 2
             desc = roz_SK_4_madgod_invasion_explose_the_galaxy_progress_hard
-            event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 3 } }
+            owner = { check_variable = { which = roz_unholy_invasion_difficulty value = 3 } }
         }
         modifier = {
             mult = 4
             desc = roz_SK_4_madgod_invasion_explose_the_galaxy_progress_xiling
-            event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 4 } }
+            owner = { check_variable = { which = roz_unholy_invasion_difficulty value = 4 } }
         }
     }
 }

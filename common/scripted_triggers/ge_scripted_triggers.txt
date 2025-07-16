@@ -292,20 +292,11 @@ roz_is_regular_authority = {
 roz_is_all_abyss_killed_except_madgod_system = {
 	optimize_memory
 	#abyss vass
-	any_playable_country = { NOT = { has_country_flag = roz_abyss_vass_country } }
+	NOT = { any_playable_country = { has_country_flag = roz_abyss_vass_country } }
 	any_system = {
 		has_star_flag = roz_abyss_fleet_outpost_system
-		OR = {
-			NOT = { any_fleet_in_system = { owner = { is_same_value = event_target:roz_madgod_force_country@$scope$ } } }
-			any_fleet_in_system = {
-				NOR = {
-					has_fleet_flag = roz_abyss_fleet_small
-					has_fleet_flag = roz_abyss_fleet_median
-					has_fleet_flag = roz_abyss_fleet_large
-					has_fleet_flag = roz_abyss_fleet_marvelous
-				}
-			}
-		}
+		NOT = { any_fleet_in_system = { is_owned_by = event_target:roz_madgod_force_country@$scope$ } }
+		NOT = { any_fleet_in_system = { has_fleet_flag = roz_abyss_fleet } }
 	}
 }
 
