@@ -186,6 +186,7 @@ roz_SKI_dip_neutral_ai: "§Y中立国家§!"
 roz_SKI_dip_negative_ai: "§R厌恶我们的国家§!"
 roz_abyss_kills_us: "§G被我方湮灭的深渊实体§!"
 roz_abyss_kills_others: "§G被其他国家湮灭的深渊实体§!"
+roz_abyss_kills: "§G被湮灭的深渊实体§!"
 roz_abyss_victims: "§R被深渊吞噬的船只§!"
 
 roz_abyss_vass_country_name: "§R深渊仆从国§!"

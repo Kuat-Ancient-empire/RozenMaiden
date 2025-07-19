@@ -92,6 +92,8 @@ on_entering_battle = {
 		ge_skills.200			#雪华绮晶，广域精神榨取
 		ge_affection.15 		#水银灯接战-敌方战力计算
 		roz_shinku_evt.588 		#深渊压制
+
+		ge_skills.60			#真红机制 里莲华
 	}
 }
 
@@ -319,6 +321,19 @@ on_colony_destroyed = {
 	}
 }
 
+#陆军交战开始
+# Triggers when ground combat starts
+# This = planet
+# From = country attacking
+on_ground_combat_started = {
 
+}
+#陆军交战中阵亡
+# This = owner
+# From = army
+# FromFrom = opponent
+# FromFromFrom = planet
+on_army_killed_in_combat = {
 
+}
 

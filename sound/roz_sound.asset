@@ -1,83 +1,71 @@
 ##########ROZ sound
-sound =
-{
+sound = {
 	name = "roz_time_freeze_ready_01"
 	file = "ui/roz_time_freeze_ready.wav"
 	volume = 0.5
 }
 
-sound =
-{
+sound = {
 	name = "roz_time_freeze_activited_01"
 	file = "ui/roz_time_is_on_our_side.wav"
 	volume = 0.5
 }
 
-sound =
-{
+sound = {
 	name = "roz_time_freeze_activited_02"
 	file = "ui/roz_time_freeze_act_02.wav"
 	volume = 0.5
 }
 
-sound =
-{
+sound = {
 	name = "roz_time_freeze_activited_03"
 	file = "ui/roz_time_freeze_act_03.wav"
 	volume = 0.5
 }
 
-sound =
-{
+sound = {
 	name = "roz_time_freeze_activited_04"
 	file = "ui/roz_time_freeze_act_04.wav"
 	volume = 0.5
 }
 
-sound =
-{
+sound = {
 	name = "roz_time_freeze_activited_05"
 	file = "ui/roz_time_freeze_act_05.wav"
 	volume = 0.5
 }
 
 #evt
-sound =
-{
+sound = {
 	name = "roz_the_world_01"
 	file = "event/roz_THE_World_1.wav"
 	volume = 0.6
 }
-sound =
-{
+sound = {
 	name = "roz_the_world_02"
 	file = "event/roz_THE_World_2.wav"
 	volume = 0.6
 }
 
-sound =
-{
+sound = {
 	name = "roz_open_the_box"
 	file = "event/roz_open_the_box.wav"
 	volume = 0.9
 }
 
-sound =
-{
+sound = {
 	name = "roz_open_the_box_2"
 	file = "event/roz_open_the_box_2.wav"
 	volume = 0.9
 }
 
-sound =
-{
+sound = {
 	name = "roz_teaparty_set_activity_1"
 	file = "event/roz_teaparty_set_activity_1.wav"
 	volume = 0.9
 }
 
-sound =
-{
+sound = {
 	name = "roz_teaparty_set_activity_2"
 	file = "event/roz_teaparty_set_activity_2.wav"
 	volume = 0.9
@@ -89,14 +77,17 @@ sound = {
 	volume = 0.6
 }
 
-sound =
-{
+sound = {
 	name = "roz_phase_cloak_collision"
 	file = "ui/roz_phase_cloak_collision.wav"
 	volume = 0.8
 }
 
-
+sound = {
+	name = "roz_music_player_Odyssey"
+	file = event/roz_Odyssey.wav
+	volume = 0.8
+}
 
 
 
@@ -219,7 +210,15 @@ soundeffect = {
 	fade_out = 0.2
 }
 
-
+soundeffect = {
+	name = roz_music_player_Odyssey
+	sounds = {
+		sound = roz_music_player_Odyssey
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.25
+}
 
 
 

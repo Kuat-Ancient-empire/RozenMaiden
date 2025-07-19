@@ -39,9 +39,10 @@ roz_SK_madgod_invasion_main = {
 	picture = GFX_evt_roz_unholy_invasion_main
 	counter = {
 		#roz_abyss_vass_country = {}
-		roz_abyss_kills_us = {}
-		roz_abyss_kills_others = {}
+		#roz_abyss_kills_us = {}
+		#roz_abyss_kills_others = {}
 		roz_abyss_victims = {}
+		roz_abyss_kills = {}
 	}
 }
 

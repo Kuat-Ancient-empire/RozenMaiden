@@ -49,3 +49,5 @@ concept_roz_abyss_challenge_timed = { }
 concept_roz_abyss_challenge_timed_2 = { }
 
 concept_roz_abyss_challenge_timed_return_to_zero = { }
+
+concept_roz_damage_filter = { }

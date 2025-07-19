@@ -588,6 +588,7 @@ roz_shinku_leader_initiate = {
 			value = 5
 		}
 		add_trait = { trait = leader_trait_roz_shinku_main }
+		add_trait = { trait = leader_trait_roz_shinku_hollye }
 		random_list = {
 			1 = { add_trait = { trait = leader_trait_armorer } }
 			1 = { add_trait = { trait = leader_trait_military_overseer } }
@@ -685,7 +686,7 @@ roz_shinku_leader_type_switch_scientist = {
 			leader_sc = zhenhong
 			leader_type = scientist
 			symbolic_trait_1 = leader_trait_roz_shinku_main
-			symbolic_trait_2 = leader_trait_roz
+			symbolic_trait_2 = leader_trait_roz_shinku_hollye
 			symbolic_trait_3 = leader_trait_roz
 		}
 		
@@ -742,7 +743,7 @@ roz_shinku_leader_type_switch_scientist = {
 			leader_sc = zhenhong
 			leader_type = scientist
 			symbolic_trait_1 = leader_trait_roz_shinku_main
-			symbolic_trait_2 = leader_trait_roz
+			symbolic_trait_2 = leader_trait_roz_shinku_hollye
 			symbolic_trait_3 = leader_trait_roz
 		}
 		
@@ -803,7 +804,7 @@ roz_shinku_leader_type_switch_commander = {
 			leader_sc = zhenhong
 			leader_type = commander
 			symbolic_trait_1 = leader_trait_roz_shinku_main
-			symbolic_trait_2 = leader_trait_roz
+			symbolic_trait_2 = leader_trait_roz_shinku_hollye
 			symbolic_trait_3 = leader_trait_roz
 		}
 		
@@ -864,7 +865,7 @@ roz_shinku_leader_type_switch_commander = {
 			leader_sc = zhenhong
 			leader_type = commander
 			symbolic_trait_1 = leader_trait_roz_shinku_main
-			symbolic_trait_2 = leader_trait_roz
+			symbolic_trait_2 = leader_trait_roz_shinku_hollye
 			symbolic_trait_3 = leader_trait_roz
 		}
 		
@@ -929,7 +930,7 @@ roz_shinku_leader_type_switch_official = {
 			leader_sc = zhenhong
 			leader_type = official
 			symbolic_trait_1 = leader_trait_roz_shinku_main
-			symbolic_trait_2 = leader_trait_roz
+			symbolic_trait_2 = leader_trait_roz_shinku_hollye
 			symbolic_trait_3 = leader_trait_roz
 		}
 		
@@ -985,7 +986,7 @@ roz_shinku_leader_type_switch_official = {
 			leader_sc = zhenhong
 			leader_type = official
 			symbolic_trait_1 = leader_trait_roz_shinku_main
-			symbolic_trait_2 = leader_trait_roz
+			symbolic_trait_2 = leader_trait_roz_shinku_hollye
 			symbolic_trait_3 = leader_trait_roz
 		}
 		
@@ -1838,19 +1839,19 @@ roz_abyss_vass_create_in_diff = {
 			has_country_flag = roz_abyss_vass_had_create_available
 		}
 		if = {
-			limit = { event_target:global_event_country = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 1 } } } }
+			limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 1 } } }
 			roz_abyss_vass_create = { index = 1 }
 		}
 		if = {
-			limit = { event_target:global_event_country = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 2 } } } }
+			limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 2 } } }
 			roz_abyss_vass_create = { index = 2 }
 		}
 		if = {
-			limit = { event_target:global_event_country = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 3 } } } }
+			limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 3 } } }
 			roz_abyss_vass_create = { index = 3 }
 		}
 		if = {
-			limit = { event_target:global_event_country = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 4 } } } }
+			limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 4 } } }
 			roz_abyss_vass_create = { index = 4 }
 			roz_abyss_vass_create = { index = 5 }
 		}
@@ -2872,3 +2873,25 @@ roz_abyss_fleet_suppress_modifier_effect = {
 		}
 	}
 }
+
+#scope: situation
+roz_abyss_invasion_situation_progress_change = {
+	optimize_memory
+	if = {
+		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 1 } } }
+		add_situation_progress = $progress_easy$
+	}
+	if = {
+		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 2 } } }
+		add_situation_progress = $progress_normal$
+	}
+	if = {
+		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 3 } } }
+		add_situation_progress = $progress_hard$
+	}
+	if = {
+		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 4 } } }
+		add_situation_progress = $progress_xiling$
+	}
+}
+

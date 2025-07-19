@@ -778,6 +778,22 @@ roz_shinku_evt.1001.zz: "离开"
 roz_shinku_evt.1001.af: "好感度查询"
 roz_shinku_evt.1001.af.desc: "目前真红的好感度为：[Root.roz_leader_aft_shinku_reduced_score]"
 
+ #换装
+ roz_shinku_evt.1010.desc: "§H虽然说是换装，但目前我有的衣服其实就这么几件……§!"
+ roz_shinku_evt.1010.desc2: "§H来见识一下淑女的礼仪吧~§!"
+ roz_shinku_evt.1010.00: "退出换装"
+ roz_shinku_evt.1010.20th: "20周年典藏(原作作者：Peach-Pit)"
+ roz_shinku_evt.1010.1: "(画师：Sheya)"
+ roz_shinku_evt.1010.2: "(画师：Sheya)"
+ roz_shinku_evt.1010.3: "(画师：犬小屋)"
+
+ roz_shinku_evt.1010.res.20th:"§H是吗？已经过去二十年了啊。不论何时何地，人们总是在追求美好……这身衣装也正是为了歌颂幸福。§!"
+ roz_shinku_evt.1010.res.tea:"§H等等，你不会以为只靠红茶就能贿赂我了吧？……唔，好茶倒是好茶……§!"
+ roz_shinku_evt.1010.res.a:"§H如何？§!"
+ roz_shinku_evt.1010.res.b:"§H或许帽檐再多点缀层蕾丝会比较好？§!"
+ roz_shinku_evt.1010.res.c:"§H就这样出席茶会也不错。§!"
+ roz_shinku_evt.1010.res.d:"§H兼顾优雅与舒适，这件的设计十分出色呢。§!"
+
 ##################小纯的交流界面
 roz_shinku_evt.4001.title: "§UN之领域-人偶师樱田纯§!"
 roz_shinku_evt.4001.desc_1: "「您好，尊敬的[Root.GetRulerTitle]，有什么需要吗？」"

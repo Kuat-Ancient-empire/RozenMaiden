@@ -7,7 +7,13 @@ roz_timefreeze_modifier_tooltip = {
     max_decimals = 6
 }
 
-
+roz_timeslow_modifier_tooltip = {
+    icon = mod_black_hole
+    percentage = yes
+    good = no
+    category = ship
+    max_decimals = 6
+}
 
 
 

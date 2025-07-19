@@ -97,7 +97,7 @@ leader_trait_ge_mercury_lamp_scientist_desc:0 "\n\n\n\n\n£roz_traits_pic_suigin
 leader_trait_ge_N_field_scientist:0 "N之领域"
 leader_trait_ge_N_field_scientist_desc:0 "与现实世界连接且互为表里的虚幻空间，这里优秀的实验环境给国家科研机构带来了极大的便利. 同时水银灯可以利用自己的N之领域增强科研船性能的同时通过N之领域传送门来瞬移外星土特产. 虽然这有些费时，但是在科技展览会展出的这些千奇百态的土特产能提振国民的对太空探索的热情. \n§B当水银灯进行星系探索时，每探索完一个星球，都将获得3xN点凝聚力和0.2xN单位的稀有文物。§!§c（系数N为水银灯已经探索的星球的数量）§!\n\n§Y水银灯至今已探索[event_target:roz_suigintou_owner0.ge_sgt_survey_count]个星球.§!\n§P（PS：此处的该数值显示仅适用于单机，联机模式下仅对主机玩家生效）§!"
 
-leader_trait_ge_meimei_scientist:0 "人工精灵：冥冥"
+leader_trait_ge_meimei_scientist:0 "§E人工精灵：冥冥§!"
 leader_trait_ge_meimei_scientist_desc:0 "人工精灵如同使魔一般的存在，它们是蔷薇少女不可或缺的帮手。"
 
 leader_trait_roz_battered: "心理阴影"
@@ -105,8 +105,17 @@ leader_trait_roz_battered_desc: "这位科学家曾遭遇极为可怕的变故�
 
  ######################
  #真红
-leader_trait_roz_shinku_main: "§R真红§!"
-leader_trait_roz_shinku_main_desc: "$leader_trait_roz_test$"
+ leader_trait_roz_shinku_main: "§R真红§!"
+ leader_trait_roz_shinku_main_desc: "$leader_trait_roz_test$"
+ leader_trait_roz_shinku_hollye: "§_人工精灵：荷莉耶§!"
+ leader_trait_roz_shinku_hollye_desc: "人工精灵如同使魔一般的存在，它们是蔷薇少女不可或缺的帮手。"
+ leader_trait_roz_shinku_hollye_commander_fleet: "进入战斗的3个月内，真红所在舰队将按真红的好感度获得['concept_roz_damage_filter']，但受到的伤害:§R+80%§!\n敌方舰队受到的伤害:§B+110%§!"
+ leader_trait_roz_shinku_hollye_commander_army: "真红指挥水银灯军团作战时，水银灯军团将按真红的好感度获得一定次数的复活次数和陆军士气加成（交战后重置）。"
+ leader_trait_roz_shinku_hollye_official: "真红处于非未指派状态时，每年结算时国家将按真红的好感度获得一定数量的资源月产出。"
+
+ leader_trait_roz_shinku_time_control: "§0时间操纵§!"
+ leader_trait_roz_shinku_time_control_desc: "解锁星球决议£edict_type_policy£§1时间加速§!:\n£mod_planet_building_build_speed_mult£$mod_planet_building_build_speed_mult$§G+100%§!\n£job£$mod_planet_jobs_produces_mult$§G+100%§!\n£job£$mod_planet_jobs_upkeep_mult$§R+50%§!\n£pop£$mod_planet_pops_upkeep_mult$§R+50%§!\n\n解锁星球决议£edict_type_policy£§1时光凝滞§!:\n£mod_planet_building_build_speed_mult£$mod_planet_building_build_speed_mult$§R-50%§!\n£job£$mod_planet_jobs_produces_mult$§R-50%§!\n£job£$mod_planet_jobs_upkeep_mult$§G-100%§!\n£pop£$mod_planet_pops_upkeep_mult$§G-100%§!"
+
 
  #雏莓
  leader_trait_roz_hinaichigo_main: "§d雏莓§!"

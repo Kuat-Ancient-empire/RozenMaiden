@@ -384,3 +384,16 @@ GetRozAdjustModeMultDiffText: "当前调整模式为：§H乘算§!\n当前调�
  cb_stop_abyss_desc: "§G抵抗深渊侵蚀§!"
 
  roz_abyss_war: "§R深渊入侵§!"
+
+###decisions
+ decision_roz_shinku_acceleration_time: "时间加速"
+ decision_roz_shinku_acceleration_time_desc: "加速该星球的时间，使其时间流速快于外界，该星球的产出将提升，但代价是维护费上升和需要解决时空对流问题。"
+ decision_roz_shinku_acceleration_time_effect: "警告：检测到时空畸变"
+
+ decision_roz_shinku_deceleration_time: "时光凝滞"
+ decision_roz_shinku_deceleration_time_desc: "凝滞该星球的时间，使其时间流速慢于外界，该星球的维护费将大幅降低，但代价是星球产出遭受影响且需要解决时空对流问题。"
+ decision_roz_shinku_deceleration_time_effect: "警告：检测到时空畸变"
+
+ decision_roz_shinku_cancel_time: "停止时间操纵"
+ decision_roz_shinku_cancel_time_desc: ""
+ decision_roz_shinku_cancel_time_effect: "该星球的时空畸变将平复"

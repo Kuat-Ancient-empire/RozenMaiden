@@ -31,3 +31,111 @@ decision_roz_N_field_main_entrance = {
 		}
 	}
 }
+
+###真红机制
+decision_roz_shinku_acceleration_time = {
+	owned_planets_only = yes
+	enactment_time = 5
+	sound = ap_rift_event_25_black_sun
+	icon = decision_roz_shinku_acceleration_time
+	resources = {
+		category = decisions
+		cost = {
+			energy = 5000
+			sr_rosa_mystica = 100
+			sr_void_core = 10
+		}
+	}
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = roz_leader_shinku_get
+			any_owned_leader = {
+				has_leader_flag = roz_shinku_flag
+				leader_class = official
+			}
+		}
+		NOR = {
+			has_modifier = roz_shinku_acceleration_time
+			has_modifier = roz_shinku_deceleration_time
+		}
+	}
+	effect = {
+		custom_tooltip = "decision_roz_shinku_acceleration_time_effect"
+		hidden_effect = {
+			add_modifier = {
+				modifier = roz_shinku_acceleration_time
+			}
+		}
+	}
+}
+decision_roz_shinku_deceleration_time = {
+	owned_planets_only = yes
+	enactment_time = 5
+	sound = ap_rift_event_25_black_sun
+	icon = decision_roz_shinku_deceleration_time
+	resources = {
+		category = decisions
+		cost = {
+			energy = 5000
+			sr_rosa_mystica = 100
+			sr_void_core = 10
+		}
+	}
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = roz_leader_shinku_get
+			any_owned_leader = {
+				has_leader_flag = roz_shinku_flag
+				leader_class = scientist
+			}
+		}
+		NOR = {
+			has_modifier = roz_shinku_acceleration_time
+			has_modifier = roz_shinku_deceleration_time
+		}
+	}
+	effect = {
+		custom_tooltip = "decision_roz_shinku_deceleration_time_effect"
+		hidden_effect = {
+			add_modifier = {
+				modifier = roz_shinku_deceleration_time
+			}
+		}
+	}
+}
+decision_roz_shinku_cancel_time = {
+	owned_planets_only = yes
+	enactment_time = 5
+	sound = event_power_down
+	icon = decision_roz_shinku_cancel_time
+	resources = {
+		category = decisions
+		cost = {
+			energy = 5000
+			sr_rosa_mystica = 100
+			sr_void_core = 10
+		}
+	}
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = roz_leader_shinku_get
+			any_owned_leader = {
+				has_leader_flag = roz_shinku_flag
+				leader_class = scientist
+			}
+		}
+		has_modifier = roz_shinku_acceleration_time
+		has_modifier = roz_shinku_deceleration_time
+	}
+	effect = {
+		custom_tooltip = "decision_roz_shinku_cancel_time_effect"
+		hidden_effect = {
+			remove_modifier = roz_shinku_acceleration_time
+			remove_modifier = roz_shinku_deceleration_time
+		}
+	}
+}
+

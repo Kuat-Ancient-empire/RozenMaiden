@@ -1089,3 +1089,35 @@ fleet_event = {
 		}
 	}
 }
+
+#真红-里莲华
+fleet_event = {
+	id = ge_skills.60
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		leader = {
+			has_leader_flag = roz_shinku_flag
+			leader_class = commander
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_modifier = leader_trait_roz_shinku_hollye_commander_fleet_self_modifier_1 }
+			remove_modifier = leader_trait_roz_shinku_hollye_commander_fleet_self_modifier_1
+			remove_modifier = leader_trait_roz_shinku_hollye_commander_fleet_self_modifier_2
+			From = { remove_modifier = leader_trait_roz_shinku_hollye_commander_fleet_enemy_modifier }
+		}
+		THIS = {
+			add_modifier = { modifier = leader_trait_roz_shinku_hollye_commander_fleet_self_modifier_1 months = 3 }
+			add_modifier = {
+				modifier = leader_trait_roz_shinku_hollye_commander_fleet_self_modifier_2
+				mult = leader.roz_shinku_affection
+				months = 3
+			}
+		}
+		From = { add_modifier = { modifier = leader_trait_roz_shinku_hollye_commander_fleet_enemy_modifier months = 3 } }
+	}
+}
+
+

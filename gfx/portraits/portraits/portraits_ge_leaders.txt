@@ -113,6 +113,12 @@ portraits = {
 	roz_shinku_1 = {
 		textureFile = "gfx/models/portraits/00_roz_shinku/roz_sk_1.dds"
 	}
+	roz_shinku_2 = {
+		textureFile = "gfx/models/portraits/00_roz_shinku/roz_sk_2.dds"
+	}
+	roz_shinku_3 = {
+		textureFile = "gfx/models/portraits/00_roz_shinku/roz_sk_3.dds"
+	}
 
 	######雏莓
 	roz_hinaichigo_20th = {

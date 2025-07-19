@@ -449,7 +449,7 @@ country_event = {
     id = roz_shinku_evt.96
     title = "roz_shinku_evt.96.title"
     desc = "roz_shinku_evt.96.desc"
-    picture = GFX_evt_roz_shoujonotsukurikata_vol9
+    picture = GFX_evt_roz_shoujonotsukurikata_vol9_2
     is_triggered_only = yes
     show_sound = research_click_01
     trigger = {
@@ -2672,34 +2672,32 @@ country_event = {
         }
     }
     immediate = {
-        #from = { country_event = { id = ge_event.1 } }
-        if = {
-            limit = {
-                FROM = { has_event_chain = roz_SK_madgod_invasion_main }
-            }
-            FROM = {
-                add_event_chain_counter = {
-                    event_chain = "roz_SK_madgod_invasion_main"
-                    counter = "roz_abyss_kills_us"
-                    amount = 1
-                }
-            }
-        }
+        # FROM = {
+        #     add_event_chain_counter = {
+        #         event_chain = "roz_SK_madgod_invasion_main"
+        #         counter = "roz_abyss_kills_us"
+        #         amount = 1
+        #     }
+        # }
         random_playable_country = {
             limit = {
                 has_event_chain = "roz_SK_madgod_invasion_main"
-                NOT = { is_same_value = FROM }
+                #NOT = { is_same_value = FROM }
             }
             add_event_chain_counter = {
                 event_chain = "roz_SK_madgod_invasion_main"
-                counter = "roz_abyss_kills_others"
+                #counter = "roz_abyss_kills_others"
+                counter = roz_abyss_kills
                 amount = 1
             }
-            if = {
-                limit = { country_has_situation = { SITUATION = roz_SK_4_madgod_invasion_placard } }
-                random_situation = {
-                    limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
-                    add_situation_progress = 0.05
+            #if = { limit = { country_has_situation = { SITUATION = roz_SK_4_madgod_invasion_placard } } }
+            random_situation = {
+                limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
+                roz_abyss_invasion_situation_progress_change = {
+                    progress_easy = 0.05
+                    progress_normal = 0.03
+                    progress_hard = 0.02
+                    progress_xiling = 0.01
                 }
             }
         }
@@ -2724,11 +2722,13 @@ country_event = {
                 counter = "roz_abyss_victims"
                 amount = 1
             }
-            if = {
-                limit = { country_has_situation = { SITUATION = roz_SK_4_madgod_invasion_placard } }
-                random_situation = {
-                    limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
-                    add_situation_progress = -0.05
+            random_situation = {
+                limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
+                roz_abyss_invasion_situation_progress_change = {
+                    progress_easy = -0.02
+                    progress_normal = -0.03
+                    progress_hard = -0.04
+                    progress_xiling = -0.05
                 }
             }
         }
@@ -3602,6 +3602,7 @@ country_event = {   #on_fleet_destroyed_perp
         fromfromfrom = { has_fleet_flag = roz_abyss_fleet_madgod_boss }
     }
     immediate = {
+        set_country_flag = defeated_abyss_invate
         remove_country_flag = roz_mega_information_remodeler_active
         random_situation = {
             limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
@@ -3684,6 +3685,7 @@ country_event = {   ##坏路线-至暗时刻
     }
     immediate = {
         set_country_flag = roz_unholy_invasion_darkest_hour_flag
+        play_sound = roz_music_player_Odyssey
     }
     option = {
         name = roz_shinku_evt.631.aa
@@ -3810,6 +3812,8 @@ country_event = {   ##禁忌领域
     show_sound = event_synthetic_evolution
     trigger = {
         is_ai = no
+        has_country_flag = roz_SK_IR_enable
+        has_country_flag = defeated_abyss_invate
     }
     immediate = {
 
@@ -4247,6 +4251,8 @@ country_event = {   #真红通讯主界面
     }
     option = {  #换装
         name = roz_shinku_evt.1001.aa
+        is_dialog_only = yes
+        country_event = { id = roz_shinku_evt.1010 }
     }
     option = {  #约会
         name = roz_shinku_evt.1001.bb
@@ -4322,7 +4328,111 @@ country_event = {   #真红通讯主界面
     
 }
 
-
+#换装
+country_event = { 
+    id = roz_shinku_evt.1010
+    is_triggered_only = yes
+    title = "roz_shinku_evt.1001.title"
+    desc = "roz_shinku_evt.1010.desc"
+    desc = "roz_shinku_evt.1010.desc2"
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = roz_shinku_main_room
+    }
+    trigger = {
+        NOR = { #防止连点
+            has_country_flag = roz_shinku_change_skin_flag
+            has_active_event = { roz_shinku_evt.1010 }
+        }
+    }
+    immediate = {
+        set_country_flag = roz_shinku_change_skin_flag
+        get_ge_leader_target = { flag = roz_shinku_flag }
+        remove_country_flag = ge_nfield_diplomacy_activated
+    }
+    after = {
+        hidden_effect = { remove_country_flag = roz_shinku_change_skin_flag }
+    }
+    option = {
+        #退出换装
+        name = "roz_shinku_evt.1010.00"
+        default_hide_option = yes
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_custom_diplomacy
+                scopes = {
+                    from = event_target:roz_shinku_global_country@root
+                }
+            }
+        }
+    }
+    option = {
+        name = "roz_shinku_evt.1010.20th"
+        response_text = "roz_shinku_evt.1010.res.20th"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = shinku
+                portrait = roz_shinku
+                flag = roz_shinku_portrait_change
+                leader_flag = roz_shinku_flag
+                portrait_key = roz_shinku_20th
+            }
+        }
+    }
+    option = {
+        name = "roz_shinku_evt.1010.1"
+        response_text = "roz_shinku_evt.1010.res.a"
+        # response_text = "roz_shinku_evt.1010.res.b"
+        # response_text = "roz_shinku_evt.1010.res.c"
+        # response_text = "roz_shinku_evt.1010.res.d"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = shinku
+                portrait = roz_shinku
+                flag = roz_shinku_portrait_change
+                leader_flag = roz_shinku_flag
+                portrait_key = roz_shinku_1
+            }
+        }
+    }
+    option = {
+        name = "roz_shinku_evt.1010.2"
+        # response_text = "roz_shinku_evt.1010.res.a"
+        response_text = "roz_shinku_evt.1010.res.b"
+        # response_text = "roz_shinku_evt.1010.res.c"
+        # response_text = "roz_shinku_evt.1010.res.d"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = shinku
+                portrait = roz_shinku
+                flag = roz_shinku_portrait_change
+                leader_flag = roz_shinku_flag
+                portrait_key = roz_shinku_2
+            }
+        }
+    }
+    option = {
+        name = "roz_shinku_evt.1010.3"
+        # response_text = "roz_shinku_evt.1010.res.a"
+        # response_text = "roz_shinku_evt.1010.res.b"
+        response_text = "roz_shinku_evt.1010.res.c"
+        # response_text = "roz_shinku_evt.1010.res.d"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = shinku
+                portrait = roz_shinku
+                flag = roz_shinku_portrait_change
+                leader_flag = roz_shinku_flag
+                portrait_key = roz_shinku_3
+            }
+        }
+    }
+}
 
 
 
@@ -4540,7 +4650,7 @@ country_event = {
     }
     immediate = {
         set_country_flag = ge_nfield_diplomacy_activated
-        get_ge_leader_target = { flag = roz_hinaichigo }
+        get_ge_leader_target = { flag = roz_hinaichigo_flag }
     }
     diplomatic = yes
     picture_event_data = {

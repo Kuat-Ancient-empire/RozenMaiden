@@ -5,6 +5,7 @@ leader_trait_roz_shinku_main = {
 	initial = no	# 开局可用
 	randomized = no
 	immortal_leaders = yes	# 领袖永生
+	sorting_priority = 100
 	#icon = "gfx/interface/icons/traits/trait_cor_dragon_totem.dds"	# 图标路径
 	#force_councilor_trait = yes
 	#is_councilor_trait_for_ruler = yes
@@ -22,12 +23,12 @@ leader_trait_roz_shinku_main = {
 		official
 		scientist
 	}
+	#commander
 	triggered_modifier = {
 		potential = {
 			leader_class = commander
 			owner = { NOT = { has_country_flag = roz_rosa_mystica_enhance_flag } }
 		}
-		ship_damage_reduction_mult = 0.10
 		ship_weapon_damage = 0.30
 	}
 	triggered_modifier = {
@@ -35,15 +36,17 @@ leader_trait_roz_shinku_main = {
 			leader_class = commander
 			owner = { has_country_flag = roz_rosa_mystica_enhance_flag }
 		}
-		ship_damage_reduction_mult = 0.20
 		ship_weapon_damage = 0.50
 	}
+	#official
 	triggered_modifier = {
 		potential = {
 			leader_class = official
 			owner = { NOT = { has_country_flag = roz_rosa_mystica_enhance_flag } }
 		}
 		pop_bonus_workforce_mult = 0.25
+		planet_building_build_speed_mult = -0.33
+		PLANET_BUILDING_CAPACITY_ADD = 1
 	}
 	triggered_modifier = {
 		potential = {
@@ -51,6 +54,134 @@ leader_trait_roz_shinku_main = {
 			owner = { has_country_flag = roz_rosa_mystica_enhance_flag }
 		}
 		pop_bonus_workforce_mult = 0.45
+		planet_building_build_speed_mult = -0.03
+		PLANET_BUILDING_CAPACITY_ADD = 2
+	}
+	#scientist
+	triggered_planet_modifier = {
+		potential = {
+			leader_class = scientist
+			owner = { NOT = { has_country_flag = roz_rosa_mystica_enhance_flag } }
+		}
+		planet_jobs_physics_research_produces_mult = 0.3
+		planet_jobs_society_research_produces_mult = 0.3
+		planet_jobs_engineering_research_produces_mult = 0.3
+	}
+	triggered_sector_modifier = {
+		potential = {
+			leader_class = scientist
+			owner = { NOT = { has_country_flag = roz_rosa_mystica_enhance_flag } }
+		}
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+	}
+	triggered_planet_modifier = {
+		potential = {
+			leader_class = scientist
+			owner = { has_country_flag = roz_rosa_mystica_enhance_flag }
+		}
+		planet_jobs_physics_research_produces_mult = 0.5
+		planet_jobs_society_research_produces_mult = 0.5
+		planet_jobs_engineering_research_produces_mult = 0.5
+	}
+	triggered_sector_modifier = {
+		potential = {
+			leader_class = scientist
+			owner = { has_country_flag = roz_rosa_mystica_enhance_flag }
+		}
+		planet_jobs_physics_research_produces_mult = 0.25
+		planet_jobs_society_research_produces_mult = 0.25
+		planet_jobs_engineering_research_produces_mult = 0.25
+	}
+	notify_on_gained = no
+}
+#荷莉耶
+leader_trait_roz_shinku_hollye = {
+	initial = no	# 开局可用
+	randomized = no
+	immortal_leaders = yes	# 领袖永生
+	#icon = "gfx/interface/icons/traits/trait_cor_dragon_totem.dds"	# 图标路径
+	#force_councilor_trait = yes
+	#is_councilor_trait_for_ruler = yes
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_blank"
+		RARITY = roz_hollye
+		COUNCIL = triggered
+		TIER = none
+	}
+	leader_class = {
+		commander
+		official
+		scientist
+	}
+	#commander
+	triggered_modifier = {
+		potential = {
+			leader_class = commander
+			owner = { NOT = { has_country_flag = roz_rosa_mystica_enhance_flag } }
+		}
+		command_limit_mult = 0.5
+		army_damage_taken_mult = -0.125
+	}
+	triggered_modifier = {
+		potential = {
+			leader_class = commander
+			owner = { has_country_flag = roz_rosa_mystica_enhance_flag }
+		}
+		command_limit_mult = 1.0
+		army_damage_taken_mult = -0.25
+	}
+	triggered_desc = {
+		trigger = { leader_class = commander }
+		text = "leader_trait_roz_shinku_hollye_commander_fleet"
+	}
+	triggered_desc = {
+		trigger = { leader_class = commander }
+		text = "leader_trait_roz_shinku_hollye_commander_army"
+	}
+	#official
+	triggered_modifier = {
+		potential = {
+			leader_class = official
+			owner = { NOT = { has_country_flag = roz_rosa_mystica_enhance_flag } }
+		}
+		planet_jobs_specialist_produces_mult = 0.20
+	}
+	triggered_modifier = {
+		potential = {
+			leader_class = official
+			owner = { has_country_flag = roz_rosa_mystica_enhance_flag }
+		}
+		planet_jobs_specialist_produces_mult = 0.40
+	}
+	triggered_desc = {
+		trigger = { leader_class = official }
+		text = "leader_trait_roz_shinku_hollye_official"
+	}
+	#scientist
+	triggered_planet_modifier = {
+		potential = {
+			leader_class = scientist
+			owner = { NOT = { has_country_flag = roz_rosa_mystica_enhance_flag } }
+		}
+		ship_archaeological_site_excavation_speed_mult = 0.5
+		ship_archaeological_site_clues_add = 5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			leader_class = scientist
+			owner = { has_country_flag = roz_rosa_mystica_enhance_flag }
+		}
+		ship_archaeological_site_excavation_speed_mult = 1.0
+		ship_archaeological_site_clues_add = 10
+	}
+	triggered_desc = {
+		trigger = { leader_class = scientist }
+		text = "leader_trait_roz_shinku_time_control_desc"
 	}
 	notify_on_gained = no
 }
@@ -114,6 +245,7 @@ leader_trait_roz_kirakishou_main = {
 	initial = no	# 开局可用
 	randomized = no
 	immortal_leaders = yes	# 领袖永生
+	sorting_priority = 100
 	#icon = "gfx/interface/icons/traits/trait_cor_dragon_totem.dds"	# 图标路径
 	#force_councilor_trait = yes
 	#is_councilor_trait_for_ruler = yes
@@ -652,7 +784,7 @@ leader_trait_ge_time_freeze = {
 ####
 leader_trait_ge_mercury_lamp = {
 	custom_subtitle = leader_trait_ge_mercury_lamp_title
-	cost = 0	# 特质点数花费
+	sorting_priority = 100	# 特质点数花费
 	#icon = "gfx/interface/icons/traits/leader_trait_ge_mercury_lamp.dds"	# 图标路径
 	initial = no	# 开局可用
 	randomized = no	# 可否随机
@@ -1137,7 +1269,7 @@ leader_trait_cor_baikun_power_network = {
 ####汞灯技能/科学家
 ######
 leader_trait_ge_mercury_lamp_scientist = {
-	cost = 0	# 特质点数花费
+	sorting_priority = 100	# 特质点数花费
 	custom_subtitle = leader_trait_ge_mercury_lamp_title
 	#icon = "gfx/interface/icons/traits/leader_trait_ge_mercury_lamp.dds"	# 图标路径
 	initial = no	# 开局可用
@@ -1561,11 +1693,13 @@ leader_trait_roz_abyss_leader_1 = {
 		scientist
 	}
 	triggered_modifier = {
-		potential = {
-			leader_class = commander
-			owner = { has_country_flag = roz_madgod_force_country_flag }
-		}
-		ship_weapon_damage = 0.1
+		# potential = {
+		# 	leader_class = commander
+		# 	owner = { has_country_flag = roz_madgod_force_country_flag }
+		# }
+		ship_weapon_damage = 0.10
+		ship_fire_rate_mult = 0.10
+		weapon_type_roz_abyss_weapon_damage_mult = 0.25
 	}
 	notify_on_gained = no
 }
@@ -1584,11 +1718,11 @@ leader_trait_roz_abyss_leader_Uranus = {
 		scientist
 	}
 	triggered_modifier = {
-		potential = {
-			leader_class = commander
-			owner = { has_country_flag = roz_madgod_force_country_flag }
-		}
+		ship_hull_mult = 0.50
 		ship_weapon_damage = 1.0
+		ship_fire_rate_mult = 1.0
+		weapon_type_roz_abyss_weapon_damage_mult = 1.0
+		ship_damage_reduction_mult = 0.15
 	}
 	notify_on_gained = no
 }

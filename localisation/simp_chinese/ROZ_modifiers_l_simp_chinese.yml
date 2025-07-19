@@ -197,6 +197,7 @@
 #scripted modifiers
 ################
  mod_roz_timefreeze_modifier_tooltip:"§R时空畸变率(激活时)§!"
+ roz_timeslow_modifier_tooltip:"§P时空畸变率§!"
 
 
  #############################
@@ -223,3 +224,12 @@ roz_mega_information_remodeler_active_bonus_desc: ""
  roz_defeat_the_abyss_desc: "我们成功打退了深渊感染体的入侵！如果不是我们提前引出了乌拉诺斯，否则等祂准备充分后完蛋的可就不是这片河系了，或许这会是整个宇宙崩坏的起点……"
  roz_defeat_the_abyss_in_darkest_hour: "击碎绝望"
  roz_defeat_the_abyss_in_darkest_hour_desc: "我们顶着深渊大军前所未有的进攻强度还击败了他们，这无疑是史无前例的奇迹！向您，向所有抗争的生命致以崇高的敬意！"
+
+ roz_shinku_acceleration_time: "时间加速"
+ roz_shinku_acceleration_time_desc: "加速该星球的时间，使其时间流速快于外界，该星球的产出将提升，但代价是维护费上升和需要解决时空对流问题。"
+
+ roz_shinku_deceleration_time: "时光凝滞"
+ roz_shinku_deceleration_time_desc: "凝滞该星球的时间，使其时间流速慢于外界，该星球的维护费将大幅降低，但代价是星球产出遭受影响且需要解决时空对流问题。"
+
+
+

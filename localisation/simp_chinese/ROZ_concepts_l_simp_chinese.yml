@@ -57,3 +57,8 @@
  concept_roz_abyss_challenge_timed_2_desc: "$roz_start.7777.easy$：£time£60年\n$roz_start.7777.normal$：£time£40年\n$roz_start.7777.hard$：£time£20年\n$roz_start.7777.xiling$：£time£10年"
  concept_roz_abyss_challenge_timed_return_to_zero: "§R强制归零§!"
  concept_roz_abyss_challenge_timed_return_to_zero_desc: "深渊，是虚空为了强制归零而产生的各种现象的集合。强制归零一旦发生，意味着这片星系中所有事物都将被§R抹杀！§!\n\n注意：该效果执行所要执行的数据量§R非常庞大§!，这意味着游戏卡顿很长一段时间，在此之后，地图上将一无所有。"
+
+ concept_roz_damage_filter: "伤害过滤"
+ concept_roz_damage_filter_desc: "若受到的伤害值小于过滤器设定数值，则本次伤害将无效。"
+
+

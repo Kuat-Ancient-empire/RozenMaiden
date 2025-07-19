@@ -652,6 +652,13 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_evt_roz_shoujonotsukurikata_vol9_2"
+		textureFile = "gfx/event_pictures/evt_roz_shoujonotsukurikata_vol9_2.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
 		name = "GFX_evt_roz_shoujonotsukurikata_part"
 		textureFile = "gfx/event_pictures/evt_roz_shoujonotsukurikata_part.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"

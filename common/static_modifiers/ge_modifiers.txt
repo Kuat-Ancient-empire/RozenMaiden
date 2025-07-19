@@ -812,3 +812,31 @@ roz_test_intel_modifier = {
 	intel_encryption_add = 100
 	intel_decryption_add = 100
 }
+
+roz_shinku_acceleration_time = {
+	icon = gfx/interface/icons/modifiers/mod_planet_building_build_speed_mult.dds
+	planet_building_build_speed_mult = 1.00
+	planet_jobs_produces_mult = 1.00
+	planet_jobs_upkeep_mult = 0.50
+	planet_pops_upkeep_mult = 0.50
+	roz_timeslow_modifier_tooltip = 0.1
+}
+
+roz_shinku_deceleration_time = {
+	icon = gfx/interface/icons/modifiers/mod_planet_stability_mult_negative.dds
+	planet_building_build_speed_mult = -0.50
+	planet_jobs_produces_mult = -0.50
+	planet_jobs_upkeep_mult = -1.00
+	planet_pops_upkeep_mult = -1.00
+	roz_timeslow_modifier_tooltip = 0.1
+}
+
+leader_trait_roz_shinku_hollye_commander_fleet_self_modifier_1 = {
+	ship_damage_reduction_mult = -0.8
+}
+leader_trait_roz_shinku_hollye_commander_fleet_self_modifier_2 = {
+	ship_damage_reduction_add = 100
+}
+leader_trait_roz_shinku_hollye_commander_fleet_enemy_modifier = {
+	ship_damage_reduction_mult = -1.1
+}

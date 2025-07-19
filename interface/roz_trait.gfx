@@ -191,6 +191,25 @@ spriteTypes = {
         }
         legacy_lazy_load = no
     }
+    SpriteType = {
+        name = "GFX_trait_glow_hollye"
+        #texturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny.dds"
+        texturefile = "gfx/interface/icons/traits/leader_trait_roz_hollye_dt.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        animation = {
+            animationmaskfile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_mask.dds"
+            animationtexturefile = "gfx/interface/icons/traits/leader_traits/trait_glow_destiny_animated_texture.dds"  	# <- the animated file
+            animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+            animationlooping = yes			# yes or no ;)
+            animationtime = 7				# in seconds
+            animationdelay = 0			# in seconds
+            animationblendmode = "add"       #add, multiply, overlay
+            animationtype = "rotating"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
 
     ###雏莓
     SpriteType = {
