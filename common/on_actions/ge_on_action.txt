@@ -36,6 +36,8 @@ VOP_on_monthly_pulse_country = {
 
 		roz_shinku_evt.562 #月检舰队行为继续寻路星系
 		roz_shinku_evt.563 #月检刷船
+
+		ge_skills.70 #真红机制
 	}
 	random_events = {
 		6 = ge_event.3009	#致敬亚伦·布什内尔
@@ -43,7 +45,6 @@ VOP_on_monthly_pulse_country = {
 }
 
 on_planet_class_changed = {  }
-
 
 on_leader_hired = {
 
@@ -90,7 +91,7 @@ on_entering_battle = {
 		ge_skills.6				#nf
 		ge_skills.15			#创生之湖
 		ge_skills.200			#雪华绮晶，广域精神榨取
-		ge_affection.15 		#水银灯接战-敌方战力计算
+		ge_affection.15 		#接战数值初始化-敌方战力计算
 		roz_shinku_evt.588 		#深渊压制
 
 		ge_skills.60			#真红机制 里莲华
@@ -254,10 +255,10 @@ on_fleet_destroyed_perp = {
 
 on_leader_death = {  }
 
-# This = owner of ship 1 (destroyed)
-# From = owner of ship 2 (combatant)
-# FromFrom = ship 1
-# FromFromFrom = ship 2
+### This = owner of ship 1 (combatant)
+### From = owner of ship 2 (destroyed)
+### FromFrom = ship 1
+### FromFromFrom = ship 2
 on_ship_destroyed_perp = {
 	events = {
 		roz_shinku_evt.530
@@ -326,7 +327,7 @@ on_colony_destroyed = {
 # This = planet
 # From = country attacking
 on_ground_combat_started = {
-
+	ge_skills.80	#真红机制
 }
 #陆军交战中阵亡
 # This = owner
@@ -334,6 +335,6 @@ on_ground_combat_started = {
 # FromFrom = opponent
 # FromFromFrom = planet
 on_army_killed_in_combat = {
-
+	ge_skills.83	#真红机制
 }
 

@@ -266,9 +266,8 @@ country_event = { #控制台effect测试区
 		# event_target:roz_test = {
 		# 	set_player = event_target:roz_suigintou_owner@root
 		# }
-		event_target:roz_madgod_force_country@root = {
-			set_player = event_target:roz_suigintou_owner@root
-		}
+		#trigger event_target:roz_madgod_force_country@root = { exists = this }
+		event_target:roz_madgod_force_country@root = { set_player = event_target:roz_suigintou_owner@root }
 		every_country = {
 			limit = { has_country_flag = roz_abyss_vass_country }
 			destroy_country = yes
@@ -279,6 +278,42 @@ country_event = { #控制台effect测试区
 				destroy_fleet = this
 			}
 		}
+
+		# while = {
+		# 	count = 3
+		# 	random_playable_country = {
+		# 		limit = {
+		# 			NOT = { has_country_flag = roz_abyss_vass_country }
+		# 			is_ai = yes
+		# 			is_country_type = default
+		# 			roz_is_regular_authority = yes
+		# 			roz_is_MOD_country = no
+		# 		}
+		# 		set_country_flag = roz_abyss_vass_country
+		# 		set_subject_of = { who = event_target:roz_suigintou_owner@root }
+		# 	}
+		# }
+		# every_country = {
+		# 	limit = {
+		# 		is_default_or_fallen = yes
+		# 		NOT = { has_country_flag = roz_abyss_vass_country }
+		# 		NOT = { is_country_type = roz_madgod_empire }
+		# 	}
+		# 	if = {
+		# 		limit = { is_subject = no }
+		# 		declare_war = {
+		# 			target = event_target:roz_suigintou_owner@root
+		# 			attacker_war_goal = wg_roz_abyss_war
+		# 		}
+		# 	}
+		# 	else = { join_war = overlord }
+		# }
+		# every_playable_country = {
+		# 	limit = {
+		# 		has_country_flag = roz_abyss_vass_country
+		# 	}
+		# 	join_war = overlord
+		# }
 		# every_cosmic_storm = {
 		# 	limit = {
 		# 		is_storm_type = chronos_storm

@@ -110,8 +110,8 @@ leader_trait_roz_battered_desc: "这位科学家曾遭遇极为可怕的变故�
  leader_trait_roz_shinku_hollye: "§_人工精灵：荷莉耶§!"
  leader_trait_roz_shinku_hollye_desc: "人工精灵如同使魔一般的存在，它们是蔷薇少女不可或缺的帮手。"
  leader_trait_roz_shinku_hollye_commander_fleet: "进入战斗的3个月内，真红所在舰队将按真红的好感度获得['concept_roz_damage_filter']，但受到的伤害:§R+80%§!\n敌方舰队受到的伤害:§B+110%§!"
- leader_trait_roz_shinku_hollye_commander_army: "真红指挥水银灯军团作战时，水银灯军团将按真红的好感度获得一定次数的复活次数和陆军士气加成（交战后重置）。"
- leader_trait_roz_shinku_hollye_official: "真红处于非未指派状态时，每年结算时国家将按真红的好感度获得一定数量的资源月产出。"
+ leader_trait_roz_shinku_hollye_commander_army: "水银灯军团在执行作战时，所有水银灯军团将按真红的['concept_roz_trait_hollye_commander_affection']获得一定次数的复活次数和陆军士气加成（交战后重置）。"
+ leader_trait_roz_shinku_hollye_official: "每年结算时国家将按真红的['concept_roz_trait_hollye_official_affection']获得一定数量的['concept_roz_trait_hollye_official_resource']。"
 
  leader_trait_roz_shinku_time_control: "§0时间操纵§!"
  leader_trait_roz_shinku_time_control_desc: "解锁星球决议£edict_type_policy£§1时间加速§!:\n£mod_planet_building_build_speed_mult£$mod_planet_building_build_speed_mult$§G+100%§!\n£job£$mod_planet_jobs_produces_mult$§G+100%§!\n£job£$mod_planet_jobs_upkeep_mult$§R+50%§!\n£pop£$mod_planet_pops_upkeep_mult$§R+50%§!\n\n解锁星球决议£edict_type_policy£§1时光凝滞§!:\n£mod_planet_building_build_speed_mult£$mod_planet_building_build_speed_mult$§R-50%§!\n£job£$mod_planet_jobs_produces_mult$§R-50%§!\n£job£$mod_planet_jobs_upkeep_mult$§G-100%§!\n£pop£$mod_planet_pops_upkeep_mult$§G-100%§!"

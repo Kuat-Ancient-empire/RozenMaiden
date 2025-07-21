@@ -51,3 +51,7 @@ concept_roz_abyss_challenge_timed_2 = { }
 concept_roz_abyss_challenge_timed_return_to_zero = { }
 
 concept_roz_damage_filter = { }
+
+concept_roz_trait_hollye_official_resource = {}
+concept_roz_trait_hollye_official_affection = {}
+concept_roz_trait_hollye_commander_affection = {}

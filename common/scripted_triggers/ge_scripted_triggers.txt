@@ -368,3 +368,11 @@ roz_unholy_invasion_situation_21 = {
 
 }
 
+###scope: army
+is_rozen_army = {
+	optimize_memory
+	OR = {
+		army_type = Q_sgt
+		army_type = Q_titan_sgt
+	}
+}

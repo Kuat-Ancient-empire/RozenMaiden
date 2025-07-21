@@ -51,7 +51,7 @@ ge_sgt_site = {		###水银灯
 		event = ge_sites.13
 	}
 	stage = {
-		difficulty = 3
+		difficulty = 2
 		icon = GFX_ge_sgt_site_D4
 		event = ge_sites.14
 	}

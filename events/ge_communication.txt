@@ -304,7 +304,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 15 }
+				check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 10 }
 				NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol7_get }
 				NOR = { has_active_event = { roz_shinku_evt.80 roz_shinku_evt.90 } }
 			}

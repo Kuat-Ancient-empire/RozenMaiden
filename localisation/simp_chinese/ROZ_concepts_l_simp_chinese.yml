@@ -33,7 +33,7 @@
  concept_roz_abyss_faction_desc: "§R深渊势力§!包括其自身和['concept_roz_abyss_vass']"
 
  concept_roz_abyss_vass: "§P深渊仆从国§!"
- concept_roz_abyss_vass_desc: "§P深渊仆从国§!归属于['concept_roz_abyss_faction']，但不妨碍§R深渊§!自身会吞噬他们，每个被§R深渊§!摧毁的仆从国舰队都会壮大§R深渊§!的入侵力量。\n所有命运的馈赠，都在暗中标好了价格。他们获得了超过一般文明的发展能力，却最终变为了深渊降临时的养料。即使只是轻度感染，但过程已不可逆转，拯救它们的办法唯有净化。"
+ concept_roz_abyss_vass_desc: "§P深渊仆从国§!归属于['concept_roz_abyss_faction']，但不妨碍§R深渊§!自身会吞噬他们，不知道它们图什么。\n所有命运的馈赠，都在暗中标好了价格。他们获得了超过一般文明的发展能力，却最终变为了深渊降临时的养料。即使只是轻度感染，但过程已不可逆转，拯救它们的办法唯有净化，也不知道它们图什么。"
 
  concept_roz_abyss_vass_difficult: "§3难度§!"
  concept_roz_abyss_vass_difficult_desc: "$roz_start.7777.easy$：额外AI数量为1个\n$roz_start.7777.normal$：额外AI数量为2个\n$roz_start.7777.hard$：额外AI数量为3个\n$roz_start.7777.xiling$：额外AI数量为5个"
@@ -61,4 +61,9 @@
  concept_roz_damage_filter: "伤害过滤"
  concept_roz_damage_filter_desc: "若受到的伤害值小于过滤器设定数值，则本次伤害将无效。"
 
-
+ concept_roz_trait_hollye_official_resource: "资源月产出"
+ concept_roz_trait_hollye_official_resource_desc: "2倍倍率资源：£energy£、£minerals£、£food£\n1.5倍倍率资源：£consumer_goods£\n1倍倍率资源：£alloys£、£sr_void_core£、£sr_rosa_mystica£"
+ concept_roz_trait_hollye_official_affection: "好感度"
+ concept_roz_trait_hollye_official_affection_desc: "£leader_trait_ge_a_strangeness£陌生：结算1个月的['concept_roz_trait_hollye_official_resource']\n£leader_trait_ge_a_friendly£友好：结算2个月的['concept_roz_trait_hollye_official_resource']\n£leader_trait_ge_a_like£喜欢：结算3个月的['concept_roz_trait_hollye_official_resource']\n£leader_trait_ge_a_love£爱意：结算4个月的['concept_roz_trait_hollye_official_resource']"
+ concept_roz_trait_hollye_commander_affection: "好感度"
+ concept_roz_trait_hollye_commander_affection_desc: "£leader_trait_ge_a_strangeness£陌生：复活次数为1次\n£leader_trait_ge_a_friendly£陌生：复活次数为2次\n£leader_trait_ge_a_like£陌生：复活次数为3次\n£leader_trait_ge_a_love£陌生：复活次数为4次"

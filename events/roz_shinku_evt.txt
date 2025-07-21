@@ -65,8 +65,9 @@ country_event = {
         has_country_flag = roz_shinku_story_start_flag
         has_technology = tech_mega_engineering
         NOT = { has_country_flag = roz_tech_mega_engineering_get }
-        NOT = { has_active_event = { roz_shinku_evt.1 roz_shinku_evt.2 } }
+        NOT = { has_active_event = { roz_shinku_evt.1 roz_shinku_evt.2 roz_shinku_evt.20 } }
     }
+    immediate = { set_country_flag = roz_tech_mega_engineering_get }
     option = {
         name = roz_shinku_evt.20.aa
         custom_tooltip = roz_shinku_evt.20.ct
@@ -78,7 +79,6 @@ country_event = {
     after = {
         add_relic = roz_shuukan_shoujonotsukurikata_vol2
         enable_special_project = { name = roz_shoujonotsukurikata_project_2 owner = root }
-        hidden_effect = { set_country_flag = roz_tech_mega_engineering_get }
     }
 }
 
@@ -347,18 +347,19 @@ country_event = {
         has_country_flag = roz_shinku_story_start_flag
         check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 35 }
         NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol9_get }
+        NOT = { has_active_event = { roz_shinku_evt.90 } }
     }
     immediate = {
         get_ge_leader_target = {
             flag = roz_suigintou_flag
         }
         set_country_flag = ge_sgt_busy
+        set_country_flag = roz_shuukan_shoujonotsukurikata_vol9_get
     }
     option = {
         name = roz_shinku_evt.90.aa
         country_event = { id = roz_shinku_evt.91 }
     }
-    after = { hidden_effect = { set_country_flag = roz_shuukan_shoujonotsukurikata_vol9_get } }
 }
 
 country_event = {
@@ -815,9 +816,10 @@ country_event = {
     desc = "roz_shinku_evt.404.desc"
     picture = GFX_evt_roz_acknowledge_border
     trigger = {
-        from = {
-            is_situation_type = roz_awaken_of_shinku_1_acknowledge_border
-        }
+        # from = {
+        #     is_situation_type = roz_awaken_of_shinku_1_acknowledge_border
+        # }
+        is_ai = no
     }
     immediate = {
         set_country_flag = roz_SK_1_kxbj_complete
@@ -1296,7 +1298,7 @@ country_event = {
         allow = {
             resource_stockpile_compare = {
                 resource = sr_rosa_mystica
-                value >= 5000
+                value >= 1000
             }
             resource_stockpile_compare = {
                 resource = energy
@@ -1427,6 +1429,7 @@ country_event = {
             }
         }
         clear_global_event_target = roz_ruler_target_temp@root
+        roz_madgod_country_initiate = yes
     }
     option = {
         name =  roz_shinku_evt.432.aa
@@ -1517,7 +1520,7 @@ country_event = {
         name =  roz_shinku_evt.434.aa
         add_resource = {
             energy = -50000
-            sr_rosa_mystica = -5000
+            sr_rosa_mystica = -1000
         }
         event_target:roz_outland_planet@root = {
             enable_special_project = {#在n之领域坟头刷
@@ -1797,7 +1800,7 @@ country_event = {
     id = roz_shinku_evt.451
     title = roz_shinku_evt.451.title
     desc = roz_shinku_evt.451.desc
-    picture = GFX_evt_roz_hinaichico_visit
+    picture = GFX_evt_roz_hinaichigo_visit
     show_sound = event_cityscape
     is_triggered_only = yes
     trigger = {
@@ -1923,7 +1926,7 @@ country_event = {
     immediate = {
         if = {  #没有完成卷土重来事件链和解析蔷薇圣母局势前会不断循环触发
             limit = {
-                NOR = {
+                NAND = {
                     has_country_flag = roz_SK_1_kxbj_complete
                     has_country_flag = roz_SK_2_jtcl_complete
                 }
@@ -1952,11 +1955,11 @@ country_event = {
     picture_event_data = {
         room = paragon_skrand_room
     }
-    trigger = {
-        is_ai = no
-        has_country_flag = roz_SK_1_kxbj_complete
-        has_country_flag = roz_SK_2_jtcl_complete
-    }
+    # trigger = {
+    #     is_ai = no
+    #     has_country_flag = roz_SK_1_kxbj_complete
+    #     has_country_flag = roz_SK_2_jtcl_complete
+    # }
     option = {
         name = roz_shinku_evt.501.aa
         response_text = roz_shinku_evt.501.aa_res
@@ -2382,6 +2385,8 @@ country_event = {   #混乱通讯 #深渊入侵正式开始
     immediate = {
         set_country_flag = roz_abyss_faction_arrival
         event_target:roz_madgod_force_country@root = { establish_communications_no_message = root }
+        #4月内深渊不会刷怪
+        set_timed_country_flag = { flag = roz_abyss_fleet_create_cd months = 4 }
     }
     option = {
         name = roz_shinku_evt.523.aa
@@ -2666,10 +2671,18 @@ country_event = {
     hide_window = yes
     is_triggered_only = yes
     trigger = {
-        OR = {
+        NOR = {
             is_country_type = roz_madgod_empire
             has_country_flag = roz_abyss_vass_country
         }
+        From = {
+            OR = {
+                is_country_type = roz_madgod_empire
+                has_country_flag = roz_abyss_vass_country
+            }
+        }
+        #FromFrom = { fleet = { NOT = { has_fleet_flag = roz_abyss_fleet } } }
+        #FromFromFrom = { fleet = { has_fleet_flag = roz_abyss_fleet } }
     }
     immediate = {
         # FROM = {
@@ -2694,10 +2707,10 @@ country_event = {
             random_situation = {
                 limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
                 roz_abyss_invasion_situation_progress_change = {
-                    progress_easy = 0.05
-                    progress_normal = 0.03
-                    progress_hard = 0.02
-                    progress_xiling = 0.01
+                    progress_easy = 0.02
+                    progress_normal = 0.01
+                    progress_hard = 0.005
+                    progress_xiling = 0.002
                 }
             }
         }
@@ -2711,7 +2724,18 @@ country_event = {
     hide_window = yes
     is_triggered_only = yes
     trigger = {
-        is_country_type = roz_madgod_empire
+        OR = {
+            is_country_type = roz_madgod_empire
+            has_country_flag = roz_abyss_vass_country
+        }
+        From = {
+            NOR = {
+                is_country_type = roz_madgod_empire
+                has_country_flag = roz_abyss_vass_country
+            }
+        }
+        FromFrom = { fleet = { has_fleet_flag = roz_abyss_fleet } }
+        FromFromFrom = { fleet = { NOT = { has_fleet_flag = roz_abyss_fleet } } }
     }
 
     immediate = {
@@ -2725,10 +2749,10 @@ country_event = {
             random_situation = {
                 limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
                 roz_abyss_invasion_situation_progress_change = {
-                    progress_easy = -0.02
-                    progress_normal = -0.03
-                    progress_hard = -0.04
-                    progress_xiling = -0.05
+                    progress_easy = -0.002
+                    progress_normal = -0.005
+                    progress_hard = -0.01
+                    progress_xiling = -0.02
                 }
             }
         }
@@ -2788,8 +2812,6 @@ country_event = {
                 }
             }
         }
-        #4月内深渊不会刷怪
-        set_timed_country_flag = { flag = roz_abyss_fleet_create_cd months = 4 }
         #随机星系刷据点和守卫舰队
         roz_abyss_fleet_outpost_create_in_diff = yes
         #刷boss
@@ -2984,13 +3006,15 @@ country_event = {
     is_triggered_only = yes
     picture = GFX_evt_roz_madgod_system
     trigger = {
-        is_ai = no
-        fromfrom = {
+        fromfromfrom = {
             exists = starbase
             solar_system = { any_system_planet = { is_same_value = event_target:roz_outland_planet@root } }
         }
-        NOT = { has_country_flag = roz_crisis_madgod_system_lost_dont_remind }
-        NOT = { has_active_event = { roz_shinku_evt.560 } }
+        from = {
+            is_ai = no
+            NOT = { has_country_flag = roz_crisis_madgod_system_lost_dont_remind }
+            NOT = { has_active_event = { roz_shinku_evt.560 } }
+        }
     }
     immediate = {
         
@@ -3101,6 +3125,12 @@ planet_event = {
         random_playable_country = {
             limit = { is_ai = no has_country_flag = roz_abyss_faction_arrival }
             change_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 0.2 }
+        }
+        roz_abyss_invasion_situation_progress_change = {
+            progress_easy = -0.01
+            progress_normal = -0.03
+            progress_hard = -0.05
+            progress_xiling = -0.1
         }
     }
 }
@@ -3670,7 +3700,7 @@ country_event = {   ##局势-#坏路线 阿萨的杂事D啊哇塞触发
     option = {
         name = roz_shinku_evt.630.cc
     }
-    after = { hidden_effect = { country_event = { id = roz_shinku_evt.630 } } }
+    after = { hidden_effect = { country_event = { id = roz_shinku_evt.631 } } }
 }
 
 country_event = {   ##坏路线-至暗时刻

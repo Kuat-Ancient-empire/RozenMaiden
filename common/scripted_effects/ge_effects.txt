@@ -915,9 +915,19 @@ ge_add_aft_admiral_wander = {
 		which = ge_custom_variable
 		value = 15
 	}
-	change_variable = {
-		which = roz_suigintou_affection
-		value = ge_custom_variable
+	if = {
+		limit = { has_leader_flag = roz_suigintou_flag }
+		change_variable = {
+			which = roz_suigintou_affection
+			value = ge_custom_variable
+		}
+	}
+	if = {
+		limit = { has_leader_flag = roz_shinku_flag }
+		change_variable = {
+			which = roz_shinku_affection
+			value = ge_custom_variable
+		}
 	}
 	clear_variable = ge_custom_variable
 }
@@ -929,9 +939,19 @@ ge_add_aft_scientist_on_survey = {
 		which = ge_custom_variable
 		value = 6
 	}
-	change_variable = {
-		which = roz_suigintou_affection
-		value = ge_custom_variable
+	if = {
+		limit = { has_leader_flag = roz_suigintou_flag }
+		change_variable = {
+			which = roz_suigintou_affection
+			value = ge_custom_variable
+		}
+	}
+	if = {
+		limit = { has_leader_flag = roz_shinku_flag }
+		change_variable = {
+			which = roz_shinku_affection
+			value = ge_custom_variable
+		}
 	}
 	clear_variable = ge_custom_variable
 }
@@ -1012,10 +1032,23 @@ ge_add_aft_scientist_on_research = {
 		which = ge_custom_variable
 		value = 20
 	}
-	change_variable = {
-		which = roz_suigintou_affection
-		value = ge_custom_variable
-		#value = 1
+	if = {
+		limit = {
+			has_leader_flag = roz_suigintou_flag
+		}
+		change_variable = {
+			which = roz_suigintou_affection
+			value = ge_custom_variable
+		}
+	}
+	if = {
+		limit = {
+			has_leader_flag = roz_shinku_flag
+		}
+		change_variable = {
+			which = roz_shinku_affection
+			value = ge_custom_variable
+		}
 	}
 	clear_variable = ge_custom_variable
 	clear_variable =roz_aft_temp_var
@@ -1024,9 +1057,11 @@ ge_add_aft_scientist_on_research = {
 	}
 }
 
-roz_add_aft_govern_planet = { #蔷薇少女在星球上任职时,增加好感度
+roz_add_aft_govern_planet = {
+	optimize_memory
+	#蔷薇少女在星球上任职时,增加好感度
 	if = {
-		limit = { 
+		limit = {
 			event_target:roz_leader_suigintou_global_target@root = {
 				planet = {
 					exists = this
@@ -1034,12 +1069,29 @@ roz_add_aft_govern_planet = { #蔷薇少女在星球上任职时,增加好感度
 			}
 		}
 		hidden_effect = {
-			 event_target:roz_leader_suigintou_global_target@root = {
+			event_target:roz_leader_suigintou_global_target@root = {
 				change_variable = {
 					which = roz_suigintou_affection
-					value = 0.03
+					value = 0.05
 				}
-			 }
+			}
+		}
+	}
+	if = {
+		limit = {
+			event_target:roz_leader_shinku_global_target@root = {
+				planet = {
+					exists = this
+				}
+			}
+		}
+		hidden_effect = {
+			event_target:roz_leader_shinku_global_target@root = {
+				change_variable = {
+					which = roz_shinku_affection
+					value = 0.1
+				}
+			}
 		}
 	}
 }
@@ -4851,10 +4903,9 @@ roz_setting_menu_initialize = {
 		}
 		set_country_flag = roz_krks_dl_normal_flag
 	}
-	#difficult
-	event_target:global_event_country = {
-		set_variable = { which = roz_unholy_invasion_difficulty value = 2 }
-	}
+	# event_target:global_event_country = {
+	# 	set_variable = { which = roz_unholy_invasion_difficulty value = 2 }
+	# }
 }
 
 roz_setting_menu_after_effect = {
@@ -5318,14 +5369,284 @@ roz_sgt_flagship_create_effect = {
 }
 
 roz_sgt_flagship_protect_effect = {
+	optimize_memory
 	subtract_variable = { which = roz_sgt_flagship_disable_count value = 1 }
 	roz_ship_disable_protect_effect = yes
 }
 
 roz_sgt_flagship_protect_remove_effect = {
+	optimize_memory
 	clear_variable = roz_sgt_flagship_disable_count
 	roz_ship_disable_protect_effect = yes
 	set_disable_at_health = -1
 }
 
+roz_leader_affection_change_on_fleet_battle_won = {
+	optimize_memory
+	fromfrom = {	#winner fleet
+		leader = {
+			change_variable = {
+				#摧毁敌舰数
+				which = roz_aft_num_ships_destroy_value
+				value = root.roz_aft_num_ships_in_enemy_fleet_check
+			}
+			divide_variable = {
+				#倍率
+				which = roz_aft_num_ships_destroy_value
+				value = 400
+			}
+			change_variable = {
+				which = ge_leader_aft_temp_number
+				value = roz_aft_num_ships_destroy_value
+			}
+			clear_variable = roz_aft_num_ships_destroy_value
+			change_variable = {
+				#提取预先存储的战力计数
+				which = ge_leader_aft_temp_number
+				value = event_target:roz_aft_enemy_fleet_target.roz_aft_enemy_fleet_power
+			}
+			divide_variable = {
+				#设置倍率
+				which = ge_leader_aft_temp_number
+				value = 10000
+			}
+			if = { #若是水银灯
+				limit = {
+					has_leader_flag = roz_suigintou_flag
+				}
+				if = {
+					limit = {
+						check_variable = {
+							#设置一次性获得的最大上限
+							which = ge_leader_aft_temp_number
+							value >= 2
+						}
+					}
+					change_variable = {
+						which = roz_suigintou_affection
+						value = 2
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = ge_leader_aft_temp_number
+							value < 2
+						}
+						check_variable = {
+							which = ge_leader_aft_temp_number
+							value > 0
+						}
+					}
+					change_variable = {
+						#根据战力水平增加好感度
+						which = roz_suigintou_affection
+						value = ge_leader_aft_temp_number
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = ge_leader_aft_temp_number
+							value < 0
+						}
+					}
+					change_variable = {
+						#根据战力水平增加好感度
+						which = roz_suigintou_affection
+						value = 0.1
+					}
+				}
+				clear_variable = ge_leader_aft_temp_number
+			}
+			if = { #若是真红
+				limit = {
+					has_leader_flag = roz_shinku_flag
+				}
+				if = {
+					limit = {
+						check_variable = {
+							#设置一次性获得的最大上限
+							which = ge_leader_aft_temp_number
+							value >= 2
+						}
+					}
+					change_variable = {
+						which = roz_shinku_affection
+						value = 2
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = ge_leader_aft_temp_number
+							value < 2
+						}
+						check_variable = {
+							which = ge_leader_aft_temp_number
+							value > 0
+						}
+					}
+					change_variable = {
+						#根据战力水平增加好感度
+						which = roz_shinku_affection
+						value = ge_leader_aft_temp_number
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = ge_leader_aft_temp_number
+							value < 0
+						}
+					}
+					change_variable = {
+						#根据战力水平增加好感度
+						which = roz_shinku_affection
+						value = 0.1
+					}
+				}
+				clear_variable = ge_leader_aft_temp_number
+			}
+		}
+	}
+	clear_variable = roz_aft_num_ships_in_enemy_fleet_check
+	event_target:roz_aft_enemy_fleet_target = {
+		clear_variable = roz_aft_num_ships_in_enemy_fleet_end
+		clear_variable = roz_aft_enemy_fleet_power
+		clear_variable = roz_aft_num_ships_in_enemy_fleet_check
+	}
+}
 
+roz_leader_affection_change_on_fleet_battle_fail = {
+	optimize_memory
+	fromfrom = {
+		leader = {
+			change_variable = {
+				#摧毁敌舰数
+				which = roz_aft_num_ships_destroy_value
+				value = root.roz_aft_num_ships_in_enemy_fleet_check
+			}
+			divide_variable = {
+				#倍率
+				which = roz_aft_num_ships_destroy_value
+				value = 400
+			}
+			change_variable = {
+				which = ge_leader_aft_temp_number
+				value = roz_aft_num_ships_destroy_value
+			}
+			clear_variable = roz_aft_num_ships_destroy_value
+			change_variable = {
+				#提取预先存储的战力计数
+				which = ge_leader_aft_temp_number
+				value = event_target:roz_aft_enemy_fleet_target.roz_aft_enemy_fleet_power
+			}
+			divide_variable = {
+				#设置倍率
+				which = ge_leader_aft_temp_number
+				value = 40000
+			}
+			if = {
+				limit = { has_leader_flag = roz_suigintou_flag }
+				if = {
+					limit = {
+						check_variable = {
+							#设置一次性获得的最大上限
+							which = ge_leader_aft_temp_number
+							value >= 0.6
+						}
+					}
+					change_variable = {
+						which = roz_suigintou_affection
+						value = 0.6
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = ge_leader_aft_temp_number
+							value < 0.6
+						}
+						check_variable = {
+							which = ge_leader_aft_temp_number
+							value > 0
+						}
+					}
+					change_variable = {
+						#根据战力水平增加好感度
+						which = roz_suigintou_affection
+						value = ge_leader_aft_temp_number
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = ge_leader_aft_temp_number
+							value < 0
+						}
+					}
+					change_variable = {
+						#理论最小值
+						which = roz_suigintou_affection
+						value = 0.05
+					}
+				}
+				clear_variable = ge_leader_aft_temp_number
+			}
+			if = {
+				limit = { has_leader_flag = roz_shinku_flag }
+				if = {
+					limit = {
+						check_variable = {
+							#设置一次性获得的最大上限
+							which = ge_leader_aft_temp_number
+							value >= 0.6
+						}
+					}
+					change_variable = {
+						which = roz_shinku_affection
+						value = 0.6
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = ge_leader_aft_temp_number
+							value < 0.6
+						}
+						check_variable = {
+							which = ge_leader_aft_temp_number
+							value > 0
+						}
+					}
+					change_variable = {
+						#根据战力水平增加好感度
+						which = roz_shinku_affection
+						value = ge_leader_aft_temp_number
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = ge_leader_aft_temp_number
+							value < 0
+						}
+					}
+					change_variable = {
+						#理论最小值
+						which = roz_shinku_affection
+						value = 0.05
+					}
+				}
+				clear_variable = ge_leader_aft_temp_number
+			}
+		}
+	}
+	subtract_variable = {
+		#摧毁舰船数量计数
+		which = roz_aft_num_ships_in_enemy_fleet_check
+		value = roz_aft_num_ships_in_enemy_fleet_end
+	}
+	clear_variable = roz_aft_num_ships_in_enemy_fleet_check
+}

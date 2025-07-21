@@ -86,7 +86,7 @@ sound = {
 sound = {
 	name = "roz_music_player_Odyssey"
 	file = event/roz_Odyssey.wav
-	volume = 0.8
+	volume = 0.5
 }
 
 

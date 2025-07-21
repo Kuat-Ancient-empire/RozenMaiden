@@ -1958,10 +1958,8 @@ roz_abyss_vass_after_select = {
 		limit = {
 			#NOT = { is_at_war_with = prev }
 			is_default_or_fallen = yes
-			NOR = {
-				has_country_flag = roz_abyss_vass_country
-				is_country_type = roz_madgod_empire
-			}
+			NOT = { has_country_flag = roz_abyss_vass_country }
+			NOT = { is_country_type = roz_madgod_empire }
 		}
 		if = { #所有宗主国对深渊宣战
 			limit = { is_subject = no }
@@ -2553,11 +2551,28 @@ roz_abyss_fleet_outpost_create = {
 	optimize_memory
 	random_system = {
 		limit = {
-			space_owner = { is_ai = yes }
+			# space_owner = {
+			# 	OR = {
+			# 		NOT = { exists = this }
+			# 		AND = {
+			# 			exists = this
+			# 			NOT = { has_country_flag = roz_abyss_vass_country }
+			# 		}
+			# 	}
+			# }
 			NOT = { has_star_flag = roz_abyss_fleet_outpost_system }
 			any_system_planet = { is_colony = no }
 			closest_system = {
 				min_steps = 0 max_steps = 1
+				# space_owner = {
+				# 	OR = {
+				# 		NOT = { exists = this }
+				# 		AND = {
+				# 			exists = this
+				# 			NOT = { has_country_flag = roz_abyss_vass_country }
+				# 		}
+				# 	}
+				# }
 				any_system_planet = { is_colony = no }
 				NOT = { has_star_flag = roz_abyss_fleet_outpost_system }
 			}
@@ -2892,6 +2907,46 @@ roz_abyss_invasion_situation_progress_change = {
 	if = {
 		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 4 } } }
 		add_situation_progress = $progress_xiling$
+	}
+}
+
+#
+roz_trait_hollye_official_resource_effect = {
+	optimize_memory
+	add_monthly_resource_mult = {
+		resource = energy
+		value = 1
+		mult = 2
+	}
+	add_monthly_resource_mult = {
+		resource = minerals
+		value = 1
+		mult = 2
+	}
+	add_monthly_resource_mult = {
+		resource = food
+		value = 1
+		mult = 2
+	}
+	add_monthly_resource_mult = {
+		resource = consumer_goods
+		value = 1
+		mult = 1.5
+	}
+	add_monthly_resource_mult = {
+		resource = alloys
+		value = 1
+		mult = 1
+	}
+	add_monthly_resource_mult = {
+		resource = sr_void_core
+		value = 1
+		mult = 1
+	}
+	add_monthly_resource_mult = {
+		resource = sr_rosa_mystica
+		value = 1
+		mult = 1
 	}
 }
 

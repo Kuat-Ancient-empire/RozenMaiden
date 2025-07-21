@@ -1120,4 +1120,114 @@ fleet_event = {
 	}
 }
 
+#真红-行政官机制
+country_event = {
+	id = ge_skills.70
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		has_country_flag = roz_leader_shinku_get
+	}
+	immediate = {
+		if = {
+			limit = { event_target:roz_leader_shinku_global_target@this = { leader_class = official } }
+			if = {
+				limit = { event_target:roz_leader_shinku_global_target@this = { has_trait = leader_trait_roz_a_strangeness } }
+				while = { count = 1 roz_trait_hollye_official_resource_effect = yes }
+			}
+			else_if = {
+				limit = { event_target:roz_leader_shinku_global_target@this = { has_trait = leader_trait_roz_a_friendly } }
+				while = { count = 2 roz_trait_hollye_official_resource_effect = yes }
+			}
+			else_if = {
+				limit = { event_target:roz_leader_shinku_global_target@this = { has_trait = leader_trait_roz_a_like } }
+				while = { count = 3 roz_trait_hollye_official_resource_effect = yes }
+			}
+			else_if = {
+				limit = { event_target:roz_leader_shinku_global_target@this = { has_trait = leader_trait_roz_a_love } }
+				while = { count = 4 roz_trait_hollye_official_resource_effect = yes }
+			}
+			else = { set_country_flag = roz_meet_bug }
+		}
+	}
+}
+
+#真红-陆军将领机制
+planet_event = {
+	id = ge_skills.80
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			owner = { has_country_flag = roz_leader_shinku_get }
+			from  = { has_country_flag = roz_leader_shinku_get }
+		}
+	}
+	immediate = {
+		every_planet_army = {
+			limit = { is_rozen_army = yes }
+			clear_variable = roz_shinku_army_revive
+		}
+		#root
+		if = {
+			limit = { event_target:roz_leader_shinku_global_target@this.owner = { has_trait = leader_trait_roz_a_strangeness } }
+			every_planet_army = { limit = { is_rozen_army = yes } set_variable = { which = roz_shinku_army_revive value = 1 } }
+		}
+		else_if = {
+			limit = { event_target:roz_leader_shinku_global_target@this.owner = { has_trait = leader_trait_roz_a_friendly } }
+			every_planet_army = { limit = { is_rozen_army = yes } set_variable = { which = roz_shinku_army_revive value = 2 } }
+		}
+		else_if = {
+			limit = { event_target:roz_leader_shinku_global_target@this.owner = { has_trait = leader_trait_roz_a_like } }
+			every_planet_army = { limit = { is_rozen_army = yes } set_variable = { which = roz_shinku_army_revive value = 3 } }
+		}
+		else_if = {
+			limit = { event_target:roz_leader_shinku_global_target@this.owner = { has_trait = leader_trait_roz_a_love } }
+			every_planet_army = { limit = { is_rozen_army = yes } set_variable = { which = roz_shinku_army_revive value = 4 } }
+		}
+		#from
+		if = {
+			limit = { event_target:roz_leader_shinku_global_target@from = { has_trait = leader_trait_roz_a_strangeness } }
+			every_planet_army = { limit = { is_rozen_army = yes } set_variable = { which = roz_shinku_army_revive value = 1 } }
+		}
+		else_if = {
+			limit = { event_target:roz_leader_shinku_global_target@from = { has_trait = leader_trait_roz_a_friendly } }
+			every_planet_army = { limit = { is_rozen_army = yes } set_variable = { which = roz_shinku_army_revive value = 2 } }
+		}
+		else_if = {
+			limit = { event_target:roz_leader_shinku_global_target@from = { has_trait = leader_trait_roz_a_like } }
+			every_planet_army = { limit = { is_rozen_army = yes } set_variable = { which = roz_shinku_army_revive value = 3 } }
+		}
+		else_if = {
+			limit = { event_target:roz_leader_shinku_global_target@from = { has_trait = leader_trait_roz_a_love } }
+			every_planet_army = { limit = { is_rozen_army = yes } set_variable = { which = roz_shinku_army_revive value = 4 } }
+		}
+	}
+}
+country_event = {
+	id = ge_skills.83
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		has_country_flag = roz_leader_shinku_get
+		from = { is_rozen_army = yes }
+	}
+	immediate = {
+		if = {
+			limit = {  }
+		}
+		from = {
+			if = {
+				limit = {
+					event_target:roz_leader_shinku_global_target@root = { leader_class = commander }
+					check_variable = { which = roz_shinku_army_revive value > 0 }
+				}
+				subtract_variable = { which = roz_shinku_army_revive value = 1 }
+			}
+		}
+		fromfromfrom = { create_army = { type = Q_sgt owner = root } }
+	}
+}
 
