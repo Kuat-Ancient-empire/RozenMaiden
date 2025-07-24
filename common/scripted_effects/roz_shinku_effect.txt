@@ -1752,7 +1752,7 @@ roz_abyss_vass_create = {
 				zone_slot = 1
 			}
 			last_created_country = {
-				establish_communications_no_message = root
+				#establish_communications_no_message = root
 				set_name = random
 			}
 			solar_system = {
@@ -1875,8 +1875,6 @@ roz_abyss_vass_extra_awaken = {
 				location = prev.capital_scope
 			}
 		}
-		#加buff
-		roz_unholy_invision_difficult_modifier_add_effect = yes
 		#join_war = overlord
 		# every_playable_country = {
 		# 	limit = {
@@ -2252,6 +2250,8 @@ roz_abyss_fleet_create_small = {
 					angle = random
 				}
 				roz_abyss_leader_assign = yes
+				#加buff
+				roz_unholy_invision_difficult_modifier_add_effect = yes
 			}
 		}
 	}
@@ -2327,6 +2327,7 @@ roz_abyss_fleet_create_median = {
 					angle = random
 				}
 				roz_abyss_leader_assign = yes
+				roz_unholy_invision_difficult_modifier_add_effect = yes
 			}
 		}
 	}
@@ -2398,6 +2399,7 @@ roz_abyss_fleet_create_large = {
 					angle = random
 				}
 				roz_abyss_leader_assign = yes
+				roz_unholy_invision_difficult_modifier_add_effect = yes
 			}
 		}
 	}
@@ -2468,6 +2470,7 @@ roz_abyss_fleet_create_marvelous = {
 					angle = random
 				}
 				roz_abyss_leader_assign = yes
+				roz_unholy_invision_difficult_modifier_add_effect = yes
 			}
 		}
 	}
@@ -2540,6 +2543,7 @@ roz_abyss_fleet_create_madgod_boss = {
 					angle = random
 				}
 				roz_abyss_leader_assign = yes
+				roz_unholy_invision_difficult_modifier_add_effect = yes
 			}
 		}
 	}

@@ -700,7 +700,10 @@ country_event = {
     }
     option = {
         name = roz_teaparty_evt.203.aa
-        country_event = { id = roz_teaparty_evt.2031 }
+        random_list = {
+            1 = { country_event = { id = roz_teaparty_evt.2031 } }
+            1 = { country_event = { id = roz_teaparty_evt.2032 } }
+        }
     }
 }
 country_event = {
@@ -715,7 +718,6 @@ country_event = {
     option = {
         name = roz_teaparty_evt.2031.aa
         custom_tooltip = roz_teaparty_evt.2031.aa.ct
-        country_event = { id = roz_teaparty_evt.2032 }
     }
 }
 country_event = {
@@ -809,12 +811,13 @@ country_event = {
     option = {
         name = roz_teaparty_evt.206.aa
         custom_tooltip = roz_teaparty_evt.206.aa.ct
+        country_event = { id = roz_teaparty_evt.2061 }
     }
     option = {
         name = roz_teaparty_evt.206.bb
         custom_tooltip = roz_teaparty_evt.206.bb.ct
+        country_event = { id = roz_teaparty_evt.2062 }
     }
-    after = { country_event = { id = roz_teaparty_evt.2061 } }
 }
 country_event = {
     id = roz_teaparty_evt.2061
@@ -833,7 +836,6 @@ country_event = {
         name = roz_teaparty_evt.2061.bb
         custom_tooltip = roz_teaparty_evt.2061.bb.ct
     }
-    after = { country_event = { id = roz_teaparty_evt.2062 } }
 }
 country_event = {
     id = roz_teaparty_evt.2062

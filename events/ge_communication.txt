@@ -1353,12 +1353,12 @@ country_event = {
 		#give_tech_option_or_progress_effect = {
 		#	TECH = tech_ge_HTEP
 		#}
-		give_technology = {
-			tech = tech_ge_HTEP
-		}
 		hidden_effect = {
 			set_country_flag = ge_jyzzlfd_flag
 			remove_country_flag = ge_nfield_diplomacy_activated
+		}
+		give_technology = {
+			tech = tech_ge_HTEP
 		}
 	}
 }

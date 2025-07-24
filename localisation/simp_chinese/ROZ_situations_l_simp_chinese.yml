@@ -200,7 +200,7 @@ roz_SK_4_madgod_invasion_alert_1_onselect_ct: ""
 ###局势：Boss战 深渊感染体入侵 
 roz_SK_4_madgod_invasion_placard: "深渊感染体入侵"
  roz_SK_4_madgod_invasion_placard_type: "深渊感染体入侵"
-roz_SK_4_madgod_invasion_placard_1_desc: "莫名贪求蔷薇少女力量一路尾随而来的深渊感染体终于降临在我们的位面，其化身本体正盘踞在[roz_outland_planet@root.solar_system.GetName]星系积蓄力量，祂麾下的深渊化实体们正在外围侵蚀[owner.GetName]的领地，情况危急！我们不能放任初来乍到的深渊感染滋生蔓延，必须要在深渊感染体还未站稳脚跟前，尽可能地削弱祂的实力。直到祂受到重创，希灵帝国才会接手，帮助我们完成唤醒真红的关键一步。"
+roz_SK_4_madgod_invasion_placard_1_desc: "莫名贪求蔷薇少女力量一路尾随而来的深渊感染体终于降临在我们的位面，其化身本体正盘踞在[roz_outland_planet@root.solar_system.GetName]星系积蓄力量，祂麾下的深渊化实体们正在外围侵蚀[owner.GetName]的领地，情况危急！我们不能放任初来乍到的深渊感染滋生蔓延，必须要在深渊感染体还未站稳脚跟前，尽可能地削弱祂的实力。直到祂受到重创，希灵帝国才会接手，帮助我们完成唤醒真红的关键一步。\n消灭深渊舰队可以推进局势往有利的方向前进。\n被深渊舰队吞噬的舰队和星球将会把局势往不利的方向推进。\n一旦局势抵达某一终点将触发相应结果。"
 
 roz_SK_4_madgod_invasion_placard_stage_minus_two: "黑云压城"
 roz_SK_4_madgod_invasion_placard_stage_minus_two_ct: "越来越严重的深渊侵蚀给我们的作战造成很大困难，我们不得不在被全面压制的情况下抵抗深渊感染体的攻势"

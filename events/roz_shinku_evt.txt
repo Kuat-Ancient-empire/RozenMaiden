@@ -2996,6 +2996,9 @@ country_event = {
             ###给穷途末路的boss上修正
         }
     }
+    after = {
+        custom_tooltip = roz_shinku_evt.555.ct
+    }
 }
 
 #神国星系沦陷
@@ -3233,6 +3236,7 @@ fleet_event = {
         roz_abyss_fleet_suppress_modifier_effect = { modifier = ship_armor_penetration_mult }
         roz_abyss_fleet_suppress_modifier_effect = { modifier = ship_weapon_damage }
         roz_abyss_fleet_suppress_modifier_effect = { modifier = ship_damage_reduction_mult roz_abyss_var_temp_1 = 0 roz_abyss_var_temp_2 = 0 }
+        roz_abyss_fleet_suppress_modifier_effect = { modifier = ship_damage_reduction_add roz_abyss_var_temp_1 = 0 roz_abyss_var_temp_2 = 0 }
     }
 }
 ship_event = {
@@ -3825,6 +3829,7 @@ country_event = {   ##路线收束：万事俱备  #资讯重构仪可启用
     }
     immediate = {
         set_country_flag = roz_SK_IR_enable
+        event_target:roz_madgod_force_country@root = { destroy_country = yes }
     }
     option = {
         name = roz_shinku_evt.650.aa
@@ -3978,6 +3983,7 @@ country_event = {
         end_event_chain = roz_shoujonotsukurikata_chain
         end_event_chain = roz_wake-up_shinku_chain
         end_event_chain = roz_SK_madgod_invasion_main
+        remove_relic = roz_shinku's_body_assembly_stage_3
         random_situation = {
             limit = { is_situation_type = roz_awaken_of_shinku_1_acknowledge_border }
             destroy_situation = this
@@ -4284,9 +4290,9 @@ country_event = {   #真红通讯主界面
         is_dialog_only = yes
         country_event = { id = roz_shinku_evt.1010 }
     }
-    option = {  #约会
-        name = roz_shinku_evt.1001.bb
-    }
+    # option = {  #约会
+    #     name = roz_shinku_evt.1001.bb
+    # }
     option = {  #行政官
         name = roz_shinku_evt.1001.cc
         trigger = {

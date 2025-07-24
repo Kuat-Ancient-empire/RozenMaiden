@@ -780,12 +780,9 @@ roz_abyss_vass_combat_negative_modifier = {
 roz_unholy_invasion_difficult_modifier = {
 	ship_weapon_damage = 1.0
 	ship_fire_rate_mult = 1.0
-	ship_hull_mult = 1.0
-	ship_armor_mult = 1.0
-	ship_shield_mult = 1.0
+	weapon_type_roz_abyss_weapon_damage_mult = 1.0
 	ship_tracking_mult = 1.0
 	ship_accuracy_mult = 1.0
-	ship_speed_mult = 0.5
 }
 
 roz_madgod_country_naval_country_buff = {
@@ -840,3 +837,6 @@ leader_trait_roz_shinku_hollye_commander_fleet_self_modifier_2 = {
 leader_trait_roz_shinku_hollye_commander_fleet_enemy_modifier = {
 	ship_damage_reduction_mult = -1.1
 }
+
+
+

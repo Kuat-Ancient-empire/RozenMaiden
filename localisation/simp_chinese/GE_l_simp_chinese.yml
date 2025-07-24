@@ -382,6 +382,7 @@ GetRozAdjustModeMultDiffText: "当前调整模式为：§H乘算§!\n当前调�
  wg_end_threat_abyss_desc: "§G抵抗深渊入侵§!"
  cb_stop_abyss: "§G抵抗深渊侵蚀§!"
  cb_stop_abyss_desc: "§G抵抗深渊侵蚀§!"
+ war_goal_wg_end_threat_abyss: "§R拥抱侵蚀§!"
 
  roz_abyss_war: "§R深渊入侵§!"
 
