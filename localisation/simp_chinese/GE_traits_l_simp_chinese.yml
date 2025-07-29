@@ -106,7 +106,7 @@ leader_trait_roz_battered_desc: "这位科学家曾遭遇极为可怕的变故�
  ######################
  #真红
  leader_trait_roz_shinku_main: "§R真红§!"
- leader_trait_roz_shinku_main_desc: "$leader_trait_roz_test$"
+ leader_trait_roz_shinku_main_desc: "§R真红§!，蔷薇少女第五人偶，拥有蓝宝石般的双眸与金色螺旋双马尾，身着深红洛丽塔服饰，言行举止透露出与生俱来的优雅与强势领导力。她从被动参与人偶厮杀游戏，到质疑['concept_roz_rozen']的真实意图，最终以自我意志重新定义了['concept_roz_alice_game']，以最完美人偶的身份，为这场无休无止的闹剧划下了休止符。‌"
  leader_trait_roz_shinku_hollye: "§_人工精灵：荷莉耶§!"
  leader_trait_roz_shinku_hollye_desc: "人工精灵如同使魔一般的存在，它们是蔷薇少女不可或缺的帮手。"
  leader_trait_roz_shinku_hollye_commander_fleet: "进入战斗的3个月内，真红所在舰队将按真红的好感度获得['concept_roz_damage_filter']，但受到的伤害:§R+80%§!\n敌方舰队受到的伤害:§B+110%§!"
@@ -120,6 +120,8 @@ leader_trait_roz_battered_desc: "这位科学家曾遭遇极为可怕的变故�
  #雏莓
  leader_trait_roz_hinaichigo_main: "§d雏莓§!"
  leader_trait_roz_hinaichigo_main_desc: "$leader_trait_roz_test$"
+ leader_trait_roz_hinaichigo_berry_bell: "§d贝丽贝尔§!"
+ leader_trait_roz_hinaichigo_berry_bell_desc: "人工精灵如同使魔一般的存在，它们是蔷薇少女不可或缺的帮手。"
 
 ###############################
 #######      好感度     ########

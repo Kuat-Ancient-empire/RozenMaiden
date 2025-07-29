@@ -3187,7 +3187,7 @@ country_event = {
     }
 }
 
-###真实深渊难度机制
+###拟真深渊难度机制
 #舰船复活
 ship_event = {
     id = roz_shinku_evt.585

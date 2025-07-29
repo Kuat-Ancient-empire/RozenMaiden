@@ -239,6 +239,64 @@ leader_trait_roz_hinaichigo_main = {
 	}
 	notify_on_gained = no
 }
+#Berry Bell
+leader_trait_roz_hinaichigo_berry_bell = {
+	initial = no	# 开局可用
+	randomized = no
+	immortal_leaders = yes	# 领袖永生
+	#icon = "gfx/interface/icons/traits/trait_cor_dragon_totem.dds"	# 图标路径
+	#force_councilor_trait = yes
+	#is_councilor_trait_for_ruler = yes
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_blank"
+		RARITY = roz_berry_bell
+		COUNCIL = triggered
+		TIER = none
+	}
+	leader_class = {
+		commander
+		official
+	}
+	triggered_modifier = {
+		potential = {
+			leader_class = commander
+			owner = { NOT = { has_country_flag = roz_rosa_mystica_enhance_flag } }
+		}
+		space_fauna_ship_damage_mult = 1.0
+		SPACE_FAUNA_SHIP_FIRE_RATE_MULT = 1.0
+		SPACE_FAUNA_EXPERIENCE_GAIN_MULT = 1.0
+		SPACE_FAUNA_SHIP_UPKEEP_MULT = -0.5
+	}
+	triggered_modifier = {
+		potential = {
+			leader_class = commander
+			owner = { has_country_flag = roz_rosa_mystica_enhance_flag }
+		}
+		space_fauna_ship_damage_mult = 2.0
+		SPACE_FAUNA_SHIP_FIRE_RATE_MULT = 2.0
+		SPACE_FAUNA_EXPERIENCE_GAIN_MULT = 2.0
+		SPACE_FAUNA_SHIP_UPKEEP_MULT = -1.0
+	}
+	triggered_modifier = {
+		potential = {
+			leader_class = official
+			owner = { NOT = { has_country_flag = roz_rosa_mystica_enhance_flag } }
+		}
+		bonus_pop_growth = 20
+		fake_pop_growth_mod = 20
+	}
+	triggered_modifier = {
+		potential = {
+			leader_class = official
+			owner = { has_country_flag = roz_rosa_mystica_enhance_flag }
+		}
+		bonus_pop_growth = 30
+		fake_pop_growth_mod = 30
+	}
+}
 
 #雪华绮晶
 leader_trait_roz_kirakishou_main = {

@@ -32,8 +32,9 @@
  concept_roz_abyss_faction: "§R深渊势力§!"
  concept_roz_abyss_faction_desc: "§R深渊势力§!包括其自身和['concept_roz_abyss_vass']"
 
+ #归属于['concept_roz_abyss_faction']，但不妨碍§R深渊§!自身会吞噬他们，不知道它们图什么。\n所有命运的馈赠，都在暗中标好了价格。他们获得了超过一般文明的发展能力，却最终变为了深渊降临时的养料。即使只是轻度感染，但过程已不可逆转，拯救它们的办法唯有净化，也不知道它们图什么。
  concept_roz_abyss_vass: "§P深渊仆从国§!"
- concept_roz_abyss_vass_desc: "§P深渊仆从国§!归属于['concept_roz_abyss_faction']，但不妨碍§R深渊§!自身会吞噬他们，不知道它们图什么。\n所有命运的馈赠，都在暗中标好了价格。他们获得了超过一般文明的发展能力，却最终变为了深渊降临时的养料。即使只是轻度感染，但过程已不可逆转，拯救它们的办法唯有净化，也不知道它们图什么。"
+ concept_roz_abyss_vass_desc: "§P深渊仆从国§!天然属于['concept_roz_abyss_faction']，是妄图利用深渊强大力量的疯狂国度，但只要感染了深渊，被同化、疯狂化和自毁的进程就是几乎不可逆的，也不清楚他们图啥……\n深渊的强大能量能够使舰队强度和物质生产得到全方面的强化，但同时也会被深渊深度感染，走向不可控的疯狂和自毁，真不知道他们图啥……\n此外，深渊的感染能力非常强大，甚至能够通过模因传播，要想阻断或中和深渊能量必须要使用幽能一类的高阶能量形式，这一点并不难发现，所以他们到底图啥……"
 
  concept_roz_abyss_vass_difficult: "§3难度§!"
  concept_roz_abyss_vass_difficult_desc: "$roz_start.7777.easy$：额外AI数量为1个\n$roz_start.7777.normal$：额外AI数量为2个\n$roz_start.7777.hard$：额外AI数量为3个\n$roz_start.7777.xiling$：额外AI数量为5个"
@@ -41,7 +42,7 @@
  concept_roz_abyss_vass_difficult_2: "§3根据难度§!"
  concept_roz_abyss_vass_difficult_2_desc: "$roz_start.7777.easy$：被选定的AI被侵蚀概率为50%\n$roz_start.7777.normal$：被选定的AI被侵蚀概率为50%\n$roz_start.7777.hard$：被选定的AI被侵蚀概率为70%\n$roz_start.7777.xiling$：被选定的AI被侵蚀概率为90%"
 
- concept_roz_abyss_challenge: "§R真实深渊§!"
+ concept_roz_abyss_challenge: "§R拟真深渊§!"
  concept_roz_abyss_challenge_desc: "['concept_roz_abyss_faction']舰队将获得['concept_roz_abyss_challenge_revive']、['concept_roz_abyss_challenge_suppress']和['concept_roz_abyss_challenge_timed']"
  concept_roz_abyss_challenge_revive: "§_复活机制§!"
  concept_roz_abyss_challenge_revive_desc: "根据难度，['concept_roz_abyss_faction']舰队将获得有限复活次数"

@@ -212,6 +212,7 @@ roz_SK_4_madgod_invasion_placard_stage_one: "获得优势"
 roz_SK_4_madgod_invasion_placard_stage_one_ct: "一系列胜利让我们的作战队伍越发大胆老练，深渊感染正在受到遏制。"
 roz_SK_4_madgod_invasion_placard_stage_two: "黎明将至"
 roz_SK_4_madgod_invasion_placard_stage_two_ct: "情势已经很明显了，胜利即将属于我们。深渊势力或许依旧可怖，但单论那位疯狂的神祇则不足挂齿。"
+ roz_SK_4_madgod_invasion_placard__monthly_change_tooltip: ""
 
 roz_SK_4_madgod_invasion_placard_approach_1: "运筹"
 roz_SK_4_madgod_invasion_placard_approach_1_onselect_ct: "别整这些有的没的，对抗深渊的最好办法就是全力支持前线，做好后勤保障就是最大的帮助。"
@@ -229,4 +230,6 @@ roz_SK_4_madgod_invasion_placard_approach_3_onselect_ct: "没有必要保留了�
  roz_SK_4_madgod_invasion_explose_the_galaxy_progress_normal: "正常难度进度"
  roz_SK_4_madgod_invasion_explose_the_galaxy_progress_hard: "困难难度进度"
  roz_SK_4_madgod_invasion_explose_the_galaxy_progress_xiling: "希灵前线难度进度"
-
+ roz_SK_4_madgod_invasion_explose_the_galaxy_monthly_change_tooltip: ""
+ roz_SK_4_madgod_invasion_explose_the_galaxy_approach_1: "时间流逝"
+ roz_SK_4_madgod_invasion_explose_the_galaxy_approach_1_onselect_ct: ""

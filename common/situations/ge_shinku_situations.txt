@@ -748,7 +748,7 @@ roz_SK_4_madgod_invasion_placard = {
     }
 }
 
-###真实深渊-毁灭倒计时
+###拟真深渊-毁灭倒计时
 roz_SK_4_madgod_invasion_explose_the_galaxy = {
     desc = {
         text = roz_SK_4_madgod_invasion_explose_the_galaxy_1_desc
@@ -785,24 +785,20 @@ roz_SK_4_madgod_invasion_explose_the_galaxy = {
             end = 480
         }
     }
-    # approach = {#方案
-    #     name = roz_SK_4_madgod_invasion_explose_the_galaxy_approach_1
-    #     icon = GFX_situation_approach_encurage_conversation
-    #     icon_background = GFX_situation_approach_bg_red
-    #     allow = {
-    #     }
-    #     potential = {
-    #     }
-    #     on_select = {
-    #         custom_tooltip = roz_SK_4_madgod_invasion_explose_the_galaxy_approach_1_onselect_ct
-    #     }
-    #     default = yes
-    #     modifier = {
-    #         #country_naval_cap_add = 500
-    #     }
-    #     ai_weight = {
-    #     }
-    # }
+    approach = {#方案
+        name = roz_SK_4_madgod_invasion_explose_the_galaxy_approach_1
+        icon = GFX_situation_approach_encurage_conversation
+        icon_background = GFX_situation_approach_bg_red
+        allow = { always = yes }
+        potential = { always = yes }
+        on_select = { custom_tooltip = roz_SK_4_madgod_invasion_explose_the_galaxy_approach_1_onselect_ct }
+        default = yes
+        modifier = {
+            #country_naval_cap_add = 500
+        }
+        ai_weight = {
+        }
+    }
     monthly_progress = {
         base = 1
         modifier = {

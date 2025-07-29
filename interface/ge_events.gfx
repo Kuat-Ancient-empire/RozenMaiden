@@ -107,6 +107,12 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_ge_rz_start4"
+		texturefile = "gfx/event_pictures/roz_evt_sgt_start4.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 
 
 	spriteType = {
