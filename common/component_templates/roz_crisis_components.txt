@@ -20,7 +20,7 @@ weapon_component_template = {
     resources = {
         category = ship_components
     }
-    damage = { min = 16384 max = 32768 }
+    damage = { min = 32768 max = 65536 }
     windup = { min = 250 max = 350 }
     total_fire_time = 100
 
@@ -65,7 +65,7 @@ weapon_component_template = {
         category = ship_components
     }
 
-    damage = { min = 4096 max = 8192 }
+    damage = { min = 8192 max = 16384 }
     windup = { min = 150.0 max = 250.0 }
     total_fire_time = 100
 
@@ -109,7 +109,7 @@ weapon_component_template = {
         category = ship_components
     }
 
-    damage = { min = 512 max = 1024 }
+    damage = { min = 1024 max = 2048 }
     windup = { min = 30.0 max = 100.0 }
     total_fire_time = 30
 
@@ -149,7 +149,7 @@ weapon_component_template = {
         category = ship_components
     }
 
-    damage = { min = 16 max = 64 }
+    damage = { min = 32 max = 128 }
     windup = { min = 5 max = 5 }
     total_fire_time = 5
 
@@ -189,7 +189,7 @@ weapon_component_template = {
         category = ship_components
     }
 
-    damage = { min = 1024 max = 2048 }
+    damage = { min = 2048 max = 4096 }
     windup = { min = 50 max = 150 }
     total_fire_time = 50
     size_damage_factor = 0.5
@@ -233,7 +233,7 @@ strike_craft_component_template = {
     regeneration_per_day = 1
     launch_time = 1.0
 
-    damage = { min = 250 max = 500 }
+    damage = { min = 500 max = 1000 }
     cooldown = 2
     range = 10
     engagement_range = 120

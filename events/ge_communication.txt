@@ -82,6 +82,8 @@ country_event = {
 				}
 			}
 		}
+		#event_target:roz_suigintou_global_country@root = { establish_communications_no_message = root }
+
 	}
 	after = {
 		set_timed_country_flag = {

@@ -1930,7 +1930,10 @@ roz_abyss_vass_select = {
 					NOR = {
 						is_roz_abyss_vass_extra_country_global_target = yes
 						is_country_type = roz_madgod_empire
+						#is_subject = yes
 					}
+					NOT = { root = { is_overlord_to = prev } }
+					NOT = { is_in_federation_with = root }
 				}
 				set_country_flag = roz_abyss_vass_country
 				set_subject_of = { who = event_target:roz_madgod_force_country@root }
@@ -2617,7 +2620,12 @@ roz_abyss_fleet_outpost_create = {
 				}
 			}
 			roz_abyss_fleet_create_large_defense_in_diff = { owner = event_target:roz_madgod_force_country@root location = event_target:roz_abyss_fleet_outpost_target_$num$_@root }
-			roz_abyss_fleet_create_marvelous = yes last_created_fleet = { set_location = event_target:roz_abyss_fleet_outpost_target_$num$_@root }
+			###头，
+			roz_abyss_fleet_create_marvelous = yes
+			last_created_fleet = {
+				set_location = event_target:roz_abyss_fleet_outpost_target_$num$_@root
+				add_modifier = { modifier = roz_unholy_invasion_difficult_modifier mult = 3 }
+			}
 		}
 	}
 }
@@ -2954,3 +2962,46 @@ roz_trait_hollye_official_resource_effect = {
 	}
 }
 
+##消灭哨站(被玩家消灭的)
+##scope: fleet
+roz_abyss_fleet_outpost_remove_effect = {
+	optimize_memory
+	if = {
+		limit = {
+			solar_system = {
+				is_same_value = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root
+				NOT = { has_star_flag = roz_abyss_fleet_outpost_system_disable_@root }
+			}
+		}
+		event_target:roz_abyss_fleet_outpost_target_$outpost$_@root = { clear_global_event_target = yes }
+		solar_system = {
+			remove_star_flag = roz_abyss_fleet_outpost_system
+			set_star_flag = roz_abyss_fleet_outpost_system_disable_@root
+		}
+	}
+}
+roz_abyss_fleet_outpost_remove_effect_all = {
+	optimize_memory
+	roz_abyss_fleet_outpost_remove_effect = { outpost = 1 }
+	roz_abyss_fleet_outpost_remove_effect = { outpost = 2 }
+	roz_abyss_fleet_outpost_remove_effect = { outpost = 3 }
+	roz_abyss_fleet_outpost_remove_effect = { outpost = 4 }
+	roz_abyss_fleet_outpost_remove_effect = { outpost = 5 }
+}
+
+##消灭哨站(月检是否还有小头目存在)
+roz_abyss_fleet_outpost_remove_effect_monthly = {
+	optimize_memory
+	event_target:roz_abyss_fleet_outpost_target_$outpost$_@root = {
+		if = {
+			limit = {
+				NOT = { any_fleet_in_system = { has_fleet_flag = roz_abyss_fleet_marvelous } }
+				NOT = { has_star_flag = roz_abyss_fleet_outpost_system_disable_@root }
+			}
+			event_target:roz_abyss_fleet_outpost_target_$outpost$_@root = { clear_global_event_target = yes }
+			solar_system = { remove_star_flag = roz_abyss_fleet_outpost_system }
+			set_star_flag = roz_abyss_fleet_outpost_system_disable_@root
+			root = { country_event = { id = roz_shinku_evt.570 } }
+		}
+	}
+}

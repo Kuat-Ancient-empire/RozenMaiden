@@ -28,7 +28,7 @@ generate_sgt_site_on_game_start = {	#give up
 						has_star_flag = ge_suigintou_site_counted
 					}
 					has_owner = no
-					has_access_fleet = root
+					#has_access_fleet = root
 					roz_sgt_site_planet_select_condition = yes
 				}
 				this = {
@@ -4867,6 +4867,13 @@ roz_leader_name_set_effect = {	#领袖名语种切换
 
 roz_setting_menu_initialize = {
 	####
+	event_target:global_event_country = {
+		set_variable = {
+			which = roz_unholy_invasion_difficulty
+			value = 2
+		}
+	}
+	####
 	if = {
 		limit = { NOT = { has_country_flag = roz_settings_first_fired } }
 		set_country_flag = roz_settings_first_fired
@@ -4901,7 +4908,7 @@ roz_setting_menu_initialize = {
 				has_country_flag = roz_krks_dl_normal_flag
 			}
 		}
-		set_country_flag = roz_krks_dl_normal_flag
+		set_country_flag = roz_krks_dl_early_flag
 	}
 	# event_target:global_event_country = {
 	# 	set_variable = { which = roz_unholy_invasion_difficulty value = 2 }

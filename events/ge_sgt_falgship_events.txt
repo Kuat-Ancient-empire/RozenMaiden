@@ -120,11 +120,7 @@ ship_event = {	#进展
 	option = {
 		name = ge_sgt_flagship_events.101.a
 		hidden_effect = {
-			owner = {
-				start_situation = {
-					type = sgt_flagship_exploration_situation
-				}
-			}	
+			owner = { start_situation = { type = sgt_flagship_exploration_situation } }
 		}
 		leader = {
 			add_experience = 300

@@ -36,6 +36,7 @@ VOP_on_monthly_pulse_country = {
 
 		roz_shinku_evt.562 #月检舰队行为继续寻路星系
 		roz_shinku_evt.563 #月检刷船
+		roz_shinku_evt.563 #月检据点是否还能存在
 
 		ge_skills.70 #真红机制
 	}
@@ -248,6 +249,7 @@ on_fleet_destroyed_victim = {
 on_fleet_destroyed_perp = {
 	events = {
 		ge_event.2062
+		roz_shinku_evt.569  #深渊据点被拔除
 		roz_shinku_evt.620  #检测boss被击杀（判断结局）
 		#ge_sgt_flagship_events.5
 	}

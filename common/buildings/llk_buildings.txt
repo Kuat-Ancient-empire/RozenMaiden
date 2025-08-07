@@ -223,8 +223,8 @@ building_roz_dolls_factory = {
     #}
     planet_modifier = {
         planet_amenities_no_happiness_add = 2000
-        bonus_pop_growth = 20
-        fake_pop_growth_mod = 20
+        bonus_pop_growth = 6
+        fake_pop_growth_mod = 6
     } 				#星球范围内的修正
     country_modifier = {
 
@@ -236,7 +236,7 @@ building_roz_dolls_factory = {
         category = planet_buildings #类型
         produces = {
             consumer_goods = 40
-            sr_rosa_mystica = 1.5
+            sr_rosa_mystica = 2
             engineering_research = 10
             society_research = 5
         }

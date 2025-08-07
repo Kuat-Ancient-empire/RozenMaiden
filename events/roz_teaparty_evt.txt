@@ -432,11 +432,13 @@ country_event = {
     option = {
         name = roz_teaparty_evt.104.aa
         custom_tooltip = roz_teaparty_evt.104.aa.ct
+        custom_tooltip = roz_teaparty_evt.random_modifier
         hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
     option = {
         name = roz_teaparty_evt.104.bb
         custom_tooltip = roz_teaparty_evt.104.bb.ct
+        custom_tooltip = roz_teaparty_evt.random_modifier
         hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
 }
@@ -460,11 +462,13 @@ country_event = {
     option = {
         name = roz_teaparty_evt.105.aa
         custom_tooltip = roz_teaparty_evt.105.aa.ct
+        custom_tooltip = roz_teaparty_evt.random_modifier
         hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
     option = {
         name = roz_teaparty_evt.105.bb
         custom_tooltip = roz_teaparty_evt.105.bb.ct
+        custom_tooltip = roz_teaparty_evt.random_modifier
         hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
 }
@@ -488,11 +492,13 @@ country_event = {
     option = {
         name = roz_teaparty_evt.106.aa
         custom_tooltip = roz_teaparty_evt.106.aa.ct
+        custom_tooltip = roz_teaparty_evt.random_modifier
         hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
     option = {
         name = roz_teaparty_evt.106.bb
         custom_tooltip = roz_teaparty_evt.106.bb.ct
+        custom_tooltip = roz_teaparty_evt.random_modifier
         hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
 }
@@ -544,11 +550,13 @@ country_event = {
     option = {
         name = roz_teaparty_evt.108.aa
         custom_tooltip = roz_teaparty_evt.108.aa.ct
+        custom_tooltip = roz_teaparty_evt.random_modifier
         hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
     option = {
         name = roz_teaparty_evt.108.bb
         custom_tooltip = roz_teaparty_evt.108.bb.ct
+        custom_tooltip = roz_teaparty_evt.random_modifier
         hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
 }
@@ -645,6 +653,7 @@ country_event = {
     option = {
         name = roz_teaparty_evt.2012.aa
         custom_tooltip = roz_teaparty_evt.2012.aa.ct
+        custom_tooltip = roz_teaparty_evt.random_modifier
         hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
 }
@@ -668,16 +677,19 @@ country_event = {
     option = {
         name = roz_teaparty_evt.202.aa
         custom_tooltip = roz_teaparty_evt.202.aa.ct
+        custom_tooltip = roz_teaparty_evt.random_modifier
         hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
     option = {
         name = roz_teaparty_evt.202.bb
         custom_tooltip = roz_teaparty_evt.202.bb.ct
+        custom_tooltip = roz_teaparty_evt.random_modifier
         hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
     option = {
         name = roz_teaparty_evt.202.cc
         custom_tooltip = roz_teaparty_evt.202.cc.ct
+        custom_tooltip = roz_teaparty_evt.random_modifier
         hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
 }
@@ -732,6 +744,7 @@ country_event = {
     option = {
         name = roz_teaparty_evt.2032.aa
         custom_tooltip = roz_teaparty_evt.2032.aa.ct
+        custom_tooltip = roz_teaparty_evt.random_modifier
         hidden_effect = { roz_teaparty_random_modifier_list = yes }
     }
 }
@@ -760,7 +773,10 @@ country_event = {
         name = roz_teaparty_evt.204.bb
         custom_tooltip = roz_teaparty_evt.204.bb.ct
     }
-    after = { hidden_effect = { roz_teaparty_random_modifier_list = yes } }
+    after = {
+        custom_tooltip = roz_teaparty_evt.random_modifier
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
+    }
 }
 
 #爱之爱丽丝
@@ -789,7 +805,10 @@ country_event = {
     option = {
         name = roz_teaparty_evt.205.cc
     }
-    after = { hidden_effect = { roz_teaparty_random_modifier_list = yes } }
+    after = {
+        custom_tooltip = roz_teaparty_evt.random_modifier
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
+    }
 }
 
 #保留节目II
@@ -854,5 +873,8 @@ country_event = {
         name = roz_teaparty_evt.2062.bb
         custom_tooltip = roz_teaparty_evt.2062.bb.ct
     }
-    after = { hidden_effect = { roz_teaparty_random_modifier_list = yes } }
+    after = {
+        custom_tooltip = roz_teaparty_evt.random_modifier
+        hidden_effect = { roz_teaparty_random_modifier_list = yes }
+    }
 }

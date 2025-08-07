@@ -56,9 +56,16 @@ country_event = {
 						NOT = {
 							any_fleet_in_system = { owner = { is_hostile = root } }
 						}
+						NOR = {
+							has_star_flag = lcluster
+							has_star_flag = lcluster1
+							has_star_flag = lcluster1b
+							has_star_flag = lgate
+							has_star_flag = lcluster_lgate
+						}
 						#_禁止同星系生成
 						has_owner = no
-						has_access_fleet = root
+						#has_access_fleet = root
 						any_system_planet = {
 							has_owner = no
 							is_colony = no
@@ -740,7 +747,7 @@ country_event = {
 						}
 						#_禁止同星系生成
 						has_owner = no
-						has_access_fleet = root
+						#has_access_fleet = root
 						any_system_planet = {
 							has_owner = no
 							is_colony = no

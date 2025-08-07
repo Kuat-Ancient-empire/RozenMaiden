@@ -14,7 +14,7 @@ country_event = {
         }
     }
     immediate = {
-        set_country_flag = roz_shinku_story_start_flag
+        #set_country_flag = roz_shinku_story_start_flag
     }
     option = {
         name = roz_shinku_evt.1.aa
@@ -36,7 +36,7 @@ country_event = {
     show_sound = event_hand_shake
     trigger = {
         has_country_flag = roz_leader_suigintou_get
-        has_country_flag = roz_shinku_story_start_flag
+        #has_country_flag = roz_shinku_story_start_flag
     }
     option = {
         name = roz_shinku_evt.2.aa
@@ -49,6 +49,7 @@ country_event = {
         begin_event_chain = { event_chain = roz_shoujonotsukurikata_chain target = root }
         enable_special_project = { name = roz_shoujonotsukurikata_project_1 owner = root }
         complete_special_project = { type = roz_shoujonotsukurikata_project_1 }
+        set_country_flag = roz_shinku_story_start_flag
     }
 }
 
@@ -475,6 +476,38 @@ country_event = {
 ###第十块零件
 country_event = {
     id = roz_shinku_evt.100
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = { always = yes }
+    immediate = {
+        if = {
+            limit = { has_country_flag = roz_shinku_story_start_flag }
+            country_event = { id = roz_shinku_evt.101 }
+        }
+        else_if = {
+            limit = { NOT = { has_country_flag = roz_shinku_story_start_flag } }
+            country_event = { id = roz_shinku_evt.102 }
+        }
+    }
+}
+country_event = {
+    id = roz_shinku_evt.102
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol10_get }
+    }
+    immediate = {
+        country_event = { id = roz_shinku_evt.101 }
+        if = {
+            limit = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol10_get }
+            break = yes
+        }
+        country_event = { id = roz_shinku_evt.102 months = 3 }
+    }
+}
+country_event = {
+    id = roz_shinku_evt.101
     title = "roz_shinku_evt.100.title"
     desc = "roz_shinku_evt.100.desc"
     picture = GFX_evt_roz_scientific_exhibition
@@ -496,33 +529,6 @@ country_event = {
     after = {
         add_relic = roz_shuukan_shoujonotsukurikata_vol10
         enable_special_project = { name = roz_shoujonotsukurikata_project_10 owner = root }
-    }
-}
-country_event = {
-    id = roz_shinku_evt.101
-    hide_window = yes
-    is_triggered_only = yes
-    trigger = {
-        NOT = { has_country_flag = roz_shinku_story_start_flag }
-    }
-    immediate = {
-        country_event = { id = roz_shinku_evt.102 }
-    }
-}
-country_event = {
-    id = roz_shinku_evt.102
-    hide_window = yes
-    is_triggered_only = yes
-    trigger = {
-        NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol10_get }
-    }
-    immediate = {
-        country_event = { id = roz_shinku_evt.100 }
-        if = {
-            limit = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol10_get }
-            break = yes
-        }
-        country_event = { id = roz_shinku_evt.102 months = 3 }
     }
 }
 
@@ -1796,6 +1802,7 @@ country_event = {
     }
 }
 
+#人偶搬家
 country_event = {
     id = roz_shinku_evt.451
     title = roz_shinku_evt.451.title
@@ -1830,9 +1837,7 @@ country_event = {
     }
     trigger = {
         is_ai = no
-        NOT = {
-            exists = event_target:roz_hinaichigo_global_country@root
-        }
+        NOT = { exists = event_target:roz_hinaichigo_global_country@root }
     }
     immediate = {
 
@@ -2588,6 +2593,7 @@ country_event = {
             }
             establish_communications_no_message = event_target:roz_madgod_force_country@root
         }
+        country_event = { id = roz_shinku_evt.528 days = 5 }
     }
     option = {
         name = roz_shinku_evt.525.aa
@@ -2662,6 +2668,21 @@ country_event = {
             id = roz_shinku_evt.526
             days = 30
         }
+    }
+}
+
+country_event = {
+    id = roz_shinku_evt.528
+    title = roz_shinku_evt.528.title
+    desc = roz_shinku_evt.528.desc
+    is_triggered_only = yes
+    picture = GFX_evt_roz_madgod_system
+    show_sound = event_galactic_community
+    trigger = {
+        is_ai = no
+    }
+    option = {
+        name = roz_shinku_evt.528.aa
     }
 }
 
@@ -3071,7 +3092,7 @@ country_event = {
     }
 }
 
-#深渊分遣舰队再次出现
+#深渊分遣舰队再次出现，刷舰队
 country_event = {
     id = roz_shinku_evt.563
     hide_window = yes
@@ -3085,7 +3106,7 @@ country_event = {
     }
     immediate = {
         random_list = {
-            9 = {
+            4 = {
                 modifier = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 1 } } mult = 0.5 }
                 modifier = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 1 } } mult = 1 }
                 modifier = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 1 } } mult = 2 }
@@ -3187,6 +3208,69 @@ country_event = {
     }
 }
 
+#玩家消灭深渊据点
+#roz_abyss_fleet_marvelous
+country_event = {
+    id = roz_shinku_evt.569
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        fromfromfrom = {
+            has_fleet_flag = roz_abyss_fleet_marvelous
+            solar_system = { has_star_flag = roz_abyss_fleet_outpost_system }
+        }
+        this = {
+            NOR = {
+                is_country_type = roz_madgod_empire
+                has_country_flag = roz_abyss_vass_country
+            }
+            has_country_flag = roz_leader_suigintou_get
+        }
+    }
+    immediate = {
+        roz_abyss_fleet_outpost_remove_effect_all = yes
+        country_event = { id = roz_shinku_evt.570 }
+    }
+}
+
+#深渊据点被拔除
+country_event = {
+    id = roz_shinku_evt.570
+    title = roz_shinku_evt.570.title
+    desc = roz_shinku_evt.570.desc
+    show_sound = event_space_battle
+    picture = GFX_evt_small_space_battle
+    is_triggered_only = yes
+    option = {
+        name = roz_shinku_evt.570.aa
+        add_resource = {
+            sr_void_core = 3000
+            alloys = 35000
+            influence = 250
+            unity = 135000
+        }
+    }
+}
+
+#月检据点是否还能存在
+country_event = {
+    id = roz_shinku_evt.563
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+        NOT = { has_country_flag = roz_abyss_fleet_create_cd }
+        has_country_flag = roz_shinku_jtcl_end_flag
+        has_country_flag = roz_abyss_faction_arrival
+    }
+    immediate = {
+        roz_abyss_fleet_outpost_remove_effect_monthly = { outpost = 1 }
+        roz_abyss_fleet_outpost_remove_effect_monthly = { outpost = 2 }
+        roz_abyss_fleet_outpost_remove_effect_monthly = { outpost = 3 }
+        roz_abyss_fleet_outpost_remove_effect_monthly = { outpost = 4 }
+        roz_abyss_fleet_outpost_remove_effect_monthly = { outpost = 5 }
+    }
+}
 ###拟真深渊难度机制
 #舰船复活
 ship_event = {
