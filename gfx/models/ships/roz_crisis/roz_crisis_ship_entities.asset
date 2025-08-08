@@ -421,7 +421,7 @@ entity = {
         event = { time = 11.5 node = "part2" particle = "biogenesis_02_5_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "amb_titan_ship_death" } }
         event = { time = 11.5 node = "part3" particle = "biogenesis_02_5_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "amb_titan_ship_death" } }
     }
-·
+
     #attach = { "part1" 		 		= "roz_crisis_02_titan_bow_entity" }
     #attach = { "part2" 		 		= "roz_crisis_02_titan_mid_entity" }
     #attach = { "part3" 		 		= "roz_crisis_02_titan_stern_entity" }

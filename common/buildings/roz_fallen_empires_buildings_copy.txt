@@ -181,8 +181,8 @@ building_roz_dimensional_fabricator = {
     planet_modifier = {
         planet_miners_produces_mult = 0.20
         planet_farmers_exotic_gases_produces_add = 0.05
-        planet_miner_volatile_motes_produces_add = 0.05
-        planet_technicians_rare_crystals_produces_add = 0.05
+        planet_miners_volatile_motes_produces_add = 0.05
+        planet_technician_rare_crystals_produces_add = 0.05
     }
 
     resources = {

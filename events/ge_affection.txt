@@ -228,7 +228,7 @@ country_event = {
 					has_leader_flag = roz_suigintou_flag
 				}
 				export_trigger_value_to_variable = {
-					trigger = has_skill
+					trigger = has_base_skill
 					variable = sgt_level_temp
 				}
 				owner = {

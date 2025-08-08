@@ -1,1 +1,9 @@
 KZ_VOY_MOD = { optimize_memory always = no }
+is_invisable_faction = { optimize_memory always = no }
+is_nirvana_empire = { optimize_memory always = no }
+is_nirvana_empire_dragon = { optimize_memory always = no }
+is_nirvana_empire_council = { optimize_memory always = no }
+is_cg_empire = { optimize_memory always = no }
+is_futa_country = { optimize_memory always = no }
+is_KANSEN_species = { optimize_memory always = no }
+has_wg_special_authority = { optimize_memory always = no }

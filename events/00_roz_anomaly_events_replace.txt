@@ -37,7 +37,7 @@ ship_event = {
 		# 				has_leader_flag = roz_suigintou_flag
 		# 				has_leader_flag = legendary_leader
 		# 				is_event_leader = yes
-		# 				has_skill >= 5
+		# 				has_base_skill >= 5
 		# 			}
 		# 		}
 		# 	}

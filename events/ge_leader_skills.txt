@@ -568,7 +568,7 @@ country_event = {
 		fromfrom = {
 			leader = {
 				export_trigger_value_to_variable = {
-					trigger = has_skill
+					trigger = has_base_skill
 					variable = roz_krks_level_var
 				}
 				change_variable = {
@@ -1215,9 +1215,6 @@ country_event = {
 		from = { is_rozen_army = yes }
 	}
 	immediate = {
-		if = {
-			limit = {  }
-		}
 		from = {
 			if = {
 				limit = {

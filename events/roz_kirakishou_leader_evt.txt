@@ -245,8 +245,7 @@ country_event = {
                 }
             }
         }
-        set_timed_country_flag = { flag = roz_kirakishou_diplomatic_initialize_flag
-        days = 31}
+        set_timed_country_flag = { flag = roz_kirakishou_diplomatic_initialize_flag days = 31}
     }
 }
 

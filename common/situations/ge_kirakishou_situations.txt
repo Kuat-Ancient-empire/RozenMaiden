@@ -443,7 +443,7 @@ kirakishou_planet_invasion_situation = {
 			}
 			modifier = {
 				country_energy_produces_mult = -0.05
-				trade_value_mult = -0.1
+				planet_jobs_trade_produces_mult = -0.1
 			}
 			on_first_enter = {
 				situation_event = {
@@ -478,7 +478,7 @@ kirakishou_planet_invasion_situation = {
 			}
 			modifier = {
 				country_energy_produces_mult = -0.05
-				trade_value_mult = -0.2
+				planet_jobs_trade_produces_mult = -0.2
 			}
 			on_first_enter = {
 				situation_event = {
@@ -516,7 +516,7 @@ kirakishou_planet_invasion_situation = {
 			}
 			modifier = {
 				country_energy_produces_mult = -0.1
-				trade_value_mult = -0.3
+				planet_jobs_trade_produces_mult = -0.3
 			}
 			on_first_enter = {
 				situation_event = {
@@ -698,13 +698,9 @@ kirakishou_planet_invasion_situation = {
 			add = 1.5
 			target = {
 				has_current_purge = yes
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_being_purged = yes
-					NOT = {
-						has_purge_type = {
-							type = purge_neutering
-						}
-					}
+					NOT = { has_purge_type = { type = purge_neutering } }
 				}
 			}
 		}

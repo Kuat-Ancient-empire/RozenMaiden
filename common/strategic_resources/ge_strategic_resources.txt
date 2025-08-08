@@ -51,6 +51,15 @@ sr_void_core_hidden = {	###虚空引擎
 
 }
 
+time = {
+	tradable = no
+	category = other
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
 
 
 

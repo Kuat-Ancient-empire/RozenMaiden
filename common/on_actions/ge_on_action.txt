@@ -329,7 +329,9 @@ on_colony_destroyed = {
 # This = planet
 # From = country attacking
 on_ground_combat_started = {
-	ge_skills.80	#真红机制
+	events = {
+		ge_skills.80	#真红机制
+	}
 }
 #陆军交战中阵亡
 # This = owner
@@ -337,6 +339,8 @@ on_ground_combat_started = {
 # FromFrom = opponent
 # FromFromFrom = planet
 on_army_killed_in_combat = {
-	ge_skills.83	#真红机制
+	events = {
+		ge_skills.83	#真红机制
+	}
 }
 

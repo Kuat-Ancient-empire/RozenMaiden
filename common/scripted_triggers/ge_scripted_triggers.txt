@@ -263,12 +263,8 @@ is_roz_abyss_vass_extra_country_global_target = {
 roz_is_MOD_country = {
 	optimize_memory
 	OR = {
-		has_authority = auth_warshipgirls
-		has_authority = auth_shenhai
-		has_authority = auth_starshipgirls
+		has_wg_special_authority = yes
 		is_nirvana_empire = yes
-		is_nirvana_empire_dragon = yes
-		is_nirvana_empire_council = yes
 		is_cg_empire = yes
 		is_futa_country = yes
 		is_KANSEN_species = yes

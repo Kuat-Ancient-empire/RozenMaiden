@@ -502,7 +502,7 @@ leader_trait_roz_kirakishou_nightmare = {
 		}
 		leaders_upkeep_mult = -0.5
 		#leader_governors_society_research_produces_add = 15
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -518,7 +518,7 @@ leader_trait_roz_kirakishou_nightmare = {
 		#leader_generals_sr_rosa_mystica_produces_add = -1
 		#leader_governors_influence_produces_add = 0.5
 		#leader_commanders_energy_produces_add = 10
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	#开启指定法令
 	triggered_self_modifier = {
@@ -531,7 +531,7 @@ leader_trait_roz_kirakishou_nightmare = {
 		}
 		leaders_upkeep_mult = -0.1
 		#leader_governors_society_research_produces_add = 30
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -545,7 +545,7 @@ leader_trait_roz_kirakishou_nightmare = {
 		#leader_generals_sr_rosa_mystica_produces_add = -2
 		#leader_governors_influence_produces_add = 1.5
 		#leader_commanders_energy_produces_add = 20
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	modifier = {
 		leader_commanders_sr_rosa_mystica_produces_add = -0.8
@@ -661,7 +661,7 @@ leader_trait_ge_ruler_bond = {
 		leader_scientists_physics_research_produces_add = 2
 		leader_scientists_society_research_produces_add = 2
 		leader_scientists_engineering_research_produces_add = 2
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -670,7 +670,7 @@ leader_trait_ge_ruler_bond = {
 		}
 		leader_scientists_minerals_produces_add = 2.5
 		leader_scientists_energy_produces_add = 2.5
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -679,7 +679,7 @@ leader_trait_ge_ruler_bond = {
 		}
 		leader_scientists_energy_produces_add = 3
 		leader_scientists_alloys_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -689,7 +689,7 @@ leader_trait_ge_ruler_bond = {
 		leader_scientists_food_produces_add = 3
 		leader_scientists_influence_produces_add = 0.1
 		leader_scientists_time_produces_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -1122,7 +1122,7 @@ leader_trait_ge_N_field = {
 		leader_commanders_rare_crystals_produces_add = 0.5
 		leader_commanders_alloys_upkeep_add = 1
 		#leader_commanders_consumer_goods_upkeep_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -1138,7 +1138,7 @@ leader_trait_ge_N_field = {
 		leader_commanders_rare_crystals_produces_add = 0.5
 		leader_commanders_alloys_upkeep_add = 0.5
 		leader_commanders_consumer_goods_upkeep_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -1152,7 +1152,7 @@ leader_trait_ge_N_field = {
 		leader_commanders_rare_crystals_produces_add = 2
 		#leader_commanders_alloys_upkeep_add = 1
 		#leader_commanders_consumer_goods_upkeep_add = 1
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -1166,7 +1166,7 @@ leader_trait_ge_N_field = {
 		leader_commanders_rare_crystals_produces_add = 2
 		#leader_commanders_alloys_upkeep_add = 0.5
 		leader_commanders_consumer_goods_upkeep_add = 0.5
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_modifier = {
 		potential = {
@@ -1509,7 +1509,7 @@ leader_trait_ge_N_field_scientist = {
 		leader_scientists_society_research_produces_add = 15
 		leader_scientists_unity_produces_add = 5
 		leader_scientists_consumer_goods_upkeep_add = 1.5
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -1521,7 +1521,7 @@ leader_trait_ge_N_field_scientist = {
 		leader_scientists_society_research_produces_add = 30
 		leader_scientists_unity_produces_add = 15
 		leader_scientists_consumer_goods_upkeep_add = 0.5
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -1535,7 +1535,7 @@ leader_trait_ge_N_field_scientist = {
 		leader_scientists_society_research_produces_add = 15
 		leader_scientists_unity_produces_add = 5
 		leader_scientists_minerals_upkeep_add = 5
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -1547,7 +1547,7 @@ leader_trait_ge_N_field_scientist = {
 		leader_scientists_society_research_produces_add = 30
 		leader_scientists_unity_produces_add = 15
 		leader_scientists_minerals_upkeep_add = 2
-		mult = trigger:has_skill
+		mult = trigger:has_base_skill
 	}
 	#ai_categories = {
 	#	physics
