@@ -108,7 +108,8 @@ country_event = {
 					}
 				}
 				any_controlled_ship = {
-					has_component = ge_shippart_time_freeze
+					#has_component = ge_shippart_time_freeze
+					check_modifier_value = { modifier = roz_timefreeze_modifier_tooltip value > 0 }
 				}
 				#has_fleet_flag = kirakishou_hostile_fleet_flag
 			}
@@ -246,7 +247,8 @@ country_event = {
 					}
 				}
 				any_controlled_ship = {
-					has_component = ge_shippart_time_freeze
+					#has_component = ge_shippart_time_freeze
+					check_modifier_value = { modifier = roz_timefreeze_modifier_tooltip value > 0 }
 				}
 			}
 		}
@@ -298,7 +300,8 @@ fleet_event = {
 					owner = {
 						is_hostile = root.owner
 					}
-					has_component = ge_shippart_time_freeze
+					#has_component = ge_shippart_time_freeze
+					check_modifier_value = { modifier = roz_timefreeze_modifier_tooltip value > 0 }
 				}
 			}
 		}
@@ -322,7 +325,8 @@ fleet_event = {
 					owner = {
 						is_hostile = root.owner
 					}
-					has_component = ge_shippart_time_freeze
+					#has_component = ge_shippart_time_freeze
+					check_modifier_value = { modifier = roz_timefreeze_modifier_tooltip value > 0 }
 				}
 			}
 		}
@@ -346,7 +350,8 @@ fleet_event = {
 					owner = {
 						is_hostile = root.owner
 					}
-					has_component = ge_shippart_time_freeze
+					#has_component = ge_shippart_time_freeze
+					check_modifier_value = { modifier = roz_timefreeze_modifier_tooltip value > 0 }
 				}
 			}
 		}

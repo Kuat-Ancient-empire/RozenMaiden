@@ -227,7 +227,7 @@ country_event = {
     }
 }
 
-###第七块零件 15好感
+###第七块零件 10好感
 country_event = {
     id = roz_shinku_evt.70
     title = "roz_shinku_evt.70.title"
@@ -2803,9 +2803,9 @@ country_event = {
     is_triggered_only = yes
     trigger = {
         has_country_flag = roz_abyss_faction_arrival
-        any_playable_country = {
-            has_country_flag = roz_abyss_vass_country
-        }
+        # any_playable_country = {
+        #     has_country_flag = roz_abyss_vass_country
+        # }
     }
     immediate = {
         #为深渊仆从国刷防御舰队，该舰队所有者为其本身

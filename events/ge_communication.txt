@@ -555,6 +555,7 @@ country_event = {
 				}
 			}
 			NOT = { has_country_flag = ge_sgt_busy }
+			has_country_flag = roz_allow_date_suigintou
 		}
 		#trigger = { has_country_flag = roz_allow_date_suigintou }
 		hidden_effect = {

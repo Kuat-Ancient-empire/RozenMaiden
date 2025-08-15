@@ -5182,7 +5182,8 @@ ge_vn_main_beam_on_hit_effect = {
 	if = {
 		limit = { 
 			from = {
-				has_component = ge_shippart_time_freeze
+				#has_component = ge_shippart_time_freeze
+				check_modifier_value = { modifier = roz_timefreeze_modifier_tooltip value > 0 }
 			}
 		}
 		random_list = {
