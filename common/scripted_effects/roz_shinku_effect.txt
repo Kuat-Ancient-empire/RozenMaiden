@@ -28,8 +28,6 @@ roz_junn_country_create = {
 		establish_communications_no_message = root
 	}
 	event_target:roz_junn_global_country@root = {
-		owner = {
-		}
 	}
 }
 
@@ -1737,17 +1735,17 @@ roz_abyss_vass_create = {
 			clear_variable = farming_districts
 
 			add_zone = {
-				district = mining_districts
+				district = district_mining
 				zone = zone_minerals
 				zone_slot = 1
 			}
 			add_zone = {
-				district = energy_districts
+				district = district_generator
 				zone = zone_energy
 				zone_slot = 1
 			}
 			add_zone = {
-				district = farming_districts
+				district = district_farming
 				zone = zone_food
 				zone_slot = 1
 			}
@@ -1930,10 +1928,18 @@ roz_abyss_vass_select = {
 					NOR = {
 						is_roz_abyss_vass_extra_country_global_target = yes
 						is_country_type = roz_madgod_empire
-						#is_subject = yes
 					}
 					NOT = { root = { is_overlord_to = prev } }
 					NOT = { is_in_federation_with = root }
+				}
+				if = {
+					limit = { has_federation = yes }
+					federation = { every_member = { leave_alliance = { override_requirements = yes } } }
+				}
+				if = { limit = { is_galactic_community_member = yes } remove_from_galactic_community = yes }
+				if = {
+					limit = { is_subject = yes }
+					set_subject_of = { who = none }
 				}
 				set_country_flag = roz_abyss_vass_country
 				set_subject_of = { who = event_target:roz_madgod_force_country@root }
@@ -1955,6 +1961,7 @@ roz_abyss_vass_select = {
 
 roz_abyss_vass_after_select = {
 	optimize_memory
+	rebellion_remove_from_wars = yes
 	every_country = { #齐宣王
 		limit = {
 			#NOT = { is_at_war_with = prev }
@@ -2131,51 +2138,6 @@ roz_abyss_fleet_invision_action_1 = {
 					}
 				}
 			}
-			# find_closest_planet = {
-			# 	trigger = {
-			# 		id = roz_abyss_crisis_fleet_action_standard_trigger.2
-			# 		is_colony = yes
-			# 		space_owner = { is_ai = no }
-			# 	}
-			# 	found_planet = {
-			# 		orbit_planet = THIS
-			# 		wait = {
-			# 			duration = 50
-			# 			random = 25
-			# 		}
-			# 	}
-			# }
-			# find_closest_system = {
-			# 	trigger = {
-			# 		id = roz_abyss_crisis_fleet_action_standard_trigger.3
-			# 		NOT = {
-			# 			space_owner = { NOT = { has_country_flag = roz_abyss_vass_country } }
-			# 		}
-			# 	}
-			# 	found_system = {
-			# 		move_to = this
-			# 		find_closest_planet = {
-			# 			trigger = {
-			# 				id = roz_abyss_crisis_fleet_action_standard_trigger.4
-			# 				is_colony = yes
-			# 				owner = { NOT = { has_country_flag = roz_abyss_vass_country } }
-			# 			}
-			# 			found_planet = {
-			# 				orbit_planet = THIS
-			# 				wait = {
-			# 					duration = 50
-			# 					random = 25
-			# 				}
-			# 				effect = {
-			# 					id = roz_abyss_crisis_fleet_action_standard_trigger.5
-			# 					prevprev = {
-			# 						roz_abyss_fleet_invision_action_2 = yes
-			# 					}
-			# 				}
-			# 			}
-			# 		}
-			# 	}
-			# }
 		}
 	}
 }
@@ -2186,14 +2148,21 @@ roz_abyss_fleet_invision_action_on_entering_system = {
 		repeat = {
 			while = {
 				id = roz_abyss_crisis_fleet_action_standard_trigger.2
-				space_owner = { NOT = { has_country_flag = roz_abyss_vass_country } }
-				solar_system = { any_system_planet = { is_colony = yes } }
+				exists = solar_system
+				solar_system = { 
+					any_system_planet = { 
+						is_colony = yes 
+						exists = controller
+						controller = { is_hostile = prev.owner }
+					} 
+				}
 			}
 			find_closest_planet = {
 				trigger = {
 					id = roz_abyss_crisis_fleet_action_standard_trigger.2
-					space_owner = { NOT = { has_country_flag = roz_abyss_vass_country } }
-					is_colony = yes
+					is_colony = yes 
+					exists = controller
+					controller = { is_hostile = prevprev.owner }
 				}
 				found_planet = {
 					orbit_planet = THIS
@@ -2212,7 +2181,7 @@ roz_abyss_fleet_create_small = {
 	optimize_memory
 	roz_abyss_leader_create = {
 		name = random
-		leader_class = admiral
+		leader_class = commander
 		color = orange
 		trait1 = leader_trait_roz_abyss_leader_1
 		skills = 5
@@ -2261,20 +2230,14 @@ roz_abyss_fleet_create_small = {
 }
 roz_abyss_fleet_create_small_defense_in_diff = {
 	optimize_memory
-	while = {
-		count = event_target:global_event_country.roz_unholy_invasion_difficulty
-		roz_abyss_fleet_create_small = { owner = $owner$ location = $location$ }
-	}
+	roz_abyss_fleet_create_small = { owner = $owner$ location = $location$ }
 }
 roz_abyss_fleet_create_small_attack_in_diff = {
 	optimize_memory
-	while = {
-		count = event_target:global_event_country.roz_unholy_invasion_difficulty
-		roz_abyss_fleet_create_small = { owner = $owner$ location = $location$ }
-		last_created_fleet = {
-			roz_abyss_fleet_invision_action_1 = yes
-			set_fleet_flag = roz_abyss_attack_fleet_small
-		}
+	roz_abyss_fleet_create_small = { owner = $owner$ location = $location$ }
+	last_created_fleet = {
+		roz_abyss_fleet_invision_action_1 = yes
+		set_fleet_flag = roz_abyss_attack_fleet_small
 	}
 }
 
@@ -2283,7 +2246,7 @@ roz_abyss_fleet_create_median = {
 	optimize_memory
 	roz_abyss_leader_create = {
 		name = random
-		leader_class = admiral
+		leader_class = commander
 		color = orange
 		trait1 = leader_trait_roz_abyss_leader_1
 		skills = 5
@@ -2337,21 +2300,14 @@ roz_abyss_fleet_create_median = {
 }
 roz_abyss_fleet_create_median_defense_in_diff = {
 	optimize_memory
-	while = {
-		count = event_target:global_event_country.roz_unholy_invasion_difficulty
-		roz_abyss_fleet_create_median = { owner = $owner$ location = $location$ }
-	}
-
+	roz_abyss_fleet_create_median = { owner = $owner$ location = $location$ }
 }
 roz_abyss_fleet_create_median_attack_in_diff = {
 	optimize_memory
-	while = {
-		count = event_target:global_event_country.roz_unholy_invasion_difficulty
-		roz_abyss_fleet_create_median = { owner = $owner$ location = $location$ }
-		last_created_fleet = {
-			roz_abyss_fleet_invision_action_1 = yes
-			set_fleet_flag = roz_abyss_attack_fleet_median
-		}
+	roz_abyss_fleet_create_median = { owner = $owner$ location = $location$ }
+	last_created_fleet = {
+		roz_abyss_fleet_invision_action_1 = yes
+		set_fleet_flag = roz_abyss_attack_fleet_median
 	}
 }
 
@@ -2360,7 +2316,7 @@ roz_abyss_fleet_create_large = {
 	optimize_memory
 	roz_abyss_leader_create = {
 		name = random
-		leader_class = admiral
+		leader_class = commander
 		color = orange
 		trait1 = leader_trait_roz_abyss_leader_1
 		skills = 7
@@ -2410,21 +2366,14 @@ roz_abyss_fleet_create_large = {
 }
 roz_abyss_fleet_create_large_defense_in_diff = {
 	optimize_memory
-	while = {
-		count = event_target:global_event_country.roz_unholy_invasion_difficulty
-		roz_abyss_fleet_create_large = { owner = $owner$ location = $location$ }
-	}
-
+	roz_abyss_fleet_create_large = { owner = $owner$ location = $location$ }
 }
 roz_abyss_fleet_create_large_attack_in_diff = {
 	optimize_memory
-	while = {
-		count = event_target:global_event_country.roz_unholy_invasion_difficulty
-		roz_abyss_fleet_create_large = { owner = $owner$ location = $location$ }
-		last_created_fleet = {
-			roz_abyss_fleet_invision_action_1 = yes
-			set_fleet_flag = roz_abyss_attack_fleet_large
-		}
+	roz_abyss_fleet_create_large = { owner = $owner$ location = $location$ }
+	last_created_fleet = {
+		roz_abyss_fleet_invision_action_1 = yes
+		set_fleet_flag = roz_abyss_attack_fleet_large
 	}
 }
 
@@ -2434,7 +2383,7 @@ roz_abyss_fleet_create_marvelous = {
 	roz_abyss_leader_create = {
 		name = random
 		skills = 10
-		leader_class = admiral
+		leader_class = commander
 		color = orange
 		trait1 = leader_trait_roz_abyss_leader_1
 	}
@@ -2503,7 +2452,7 @@ roz_abyss_fleet_create_madgod_boss = {
 	optimize_memory
 	roz_abyss_leader_create = {
 		name = NAME_roz_Uranus
-		leader_class = admiral
+		leader_class = commander
 		color = red
 		trait1 = leader_trait_roz_abyss_leader_Uranus
 		skills = 10
@@ -2631,33 +2580,36 @@ roz_abyss_fleet_outpost_create = {
 }
 roz_abyss_fleet_outpost_create_in_diff = {
 	optimize_memory
-	if = {
-		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 1 } } }
-		roz_abyss_fleet_outpost_create = { num = 1 }
-	}
-	if = {
-		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 2 } } }
-		roz_abyss_fleet_outpost_create = { num = 2 }
-	}
-	if = {
-		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 3 } } }
-		roz_abyss_fleet_outpost_create = { num = 3 }
-	}
-	if = {
-		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 4 } } }
-		roz_abyss_fleet_outpost_create = { num = 4 }
-		roz_abyss_fleet_outpost_create = { num = 5 }
-	}
+	roz_abyss_fleet_outpost_create = { num = 1 }
+	roz_abyss_fleet_outpost_create = { num = 2 }
+	roz_abyss_fleet_outpost_create = { num = 3 }
+	roz_abyss_fleet_outpost_create = { num = 4 }
+	roz_abyss_fleet_outpost_create = { num = 5 }
 }
 
 #避免使用遍历，希望这样性能可以好一些
 roz_abyss_madgod_hunter_fleet_create_count_in_diff = {
 	optimize_memory
-	if = {
-		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = $diff$ } } }
-		while = { count = $num3$ roz_abyss_fleet_create_large_attack_in_diff  = { owner = event_target:roz_madgod_force_country@root location = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root } }
-		while = { count = $num2$ roz_abyss_fleet_create_median_attack_in_diff = { owner = event_target:roz_madgod_force_country@root location = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root } }
-		while = { count = $num$ roz_abyss_fleet_create_small_attack_in_diff  = { owner = event_target:roz_madgod_force_country@root location = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root } }
+	while = { 
+		count = $num3$ 
+		roz_abyss_fleet_create_large_attack_in_diff  = { 
+			owner = event_target:roz_madgod_force_country@root 
+			location = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root 
+		} 
+	}
+	while = { 
+		count = $num2$ 
+		roz_abyss_fleet_create_median_attack_in_diff = { 
+			owner = event_target:roz_madgod_force_country@root 
+			location = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root 
+		} 
+	}
+	while = { 
+		count = $num$ 
+		roz_abyss_fleet_create_small_attack_in_diff  = { 
+			owner = event_target:roz_madgod_force_country@root 
+			location = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root 
+		} 
 	}
 }
 
@@ -2666,50 +2618,59 @@ roz_abyss_madgod_hunter_fleet_create_count_in_diff = {
 #深渊疯神 哨站挨个刷舰队
 roz_abyss_madgod_hunter_fleet_create_establish_in_diff = {
 	optimize_memory
-	if = {
-		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 1 } } }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 1 outpost = 1  num = 2 num2 = 1 num3 = 0 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 2 outpost = 1  num = 2 num2 = 1 num3 = 0 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 3 outpost = 1  num = 1 num2 = 1 num3 = 1 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 4 outpost = 1  num = 0 num2 = 1 num3 = 1 }
+	while = {
+		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		random_list = {
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 1 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 0 num2 = 1 num3 = 1 } }
+		}
 	}
-	if = {
-		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 2 } } }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 1 outpost = 2  num = 2 num2 = 1 num3 = 0 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 2 outpost = 2  num = 2 num2 = 1 num3 = 0 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 3 outpost = 2  num = 1 num2 = 1 num3 = 1 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 4 outpost = 2  num = 0 num2 = 1 num3 = 1 }
+	while = {
+		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		random_list = {
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 2  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 2  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 2  num = 1 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 2  num = 0 num2 = 1 num3 = 1 } }
+		}
 	}
-	if = {
-		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 3 } } }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 1 outpost = 3  num = 2 num2 = 1 num3 = 0 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 2 outpost = 3  num = 2 num2 = 1 num3 = 0 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 3 outpost = 3  num = 1 num2 = 1 num3 = 1 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 4 outpost = 3  num = 0 num2 = 1 num3 = 1 }
+	while = {
+		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		random_list = {
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 1 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 0 num2 = 1 num3 = 1 } }
+		}
 	}
-	if = {
-		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 4 } } }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 1 outpost = 4  num = 2 num2 = 1 num3 = 0 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 2 outpost = 4  num = 2 num2 = 1 num3 = 0 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 3 outpost = 4  num = 1 num2 = 1 num3 = 1 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 4 outpost = 4  num = 0 num2 = 1 num3 = 1 }
-
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 1 outpost = 5  num = 2 num2 = 1 num3 = 0 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 2 outpost = 5  num = 2 num2 = 1 num3 = 0 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 3 outpost = 5  num = 1 num2 = 1 num3 = 1 }
-		roz_abyss_madgod_hunter_fleet_create_count_in_diff = { diff = 4 outpost = 5  num = 0 num2 = 1 num3 = 1 }
+	while = {
+		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		random_list = {
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 1 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 0 num2 = 1 num3 = 1 } }
+		}
+	}
+	while = {
+		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		random_list = {
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 1 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 0 num2 = 1 num3 = 1 } }
+		}
 	}
 }
 #执行
 roz_abyss_vass_hunter_fleet_create_count_in_diff = {
 	optimize_memory
-	if = {
-		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = $diff$ } } }
-		every_playable_country = {
-			limit = { has_country_flag = roz_abyss_vass_country }
-			while = { count = $num2$ roz_abyss_fleet_create_median_defense_in_diff = { owner = prevprev location = prevprev.capital_scope } }
-			while = { count = $num$ roz_abyss_fleet_create_small_defense_in_diff  = { owner = prevprev location = prevprev.capital_scope } }
-		}
+	every_playable_country = {
+		limit = { has_country_flag = roz_abyss_vass_country }
+		while = { count = $num2$ roz_abyss_fleet_create_median_defense_in_diff = { owner = prevprev location = prevprev.capital_scope } }
+		while = { count = $num$ roz_abyss_fleet_create_small_defense_in_diff  = { owner = prevprev location = prevprev.capital_scope } }
 	}
 }
 
@@ -2717,10 +2678,10 @@ roz_abyss_vass_hunter_fleet_create_count_in_diff = {
 #深渊仆从刷舰队 5层了，不能再套娃了
 roz_abyss_vass_hunter_fleet_create_establish_in_diff = {
 	optimize_memory
-	roz_abyss_vass_hunter_fleet_create_count_in_diff = { diff = 1 num = 1 num2 = 0 }
-	roz_abyss_vass_hunter_fleet_create_count_in_diff = { diff = 2 num = 1 num2 = 0 }
-	roz_abyss_vass_hunter_fleet_create_count_in_diff = { diff = 3 num = 1 num2 = 0 }
-	roz_abyss_vass_hunter_fleet_create_count_in_diff = { diff = 4 num = 1 num2 = 1 }
+	while = {
+		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		roz_abyss_vass_hunter_fleet_create_count_in_diff = { num = 1 num2 = 0 }
+	}
 }
 
 #scope: country(player)
@@ -2753,19 +2714,19 @@ roz_abyss_hunter_fleet_create_cd_in_diff = {
 		subtract_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 1 }
 		if = {
 			limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 1 } } }
-			set_timed_country_flag = { flag = roz_abyss_hunter_fleet_create_cd years = 4 }
+			set_timed_country_flag = { flag = roz_abyss_hunter_fleet_create_cd years = 5 }
 		}
 		if = {
 			limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 2 } } }
-			set_timed_country_flag = { flag = roz_abyss_hunter_fleet_create_cd years = 3 }
+			set_timed_country_flag = { flag = roz_abyss_hunter_fleet_create_cd years = 4 }
 		}
 		if = {
 			limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 3 } } }
-			set_timed_country_flag = { flag = roz_abyss_hunter_fleet_create_cd years = 2 }
+			set_timed_country_flag = { flag = roz_abyss_hunter_fleet_create_cd years = 3 }
 		}
 		if = {
-			limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 4 } } }
-			set_timed_country_flag = { flag = roz_abyss_hunter_fleet_create_cd years = 1 }
+			limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 4 } } }
+			set_timed_country_flag = { flag = roz_abyss_hunter_fleet_create_cd years = 2 }
 		}
 	}
 }
@@ -2856,7 +2817,7 @@ roz_abyss_ship_is_suppressed_effect = {
 		limit = {
 			check_modifier_value = {
 				modifier = $modifier$
-				value >= 0
+				value > $roz_abyss_var_temp$
 			}
 		}
 		export_modifier_to_variable = {
@@ -2865,38 +2826,59 @@ roz_abyss_ship_is_suppressed_effect = {
 		}
 		change_variable = {
 			which = roz_var_$modifier$
-			value = $roz_abyss_var_temp_1|1$
+			value = $roz_abyss_var_temp$
 		}
 		add_modifier = {
 			modifier = ge_basic_$modifier$
 			mult = roz_var_$modifier$
-			days = 1
-		}
-	}
-	else_if = {
-		limit = {
-			check_modifier_value = {
-				modifier = $modifier$
-				value < 0
-			}
-			check_modifier_value = {
-				modifier = $modifier$
-				value > -1
-			}
-		}
-		add_modifier = {
-			modifier = ge_basic_$modifier$
-			mult = $roz_abyss_var_temp_2|1$
-			days = 1
+			days = 5
 		}
 	}
 }
+roz_abyss_ship_is_protection_effect = {
+	optimize_memory
+	if = {
+		limit = {
+			check_modifier_value = {
+				modifier = $modifier$
+				value < $roz_abyss_var_temp$
+			}
+		}
+		export_modifier_to_variable = {
+			modifier = $modifier$
+			variable = roz_var_$modifier$
+		}
+		subtract_variable = {
+			which = roz_var_$modifier$
+			value = $roz_abyss_var_temp$
+		}
+		add_modifier = {
+			modifier = ge_basic_$modifier$
+			mult = roz_var_$modifier$
+			days = 5
+		}
+	}
+}
+
+#动态修正系统必须分离
 roz_abyss_fleet_suppress_modifier_effect = {
 	optimize_memory
-	from = {
-		every_owned_ship = {
-			roz_abyss_ship_is_suppressed_effect = { modifier = $modifier$ roz_abyss_var_temp_1 = $roz_abyss_var_temp_1$ roz_abyss_var_temp_2 = $roz_abyss_var_temp_2$ }
-			ship_event = { id = roz_shinku_evt.589 days = 1 }
+	every_owned_ship = {
+		limit = { is_in_combat = yes }
+		roz_abyss_ship_is_suppressed_effect = { 
+			modifier = $modifier$ 
+			roz_abyss_var_temp = $roz_abyss_var_temp|0$ 
+		}
+	}
+}
+
+roz_abyss_fleet_protection_modifier_effect = {
+	optimize_memory
+	every_owned_ship = {
+		limit = { is_in_combat = yes }
+		roz_abyss_ship_is_protection_effect = { 
+			modifier = $modifier$ 
+			roz_abyss_var_temp = $roz_abyss_var_temp|0$ 
 		}
 	}
 }
@@ -2943,22 +2925,22 @@ roz_trait_hollye_official_resource_effect = {
 	add_monthly_resource_mult = {
 		resource = consumer_goods
 		value = 1
-		mult = 1.5
+		mult = 2
 	}
 	add_monthly_resource_mult = {
 		resource = alloys
 		value = 1
-		mult = 1
+		mult = 2
 	}
 	add_monthly_resource_mult = {
 		resource = sr_void_core
 		value = 1
-		mult = 1
+		mult = 2
 	}
 	add_monthly_resource_mult = {
 		resource = sr_rosa_mystica
 		value = 1
-		mult = 1
+		mult = 2
 	}
 }
 
@@ -2973,7 +2955,7 @@ roz_abyss_fleet_outpost_remove_effect = {
 				NOT = { has_star_flag = roz_abyss_fleet_outpost_system_disable_@root }
 			}
 		}
-		event_target:roz_abyss_fleet_outpost_target_$outpost$_@root = { clear_global_event_target = yes }
+		clear_global_event_target = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root
 		solar_system = {
 			remove_star_flag = roz_abyss_fleet_outpost_system
 			set_star_flag = roz_abyss_fleet_outpost_system_disable_@root
@@ -2998,7 +2980,7 @@ roz_abyss_fleet_outpost_remove_effect_monthly = {
 				NOT = { any_fleet_in_system = { has_fleet_flag = roz_abyss_fleet_marvelous } }
 				NOT = { has_star_flag = roz_abyss_fleet_outpost_system_disable_@root }
 			}
-			event_target:roz_abyss_fleet_outpost_target_$outpost$_@root = { clear_global_event_target = yes }
+			clear_global_event_target = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root
 			solar_system = { remove_star_flag = roz_abyss_fleet_outpost_system }
 			set_star_flag = roz_abyss_fleet_outpost_system_disable_@root
 			root = { country_event = { id = roz_shinku_evt.570 } }

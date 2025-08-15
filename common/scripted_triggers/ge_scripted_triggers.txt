@@ -282,6 +282,8 @@ roz_is_regular_authority = {
 		has_authority = auth_machine_intelligence
 		has_authority = auth_corporate
 	}
+	is_galactic_custodian = no
+	is_galactic_emperor = no
 }
 
 #或许是本mod消耗最高的检测了
@@ -300,8 +302,9 @@ roz_is_all_abyss_killed_except_madgod_system = {
 #scope (planet)
 roz_planet_can_bombed_by_abyss_crisis = {
 	optimize_memory
-	is_colony = yes
-	space_owner = { NOT = { has_country_flag = roz_abyss_vass_country } }
+	is_colony = yes 
+	exists = controller
+	controller = { is_hostile = prevprevprev.owner }
 }
 
 #scope (fleet)
