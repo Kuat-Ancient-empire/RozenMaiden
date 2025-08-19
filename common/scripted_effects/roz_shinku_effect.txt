@@ -646,7 +646,7 @@ roz_shinku_leader_type_switch_scientist = {
 		}
 		remove_country_flag = roz_shinku_commander_active
 		#缓存国家目标领袖更新替换
-		event_target:roz_shinku_commander_inactive_temp@root = { 
+		event_target:roz_shinku_commander_inactive_temp@root = {
 		kill_leader = {
 				show_notification = no
 			}
@@ -656,7 +656,7 @@ roz_shinku_leader_type_switch_scientist = {
 			#event_target:roz_shinku_global_country是真红的缓存国家
 			#target = event_target:roz_leader_shinku_global_target@root #这个global target是玩家的真红
 			##clone leader的effect有时不会继承领袖的leader flag和variable（变量完全不能继承），自定义背景也没有，最好补上
-			target = event_target:roz_leader_shinku_global_target@root   
+			target = event_target:roz_leader_shinku_global_target@root
 			effect = {
 				save_global_event_target_as = roz_shinku_commander_inactive_temp@root
 				roz_leader_pending_negative_traits_unmodified_count = yes
@@ -687,7 +687,7 @@ roz_shinku_leader_type_switch_scientist = {
 			symbolic_trait_2 = leader_trait_roz_shinku_hollye
 			symbolic_trait_3 = leader_trait_roz
 		}
-		
+
 		roz_leader_initialize_after_create_effect = {
 			leader = shinku
 			leader_sc = zhenhong
@@ -744,7 +744,7 @@ roz_shinku_leader_type_switch_scientist = {
 			symbolic_trait_2 = leader_trait_roz_shinku_hollye
 			symbolic_trait_3 = leader_trait_roz
 		}
-		
+
 		roz_leader_initialize_after_create_effect = {
 			leader = shinku
 			leader_sc = zhenhong
@@ -765,7 +765,7 @@ roz_shinku_leader_type_switch_commander = {
 		}
 		remove_country_flag = roz_shinku_scientist_active
 		#缓存国家目标领袖更新替换
-		event_target:roz_shinku_scientist_inactive_temp@root = { 
+		event_target:roz_shinku_scientist_inactive_temp@root = {
 		kill_leader = {
 				show_notification = no
 			}
@@ -774,7 +774,7 @@ roz_shinku_leader_type_switch_commander = {
 		clone_leader = {
 			#event_target:roz_shinku_global_country是真红的缓存国家
 			#target = event_target:roz_leader_shinku_global_target@root #这个global target是玩家的真红
-			target = event_target:roz_leader_shinku_global_target@root   
+			target = event_target:roz_leader_shinku_global_target@root
 			effect = {
 				save_global_event_target_as = roz_shinku_scientist_inactive_temp@root
 				roz_leader_pending_negative_traits_unmodified_count = yes
@@ -805,7 +805,7 @@ roz_shinku_leader_type_switch_commander = {
 			symbolic_trait_2 = leader_trait_roz_shinku_hollye
 			symbolic_trait_3 = leader_trait_roz
 		}
-		
+
 		roz_leader_initialize_after_create_effect = {
 			leader = shinku
 			leader_sc = zhenhong
@@ -813,7 +813,7 @@ roz_shinku_leader_type_switch_commander = {
 		}
 
 		last_created_leader = {
-			
+
 		}
 	}
 
@@ -866,7 +866,7 @@ roz_shinku_leader_type_switch_commander = {
 			symbolic_trait_2 = leader_trait_roz_shinku_hollye
 			symbolic_trait_3 = leader_trait_roz
 		}
-		
+
 		roz_leader_initialize_after_create_effect = {
 			leader = shinku
 			leader_sc = zhenhong
@@ -874,7 +874,7 @@ roz_shinku_leader_type_switch_commander = {
 		}
 
 		last_created_leader = {
-			
+
 		}
 	}
 }
@@ -891,7 +891,7 @@ roz_shinku_leader_type_switch_official = {
 		}
 		remove_country_flag = roz_shinku_scientist_active
 		#缓存国家目标领袖更新替换
-		event_target:roz_shinku_scientist_inactive_temp@root = { 
+		event_target:roz_shinku_scientist_inactive_temp@root = {
 		kill_leader = {
 				show_notification = no
 			}
@@ -900,7 +900,7 @@ roz_shinku_leader_type_switch_official = {
 		clone_leader = {
 			#event_target:roz_shinku_global_country是真红的缓存国家
 			#target = event_target:roz_leader_shinku_global_target@root #这个global target是玩家的真红
-			target = event_target:roz_leader_shinku_global_target@root   
+			target = event_target:roz_leader_shinku_global_target@root
 			effect = {
 				save_global_event_target_as = roz_shinku_scientist_inactive_temp@root
 				roz_leader_pending_negative_traits_unmodified_count = yes
@@ -931,7 +931,7 @@ roz_shinku_leader_type_switch_official = {
 			symbolic_trait_2 = leader_trait_roz_shinku_hollye
 			symbolic_trait_3 = leader_trait_roz
 		}
-		
+
 		roz_leader_initialize_after_create_effect = {
 			leader = shinku
 			leader_sc = zhenhong
@@ -987,7 +987,7 @@ roz_shinku_leader_type_switch_official = {
 			symbolic_trait_2 = leader_trait_roz_shinku_hollye
 			symbolic_trait_3 = leader_trait_roz
 		}
-		
+
 		roz_leader_initialize_after_create_effect = {
 			leader = shinku
 			leader_sc = zhenhong
@@ -1101,7 +1101,7 @@ roz_leader_change_skin_reset_effect = {	#scope = country
                 portrait_key = roz_$leader$_$skin_index1$
                 leader_flag = roz_$leader$_flag
             }
-        }    
+        }
 		roz_$leader$_portrait_change_roz_$leader$_$skin_index2$ = {
             roz_leader_change_skin_flag_locate_effect = {
                 who = $leader$
@@ -1191,7 +1191,7 @@ roz_leader_change_skin_reset_effect = {	#scope = country
                 portrait_key = roz_$leader$_$skin_index11$
                 leader_flag = roz_$leader$_flag
             }
-        }    
+        }
 		roz_$leader$_portrait_change_roz_$leader$_$skin_index12$ = {
             roz_leader_change_skin_flag_locate_effect = {
                 who = $leader$
@@ -2017,6 +2017,74 @@ roz_abyss_vass_select_diff = {
 	roz_abyss_vass_after_select = yes
 }
 
+###深渊仆从国合并
+roz_abyss_vass_integrated = {
+	optimize_memory
+	create_species = {
+		name_list = roz_abyss_faction
+		name = random
+		class = random_non_machine
+		portrait = random
+		traits = {
+			ideal_planet_class = pc_habitat
+			trait = random_traits
+		}
+	}
+	create_country = {
+		name_list = roz_abyss_faction
+		name = NAME_abyss_vass_country_integrated
+		type = roz_abyss_vass_integrated
+		ignore_initial_colony_error = yes
+		authority = auth_hive_mind
+		civics = {
+			civic = civic_ancient_memories_of_control
+		}
+		origin = origin_roz_abyss_vass
+		species = last_created_species
+		flag = {
+			icon = {
+				category = "roz_special"
+				file = "roz_madgod.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "vertical.dds"
+			}
+			colors = {
+				"red"
+				"red"
+				"null"
+				"null"
+			}
+		}
+		ethos = {
+			ethic = ethic_gestalt_consciousness
+		}
+		effect = {  }
+	}
+	last_created_country = {
+		set_country_flag = roz_abyss_vass_integrated
+		set_country_flag = roz_abyss_vass_country
+		set_graphical_culture = extra_dimensional_02
+		save_global_event_target_as = roz_abyss_vass_integrated@root
+		set_hostile = root
+		every_country = {
+			limit = {
+				NOR = {
+					has_country_flag = roz_abyss_vass_country
+					is_country_type = roz_madgod_empire
+				}
+			}
+			set_hostile = prev
+		}
+		establish_communications_no_message = root
+	}
+	every_country = {
+		limit = { has_country_flag = roz_abyss_vass_country }
+	}
+}
+
+###基础刷船effect
 roz_abyss_ship_random_create = {
 	optimize_memory
 	while = {
@@ -2149,18 +2217,18 @@ roz_abyss_fleet_invision_action_on_entering_system = {
 			while = {
 				id = roz_abyss_crisis_fleet_action_standard_trigger.2
 				exists = solar_system
-				solar_system = { 
-					any_system_planet = { 
-						is_colony = yes 
+				solar_system = {
+					any_system_planet = {
+						is_colony = yes
 						exists = controller
 						controller = { is_hostile = prev.owner }
-					} 
+					}
 				}
 			}
 			find_closest_planet = {
 				trigger = {
 					id = roz_abyss_crisis_fleet_action_standard_trigger.2
-					is_colony = yes 
+					is_colony = yes
 					exists = controller
 					controller = { is_hostile = prevprev.owner }
 				}
@@ -2590,26 +2658,26 @@ roz_abyss_fleet_outpost_create_in_diff = {
 #避免使用遍历，希望这样性能可以好一些
 roz_abyss_madgod_hunter_fleet_create_count_in_diff = {
 	optimize_memory
-	while = { 
-		count = $num3$ 
-		roz_abyss_fleet_create_large_attack_in_diff  = { 
-			owner = event_target:roz_madgod_force_country@root 
-			location = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root 
-		} 
+	while = {
+		count = $num3$
+		roz_abyss_fleet_create_large_attack_in_diff  = {
+			owner = event_target:roz_madgod_force_country@root
+			location = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root
+		}
 	}
-	while = { 
-		count = $num2$ 
-		roz_abyss_fleet_create_median_attack_in_diff = { 
-			owner = event_target:roz_madgod_force_country@root 
-			location = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root 
-		} 
+	while = {
+		count = $num2$
+		roz_abyss_fleet_create_median_attack_in_diff = {
+			owner = event_target:roz_madgod_force_country@root
+			location = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root
+		}
 	}
-	while = { 
-		count = $num$ 
-		roz_abyss_fleet_create_small_attack_in_diff  = { 
-			owner = event_target:roz_madgod_force_country@root 
-			location = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root 
-		} 
+	while = {
+		count = $num$
+		roz_abyss_fleet_create_small_attack_in_diff  = {
+			owner = event_target:roz_madgod_force_country@root
+			location = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root
+		}
 	}
 }
 
@@ -2865,9 +2933,9 @@ roz_abyss_fleet_suppress_modifier_effect = {
 	optimize_memory
 	every_owned_ship = {
 		limit = { is_in_combat = yes }
-		roz_abyss_ship_is_suppressed_effect = { 
-			modifier = $modifier$ 
-			roz_abyss_var_temp = $roz_abyss_var_temp|0$ 
+		roz_abyss_ship_is_suppressed_effect = {
+			modifier = $modifier$
+			roz_abyss_var_temp = $roz_abyss_var_temp|0$
 		}
 	}
 }
@@ -2876,9 +2944,9 @@ roz_abyss_fleet_protection_modifier_effect = {
 	optimize_memory
 	every_owned_ship = {
 		limit = { is_in_combat = yes }
-		roz_abyss_ship_is_protection_effect = { 
-			modifier = $modifier$ 
-			roz_abyss_var_temp = $roz_abyss_var_temp|0$ 
+		roz_abyss_ship_is_protection_effect = {
+			modifier = $modifier$
+			roz_abyss_var_temp = $roz_abyss_var_temp|0$
 		}
 	}
 }

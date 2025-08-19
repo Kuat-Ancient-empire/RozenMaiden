@@ -1984,7 +1984,8 @@ roz_outland_planet_change = {
 }
 
 roz_teaparty_random_modifier_list = {
-	random_list = {
+	optimize_memory
+	locked_random_list = {
 		1 = {
 			add_modifier = {
 				modifier = roz_tp_random_modifier_1

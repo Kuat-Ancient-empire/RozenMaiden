@@ -97,6 +97,7 @@ country_event = {
         NOT = { has_country_flag = roz_psionic_available }
         NOT = { has_active_event = { roz_shinku_evt.1 roz_shinku_evt.2 } }
         OR = {
+            has_country_flag = roz_kirakishou_get
             has_technology = tech_psionic_theory
             is_active_resolution = resolution_galacticstudies_extradimensional_experimentation
             has_relic = r_zro_crystal
@@ -238,7 +239,7 @@ country_event = {
     trigger = {
         has_country_flag = roz_leader_suigintou_get
         has_country_flag = roz_shinku_story_start_flag
-        check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 15 }
+        check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 10 }
         NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol7_get }
     }
     immediate = { set_country_flag = ge_sgt_busy }
@@ -2470,7 +2471,7 @@ country_event = {
             sign = "="
             opinion = neutral
         }
-        
+
         #开始对比
         if = {  #各持己见，中立
             limit = {
@@ -2600,6 +2601,12 @@ country_event = {
         custom_tooltip = roz_shinku_evt.525.ct
     }
     after = {
+        custom_tooltip = roz_shinku_evt.525.abyss_vass
+        country_list_tooltip = {
+            limit = {
+                has_country_flag = roz_abyss_vass_country
+            }
+        }
         hidden_effect = {
             #begin_event_chain = { event_chain = roz_SK_madgod_invasion_main }
             ###清除临时数据
@@ -2738,6 +2745,44 @@ country_event = {
     }
 }
 
+###深渊国家外交界面
+country_event = {
+    id = roz_shinku_evt.5300
+    title = roz_shinku_evt.5300.title
+    desc = roz_shinku_evt.5300.desc
+    is_triggered_only = yes
+    picture = GFX_evt_roz_madgod_system
+    show_sound = event_galactic_community
+    trigger = {
+        is_ai = no
+        from = {
+            is_same_value = event_target:roz_madgod_force_country@root
+            is_country_type = roz_madgod_empire
+        }
+        NOT = { has_country_flag = ge_nfield_diplomacy_activated }
+    }
+    immediate = {
+        set_country_flag = ge_nfield_diplomacy_activated
+    }
+    option = {
+        name =  roz_shinku_evt.5300.aa
+        is_dialog_only = yes
+        response_text = roz_shinku_evt.5300.aa.res
+        add_resource = { unity = -10 }
+    }
+    option = {
+        name =  roz_shinku_evt.5300.bb
+        is_dialog_only = yes
+        response_text = roz_shinku_evt.5300.bb.res
+        add_resource = { unity = -10 }
+    }
+    option = {
+        name =  roz_shinku_evt.5300.cc
+        default_hide_option = yes
+        response_text = roz_shinku_evt.5300.cc.res
+    }
+}
+
 ###深渊阵营击杀计数
 # Abyss Victims
 country_event = {
@@ -2838,9 +2883,9 @@ country_event = {
         #刷boss
         event_target:roz_madgod_force_country@root = {
             #防御舰队
-            roz_abyss_fleet_create_large_defense_in_diff = { 
-                owner = prevprev 
-                location = event_target:roz_outland_planet@root 
+            roz_abyss_fleet_create_large_defense_in_diff = {
+                owner = prevprev
+                location = event_target:roz_outland_planet@root
             }
             roz_abyss_fleet_create_marvelous_defense_in_diff = yes
             #进攻舰队
@@ -2967,7 +3012,7 @@ country_event = {
         is_ai = no
     }
     immediate = {
-        
+
     }
     option = {
         name = roz_shinku_evt.551.aa
@@ -3041,7 +3086,7 @@ country_event = {
         }
     }
     immediate = {
-        
+
     }
     option = {
         name = roz_shinku_evt.560.aa
@@ -3107,9 +3152,9 @@ country_event = {
     immediate = {
         random_list = {
             1 = {
-                modifier = { 
+                modifier = {
                     mult = value:ge_roz_unholy_invasion_difficulty_fleet_var
-                    event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 1 } } 
+                    event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value >= 1 } }
                 }
                 country_event = { id = roz_shinku_evt.5631 }
             }
@@ -3172,7 +3217,7 @@ country_event = {
         NOT = { has_country_flag = roz_abyss_hunter_fleet_create_dont_remind }
     }
     immediate = {
-        
+
     }
     option = {
         name = roz_shinku_evt.565.aa
