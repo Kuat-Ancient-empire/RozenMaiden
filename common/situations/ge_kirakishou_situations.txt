@@ -515,6 +515,7 @@ kirakishou_planet_invasion_situation = {
 				planet_jobs_produces_mult = -0.20
 			}
 			modifier = {
+				planet_stability_add = -10
 				country_energy_produces_mult = -0.1
 				planet_jobs_trade_produces_mult = -0.3
 			}
@@ -522,10 +523,6 @@ kirakishou_planet_invasion_situation = {
 				situation_event = {
 					id = ge_event.20303
 				}
-			}
-			#Effect for the first time this stage fires
-			modifier = {
-				planet_stability_add = -10
 			}
 			#as standard (applies only during this Stage)
 			custom_tooltip = stage_ct_kr_before_the_storm			#this will print in the stage tooltip (on_first_enter will not, because spoilers; modifiers will)

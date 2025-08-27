@@ -287,10 +287,6 @@ roz_mega_information_remodeler_effect = {
             }
         }
     }
-
-    country_modifier = {
-
-    }
 }
 
 roz_mega_information_remodeler_destoryed = {

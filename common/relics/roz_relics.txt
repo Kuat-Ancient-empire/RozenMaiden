@@ -855,14 +855,10 @@ r_roz_Chronos_Label = {
                                         has_owner = yes
                                     }
                                 }
-                                while = {
-                                    count = 4
-                                    random_owned_pop = { kill_pop = yes }
-                                }
                                 every_owned_pop_group = {
                                     kill_pop_group = {
                                         pop_group = this
-                                        amount = 15%
+                                        percentage = 0.15
                                     }
                                 }
                                 add_modifier = {
