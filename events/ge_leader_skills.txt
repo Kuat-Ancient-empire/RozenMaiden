@@ -985,7 +985,7 @@ ship_event = {
 	}
 }
 
-country_event = {
+ship_event = {
 	id = ge_skills.32
 	hide_window = yes
 	is_triggered_only = yes

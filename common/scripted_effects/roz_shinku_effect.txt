@@ -1562,6 +1562,18 @@ roz_remove_shinkureilc_effect = {	#special project没有scope导致的
 	}
 }
 
+#提前完成其他九个（没有多大意义就是了）
+roz_shoujonotsukurikata_project_early_complete_without_vol10 = {
+	optimize_memory
+	if = {
+		limit = {
+			check_variable = { which = roz_shinku_progress_count value = 9 }
+			NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol10_get }
+		}
+		country_event = { id = roz_shinku_evt.104 days = 15 random = 15 }
+	}
+}
+
 roz_shoujonotsukurikata_project_common_effect = {
 	optimize_memory
 	if = {

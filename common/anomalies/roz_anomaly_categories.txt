@@ -56,30 +56,30 @@ roz_destroyed_planet_anomaly = { #不明灵能源
 	null_spawn_chance = 0
 	max_once = yes
 	spawn_chance = {
-		base = 0
-		modifier = {
-			add = 2
-			from = {
-				leader = {
-					has_leader_flag = roz_suigintou_flag
-				}
-			}
-			from.owner = {
-				NOT = {
-					has_country_flag = roz_destroyed_planet_anomaly_flag
-				}
-			}
-			Root = {
-				OR = {
-					is_planet_class = pc_barren
-					is_planet_class = pc_barren_cold
-					is_planet_class = pc_broken
-					is_planet_class = pc_toxic
-					is_planet_class = pc_frozen
-					is_planet_class = pc_molten
-				}
-			}
-		}
+		base = 0.5
+		# modifier = {
+		# 	add = 2
+		# 	from = {
+		# 		leader = {
+		# 			has_leader_flag = roz_suigintou_flag
+		# 		}
+		# 	}
+		# 	from.owner = {
+		# 		NOT = {
+		# 			has_country_flag = roz_destroyed_planet_anomaly_flag
+		# 		}
+		# 	}
+		# 	Root = {
+		# 		OR = {
+		# 			is_planet_class = pc_barren
+		# 			is_planet_class = pc_barren_cold
+		# 			is_planet_class = pc_broken
+		# 			is_planet_class = pc_toxic
+		# 			is_planet_class = pc_frozen
+		# 			is_planet_class = pc_molten
+		# 		}
+		# 	}
+		# }
 		modifier = {
 			add = 40
 			from.owner = {

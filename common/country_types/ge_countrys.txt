@@ -25,37 +25,38 @@ ge_N_Field = {
 }
 
 
-#友方国家
-ROZ_friendly = {
-	show_in_contacts_list = no
-	share_communications = yes
-	default_ships = no
-	government = no
-	custom_opinion = yes
-	uses_origins = no
-	share_survey_data = yes
-	needs_survey = no
-	observable = yes
-	#has_deficits = no
-	custom_diplomacy = yes
-	ai = {
-		enabled = no
-	}
-	faction = {
-		hostile = no
-		needs_border_access = no
-		generate_borders = no
-		needs_colony = no
-		auto_delete = no
-	}
-	modules = {
-		exclusive_diplomacy_module = {
-			contact_rule = on_action_only
-		}
-		basic_technology_module = {}
-		standard_event_module = {}
-	}
-}
+#友方国家 友军就不合并吧，开发压力也大
+# ROZ_friendly = {
+# 	show_in_contacts_list = no
+# 	share_communications = yes
+# 	default_ships = no
+# 	government = no
+# 	custom_opinion = yes
+# 	uses_origins = no
+# 	share_survey_data = yes
+# 	needs_survey = no
+# 	observable = yes
+# 	#has_deficits = no
+# 	ignore_ftl_inhibitors = yes
+# 	custom_diplomacy = yes
+# 	ai = {
+# 		enabled = no
+# 	}
+# 	faction = {
+# 		hostile = no
+# 		needs_border_access = no
+# 		generate_borders = no
+# 		needs_colony = no
+# 		auto_delete = no
+# 	}
+# 	modules = {
+# 		exclusive_diplomacy_module = {
+# 			contact_rule = on_action_only
+# 		}
+# 		basic_technology_module = {}
+# 		standard_event_module = {}
+# 	}
+# }
 
 roz_madgod_empire = {
 	attack_unarmed_orbital_stations = yes
@@ -71,6 +72,7 @@ roz_madgod_empire = {
 	custom_starbase = starbase_exd
 	observable = yes
 	uses_origins = no
+	ignore_ftl_inhibitors = yes
 	government = no
 	ai = {
 		# enabled = yes
@@ -108,6 +110,7 @@ roz_abyss_vass_integrated = {
 	destroys_starbases = yes
 	needs_survey = no
 	has_complete_sensor = yes
+	ignore_ftl_inhibitors = yes
 	can_planets_be_attacked = no
 	#has_capital = no
 	enforces_borders = no

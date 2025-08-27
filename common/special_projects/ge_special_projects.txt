@@ -746,6 +746,7 @@ special_project = {		####
 			subtract_variable = { which = roz_shuukan_project_start value = 1 }
 			set_country_flag = roz_shoujonotsukurikata_project_2_complete
 			change_variable = { which = roz_shinku_progress_count value = 1 }
+			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
@@ -771,6 +772,7 @@ special_project = {		####
 			subtract_variable = { which = roz_shuukan_project_start value = 1 }
 			set_country_flag = roz_shoujonotsukurikata_project_3_complete
 			change_variable = { which = roz_shinku_progress_count value = 1 }
+			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
@@ -796,6 +798,7 @@ special_project = {		####
 			subtract_variable = { which = roz_shuukan_project_start value = 1 }
 			set_country_flag = roz_shoujonotsukurikata_project_4_complete
 			change_variable = { which = roz_shinku_progress_count value = 1 }
+			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
@@ -821,6 +824,7 @@ special_project = {		####
 			subtract_variable = { which = roz_shuukan_project_start value = 1 }
 			set_country_flag = roz_shoujonotsukurikata_project_5_complete
 			change_variable = { which = roz_shinku_progress_count value = 1 }
+			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
@@ -846,6 +850,7 @@ special_project = {		####
 			subtract_variable = { which = roz_shuukan_project_start value = 1 }
 			set_country_flag = roz_shoujonotsukurikata_project_6_complete
 			change_variable = { which = roz_shinku_progress_count value = 1 }
+			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
@@ -871,6 +876,7 @@ special_project = {		####
 			subtract_variable = { which = roz_shuukan_project_start value = 1 }
 			set_country_flag = roz_shoujonotsukurikata_project_7_complete
 			change_variable = { which = roz_shinku_progress_count value = 1 }
+			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
@@ -896,6 +902,7 @@ special_project = {		####
 			subtract_variable = { which = roz_shuukan_project_start value = 1 }
 			set_country_flag = roz_shoujonotsukurikata_project_8_complete
 			change_variable = { which = roz_shinku_progress_count value = 1 }
+			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
@@ -921,6 +928,7 @@ special_project = {		####
 			subtract_variable = { which = roz_shuukan_project_start value = 1 }
 			set_country_flag = roz_shoujonotsukurikata_project_9_complete
 			change_variable = { which = roz_shinku_progress_count value = 1 }
+			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
@@ -946,6 +954,7 @@ special_project = {		####
 			subtract_variable = { which = roz_shuukan_project_start value = 1 }
 			set_country_flag = roz_shoujonotsukurikata_project_10_complete
 			change_variable = { which = roz_shinku_progress_count value = 1 }
+			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}

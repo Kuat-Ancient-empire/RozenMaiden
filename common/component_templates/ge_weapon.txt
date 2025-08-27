@@ -241,9 +241,7 @@ weapon_component_template = {
 
 	on_hit = {
 		custom_tooltip = "ge_xl_beam_on_hit_s_tt"
-		hidden_effect = {
-			ge_xl_beam_on_hit_effect = yes
-		}
+		hidden_effect = { ge_xl_beam_on_hit_effect = yes }
 	}
 
 	power = -3000

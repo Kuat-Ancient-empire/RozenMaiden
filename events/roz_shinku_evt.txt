@@ -479,7 +479,7 @@ country_event = {
     id = roz_shinku_evt.100
     hide_window = yes
     is_triggered_only = yes
-    trigger = { always = yes }
+    trigger = { NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol10_get } }
     immediate = {
         if = {
             limit = { has_country_flag = roz_shinku_story_start_flag }
@@ -526,6 +526,32 @@ country_event = {
     option = {
         name = roz_shinku_evt.100.bb
         custom_tooltip = roz_shinku_evt.100.bb.ct
+    }
+    after = {
+        add_relic = roz_shuukan_shoujonotsukurikata_vol10
+        enable_special_project = { name = roz_shoujonotsukurikata_project_10 owner = root }
+    }
+}
+
+country_event = {
+    id = roz_shinku_evt.104
+    title = "roz_shinku_evt.104.title"
+    desc = "roz_shinku_evt.104.desc"
+    picture = GFX_roz_evt_lpls_letter
+    is_triggered_only = yes
+    show_sound = research_click_01
+    trigger = {
+        has_country_flag = roz_shinku_story_start_flag
+        NOT = { has_active_event = { roz_shinku_evt.1 roz_shinku_evt.2 } }
+    }
+    immediate = { set_country_flag = roz_shuukan_shoujonotsukurikata_vol10_get }
+    option = {
+        name = roz_shinku_evt.104.aa
+        custom_tooltip = roz_shinku_evt.104.aa.ct
+    }
+    option = {
+        name = roz_shinku_evt.104.bb
+        custom_tooltip = roz_shinku_evt.104.bb.ct
     }
     after = {
         add_relic = roz_shuukan_shoujonotsukurikata_vol10
