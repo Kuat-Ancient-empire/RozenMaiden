@@ -113,6 +113,7 @@ NAME_roz_lgate_starbase:0 "银河极点"
 
 ####name list
 ####abyss faction
+ name_list_roz_abyss_faction: "$roz_abyss_faction$"
  #fleet
  roz_abyss_faction: "§_深渊阵营§!"
  roz_abyss_faction_fleet_Deep_Ones_Wrath: "§_深潜者之怒§!"
