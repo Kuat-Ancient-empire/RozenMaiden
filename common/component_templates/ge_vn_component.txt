@@ -35,7 +35,8 @@ weapon_component_template = {
 	accuracy = 1.0
 	tracking = 1.0
 
-	ship_modifier = {
+	triggered_ship_modifier = {
+		potential = { is_in_combat = yes }
 		component_lifesteal_add = 1
 	}
 	on_hit = {

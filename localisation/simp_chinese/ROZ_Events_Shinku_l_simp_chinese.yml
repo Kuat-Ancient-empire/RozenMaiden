@@ -610,42 +610,42 @@ roz_shinku_evt.566.aa: "组织反击"
 
 #boss战局势阶段事件
 #1转2
-roz_shinku_evt.610.title: "深渊感染体入侵：$roz_SK_4_madgod_invasion_placard_stage_minus_one$"
+roz_shinku_evt.610.title: "深渊感染体入侵：$roz_sk_4_madgod_invasion_placard_stage_minus_one$"
 roz_shinku_evt.610.desc: "即便在此艰难时节，我方的军事力量仍然顶着深渊侵蚀取得了重大胜利，一度迫近到家门口的深渊感染已经受到部分遏制，情况总算没有跌落至最坏的地步。"
 roz_shinku_evt.610.aa: "雄关漫道真如铁，而今迈步从头越"
 
 #2转3
-roz_shinku_evt.611.title: "深渊感染体入侵：$roz_SK_4_madgod_invasion_placard_stage_mid$"
+roz_shinku_evt.611.title: "深渊感染体入侵：$roz_sk_4_madgod_invasion_placard_stage_mid$"
 roz_shinku_evt.611.desc: "好消息！经过一系列努力，曾经有所蔓延的深渊感染逐渐被收拢到可控的局面，我们追平了深渊感染体所拥有的优势，现在正是乘胜追击的好时候！"
 roz_shinku_evt.611.aa: "好！再加把劲！"
 
 #3转4
-roz_shinku_evt.612.title: "深渊感染体入侵：$roz_SK_4_madgod_invasion_placard_stage_one$"
+roz_shinku_evt.612.title: "深渊感染体入侵：$roz_sk_4_madgod_invasion_placard_stage_one$"
 roz_shinku_evt.612.desc: "内外多条战线上的努力收获了理所当然的成果，咄咄逼人的深渊入侵暴露出了它的弱点，只要我们保持攻势，就一定能找到深渊感染体的破绽。"
 roz_shinku_evt.612.aa: "优势在我"
 
 #4转5
-roz_shinku_evt.613.title: "深渊感染体入侵：$roz_SK_4_madgod_invasion_placard_stage_two$"
+roz_shinku_evt.613.title: "深渊感染体入侵：$roz_sk_4_madgod_invasion_placard_stage_two$"
 roz_shinku_evt.613.desc: "在我们凶猛攻势的反复蹂躏下，深渊入侵的野火已经渐渐熄灭，那个乌拉诺斯的本体日渐虚弱，决定性一击的时刻很快就要到了。"
 roz_shinku_evt.613.aa: "我军畅通无阻!"
 
 #5转4
-roz_shinku_evt.614.title: "深渊感染体入侵：$roz_SK_4_madgod_invasion_placard_stage_one$"
+roz_shinku_evt.614.title: "深渊感染体入侵：$roz_sk_4_madgod_invasion_placard_stage_one$"
 roz_shinku_evt.614.desc: "糟糕的消息，被胜利冲昏头脑的我们反倒让深渊势力抓到了薄弱环节，战线不得不有所收缩。但胜利的天平仍然朝我方倾斜，我们还有弥补错误的机会和实力。"
 roz_shinku_evt.614.aa: "会赢的"
 
 #4转3
-roz_shinku_evt.615.title: "深渊感染体入侵：$roz_SK_4_madgod_invasion_placard_stage_mid$"
+roz_shinku_evt.615.title: "深渊感染体入侵：$roz_sk_4_madgod_invasion_placard_stage_mid$"
 roz_shinku_evt.615.desc: "看来深渊感染体留存的实力还是要大于我们的预估，先前的胜利推进受到了阻挠，丧失小优的我们又和乌拉诺斯回到了同一起跑线上。无须气馁，我们还有机会。"
 roz_shinku_evt.615.aa: "事情又回归原点了……"
 
 #3转2
-roz_shinku_evt.616.title: "深渊感染体入侵：$roz_SK_4_madgod_invasion_placard_stage_minus_one$"
+roz_shinku_evt.616.title: "深渊感染体入侵：$roz_sk_4_madgod_invasion_placard_stage_minus_one$"
 roz_shinku_evt.616.desc: "坏消息，我们在对抗深渊入侵的战争中已经开始处于下风，深渊侵蚀的效果已经开始显露，为我们的作战带来一些负担，但整体还处于可控范围，我们需要尽快击退深渊威胁，用胜利冲散沮丧情绪。"
 roz_shinku_evt.616.aa: "坚定守住，就有办法!"
 
 #2转1
-roz_shinku_evt.617.title: "深渊感染体入侵：$roz_SK_4_madgod_invasion_placard_stage_minus_two$"
+roz_shinku_evt.617.title: "深渊感染体入侵：$roz_sk_4_madgod_invasion_placard_stage_minus_two$"
 roz_shinku_evt.617.desc: "深渊感染的深化已经给我们舰队带来了不小的侵蚀效果，我们必须更加审慎地投放已经被削弱的武装力量，以免遭到更大的损失。乌拉诺斯的优势越来越大，如果再不能遏制成功，等待我们的恐怕是更加黑暗的未来。"
 roz_shinku_evt.617.aa: "我们需要重新集结部队!"
 

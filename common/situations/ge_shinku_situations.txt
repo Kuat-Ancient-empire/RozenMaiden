@@ -572,9 +572,9 @@ roz_awaken_of_shinku_1_acknowledge_border = {
 # }
 
 ###局势：Boss战 深渊感染体入侵 
-roz_SK_4_madgod_invasion_placard = {
+roz_sk_4_madgod_invasion_placard = {
     desc = {
-        text = roz_SK_4_madgod_invasion_placard_1_desc
+        text = roz_sk_4_madgod_invasion_placard_1_desc
         trigger = {
             owner = {
                 always = yes
@@ -603,42 +603,42 @@ roz_SK_4_madgod_invasion_placard = {
     #start_value = 50
     initial_progress = 50
     stages = {
-        roz_SK_4_madgod_invasion_placard_stage_minus_two ={
+        roz_sk_4_madgod_invasion_placard_stage_minus_two ={
             icon = GFX_situation_stage_icon_roz_SK4_minus-two
             icon_background = GFX_situation_stage_frame_red
-            custom_tooltip = "roz_SK_4_madgod_invasion_placard_stage_minus_two_ct"
+            custom_tooltip = "roz_sk_4_madgod_invasion_placard_stage_minus_two_ct"
             end = 20
             on_first_enter = {
                 owner = { country_event = { id = roz_shinku_evt.618 } }
             }
         }
-        roz_SK_4_madgod_invasion_placard_stage_minus_one ={
+        roz_sk_4_madgod_invasion_placard_stage_minus_one ={
             icon = GFX_situation_stage_icon_roz_SK4_minus-one
             icon_background = GFX_situation_stage_frame_red
-            custom_tooltip = "roz_SK_4_madgod_invasion_placard_stage_minus_one_ct"
+            custom_tooltip = "roz_sk_4_madgod_invasion_placard_stage_minus_one_ct"
             end = 40
         }
-        roz_SK_4_madgod_invasion_placard_stage_mid ={
+        roz_sk_4_madgod_invasion_placard_stage_mid ={
             icon = GFX_situation_stage_1
             icon_background = GFX_situation_stage_frame_red
-            custom_tooltip = "roz_SK_4_madgod_invasion_placard_stage_mid_ct"
+            custom_tooltip = "roz_sk_4_madgod_invasion_placard_stage_mid_ct"
             end = 60
         }
-        roz_SK_4_madgod_invasion_placard_stage_one ={
+        roz_sk_4_madgod_invasion_placard_stage_one ={
             icon = GFX_situation_stage_icon_roz_SK4_one
             icon_background = GFX_situation_stage_frame_green
-            custom_tooltip = "roz_SK_4_madgod_invasion_placard_stage_one_ct"
+            custom_tooltip = "roz_sk_4_madgod_invasion_placard_stage_one_ct"
             end = 80
         }
-        roz_SK_4_madgod_invasion_placard_stage_two ={
+        roz_sk_4_madgod_invasion_placard_stage_two ={
             icon = GFX_situation_stage_icon_roz_SK4_two
             icon_background = GFX_situation_stage_frame_green
-            custom_tooltip = "roz_SK_4_madgod_invasion_placard_stage_two_ct"
+            custom_tooltip = "roz_sk_4_madgod_invasion_placard_stage_two_ct"
             end = 100
         }
     }
     approach = {#方案
-        name = roz_SK_4_madgod_invasion_placard_approach_1
+        name = roz_sk_4_madgod_invasion_placard_approach_1
         icon = GFX_situation_approach_fleet
         icon_background = GFX_situation_approach_bg_red
         allow = {
@@ -646,7 +646,7 @@ roz_SK_4_madgod_invasion_placard = {
         potential = {
         }
         on_select = {
-            custom_tooltip = roz_SK_4_madgod_invasion_placard_approach_1_onselect_ct
+            custom_tooltip = roz_sk_4_madgod_invasion_placard_approach_1_onselect_ct
         }
         default = yes
         # resources = {
@@ -663,7 +663,7 @@ roz_SK_4_madgod_invasion_placard = {
         #AI will pick the one with the highest weight
     }
     approach = {#方案2
-        name = roz_SK_4_madgod_invasion_placard_approach_2
+        name = roz_sk_4_madgod_invasion_placard_approach_2
         icon = GFX_situation_approach_fleet
         icon_background = GFX_situation_approach_bg_red
         allow = {
@@ -671,7 +671,7 @@ roz_SK_4_madgod_invasion_placard = {
         potential = {
         }
         on_select = {
-            custom_tooltip = roz_SK_4_madgod_invasion_placard_approach_2_onselect_ct
+            custom_tooltip = roz_sk_4_madgod_invasion_placard_approach_2_onselect_ct
         }
         default = yes
         resources = {
@@ -691,7 +691,7 @@ roz_SK_4_madgod_invasion_placard = {
         #AI will pick the one with the highest weight
     }
     approach = {#方案3
-        name = roz_SK_4_madgod_invasion_placard_approach_3
+        name = roz_sk_4_madgod_invasion_placard_approach_3
         icon = GFX_situation_approach_fleet
         icon_background = GFX_situation_approach_bg_red
         allow = {
@@ -699,7 +699,7 @@ roz_SK_4_madgod_invasion_placard = {
         potential = {
         }
         on_select = {
-            custom_tooltip = roz_SK_4_madgod_invasion_placard_approach_3_onselect_ct
+            custom_tooltip = roz_sk_4_madgod_invasion_placard_approach_3_onselect_ct
         }
         default = yes
         resources = {
@@ -721,7 +721,7 @@ roz_SK_4_madgod_invasion_placard = {
     monthly_progress = {
         base = 0
         # modifier = {
-        #     desc = roz_SK_4_madgod_invasion_placard_approach_monthly_progress_normal
+        #     desc = roz_sk_4_madgod_invasion_placard_approach_monthly_progress_normal
         #     add = -0.5
         #     owner = {
         #         #预计通过check var来判断敌军头目数量
@@ -732,13 +732,13 @@ roz_SK_4_madgod_invasion_placard = {
         #     }
         # }
         # modifier = {
-        #     desc = roz_SK_4_madgod_invasion_placard_approach_monthly_progress_aggressive
+        #     desc = roz_sk_4_madgod_invasion_placard_approach_monthly_progress_aggressive
         #     factor = 0
-        #     current_stage = roz_SK_4_madgod_invasion_placard_stage_two
+        #     current_stage = roz_sk_4_madgod_invasion_placard_stage_two
         # }
         # modifier = {
         #     factor = 0
-        #     current_stage = roz_SK_4_madgod_invasion_placard_approach_monthly_progress_negative
+        #     current_stage = roz_sk_4_madgod_invasion_placard_approach_monthly_progress_negative
         # }
     }
     on_monthly = {
@@ -749,9 +749,9 @@ roz_SK_4_madgod_invasion_placard = {
 }
 
 ###拟真深渊-毁灭倒计时
-roz_SK_4_madgod_invasion_explose_the_galaxy = {
+roz_sk_4_madgod_invasion_explose_the_galaxy = {
     desc = {
-        text = roz_SK_4_madgod_invasion_explose_the_galaxy_1_desc
+        text = roz_sk_4_madgod_invasion_explose_the_galaxy_1_desc
         trigger = {
             owner = { always = yes }
         }
@@ -777,21 +777,21 @@ roz_SK_4_madgod_invasion_explose_the_galaxy = {
     on_fail = { }
     initial_progress = 0
     stages = {
-        roz_SK_4_madgod_invasion_explose_the_galaxy_progress ={
+        roz_sk_4_madgod_invasion_explose_the_galaxy_progress ={
             icon = GFX_situation_stage_10
             icon_background = GFX_situation_stage_frame_red
-            custom_tooltip = "roz_SK_4_madgod_invasion_explose_the_galaxy_progress_ct"
+            custom_tooltip = "roz_sk_4_madgod_invasion_explose_the_galaxy_progress_ct"
             #end = event_target:global_event_country.roz_unholy_invasion_explose_the_galaxy
             end = 480
         }
     }
     approach = {#方案
-        name = roz_SK_4_madgod_invasion_explose_the_galaxy_approach_1
+        name = roz_sk_4_madgod_invasion_explose_the_galaxy_approach_1
         icon = GFX_situation_approach_encurage_conversation
         icon_background = GFX_situation_approach_bg_red
         allow = { always = yes }
         potential = { always = yes }
-        on_select = { custom_tooltip = roz_SK_4_madgod_invasion_explose_the_galaxy_approach_1_onselect_ct }
+        on_select = { custom_tooltip = roz_sk_4_madgod_invasion_explose_the_galaxy_approach_1_onselect_ct }
         default = yes
         modifier = {
             #country_naval_cap_add = 500
@@ -803,22 +803,22 @@ roz_SK_4_madgod_invasion_explose_the_galaxy = {
         base = 1
         modifier = {
             divide = 1.5
-            desc = roz_SK_4_madgod_invasion_explose_the_galaxy_progress_easy
+            desc = roz_sk_4_madgod_invasion_explose_the_galaxy_progress_easy
             owner = { check_variable = { which = roz_unholy_invasion_difficulty value = 1 } }
         }
         modifier = {
             mult = 1
-            desc = roz_SK_4_madgod_invasion_explose_the_galaxy_progress_normal
+            desc = roz_sk_4_madgod_invasion_explose_the_galaxy_progress_normal
             owner = { check_variable = { which = roz_unholy_invasion_difficulty value = 2 } }
         }
         modifier = {
             mult = 2
-            desc = roz_SK_4_madgod_invasion_explose_the_galaxy_progress_hard
+            desc = roz_sk_4_madgod_invasion_explose_the_galaxy_progress_hard
             owner = { check_variable = { which = roz_unholy_invasion_difficulty value = 3 } }
         }
         modifier = {
             mult = 4
-            desc = roz_SK_4_madgod_invasion_explose_the_galaxy_progress_xiling
+            desc = roz_sk_4_madgod_invasion_explose_the_galaxy_progress_xiling
             owner = { check_variable = { which = roz_unholy_invasion_difficulty value = 4 } }
         }
     }

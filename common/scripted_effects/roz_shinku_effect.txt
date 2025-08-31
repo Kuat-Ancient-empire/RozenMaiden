@@ -27,7 +27,10 @@ roz_junn_country_create = {
 	last_created_country = {
 		establish_communications_no_message = root
 	}
-	event_target:roz_junn_global_country@root = {
+	if = {
+		limit = { exists = event_target:roz_junn_global_country@root }
+		event_target:roz_junn_global_country@root = {
+		}
 	}
 }
 
@@ -640,6 +643,7 @@ roz_shinku_leader_type_switch_scientist = {
 	#若当前真红职位为指挥官
 	if = {
 		limit = {
+			exists = event_target:roz_leader_shinku_global_target@root
 			event_target:roz_leader_shinku_global_target@root = {
 				leader_class = commander
 			}
@@ -698,6 +702,7 @@ roz_shinku_leader_type_switch_scientist = {
 	#若当前真红职位为行政官
 	if = {
 		limit = {
+			exists = event_target:roz_leader_shinku_global_target@root
 			event_target:roz_leader_shinku_global_target@root = {
 				leader_class = official
 			}
@@ -759,6 +764,7 @@ roz_shinku_leader_type_switch_commander = {
 	#若当前真红职位为科学家
 	if = {
 		limit = {
+			exists = event_target:roz_leader_shinku_global_target@root
 			event_target:roz_leader_shinku_global_target@root = {
 				leader_class = scientist
 			}
@@ -820,6 +826,7 @@ roz_shinku_leader_type_switch_commander = {
 	#若当前真红职位为行政官
 	if = {
 		limit = {
+			exists = event_target:roz_leader_shinku_global_target@root
 			event_target:roz_leader_shinku_global_target@root = {
 				leader_class = official
 			}
@@ -885,6 +892,7 @@ roz_shinku_leader_type_switch_official = {
 	#若当前真红职位为科学家
 	if = {
 		limit = {
+			exists = event_target:roz_leader_shinku_global_target@root
 			event_target:roz_leader_shinku_global_target@root = {
 				leader_class = scientist
 			}
@@ -1030,6 +1038,7 @@ roz_shinku_leader_backup = {
     }
 	if = {	#科学家备份
         limit = {
+			exists = event_target:roz_leader_shinku_global_target@root
             event_target:roz_leader_shinku_global_target@root = {
                 leader_class = scientist
             }
@@ -1415,6 +1424,7 @@ roz_hinaichigo_leader_type_switch_commander = {
 	#若当前雏莓职位为行政官
 	if = {
 		limit = {
+			exists = event_target:roz_leader_hinaichigo_global_target@root
 			event_target:roz_leader_hinaichigo_global_target@root = {
 				leader_class = official
 			}
@@ -2174,23 +2184,26 @@ roz_abyss_ship_create = {
 
 roz_abyss_leader_create = {
 	optimize_memory
-	event_target:roz_madgod_force_country@root = {
-		create_leader = {
-			name = $name$
-			class = $leader_class$
-			skill = $skills$
-			set_age = 9527
-			custom_catch_phrase = roz_abyss_leader_ccp
-			custom_description = roz_abyss_leader_cd
-			hide_age = yes
-			immortal = yes
-			skip_background_generation = yes
-			effect = {
-				change_leader_portrait = roz_exd_$color$
-				freeze_leader_age = yes
-				add_trait = { trait = $trait1$ }
+	if = {
+		limit = { exists = event_target:roz_madgod_force_country@root }
+		event_target:roz_madgod_force_country@root = {
+			create_leader = {
+				name = $name$
+				class = $leader_class$
+				skill = $skills$
+				set_age = 9527
+				custom_catch_phrase = roz_abyss_leader_ccp
+				custom_description = roz_abyss_leader_cd
+				hide_age = yes
+				immortal = yes
+				skip_background_generation = yes
+				effect = {
+					change_leader_portrait = roz_exd_$color$
+					freeze_leader_age = yes
+					add_trait = { trait = $trait1$ }
+				}
+				randomize_traits = yes
 			}
-			randomize_traits = yes
 		}
 	}
 }
@@ -2266,44 +2279,47 @@ roz_abyss_fleet_create_small = {
 		trait1 = leader_trait_roz_abyss_leader_1
 		skills = 5
 	}
-	event_target:roz_madgod_force_country@root = {
-		create_fleet = {
-			name = "NAME_roz_abyss_small_fleet"
-			settings = {
-				spawn_debris = no
-				is_boss = no
-				can_change_leader = no
-				can_disband = no
-				can_upgrade = no
-				can_change_composition = no
-				uses_naval_capacity = no
-				ai_ignore_strength = yes
-			}
-			effect = {
-				set_fleet_bombardment_stance = roz_crisis_armageddon
-				set_fleet_stance = aggressive
-				set_fleet_flag = roz_abyss_fleet_small
-				set_fleet_flag = roz_abyss_fleet
-				#clear_fleet_actions = this
-				set_owner = $owner$
-				roz_abyss_ship_create = {
-					num_ships = 16
-					design = probe_design_A
-					name = random
+	if = {
+		limit = { exists = event_target:roz_madgod_force_country@root }
+		event_target:roz_madgod_force_country@root = {
+			create_fleet = {
+				name = "NAME_roz_abyss_small_fleet"
+				settings = {
+					spawn_debris = no
+					is_boss = no
+					can_change_leader = no
+					can_disband = no
+					can_upgrade = no
+					can_change_composition = no
+					uses_naval_capacity = no
+					ai_ignore_strength = yes
 				}
-				roz_abyss_ship_create = {
-					num_ships = 2
-					design = battlecruiser_design_A
-					name = random
+				effect = {
+					set_fleet_bombardment_stance = roz_crisis_armageddon
+					set_fleet_stance = aggressive
+					set_fleet_flag = roz_abyss_fleet_small
+					set_fleet_flag = roz_abyss_fleet
+					#clear_fleet_actions = this
+					set_owner = $owner$
+					roz_abyss_ship_create = {
+						num_ships = 16
+						design = probe_design_A
+						name = random
+					}
+					roz_abyss_ship_create = {
+						num_ships = 2
+						design = battlecruiser_design_A
+						name = random
+					}
+					set_location = {
+						target = $location$
+						distance = 45
+						angle = random
+					}
+					roz_abyss_leader_assign = yes
+					#加buff
+					roz_unholy_invision_difficult_modifier_add_effect = yes
 				}
-				set_location = {
-					target = $location$
-					distance = 45
-					angle = random
-				}
-				roz_abyss_leader_assign = yes
-				#加buff
-				roz_unholy_invision_difficult_modifier_add_effect = yes
 			}
 		}
 	}
@@ -2331,49 +2347,52 @@ roz_abyss_fleet_create_median = {
 		trait1 = leader_trait_roz_abyss_leader_1
 		skills = 5
 	}
-	event_target:roz_madgod_force_country@root = {
-		create_fleet = {
-			#name = random
-			settings = {
-				spawn_debris = no
-				is_boss = no
-				can_change_leader = no
-				can_disband = no
-				can_upgrade = no
-				can_change_composition = no
-				uses_naval_capacity = no
-				ai_ignore_strength = yes
-			}
-			effect = {
-				set_fleet_bombardment_stance = roz_crisis_armageddon
-				set_fleet_stance = aggressive
-				set_fleet_flag = roz_abyss_fleet_median
-				set_fleet_flag = roz_abyss_fleet
-				#clear_fleet_actions = this
+	if = {
+		limit = { exists = event_target:roz_madgod_force_country@root }
+		event_target:roz_madgod_force_country@root = {
+			create_fleet = {
+				#name = random
+				settings = {
+					spawn_debris = no
+					is_boss = no
+					can_change_leader = no
+					can_disband = no
+					can_upgrade = no
+					can_change_composition = no
+					uses_naval_capacity = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_fleet_bombardment_stance = roz_crisis_armageddon
+					set_fleet_stance = aggressive
+					set_fleet_flag = roz_abyss_fleet_median
+					set_fleet_flag = roz_abyss_fleet
+					#clear_fleet_actions = this
 
-				set_owner = $owner$
-				roz_abyss_ship_create = {
-					num_ships = 16
-					design = probe_design_A
-					name = random
+					set_owner = $owner$
+					roz_abyss_ship_create = {
+						num_ships = 16
+						design = probe_design_A
+						name = random
+					}
+					roz_abyss_ship_create = {
+						num_ships = 8
+						design = battlecruiser_design_A
+						name = random
+					}
+					roz_abyss_ship_create = {
+						num_ships = 2
+						design = titan_design_A
+						name = random
+					}
+					set_location = {
+						target = $location$
+						distance = 45
+						angle = random
+					}
+					roz_abyss_leader_assign = yes
+					roz_unholy_invision_difficult_modifier_add_effect = yes
 				}
-				roz_abyss_ship_create = {
-					num_ships = 8
-					design = battlecruiser_design_A
-					name = random
-				}
-				roz_abyss_ship_create = {
-					num_ships = 2
-					design = titan_design_A
-					name = random
-				}
-				set_location = {
-					target = $location$
-					distance = 45
-					angle = random
-				}
-				roz_abyss_leader_assign = yes
-				roz_unholy_invision_difficult_modifier_add_effect = yes
 			}
 		}
 	}
@@ -2401,44 +2420,49 @@ roz_abyss_fleet_create_large = {
 		trait1 = leader_trait_roz_abyss_leader_1
 		skills = 7
 	}
-	event_target:roz_madgod_force_country@root = {
-		create_fleet = {
-			#name = random
-			settings = {
-				spawn_debris = no
-				is_boss = no
-				can_change_leader = no
-				can_disband = no
-				can_upgrade = no
-				can_change_composition = no
-				uses_naval_capacity = no
-				ai_ignore_strength = yes
-			}
-			effect = {
-				set_fleet_bombardment_stance = roz_crisis_armageddon
-				set_fleet_stance = aggressive
-				set_fleet_flag = roz_abyss_fleet_large
-				set_fleet_flag = roz_abyss_fleet
-				#clear_fleet_actions = this
+	if = {
+		limit = {
+			exists = event_target:roz_madgod_force_country@root
+		}
+		event_target:roz_madgod_force_country@root = {
+			create_fleet = {
+				#name = random
+				settings = {
+					spawn_debris = no
+					is_boss = no
+					can_change_leader = no
+					can_disband = no
+					can_upgrade = no
+					can_change_composition = no
+					uses_naval_capacity = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_fleet_bombardment_stance = roz_crisis_armageddon
+					set_fleet_stance = aggressive
+					set_fleet_flag = roz_abyss_fleet_large
+					set_fleet_flag = roz_abyss_fleet
+					#clear_fleet_actions = this
 
-				set_owner = $owner$
-				roz_abyss_ship_create = {
-					num_ships = 16
-					design = battlecruiser_design_A
-					name = random
+					set_owner = $owner$
+					roz_abyss_ship_create = {
+						num_ships = 16
+						design = battlecruiser_design_A
+						name = random
+					}
+					roz_abyss_ship_create = {
+						num_ships = 4
+						design = titan_design_A
+						name = random
+					}
+					set_location = {
+						target = $location$
+						distance = 45
+						angle = random
+					}
+					roz_abyss_leader_assign = yes
+					roz_unholy_invision_difficult_modifier_add_effect = yes
 				}
-				roz_abyss_ship_create = {
-					num_ships = 4
-					design = titan_design_A
-					name = random
-				}
-				set_location = {
-					target = $location$
-					distance = 45
-					angle = random
-				}
-				roz_abyss_leader_assign = yes
-				roz_unholy_invision_difficult_modifier_add_effect = yes
 			}
 		}
 	}
@@ -2467,42 +2491,45 @@ roz_abyss_fleet_create_marvelous = {
 		color = orange
 		trait1 = leader_trait_roz_abyss_leader_1
 	}
-	event_target:roz_madgod_force_country@root = {
-		create_fleet = {
-			name = NAME_roz_abyss_marvelous_fleet
-			settings = {
-				spawn_debris = no
-				is_boss = yes
-				can_change_leader = no
-				can_disband = no
-				can_upgrade = no
-				can_change_composition = no
-				uses_naval_capacity = no
-			}
-			effect = {
-				set_fleet_stance = aggressive
-				#clear_fleet_actions = this
-				set_fleet_bombardment_stance = roz_crisis_armageddon
-				set_fleet_flag = roz_abyss_fleet_marvelous
-				set_fleet_flag = roz_abyss_fleet
-				set_owner = event_target:roz_madgod_force_country@root
-				roz_abyss_ship_create = {
-					num_ships = 24
-					design = battlecruiser_design_A
-					name = random
+	if = {
+		limit = { exists = event_target:roz_madgod_force_country@root }
+		event_target:roz_madgod_force_country@root = {
+			create_fleet = {
+				name = NAME_roz_abyss_marvelous_fleet
+				settings = {
+					spawn_debris = no
+					is_boss = yes
+					can_change_leader = no
+					can_disband = no
+					can_upgrade = no
+					can_change_composition = no
+					uses_naval_capacity = no
 				}
-				roz_abyss_ship_create = {
-					num_ships = 12
-					design = titan_design_A
-					name = random
+				effect = {
+					set_fleet_stance = aggressive
+					#clear_fleet_actions = this
+					set_fleet_bombardment_stance = roz_crisis_armageddon
+					set_fleet_flag = roz_abyss_fleet_marvelous
+					set_fleet_flag = roz_abyss_fleet
+					set_owner = event_target:roz_madgod_force_country@root
+					roz_abyss_ship_create = {
+						num_ships = 24
+						design = battlecruiser_design_A
+						name = random
+					}
+					roz_abyss_ship_create = {
+						num_ships = 12
+						design = titan_design_A
+						name = random
+					}
+					set_location = {
+						target = event_target:roz_outland_planet@root
+						distance = 45
+						angle = random
+					}
+					roz_abyss_leader_assign = yes
+					roz_unholy_invision_difficult_modifier_add_effect = yes
 				}
-				set_location = {
-					target = event_target:roz_outland_planet@root
-					distance = 45
-					angle = random
-				}
-				roz_abyss_leader_assign = yes
-				roz_unholy_invision_difficult_modifier_add_effect = yes
 			}
 		}
 	}
@@ -2537,49 +2564,51 @@ roz_abyss_fleet_create_madgod_boss = {
 		trait1 = leader_trait_roz_abyss_leader_Uranus
 		skills = 10
 	}
-	event_target:roz_madgod_force_country@root = {
-		create_fleet = {
-			name = NAME_roz_abyss_madgod_boss
-			settings = {
-				spawn_debris = no
-				is_boss = yes
-				can_change_leader = no
-				can_disband = no
-				can_upgrade = no
-				can_change_composition = no
-				uses_naval_capacity = no
-			}
-			effect = {
-				set_fleet_bombardment_stance = roz_crisis_armageddon
-				set_fleet_stance = passive
-				set_fleet_flag = roz_abyss_fleet_madgod_boss
-				set_fleet_flag = roz_abyss_fleet
-				set_owner = event_target:roz_madgod_force_country@root
-				roz_abyss_ship_create = {
-					num_ships = 8
-					design = titan_design_A
-					name = random
+	if = {
+		limit = { exists = event_target:roz_madgod_force_country@root }
+		event_target:roz_madgod_force_country@root = {
+			create_fleet = {
+				name = NAME_roz_abyss_madgod_boss
+				settings = {
+					spawn_debris = no
+					is_boss = yes
+					can_change_leader = no
+					can_disband = no
+					can_upgrade = no
+					can_change_composition = no
+					uses_naval_capacity = no
 				}
-				create_ship = {
-					name = NAME_roz_abyss_madgod_boss
-					design = roz_crisis_madgod_boss_design_A
-					prefix = no
-					effect = {
-						set_disable_at_health = 0.05
-						set_ship_flag = roz_crisis_madgod_boss
+				effect = {
+					set_fleet_bombardment_stance = roz_crisis_armageddon
+					set_fleet_stance = passive
+					set_fleet_flag = roz_abyss_fleet_madgod_boss
+					set_fleet_flag = roz_abyss_fleet
+					set_owner = event_target:roz_madgod_force_country@root
+					roz_abyss_ship_create = {
+						num_ships = 8
+						design = titan_design_A
+						name = random
 					}
+					create_ship = {
+						name = NAME_roz_abyss_madgod_boss
+						design = roz_crisis_madgod_boss_design_A
+						prefix = no
+						effect = {
+							set_disable_at_health = 0.05
+							set_ship_flag = roz_crisis_madgod_boss
+						}
+					}
+					set_location = {
+						target = event_target:roz_outland_planet@root
+						distance = 45
+						angle = random
+					}
+					roz_abyss_leader_assign = yes
+					roz_unholy_invision_difficult_modifier_add_effect = yes
 				}
-				set_location = {
-					target = event_target:roz_outland_planet@root
-					distance = 45
-					angle = random
-				}
-				roz_abyss_leader_assign = yes
-				roz_unholy_invision_difficult_modifier_add_effect = yes
 			}
-		}
+		}	
 	}
-
 }
 
 ###
@@ -2821,32 +2850,32 @@ roz_abyss_hunter_fleet_create_can_establish_num_add = {
 
 #深渊入侵局势
 #scope: situation
-roz_SK_4_madgod_invasion_placard_triggerred_stage = {
+roz_sk_4_madgod_invasion_placard_triggerred_stage = {
 	optimize_memory
 	switch = {
 		trigger = current_stage
-		roz_SK_4_madgod_invasion_placard_stage_$current_stage$ = {
+		roz_sk_4_madgod_invasion_placard_stage_$current_stage$ = {
 			if = {
-				limit = { owner = { has_country_flag = roz_SK_4_madgod_invasion_placard_stage_$stage_prev$ } }
+				limit = { owner = { has_country_flag = roz_sk_4_madgod_invasion_placard_stage_$stage_prev$ } }
 				owner = { set_timed_country_flag = { flag = roz_unholy_invasion_situation_$change_prev$ days = 30 } }
 			}
 			if = {
-				limit = { owner = { has_country_flag = roz_SK_4_madgod_invasion_placard_stage_$stage_next$ } }
+				limit = { owner = { has_country_flag = roz_sk_4_madgod_invasion_placard_stage_$stage_next$ } }
 				owner = { set_timed_country_flag = { flag = roz_unholy_invasion_situation_$change_next$ days = 30 } }
 			}
 		}
 	}
 }
 #穷举
-roz_SK_4_madgod_invasion_placard_triggerred_stage_effect = {
+roz_sk_4_madgod_invasion_placard_triggerred_stage_effect = {
 	optimize_memory
-	roz_SK_4_madgod_invasion_placard_triggerred_stage = { current_stage = minus_two stage_prev = none 		change_prev = 10 stage_next = minus_one change_next = 12 }
-	roz_SK_4_madgod_invasion_placard_triggerred_stage = { current_stage = minus_one stage_prev = minus_two 	change_prev = 21 stage_next = mid 		change_next = 23 }
-	roz_SK_4_madgod_invasion_placard_triggerred_stage = { current_stage = mid 		stage_prev = minus_one 	change_prev = 32 stage_next = one 		change_next = 34 }
-	roz_SK_4_madgod_invasion_placard_triggerred_stage = { current_stage = one 		stage_prev = mid 		change_prev = 43 stage_next = two 		change_next = 45 }
-	roz_SK_4_madgod_invasion_placard_triggerred_stage = { current_stage = two 		stage_prev = one 		change_prev = 54 stage_next = none 		change_next = 56 }
+	roz_sk_4_madgod_invasion_placard_triggerred_stage = { current_stage = minus_two stage_prev = none 		change_prev = 10 stage_next = minus_one change_next = 12 }
+	roz_sk_4_madgod_invasion_placard_triggerred_stage = { current_stage = minus_one stage_prev = minus_two 	change_prev = 21 stage_next = mid 		change_next = 23 }
+	roz_sk_4_madgod_invasion_placard_triggerred_stage = { current_stage = mid 		stage_prev = minus_one 	change_prev = 32 stage_next = one 		change_next = 34 }
+	roz_sk_4_madgod_invasion_placard_triggerred_stage = { current_stage = one 		stage_prev = mid 		change_prev = 43 stage_next = two 		change_next = 45 }
+	roz_sk_4_madgod_invasion_placard_triggerred_stage = { current_stage = two 		stage_prev = one 		change_prev = 54 stage_next = none 		change_next = 56 }
 }
-roz_SK_4_madgod_invasion_placard_remind_effect = {
+roz_sk_4_madgod_invasion_placard_remind_effect = {
 	optimize_memory
 	owner = {
 		switch = {
@@ -3054,16 +3083,19 @@ roz_abyss_fleet_outpost_remove_effect_all = {
 ##消灭哨站(月检是否还有小头目存在)
 roz_abyss_fleet_outpost_remove_effect_monthly = {
 	optimize_memory
-	event_target:roz_abyss_fleet_outpost_target_$outpost$_@root = {
-		if = {
-			limit = {
-				NOT = { any_fleet_in_system = { has_fleet_flag = roz_abyss_fleet_marvelous } }
-				NOT = { has_star_flag = roz_abyss_fleet_outpost_system_disable_@root }
+	if = {
+		limit = { exists = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root }
+		event_target:roz_abyss_fleet_outpost_target_$outpost$_@root = {
+			if = {
+				limit = {
+					NOT = { any_fleet_in_system = { has_fleet_flag = roz_abyss_fleet_marvelous } }
+					NOT = { has_star_flag = roz_abyss_fleet_outpost_system_disable_@root }
+				}
+				clear_global_event_target = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root
+				solar_system = { remove_star_flag = roz_abyss_fleet_outpost_system }
+				set_star_flag = roz_abyss_fleet_outpost_system_disable_@root
+				root = { country_event = { id = roz_shinku_evt.570 } }
 			}
-			clear_global_event_target = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root
-			solar_system = { remove_star_flag = roz_abyss_fleet_outpost_system }
-			set_star_flag = roz_abyss_fleet_outpost_system_disable_@root
-			root = { country_event = { id = roz_shinku_evt.570 } }
-		}
+		}	
 	}
 }

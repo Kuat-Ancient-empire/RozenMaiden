@@ -33,7 +33,8 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery }	
 	ai_tag_weight = 0
 
-	ship_modifier = {
+	triggered_ship_modifier = {
+		potential = { is_in_combat = yes }
 		component_lifesteal_add = 1
 	}
 
@@ -81,7 +82,8 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
 
-	ship_modifier = {
+	triggered_ship_modifier = {
+		potential = { is_in_combat = yes }
 		component_lifesteal_add = 1
 	}
 
@@ -126,7 +128,8 @@ weapon_component_template = {
 	armor_damage = 2.0
 	hull_damage = 3.0
 
-	ship_modifier = {
+	triggered_ship_modifier = {
+		potential = { is_in_combat = yes }
 		component_lifesteal_add = 1
 	}
 

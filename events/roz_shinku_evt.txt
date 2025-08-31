@@ -2448,10 +2448,10 @@ country_event = {   #混乱通讯 #深渊入侵正式开始
             ###限时挑战开启
             if = {
                 limit = { has_global_flag = roz_abyss_challenge_available }
-                start_situation = { type = roz_SK_4_madgod_invasion_explose_the_galaxy target = this }
+                start_situation = { type = roz_sk_4_madgod_invasion_explose_the_galaxy target = this }
             }
             ###深渊主局势
-            start_situation = { type = roz_SK_4_madgod_invasion_placard target = root }
+            start_situation = { type = roz_sk_4_madgod_invasion_placard target = root }
             ###ai外交
             country_event = { id = roz_shinku_evt.524 }
             ###刷怪
@@ -2757,9 +2757,9 @@ country_event = {
                 counter = roz_abyss_kills
                 amount = 1
             }
-            #if = { limit = { country_has_situation = { SITUATION = roz_SK_4_madgod_invasion_placard } } }
+            #if = { limit = { country_has_situation = { SITUATION = roz_sk_4_madgod_invasion_placard } } }
             random_situation = {
-                limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
+                limit = { is_situation_type = roz_sk_4_madgod_invasion_placard }
                 roz_abyss_invasion_situation_progress_change = {
                     progress_easy = 0.02
                     progress_normal = 0.01
@@ -2839,7 +2839,7 @@ country_event = {
                 amount = 1
             }
             random_situation = {
-                limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
+                limit = { is_situation_type = roz_sk_4_madgod_invasion_placard }
                 roz_abyss_invasion_situation_progress_change = {
                     progress_easy = -0.002
                     progress_normal = -0.005
@@ -3448,7 +3448,7 @@ country_event = {
     show_sound = event_red_alert
     picture = GFX_evt_worrying_signal
     trigger = {
-        from = { is_situation_type = roz_SK_4_madgod_invasion_explose_the_galaxy }
+        from = { is_situation_type = roz_sk_4_madgod_invasion_explose_the_galaxy }
         has_global_flag = roz_abyss_challenge_available
         has_country_flag = roz_abyss_faction_arrival
     }
@@ -3464,7 +3464,7 @@ country_event = {
     show_sound = event_super_explosion
     picture = GFX_evt_supernova
     trigger = {
-        from = { is_situation_type = roz_SK_4_madgod_invasion_explose_the_galaxy }
+        from = { is_situation_type = roz_sk_4_madgod_invasion_explose_the_galaxy }
         has_global_flag = roz_abyss_challenge_available
         has_country_flag = roz_abyss_faction_arrival
         has_country_flag = roz_end_of_allthings
@@ -3474,7 +3474,7 @@ country_event = {
         set_global_flag = roz_end_of_allthings_global
         if = {
             limit = {
-                from = { is_situation_type = roz_SK_4_madgod_invasion_explose_the_galaxy }
+                from = { is_situation_type = roz_sk_4_madgod_invasion_explose_the_galaxy }
                 has_global_flag = roz_abyss_challenge_available
                 has_country_flag = roz_abyss_faction_arrival
                 has_country_flag = roz_end_of_allthings
@@ -3506,14 +3506,14 @@ situation_event = {
     immediate = {
         switch = {
             trigger = current_stage
-            roz_SK_4_madgod_invasion_placard_stage_minus_two = { owner = { set_timed_country_flag = { flag = roz_SK_4_madgod_invasion_placard_stage_minus_two days = 31 } } }
-            roz_SK_4_madgod_invasion_placard_stage_minus_one = { owner = { set_timed_country_flag = { flag = roz_SK_4_madgod_invasion_placard_stage_minus_one days = 31 } } }
-            roz_SK_4_madgod_invasion_placard_stage_mid = { owner = { set_timed_country_flag = { flag = roz_SK_4_madgod_invasion_placard_stage_mid days = 31 } } }
-            roz_SK_4_madgod_invasion_placard_stage_one = { owner = { set_timed_country_flag = { flag = roz_SK_4_madgod_invasion_placard_stage_one days = 31 } } }
-            roz_SK_4_madgod_invasion_placard_stage_two = { owner = { set_timed_country_flag = { flag = roz_SK_4_madgod_invasion_placard_stage_two days = 31 } } }
+            roz_sk_4_madgod_invasion_placard_stage_minus_two = { owner = { set_timed_country_flag = { flag = roz_sk_4_madgod_invasion_placard_stage_minus_two days = 31 } } }
+            roz_sk_4_madgod_invasion_placard_stage_minus_one = { owner = { set_timed_country_flag = { flag = roz_sk_4_madgod_invasion_placard_stage_minus_one days = 31 } } }
+            roz_sk_4_madgod_invasion_placard_stage_mid = { owner = { set_timed_country_flag = { flag = roz_sk_4_madgod_invasion_placard_stage_mid days = 31 } } }
+            roz_sk_4_madgod_invasion_placard_stage_one = { owner = { set_timed_country_flag = { flag = roz_sk_4_madgod_invasion_placard_stage_one days = 31 } } }
+            roz_sk_4_madgod_invasion_placard_stage_two = { owner = { set_timed_country_flag = { flag = roz_sk_4_madgod_invasion_placard_stage_two days = 31 } } }
         }
-        roz_SK_4_madgod_invasion_placard_triggerred_stage_effect = yes
-        roz_SK_4_madgod_invasion_placard_remind_effect = yes
+        roz_sk_4_madgod_invasion_placard_triggerred_stage_effect = yes
+        roz_sk_4_madgod_invasion_placard_remind_effect = yes
     }
 }
 
@@ -3773,11 +3773,11 @@ country_event = {   #on_fleet_destroyed_perp
         set_country_flag = defeated_abyss_invate
         remove_country_flag = roz_mega_information_remodeler_active
         random_situation = {
-            limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
+            limit = { is_situation_type = roz_sk_4_madgod_invasion_placard }
             destroy_situation = this
         }
         random_situation = {
-            limit = { is_situation_type = roz_SK_4_madgod_invasion_explose_the_galaxy }
+            limit = { is_situation_type = roz_sk_4_madgod_invasion_explose_the_galaxy }
             destroy_situation = this
         }
         if = {
@@ -4123,11 +4123,11 @@ country_event = {
             destroy_situation = this
         }
         random_situation = {
-            limit = { is_situation_type = roz_SK_4_madgod_invasion_explose_the_galaxy }
+            limit = { is_situation_type = roz_sk_4_madgod_invasion_explose_the_galaxy }
             destroy_situation = this
         }
         random_situation = {
-            limit = { is_situation_type = roz_SK_4_madgod_invasion_placard }
+            limit = { is_situation_type = roz_sk_4_madgod_invasion_placard }
             destroy_situation = this
         }
         country_event = { id = roz_shinku_evt.661 }

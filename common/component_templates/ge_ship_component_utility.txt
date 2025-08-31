@@ -760,31 +760,14 @@ utility_component_template = {
 	component_set = "power_core"
 	class_restriction = {
 		shipclass_starbase
-		GFnyto_stions_fortress
-		KZ_VOY_battlestar
 	}
 	potential = {
-		OR = {
-			is_ship_class = shipclass_starbase
-			is_ship_size = KZ_VOY_battlestar
-			is_ship_size = GFnyto_stions_fortress
-		}
 		from = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
 			}
 		}
-	}
-	size_restriction = {
-		ion_cannon
-		starbase_starport
-		starbase_deep_space_citadel_1
-		starbase_deep_space_citadel_2
-		starbase_deep_space_citadel_3
-	}
-	target_weights = {
-		
 	}
 	ai_weight = {
 		weight = 2000000
@@ -2203,7 +2186,7 @@ utility_component_template = {
 		weapon_type_strike_craft_weapon_damage_mult = 0.05
 		weapon_type_strike_craft_speed_mult = 0.05
 		weapon_type_explosive_weapon_damage_mult = 0.05
-		weapon_type_ge_void_energy_damage_mult = 0.1
+		weapon_type_ge_void_energy_weapon_damage_mult = 0.05
 		ship_hull_regen_add_static = -10
 		ship_armor_regen_add_static = -20
 		ship_shield_regen_add_static = -20
@@ -2338,14 +2321,7 @@ utility_component_template = {
 	# 	ge_void_lord
 	# }
 	potential = {
-		NOR = {
-			is_ship_size = azur_flagship
-			is_ship_size = juggernaut
-			is_ship_size = Ge_Ragnarok
-			is_ship_size = ge_flagship
-			#is_ship_size = Ge_Vampirilis_Ortaam
-			is_ship_size = roz_juggernaut_wanxiang
-		}
+		ship_size_multiplier < 32
 		from = {
 			OR = {
 				country_uses_bio_ships = yes
@@ -2386,14 +2362,7 @@ utility_component_template = {
 	# 	ge_void_lord
 	# }
 	potential = {
-		NOR = {
-			is_ship_size = azur_flagship
-			is_ship_size = juggernaut
-			is_ship_size = Ge_Ragnarok
-			is_ship_size = ge_flagship
-			#is_ship_size = Ge_Vampirilis_Ortaam
-			is_ship_size = roz_juggernaut_wanxiang
-		}
+		ship_size_multiplier < 32
 		from = {
 			OR = {
 				country_uses_bio_ships = yes
@@ -2493,14 +2462,7 @@ utility_component_template = {
 	# 	ge_void_lord
 	# }
 	potential = {
-		NOR = {
-			is_ship_size = azur_flagship
-			is_ship_size = juggernaut
-			is_ship_size = Ge_Ragnarok
-			is_ship_size = ge_flagship
-			#is_ship_size = Ge_Vampirilis_Ortaam
-			is_ship_size = roz_juggernaut_wanxiang
-		}
+		ship_size_multiplier < 32
 		from = {
 			OR = {
 				country_uses_bio_ships = yes
@@ -2613,14 +2575,7 @@ utility_component_template = {
 	# 	roz_juggernaut_wanxiang
 	# }
 	potential = {
-		OR = {
-			is_ship_size = azur_flagship
-			is_ship_size = juggernaut
-			is_ship_size = Ge_Ragnarok
-			is_ship_size = ge_flagship
-			is_ship_size = Ge_Vampirilis_Ortaam
-			is_ship_size = roz_juggernaut_wanxiang
-		}
+		ship_size_multiplier >= 32
 		from = {
 			OR = {
 				country_uses_bio_ships = yes
@@ -2719,14 +2674,7 @@ utility_component_template = {
 	# 	roz_juggernaut_wanxiang
 	# }
 	potential = {
-		OR = {
-			is_ship_size = azur_flagship
-			is_ship_size = juggernaut
-			is_ship_size = Ge_Ragnarok
-			is_ship_size = ge_flagship
-			is_ship_size = Ge_Vampirilis_Ortaam
-			is_ship_size = roz_juggernaut_wanxiang
-		}
+		ship_size_multiplier >= 32
 		from = {
 			OR = {
 				country_uses_bio_ships = yes

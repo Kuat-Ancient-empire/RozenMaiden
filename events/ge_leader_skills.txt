@@ -12,12 +12,6 @@ country_event = {
 		###
 		fromfrom = {
 			###黑羽龙机制清除
-			if = {
-				limit = {
-					has_fleet_flag = ge_skill_bwg_activated_flag
-				}
-				remove_fleet_flag = ge_skill_bwg_activated_flag
-			}
 			###永恒之枪复活机制清除
 			if = {
 				limit = { 
@@ -51,12 +45,6 @@ country_event = {
 		#set_update_modifiers_batch = begin
 		fromfrom = {
 			###黑羽龙机制清除
-			if = {
-				limit = {
-					has_fleet_flag = ge_skill_bwg_activated_flag
-				}
-				remove_fleet_flag = ge_skill_bwg_activated_flag
-			}
 			###永恒之枪复活机制清除
 			if = {
 				limit = { 
@@ -119,29 +107,11 @@ country_event = {
 		}
 	}
 	immediate = {
+		#修正会自我替换，重新更新没有意义
 		#set_update_modifiers_batch = begin
 		fromfromfrom = {
-			add_modifier = {
-				modifier = ge_modifier_time_freeze
-				days = 30
-			}
-			set_timed_fleet_flag = {
-				flag = roz_time_freeze_active_flag
-				days = 30
-			}
-			#延时添加buff，防止接战被重置修正，有动修就算了
-			fleet_event = {
-				id = ge_skills.22
-				days = 1
-			}
-			fleet_event = {
-				id = ge_skills.23
-				days = 2
-			}
-			fleet_event = {
-				id = ge_skills.24
-				days = 3
-			}
+			add_modifier = { modifier = ge_modifier_time_freeze days = 30 }
+			set_timed_fleet_flag = { flag = roz_time_freeze_active_flag days = 30 }
 		}
 		FromFrom = {
 			every_controlled_ship = {
@@ -161,24 +131,6 @@ country_event = {
 					set_variable = {
 						which = roz_Ragnarok_ship_disable_count
 						value = 3
-					}
-				}
-			}
-			solar_system = {
-				every_fleet_in_system = {
-					limit = {
-						is_owned_by = From						#enemy
-						not = {
-							has_fleet_flag = roz_time_freeze_active_flag
-						}
-					}
-					add_modifier = {
-						modifier = ge_modifier_time_freeze
-						days = 30
-					}
-					set_timed_fleet_flag = {
-						flag = roz_time_freeze_active_flag
-						days = 30
 					}
 				}
 			}
@@ -256,111 +208,10 @@ country_event = {
 	immediate = {
 		#set_update_modifiers_batch = begin
 		fromfrom = {
-			add_modifier = {
-				modifier = ge_modifier_time_freeze
-				days = 40
-			}
-			set_timed_fleet_flag = {
-				flag = roz_time_freeze_active_flag
-				days = 45
-			}
-		}
-		FromFromFrom = {
-			solar_system = {
-				every_fleet_in_system = {
-					limit = {
-						is_owned_by = Root
-						not = {
-							has_fleet_flag = roz_time_freeze_active_flag
-						}
-					}
-					add_modifier = {
-						modifier = ge_modifier_time_freeze
-						days = 40
-					}
-					set_timed_fleet_flag = {
-						flag = roz_time_freeze_active_flag
-						days = 40
-					}
-				}
-			}
+			add_modifier = { modifier = ge_modifier_time_freeze days = 40 }
+			set_timed_fleet_flag = { flag = roz_time_freeze_active_flag days = 40 }
 		}
 		#set_update_modifiers_batch = end
-	}
-}
-
-fleet_event = {
-	id = ge_skills.22
-	is_triggered_only = yes
-	hide_window = yes
-	trigger = {
-		solar_system = {
-			any_fleet_in_system = {
-				any_controlled_ship = {
-					owner = {
-						is_hostile = root.owner
-					}
-					#has_component = ge_shippart_time_freeze
-					check_modifier_value = { modifier = roz_timefreeze_modifier_tooltip value > 0 }
-				}
-			}
-		}
-	}
-	immediate = {
-		add_modifier = {
-			modifier = ge_modifier_time_freeze
-			days = 39
-		}
-	}
-}
-
-fleet_event = {
-	id = ge_skills.23
-	is_triggered_only = yes
-	hide_window = yes
-	trigger = {
-		solar_system = {
-			any_fleet_in_system = {
-				any_controlled_ship = {
-					owner = {
-						is_hostile = root.owner
-					}
-					#has_component = ge_shippart_time_freeze
-					check_modifier_value = { modifier = roz_timefreeze_modifier_tooltip value > 0 }
-				}
-			}
-		}
-	}
-	immediate = {
-		add_modifier = {
-			modifier = ge_modifier_time_freeze
-			days = 38
-		}
-	}
-}
-
-fleet_event = {
-	id = ge_skills.24
-	is_triggered_only = yes
-	hide_window = yes
-	trigger = {
-		solar_system = {
-			any_fleet_in_system = {
-				any_controlled_ship = {
-					owner = {
-						is_hostile = root.owner
-					}
-					#has_component = ge_shippart_time_freeze
-					check_modifier_value = { modifier = roz_timefreeze_modifier_tooltip value > 0 }
-				}
-			}
-		}
-	}
-	immediate = {
-		add_modifier = {
-			modifier = ge_modifier_time_freeze
-			days = 37
-		}
 	}
 }
 
@@ -382,6 +233,7 @@ fleet_event = {
 		solar_system = {
 			every_fleet_in_system = {
 				limit = {
+					exists = owner
 					owner = {
 						is_hostile = root.owner
 					}
@@ -389,14 +241,8 @@ fleet_event = {
 						has_fleet_flag = roz_time_freeze_active_flag
 					}
 				}
-				add_modifier = {
-					modifier = ge_modifier_time_freeze
-					days = 30
-				}
-				set_timed_fleet_flag = {
-					flag = roz_time_freeze_active_flag
-					days = 30
-				}
+				add_modifier = { modifier = ge_modifier_time_freeze days = 30 }
+				set_timed_fleet_flag = { flag = roz_time_freeze_active_flag days = 30 }
 			}
 		}
 		owner = {
@@ -442,10 +288,7 @@ country_event = {
 	immediate = {
 		fromfrom = {
 			set_fleet_flag = ge_skill_bwg_activated_flag
-			fleet_event = {
-				id = ge_skills.4
-				#days = 1
-			}
+			fleet_event = { id = ge_skills.4 }
 		}
 	}
 }
@@ -460,26 +303,19 @@ fleet_event = {
 		has_fleet_flag = ge_skill_bwg_activated_flag
 	}
 	immediate = {
-		#set_update_modifiers_batch = begin
-		fromfrom = {
-		}
 		if = {
 			limit = {
 				exists = leader
-				leader = {
-					has_trait = leader_trait_ge_Blackwinged_Dragon
-				}
+				leader = { has_trait = leader_trait_ge_Blackwinged_Dragon }
+				is_in_combat = yes
 			}
-			add_modifier = {
-				modifier = ge_modifier_bwg
-				days = 10
-			}
+			add_modifier = { modifier = ge_modifier_bwg days = 10 }
+			fleet_event = { id = ge_skills.4 days = 30 }
 		}
-		fleet_event = {
-			id = ge_skills.4
-			days = 30
+		else = {
+			remove_modifier = ge_modifier_bwg
+			remove_fleet_flag = ge_skill_bwg_activated_flag
 		}
-		#set_update_modifiers_batch = end
 	}
 }
 
@@ -701,6 +537,7 @@ country_event = {
 		NOT = {
 			has_country_flag = roz_sgt_scientist_main_skill_timed_flag
 		}
+		exists = event_target:roz_leader_suigintou_global_target@root
 		event_target:roz_leader_suigintou_global_target@root = {
 			is_councilor = yes
 			leader_class = scientist
@@ -1101,6 +938,7 @@ fleet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
+		exists = leader
 		leader = {
 			has_leader_flag = roz_shinku_flag
 			leader_class = commander

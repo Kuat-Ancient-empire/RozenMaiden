@@ -4361,17 +4361,17 @@ roz_lgate_create_reward_planet = {
 			zone_slot = 2
 		}
 		add_zone = {
-			district = mining_districts
+			district = district_mining
 			zone = zone_minerals
 			zone_slot = 1
 		}
 		add_zone = {
-			district = energy_districts
+			district = district_generator
 			zone = zone_energy
 			zone_slot = 1
 		}
 		add_zone = {
-			district = farming_districts
+			district = district_farming
 			zone = zone_food
 			zone_slot = 1
 		}
@@ -4429,34 +4429,34 @@ roz_lgate_create_reward_planet = {
 
 		add_building = { 
 			building = building_roz_class_5_singularity
-			district = energy_districts
+			district = district_generator
 			zone = zone_energy
 		}
 		add_building = { 
 			building = building_roz_fe_market_2
-			district = energy_districts
+			district = district_generator
 			zone = zone_energy
 		}
 
 		add_building = { 
 			building = building_roz_fe_mine_2
-			district = mining_districts
+			district = district_mining
 			zone = zone_minerals
 		}
 		add_building = { 
 			building = building_roz_fe_silo_2
-			district = mining_districts
+			district = district_mining
 			zone = zone_minerals
 		}
 
 		add_building = { 
 			building = building_roz_nourishment_center
-			district = farming_districts
+			district = district_farming
 			zone = zone_food
 		}
 		add_building = { 
 			building = building_roz_fe_entertainment_2
-			district = farming_districts
+			district = district_farming
 			zone = zone_food
 		}
 
@@ -5043,7 +5043,7 @@ ge_vn_main_beam_on_hit_effect = {
 ge_vn_secondary_beam_on_hit_effect = {
 	random_list = {
 		7 = {  }
-		3= {
+		3 = {
 			if = {
 				limit = { 
 					has_modifier = ge_modifier_time_freeze

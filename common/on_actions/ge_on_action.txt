@@ -70,16 +70,6 @@ on_leader_spawned = {
 	}
 }
 
-on_tech_increased = {
-	events = {
-		#ge_event.46
-		#ge_event.48
-		#ge_event.1000
-		#ge_leader_event.1
-		#ge_affection.23	###完成研究加好感度
-	}
-}
-
 # This = owner of fleet 1
 # From = owner of fleet 2
 # FromFrom = fleet 1
