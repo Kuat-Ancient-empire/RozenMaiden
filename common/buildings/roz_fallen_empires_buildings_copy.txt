@@ -83,7 +83,45 @@ building_roz_affluence_center = {
     can_be_ruined = no
     icon = building_affluence_center
     building_sets = {
-       automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+    #     government
+    #     urban
+    #     entertainment
+    #     resort
+          industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }    
     category = manufacturing
     potential = {
@@ -124,7 +162,45 @@ building_roz_nourishment_center = {
     can_be_ruined = no
     icon = building_nourishment_center
     building_sets = {
-        automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+          farming_automation
+    #     generator_automation
+    #
+    #     government
+    #     urban
+    #     entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+          farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }  
     category = resource
 
@@ -171,7 +247,45 @@ building_roz_dimensional_fabricator = {
     can_be_ruined = no
     icon = building_dimensional_fabricator
     building_sets = {
-        automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+    #     government
+    #     urban
+    #     entertainment
+    #     resort
+          industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+          foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }  
     category = manufacturing
 
@@ -260,7 +374,45 @@ building_roz_class_5_singularity = {
     can_be_ruined = no
     icon = building_bio_reactor_2
     building_sets = {
-        automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+          generator_automation
+    #
+    #     government
+    #     urban
+    #     entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+          generator
+          fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }  
     category = resource
 
@@ -302,7 +454,45 @@ building_roz_nano_forge = {
     icon = building_nano_forge
     category = manufacturing
     building_sets = {
-        automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+    #     government
+    #     urban
+    #     entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+          foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }  
     potential = {
         exists = owner
@@ -351,7 +541,45 @@ building_roz_master_archive = {
     icon = building_syndicate_outreach_office
     category = research
     building_sets = {
-        automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+    #     government
+    #     urban
+    #     entertainment
+    #     resort
+    #     industrial
+          research_unity
+          research
+    #     unity
+    #     trade
+          society
+          physics
+          engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }  
     potential = {
         exists = owner
@@ -457,7 +685,45 @@ building_roz_fe_dome = {
     can_build = no
     icon = building_fe_dome
     building_sets = {
-        automation
+          origin
+    #     automation
+          urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+          government
+          urban
+          entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }  
     category = amenity
 
@@ -512,7 +778,45 @@ building_roz_fe_stronghold = {
     can_build = no
     icon = building_fe_fortress
     building_sets = {
-        automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+    #     government
+    #     urban
+    #     entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+          fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }  
     category = army
 
@@ -604,7 +908,45 @@ building_roz_fe_administration_2 = {
     icon = building_fe_administration_2
     category = unity
     building_sets = {
-        automation
+          origin
+    #     automation
+          urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+          government
+          urban
+    #     entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }  
     potential = {
         exists = owner
@@ -717,7 +1059,45 @@ building_roz_fe_clinic_2 = {
     icon = building_fe_clinic_2
     category = amenity
     building_sets = {
-        automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+    #     government
+    #     urban
+          entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+          medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }  
     potential = {
         exists = owner
@@ -901,7 +1281,45 @@ building_roz_fe_market_2 = {
     category = trade
 
     building_sets = {
-        automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+          generator_automation
+    #
+          government
+          urban
+    #     entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+          trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+          generator
+          fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }  
 
     potential = {
@@ -973,8 +1391,46 @@ building_roz_fe_silo_2 = {
     }
 
     building_sets = {
-		automation
-	}
+          origin
+    #     automation
+    #     urban_automation
+          mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+          government
+          urban
+          entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+          mining
+          fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
+    }
 
     destroy_trigger = {
         always = no
@@ -1024,8 +1480,46 @@ building_roz_fe_entertainment_2 = {
     }
 
     building_sets = {
-		automation
-	}
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+          farming_automation
+    #     generator_automation
+    #
+          government
+          urban
+          entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+          farming
+    #     foundry
+    #     zoo
+    #
+          fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
+    }
 
     destroy_trigger = {
         always = no
@@ -1074,8 +1568,46 @@ building_roz_fe_lab_2 = {
     category = research
 
     building_sets = {
-        automation
-	}
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+    #     government
+    #     urban
+    #     entertainment
+    #     resort
+    #     industrial
+          research_unity
+          research
+    #     unity
+    #     trade
+          society
+          physics
+          engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
+    }
 
     empire_limit = {
         base = 3
@@ -1191,7 +1723,45 @@ building_roz_fe_mine_2 = {
         exists = owner
     }
     building_sets = {
-        automation
+          origin
+    #     automation
+    #     urban_automation
+          mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+    #     government
+    #     urban
+    #     entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+          mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }  
     destroy_trigger = {
         always = no

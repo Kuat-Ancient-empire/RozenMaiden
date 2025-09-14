@@ -23,6 +23,31 @@ ge_highest_reference_frame_edicts = {
 	}
 }
 
+roz_suigintou_transmission_when_OGAS_enable_edicts = {
+	length = -1
+	icon = GFX_sgt_edit_icon_1
+	potential = {
+		always = no #还是兼容不了少前，摸了
+
+		has_global_flag = GF_Stellairs_Crisis_Coalition_Installed
+		has_country_flag = roz_leader_suigintou_get
+		NOR = {
+			has_country_flag = ge_nfield_diplomacy_activated
+			has_country_flag = ge_sgt_busy
+		}
+	}
+	effect = {
+		# fire_on_action = {
+		# 	on_action = on_custom_diplomacy
+		# 	scopes = { from = event_target:roz_suigintou_global_country@root }
+		# }
+		country_event = { id = ge_communication.133 }
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
 # roz_rosa_mystica_enhance_edicts = {
 # 	length = -1
 # 	icon = GFX_sgt_edit_icon_2

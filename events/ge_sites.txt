@@ -29,33 +29,29 @@ country_event = {
 	immediate = {
 		#generate_sgt_site_on_game_start = yes
 		random_planet_within_border = {
-			limit = {
-				space_owner = {
-					is_fallen_empire = no
-				}
-			}
+			# limit = {
+			# 	space_owner = {
+			# 		is_fallen_empire = no
+			# 	}
+			# }
 			weights = {
 				base = 1
 				modifier = {
 					factor = 100
 					is_capital = yes
-					space_owner = {
-						is_fallen_empire = no
-					}
+					#space_owner = { is_fallen_empire = no }
 				}
 			}
 			solar_system = {
 				closest_system = {
 					min_steps = 2
 					max_steps = 17
-					use_bypasses = yes
+					use_bypasses = no
 					limit = {
 						NOT = {
 							has_star_flag = ge_suigintou_site_counted
 						}
-						NOT = {
-							any_fleet_in_system = { owner = { is_hostile = root } }
-						}
+						#NOT = { any_fleet_in_system = { owner = { is_hostile = root } } }
 						NOR = {
 							has_star_flag = lcluster
 							has_star_flag = lcluster1
@@ -69,7 +65,7 @@ country_event = {
 						any_system_planet = {
 							has_owner = no
 							is_colony = no
-							has_anomaly = no
+							#has_anomaly = no
 							NOR = {
 								exists = archaeological_site
 								has_planet_flag = hatchling_egg

@@ -25,15 +25,45 @@ building_llk_paradox_origin = {
     }
 
     building_sets = {
-        # government
-        # urban
-        # entertainment
-        # resort
-        # industrial
-        # research_unity
-        # research
-        # unity
-        automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+          government
+          urban
+    #     entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }
 
     potential = {
@@ -122,15 +152,45 @@ building_roz_power_core = {
     #}
 
     building_sets = {
-        # government
-        # urban
-        # entertainment
-        # resort
-        # industrial
-        # research_unity
-        # research
-        # unity
-        automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+          government
+          urban
+    #     entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }
 
     potential = {
@@ -199,13 +259,45 @@ building_roz_dolls_factory = {
     #}
 
     building_sets = {
-        # government
-        # urban
-        # industrial
-        # research_unity
-        # research
-        # unity
-        automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+          government
+          urban
+    #     entertainment
+    #     resort
+          industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+          foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }
 
     potential = {
@@ -283,7 +375,45 @@ building_roz_abyss_altar = {
     category = government     		#分类，可以让玩家更好的找到该建筑
 
     building_sets = {
-        automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+    #     government
+    #     urban
+    #     entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }
 
     potential = {
@@ -321,7 +451,45 @@ building_roz_abyss_altar_unknow = {
     category = government
 
     building_sets = {
-        automation
+          origin
+    #     automation
+    #     urban_automation
+    #     mining_automation
+    #     farming_automation
+    #     generator_automation
+    #
+    #     government
+    #     urban
+    #     entertainment
+    #     resort
+    #     industrial
+    #     research_unity
+    #     research
+    #     unity
+    #     trade
+    #     society
+    #     physics
+    #     engineering
+    #     cosmogenesis_world
+    #     fallen_empire
+    #     farming
+    #     foundry
+    #     zoo
+    #
+    #     fallen_empire_farming
+    #     generator
+    #     fallen_empire_generator
+    #     mining
+    #     fallen_empire_mining
+    #
+    #     knights
+    #     hydroponics
+    #     medical
+    #     betharian
+    #     fortress
+    #     hunting_zone
+    #     bio_trophy
+    #
     }
 
     potential = {

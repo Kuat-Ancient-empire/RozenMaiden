@@ -10,6 +10,9 @@ mod_planet_jobs_consumer_goods_upkeep_mult: "岗位消费品维护"
 edict_ge_highest_reference_frame_edicts:0 "最高参考系"
 edict_ge_highest_reference_frame_edicts_desc:0 "这又不是缸中之脑，为什么会有最高参考系这种东西？"
 
+ edict_roz_suigintou_transmission_when_OGAS_enable_edicts: "§M联系N之领域§!"
+ edict_roz_suigintou_transmission_when_OGAS_enable_edicts_desc: "当OGAS启用并无法在外交界面联系水银灯时，这是一个备选方案。"
+
 ge_test_edicts:0 "research_all_technologies"
 ge_test_edicts_desc:0 "§R~§!"
 

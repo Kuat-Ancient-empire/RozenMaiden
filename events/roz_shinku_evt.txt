@@ -1987,6 +1987,7 @@ country_event = {
     picture_event_data = {
         room = paragon_skrand_room
     }
+
     # trigger = {
     #     is_ai = no
     #     has_country_flag = roz_SK_1_kxbj_complete

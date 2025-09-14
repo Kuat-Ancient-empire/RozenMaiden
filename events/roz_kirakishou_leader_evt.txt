@@ -629,7 +629,11 @@ country_event = {   #雪华绮晶通讯主界面
         from = {
             is_country_type = ge_N_Field
             is_same_value = event_target:roz_kirakishou_global_country@root
-            NOT = { is_same_value = event_target:roz_suigintou_global_country@root }
+            NOR = {
+                is_same_value = event_target:roz_suigintou_global_country@root
+                is_same_value = event_target:roz_shinku_global_country@root
+                is_same_value = event_target:roz_hinaichigo_global_country@root
+            }
         }
         has_country_flag = roz_kirakishou_get
         exists = event_target:roz_leader_kirakishou_global_target@root

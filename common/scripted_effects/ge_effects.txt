@@ -63,7 +63,9 @@ generate_sgt_site_on_game_start_when_singleplayer = {
 		limit = { is_multiplayer = no }
 		spawn_system = {
 			min_distance = 7
-			min_jumps = 0
+			max_distance = 10
+			max_jumps = 3
+			min_jumps = 1
 			initializer = trinary_init_01
 			hyperlane = yes
 		}
@@ -4391,9 +4393,20 @@ roz_lgate_create_reward_planet = {
 		#remove_building = building_colony_shelter
 
 		#add_building = building_roz_ancient_palace
-		add_building = building_roz_fe_stronghold
-		add_building = building_roz_fe_dome
-		add_building = building_roz_fe_clinic_2
+		add_building = {
+			building = building_roz_fe_stronghold
+			district = district_city
+			#zone = zone_default
+		}
+		add_building = {
+			building = building_roz_fe_dome
+			district = district_city
+			#zone = zone_default
+		}
+		add_building = {
+			building = building_roz_fe_clinic_2
+			district = district_city
+		}
 
 		add_building = { 
 			building = building_roz_fe_administration_2

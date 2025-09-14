@@ -291,6 +291,7 @@ country_event = {
 			NOR = {
 				is_same_value = event_target:roz_kirakishou_global_country@root
 				is_same_value = event_target:roz_shinku_global_country@root
+				is_same_value = event_target:roz_hinaichigo_global_country@root
 			}
 		}
 		has_country_flag = roz_leader_suigintou_get
@@ -887,6 +888,21 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+#########
+country_event = {
+	id = ge_communication.133
+	base = ge_communication.100
+	is_triggered_only = yes
+	trigger = {
+		NOR = {
+			has_country_flag = ge_nfield_diplomacy_activated
+			has_country_flag = ge_sgt_busy
+		}
+		has_country_flag = roz_leader_suigintou_get
+		exists = event_target:roz_leader_suigintou_global_target@root
 	}
 }
 
