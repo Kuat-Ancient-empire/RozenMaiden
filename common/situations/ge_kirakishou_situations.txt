@@ -968,8 +968,6 @@ kirakishou_battle_field_situation = {
 		base = 0
 	}
 	on_monthly = {
-		random_events = {
-		}
 		events = {
 			ge_event.30501
 			ge_event.30601

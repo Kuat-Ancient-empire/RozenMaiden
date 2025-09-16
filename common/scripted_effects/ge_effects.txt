@@ -1457,7 +1457,6 @@ create_ge_kirakishou_hostile_ship_stage2 = {
 
 		}
 	}
-
 	create_fleet = {
 		name = "NAME_roz_krks_zakko"
 		settings = {
@@ -1505,7 +1504,6 @@ create_ge_kirakishou_hostile_ship_stage2 = {
 
 		}
 	}
-
 }
 
 create_ge_kirakishou_hostile_ship_stage3 = {
@@ -1784,13 +1782,6 @@ roz_krks_inv_end_loop_effect = {	#scope:country
 		limit = {
 			has_leader_flag = roz_suigintou_flag
 		}
-		#owner = {
-		#    set_variable = {
-		#        which = roz_suigintou_affection_temp
-		#        value = prev.roz_suigintou_affection
-		#    }
-		#}
-		#save_global_event_target_as = roz_sgt_leader_target_temp
 		exile_leader_as = this
 	}
 	every_owned_fleet = {

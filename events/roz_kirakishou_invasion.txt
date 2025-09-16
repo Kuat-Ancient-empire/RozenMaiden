@@ -2309,25 +2309,29 @@ country_event = {	#防御舰队被消灭
 ###################################################
 #2阶段开始 #scope：雪华绮晶country
 
-country_event = {   #月检一阶段是否击破，防卡事件链
+situation_event = {   #月检一阶段是否击破，防卡事件链
     id = ge_event.30501
     hide_window = yes
     is_triggered_only = yes
     trigger = {
-        event_target:kirakishou_hostile_country@root = {
+        event_target:kirakishou_hostile_country@owner = {
             NOT = {
                 any_owned_fleet = {
                     has_fleet_flag = kirakishou_Avatar_fleet_flag
                 }
             }
         }
-        any_situation = {
-            is_situation_type = kirakishou_battle_field_situation
-            current_stage = kr_bf_stage_5
+        current_stage = kr_bf_stage_5
+        owner = {
+            NOR = {
+                has_active_event = { ge_event.3051 }
+                has_active_event = { ge_event.3061 }
+                has_active_event = { ge_event.3071 }
+            }
         }
     }
     immediate = {
-        event_target:kirakishou_hostile_country@root = {
+        owner = {
             country_event = {
                 id = ge_event.3051
             }
@@ -2356,6 +2360,7 @@ country_event = {
     }
 }
 
+#this: player
 country_event = {
     id = ge_event.3051
     title = "ge_event.3051.title"
@@ -2366,14 +2371,13 @@ country_event = {
     trigger = {
         #防止多次触发
         NOT = { has_country_flag = roz_bf_stage2_flag }
+        has_country_flag = roz_krks_invision_begin_flag
+        event_target:kirakishou_hostile_country@root = { exists = this }
     }
     immediate = {
         set_country_flag = roz_bf_stage2_flag
         event_target:krks_bf_situation_target@root = {
             add_situation_progress = -25
-        }
-        from = {
-
         }
         if = {
             limit = {
@@ -2403,25 +2407,29 @@ country_event = {
 
 #3阶段 #scope：雪华绮晶country
 
-country_event = {   #月检二阶段是否击破，防卡事件链
+situation_event = {   #月检二阶段是否击破，防卡事件链
     id = ge_event.30601
     hide_window = yes
     is_triggered_only = yes
     trigger = {
-        event_target:kirakishou_hostile_country@root = {
+        event_target:kirakishou_hostile_country@owner = {
             NOT = {
                 any_owned_fleet = {
                     has_fleet_flag = kirakishou_dh_fleet_flag
                 }
             }
         }
-        any_situation = {
-            is_situation_type = kirakishou_battle_field_situation
-            current_stage = kr_bf_stage_4
+        current_stage = kr_bf_stage_4
+        owner = {
+            NOR = {
+                has_active_event = { ge_event.3051 }
+                has_active_event = { ge_event.3061 }
+                has_active_event = { ge_event.3071 }
+            }
         }
     }
     immediate = {
-        event_target:kirakishou_hostile_country@root = {
+        owner = {
             country_event = {
                 id = ge_event.3061
             }
@@ -2458,9 +2466,9 @@ country_event = {
     #fire_only_once = yes
     picture = GFX_roz_evt_krks_tiyanki
     trigger = {
-        NOT = {
-            has_country_flag = roz_bf_stage3_flag
-        }
+        NOT = { has_country_flag = roz_bf_stage3_flag }
+        has_country_flag = roz_krks_invision_begin_flag
+        event_target:kirakishou_hostile_country@root = { exists = this }
     }
     immediate = {
         if = {
@@ -2492,25 +2500,29 @@ country_event = {
 ###########################
 #4阶段开始 #scope：雪华绮晶country
 
-country_event = {   #月检三阶段是否击破，防卡事件链
+situation_event = {   #月检三阶段是否击破，防卡事件链
     id = ge_event.30701
     hide_window = yes
     is_triggered_only = yes
     trigger = {
-        event_target:kirakishou_hostile_country@root = {
+        event_target:kirakishou_hostile_country@owner = {
             NOT = {
                 any_owned_fleet = {
                     has_fleet_flag = kirakishou_et_fleet_flag
                 }
             }
         }
-        any_situation = {
-            is_situation_type = kirakishou_battle_field_situation
-            current_stage = kr_bf_stage_3
+        current_stage = kr_bf_stage_3
+        owner = {
+            NOR = {
+                has_active_event = { ge_event.3051 }
+                has_active_event = { ge_event.3061 }
+                has_active_event = { ge_event.3071 }
+            }
         }
     }
     immediate = {
-        event_target:kirakishou_hostile_country@root = {
+        owner = {
             country_event = {
                 id = ge_event.3061
             }
@@ -2547,9 +2559,9 @@ country_event = {
     #fire_only_once = yes
     picture = GFX_roz_evt_krks_tiyanki
     trigger = {
-        NOT = {
-            has_country_flag = roz_bf_stage4_flag
-        }
+        NOT = { has_country_flag = roz_bf_stage4_flag }
+        has_country_flag = roz_krks_invision_begin_flag
+        event_target:kirakishou_hostile_country@root = { exists = this }
     }
     immediate = {
         set_country_flag = roz_bf_stage4_flag
@@ -3233,19 +3245,13 @@ country_event = {
     immediate = {
         if = {
             limit = {
-                NOT = {
-                    event_target:kirakishou_hostile_country@root = {
-                        NOT = {
-                            any_owned_fleet = {
-                                has_fleet_flag = kirakishou_hostile_fleet_flag
-                            }
-                        }
-                    }
+                event_target:kirakishou_hostile_country@root = {
+                    any_owned_fleet = { has_fleet_flag = kirakishou_everything_fleet_flag }
                 }
             }
             country_event = {
                 id  = ge_event.20621
-                days = 2
+                days = 1
             }
         }
         else_if = {
@@ -3261,7 +3267,7 @@ country_event = {
                     has_modifier = disable_ap_ge_0
                     has_modifier = disable_ap_ge_1
                 }
-
+                NOT = { has_active_event = { ge_event.2062 } }
             }
             roz_krks_inv_end_loop_effect = yes
             break = yes
@@ -3312,6 +3318,8 @@ country_event = {	#战斗结束
         #    #save_global_event_target_as = roz_sgt_leader_target_temp
         #    exile_leader_as = this
         #}
+        remove_modifier = disable_ap_ge_0
+        remove_modifier = disable_ap_ge_1
         fromfromfrom = {
             create_ambient_object = {
                 type = "star_explosion"
@@ -3411,8 +3419,6 @@ country_event = {	#战斗结束
             modifier = roz_krks_battle_win_modifier
             years = 3
         }
-        remove_modifier = disable_ap_ge_0
-        remove_modifier = disable_ap_ge_1
         remove_country_flag = ge_krks_time_freeze_loop_start_flag
         if = {
             limit = {
