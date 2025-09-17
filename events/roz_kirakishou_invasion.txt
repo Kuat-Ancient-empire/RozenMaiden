@@ -1754,6 +1754,7 @@ country_event = {	#陷落 #局势开始
         is_ai = no
     }
     immediate = {
+        set_country_flag = roz_krks_invision_begin_flag
         every_owned_planet = {
             limit = { is_under_colonization = no }
             while = {

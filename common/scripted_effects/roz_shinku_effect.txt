@@ -2727,51 +2727,61 @@ roz_abyss_madgod_hunter_fleet_create_count_in_diff = {
 #深渊疯神 哨站挨个刷舰队
 roz_abyss_madgod_hunter_fleet_create_establish_in_diff = {
 	optimize_memory
+	#减少刷的数量
+	set_variable = { which = roz_unholy_invasion_difficulty_temp value = event_target:global_event_country.roz_unholy_invasion_difficulty }
+	divide_variable = { which = roz_unholy_invasion_difficulty_temp value = 2 }
+	round_variable = roz_unholy_invasion_difficulty_temp
+	###
+	if = {
+		limit = { check_variable = { which = roz_unholy_invasion_difficulty_temp value < 1 } }
+		change_variable = { which = roz_unholy_invasion_difficulty_temp value = 1 }
+	}
 	while = {
-		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		count = roz_unholy_invasion_difficulty_temp
 		random_list = {
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 2 num2 = 1 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 2 num2 = 0 num3 = 0 } }
 			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 1 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 0 num2 = 2 num3 = 0 } }
 			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 0 num2 = 1 num3 = 1 } }
 		}
 	}
 	while = {
-		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		count = roz_unholy_invasion_difficulty_temp
 		random_list = {
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 2  num = 2 num2 = 1 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 2  num = 2 num2 = 1 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 2  num = 1 num2 = 1 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 2  num = 0 num2 = 1 num3 = 1 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 2 num2 = 0 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 1 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 0 num2 = 2 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 0 num2 = 1 num3 = 1 } }
 		}
 	}
 	while = {
-		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		count = roz_unholy_invasion_difficulty_temp
 		random_list = {
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 2 num2 = 1 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 2 num2 = 0 num3 = 0 } }
 			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 1 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 0 num2 = 2 num3 = 0 } }
 			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 0 num2 = 1 num3 = 1 } }
 		}
 	}
 	while = {
-		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		count = roz_unholy_invasion_difficulty_temp
 		random_list = {
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 2 num2 = 1 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 2 num2 = 0 num3 = 0 } }
 			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 1 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 0 num2 = 2 num3 = 0 } }
 			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 0 num2 = 1 num3 = 1 } }
 		}
 	}
 	while = {
-		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+		count = roz_unholy_invasion_difficulty_temp
 		random_list = {
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 2 num2 = 1 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 2 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 2 num2 = 0 num3 = 0 } }
 			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 1 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 0 num2 = 2 num3 = 0 } }
 			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 0 num2 = 1 num3 = 1 } }
 		}
 	}
+	clear_variable = roz_unholy_invasion_difficulty_temp
 }
 #执行
 roz_abyss_vass_hunter_fleet_create_count_in_diff = {

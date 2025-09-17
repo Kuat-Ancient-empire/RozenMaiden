@@ -1864,7 +1864,7 @@ country_event = {
     }
     trigger = {
         is_ai = no
-        NOT = { exists = event_target:roz_hinaichigo_global_country@root }
+        #NOT = { exists = event_target:roz_hinaichigo_global_country@root }
     }
     immediate = {
 
@@ -2145,6 +2145,10 @@ country_event = {
     option = {
         name = roz_shinku_evt.512.bb
     }
+    option = {
+        name = roz_shinku_evt.512.cc
+        trigger = { has_ascension_perk = ap_cosmogenesis }
+    }
     after = {
         add_resource = {
             influence = 200
@@ -2170,7 +2174,7 @@ country_event = {
     }
     option = {
         name = roz_shinku_evt.513.aa
-        play_sound = { sound = event_big_door_opening location = root.capital_scope }
+        play_sound = event_big_door_opening
         country_event = {
             id = roz_shinku_evt.514
             days = 1
@@ -2183,6 +2187,12 @@ country_event = {
         add_monthly_resource_mult = {
             resource = unity
             value = 18
+        }
+        if = {
+            limit = { has_ascension_perk = ap_cosmogenesis }
+            add_resource = {
+                advanced_logic = 500
+            }
         }
     }
 }
@@ -3185,7 +3195,7 @@ country_event = {
                 }
                 country_event = { id = roz_shinku_evt.5631 }
             }
-            4 = {}
+            10 = {}
         }
     }
 }
