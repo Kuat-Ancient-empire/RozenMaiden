@@ -3979,6 +3979,10 @@ country_event = {   ##路线收束：万事俱备  #资讯重构仪可启用
     option = {
         name = roz_shinku_evt.650.aa
         custom_tooltip = roz_shinku_evt.650.ct
+        random_situation = {
+            limit = { is_situation_type = roz_sk_4_madgod_invasion_explose_the_galaxy }
+            destroy_situation = this
+        }
     }
 }
 

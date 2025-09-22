@@ -279,6 +279,8 @@ country_event = { #控制台effect测试区
 			}
 		}
 
+
+
 		# while = {
 		# 	count = 3
 		# 	random_playable_country = {

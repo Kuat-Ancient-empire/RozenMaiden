@@ -58,7 +58,8 @@ llk_over_dimension = {   #ID
             }
             energy = 30
 			influence = 0.25
-            time = 1
+            food = 5
+            #time = 1
 		}
         upkeep = {
             trigger = {

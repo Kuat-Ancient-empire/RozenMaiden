@@ -39,6 +39,7 @@ country_event = {
 					class = commander
 					name = "NAME_suigintou"
 					skill = 1
+					tier = leader_tier_legendary
 					gender = female
 					species = owner_main_species
 					immortal = yes

@@ -1,4 +1,4 @@
-version="1.3.0"
+version="1.3.1"
 tags={
 	"Buildings"
 	"Events"
@@ -9,5 +9,5 @@ tags={
 }
 name="Rozen Maiden suigintou Leader Pack - 蔷薇少女 水银灯领袖包"
 picture="thumbnail.png"
-supported_version="v4.0.*"
+supported_version="v4.1.*"
 remote_file_id="2776070504"
