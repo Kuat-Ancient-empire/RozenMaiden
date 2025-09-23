@@ -1250,6 +1250,7 @@ country_event = {
 		#	# 	add_trait = trait_cor_ingenios
 		#	# }
 		#}
+		set_country_flag = ge_allow_archetype_change
 		every_owned_species = {
 			limit = {
 				is_being_purged = no

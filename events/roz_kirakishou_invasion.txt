@@ -2315,8 +2315,8 @@ situation_event = {   #月检一阶段是否击破，防卡事件链
     hide_window = yes
     is_triggered_only = yes
     trigger = {
+        exists = event_target:kirakishou_hostile_country@owner
         event_target:kirakishou_hostile_country@owner = {
-            exists = this
             NOT = {
                 any_owned_fleet = {
                     has_fleet_flag = kirakishou_Avatar_fleet_flag
@@ -2325,11 +2325,7 @@ situation_event = {   #月检一阶段是否击破，防卡事件链
         }
         current_stage = kr_bf_stage_5
         owner = {
-            NOR = {
-                has_active_event = { ge_event.3051 }
-                has_active_event = { ge_event.3061 }
-                has_active_event = { ge_event.3071 }
-            }
+            NOT = { has_active_event = { ge_event.3051 ge_event.3061 ge_event.3071 } }
         }
     }
     immediate = {
@@ -2414,6 +2410,7 @@ situation_event = {   #月检二阶段是否击破，防卡事件链
     hide_window = yes
     is_triggered_only = yes
     trigger = {
+        exists = event_target:kirakishou_hostile_country@owner
         event_target:kirakishou_hostile_country@owner = {
             exists = this
             NOT = {
@@ -2423,12 +2420,8 @@ situation_event = {   #月检二阶段是否击破，防卡事件链
             }
         }
         current_stage = kr_bf_stage_4
-        owner = {
-            NOR = {
-                has_active_event = { ge_event.3051 }
-                has_active_event = { ge_event.3061 }
-                has_active_event = { ge_event.3071 }
-            }
+         owner = {
+            NOT = { has_active_event = { ge_event.3051 ge_event.3061 ge_event.3071 } }
         }
     }
     immediate = {
@@ -2508,6 +2501,7 @@ situation_event = {   #月检三阶段是否击破，防卡事件链
     hide_window = yes
     is_triggered_only = yes
     trigger = {
+        exists = event_target:kirakishou_hostile_country@owner
         event_target:kirakishou_hostile_country@owner = {
             exists = this
             NOT = {
@@ -2518,11 +2512,7 @@ situation_event = {   #月检三阶段是否击破，防卡事件链
         }
         current_stage = kr_bf_stage_3
         owner = {
-            NOR = {
-                has_active_event = { ge_event.3051 }
-                has_active_event = { ge_event.3061 }
-                has_active_event = { ge_event.3071 }
-            }
+            NOT = { has_active_event = { ge_event.3051 ge_event.3061 ge_event.3071 } }
         }
     }
     immediate = {

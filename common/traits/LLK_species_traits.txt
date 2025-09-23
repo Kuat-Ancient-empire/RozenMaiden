@@ -83,26 +83,15 @@ trait_cor_dragon_totem = {
 		ROBOT
 		MACHINE
 		PRESAPIENT
-
-		WARSHIPGIRL
-		SHENHAI
-		STARSHIPGIRLS
-		KANSEN
-		INNOCENTSHOJO
-
-		Magical_Bitch
-		Magical_Girl
-		PARASITE
-		WHORE
-		TENTACLE
-		LOVEMACHINE
-		YGWAWA
-		HOLYROBOT
-		MONSTER
-		Lust_Girl
-		Erotic_Creation
 		##None
 	}
+
+	#SCOPE: THIS = SPECIES FROM = COUNTRY
+	#TODO: Add archetype override to allow specific archetypes regardless of species archetype
+	archetype_override = {
+		from = { has_country_flag = ge_allow_archetype_change }
+	}
+	
 	species_potential_add = {
 		from = {
 			AND = {
@@ -244,25 +233,32 @@ trait_cor_ingenios = {
 		MACHINE
 		PRESAPIENT
 		
-		WARSHIPGIRL
-		SHENHAI
-		STARSHIPGIRLS
-		KANSEN
-		INNOCENTSHOJO
+		# WARSHIPGIRL
+		# SHENHAI
+		# STARSHIPGIRLS
+		# KANSEN
+		# INNOCENTSHOJO
 
-		Magical_Bitch
-		Magical_Girl
-		PARASITE
-		WHORE
-		TENTACLE
-		LOVEMACHINE
-		YGWAWA
-		HOLYROBOT
-		MONSTER
-		Lust_Girl
-		Erotic_Creation
+		# Magical_Bitch
+		# Magical_Girl
+		# PARASITE
+		# WHORE
+		# TENTACLE
+		# LOVEMACHINE
+		# YGWAWA
+		# HOLYROBOT
+		# MONSTER
+		# Lust_Girl
+		# Erotic_Creation
 		##None
 	}
+
+	#SCOPE: THIS = SPECIES FROM = COUNTRY
+	#TODO: Add archetype override to allow specific archetypes regardless of species archetype
+	archetype_override = {
+		from = { has_country_flag = ge_ap2_awakening }
+	}
+	
 	species_potential_add = {
 		from = {
 			has_technology = GE_tech_reactor
