@@ -1298,6 +1298,7 @@ country_event = {
 				is_fallen_empire_machine = no
 			}
 			save_event_target_as = roz_sites_fallen_empire_target
+			establish_communications = root
 		}
 	}
 	option = {

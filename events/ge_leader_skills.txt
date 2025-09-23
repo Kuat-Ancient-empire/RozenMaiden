@@ -591,7 +591,8 @@ country_event = {
 				}
 				while = {
 					count = 1
-					Mercury_lamp_helps_research_current_technology = yes
+					#Mercury_lamp_helps_research_current_technology = yes
+					finish_all_researches = yes
 				}
 			}
 			else_if = {
@@ -603,7 +604,8 @@ country_event = {
 				}
 				while = {
 					count = 2
-					Mercury_lamp_helps_research_current_technology = yes
+					#Mercury_lamp_helps_research_current_technology = yes
+					finish_all_researches = yes
 				}
 			}
 			else_if = {
@@ -615,7 +617,8 @@ country_event = {
 				}
 				while = {
 					count = 3
-					Mercury_lamp_helps_research_current_technology = yes
+					#Mercury_lamp_helps_research_current_technology = yes
+					finish_all_researches = yes
 				}
 			}
 		}
