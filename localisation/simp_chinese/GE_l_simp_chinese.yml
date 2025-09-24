@@ -312,7 +312,7 @@ TIMELINE_EVENT_timeline_roz_suigintou_get_TOOLTIP: "§M第一人偶§!\n§Y重�
 timeline_ge_sgt_flagship_get: "§B王座——启航§!"
 TIMELINE_EVENT_timeline_ge_sgt_flagship_get_TOOLTIP: "§B王座——启航§!\n§Y里程碑§!\n\n§L[GetDate]§!，蕴含希灵帝国和科技与善意的$Ge_Vampirilis_Ortaam$正式加入[Root.GetName]。"
 
-timeline_ge_tech_reactor_get: "§d掌控虚空§!"
+timeline_ge_tech_reactor_get: "§d掌控虚空之秘§!"
 TIMELINE_EVENT_timeline_ge_tech_reactor_get_TOOLTIP: "§d掌控虚空§!\n§Y里程碑§!\n\n§L[GetDate]§!，历经困难，[Root.GetName]终于掌握了虚空能源，这是一个黄金时代的开端——伟大的虚空能源革命，开始了。"
 
 timeline_roz_kirakishou_get: "§P第七人偶§!"

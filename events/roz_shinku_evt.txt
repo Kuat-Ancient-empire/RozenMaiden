@@ -907,12 +907,12 @@ situation_event = {
             5 = { situation_event = { id = roz_shinku_evt.412 } }
             5 = { situation_event = { id = roz_shinku_evt.413 } }
             5 = { situation_event = { id = roz_shinku_evt.414 } }
-            2 = { modifier = { factor = 0 owner = { has_modifier = roz_rosa_analysis_industrial } } situation_event = { id = roz_shinku_evt.415 } }
-            2 = { modifier = { factor = 0 owner = { has_modifier = roz_rosa_analysis_research } } situation_event = { id = roz_shinku_evt.416 } }
-            2 = { modifier = { factor = 0 owner = { has_modifier = roz_rosa_analysis_military } } situation_event = { id = roz_shinku_evt.417 } }
+            3 = { modifier = { factor = 0 owner = { has_modifier = roz_rosa_analysis_industrial } } situation_event = { id = roz_shinku_evt.415 } }
+            3 = { modifier = { factor = 0 owner = { has_modifier = roz_rosa_analysis_research } } situation_event = { id = roz_shinku_evt.416 } }
+            3 = { modifier = { factor = 0 owner = { has_modifier = roz_rosa_analysis_military } } situation_event = { id = roz_shinku_evt.417 } }
             5 = { modifier = { factor = 0 owner = { has_modifier = roz_rosa_analysis_temporary } } situation_event = { id = roz_shinku_evt.418 } }
             6 = { situation_event = { id = roz_shinku_evt.419 } }
-            1 = { modifier = { factor = 0 owner = { has_modifier = roz_rosa_analysis_research_fault } } situation_event = { id = roz_shinku_evt.420 } }
+            2 = { modifier = { factor = 0 owner = { has_modifier = roz_rosa_analysis_research_fault } } situation_event = { id = roz_shinku_evt.420 } }
             4 = { situation_event = { id = roz_shinku_evt.421 } }
             4 = { situation_event = { id = roz_shinku_evt.422 } }
             2 = { modifier = { factor = 0 has_situation_flag = roz_rosa_analysis_negative_flag } situation_event = { id = roz_shinku_evt.423 } }

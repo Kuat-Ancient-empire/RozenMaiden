@@ -70,11 +70,11 @@ roz_madgod_country_initiate = {
 	optimize_memory
 	create_species = {
 		name_list = roz_abyss_faction
-		name = random
+		name = NAME_roz_Uranus
 		class = random_non_machine
-		portrait = random
+		portrait = roz_exd_red
 		traits = {
-			ideal_planet_class = pc_habitat
+			ideal_planet_class = pc_nuked
 			trait = random_traits
 		}
 	}
