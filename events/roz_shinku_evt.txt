@@ -1718,7 +1718,7 @@ country_event = {
         room = no_video_feed_room
     }
     trigger = {
-        is_ai = no
+        exists = this
     }
     option = {
         name =  roz_shinku_evt.442.0
@@ -1739,7 +1739,7 @@ country_event = {
         room = no_video_feed_room
     }
     trigger = {
-        is_ai = no
+        exists = this
     }  
     option = {
         name =  roz_shinku_evt.442.aa

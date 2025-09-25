@@ -2321,7 +2321,7 @@ utility_component_template = {
 	# 	ge_void_lord
 	# }
 	potential = {
-		ship_size_multiplier < 32
+		ship_size_multiplier <= 32
 		from = {
 			OR = {
 				country_uses_bio_ships = yes
@@ -2362,7 +2362,7 @@ utility_component_template = {
 	# 	ge_void_lord
 	# }
 	potential = {
-		ship_size_multiplier < 32
+		ship_size_multiplier <= 32
 		from = {
 			OR = {
 				country_uses_bio_ships = yes
@@ -2462,7 +2462,7 @@ utility_component_template = {
 	# 	ge_void_lord
 	# }
 	potential = {
-		ship_size_multiplier < 32
+		ship_size_multiplier <= 32
 		from = {
 			OR = {
 				country_uses_bio_ships = yes

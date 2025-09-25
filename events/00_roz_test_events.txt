@@ -1043,6 +1043,25 @@ country_event = { #控制台effect测试区
 		# trigger exists = event_target:roz_madgod_force_country@root
 		# trigger any_country = { has_country_flag = roz_abyss_vass_country }
 		# trigger any_country = { has_country_flag = roz_madgod_force_country_flag }
+
+		no_scope = {
+			# no_scope: makes system positions originate from galactic core
+			spawn_system = {
+				min_distance >= 10
+				max_distance <= 30
+				min_orientation_angle = 90
+				max_orientation_angle = 270
+				initializer = VOY_AN_Terra_star_system
+				hyperlane = no
+			}
+		}
+
+
+
+
+
+
+
 		if = {
 			limit = {  }
 			while = {

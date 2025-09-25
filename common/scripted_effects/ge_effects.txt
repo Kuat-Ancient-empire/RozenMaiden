@@ -4874,10 +4874,13 @@ roz_leader_name_set_effect = {	#领袖名语种切换
 
 roz_setting_menu_initialize = {
 	####
-	event_target:global_event_country = {
-		set_variable = {
-			which = roz_unholy_invasion_difficulty
-			value = 2
+	if = {
+		limit = { event_target:global_event_country = { NOT = { is_variable_set = roz_unholy_invasion_difficulty } } }
+		event_target:global_event_country = {
+			set_variable = {
+				which = roz_unholy_invasion_difficulty
+				value = 2
+			}
 		}
 	}
 	####
