@@ -37,10 +37,6 @@ planet_event = {
 			remove_megastructure = this
 		}
 		#set_update_modifiers_batch = begin
-		add_threat = {
-			who = from.owner
-			amount = 10
-		}
 		from = {
 
 			owner = {
@@ -91,54 +87,68 @@ planet_event = {
 			save_event_target_as = destroyed_system
 			
 		}
-		every_playable_country = {
+		if = {
 			limit = {
-				is_ai = no
-				has_communications = event_target:crisis_country
-				NOR = {
-					is_same_value = event_target:crisis_country
+				space_owner = {
+					NOR = {
+						has_country_flag = roz_madgod_force_country_flag
+						has_country_flag = roz_abyss_vass_country
+					}
+				}
+			}
+			add_threat = {
+				who = from.owner
+				amount = 10
+			}
+			every_playable_country = {
+				limit = {
+					is_ai = no
+					has_communications = event_target:crisis_country
+					NOR = {
+						is_same_value = event_target:crisis_country
+						has_country_flag = can_build_star_eaters
+						has_country_flag = star_eater_alert@event_target:crisis_country
+					}
+					intel_level = {
+						system = event_target:destroyed_system
+						level = none
+					}
+				}
+				country_event = {
+					id = crisis.6180
+				}
+			}
+			every_playable_country = {
+				limit = {
+					is_ai = no
+					has_communications = event_target:crisis_country
+					NOR = {
+						is_same_value = event_target:crisis_country
+						has_country_flag = can_build_star_eaters
+						has_country_flag = star_eater_alert@event_target:crisis_country
+					}
+					intel_level = {
+						system = event_target:destroyed_system
+						level > none
+					}
+				}
+				country_event = {
+					id = crisis.6181
+				}
+			}
+			every_playable_country = {
+				limit = {
+					is_ai = no
+					has_communications = event_target:crisis_country
+					NOR = {
+						is_same_value = event_target:crisis_country
+						has_country_flag = star_eater_alert@event_target:crisis_country
+					}
 					has_country_flag = can_build_star_eaters
-					has_country_flag = star_eater_alert@event_target:crisis_country
 				}
-				intel_level = {
-					system = event_target:destroyed_system
-					level = none
+				country_event = {
+					id = crisis.6182
 				}
-			}
-			country_event = {
-				id = crisis.6180
-			}
-		}
-		every_playable_country = {
-			limit = {
-				is_ai = no
-				has_communications = event_target:crisis_country
-				NOR = {
-					is_same_value = event_target:crisis_country
-					has_country_flag = can_build_star_eaters
-					has_country_flag = star_eater_alert@event_target:crisis_country
-				}
-				intel_level = {
-					system = event_target:destroyed_system
-					level > none
-				}
-			}
-			country_event = {
-				id = crisis.6181
-			}
-		}
-		every_playable_country = {
-			limit = {
-				is_ai = no
-				has_communications = event_target:crisis_country
-				NOR = {
-					is_same_value = event_target:crisis_country
-					has_country_flag = star_eater_alert@event_target:crisis_country
-				}
-				has_country_flag = can_build_star_eaters
-			}
-			country_event = {
-				id = crisis.6182
 			}
 		}
 		solar_system = {
@@ -1056,7 +1066,16 @@ country_event = { #控制台effect测试区
 			}
 		}
 
-
+		every_owned_pop_group = {
+			limit = { has_trait = trait_geleboric_mutations }
+			modify_species = {
+				species = this
+				remove_trait = trait_geleboric_mutations
+				effect = {
+					change_species_characteristics = { portrait = KZ_VOY_TERRAN_DESCENDANT }
+				}
+			}
+		}
 
 
 

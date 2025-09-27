@@ -228,32 +228,45 @@ roz_madgod_fleet_jtcl_create_decoy = {
 roz_unholy_invasion_dip_effect = {
 	optimize_memory
 	set_variable = { which = roz_unholy_invasion_dip_$opinion$_ai value = 0 }
-	while = {
+	# while = {
+	# 	limit = {
+	# 		any_playable_country = {
+	# 			opinion_level = {
+	# 				who = root
+	# 				level $sign$ $opinion_set$
+	# 			}
+	# 			NOR = {
+	# 				has_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
+	# 				has_country_flag = roz_abyss_vass_country
+	# 			}
+	# 		}
+	# 	}
+	# 	random_playable_country = {
+	# 		limit = {
+	# 			NOR = {
+	# 				has_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
+	# 				has_country_flag = roz_abyss_vass_country
+	# 			}
+	# 		}
+	# 		set_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
+	# 	}
+	# 	change_variable = {
+	# 		which = roz_unholy_invasion_dip_$opinion$_ai
+	# 		value = 1
+	# 	}
+	# }
+	every_playable_country = {
 		limit = {
-			any_playable_country = {
-				opinion_level = {
-					who = root
-					level $sign$ $opinion_set$
-				}
-				NOR = {
-					has_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
-					has_country_flag = roz_abyss_vass_country
-				}
+			NOR = {
+				has_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
+				has_country_flag = roz_abyss_vass_country
 			}
 		}
-		random_playable_country = {
-			limit = {
-				NOR = {
-					has_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
-					has_country_flag = roz_abyss_vass_country
-				}
-			}
-			set_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
-		}
-		change_variable = {
-			which = roz_unholy_invasion_dip_$opinion$_ai
-			value = 1
-		}
+		set_country_flag = roz_unholy_invasion_dip_$opinion$_ai_flag
+	}
+	change_variable = {
+		which = roz_unholy_invasion_dip_$opinion$_ai
+		value = 1
 	}
 }
 
@@ -1601,6 +1614,7 @@ roz_shoujonotsukurikata_project_common_effect = {
 	else = { country_event = { id = roz_shinku_evt.140 } }
 }
 
+#深渊难度的一般修正
 roz_unholy_invision_difficult_modifier_effect = {
 	optimize_memory
 	if = {
@@ -1937,6 +1951,34 @@ roz_abyss_vass_extra_awaken_in_diff = {
 	}
 }
 
+roz_abyss_vass_annex = {
+	optimize_memory
+	random_playable_country = {
+		limit = {
+			NOT = { has_country_flag = roz_abyss_vass_country }
+			is_ai = yes
+			is_country_type = default
+			roz_is_regular_authority = yes
+			roz_is_MOD_country = no
+			NOR = {
+				is_roz_abyss_vass_extra_country_global_target = yes
+				is_country_type = roz_madgod_empire
+			}
+			NOT = { root = { is_overlord_to = prev } }
+			NOT = { is_in_federation_with = root }
+		}
+		set_country_flag = roz_abyss_vass_country
+	}
+	event_target:roz_madgod_force_country@root = {
+		every_playable_country = {
+			limit = { has_country_flag = roz_abyss_vass_country }
+			every_owned_starbase = { set_owner = prevprev }
+			every_owned_planet = { set_owner = prevprev }
+			every_owned_fleet = { destroy_fleet = this }
+		}
+	}
+}
+
 roz_abyss_vass_select = {
 	optimize_memory
 	if = {
@@ -2219,6 +2261,7 @@ roz_abyss_leader_assign = {
 
 roz_abyss_fleet_invision_action_1 = {
 	optimize_memory
+	set_fleet_bombardment_stance = roz_crisis_armageddon
 	queue_actions = {
 		repeat = {
 			wait = { duration = 5 }
@@ -2240,6 +2283,7 @@ roz_abyss_fleet_invision_action_1 = {
 
 roz_abyss_fleet_invision_action_on_entering_system = {
 	optimize_memory
+	set_fleet_bombardment_stance = roz_crisis_armageddon
 	queue_actions = {
 		repeat = {
 			while = {
@@ -2247,7 +2291,7 @@ roz_abyss_fleet_invision_action_on_entering_system = {
 				exists = solar_system
 				solar_system = {
 					any_system_planet = {
-						is_colony = yes
+						#is_colony = yes
 						exists = controller
 						controller = { is_hostile = prev.owner }
 					}
@@ -2256,19 +2300,29 @@ roz_abyss_fleet_invision_action_on_entering_system = {
 			find_closest_planet = {
 				trigger = {
 					id = roz_abyss_crisis_fleet_action_standard_trigger.2
-					is_colony = yes
+					#is_colony = yes
 					exists = controller
 					controller = { is_hostile = prevprev.owner }
 				}
 				found_planet = {
 					orbit_planet = THIS
-					wait = {
-						duration = 60
-						random = 25
+					effect = {
+						id = roz_abyss_crisis_fleet_action_standard.3
+						set_planet_flag = ruins_planet
+						ROOT = { set_fleet_flag = roz_abyss_bombaring_fleet }
+					}
+					repeat = {
+						while = { id = roz_abyss_crisis_fleet_action_standard.3.t0 ROOT = { has_fleet_flag = roz_abyss_bombaring_fleet } }
+						effect = {
+							id = roz_abyss_crisis_fleet_action_standard.3.t1
+							if = { limit = { is_colony = no } ROOT = { remove_fleet_flag = roz_abyss_bombaring_fleet } }
+						}
+						wait = 5
 					}
 				}
 			}
 		}
+		wait = 15
 	}
 }
 
@@ -2608,6 +2662,7 @@ roz_abyss_fleet_create_madgod_boss = {
 					}
 					roz_abyss_leader_assign = yes
 					roz_unholy_invision_difficult_modifier_add_effect = yes
+					add_modifier = { modifier = roz_unholy_invasion_difficult_modifier mult = 3 }
 				}
 			}
 		}	
@@ -2680,12 +2735,16 @@ roz_abyss_fleet_outpost_create = {
 					location = prev
 				}
 			}
+			#roz_abyss_fleet_create_small_attack_in_diff = { owner = event_target:roz_madgod_force_country@root location = event_target:roz_abyss_fleet_outpost_target_$num$_@root }
+			roz_abyss_fleet_create_median_attack_in_diff = { owner = event_target:roz_madgod_force_country@root location = event_target:roz_abyss_fleet_outpost_target_$num$_@root }
+			#roz_abyss_fleet_create_median_defense_in_diff = { owner = event_target:roz_madgod_force_country@root location = event_target:roz_abyss_fleet_outpost_target_$num$_@root }
+			roz_abyss_fleet_create_median_defense_in_diff = { owner = event_target:roz_madgod_force_country@root location = event_target:roz_abyss_fleet_outpost_target_$num$_@root }
 			roz_abyss_fleet_create_large_defense_in_diff = { owner = event_target:roz_madgod_force_country@root location = event_target:roz_abyss_fleet_outpost_target_$num$_@root }
 			###头，
 			roz_abyss_fleet_create_marvelous = yes
 			last_created_fleet = {
 				set_location = event_target:roz_abyss_fleet_outpost_target_$num$_@root
-				add_modifier = { modifier = roz_unholy_invasion_difficult_modifier mult = 3 }
+				add_modifier = { modifier = roz_unholy_invasion_difficult_modifier mult = 2 }
 			}
 		}
 	}

@@ -2447,15 +2447,17 @@ country_event = {   #混乱通讯 #深渊入侵正式开始
             #额外AI给深渊当狗
             roz_abyss_vass_extra_awaken_in_diff = yes
             #随机挑选幸运AI给深渊当狗
-            roz_abyss_vass_select_diff = yes
+            #roz_abyss_vass_select_diff = yes
             #country_event = { id = roz_shinku_evt.5231 days = 1 }
+            #吞并深渊附庸
+            roz_abyss_vass_annex = yes
             #深渊势力刷船次数初始化
             roz_abyss_hunter_fleet_create_can_establish_num_in_diff = yes
             ###深渊仆从国buff
-            every_country = {
-                limit = { has_country_flag = roz_abyss_vass_country }
-                country_event = { id = roz_shinku_evt.532 }
-            }
+            # every_country = {
+            #     limit = { has_country_flag = roz_abyss_vass_country }
+            #     country_event = { id = roz_shinku_evt.532 }
+            # }
             ###限时挑战开启
             if = {
                 limit = { has_global_flag = roz_abyss_challenge_available }
@@ -2638,12 +2640,12 @@ country_event = {
         custom_tooltip = roz_shinku_evt.525.ct
     }
     after = {
-        custom_tooltip = roz_shinku_evt.525.abyss_vass
-        country_list_tooltip = {
-            limit = {
-                has_country_flag = roz_abyss_vass_country
-            }
-        }
+        #custom_tooltip = roz_shinku_evt.525.abyss_vass
+        # country_list_tooltip = {
+        #     limit = {
+        #         has_country_flag = roz_abyss_vass_country
+        #     }
+        # }
         hidden_effect = {
             #begin_event_chain = { event_chain = roz_SK_madgod_invasion_main }
             ###清除临时数据
@@ -2702,15 +2704,15 @@ country_event = {
             opinion = neutral
         }
         ###深渊仆从国计数
-        set_variable = { which = roz_abyss_vass_country_amount value = 0 }
-        every_country = {
-            limit = { has_country_flag = roz_abyss_vass_country }
-            root = { change_variable = { which = roz_abyss_vass_country_amount value = 1 } }
-        }
+        # set_variable = { which = roz_abyss_vass_country_amount value = 0 }
+        # every_playable_country = {
+        #     limit = { has_country_flag = roz_abyss_vass_country }
+        #     root = { change_variable = { which = roz_abyss_vass_country_amount value = 1 } }
+        # }
         ###
         country_event = {
             id = roz_shinku_evt.526
-            days = 30
+            days = 60
         }
     }
 }
@@ -2863,20 +2865,20 @@ country_event = {
 }
 
 ###深渊仆从国buff，绝不后退buff
-country_event = {
-    id = roz_shinku_evt.532
-    hide_window = yes
-    is_triggered_only = yes
-    trigger = {
-        has_country_flag = roz_abyss_vass_country
-        fromfrom = { NOT = { has_modifier = roz_abyss_vass_combat_negative_modifier } }
-    }
-    immediate = {
-        fromfrom = {
-            add_modifier = { modifier = roz_abyss_vass_combat_negative_modifier }
-        }
-    }
-}
+# country_event = {
+#     id = roz_shinku_evt.532
+#     hide_window = yes
+#     is_triggered_only = yes
+#     trigger = {
+#         has_country_flag = roz_abyss_vass_country
+#         fromfrom = { NOT = { has_modifier = roz_abyss_vass_combat_negative_modifier } }
+#     }
+#     immediate = {
+#         fromfrom = {
+#             add_modifier = { modifier = roz_abyss_vass_combat_negative_modifier }
+#         }
+#     }
+# }
 
 ####刷怪
 country_event = {
@@ -2891,34 +2893,44 @@ country_event = {
     }
     immediate = {
         #为深渊仆从国刷防御舰队，该舰队所有者为其本身
-        every_country = {
-            limit = { has_country_flag = roz_abyss_vass_country }
-            # while = {
-            #     count = 2
-            #     roz_abyss_fleet_create_small_defense_in_diff = {
-            #         owner = prevprev
-            #         location = prevprev.capital_scope
-            #     }
-            # }
-            roz_abyss_fleet_create_median_defense_in_diff = {
-                owner = prevprev
-                location = prevprev.capital_scope
-            }
+        # every_country = {
+        #     limit = { has_country_flag = roz_abyss_vass_country }
+        #     # while = {
+        #     #     count = 2
+        #     #     roz_abyss_fleet_create_small_defense_in_diff = {
+        #     #         owner = prevprev
+        #     #         location = prevprev.capital_scope
+        #     #     }
+        #     # }
+        #     roz_abyss_fleet_create_median_defense_in_diff = {
+        #         owner = prevprev
+        #         location = prevprev.capital_scope
+        #     }
+        #     every_owned_planet = {
+        #         limit = {
+        #             is_capital = no
+        #             solar_system = { any_system_planet = { is_colony = yes } }
+        #         }
+        #         roz_abyss_fleet_create_small_defense_in_diff = {
+        #             owner = prevprevprev
+        #             location = prevprev
+        #         }
+        #     }
+        # }
+        #随机星系刷据点和守卫舰队
+        roz_abyss_fleet_outpost_create_in_diff = yes
+        #刷boss
+        event_target:roz_madgod_force_country@root = {
+            #为深渊仆从国殖民地刷防御舰队
             every_owned_planet = {
                 limit = {
-                    is_capital = no
-                    solar_system = { any_system_planet = { is_colony = yes } }
+                    space_owner = { is_same_value = prevprev }
                 }
                 roz_abyss_fleet_create_small_defense_in_diff = {
                     owner = prevprevprev
                     location = prevprev
                 }
             }
-        }
-        #随机星系刷据点和守卫舰队
-        roz_abyss_fleet_outpost_create_in_diff = yes
-        #刷boss
-        event_target:roz_madgod_force_country@root = {
             #防御舰队
             roz_abyss_fleet_create_large_defense_in_diff = {
                 owner = prevprev
@@ -3195,7 +3207,7 @@ country_event = {
                 }
                 country_event = { id = roz_shinku_evt.5631 }
             }
-            10 = {}
+            4 = {}
         }
     }
 }
@@ -3209,6 +3221,7 @@ country_event = {
         has_country_flag = roz_shinku_jtcl_end_flag
         has_country_flag = roz_abyss_faction_arrival
         NOT = { has_country_flag = roz_abyss_hunter_fleet_create_cd }
+        NOT = { has_country_flag = roz_abyss_hunter_fleet_can_create }
     }
     immediate = {
         roz_abyss_madgod_hunter_fleet_create_establish_in_diff = yes
@@ -3287,6 +3300,55 @@ country_event = {
         name = roz_shinku_evt.SK_invasion_ignore
         custom_tooltip = roz_shinku_evt.SK_invasion_ignore.ct
         hidden_effect = { set_country_flag = roz_unholy_invasion_starbase_destroy_dont_remind }
+    }
+}
+
+#检测深渊舰队数量
+country_event = {
+    id = roz_shinku_evt.567
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+        has_country_flag = roz_abyss_faction_arrival
+        NOT = { has_country_flag = roz_SK_IR_enable }
+    }
+    immediate = {
+        if = {
+            limit = { exists = event_target:roz_madgod_force_country@root }
+            remove_country_flag = roz_abyss_hunter_fleet_can_create
+            event_target:roz_madgod_force_country@root = {
+                set_variable = { which = roz_abyss_hunter_fleet_count value = 0 }
+                every_owned_fleet = {
+                    limit = {
+                        OR = {
+                            has_fleet_flag = roz_abyss_attack_fleet_small
+                            has_fleet_flag = roz_abyss_attack_fleet_median
+                            has_fleet_flag = roz_abyss_attack_fleet_large
+                            has_fleet_flag = roz_abyss_attack_fleet_marvelous
+                        }
+                    }
+                    prev = { change_variable = { which = roz_abyss_hunter_fleet_count value = 1 } }
+                }
+                #
+                if = {
+                    limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 1 } } }
+                    if = { limit = { check_variable = { which = roz_abyss_hunter_fleet_count value <= 10 } } root = { set_country_flag = roz_abyss_hunter_fleet_can_create } }
+                }
+                else_if = {
+                    limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 2 } } }
+                    if = { limit = { check_variable = { which = roz_abyss_hunter_fleet_count value <= 15 } } root = { set_country_flag = roz_abyss_hunter_fleet_can_create } }
+                }
+                else_if = {
+                    limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 3 } } }
+                    if = { limit = { check_variable = { which = roz_abyss_hunter_fleet_count value <= 20 } } root = { set_country_flag = roz_abyss_hunter_fleet_can_create } }
+                }
+                else_if = {
+                    limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 4 } } }
+                    if = { limit = { check_variable = { which = roz_abyss_hunter_fleet_count value <= 30 } } root = { set_country_flag = roz_abyss_hunter_fleet_can_create } }
+                }
+            }
+        }
     }
 }
 

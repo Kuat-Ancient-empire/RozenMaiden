@@ -179,7 +179,7 @@ roz_must_build_no_more_stars: "不能在双星或三星系统中建造"
   #roz__chain_desc: "深渊入侵不仅席卷了我们，它们的爪牙也伸向了其他国家，我们获取的支持取决于我们抗击的成果。\n\n当前共有个深渊仆从国\n[root.roz_unholy_invasion_dip_aggressive_ai]个支持阵营国家\n[root.roz_unholy_invasion_dip_negative_ai]个反对阵营国家\n另有[root.roz_unholy_invasion_dip_neutral_ai]个国家保持中立。"
  #event chain
 roz_SK_madgod_invasion_main_title: "深渊感染体入侵：情况统计"
-roz_SK_madgod_invasion_main_desc: "深渊入侵不仅席卷了我们，它们的爪牙也伸向了其他国家，我们获取的支持取决于我们抗击的成果。\n\n当前共有[root.roz_abyss_vass_country_amount]个深渊仆从国\n[root.roz_unholy_invasion_dip_aggressive_ai]个支持阵营国家\n[root.roz_unholy_invasion_dip_negative_ai]个反对阵营国家\n另有[root.roz_unholy_invasion_dip_neutral_ai]个国家保持中立。"
+roz_SK_madgod_invasion_main_desc: "深渊入侵不仅席卷了我们，它们的爪牙也伸向了其他国家，我们获取的支持取决于我们抗击的成果。\n\n当前共有[owner.roz_abyss_vass_country_amount]个深渊仆从国被吞噬\n[owner.roz_unholy_invasion_dip_aggressive_ai]个支持阵营国家\n[owner.roz_unholy_invasion_dip_negative_ai]个反对阵营国家\n另有[owner.roz_unholy_invasion_dip_neutral_ai]个国家保持中立。"
 #
 roz_abyss_vass_country: "§R深渊仆从国§!"
 roz_SKI_dip_aggressive_ai: "§G支持我们的国家§!"

@@ -668,11 +668,6 @@ country_event = {
 			flag = ge_event_46_flag_CD
 			months = 3
 		}
-		capital_star = {
-			solar_system = {
-
-			}
-		}
 	}
 	after = {
 		country_event = {

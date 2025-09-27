@@ -38,6 +38,7 @@ VOP_on_monthly_pulse_country = {
 		roz_shinku_evt.562 #月检舰队行为继续寻路星系
 		roz_shinku_evt.563 #月检刷船
 		roz_shinku_evt.563 #月检据点是否还能存在
+		roz_shinku_evt.567 #月检进攻舰队数量
 
 		ge_skills.70 #真红机制
 	}
