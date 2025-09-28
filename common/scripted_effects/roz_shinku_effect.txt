@@ -3624,25 +3624,26 @@ roz_abyss_madgod_hunter_fleet_create_establish_in_diff = {
 	}
 	clear_variable = roz_unholy_invasion_difficulty_temp
 }
+
 #执行
-roz_abyss_vass_hunter_fleet_create_count_in_diff = {
-	optimize_memory
-	every_playable_country = {
-		limit = { has_country_flag = roz_abyss_vass_country }
-		while = { count = $num2$ roz_abyss_fleet_create_median_defense_in_diff = { owner = prevprev location = prevprev.capital_scope } }
-		while = { count = $num$ roz_abyss_fleet_create_small_defense_in_diff  = { owner = prevprev location = prevprev.capital_scope } }
-	}
-}
+# roz_abyss_vass_hunter_fleet_create_count_in_diff = {
+# 	optimize_memory
+# 	every_playable_country = {
+# 		limit = { has_country_flag = roz_abyss_vass_country }
+# 		while = { count = $num2$ roz_abyss_fleet_create_median_defense_in_diff = { owner = prevprev location = prevprev.capital_scope } }
+# 		while = { count = $num$ roz_abyss_fleet_create_small_defense_in_diff  = { owner = prevprev location = prevprev.capital_scope } }
+# 	}
+# }
 
 #scope: country(player)
 #深渊仆从刷舰队 5层了，不能再套娃了
-roz_abyss_vass_hunter_fleet_create_establish_in_diff = {
-	optimize_memory
-	while = {
-		count = event_target:global_event_country.roz_unholy_invasion_difficulty
-		roz_abyss_vass_hunter_fleet_create_count_in_diff = { num = 1 num2 = 0 }
-	}
-}
+# roz_abyss_vass_hunter_fleet_create_establish_in_diff = {
+# 	optimize_memory
+# 	while = {
+# 		count = event_target:global_event_country.roz_unholy_invasion_difficulty
+# 		roz_abyss_vass_hunter_fleet_create_count_in_diff = { num = 1 num2 = 0 }
+# 	}
+# }
 
 #scope: country(player)
 #深渊势力可刷船的起始次数
@@ -3774,7 +3775,7 @@ roz_abyss_hunter_fleet_create_when_situation_fail = {
 		limit = { check_variable = { which = roz_abyss_hunter_fleet_create_can_establish value < 2 } }
 		while = {
 			count = roz_abyss_hunter_fleet_create_can_establish
-			roz_abyss_vass_hunter_fleet_create_establish_in_diff = yes
+			#roz_abyss_vass_hunter_fleet_create_establish_in_diff = yes
 			roz_abyss_madgod_hunter_fleet_create_establish_in_diff = yes
 		}
 		set_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 0 }
