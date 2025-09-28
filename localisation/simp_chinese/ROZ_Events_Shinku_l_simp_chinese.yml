@@ -593,9 +593,14 @@ roz_shinku_evt.565.desc: "同乌拉诺斯的战事愈演愈烈，敌方增援也
 roz_shinku_evt.565.aa: "把它们击退！"
 
 #深渊势力每次占领有殖民地的星系时触发，按星系判定，星系内有多个殖民地也只触发一次
-roz_shinku_evt.566.title: "（殖民地星球名）在危难中"
-roz_shinku_evt.566.desc: "紧急情况，[Root.GetRulerTitle]！入侵的深渊势力已经攻占了（星系名）星系，殖民地危在旦夕！我们必须尽快收复失地，不然（殖民地星球名）上的居民恐怕会在不久后化作深渊感染体的饕餮盛宴。残余的守军支撑不了多久，我们必须尽快把它夺回来。"
-roz_shinku_evt.566.aa: "组织反击"
+roz_shinku_evt.566.title: "[root.GetName]正遭受深渊舰队的轰炸"
+roz_shinku_evt.566.desc: "紧急情况！入侵的深渊势力已经攻占了[solar_system.GetName]星系，[root.GetName]危在旦夕！我们必须尽快消灭它们，不然[root.GetName]上的居民恐怕会在不久后化作深渊感染体的饕餮盛宴。"
+roz_shinku_evt.566.aa: "组织反击！"
+ roz_shinku_evt.566.bb: "不再显示殖民地被轰炸的消息。"
+
+ roz_shinku_evt.5681.title: "殖民地被摧毁！"
+ roz_shinku_evt.5681.desc: "我们的殖民地[from.GetName]被$roz_abyss_faction$的入侵舰队彻底摧毁了，星球上未能撤离的民众皆被肃清！"
+ roz_shinku_evt.5681.aa: "天啊"
 
  roz_shinku_evt.570.title:"深渊据点被拔除"
  roz_shinku_evt.570.desc: "我们的舰队成功拔除了一个深渊据点，后续深渊感染体将无法通过这个入口派遣入侵舰队了！"

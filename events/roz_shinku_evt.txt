@@ -2823,6 +2823,7 @@ country_event = {
 }
 
 ###深渊阵营击杀计数
+###当击毁玩家舰船时增加刷船次数
 # Abyss Victims
 country_event = {
     id = roz_shinku_evt.531
@@ -2854,12 +2855,13 @@ country_event = {
             random_situation = {
                 limit = { is_situation_type = roz_sk_4_madgod_invasion_placard }
                 roz_abyss_invasion_situation_progress_change = {
-                    progress_easy = -0.002
-                    progress_normal = -0.005
-                    progress_hard = -0.01
-                    progress_xiling = -0.02
+                    progress_easy = -0.001
+                    progress_normal = -0.0025
+                    progress_hard = -0.005
+                    progress_xiling = -0.01
                 }
             }
+            change_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 0.001 }
         }
     }
 }
@@ -3177,9 +3179,8 @@ country_event = {
                 every_owned_fleet = {
                     limit = {
                         roz_is_abyss_attack_fleet = yes
-                        solar_system = { any_system_planet = { is_colony = no owner = { NOT = { has_country_flag = roz_abyss_vass_country } } } }
                     }
-                    roz_abyss_fleet_invision_action_1 = yes
+                    roz_abyss_fleet_invision_action_1 = { TYPE = roz_madgod_force OWNER = roz_madgod_force_country@root }
                 }
             }
         }
@@ -3225,7 +3226,7 @@ country_event = {
     }
     immediate = {
         roz_abyss_madgod_hunter_fleet_create_establish_in_diff = yes
-        roz_abyss_vass_hunter_fleet_create_establish_in_diff   = yes
+        #roz_abyss_vass_hunter_fleet_create_establish_in_diff   = yes
         roz_abyss_hunter_fleet_create_cd_in_diff = yes
         country_event = { id = roz_shinku_evt.565 }
     }
@@ -3279,27 +3280,29 @@ country_event = {
     }
 }
 
-#占领殖民地星系
-country_event = {
+#殖民地星系被轰炸
+planet_event = {
     id = roz_shinku_evt.566
     title = roz_shinku_evt.566.title
     desc = roz_shinku_evt.566.desc
     is_triggered_only = yes
-    picture = GFX_evt_pirate_base
-    location = fromfromfrom
+    picture = GFX_evt_small_space_battle
+    location = this
     trigger = {
-        fromfromfrom = { fleet = { roz_is_abyss_attack_fleet = yes } solar_system = { any_system_planet = { is_colony = yes } } }
-        fromfrom = { roz_is_regular_starbase = yes }
-        from = { has_country_flag = roz_madgod_force_country_flag }
-        NOT = { has_country_flag = roz_unholy_invasion_starbase_destroy_dont_remind }
+        NOT = { has_planet_flag = roz_planet_has_being_bombarded }
+        has_orbital_bombardment_stance = roz_crisis_armageddon
+        from = {
+            is_ai = no
+            NOT = { has_country_flag = roz_unholy_invasion_starbase_destroy_dont_remind }
+        }
     }
+    immediate = { set_timed_planet_flag = { flag = roz_planet_has_being_bombarded days = 360 } }
     option = {
         name = roz_shinku_evt.566.aa
     }
     option = {
         name = roz_shinku_evt.SK_invasion_ignore
-        custom_tooltip = roz_shinku_evt.SK_invasion_ignore.ct
-        hidden_effect = { set_country_flag = roz_unholy_invasion_starbase_destroy_dont_remind }
+        hidden_effect = { owner = { set_country_flag = roz_unholy_invasion_starbase_destroy_dont_remind } }
     }
 }
 
@@ -3349,6 +3352,89 @@ country_event = {
                 }
             }
         }
+    }
+}
+
+#深渊的轨道轰炸
+planet_event = {
+    id =  roz_shinku_evt.568
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        pop_amount > 0
+        exists = owner
+        exists = from
+        has_orbital_bombardment_stance = roz_crisis_armageddon
+
+        planet_devastation >= 99
+    }
+    immediate = {
+        owner = { country_event = { id = roz_shinku_evt.5681 } }
+        add_threat = { who = from amount = 2 }
+        destroy_colony = yes
+        create_ambient_object = {
+            type = "star_explosion"
+            entity_scale_to_size = no
+            use_3d_location = yes
+            scale = 0.06
+            location = this
+            play_animation_once = yes
+        }
+        if = {
+            limit = {
+                is_artificial = no
+            }
+            change_pc = pc_broken
+            if = {
+                limit = { exists = orbital_defence }
+                destroy_fleet = orbital_defence
+                set_planet_flag = ruined_orbital_ring_planet
+                solar_system = {
+                    spawn_megastructure = {
+                        type = orbital_ring_ruined
+                        planet = prev
+                    }
+                }
+            }
+        }
+        else_if = {
+            # Habitable Ring Worlds can't be infested...
+            # they are destroyed instead
+            limit = {
+                is_ringworld = yes
+            }
+            destroy_colony = yes
+            change_pc = pc_ringworld_habitable_damaged
+            reset_planet = yes
+        }
+        else_if = {
+            limit = { is_planet_class = pc_habitat }
+            spawn_habitat_cracker_effect = yes
+        }
+        random_playable_country = {
+            limit = { is_ai = no has_country_flag = roz_abyss_faction_arrival }
+            change_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 0.25 }
+            roz_abyss_invasion_situation_progress_change = {
+                progress_easy = -0.01
+                progress_normal = -0.03
+                progress_hard = -0.05
+                progress_xiling = -0.1
+            }
+        }
+    }
+}
+
+country_event = {
+    id = roz_shinku_evt.5681
+    title = roz_shinku_evt.5681.title
+    desc = roz_shinku_evt.5681.desc
+    is_triggered_only = yes
+    picture = GFX_evt_shattered_planet
+    location = from
+    trigger = { exists = this }
+    option = {
+        name = roz_shinku_evt.5681.aa
+        add_resource = { influence = -1 }
     }
 }
 
@@ -3455,6 +3541,7 @@ country_event = {
     trigger = {
         fromfrom = {
             has_fleet_flag = roz_abyss_fleet
+            NOT = { has_fleet_flag = roz_abyss_fleet_effect_cd }
             has_global_flag = roz_abyss_challenge_available
         }
         from = { is_invisable_faction = no } #Stop the repeated inspection of dynamic modifier
@@ -3469,6 +3556,7 @@ country_event = {
         }
         fromfrom = {
             set_fleet_flag = roz_fleet_combat_has_been_protected
+            set_timed_fleet_flag = { flag = roz_abyss_fleet_effect_cd days = 20 }
             roz_abyss_fleet_protection_modifier_effect = { modifier = ship_damage_reduction_mult roz_abyss_var_temp = 0.50 } # 这个修正是用于自身的，不要给敌人
             fleet_event = { id = roz_shinku_evt.589 days = 5 }
         }

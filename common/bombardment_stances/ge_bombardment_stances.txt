@@ -89,23 +89,24 @@ roz_crisis_armageddon = {
 		}
 	}
 
-	default = yes
+	default = no
 	stop_when_armies_dead = no
 	stop_when_ground_combat = no
 	abduct_pops = no
+	accept_surrender = no
 
-	planet_damage = 1000
-	army_damage = 2000
+	planet_damage = 5
+	army_damage = 1000
 
 	kill_pop_chance = {
-		base = 1000
+		base = 1.0
 	}
 	min_pops_to_kill_pop = 0
 
 	# root = fleet
 	# from = planet
 	ai_weight = {
-		weight = 1
+		weight = 10
 		modifier = {
 			factor = 1000
 			owner = {

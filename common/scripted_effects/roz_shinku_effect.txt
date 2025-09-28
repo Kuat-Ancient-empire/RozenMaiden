@@ -2259,22 +2259,801 @@ roz_abyss_leader_assign = {
 	set_leader = last_created_leader
 }
 
+#来自夸特
+roz_abyss_create_jump_particle_effect = {
+	optimize_memory
+	create_ambient_object = {
+		type = horror_spawn_object
+		location = this
+		use_3d_location = yes
+		entity_offset = { min = 0 max = 0 }
+		entity_offset_angle = { min = 0 max = 0 }
+		entity_offset_height = { min = 0 max = 0 }
+		entity_scale_to_size = yes
+		scale = 0.05
+	}
+}
+roz_abyss_fleet_jump_drive_planet_action  = {
+	optimize_memory
+	random_list = {
+		80 = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
+		20 = {
+			modifier = {
+				factor = 0
+				prevprev = { any_owned_ship = { has_ship_flag = roz_abyss_jump_drive_cooldown } }
+			}
+			prevprev = {
+				set_location = { target = prev distance = 300 angle = random }
+				every_owned_ship = { roz_abyss_create_jump_particle_effect = yes }
+				while = {
+					limit = { any_owned_ship = { NOT = { has_ship_flag = roz_abyss_jump_drive_cooldown } } }
+					random_owned_ship = {
+						limit = { NOT = { has_ship_flag = roz_abyss_jump_drive_cooldown } }
+						set_timed_ship_flag = { flag = roz_abyss_jump_drive_cooldown days = 200 }
+						add_modifier = { modifier = "jump_drive_cooldown" days = 200 }
+					}
+				}
+				auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes }
+			}
+		}
+	}
+}
+
+roz_abyss_fleet_wandering_action = {
+	optimize_memory
+	clear_orders = yes
+	clear_fleet_actions = this
+	random_list = {
+		#周围星系随机设置目标
+		75 = {
+			solar_system = { random_neighbor_system = {
+				limit = {
+					prevprev = { can_access_system = prev }
+					#kuat_is_invisable_target_system = no
+				}
+				save_event_target_as = $TYPE$_invasion_fleet_wandering_action_target
+			} }
+			if = {
+				limit = { exists = event_target:$TYPE$_invasion_fleet_wandering_action_target }
+				event_target:$TYPE$_invasion_fleet_wandering_action_target = {
+					system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
+				}
+			}
+			else_if = {
+				limit = { any_system = {
+					prev = { can_access_system = prev }
+					#kuat_is_invisable_target_system = no
+				} }
+				random_system = {
+					limit = { prev = { can_access_system = prev } }
+					save_event_target_as = $TYPE$_invasion_fleet_wandering_action_target
+				}
+				event_target:$TYPE$_invasion_fleet_wandering_action_target = {
+					system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
+				}
+			}
+			else = {
+				log = "跃迁强度：[$TYPE$_fleet_none_target_var]"
+				change_variable = { which = $TYPE$_fleet_none_target_var value = 1 }
+			}
+		}
+		#找任意一个敌对目标，紧急跃迁，不需要debuff
+		25 = {
+			modifier = {
+				mult = 0
+				any_owned_ship = { has_ship_flag = roz_abyss_jump_drive_cooldown }
+			}
+			modifier = {
+				mult = $TYPE$_fleet_none_target_var
+				is_variable_set = $TYPE$_fleet_none_target_var
+			}
+			clear_variable = $TYPE$_fleet_none_target_var
+			random_system = {
+				limit = {
+					#kuat_is_invisable_target_system = no
+					NOT = { is_same_value = prev.solar_system }
+					OR = {
+						AND = {
+							exists = starbase
+							starbase = { exists = owner owner = { is_hostile = event_target:$OWNER$ } }
+						}
+						any_system_planet = {
+							exists = controller
+							controller = { is_hostile = event_target:$OWNER$ }
+							OR = {
+								is_colony = yes
+								is_under_colonization = yes
+							}
+							count_fleet_in_orbit = { count = 0 limit = {
+								exists = owner
+								owner = { is_same_value = event_target:$OWNER$ }
+								NOT = { is_same_value = prevprevprev }
+							} }
+						}
+						any_ship_in_system = {
+							exists = owner
+							owner = { is_hostile = event_target:$OWNER$ }
+							is_disabled = no is_cloaked = no
+						}
+					}
+				}
+				save_event_target_as = $TYPE$_invasion_fleet_wandering_action_target
+			}
+			if = {
+				limit = { exists = event_target:$TYPE$_invasion_fleet_wandering_action_target }
+				event_target:$TYPE$_invasion_fleet_wandering_action_target = {
+					random_system_planet = {
+						limit = { is_primary_star = yes }
+						prevprev = {
+							set_location = { target = prev distance = 300 angle = random }
+							every_owned_ship = { roz_abyss_create_jump_particle_effect = yes }
+							auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes }
+						}
+					}
+				}
+			}
+			else = {
+				solar_system = { random_neighbor_system = {
+					limit = {
+						prevprev = { can_access_system = prev }
+						#kuat_is_invisable_target_system = no
+					}
+					save_event_target_as = $TYPE$_invasion_fleet_wandering_action_target
+				} }
+				if = {
+					limit = { exists = event_target:$TYPE$_invasion_fleet_wandering_action_target }
+					event_target:$TYPE$_invasion_fleet_wandering_action_target = {
+						system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
+					}
+				}
+				else_if = {
+					limit = { any_system = {
+						prev = { can_access_system = prev }
+						#kuat_is_invisable_target_system = no
+					} }
+					random_system = {
+						limit = { prev = { can_access_system = prev } }
+						save_event_target_as = $TYPE$_invasion_fleet_wandering_action_target
+					}
+					event_target:$TYPE$_invasion_fleet_wandering_action_target = {
+						system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
+					}
+				}
+				else = {
+					log = "跃迁强度：[$TYPE$_fleet_none_target_var]"
+					change_variable = { which = $TYPE$_fleet_none_target_var value = 1 }
+				}
+			}
+		}
+	}
+}
+
+roz_abyss_fleet_jump_drive_fleet_action  = {
+	optimize_memory
+	random_list = {
+		75 = { prevprev = {
+			auto_follow_fleet = { target = prev attack_fleet = yes }
+			#set_fleet_flag = kuat_disable_other_fleet_in_system
+		} }
+		25 = {
+			modifier = {
+				factor = 0
+				prevprev = { any_owned_ship = { has_ship_flag = roz_abyss_jump_drive_cooldown } }
+			}
+			prevprev = {
+				set_location = { target = prev distance = 200 angle = random }
+				every_owned_ship = { roz_abyss_create_jump_particle_effect = yes }
+				while = {
+					limit = { any_owned_ship = { NOT = { has_ship_flag = roz_abyss_jump_drive_cooldown } } }
+					random_owned_ship = {
+						limit = { NOT = { has_ship_flag = roz_abyss_jump_drive_cooldown } }
+						set_timed_ship_flag = { flag = roz_abyss_jump_drive_cooldown days = 200 }
+						add_modifier = { modifier = "jump_drive_cooldown" days = 200 }
+					}
+				}
+				auto_follow_fleet = { target = prev attack_fleet = yes }
+				#set_fleet_flag = kuat_disable_other_fleet_in_system
+			}
+		}
+	}
+}
+
 roz_abyss_fleet_invision_action_1 = {
 	optimize_memory
 	set_fleet_bombardment_stance = roz_crisis_armageddon
-	queue_actions = {
-		repeat = {
-			wait = { duration = 5 }
-			find_closest_system = {
-				trigger = {
-					id = roz_abyss_crisis_fleet_action_standard_trigger.1
-					any_system_planet = { roz_planet_can_bombed_by_abyss_crisis = yes }
-				}
-				found_system = {
-					move_to = this
-					effect = {
-						id = roz_abyss_crisis_fleet_action_standard_effect.1
+	# queue_actions = {
+	# 	repeat = {
+	# 		wait = { duration = 5 }
+	# 		# find_closest_system = {
+	# 		# 	trigger = {
+	# 		# 		id = roz_abyss_crisis_fleet_action_standard_trigger.1
+	# 		# 		any_system_planet = { roz_planet_can_bombed_by_abyss_crisis = yes }
+	# 		# 	}
+	# 		# 	found_system = {
+	# 		# 		move_to = this
+	# 		# 		effect = {
+	# 		# 			id = roz_abyss_crisis_fleet_action_standard_effect.1
+	# 		# 		}
+	# 		# 	}
+	# 		# }
+	# 		find_closest_planet = {
+	# 			trigger = {
+	# 				id = roz_abyss_crisis_fleet_action_standard_trigger.2
+	# 				exists = controller
+	# 				controller = { is_hostile = prev.owner }
+	# 			}
+	# 			found_planet = {
+	# 				orbit_planet = THIS
+	# 				effect = {
+	# 					id = roz_abyss_crisis_fleet_action_standard.3
+	# 					set_planet_flag = ruins_planet
+	# 					ROOT = { set_fleet_flag = roz_abyss_bombaring_fleet }
+	# 				}
+	# 				repeat = {
+	# 					while = { id = roz_abyss_crisis_fleet_action_standard.3.t0 ROOT = { has_fleet_flag = roz_abyss_bombaring_fleet } }
+	# 					effect = {
+	# 						id = roz_abyss_crisis_fleet_action_standard.3.t1
+	# 						if = { limit = { is_colony = no } ROOT = { remove_fleet_flag = roz_abyss_bombaring_fleet } }
+	# 					}
+	# 					wait = 5
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	#来自夸特寻路
+	# 寻找所在星系目前没有己方单位的敌对星球
+	if = {
+		limit = {
+			exists = solar_system
+			solar_system = {
+				any_system_planet = {
+					exists = controller
+					controller = { is_hostile = event_target:$OWNER$ }
+					OR = {
+						is_colony = yes
+						is_under_colonization = yes
 					}
+					count_fleet_in_orbit = { count = 0 limit = {
+						exists = owner
+						owner = { is_same_value = event_target:$OWNER$ }
+						NOT = { is_same_value = prevprevprev }
+					} }
+				}
+			}
+		}
+		solar_system = {
+			random_system_planet = {
+				limit = {
+					exists = controller
+					controller = { is_hostile = event_target:$OWNER$ }
+					OR = {
+						is_colony = yes
+						is_under_colonization = yes
+					}
+					count_fleet_in_orbit = { count = 0 limit = {
+						exists = owner
+						owner = { is_same_value = event_target:$OWNER$ }
+						NOT = { is_same_value = prevprevprev }
+					} }
+				}
+				prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } }
+			}
+		}
+	}
+	# 寻找所在星系内敌对军事舰船
+	else_if = {
+		limit = {
+			exists = solar_system
+			solar_system = { any_ship_in_system = {
+				exists = owner
+				owner = { is_hostile = event_target:$OWNER$ }
+				is_disabled = no is_cloaked = no
+			} }
+		}
+		solar_system = {
+			random_fleet_in_system = {
+				limit = {
+					exists = owner
+					owner = { is_hostile = event_target:$OWNER$ }
+					any_owned_ship = { is_disabled = no is_cloaked = no }
+				}
+				prevprev = {
+					auto_follow_fleet = { target = prev attack_fleet = yes }
+					#set_fleet_flag = kuat_disable_other_fleet_in_system
+				}
+			}
+		}
+	}
+	# 寻找周围星系有无敌对单位
+	else_if = {
+		limit = {
+			solar_system = { any_neighbor_system = {
+				OR = {
+					AND = {
+						exists = starbase
+						starbase = { exists = owner owner = { is_hostile = event_target:$OWNER$ } }
+					}
+					any_ship_in_system = {
+						exists = owner
+						owner = { is_hostile = event_target:$OWNER$ }
+						is_disabled = no is_cloaked = no
+					}
+				}
+				##kuat_is_invisable_target_system = no
+			} }
+		}
+		solar_system = { random_neighbor_system = {
+			limit = {
+				OR = {
+					AND = {
+						exists = starbase
+						starbase = { exists = owner owner = { is_hostile = event_target:$OWNER$ } }
+					}
+					any_ship_in_system = {
+						exists = owner
+						owner = { is_hostile = event_target:$OWNER$ }
+						is_disabled = no is_cloaked = no
+					}
+				}
+				##kuat_is_invisable_target_system = no
+			}
+			system_star = { prevprevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
+		} }
+	}
+	# 自主行为启动
+	else = {
+		random_list = {
+			# 25%概率寻找50步内的敌对星系作为目标
+			25 = {
+				#开始找目标
+				closest_system = {
+					max_steps = 50
+					limit = {
+						NOT = { is_same_value = prev.solar_system }
+						OR = {
+							AND = {
+								exists = starbase
+								starbase = {
+									exists = owner
+									owner = { is_hostile = event_target:$OWNER$ }
+								}
+							}
+							any_system_planet = {
+								exists = controller
+								controller = { is_hostile = event_target:$OWNER$ }
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								count_fleet_in_orbit = { count = 0 limit = {
+									exists = owner
+									owner = { is_same_value = event_target:$OWNER$ }
+									NOT = { is_same_value = prevprevprev }
+								} }
+							}
+						}
+						##kuat_is_invisable_target_system = no
+						prev = { can_access_system = prev }
+					}
+					save_event_target_as = $TYPE$_invasion_fleet_action_target
+				}
+				#如果星系内具备有效目标，就80%概率走过去，20%概率飞过去（飞过去必须吃debuff）
+				#如果不具备就直接飞过去QWQ（bushi）
+				#哇还能飞
+				if = {
+					limit = { exists = event_target:$TYPE$_invasion_fleet_action_target }
+					event_target:$TYPE$_invasion_fleet_action_target = {
+						if = {
+							limit = {
+								any_system_planet = {
+									exists = controller
+									controller = { is_hostile = event_target:$OWNER$ }
+									OR = {
+										is_colony = yes
+										is_under_colonization = yes
+									}
+									count_fleet_in_orbit = { count = 0 limit = {
+										exists = owner
+										owner = { is_same_value = event_target:$OWNER$ }
+										NOT = { is_same_value = prevprevprev }
+									} }
+								}
+							}
+							random_system_planet = {
+								limit = {
+									exists = controller
+									controller = { is_hostile = event_target:$OWNER$ }
+									OR = {
+										is_colony = yes
+										is_under_colonization = yes
+									}
+									count_fleet_in_orbit = { count = 0 limit = {
+										exists = owner
+										owner = { is_same_value = event_target:$OWNER$ }
+										NOT = { is_same_value = prevprevprev }
+									} }
+								}
+								roz_abyss_fleet_jump_drive_planet_action = yes
+							}
+						}
+						else = { system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } } }
+					}
+				}
+				#找不到目标，再找一次
+				else = {
+					#开始找目标
+					closest_system = {
+						max_steps = 50
+						limit = {
+							NOT = { is_same_value = prev.solar_system }
+							OR = {
+								AND = {
+									exists = starbase
+									starbase = {
+										exists = owner
+										owner = { is_hostile = event_target:$OWNER$ }
+									}
+								}
+								any_system_planet = {
+									exists = controller
+									controller = { is_hostile = event_target:$OWNER$ }
+									OR = {
+										is_colony = yes
+										is_under_colonization = yes
+									}
+									count_fleet_in_orbit = { count = 0 limit = {
+										exists = owner
+										owner = { is_same_value = event_target:$OWNER$ }
+										NOT = { is_same_value = prevprevprev }
+									} }
+								}
+							}
+							##kuat_is_invisable_target_system = no
+						}
+						save_event_target_as = $TYPE$_invasion_fleet_action_target
+					}
+					#如果星系内具备有效目标，就80%概率走过去，20%概率飞过去（飞过去必须吃debuff）
+					#如果不具备就直接飞过去QWQ（bushi）
+					if = {
+						limit = { exists = event_target:$TYPE$_invasion_fleet_action_target }
+						event_target:$TYPE$_invasion_fleet_action_target = {
+							if = {
+								limit = {
+									any_system_planet = {
+										exists = controller
+										controller = { is_hostile = event_target:$OWNER$ }
+										OR = {
+											is_colony = yes
+											is_under_colonization = yes
+										}
+										count_fleet_in_orbit = { count = 0 limit = {
+											exists = owner
+											owner = { is_same_value = event_target:$OWNER$ }
+											NOT = { is_same_value = prevprevprev }
+										} }
+									}
+								}
+								random_system_planet = {
+									limit = {
+										exists = controller
+										controller = { is_hostile = event_target:$OWNER$ }
+										OR = {
+											is_colony = yes
+											is_under_colonization = yes
+										}
+										count_fleet_in_orbit = { count = 0 limit = {
+											exists = owner
+											owner = { is_same_value = event_target:$OWNER$ }
+											NOT = { is_same_value = prevprevprev }
+										} }
+									}
+									roz_abyss_fleet_jump_drive_planet_action = yes
+								}
+							}
+							else = { system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } } }
+						}
+					}
+					#找不到目标，摆烂了，开始转圈
+					else = { roz_abyss_fleet_wandering_action = { TYPE = $TYPE$  OWNER = $OWNER$ } }
+				}
+			}
+			25 = {
+				# 25%概率去找10跳以内的空间站或者星球舰队
+				random_system = {
+					limit = {
+						NOT = { is_same_value = prev.solar_system }
+						distance = {
+							source = prev.solar_system
+							type = hyperlane
+							use_bypasses = yes
+							min_jumps = 1
+							max_jumps = 10
+						}
+						OR = {
+							AND = {
+								exists = starbase
+								starbase = { exists = owner owner = { is_hostile = event_target:$OWNER$ } }
+							}
+							any_system_planet = {
+								exists = controller
+								controller = { is_hostile = event_target:$OWNER$ }
+								OR = {
+									is_colony = yes
+									is_under_colonization = yes
+								}
+								count_fleet_in_orbit = { count = 0 limit = {
+									exists = owner
+									owner = { is_same_value = event_target:$OWNER$ }
+									NOT = { is_same_value = prevprevprev }
+								} }
+							}
+						}
+						##kuat_is_invisable_target_system = no
+						prev = { can_access_system = prev }
+					}
+					save_event_target_as = $TYPE$_invasion_fleet_action_target
+				}
+				#如果星系内具备有效目标，就80%概率走过去，20%概率飞过去（飞过去必须吃debuff）
+				#如果不具备就直接飞过去QWQ（bushi）
+				if = {
+					limit = { exists = event_target:$TYPE$_invasion_fleet_action_target }
+					event_target:$TYPE$_invasion_fleet_action_target = {
+						if = {
+							limit = {
+								any_system_planet = {
+									exists = controller
+									controller = { is_hostile = event_target:$OWNER$ }
+									OR = {
+										is_colony = yes
+										is_under_colonization = yes
+									}
+									count_fleet_in_orbit = { count = 0 limit = {
+										exists = owner
+										owner = { is_same_value = event_target:$OWNER$ }
+										NOT = { is_same_value = prevprevprev }
+									} }
+								}
+							}
+							random_system_planet = {
+								limit = {
+									exists = controller
+									controller = { is_hostile = event_target:$OWNER$ }
+									OR = {
+										is_colony = yes
+										is_under_colonization = yes
+									}
+									count_fleet_in_orbit = { count = 0 limit = {
+										exists = owner
+										owner = { is_same_value = event_target:$OWNER$ }
+										NOT = { is_same_value = prevprevprev }
+									} }
+								}
+								roz_abyss_fleet_jump_drive_planet_action = yes
+							}
+						}
+						else = { system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } } }
+					}
+				}
+				#找不到目标，再找一次
+				else = {
+					random_system = {
+						limit = {
+							NOT = { is_same_value = prev.solar_system }
+							distance = {
+								source = prev.solar_system
+								type = hyperlane
+								use_bypasses = yes
+								min_jumps = 1
+								max_jumps = 10
+							}
+							OR = {
+								AND = {
+									exists = starbase
+									starbase = {
+										exists = owner
+										owner = { is_hostile = event_target:$OWNER$ }
+									}
+								}
+								any_system_planet = {
+									exists = controller
+									controller = { is_hostile = event_target:$OWNER$ }
+									OR = {
+										is_colony = yes
+										is_under_colonization = yes
+									}
+									count_fleet_in_orbit = { count = 0 limit = {
+										exists = owner
+										owner = { is_same_value = event_target:$OWNER$ }
+										NOT = { is_same_value = prevprevprev }
+									} }
+								}
+							}
+							##kuat_is_invisable_target_system = no
+						}
+						save_event_target_as = $TYPE$_invasion_fleet_action_target
+					}
+					#如果星系内具备有效目标，就80%概率走过去，20%概率飞过去（飞过去必须吃debuff）
+					#如果不具备就直接飞过去QWQ（bushi）
+					if = {
+						limit = { exists = event_target:$TYPE$_invasion_fleet_action_target }
+						event_target:$TYPE$_invasion_fleet_action_target = {
+							if = {
+								limit = {
+									any_system_planet = {
+										exists = controller
+										controller = { is_hostile = event_target:$OWNER$ }
+										OR = {
+											is_colony = yes
+											is_under_colonization = yes
+										}
+										count_fleet_in_orbit = { count = 0 limit = {
+											exists = owner
+											owner = { is_same_value = event_target:$OWNER$ }
+											NOT = { is_same_value = prevprevprev }
+										} }
+									}
+								}
+								random_system_planet = {
+									limit = {
+										exists = controller
+										controller = { is_hostile = event_target:$OWNER$ }
+										OR = {
+											is_colony = yes
+											is_under_colonization = yes
+										}
+										count_fleet_in_orbit = { count = 0 limit = {
+											exists = owner
+											owner = { is_same_value = event_target:$OWNER$ }
+											NOT = { is_same_value = prevprevprev }
+										} }
+									}
+									roz_abyss_fleet_jump_drive_planet_action = yes
+								}
+							}
+							else = { system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } } }
+						}
+					}
+					#找不到目标，摆烂了，开始转圈
+					else = { roz_abyss_fleet_wandering_action = { TYPE = $TYPE$  OWNER = $OWNER$ } }
+				}
+			}
+			25 = {
+				# 25%概率找50跳内未停用的敌对舰船
+				closest_system = {
+					max_steps = 50
+					limit = {
+						NOT = { is_same_value = prev.solar_system }
+						any_ship_in_system = {
+							exists = owner
+							owner = { is_hostile = event_target:$OWNER$ }
+							is_disabled = no is_cloaked = no
+						}
+						##kuat_is_invisable_target_system = no
+						prev = { can_access_system = prev }
+					}
+					save_event_target_as = $TYPE$_invasion_fleet_action_target
+				}
+				#如果星系内具备有效目标，就80%概率走过去，20%概率飞过去（飞过去必须吃debuff）
+				if = {
+					limit = { exists = event_target:$TYPE$_invasion_fleet_action_target }
+					event_target:$TYPE$_invasion_fleet_action_target = {
+						random_fleet_in_system = {
+							limit = {
+								exists = owner
+								owner = { is_hostile = event_target:$OWNER$ }
+								any_owned_ship = { is_disabled = no is_cloaked = no }
+							}
+							roz_abyss_fleet_jump_drive_fleet_action = yes
+						}
+					}
+				}
+				#找不到目标，再找一次
+				else = {
+					closest_system = {
+						max_steps = 50
+						limit = {
+							NOT = { is_same_value = prev.solar_system }
+							any_ship_in_system = {
+								exists = owner
+								owner = { is_hostile = event_target:$OWNER$ }
+								is_disabled = no is_cloaked = no
+							}
+							##kuat_is_invisable_target_system = no
+						}
+						save_event_target_as = $TYPE$_invasion_fleet_action_target
+					}
+					#如果星系内具备有效目标，就80%概率走过去，20%概率飞过去（飞过去必须吃debuff）
+					if = {
+						limit = { exists = event_target:$TYPE$_invasion_fleet_action_target }
+						event_target:$TYPE$_invasion_fleet_action_target = {
+							random_fleet_in_system = {
+								limit = {
+									exists = owner
+									owner = { is_hostile = event_target:$OWNER$ }
+									any_owned_ship = { is_disabled = no is_cloaked = no }
+								}
+								roz_abyss_fleet_jump_drive_fleet_action = yes
+							}
+						}
+					}
+					#找不到目标，摆烂了，开始转圈
+					else = { roz_abyss_fleet_wandering_action = { TYPE = $TYPE$  OWNER = $OWNER$ } }
+				}
+			}
+			25 = {
+				# 25%概率找10跳内未停用的敌对舰船
+				random_system = {
+					limit = {
+						NOT = { is_same_value = prev.solar_system }
+						distance = {
+							source = prev.solar_system
+							type = hyperlane
+							use_bypasses = yes
+							min_jumps = 1
+							max_jumps = 10
+						}
+						any_ship_in_system = {
+							exists = owner
+							owner = { is_hostile = event_target:$OWNER$ }
+							is_disabled = no is_cloaked = no
+						}
+						##kuat_is_invisable_target_system = no
+						prev = { can_access_system = prev }
+					}
+					save_event_target_as = $TYPE$_invasion_fleet_action_target
+				}
+				#如果星系内具备有效目标，就80%概率走过去，20%概率飞过去（飞过去必须吃debuff）
+				if = {
+					limit = { exists = event_target:$TYPE$_invasion_fleet_action_target }
+					event_target:$TYPE$_invasion_fleet_action_target = {
+						random_fleet_in_system = {
+							limit = {
+								exists = owner
+								owner = { is_hostile = event_target:$OWNER$ }
+								any_owned_ship = { is_disabled = no is_cloaked = no }
+							}
+							roz_abyss_fleet_jump_drive_fleet_action = yes
+						}
+					}
+				}
+				#找不到目标，再找一次
+				else = {
+					random_system = {
+						limit = {
+							NOT = { is_same_value = prev.solar_system }
+							distance = {
+								source = prev.solar_system
+								type = hyperlane
+								use_bypasses = yes
+								min_jumps = 1
+								max_jumps = 10
+							}
+							any_ship_in_system = {
+								exists = owner
+								owner = { is_hostile = event_target:$OWNER$ }
+								is_disabled = no is_cloaked = no
+							}
+							##kuat_is_invisable_target_system = no
+						}
+						save_event_target_as = $TYPE$_invasion_fleet_action_target
+					}
+					#如果星系内具备有效目标，就80%概率走过去，20%概率飞过去（飞过去必须吃debuff）
+					if = {
+						limit = { exists = event_target:$TYPE$_invasion_fleet_action_target }
+						event_target:$TYPE$_invasion_fleet_action_target = {
+							random_fleet_in_system = {
+								limit = {
+									exists = owner
+									owner = { is_hostile = event_target:$OWNER$ }
+									any_owned_ship = { is_disabled = no is_cloaked = no }
+								}
+								roz_abyss_fleet_jump_drive_fleet_action = yes
+							}
+						}
+					}
+					#找不到目标，摆烂了，开始转圈
+					else = { roz_abyss_fleet_wandering_action = { TYPE = $TYPE$  OWNER = $OWNER$ } }
 				}
 			}
 		}
@@ -2389,7 +3168,7 @@ roz_abyss_fleet_create_small_attack_in_diff = {
 	optimize_memory
 	roz_abyss_fleet_create_small = { owner = $owner$ location = $location$ }
 	last_created_fleet = {
-		roz_abyss_fleet_invision_action_1 = yes
+		roz_abyss_fleet_invision_action_1 = { TYPE = roz_madgod_force OWNER = roz_madgod_force_country@root }
 		set_fleet_flag = roz_abyss_attack_fleet_small
 	}
 }
@@ -2462,7 +3241,7 @@ roz_abyss_fleet_create_median_attack_in_diff = {
 	optimize_memory
 	roz_abyss_fleet_create_median = { owner = $owner$ location = $location$ }
 	last_created_fleet = {
-		roz_abyss_fleet_invision_action_1 = yes
+		roz_abyss_fleet_invision_action_1 = { TYPE = oz_madgod_force OWNER = roz_madgod_force_country@root }
 		set_fleet_flag = roz_abyss_attack_fleet_median
 	}
 }
@@ -2533,7 +3312,7 @@ roz_abyss_fleet_create_large_attack_in_diff = {
 	optimize_memory
 	roz_abyss_fleet_create_large = { owner = $owner$ location = $location$ }
 	last_created_fleet = {
-		roz_abyss_fleet_invision_action_1 = yes
+		roz_abyss_fleet_invision_action_1 = { TYPE = oz_madgod_force OWNER = roz_madgod_force_country@root }
 		set_fleet_flag = roz_abyss_attack_fleet_large
 	}
 }
@@ -2605,7 +3384,7 @@ roz_abyss_fleet_create_marvelous_attack_in_diff = {
 		count = event_target:global_event_country.roz_unholy_invasion_difficulty
 		roz_abyss_fleet_create_marvelous = yes
 		last_created_fleet = {
-			roz_abyss_fleet_invision_action_1 = yes
+			roz_abyss_fleet_invision_action_1 = { TYPE = oz_madgod_force OWNER = roz_madgod_force_country@root }
 			set_fleet_flag = roz_abyss_attack_fleet_marvelous
 		}
 	}
@@ -2801,46 +3580,46 @@ roz_abyss_madgod_hunter_fleet_create_establish_in_diff = {
 	while = {
 		count = roz_unholy_invasion_difficulty_temp
 		random_list = {
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 1 num2 = 0 num3 = 0 } }
 			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 2 num2 = 0 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 1 num2 = 1 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 0 num2 = 2 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 0 num2 = 1 num3 = 1 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 0 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 0 num2 = 0 num3 = 1 } }
 		}
 	}
 	while = {
 		count = roz_unholy_invasion_difficulty_temp
 		random_list = {
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 1 num2 = 0 num3 = 0 } }
 			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 2 num2 = 0 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 1 num2 = 1 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 0 num2 = 2 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 0 num2 = 1 num3 = 1 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 0 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 1  num = 0 num2 = 0 num3 = 1 } }
 		}
 	}
 	while = {
 		count = roz_unholy_invasion_difficulty_temp
 		random_list = {
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 1 num2 = 0 num3 = 0 } }
 			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 2 num2 = 0 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 1 num2 = 1 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 0 num2 = 2 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 0 num2 = 1 num3 = 1 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 0 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 3  num = 0 num2 = 0 num3 = 1 } }
 		}
 	}
 	while = {
 		count = roz_unholy_invasion_difficulty_temp
 		random_list = {
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 1 num2 = 0 num3 = 0 } }
 			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 2 num2 = 0 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 1 num2 = 1 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 0 num2 = 2 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 0 num2 = 1 num3 = 1 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 0 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 4  num = 0 num2 = 0 num3 = 1 } }
 		}
 	}
 	while = {
 		count = roz_unholy_invasion_difficulty_temp
 		random_list = {
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 1 num2 = 0 num3 = 0 } }
 			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 2 num2 = 0 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 1 num2 = 1 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 0 num2 = 2 num3 = 0 } }
-			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 0 num2 = 1 num3 = 1 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 0 num2 = 1 num3 = 0 } }
+			1 = { roz_abyss_madgod_hunter_fleet_create_count_in_diff = { outpost = 5  num = 0 num2 = 0 num3 = 1 } }
 		}
 	}
 	clear_variable = roz_unholy_invasion_difficulty_temp
@@ -2871,19 +3650,19 @@ roz_abyss_hunter_fleet_create_can_establish_num_in_diff = {
 	optimize_memory
 	if = {
 		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 1 } } }
-		set_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 5 }
-	}
-	if = {
-		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 2 } } }
-		set_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 7 }
-	}
-	if = {
-		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 3 } } }
 		set_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 10 }
 	}
 	if = {
-		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 4 } } }
+		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 2 } } }
 		set_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 15 }
+	}
+	if = {
+		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 3 } } }
+		set_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 20 }
+	}
+	if = {
+		limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 4 } } }
+		set_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 20 }
 	}
 }
 
@@ -2970,13 +3749,25 @@ roz_abyss_hunter_fleet_create_when_situation_fail = {
 	if = {
 		limit = { check_variable = { which = roz_abyss_hunter_fleet_create_can_establish value >= 2 } }
 		set_variable = { which = roz_abyss_hunter_fleet_create_can_establish_arithmetic value = roz_abyss_hunter_fleet_create_can_establish }
-		multiply_variable = { which = roz_abyss_hunter_fleet_create_can_establish_arithmetic value = 0.667 }
+		multiply_variable = { which = roz_abyss_hunter_fleet_create_can_establish_arithmetic value = 0.5 }
 		round_variable = roz_abyss_hunter_fleet_create_can_establish_arithmetic
-		subtract_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = roz_abyss_hunter_fleet_create_can_establish_arithmetic }
-		while = {
-			count = roz_abyss_hunter_fleet_create_can_establish_arithmetic
-			roz_abyss_vass_hunter_fleet_create_establish_in_diff = yes
-			roz_abyss_madgod_hunter_fleet_create_establish_in_diff = yes
+		if = {	#防止一次刷太多数量
+			limit = { check_variable = { which = roz_abyss_hunter_fleet_create_can_establish value >= 5 } }
+			set_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 5 }
+			subtract_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = 5 }
+			while = {
+				count = roz_abyss_hunter_fleet_create_can_establish_arithmetic
+				#roz_abyss_vass_hunter_fleet_create_establish_in_diff = yes
+				roz_abyss_madgod_hunter_fleet_create_establish_in_diff = yes
+			}
+		}
+		else = {
+			subtract_variable = { which = roz_abyss_hunter_fleet_create_can_establish value = roz_abyss_hunter_fleet_create_can_establish_arithmetic }
+			while = {
+				count = roz_abyss_hunter_fleet_create_can_establish_arithmetic
+				#roz_abyss_vass_hunter_fleet_create_establish_in_diff = yes
+				roz_abyss_madgod_hunter_fleet_create_establish_in_diff = yes
+			}
 		}
 	}
 	else_if = {
