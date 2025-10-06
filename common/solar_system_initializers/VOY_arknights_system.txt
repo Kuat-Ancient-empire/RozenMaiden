@@ -80,33 +80,33 @@ VOY_AN_Terra_star_system = {
         }
     }
 
-    planet = {
-        name = "NAME_VOY_AN_Terra"
-        class = "pc_continental"
-        orbit_distance = 25
-        orbit_angle = 120
-        size = 18
-        starting_planet = yes
-        has_ring = no
-        entity = "continental_planet_earth_entity"
-        deposit_blockers = none
-        modifiers = none
-        flags = { planet_VOY_AN_Terra }
-        init_effect = {
-            save_global_event_target_as = VOY_AN_star_system_Terra
-            prevent_anomaly = yes
-            create_ambient_object = {
-                type = "KZ_VOY_great_barrier_gold"
-                entity_scale_to_size = yes
-                use_3d_location = yes
-                entity_offset = { min = 0 max = 0 }
-                entity_offset_angle = { min = 0 max = 0 }
-                entity_offset_height = { min = 0 max = 0 }
-                scale = 0.15
-                location = this
-            }
-        }
-    }
+    # planet = {
+    #     name = "NAME_VOY_AN_Terra"
+    #     class = "pc_continental"
+    #     orbit_distance = 25
+    #     orbit_angle = 120
+    #     size = 18
+    #     starting_planet = yes
+    #     has_ring = no
+    #     entity = "continental_planet_earth_entity"
+    #     deposit_blockers = none
+    #     modifiers = none
+    #     flags = { planet_VOY_AN_Terra }
+    #     init_effect = {
+    #         save_global_event_target_as = VOY_AN_star_system_Terra
+    #         prevent_anomaly = yes
+    #         create_ambient_object = {
+    #             type = "KZ_VOY_great_barrier_gold"
+    #             entity_scale_to_size = yes
+    #             use_3d_location = yes
+    #             entity_offset = { min = 0 max = 0 }
+    #             entity_offset_angle = { min = 0 max = 0 }
+    #             entity_offset_height = { min = 0 max = 0 }
+    #             scale = 0.15
+    #             location = this
+    #         }
+    #     }
+    # }
 
 
     planet = {

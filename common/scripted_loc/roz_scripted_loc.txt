@@ -280,3 +280,28 @@ defined_text = {
 	#default = 
 }
 
+defined_text = {
+	name = LeaderTierNumberExpand
+	random = no
+	text = {
+		trigger = {
+			OR = {
+				has_leader_flag = renowned_leader
+				is_leader_tier = leader_tier_renowned
+				check_variable = { which = leader_tier_graphical_mlr value = 2 }
+			}
+		}
+		localization_key = 2
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_leader_flag = legendary_leader
+				is_leader_tier = leader_tier_legendary
+				check_variable = { which = leader_tier_graphical_mlr value = 3 }
+			}
+		}
+		localization_key = 3
+	}
+	default = 1
+}

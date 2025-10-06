@@ -475,7 +475,7 @@ roz_awaken_of_shinku_1_acknowledge_border = {
             current_situation_approach = roz_awaken_of_shinku_1_acknowledge_border_3_approach
         }
         modifier = {
-            factor = 2.0
+            factor = 0.0
             desc = roz_awaken_of_shinku_1_acknowledge_border_4_approach
             current_situation_approach = roz_awaken_of_shinku_1_acknowledge_border_4_approach
         }

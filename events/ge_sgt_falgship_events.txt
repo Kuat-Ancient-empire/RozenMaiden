@@ -664,8 +664,7 @@ country_event = {
 		fromfrom = {
 			create_ambient_object = {
 				type = "star_explosion"
-				duration = 5
-				#play_animation_once = yes 
+				play_animation_once = yes
 				entity_scale_to_size = no
 				use_3d_location = yes
 				entity_offset = { min = 0 max = 0 }

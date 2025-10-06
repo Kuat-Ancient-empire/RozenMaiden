@@ -1968,7 +1968,11 @@ country_event = {
                 days = 30
             }
         }
-        else = {
+        else_if = {
+            limit = {
+                has_country_flag = roz_SK_1_kxbj_complete
+                has_country_flag = roz_SK_2_jtcl_complete
+            }
             country_event = {
                 id = roz_shinku_evt.501
             }
@@ -2958,6 +2962,7 @@ ship_event = {
         from = { owner = { NOT = { has_country_flag = roz_crisis_madgod_boss_first_blood } } }
     }
     immediate = {
+        fleet = { remove_fleet_flag = roz_abyss_fleet }
         #由击败者触发
         from = { owner = { country_event = { id = roz_shinku_evt.550 } } }
         #复活
@@ -4264,8 +4269,8 @@ country_event = {
             solar_system = {
                 create_ambient_object = {
                     type = "star_explosion"
-                    duration = 5
-                    #play_animation_once = yes
+                    #duration = 5
+                    play_animation_once = yes
                     entity_scale_to_size = no
                     use_3d_location = yes
                     entity_offset = { min = 0 max = 0 }
@@ -4767,6 +4772,23 @@ country_event = {
             }
         }
     }
+    option = {
+        name = "roz_shinku_evt.1010.4"
+        response_text = "roz_shinku_evt.1010.res.a"
+        response_text = "roz_shinku_evt.1010.res.b"
+        response_text = "roz_shinku_evt.1010.res.c"
+        # response_text = "roz_shinku_evt.1010.res.d"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = shinku
+                portrait = roz_shinku
+                flag = roz_shinku_portrait_change
+                leader_flag = roz_shinku_flag
+                portrait_key = roz_shinku_4
+            }
+        }
+    }
 }
 
 
@@ -5091,7 +5113,7 @@ country_event = {
     trigger = {
         has_country_flag = roz_shinku_story_start_flag
         has_country_flag = roz_hinaichigo_arrive
-        NOR = {
+        NOT = {
             has_country_flag = ge_nfield_diplomacy_activated
         }
         from = { #是雏莓缓存国家
@@ -5108,7 +5130,11 @@ country_event = {
     option = {
         #立绘切换
         name = roz_shinku_evt.4501.aa
-        response_text = roz_shinku_evt.4501.aa_ct
+        #response_text = roz_shinku_evt.4501.aa_ct
+        is_dialog_only = yes
+        country_event = {
+            id = roz_shinku_evt.4550
+        }
     }
     option = {
         name = roz_shinku_evt.4501.bb
@@ -5155,6 +5181,103 @@ country_event = {
     after = {
         hidden_effect = {
             remove_country_flag = ge_nfield_diplomacy_activated
+        }
+    }
+}
+
+###换装
+country_event = {
+    id = roz_shinku_evt.4550
+    is_triggered_only = yes
+    title = "roz_shinku_evt.4550.title"
+    desc = "roz_shinku_evt.4550.desc1"
+    desc = "roz_shinku_evt.4550.desc2"
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:ge_leader
+        room = roz_shinku_main_room
+    }
+    trigger = {
+        NOR = { #防止连点
+            has_country_flag = roz_hinaichigo_change_skin_flag
+            has_active_event = { roz_shinku_evt.4550 }
+        }
+    }
+    immediate = {
+        set_country_flag = roz_hinaichigo_change_skin_flag
+        get_ge_leader_target = { flag = roz_hinaichigo_flag }
+        remove_country_flag = ge_nfield_diplomacy_activated
+    }
+    after = {
+        hidden_effect = { remove_country_flag = roz_hinaichigo_change_skin_flag }
+    }
+    option = {
+        #退出换装
+        name = "roz_shinku_evt.4550.00"
+        default_hide_option = yes
+        hidden_effect = {
+            fire_on_action = {
+                on_action = on_custom_diplomacy
+                scopes = {
+                    from = event_target:roz_hinaichigo_global_country@root
+                }
+            }
+        }
+    }
+    option = {
+        name = "roz_shinku_evt.4550.20th"
+        response_text = "roz_shinku_evt.4550.res.00"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = hinaichigo
+                portrait = roz_hinaichigo
+                flag = roz_hinaichigo_portrait_change
+                leader_flag = roz_hinaichigo_flag
+                portrait_key = roz_hinaichigo_20th
+            }
+        }
+    }
+    option = {
+        name = "roz_shinku_evt.4550.1"
+        response_text = "roz_shinku_evt.4550.res.00"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = hinaichigo
+                portrait = roz_hinaichigo
+                flag = roz_hinaichigo_portrait_change
+                leader_flag = roz_hinaichigo_flag
+                portrait_key = roz_hinaichigo_1
+            }
+        }
+    }
+    option = {
+        name = "roz_shinku_evt.4550.2"
+        response_text = "roz_shinku_evt.4550.res.00"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = hinaichigo
+                portrait = roz_hinaichigo
+                flag = roz_hinaichigo_portrait_change
+                leader_flag = roz_hinaichigo_flag
+                portrait_key = roz_hinaichigo_2
+            }
+        }
+    }
+    option = {
+        name = "roz_shinku_evt.4550.3"
+        response_text = "roz_shinku_evt.4550.res.00"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = hinaichigo
+                portrait = roz_hinaichigo
+                flag = roz_hinaichigo_portrait_change
+                leader_flag = roz_hinaichigo_flag
+                portrait_key = roz_hinaichigo_3
+            }
         }
     }
 }

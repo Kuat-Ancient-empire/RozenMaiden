@@ -141,7 +141,7 @@ building_roz_power_core = {
     planet_limit = {    #建造数量
         base = 1
     }
-   empire_limit = {    #建造数量
+    empire_limit = {    #建造数量
         base = 1
     }
 
@@ -157,7 +157,7 @@ building_roz_power_core = {
     #     urban_automation
     #     mining_automation
     #     farming_automation
-    #     generator_automation
+          generator_automation
     #
           government
           urban
@@ -178,7 +178,7 @@ building_roz_power_core = {
     #     zoo
     #
     #     fallen_empire_farming
-    #     generator
+          generator
     #     fallen_empire_generator
     #     mining
     #     fallen_empire_mining
@@ -195,7 +195,7 @@ building_roz_power_core = {
 
     potential = {
         exists = planet
-        #planet = { is_capital = yes }
+        planet = { is_capital = yes }
     }
     prerequisites = {
         tech_roz_power_core
@@ -271,23 +271,23 @@ building_roz_dolls_factory = {
     #     entertainment
     #     resort
           industrial
-    #     research_unity
-    #     research
-    #     unity
-    #     trade
+          research_unity
+          research
+          unity
+          trade
     #     society
     #     physics
     #     engineering
     #     cosmogenesis_world
     #     fallen_empire
-    #     farming
+          farming
           foundry
     #     zoo
     #
     #     fallen_empire_farming
-    #     generator
+          generator
     #     fallen_empire_generator
-    #     mining
+          mining
     #     fallen_empire_mining
     #
     #     knights
@@ -315,8 +315,8 @@ building_roz_dolls_factory = {
     #}
     planet_modifier = {
         planet_amenities_no_happiness_add = 2000
-        bonus_pop_growth = 6
-        fake_pop_growth_mod = 6
+        bonus_pop_growth = 3
+        fake_pop_growth_mod = 3
     } 				#星球范围内的修正
     country_modifier = {
 

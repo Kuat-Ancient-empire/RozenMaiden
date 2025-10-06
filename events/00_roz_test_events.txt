@@ -387,7 +387,8 @@ country_event = { #控制台effect测试区
 		#effect = { add_awakened_fallen_empire_resources = yes add_awakened_fallen_empire_fleet = yes }
 		#effect = { every_country = { establish_contact = { who = this location = root } } }
 		#effect = { force_add_civic = civic_azur_K1 force_add_civic = civic_azur_K2 force_add_civic = civic_azur_K3 }
-		#
+		#trigger exists = { event_target:roz_suigintou_scientist_inactive_temp@root }
+		#trigger exists = { event_target:roz_suigintou_commander_inactive_temp@root }
 
 		#effect owner_main_species = { change_species_characteristics = { add_trait = trait_malleable_genes } } set_country_flag = manifesti_leading
 		# effect = {

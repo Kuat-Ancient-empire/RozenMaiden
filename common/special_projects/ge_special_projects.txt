@@ -1164,8 +1164,9 @@ special_project = {
 	requirements = {
 		shipclass_constructor = 1
 	}
-	cost = 50000
-	tech_department = engineering_technology
+	#cost = 50000
+	#tech_department = engineering_technology
+	days_to_research = 30
 	event_scope = ship_event
 	picture = GFX_evt_roz_unholy_invasion_decoy
 	location = yes

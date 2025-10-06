@@ -298,6 +298,7 @@ country_event = {
     }
     option = {
         name =  roz_krks_leader_evt.13.dd
+        default_hide_option = yes
         response_text =  roz_krks_leader_evt.13.dd.res
         custom_tooltip = roz_krks_leader_evt.13.dd.ct
         hidden_effect = {
@@ -313,7 +314,7 @@ country_event = {
             event_target:roz_suigintou_bwg_leader_target@root = {
                 set_owner = root
                 return_leader_from_exile = this
-            }
+            }``
         
             # if = {
             #     limit = {
@@ -1010,6 +1011,20 @@ country_event = { ###换装
                 flag = roz_krks_portrait_change
                 leader_flag = roz_kirakishou_flag
                 portrait_key = roz_kirakishou_6
+            }
+        }
+    }
+    option = {
+        name = "roz_krks_leader_evt.1001.HH"
+        response_text = "roz_krks_leader_evt.1001.res.1"
+        is_dialog_only = yes
+        hidden_effect = {
+            roz_leader_change_skin_set_flag_effect = {
+                who = krks
+                portrait = roz_kirakishou
+                flag = roz_krks_portrait_change
+                leader_flag = roz_kirakishou_flag
+                portrait_key = roz_kirakishou_7
             }
         }
     }

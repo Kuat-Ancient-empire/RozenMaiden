@@ -101,6 +101,10 @@ portraits = {
 		textureFile = "gfx/models/portraits/00_roz_kirakishou/roz_krks_6.dds"
 
 	}
+	roz_kirakishou_7 = {
+		textureFile = "gfx/models/portraits/00_roz_kirakishou/roz_krks_7.dds"
+
+	}
 	roz_kirakishou_20th = {
 		textureFile = "gfx/models/portraits/00_roz_kirakishou/roz_krks_20th.dds"
 
@@ -119,6 +123,9 @@ portraits = {
 	roz_shinku_3 = {
 		textureFile = "gfx/models/portraits/00_roz_shinku/roz_sk_3.dds"
 	}
+	roz_shinku_4 = {
+		textureFile = "gfx/models/portraits/00_roz_shinku/roz_sk_4.dds"
+	}
 
 	######雏莓
 	roz_hinaichigo_20th = {
@@ -130,7 +137,9 @@ portraits = {
 	roz_hinaichigo_02 = {
 		textureFile = "gfx/models/portraits/00_roz_hinaichigo/roz_hinaichigo_02.dds"
 	}
-
+	roz_hinaichigo_03 = {
+		textureFile = "gfx/models/portraits/00_roz_hinaichigo/roz_hinaichigo_03.dds"
+	}
 
 
 }

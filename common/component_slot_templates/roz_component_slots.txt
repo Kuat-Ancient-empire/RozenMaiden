@@ -170,7 +170,25 @@ roz_pd_1_turret = {
 	}
 }
 
+roz_citadel_medium_turret = {
+	size = medium
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "citadel_point_defence_turret_entity"
+		weapon_type_energy = "citadel_point_defence_turret_entity"
+		weapon_type_explosive = "citadel_point_defence_turret_entity"
+		weapon_type_ge_void_energy = "citadel_point_defence_turret_entity"
+	}
+}
 
-
-
+roz_citadel_titanic_turret = {
+	size = titanic
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "citadel_extra_large_turret_entity"
+		weapon_type_energy = "citadel_extra_large_turret_entity"
+		weapon_type_explosive = "citadel_extra_large_turret_entity"
+		weapon_type_ge_void_energy = "citadel_extra_large_turret_entity"
+	}
+}
 

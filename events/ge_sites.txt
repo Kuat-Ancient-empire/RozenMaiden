@@ -53,9 +53,9 @@ country_event = {
 						}
 						#NOT = { any_fleet_in_system = { owner = { is_hostile = root } } }
 						NOR = {
-							has_star_flag = lcluster
-							has_star_flag = lcluster1
-							has_star_flag = lcluster1b
+							# has_star_flag = lcluster
+							# has_star_flag = lcluster1
+							# has_star_flag = lcluster1b
 							has_star_flag = lgate
 							has_star_flag = lcluster_lgate
 						}

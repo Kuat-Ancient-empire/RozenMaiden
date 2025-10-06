@@ -22,8 +22,8 @@ ge_flagship = {
 		kuat_flagship_system_catagories = 1
 	}
 	combat_size_multiplier = 4
-	size_multiplier = 48
-	fleet_slot_size = 48
+	size_multiplier = 32
+	fleet_slot_size = 32
 	section_slots = {
 		"core" = {
 			locator = "part1"

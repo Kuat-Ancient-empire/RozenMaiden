@@ -13,6 +13,8 @@ ge_battleship_S_stern_L4G4:0 "重型战列舰-舰艉"
 ge_flagship_core:0 "虚空领舰舰体"
 Ge_Ragnarok_Core:0 "Odin（ban）"
 
+ ROZ_juggernaut: "主宰-先进型"
+
 Ge_Ragnarok_Core_1:0 "永恒之枪"
 
 GE_COLOSSUS_SECTION_S:0 "重型巨像"
@@ -102,6 +104,8 @@ GE_MILITARY_STATION_SECTION_Artillery:0 "星光区段"
 GE_MILITARY_mining_station:0 "武装采矿站"
 GE_MILITARY_research_station:0 "武装研究站"
 
+ starbase_deep_space_citadel_roz: ""
+ DEEP_SPACE_CITADEL_STAGE_3_roz: "先进型DSC"
 #####behavior
 gev_swarm_60:0 "§g中程冲击战术§!"
 gev_swarm_60_DESC:0 "舰船会推进到适中距离(§Y50§!)并尝试拦截目标的推进"
