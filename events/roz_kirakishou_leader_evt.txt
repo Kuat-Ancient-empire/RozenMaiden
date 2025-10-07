@@ -314,7 +314,7 @@ country_event = {
             event_target:roz_suigintou_bwg_leader_target@root = {
                 set_owner = root
                 return_leader_from_exile = this
-            }``
+            }
         
             # if = {
             #     limit = {

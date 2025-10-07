@@ -2969,7 +2969,7 @@ ship_event = {
         if = {  #检测深渊势力是否只剩下boss星系且击杀者为非ai，如果返回yes，则只给予最后一次复活
             limit = {
                 from = { owner = { is_ai = no } }
-                roz_is_all_abyss_killed_except_madgod_system = { scope = prevprevprev.from }
+                roz_is_all_abyss_killed_except_madgod_system = { scope = prev.from }
             }
             roz_ship_disable_protect_effect = yes
             set_disable_at_health = -1
@@ -2998,7 +2998,7 @@ ship_event = {
     immediate = {
         #复活
         if = {  #检测深渊势力是否只剩下boss星系，如果返回yes，则只给予最后一次复活
-            limit = { roz_is_all_abyss_killed_except_madgod_system = { scope = prevprevprev.from } }
+            limit = { roz_is_all_abyss_killed_except_madgod_system = { scope = prev.from } }
             roz_ship_disable_protect_effect = yes
             set_disable_at_health = -1
             from = { owner = {

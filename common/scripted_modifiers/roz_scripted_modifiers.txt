@@ -15,6 +15,9 @@ roz_timeslow_modifier_tooltip = {
     max_decimals = 6
 }
 
-
-
+#恐惧
+immune_to_terrify = { icon = mod_ship_experience_gain_mult percentage = yes good = yes category = ship localize_with_value_key = yes }
+immune_chance_terrify = { icon = mod_ship_experience_gain_mult percentage = yes neutral = yes category = ship }
+terrify_duration_mult = { icon = mod_ship_experience_gain_mult percentage = yes neutral = yes category = ship }
+terrify_duration_add = { icon = mod_ship_experience_gain_mult percentage = no neutral = yes category = ship }
 

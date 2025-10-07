@@ -285,9 +285,9 @@ building_roz_dolls_factory = {
     #     zoo
     #
     #     fallen_empire_farming
-          generator
+    #     generator
     #     fallen_empire_generator
-          mining
+    #     mining
     #     fallen_empire_mining
     #
     #     knights

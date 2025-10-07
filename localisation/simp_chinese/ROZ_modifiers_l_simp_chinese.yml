@@ -199,6 +199,10 @@
  mod_roz_timefreeze_modifier_tooltip:"§R时空畸变率(激活时)§!"
  roz_timeslow_modifier_tooltip:"§P时空畸变率§!"
 
+ mod_immune_to_terrify: "不会受到['concept_terrify',恐惧状态]影响"
+ mod_immune_chance_terrify: "受到['concept_terrify',恐惧状态]影响的概率"
+ mod_terrify_duration_mult: "['concept_terrify',恐惧状态]持续时间"
+ mod_terrify_duration_add: "['concept_terrify',恐惧状态]持续时间"
 
  #############################
  ####特殊计划：卷土重来

@@ -277,12 +277,16 @@ country_event = { #控制台effect测试区
 		# 	set_player = event_target:roz_suigintou_owner@root
 		# }
 		#trigger event_target:roz_madgod_force_country@root = { exists = this }
-		event_target:roz_madgod_force_country@root = { set_player = event_target:roz_suigintou_owner@root }
+		#event_target:roz_madgod_force_country@root = { set_player = event_target:roz_suigintou_owner@root }
+		#trigger roz_is_all_abyss_killed_except_madgod_system = { scope = root }
 		every_country = {
 			limit = { has_country_flag = roz_abyss_vass_country }
 			destroy_country = yes
 		}
 		event_target:roz_madgod_force_country@root = {
+			every_owned_planet = {
+				destroy_colony = yes
+			}
 			every_owned_fleet = {
 				limit = { NOT = { has_fleet_flag = roz_abyss_fleet_madgod_boss } }
 				destroy_fleet = this
