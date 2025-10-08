@@ -576,17 +576,17 @@ roz_suigintou_revive_reset_scientist = {
 			add_trait = { trait = leader_trait_ge_meimei_scientist }
 			add_trait = { trait = leader_trait_ge_N_field_scientist }
 			add_trait = { trait = leader_trait_ge_mercury_lamp_scientist }
-			random_list = {
-				1 = { add_trait = { trait = leader_trait_surveyor } }
-				1 = { add_trait = { trait = leader_trait_midas_touch } }
-				1 = { add_trait = { trait = leader_trait_knowledge_for_the_masses } }
-				1 = { add_trait = { trait = leader_trait_great_researcher } }
-				1 = { add_trait = { trait = leader_trait_truth_seeker } }
-				1 = { add_trait = { trait = leader_trait_brilliant_shipwright } }
-				1 = { add_trait = { trait = leader_trait_frontier_adventurer } }
-				1 = { add_trait = { trait = leader_trait_xeno_cataloger } }
-				1 = { add_trait = { trait = leader_trait_knowledge_for_the_masses } }
-			}
+			# random_list = {
+			# 	1 = { add_trait = { trait = leader_trait_surveyor } }
+			# 	1 = { add_trait = { trait = leader_trait_midas_touch } }
+			# 	1 = { add_trait = { trait = leader_trait_knowledge_for_the_masses } }
+			# 	1 = { add_trait = { trait = leader_trait_great_researcher } }
+			# 	1 = { add_trait = { trait = leader_trait_truth_seeker } }
+			# 	1 = { add_trait = { trait = leader_trait_brilliant_shipwright } }
+			# 	1 = { add_trait = { trait = leader_trait_frontier_adventurer } }
+			# 	1 = { add_trait = { trait = leader_trait_xeno_cataloger } }
+			# 	1 = { add_trait = { trait = leader_trait_knowledge_for_the_masses } }
+			# }
 			reroll_random = yes
 			freeze_leader_age = yes
 		}
@@ -661,16 +661,16 @@ roz_suigintou_revive_reset_admiral = {
 			add_trait = { trait = leader_trait_ge_Blackwinged_Dragon }
 			add_trait = { trait = leader_trait_ge_azoth }
 			add_trait = { trait = leader_trait_ge_N_field }
-			random_list = {
-				1 = { add_trait = { trait = leader_trait_armorer } }
-				2 = { add_trait = { trait = leader_trait_military_overseer } }
-				1 = { add_trait = { trait = leader_trait_master_gunner } }
-				1 = { add_trait = { trait = leader_trait_destiny_engineer } }
-				2 = { add_trait = { trait = leader_trait_guerilla_tactics } }
-				1 = { add_trait = { trait = leader_trait_survivalist } }
-				1 = { add_trait = { trait = leader_trait_maven_of_war } }
-				1 = { add_trait = { trait = leader_trait_peacekeeper } }
-			}
+			# random_list = {
+			# 	1 = { add_trait = { trait = leader_trait_armorer } }
+			# 	2 = { add_trait = { trait = leader_trait_military_overseer } }
+			# 	1 = { add_trait = { trait = leader_trait_master_gunner } }
+			# 	1 = { add_trait = { trait = leader_trait_destiny_engineer } }
+			# 	2 = { add_trait = { trait = leader_trait_guerilla_tactics } }
+			# 	1 = { add_trait = { trait = leader_trait_survivalist } }
+			# 	1 = { add_trait = { trait = leader_trait_maven_of_war } }
+			# 	1 = { add_trait = { trait = leader_trait_peacekeeper } }
+			# }
 			reroll_random = yes
 			freeze_leader_age = yes
 		}

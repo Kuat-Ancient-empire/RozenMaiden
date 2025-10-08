@@ -2898,16 +2898,9 @@ country_event = {
         # }
     }
     immediate = {
-        #为深渊仆从国刷防御舰队，该舰队所有者为其本身
+        #为深渊仆从国原殖民地刷防御舰队，该舰队所有者为其本身
         # every_country = {
         #     limit = { has_country_flag = roz_abyss_vass_country }
-        #     # while = {
-        #     #     count = 2
-        #     #     roz_abyss_fleet_create_small_defense_in_diff = {
-        #     #         owner = prevprev
-        #     #         location = prevprev.capital_scope
-        #     #     }
-        #     # }
         #     roz_abyss_fleet_create_median_defense_in_diff = {
         #         owner = prevprev
         #         location = prevprev.capital_scope
@@ -3558,6 +3551,7 @@ country_event = {
             roz_abyss_fleet_suppress_modifier_effect = { modifier = ship_armor_penetration_mult roz_abyss_var_temp = 1 }
             roz_abyss_fleet_suppress_modifier_effect = { modifier = ship_weapon_damage roz_abyss_var_temp = 1 }
             fleet_event = { id = roz_shinku_evt.589 days = 5 }
+            fleet_event = { id = roz_shinku_evt.590 days = 7 }
         }
         fromfrom = {
             set_fleet_flag = roz_fleet_combat_has_been_protected
@@ -3604,7 +3598,33 @@ fleet_event = {
         }
     }
 }
-
+fleet_event = {
+    id = roz_shinku_evt.590
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        exists = this
+        is_in_combat = yes
+    }
+    immediate = {
+        every_owned_ship = {
+            limit = { NOT = { has_ship_flag = is_terrified } }
+            set_terrified_by = this
+            set_timed_ship_flag = { flag = is_terrified days = 5 }
+            ship_event = { id = roz_shinku_evt.591 days = 5 }
+        }
+    }
+}
+ship_event = {
+    id = roz_shinku_evt.591
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = { exists = this }
+    immediate = {
+        remove_terrified = yes
+        remove_ship_flag = is_terrified
+    }
+}
 #
 country_event = {
     id = roz_shinku_evt.595
@@ -4396,6 +4416,7 @@ country_event = {   #
     }
 }
 
+#创建真红
 country_event = {
     id = roz_shinku_evt.702
     hide_window = yes
@@ -4437,6 +4458,8 @@ country_event = {
         roz_shinku_leader_initiate = yes
     }
 }
+
+#创建雏莓
 country_event = {
     id = roz_shinku_evt.703
     hide_window = yes
@@ -5125,7 +5148,7 @@ country_event = {
     }
     immediate = {
         set_country_flag = ge_nfield_diplomacy_activated
-        get_ge_leader_target = { flag = roz_hinaichigo }
+        get_ge_leader_target = { flag = roz_hinaichigo_flag }
     }
     option = {
         #立绘切换
@@ -5159,7 +5182,7 @@ country_event = {
         response_text = roz_shinku_evt.4501.ff.res4
         is_dialog_only = yes
         trigger = { NOT = { has_country_flag = roz_hinaichigo_official_active } }
-        roz_hinaichigo_leader_type_switch_official = yes
+        hidden_effect = { roz_hinaichigo_leader_type_switch_official = yes }
     }
     option = {
         name = roz_shinku_evt.4501.gg
@@ -5172,7 +5195,7 @@ country_event = {
         response_text = roz_shinku_evt.4501.gg.res7
         is_dialog_only = yes
         trigger = { NOT = { has_country_flag = roz_hinaichigo_commander_active } }
-        roz_hinaichigo_leader_type_switch_commander = yes
+        hidden_effect = { roz_hinaichigo_leader_type_switch_commander = yes }
     }
     option = {
         name = roz_shinku_evt.4501.ee

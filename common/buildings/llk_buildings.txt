@@ -178,7 +178,7 @@ building_roz_power_core = {
     #     zoo
     #
     #     fallen_empire_farming
-          generator
+    #     generator
     #     fallen_empire_generator
     #     mining
     #     fallen_empire_mining
@@ -280,7 +280,7 @@ building_roz_dolls_factory = {
     #     engineering
     #     cosmogenesis_world
     #     fallen_empire
-          farming
+    #     farming
           foundry
     #     zoo
     #

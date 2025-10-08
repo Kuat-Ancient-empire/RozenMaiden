@@ -306,12 +306,14 @@ roz_is_all_abyss_killed_except_madgod_system = {
 	# 	# }
 	# }
 	#???
-	any_galaxy_fleet = {
-		NOT = { solar_system = { has_star_flag = roz_outland_system } }
-		NOT = { has_fleet_flag = roz_abyss_fleet_madgod_boss }
-		OR = {
-			has_fleet_flag = roz_abyss_fleet
-			is_owned_by = event_target:roz_madgod_force_country@$scope$
+	NOT = {
+		any_galaxy_fleet = {
+			NOT = { solar_system = { has_star_flag = roz_outland_system } }
+			NOT = { has_fleet_flag = roz_abyss_fleet_madgod_boss }
+			OR = {
+				has_fleet_flag = roz_abyss_fleet
+				is_owned_by = event_target:roz_madgod_force_country@$scope$
+			}
 		}
 	}
 }

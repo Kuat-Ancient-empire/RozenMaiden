@@ -373,7 +373,7 @@ roz_leader_type_switch_create_leader_initiate_effect = {	#生成领袖
 	if = {	#从缓存国家复制备份
 		limit = {
 			OR = {
-				event_target:roz_$leader$_country@root = {
+				event_target:roz_$leader$_global_country@root = {
 					any_owned_leader = {
 						leader_class = $leader_type$
 						has_trait = $symbolic_trait_1$
@@ -420,51 +420,51 @@ roz_leader_type_switch_create_leader_initiate_effect = {	#生成领袖
 			switch = {
 				trigger = leader_class
 				scientist = {
-					random_list = {
-						1 = { add_trait = { trait = leader_trait_surveyor } }
-						1 = { add_trait = { trait = leader_trait_midas_touch } }
-						1 = { add_trait = { trait = leader_trait_knowledge_for_the_masses } }
-						1 = { add_trait = { trait = leader_trait_great_researcher } }
-						1 = { add_trait = { trait = leader_trait_truth_seeker } }
-						1 = { add_trait = { trait = leader_trait_brilliant_shipwright } }
-						1 = { add_trait = { trait = leader_trait_frontier_adventurer } }
-						1 = { add_trait = { trait = leader_trait_xeno_cataloger } }
-						2 = { add_trait = { trait = leader_trait_knowledge_for_the_masses } }
-					}
+					# random_list = {
+					# 	1 = { add_trait = { trait = leader_trait_surveyor } }
+					# 	1 = { add_trait = { trait = leader_trait_midas_touch } }
+					# 	1 = { add_trait = { trait = leader_trait_knowledge_for_the_masses } }
+					# 	1 = { add_trait = { trait = leader_trait_great_researcher } }
+					# 	1 = { add_trait = { trait = leader_trait_truth_seeker } }
+					# 	1 = { add_trait = { trait = leader_trait_brilliant_shipwright } }
+					# 	1 = { add_trait = { trait = leader_trait_frontier_adventurer } }
+					# 	1 = { add_trait = { trait = leader_trait_xeno_cataloger } }
+					# 	2 = { add_trait = { trait = leader_trait_knowledge_for_the_masses } }
+					# }
 				}
 				commander = {
-					random_list = {
-						1 = { add_trait = { trait = leader_trait_armorer } }
-						1 = { add_trait = { trait = leader_trait_military_overseer } }
-						1 = { add_trait = { trait = leader_trait_master_gunner } }
-						1 = { add_trait = { trait = leader_trait_destiny_engineer } }
-						1 = { add_trait = { trait = leader_trait_guerilla_tactics } }
-						1 = { add_trait = { trait = leader_trait_survivalist } }
-						1 = { add_trait = { trait = leader_trait_maven_of_war } }
-						2 = { add_trait = { trait = leader_trait_peacekeeper } }
-					}
-					random_list = {
-						1 = { add_trait = { trait = leader_trait_taskmaster } }
-						1 = { add_trait = { trait = leader_trait_fortress_cracker } }
-						1 = { add_trait = { trait = leader_trait_chainbreaker } }
-						1 = { add_trait = { trait = leader_trait_honored_warmaster } }
-						1 = { add_trait = { trait = leader_trait_academia_recruiter } }
-						1 = { add_trait = { trait = leader_trait_supreme_warrior } }
-						1 = { add_trait = { trait = leader_trait_spymaster } }
-						1 = { add_trait = { trait = leader_trait_totalitarian } }
-						1 = { add_trait = { trait = leader_trait_bellicose } }
-					}
+					# random_list = {
+					# 	1 = { add_trait = { trait = leader_trait_armorer } }
+					# 	1 = { add_trait = { trait = leader_trait_military_overseer } }
+					# 	1 = { add_trait = { trait = leader_trait_master_gunner } }
+					# 	1 = { add_trait = { trait = leader_trait_destiny_engineer } }
+					# 	1 = { add_trait = { trait = leader_trait_guerilla_tactics } }
+					# 	1 = { add_trait = { trait = leader_trait_survivalist } }
+					# 	1 = { add_trait = { trait = leader_trait_maven_of_war } }
+					# 	2 = { add_trait = { trait = leader_trait_peacekeeper } }
+					# }
+					# random_list = {
+					# 	1 = { add_trait = { trait = leader_trait_taskmaster } }
+					# 	1 = { add_trait = { trait = leader_trait_fortress_cracker } }
+					# 	1 = { add_trait = { trait = leader_trait_chainbreaker } }
+					# 	1 = { add_trait = { trait = leader_trait_honored_warmaster } }
+					# 	1 = { add_trait = { trait = leader_trait_academia_recruiter } }
+					# 	1 = { add_trait = { trait = leader_trait_supreme_warrior } }
+					# 	1 = { add_trait = { trait = leader_trait_spymaster } }
+					# 	1 = { add_trait = { trait = leader_trait_totalitarian } }
+					# 	1 = { add_trait = { trait = leader_trait_bellicose } }
+					# }
 				}
 				official = {
-					random_list = {
-						1 = { add_trait = { trait = leader_trait_efficient } }
-						1 = { add_trait = { trait = leader_trait_arbiter } }
-						2 = { add_trait = { trait = leader_trait_utopian_idealist } }
-						1 = { add_trait = { trait = leader_trait_mediator } }
-						1 = { add_trait = { trait = leader_trait_shroud_preacher } }
-						1 = { add_trait = { trait = leader_trait_master_diplomat } }
-						1 = { add_trait = { trait = leader_trait_galvanizer } }
-					}
+					# random_list = {
+					# 	1 = { add_trait = { trait = leader_trait_efficient } }
+					# 	1 = { add_trait = { trait = leader_trait_arbiter } }
+					# 	2 = { add_trait = { trait = leader_trait_utopian_idealist } }
+					# 	1 = { add_trait = { trait = leader_trait_mediator } }
+					# 	1 = { add_trait = { trait = leader_trait_shroud_preacher } }
+					# 	1 = { add_trait = { trait = leader_trait_master_diplomat } }
+					# 	1 = { add_trait = { trait = leader_trait_galvanizer } }
+					# }
 				}
 			}
 			add_trait = { trait = $symbolic_trait_1$ }
@@ -605,28 +605,28 @@ roz_shinku_leader_initiate = {
 		}
 		add_trait = { trait = leader_trait_roz_shinku_main }
 		add_trait = { trait = leader_trait_roz_shinku_hollye }
-		random_list = {
-			1 = { add_trait = { trait = leader_trait_armorer } }
-			1 = { add_trait = { trait = leader_trait_military_overseer } }
-			1 = { add_trait = { trait = leader_trait_master_gunner } }
-			1 = { add_trait = { trait = leader_trait_destiny_engineer } }
-			2 = { add_trait = { trait = leader_trait_guerilla_tactics } }
-			1 = { add_trait = { trait = leader_trait_survivalist } }
-			1 = { add_trait = { trait = leader_trait_maven_of_war } }
-			1 = { add_trait = { trait = leader_trait_peacekeeper } }
-		}
-		random_list = {
-			1 = { add_trait = { trait = leader_trait_taskmaster } }
-			1 = { add_trait = { trait = leader_trait_fortress_cracker } }
-			2 = { add_trait = { trait = leader_trait_chainbreaker } }
-			1 = { add_trait = { trait = leader_trait_chainbreaker } }
-			1 = { add_trait = { trait = leader_trait_honored_warmaster } }
-			1 = { add_trait = { trait = leader_trait_academia_recruiter } }
-			1 = { add_trait = { trait = leader_trait_supreme_warrior } }
-			1 = { add_trait = { trait = leader_trait_spymaster } }
-			1 = { add_trait = { trait = leader_trait_totalitarian } }
-			1 = { add_trait = { trait = leader_trait_bellicose } }
-		}
+		# random_list = {
+		# 	1 = { add_trait = { trait = leader_trait_armorer } }
+		# 	1 = { add_trait = { trait = leader_trait_military_overseer } }
+		# 	1 = { add_trait = { trait = leader_trait_master_gunner } }
+		# 	1 = { add_trait = { trait = leader_trait_destiny_engineer } }
+		# 	2 = { add_trait = { trait = leader_trait_guerilla_tactics } }
+		# 	1 = { add_trait = { trait = leader_trait_survivalist } }
+		# 	1 = { add_trait = { trait = leader_trait_maven_of_war } }
+		# 	1 = { add_trait = { trait = leader_trait_peacekeeper } }
+		# }
+		# random_list = {
+		# 	1 = { add_trait = { trait = leader_trait_taskmaster } }
+		# 	1 = { add_trait = { trait = leader_trait_fortress_cracker } }
+		# 	2 = { add_trait = { trait = leader_trait_chainbreaker } }
+		# 	1 = { add_trait = { trait = leader_trait_chainbreaker } }
+		# 	1 = { add_trait = { trait = leader_trait_honored_warmaster } }
+		# 	1 = { add_trait = { trait = leader_trait_academia_recruiter } }
+		# 	1 = { add_trait = { trait = leader_trait_supreme_warrior } }
+		# 	1 = { add_trait = { trait = leader_trait_spymaster } }
+		# 	1 = { add_trait = { trait = leader_trait_totalitarian } }
+		# 	1 = { add_trait = { trait = leader_trait_bellicose } }
+		# }
 		freeze_leader_age = yes
 		set_leader_flag = roz_shinku_flag
 		set_leader_flag = legendary_leader
@@ -1354,6 +1354,7 @@ roz_leader_change_skin_reset_shinku_effect = {
 ###雏莓初始化
 roz_hinaichigo_leader_initiate = {
 	optimize_memory
+	set_country_flag = roz_hinaichigo_official_active
 	create_leader = {
 		class = official
 		name = "NAME_hinaichigo"
@@ -1389,31 +1390,33 @@ roz_hinaichigo_leader_initiate = {
 			value = 10
 		}
 		add_trait = { trait = leader_trait_roz_hinaichigo_main }
-		random_list = {
-			1 = { add_trait = { trait = leader_trait_armorer } }
-			1 = { add_trait = { trait = leader_trait_military_overseer } }
-			1 = { add_trait = { trait = leader_trait_master_gunner } }
-			1 = { add_trait = { trait = leader_trait_destiny_engineer } }
-			1 = { add_trait = { trait = leader_trait_guerilla_tactics } }
-			1 = { add_trait = { trait = leader_trait_survivalist } }
-			1 = { add_trait = { trait = leader_trait_maven_of_war } }
-			1 = { add_trait = { trait = leader_trait_peacekeeper } }
-			1 = { add_trait = { trait = leader_trait_taskmaster } }
-			1 = { add_trait = { trait = leader_trait_fortress_cracker } }
-			1 = { add_trait = { trait = leader_trait_chainbreaker } }
-			1 = { add_trait = { trait = leader_trait_chainbreaker } }
-			1 = { add_trait = { trait = leader_trait_honored_warmaster } }
-			1 = { add_trait = { trait = leader_trait_academia_recruiter } }
-			1 = { add_trait = { trait = leader_trait_supreme_warrior } }
-			1 = { add_trait = { trait = leader_trait_spymaster } }
-			1 = { add_trait = { trait = leader_trait_totalitarian } }
-			1 = { add_trait = { trait = leader_trait_bellicose } }
-		}
+		add_trait = { trait = leader_trait_roz_hinaichigo_berry_bell }
+		# random_list = {
+		# 	1 = { add_trait = { trait = leader_trait_armorer } }
+		# 	1 = { add_trait = { trait = leader_trait_military_overseer } }
+		# 	1 = { add_trait = { trait = leader_trait_master_gunner } }
+		# 	1 = { add_trait = { trait = leader_trait_destiny_engineer } }
+		# 	1 = { add_trait = { trait = leader_trait_guerilla_tactics } }
+		# 	1 = { add_trait = { trait = leader_trait_survivalist } }
+		# 	1 = { add_trait = { trait = leader_trait_maven_of_war } }
+		# 	1 = { add_trait = { trait = leader_trait_peacekeeper } }
+		# 	1 = { add_trait = { trait = leader_trait_taskmaster } }
+		# 	1 = { add_trait = { trait = leader_trait_fortress_cracker } }
+		# 	1 = { add_trait = { trait = leader_trait_chainbreaker } }
+		# 	1 = { add_trait = { trait = leader_trait_chainbreaker } }
+		# 	1 = { add_trait = { trait = leader_trait_honored_warmaster } }
+		# 	1 = { add_trait = { trait = leader_trait_academia_recruiter } }
+		# 	1 = { add_trait = { trait = leader_trait_supreme_warrior } }
+		# 	1 = { add_trait = { trait = leader_trait_spymaster } }
+		# 	1 = { add_trait = { trait = leader_trait_totalitarian } }
+		# 	1 = { add_trait = { trait = leader_trait_bellicose } }
+		# }
 		freeze_leader_age = yes
 		set_leader_flag = roz_hinaichigo_flag
 		set_leader_flag = legendary_leader
 		set_leader_flag = immune_to_negative_traits
 	}
+
 	roz_leader_change_skin_set_flag_effect = {
 		who = hinaichigo
 		portrait = roz_hinaichigo
@@ -1424,7 +1427,7 @@ roz_hinaichigo_leader_initiate = {
 	clone_leader = {
 		target = event_target:roz_leader_hinaichigo_global_target@root
 		effect = {
-			save_global_event_target_as = roz_hinaichigo_commander_inactive_temp@root
+			save_global_event_target_as = roz_hinaichigo_official_inactive_temp@root
 			set_leader_flag = roz_hinaichigo_flag
 			set_name = NAME_hinaichigo
 			unassign_leader = this
@@ -1438,61 +1441,61 @@ roz_hinaichigo_leader_type_switch_commander = {
 	optimize_memory
 	set_country_flag = roz_hinaichigo_commander_active
 	#若当前雏莓职位为行政官
-	if = {
-		limit = {
-			exists = event_target:roz_leader_hinaichigo_global_target@root
-			event_target:roz_leader_hinaichigo_global_target@root = {
-				leader_class = official
+	# if = {
+	# 	limit = {
+	# 		exists = event_target:roz_leader_hinaichigo_global_target@root
+	# 		event_target:roz_leader_hinaichigo_global_target@root = {
+	# 			leader_class = official
+	# 		}
+	# 	}
+	# }
+	remove_country_flag = roz_hinaichigo_official_active
+	#缓存国家目标领袖更新替换, kill了
+	event_target:roz_hinaichigo_official_inactive_temp@root = { #令临时存储国家的舰队司令雏莓消失
+		kill_leader = {
+			show_notification = no
+		}
+	}
+	clear_global_event_target = roz_hinaichigo_official_inactive_temp@root
+	clone_leader = {
+		#替换，event_target:roz_hinaichigo_global_country是雏莓的缓存国家
+		#target = event_target:roz_leader_hinaichigo_global_target@root #这个global target是玩家的雏莓
+		target = event_target:roz_leader_hinaichigo_global_target@root
+		effect = {
+			save_global_event_target_as = roz_hinaichigo_official_inactive_temp@root
+			roz_leader_pending_negative_traits_unmodified_count = yes
+			roz_leader_type_switch_clone_initiate_effect = {
+				leader = hinaichigo
+				leader_sc = chumei
+				country = hinaichigo_global_country
+			}
+			#东方繁星录兼容
+			if = {
+				limit = { this = { spth_check_gensokyo_auth = yes } }
+				set_leader_flag = own_th_leader_trait
 			}
 		}
-		remove_country_flag = roz_hinaichigo_official_active
-		#缓存国家目标领袖更新替换, 先kill了再说
-		event_target:roz_hinaichigo_official_inactive_temp@root = { #令临时存储国家的舰队司令雏莓消失
-			kill_leader = {
-				show_notification = no
-			}
+	}
+	#移除玩家的指挥官雏莓
+	event_target:roz_leader_hinaichigo_global_target@root = {
+		kill_leader = {
+			show_notification = no
 		}
-		clear_global_event_target = roz_hinaichigo_official_inactive_temp@root
-		clone_leader = {
-			#替换，event_target:roz_hinaichigo_global_country是雏莓的缓存国家
-			#target = event_target:roz_leader_hinaichigo_global_target@root #这个global target是玩家的雏莓
-			target = event_target:roz_leader_hinaichigo_global_target@root
-			effect = {
-				save_global_event_target_as = roz_hinaichigo_official_inactive_temp@root
-				roz_leader_pending_negative_traits_unmodified_count = yes
-				roz_leader_type_switch_clone_initiate_effect = {
-					leader = hinaichigo
-					leader_sc = chumei
-					country = hinaichigo_global_country
-				}
-				#东方繁星录兼容
-				if = {
-					limit = { this = { spth_check_gensokyo_auth = yes } }
-					set_leader_flag = own_th_leader_trait
-				}
-			}
-		}
-		#移除玩家的指挥官雏莓
-		event_target:roz_leader_hinaichigo_global_target@root = {
-			kill_leader = {
-				show_notification = no
-			}
-		}
-		#创建或从缓存国家复制指挥官雏莓
-		roz_leader_type_switch_create_leader_initiate_effect = {
-			leader = hinaichigo
-			leader_sc = chumei
-			leader_type = commander
-			symbolic_trait_1 = leader_trait_roz_hinaichigo_main
-			symbolic_trait_2 = leader_trait_roz
-			symbolic_trait_3 = leader_trait_roz
-		}
+	}
+	#创建或从缓存国家复制指挥官雏莓
+	roz_leader_type_switch_create_leader_initiate_effect = {
+		leader = hinaichigo
+		leader_sc = chumei
+		leader_type = commander
+		symbolic_trait_1 = leader_trait_roz_hinaichigo_main
+		symbolic_trait_2 = leader_trait_roz_hinaichigo_berry_bell
+		symbolic_trait_3 = leader_trait_roz
+	}
 
-		roz_leader_initialize_after_create_effect = {
-			leader = hinaichigo
-			leader_sc = chumei
-			leader_type = commander
-		}
+	roz_leader_initialize_after_create_effect = {
+		leader = hinaichigo
+		leader_sc = chumei
+		leader_type = commander
 	}
 }
 ###雏莓-切换行政官职位
@@ -1544,7 +1547,7 @@ roz_hinaichigo_leader_type_switch_official = {
 			leader_sc = chumei
 			leader_type = official
 			symbolic_trait_1 = leader_trait_roz_hinaichigo_main
-			symbolic_trait_2 = leader_trait_roz
+			symbolic_trait_2 = leader_trait_roz_hinaichigo_berry_bell
 			symbolic_trait_3 = leader_trait_roz
 		}
 
@@ -1972,10 +1975,19 @@ roz_abyss_vass_annex = {
 	event_target:roz_madgod_force_country@root = {
 		every_playable_country = {
 			limit = { has_country_flag = roz_abyss_vass_country }
-			every_owned_starbase = { set_owner = prevprev }
-			every_owned_planet = { set_owner = prevprev }
 			every_owned_fleet = { destroy_fleet = this }
+			every_owned_starbase = { fleet = { destroy_fleet = this } }
+			every_owned_planet = {
+				roz_abyss_fleet_create_median_defense_in_diff = {
+					#owner = event_target:roz_madgod_force_country@root
+					owner = prev
+					location = prevprev
+				}
+				destroy_colony = yes
+			}
+			destroy_country = yes
 		}
+
 	}
 }
 
@@ -3173,7 +3185,7 @@ roz_abyss_fleet_create_small_attack_in_diff = {
 	}
 }
 
-#scope: fleet
+#scope: country
 roz_abyss_fleet_create_median = {
 	optimize_memory
 	roz_abyss_leader_create = {
