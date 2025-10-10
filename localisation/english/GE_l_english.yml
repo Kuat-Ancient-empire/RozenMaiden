@@ -2,17 +2,91 @@
 ###############################
 
 ###synced
-NAME_nfield:0 "N-field"	
-NAME_ge_br:0 "Black Pose"
-NAME_ge_vfs:0 "Y*%§R<数据错误>§!恒"
-NAME_ap_ge_0:0 "Treasure of N-field"
-NAME_suigintou:0 "スイギントウ"
 
 ##   :0 ""
 ##   _desc:0 ""
 
+ pc_roz_YS_planet: "§RCenter of the Fallen Celestial Realm§!"
+ pc_roz_YS_planet_desc: "A hidden treasure land beneath a disturbing surface: nature's wonder or something else?"
 
-#####modifiers
+ pc_roz_YS_planet_cant_colony: "§R¿Shrouded World?§!"
+ pc_roz_YS_planet_cant_colony_desc: "A hidden treasure land beneath a disturbing surface: nature's wonder or something else?"
+
+ col_roz_YS_planet: "§RKey of the Door§!"
+ col_roz_YS_planet_desc: "Compared to the Veil Planet, this dense purple atmosphere offers no barrier—ships can come and go freely. Beneath the skies lies a thriving world teeming with life, its surface ecosystem resembling that of Gaia planet. Puzzlingly, it is scattered with countless fully operational structures of civilizations past. Prolonged stays here bring whispers of the unknown, a relentless test on the minds of its inhabitants."
+ mod_pc_roz_YS_planet_habitability: "Fallen Celestial Realm Habitability"
+ pc_roz_YS_planet_adj: ""
+ trait_pc_roz_YS_planet_preference: "Fallen Celestial Realm preference"
+ trait_pc_roz_YS_planet_preference_desc: ""
+
+ ################
+ ##relics
+
+ r_roz_stasis_field: "§MVoid Shield Generator§!"
+ r_roz_stasis_field_desc: "A relic of the forgotten past. After its previous explosion, Engineering can only restore the components responsible for the stasis field—the camouflage/cloaking systems remain nonfunctional for now."
+ r_roz_doll_Annabelle:"§PAnnabelle§!"
+ r_roz_doll_Annabelle_desc:"Meme：§RInauspicious§!"
+
+ #Beacon of Space-Time
+ r_roz_Chronos_Label:"§CSignpost of Space-Time§!"
+ r_roz_Chronos_Label_desc:"A spiraling mistmass, dense in hand, bound to Kirakishou by soul-link. Even sealed, it warps spacetime into folds; when activated, it triggers Class IV temporal distortion with ease.\n§C--Once a guide through the endless cosmos, now corrupted by the abyss's taint—this shattered yet pure fragment of divine authority may be their last untouched sanctuary§!……\n§RNote：Enable $r_roz_Chronos_Label$ will slightly disrupt the continuity of spacetime, and we will be unable to obtain accurate time for a period.§!"
+ r_roz_Chronos_Label_active_effect_tt:"\nCreate a $chronos_storm$ in the selected system. The spacetime distortion accompanying the storm will §Rkill§! 15% of the population£pop£ in the affected colonial settlements, inflict §Ratastrophic damage§! on planetary production and livelihoods, and randomly destroy a valueless planet within the system into a $pc_broken$.\n "
+ r_roz_Chronos_Label_effect:"Within one year of activation, the $r_roz_Chronos_Label$ will enable all ships to bypass Hyperlane jump capability. \nUpon activation during wartime, it will release spacetime turbulence toward all engaged enemy fleets, forcing them into §Remergency FTL§!."
+
+ r_roz_teaparty_set: "§YTea Party utensils§!"
+ r_roz_teaparty_set_desc: "Suigintou's meticulously crafted alchemical artifacts, replicated from memories of distant courtyard days. Though she never willingly reveals their purpose, these items are invariably filled with pastries and black tea during each doll's tea party, placed upon the table with precision."
+ r_roz_teaparty_set_ct: "\n§BYou can change the tea party time from here.§! \n \n"
+ r_roz_teaparty_set_possible: "§RYou have entered the settings menu!§!"
+
+ r_roz_orgel: "§MSuigintou's Orgel§!"
+ r_roz_orgel_desc: "This delicate music box was once Suigintou's most treasured possession—the first gift her father, Rozen, ever gave her. It was a miraculous alchemical artifact capable of soothing emotions even without playing a single note, calming those who heard its silent resonance."
+
+ #shinku
+ roz_shuukan_shoujonotsukurikata_vol1:"Weekly——The Art of Creating a Girl Vol.1"
+ roz_shuukan_shoujonotsukurikata_vol1_desc:"A mysterious publication detailing the creation of Rozen Maiden, accompanied by a few crafting tools and a brass-colored key-wound mechanism. The so-called 「['concept_roz_rozen_maiden']」 were seven dolls created by the renowned dollmaster ['concept_roz_rozen'], with extremely scarce records of their appearance on the market—so much so that their very existence is now doubted. According to those rare records, the production years of this series were widely dispersed, with some separated by centuries. Could this truly shinku. "
+
+ roz_shuukan_shoujonotsukurikata_vol2:"Weekly——The Art of Creating a Girl Vol.2"
+ roz_shuukan_shoujonotsukurikata_vol2_desc:"An unidentified publication detailing the creation methods of Rozen Maiden was found, accompanied by a set of crafting tools and a ornate ['concept_roz_kaban'] adorned with golden roses—its design strikingly similar to Suigintou container. Inside lay a pair of doll leg parts, engraved with the word "Rozen". \n\"The second appendix includes a storage box for completed dolls—along with thigh components. What all Rozen Maiden dolls share in common is their signature engraved on the inner thigh, with handwriting analysis suggesting it came from the same person. Using the parts provided in each issue, you'll create a Rozen Maiden exclusively your own. §RThis issue presents the fifth doll—Shinku§!.\""
+
+ roz_shuukan_shoujonotsukurikata_vol3:"Weekly——The Art of Creating a Girl Vol.3"
+ roz_shuukan_shoujonotsukurikata_vol3_desc:"An unidentified special edition publication meticulously detailed the process of attaching eyeballs to doll's eyes. It came with a set of crafting tools and new doll components—a lower leg part and right foot."
+
+ roz_shuukan_shoujonotsukurikata_vol4:"Weekly——The Art of Creating a Girl Vol.4"
+ roz_shuukan_shoujonotsukurikata_vol4_desc:"An unidentified special issue publication comprehensively cataloged the functions and usage methods of various doll-making tools. Accompanying the guide were select crafting tools and new doll components—an upper arm piece."
+ roz_shuukan_shoujonotsukurikata_vol5:"Weekly——The Art of Creating a Girl Vol.5"
+ roz_shuukan_shoujonotsukurikata_vol5_desc:"An unidentified special issue publication demonstrated how to use cosmetics to dress up dolls. It came with a selection of crafting tools and new doll components—a forearm piece."
+ roz_shuukan_shoujonotsukurikata_vol6:"Weekly——The Art of Creating a Girl Vol.6"
+ roz_shuukan_shoujonotsukurikata_vol6_desc:"An unidentified special issue publication focused on textile craftsmanship, specifically teaching lace fabric production and application techniques. The guide included a selection of crafting tools and new doll components—a pair of hands."
+ roz_shuukan_shoujonotsukurikata_vol7:"Weekly——The Art of Creating a Girl Vol.7"
+ roz_shuukan_shoujonotsukurikata_vol7_desc:"An unidentified publication detailing the creation methods of Rozen Maiden was found, accompanied by a set of crafting tools and new doll components—a pair of glass eyes."
+ roz_shuukan_shoujonotsukurikata_vol8:"Weekly——The Art of Creating a Girl Vol.8"
+ roz_shuukan_shoujonotsukurikata_vol8_desc:"An unidentified publication documenting the creation methods of Rozen Maiden was discovered, containing a selection of crafting tools along with new doll components—a complete torso assembly."
+ roz_shuukan_shoujonotsukurikata_vol9:"Weekly——The Art of Creating a Girl Vol.9"
+ roz_shuukan_shoujonotsukurikata_vol9_desc:"An unidentified publication containing instructions for creating Rozen Maiden dolls was found, accompanied by a set of crafting tools and doll components."
+ roz_shuukan_shoujonotsukurikata_vol10:"Weekly——The Art of Creating a Girl Vol.10"
+ roz_shuukan_shoujonotsukurikata_vol10_desc:"An unidentified publication containing alchemical knowledge—appearing to be a postscript—was discovered?"
+
+ roz_shinku's_body_assembly_stage_1: "Doll Body of Shinku(Incomplete)"
+ roz_shinku's_body_assembly_stage_1_desc: "Unfinished Doll, though traces of polished surfaces on its parts still testify to the craftsmanship of its maker."
+ roz_shinku's_body_assembly_stage_1_ct: "§RThe Doll is Incomplete.§!"
+ roz_shinku's_body_assembly_stage_2: "Shinku's Doll Body (Near-Completion)"
+ roz_shinku's_body_assembly_stage_2_desc: "A Mostly Completed Doll, leaving much to the imagination about its final form."
+ roz_shinku's_body_assembly_stage_2_ct: "§RThe Doll is Incomplete.§!"
+ roz_shinku's_body_assembly_stage_3: "Shinku in Slumber"
+ roz_shinku's_body_assembly_stage_3_desc: "You have recreated the perfect form of the Fifth Rozen Maiden Doll—save for its lifelessness…"
+ roz_shinku's_body_assembly_stage_3_ct: "§RNeeds the true $sr_rosa_mystica$§!"
+ #
+ r_roz_extrinsic_xinlin_crystal_unknow: "§BExotic Xiling Crystal§!"
+ r_roz_extrinsic_xinlin_crystal_unknow_desc: "A coffin-like crystal – the unanimous description by all researchers after visual inspection... With exceptionally high structural integrity, we've failed to find any method to even scratch its surface... §YData stored within the crystal remains in the process of analysis.§!"
+
+ r_roz_extrinsic_xinlin_crystal: "§BOver-Limit Capacitance Crystal - Type 12345§!"
+ r_roz_extrinsic_xinlin_crystal_desc: "This mysterious and potent crystal gifted by the Xiling Civilization serves as the Prime Controller for reversing Theo-contamination and reshaping the Rosa Mystica. Though now embedded within the Dataforge at the Perished Pantheon star cluster, it remains functionally autonomous. Suigintou has trolled this naming convention repeatedly, yet our scientists insist on preserving its original designation."
+
+ r_roz_extrinsic_xinlin_crystal_broken: "§gDamaged Over-Limit Capacitance Crystal§!"
+ r_roz_extrinsic_xinlin_crystal_broken_desc: "The original Over-Limit Capacitance Crystal-Type 12345, damaged through overload due to intensive deployment in Project Shinku Awakening, has lost most structural functions. Yet as a technological artifact of a super-civilization, this crystal still provides valuable insights to our researchers."
+
+
+ #####modifiers
 ge_modifier_1:0 "Initial Buff"
 ge_modifier_1_desc:0 "Initial Buff"
 
@@ -25,7 +99,7 @@ ge_engine_boost_dm:0 "Dark Matter Reactor Overload"
 ge_engine_boost_dm_desc:0 "Dark Matter Reactor Overload"
 
 ge_gravity_knowledge:0 "Knowledge of Gravity"
-ge_gravity_knowledge_desc:0 "Our physicists are very interested in the gravitational phenomenon in The Entrance of n-field, and The National Academy of Sciences has set up a large research station there to explore the mystery of gravity."
+ge_gravity_knowledge_desc:0 "Our physicists are very interested in the gravitational phenomenon in The Entrance of N-Gebiet, and The National Academy of Sciences has set up a large research station there to explore the mystery of gravity."
 
 
 mod_country_base_consumer_goods_produces_add:0 "Monthly£consumer_goods£ Consumer Goods"
@@ -38,20 +112,20 @@ mod_country_base_engineering_research_produces_add:0 "Monthly Engineering Produc
 
 
 #######deposit
-ge_site_sgt_deposit:0 "N-Field Research Station"
+ge_site_sgt_deposit:0 "N-Gebiet Research Station"
 
 ########name
 ########单色光
 NAME_ge_suigintou:0 "§MMercury Lamp"
 NAME_ge_sgt_site_planet:0 "Unnormal Black Hole"
-NAME_ge_sgt_site_planet_after:0 "The Entrance of N-Field"
+NAME_ge_sgt_site_planet_after:0 "The Entrance of N-Gebiet"
 
 #######ap
-ap_ge_0:0 "The Treasure of N-Field"
-ap_ge_0_desc:0 "We got the keys of the gate in the N-Fieldwhos named Rozen Maiden, Infinite resources and knowledge are waiting for us to exploit...\nOur time has come!"
+ap_ge_0:0 "The Treasure of N-Gebiet"
+ap_ge_0_desc:0 "We got the keys of the gate in the N-Gebietwhos named Rozen Maiden, Infinite resources and knowledge are waiting for us to exploit...\nOur time has come!"
 enable_ge_0:0 "§BOne of the necessary ascension perk of the Void-Tech event chains."
 
-ap_ge_1:0 "The Mystery of N-Field"
+ap_ge_1:0 "The Mystery of N-Gebiet"
 ap_ge_1_desc:0 "This space is more mysterious than we thought. Maybe we should intensive study for it."
 enable_ge_1:0 "§BBOne of the necessary ascension perk of the Void-Tech event chains."
 
@@ -69,11 +143,74 @@ ge_ascension_project:0 "初步升华"
 ge_ascension_project_DESC:0 "虚空引擎的创造是划时代的，从现在开始我们有权接过天堂帝国的冠冕，我们将挣脱枷锁、超越平凡！为了这伟大的理想，我们已经准备好了一个初步升华计划，使得我们的同胞们得以全体飞升，成为天堂帝国的子民"
 
 ############
-weapon_type_ge_void_energy:0 "§BVoid decay Energy§!"
-mod_weapon_type_ge_void_energy_weapon_damage_mult:0 "§BVoid decay Energy Weapon Damage§!"
-mod_weapon_type_ge_void_energy_weapon_fire_rate_mult:0 "§BVoid decay Energy Weapon Fire Rate§!"
+weapon_type_ge_void_energy:0 "§BVoid Attenuation Energy§!"
+mod_weapon_type_ge_void_energy_weapon_damage_mult:0 "§BVoid Attenuation Energy Weapon Damage§!"
+mod_weapon_type_ge_void_energy_weapon_fire_rate_mult:0 "§BVoid Attenuation Energy Weapon Fire Rate§!"
+ weapon_type_roz_abyss:0 "§RAbyssal§!"
+ mod_weapon_type_roz_abyss_weapon_damage_mult:0 "§RAbyssal Corrosive Destructive Force§!"
+ mod_weapon_type_roz_abyss_weapon_fire_rate_mult:0 "§RAbyssal Corrosion Propagation Efficacy§!"
 
-ge_mozheng1:0 "§YCrazy +50%§!"
+ ge_mozheng1:0 "§Y善良狡猾Duality§!：§HDamage§!"
+ ge_mozheng1_desc:0 "§YOur researchers are utterly baffled: Who in the world implanted this thing inside us?!§!"
+
+ ge_mozheng2:0 "§Y善良狡猾Duality§!：§HFire rate§!"
+ ge_mozheng2_desc:0 "§YWell... doesn't seem to be half bad after all, does it?§!"
+
+ ge_mozheng3: "§Y善良狡猾Duality§!：§HWeapon range§!"
+ ge_mozheng3_desc: "§YBut at what cost?§!"
+
+ ###############army
+ Q_sgt:0 "  §MMini Suigintou Army§!"
+ Q_sgt_desc:0 "These alchemy dolls pack swarm-fire superiority over single-unit firepower."
+
+ Q_titan_sgt: "§MTitan Suigintou Army§!"
+ Q_titan_sgt_desc:0 "Sharing the same design as Mini Suigintou Army, this colossal variant wields apocalyptic power in every gesture."
+
+ ###############bombardment
+ bombardment_q_dolls_bombardment:0 "§M轨道轰炸魔法阵§!"
+ bombardment_q_dolls_bombardment_name:0 "§M炼金人偶 - 轨道轰炸魔法阵§!"
+ bombardment_q_dolls_bombardment_desc:0 "水银灯的炼金人偶军团可以在近地轨道展开$bombardment_q_dolls_bombardment$，虽然这些人偶可爱的像个小天使，但是她们释放的轰炸却是敌军的末日。\n-对§Y星球§!造成§H大量§!伤害\n-对§Y军队§!造成§R巨量§!伤害\n-对§Y人口§!造成§G一般§!伤害"
+
+ bombardment_q_dolls_armageddon:0 "§R毁灭轰炸魔法阵§!"
+ bombardment_q_dolls_armageddon_name:0 "§R炼金人偶 - 毁灭轰炸魔法阵§!"
+ bombardment_q_dolls_armageddon_desc:0 "水银灯的炼金人偶军团可以在近地轨道展开$bombardment_q_dolls_armageddon$，虽然这些人偶可爱的像个小天使，但是她们释放的轰炸却是这颗星球的末日。\n-对§Y星球§!造成§R巨量§!伤害\n-对§Y军队§!造成§R末日级§!伤害\n-对§Y人口§!造成§R末日级§!伤害"
+
+ bombardment_roz_crisis_armageddon: "§_终焉之时§!"
+ bombardment_roz_crisis_armageddon_name: "§_终焉之时§!"
+ bombardment_roz_crisis_armageddon_desc: "深渊自太空而下，任何反抗皆是徒劳。\n-对§Y星球§!、§Y军队§!及§Y人口§!造成§R灭绝性§!伤害"
+
+ #####resource
+ sr_rosa_mystica:0 "Rosa Mystica(Fake)"
+ sr_rosa_mystica_desc:0 "A Rosa Mystica replica jointly crafted by Suigintou and the Academy appears virtually indistinguishable from the genuine article. Though a remarkable creation marrying modern science with alchemy, it possesses none of the original's mystical properties."
+ sr_void_core:0 "Void Core"
+ sr_void_core_desc:0 "The void core at the heart of the void reactor serves as the source of void attenuation energy. While intrinsically connected to the void, its closed-loop energy circuit and suppression from the N-Gebiet Realm jointly ward off void corrosion."
+
+ sr_void_core_hidden: "幽能引擎"
+ sr_void_core_hidden_desc: "唯一"
+ #######deposit
+ ge_site_sgt_deposit:0 "N-Gebiet Observatory"
+ d_dark_matter_deposit_10:0 "£sr_dark_matter£ §Y+10§!"
+ ge_site_sgt_deposit_2: "N-Gebiet Integrated Research Base"
+
+ roz_site_hive_museum_deposit: "Hive City Museum"
+ roz_site_hive_museum_deposit_desc: "This is a monument left by ancient pioneers, deserving our eternal remembrance."
+
+ #######ap
+ ap_ge_0:0 "Treasures within the N-Gebiet"
+ ap_ge_0_desc:0 "N-Gebiet has enabled us to confirm and firmly believe in the existence of the multiverse—where countless gates connect infinite worlds. The Rose Maidens serve as the keys to unlock those gates. Infinite resources and boundless knowledge await us... The age has come—our age!"
+ enable_ge_0:0 "§BThe necessary ascension of the subsequent processes in the Void Technology Event Chain."
+ requires_sgt_communication_ge_tech:0 "Need to communicate with Suigintou. "
+
+ ap_ge_1:0 "Secret within the N-Gebiet"
+ ap_ge_1_desc:0 "This realm is far more enigmatic than we ever imagined; perhaps we should delve into a profound exploration of it."
+ enable_ge_1:0 "§BThe necessary ascension of the subsequent processes in the Void Technology Event Chain."
+ requires_ap_ge_0:0 "Needs Modifier: $roz_ap_ge_0$"
+ requires_ap_ge_1:0 "Needs ascension perk $ap_ge_1$"
+ requires_ge_tech_reactor:0 "Needs technology $GE_tech_reactor$"
+
+
+
+ ge_mozheng1:0 "§YCrazy +50%§!"
 ge_mozheng2:0 "§HCrazy +200%§!"
 ge_mozheng3:0 "§MCrazy +500%§!"
 ge_mozheng4:0 "§RCrazy +1000%§!"

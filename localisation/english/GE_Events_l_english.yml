@@ -26,11 +26,11 @@ ge_event.1.ff:0 "Quit"
 
 #########################################
 ge_event.10.t:0 "Enlightenment"
-ge_event.10.d:0 "Our large-scale research in the N-field was not opposed by Mercury Lamp, and she even took the initiative to join our plan. With the help of the research team, we gradually understand the essence of N-field - born in void. The void "holds up" innumerable universes. It is indescribable and does not have any nature, but it also has any nature. Our scientists try to understand it as the duality of chaos and nothingness, Here is the beginning from nothing to infinity and the end from infinity to nothing. N-field exists in the void like a bridge, connecting all universes. We can't understand how this kind of thing comes into being. Maybe it's the mistake of the multiverse, or the ultimate creation of some existence, or the prank of the mysterious white rabbit."
+ge_event.10.d:0 "Our large-scale research in the N-Gebiet was not opposed by Mercury Lamp, and she even took the initiative to join our plan. With the help of the research team, we gradually understand the essence of N-Gebiet - born in void. The void "holds up" innumerable universes. It is indescribable and does not have any nature, but it also has any nature. Our scientists try to understand it as the duality of chaos and nothingness, Here is the beginning from nothing to infinity and the end from infinity to nothing. N-Gebiet exists in the void like a bridge, connecting all universes. We can't understand how this kind of thing comes into being. Maybe it's the mistake of the multiverse, or the ultimate creation of some existence, or the prank of the mysterious white rabbit."
 ge_event.10.aa:0 "We seem to be in great trouble..."
 
 ge_event.11.t:0 "Think Different"
-ge_event.11.d:0 "N-field seems to have no end, and exhaustive exploration is meaningless. The chief scientists decided to explore the nature of the doors first. \nThe research team of the Black Hole Gate was ordered to bring the strong gravitational fields generator into the N-field, A few days later, Mercury Lamp led them to an isolated door. They conducted an experiment on the gravitational effect next to the door.\nThe experimental results are disturbing:The appearance of the door began to twist and collapse under the action of strong gravitational fields - we destroyed its stable form, and finally it collapsed into a Light-Spot. \n§RThe frightening energy readings§! made the entire research team vey nervous, but it seems that's all. The Light-Spot looks nothing special else."
+ge_event.11.d:0 "N-Gebiet seems to have no end, and exhaustive exploration is meaningless. The chief scientists decided to explore the nature of the doors first. \nThe research team of the Black Hole Gate was ordered to bring the strong gravitational fields generator into the N-Gebiet, A few days later, Mercury Lamp led them to an isolated door. They conducted an experiment on the gravitational effect next to the door.\nThe experimental results are disturbing:The appearance of the door began to twist and collapse under the action of strong gravitational fields - we destroyed its stable form, and finally it collapsed into a Light-Spot. \n§RThe frightening energy readings§! made the entire research team vey nervous, but it seems that's all. The Light-Spot looks nothing special else."
 ge_event.11.aa:0 "Research the Light-Spot"
 
 ge_event.12.t:0 "Ascension Plan"
@@ -53,15 +53,15 @@ ge_event.41.aa:0 "§BMake emergency plans and continue the research!"
 ge_event.41.bb:0 "§RIt's weird. Block this place and get out of here!"
 
 ge_event.42.title:0 "Abandon"
-ge_event.42.desc:0 "The researchers evacuated quickly, and no one wanted to stay here for another second. seem to the erosion form the light spot does not spread in the N-field, It flickered alone and quietly, as if it were harmless."
+ge_event.42.desc:0 "The researchers evacuated quickly, and no one wanted to stay here for another second. seem to the erosion form the light spot does not spread in the N-Gebiet, It flickered alone and quietly, as if it were harmless."
 ge_event.42.aa:0 "We escaped, didn't we?"
 
 ge_event.43.title:0 "Research log - segment 1"
-ge_event.43.desc:0 "§GA class D researcher:§!\n2xxx/xx/xx/\nThe strange accident not long ago made us no dare to touch the light spot directly with objects. After sorting out the previous research data, we confirm that the light spot has reached the void, N-field has a certain suppression effect on the void erosion of light spot, but the effect is very limited. The chief scientists believe that if this light spot enters the real universe directly, it will cause something more terrible than vacuum decay. \nNow I always stare at the light spot in a daze unconsciously, and so do my colleagues. Fortunately, we can remind each other...Today, there is no arrangement for my experiment. I can stay away from that weird light spot and go back to the station to have a relax."
+ge_event.43.desc:0 "§GA class D researcher:§!\n2xxx/xx/xx/\nThe strange accident not long ago made us no dare to touch the light spot directly with objects. After sorting out the previous research data, we confirm that the light spot has reached the void, N-Gebiet has a certain suppression effect on the void erosion of light spot, but the effect is very limited. The chief scientists believe that if this light spot enters the real universe directly, it will cause something more terrible than vacuum decay. \nNow I always stare at the light spot in a daze unconsciously, and so do my colleagues. Fortunately, we can remind each other...Today, there is no arrangement for my experiment. I can stay away from that weird light spot and go back to the station to have a relax."
 ge_event.43.aa:0 "Noted."
 
 ge_event.44.title:0 "Research log - segment 2"
-ge_event.44.desc:0 "§GA class D researcher:§!\n2xxx/xx/xx/\nA new experimental scheme has come out, We're going to use the gravitational field generator to study the light spot again, H. E. Mercury Lamp assumes personal command the experimental, and N-field is also on defcon one... To be honest, we all have no bottom, but everyone knows what that §Renergy reading§! represents——This is the energy source that can cause an unprecedented revolution in productivity, If we can understand the mystery of the light spot, our motherland will advance by leaps and bounds. This is our duty, we shall know no fear."
+ge_event.44.desc:0 "§GA class D researcher:§!\n2xxx/xx/xx/\nA new experimental scheme has come out, We're going to use the gravitational field generator to study the light spot again, H. E. Mercury Lamp assumes personal command the experimental, and N-Gebiet is also on defcon one... To be honest, we all have no bottom, but everyone knows what that §Renergy reading§! represents——This is the energy source that can cause an unprecedented revolution in productivity, If we can understand the mystery of the light spot, our motherland will advance by leaps and bounds. This is our duty, we shall know no fear."
 ge_event.44.aa:0 "We shall alter the future."
 
 ge_event.45.title:0 "Research log - segment 3"
@@ -86,11 +86,11 @@ ge_event.49.desc:0 "In the experimental site, the red alarm light is flashing wi
 ge_event.49.aa:0 "We all wait for that with bated breath."
 
 ge_event.60.title:0 "Aurora"
-ge_event.60.desc:0 "The light of the spot dims irreversibly. It now looks like the shimmer of a firefly — We did it! \nAs the cycle began, the majestic energy instantly washed away all blocks of the power system, which almost led to out of control. Fortunately, it resisted. \nAlthough the new energy source immediately took over the burden of the overloaded reactor, it still exploded, The power of its explosion is like the energy released by several neutron torpedoes at the same time...This is perhaps the most dazzling flash in the N-field ever. \nThe experimental site is perfectly protected by the shield, All the people present were watching the flash. whether they were stimulated by the strong light or moved by the bitterness and happiness. They all burst into tears. "
+ge_event.60.desc:0 "The light of the spot dims irreversibly. It now looks like the shimmer of a firefly — We did it! \nAs the cycle began, the majestic energy instantly washed away all blocks of the power system, which almost led to out of control. Fortunately, it resisted. \nAlthough the new energy source immediately took over the burden of the overloaded reactor, it still exploded, The power of its explosion is like the energy released by several neutron torpedoes at the same time...This is perhaps the most dazzling flash in the N-Gebiet ever. \nThe experimental site is perfectly protected by the shield, All the people present were watching the flash. whether they were stimulated by the strong light or moved by the bitterness and happiness. They all burst into tears. "
 ge_event.60.aa:0 "Light is the meaning of everything!"
 
 ge_event.61.title:0 "Godsend"
-ge_event.61.desc:0 "We named this void energy reactor "Aurora", Although this energy from the decay of the void still has similar assimilation and phagocytosis, it is much safer than the void itself. \nIn the development project of the previous generation engine, our beloved H.E. mercury lamp led the team to overcome the threshold limit of the connection between the real world and n-field. As long as the supply is sufficient, we can quickly open the door of n-field at a specific location. Therefore, our ships can effectively use our new reactor through logical opening and closing. \nThere are many doors here like stars, and our void interface is endless. Now, change has begun. "
+ge_event.61.desc:0 "We named this void energy reactor "Aurora", Although this energy from the decay of the void still has similar assimilation and phagocytosis, it is much safer than the void itself. \nIn the development project of the previous generation engine, our beloved H.E. mercury lamp led the team to overcome the threshold limit of the connection between the real world and N-Gebiet. As long as the supply is sufficient, we can quickly open the door of N-Gebiet at a specific location. Therefore, our ships can effectively use our new reactor through logical opening and closing. \nThere are many doors here like stars, and our void interface is endless. Now, change has begun. "
 ge_event.61.aa:0 "Pay tribute to our scientific researchers!"
 ge_event.61.aa.ctmtp:0 "§BAn new ascension unlocked§!"
 
@@ -100,7 +100,7 @@ ge_event.50.desc:0 "From now on, celestial empire is born."
 ge_event.50.aa:0 "Noted."
 
 ge_event.1000.name:0 "Leave the cradle"
-ge_event.1000.desc:0 "Although we haven't had time to explore beyond the Milky way, thanks to the n-field and void energy revolution, we have successfully broken through the boundaries of the universe...But we need more time to accumulate."
+ge_event.1000.desc:0 "Although we haven't had time to explore beyond the Milky way, thanks to the N-Gebiet and void energy revolution, we have successfully broken through the boundaries of the universe...But we need more time to accumulate."
 ge_event.1000.a:0 "The past has not gone, the future has come."
 
 ge_event.1002.t:0 "Coronation of celestial empire"
@@ -157,7 +157,7 @@ ge_sites.16.aa:0 "Witness a miracle"
 ############
 ############################
 ge_sites.20.t:0 "Research station"
-ge_sites.20.d:0 "Our physicists are very interested in the gravitational phenomenon at the N-field entrance, where the Imperial Academy of Sciences has set up a large research institution to explore the mystery of gravity."
+ge_sites.20.d:0 "Our physicists are very interested in the gravitational phenomenon at the N-Gebiet entrance, where the Imperial Academy of Sciences has set up a large research institution to explore the mystery of gravity."
 ge_sites.20.aa:0 "Good"
 ####
 ####
@@ -203,10 +203,10 @@ ge_sites.102.cc.desc:0 "媒介便是宿主，媒介与蔷薇少女之间契约�
 ge_sites.102.dd:0 "我知道的够多了"
 ge_sites.102.dd.desc:0 ""
 
-ge_sites.103.name:0 "N-field"
-ge_sites.103.desc:0 "这是与现实世界连接且互为表里的虚幻空间，通过门将无数的世界联系在一起，我用数字为不同的世界命名。蔷薇少女们可以通过镜面、水面、闭上的眼睛等能映照出倒影的地方开启连接到N-field的门，梦境也是连接N-field的一部分。虽然蔷薇少女们也有着属于自己的N-field，在自己的N-field战斗能力会提升，但事实上这些N-field都是互相连接的"
+ge_sites.103.name:0 "N-Gebiet"
+ge_sites.103.desc:0 "这是与现实世界连接且互为表里的虚幻空间，通过门将无数的世界联系在一起，我用数字为不同的世界命名。蔷薇少女们可以通过镜面、水面、闭上的眼睛等能映照出倒影的地方开启连接到N-Gebiet的门，梦境也是连接N-Gebiet的一部分。虽然蔷薇少女们也有着属于自己的N-Gebiet，在自己的N-Gebiet战斗能力会提升，但事实上这些N-Gebiet都是互相连接的"
 ge_sites.103.aa:0 "这听起来就是平行世界。。。为什么这些门无法打开？"
-ge_sites.103.aa.desc:0 "事实上N-field已是宇宙法外之地，通过这片现实与虚无的抽象交界与别的世界交互是不被普通宇宙允许的，您所处的宇宙的人间之理出于保护目的禁止了您的违规操作。"
+ge_sites.103.aa.desc:0 "事实上N-Gebiet已是宇宙法外之地，通过这片现实与虚无的抽象交界与别的世界交互是不被普通宇宙允许的，您所处的宇宙的人间之理出于保护目的禁止了您的违规操作。"
 ge_sites.103.bb:0 "我要如何才能利用这片空间？"
 ge_sites.103.bb.desc:0 "由于乱入了你们世界的那扇门的原因，除了由我亲自打开的通道，这一片区域的门已经暂时失活了。不过，还有一种办法，那就是（略带愉悦地）蔷薇少女。"
 ge_sites.103.cc:0 "...我知道的够多了"
@@ -272,17 +272,17 @@ ge_leader_event.13.aa:0 ""
 
 ge_communication.0.desc:0 "§M贵安，我可爱的新媒介~§!"
 ge_communication.0.a:0 "[Root.GetSpeciesName] are happy to have you here。"
-ge_communication.0.a_tooltip:0 "N-field communication has established."
-ge_communication.0.a.response:0 "Now you can communicate with Mercury Lamp in N-field from the Contacts."
+ge_communication.0.a_tooltip:0 "N-Gebiet communication has established."
+ge_communication.0.a.response:0 "Now you can communicate with Mercury Lamp in N-Gebiet from the Contacts."
 
 
 
-ge_communication.100.title:0 "N-field"
+ge_communication.100.title:0 "N-Gebiet"
 ge_communication.100.a.1.desc:0 "§MOh, here you are.§!"
 ge_communication.100.a.2.desc:0 "§M♬枸橘的花儿呀开放了哟♩，♫雪白的雪白的花儿呀开放了哟♪......§!"
 ge_communication.100.a.3.desc:0 "§M要不要来点养乐多？§!"
 ge_communication.100.a.4.desc:0 "§MHum, can I help you?§!"
-ge_communication.100.a.5.desc:0 "§MWelcome to N-field.§!"
+ge_communication.100.a.5.desc:0 "§MWelcome to N-Gebiet.§!"
 ge_communication.100.a:0 "Change clothes"
 ge_communication.100.a.desc:0 "§MWell, Are you satisfied now?§!"
 
@@ -299,7 +299,7 @@ ge_communication.100.c4.response:0 "§MSo, play the requiem for the enemy!"
 ge_communication.100.d:0 "I want to chat with you"	
 ge_communication.100.d.response:0 ""	
 
-ge_communication.100.e:0 "Can you tell us what you know about N-field（§GSubsequent Tech§!）"	
+ge_communication.100.e:0 "Can you tell us what you know about N-Gebiet（§GSubsequent Tech§!）"
 ge_communication.100.e.response:0 ""	
 
 ge_communication.100.f0:0 "Query the number of planets explored by Mercury Lamp"
@@ -366,16 +366,16 @@ ge_communication.205.aa.desc:0 "§M！！...咳咳，新、新衣服什么的不
 
 ################################
 
-ge_communication.201.title:0 "N-field"
-ge_communication.201.desc:0 "§M当然，[ruler.GetRegnalName]。虽然我们蔷薇少女能利用N-field，但事实上我们对其也知之甚少。这片空间的起源、本质、原理或许只有那只死兔子才完全理解吧...§!"
+ge_communication.201.title:0 "N-Gebiet"
+ge_communication.201.desc:0 "§M当然，[ruler.GetRegnalName]。虽然我们蔷薇少女能利用N-Gebiet，但事实上我们对其也知之甚少。这片空间的起源、本质、原理或许只有那只死兔子才完全理解吧...§!"
 ge_communication.201.aa:0 "现在我们能通过门到达其他世界吗？"
 ge_communication.201.aa.response:0 "§M我可以为你们打开这些通道。但是我无法进行精确定位，能否找到合适的门全靠你们的运气。基本法则统一的复数平行世界组成了一个位面，在这片区域的门基本上都连接着你们的平行世界。§!"
-ge_communication.201.bb:0 "N-field内的门可以长期存在吗？"
+ge_communication.201.bb:0 "N-Gebiet内的门可以长期存在吗？"
 ge_communication.201.bb.response:0 "§M不能，除非一直出于开启状态或者被观察着，不然门在存在一段时间后会被完全抹消。§!"
 ge_communication.201.cc:0 "你对拉普拉斯妖了解多少？"
 ge_communication.201.cc.response:0 "§M...那只是只需要它的时候它装死，不想看见它的时候它却贴过来的烦人兔子。§!"
 
-ge_communication.201.zz:0 "Can you help us explore N-field?"
+ge_communication.201.zz:0 "Can you help us explore N-Gebiet?"
 ge_communication.201.zz.response:0 "§MAs you wish.§!\n\n\n§BNew ascensions were unlocked§!"
 
 

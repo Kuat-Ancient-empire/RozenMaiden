@@ -47,30 +47,30 @@ r_roz_teaparty_set_ct: "\n§B您可以从这里更改茶会的举办时间§! \n
 r_roz_teaparty_set_possible: "§R您已经进入设置界面!§!"
 
 r_roz_orgel: "§M水银灯的八音盒§!"
-r_roz_orgel_desc: "这个小巧的八音盒曾经是水银灯最重要的宝物——这是父亲罗真第一次送给她的礼物。这是一个神奇的炼金物品，哪怕它未奏响乐章，周围的听众也能被安抚情绪。"
+r_roz_orgel_desc: "这个小巧的八音盒曾经是水银灯最重要的宝物——这是父亲罗真送给她的第一份礼物。这是一个神奇的炼金物品，哪怕它未奏响乐章，周围的听众也能被安抚情绪。"
 
 
  #shinku
-roz_shuukan_shoujonotsukurikata_vol1:"周刊——少女的制作方法 Vol.1"
-roz_shuukan_shoujonotsukurikata_vol1_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中附带了些许制作工具，以及一枚黄铜色的发条。\n\"所谓的「['concept_roz_rozen_maiden']」是由著名人偶师['concept_roz_rozen']所创造的七个人偶，出现在市场上的记录极端稀少，因此现在甚至有说法怀疑其真实性。而根据那稀少之极的记录来看该系列的人偶各自的制作年代也相当分散，甚至有相隔数百年之久，这是独自一人的技艺吗？罗真又到底是什么人呢？所谓的蔷薇少女就是包含着如此多姿多彩谜团的幻之古董人偶了。而如今将通过你的手复苏过来！\""
-roz_shuukan_shoujonotsukurikata_vol2:"周刊——少女的制作方法 Vol.2"
-roz_shuukan_shoujonotsukurikata_vol2_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中不仅附带了些许制作工具，还有一个华丽的['concept_roz_kaban']，其上镶着金色的蔷薇花，这个箱子与水银灯的那个在外观上如出一辙，其中安放着一对人偶的腿部零件，零件上的铭文写着：§RRozen§!。\n\"第二期附录是可以收纳完成后的人偶的箱子以及——§R大腿部件§!，蔷薇少女的共同点就是在大腿部内侧处刻有签名，这个笔迹被认为出自同一人之手。用每期提供的零件制作出来的、只属于您的蔷薇少女。§R本刊为您奉上的是第五人偶——真红§!。\""
+ roz_shuukan_shoujonotsukurikata_vol1:"周刊——少女的制作方法 Vol.1"
+ roz_shuukan_shoujonotsukurikata_vol1_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中附带了些许制作工具，以及一枚黄铜色的发条。\n\"所谓的「['concept_roz_rozen_maiden']」是由著名人偶师['concept_roz_rozen']所创造的七个人偶，出现在市场上的记录极端稀少，因此现在甚至有说法怀疑其真实性。而根据那稀少之极的记录来看该系列的人偶各自的制作年代也相当分散，甚至有相隔数百年之久，这是独自一人的技艺吗？罗真又到底是什么人呢？所谓的蔷薇少女就是包含着如此多姿多彩谜团的幻之古董人偶了。而如今将通过你的手复苏过来！\""
+ roz_shuukan_shoujonotsukurikata_vol2:"周刊——少女的制作方法 Vol.2"
+ roz_shuukan_shoujonotsukurikata_vol2_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中不仅附带了些许制作工具，还有一个华丽的['concept_roz_kaban']，其上镶着金色的蔷薇花，这个箱子与水银灯的那个在外观上如出一辙，其中安放着一对人偶的腿部零件，零件上的铭文写着：§RRozen§!。\n\"第二期附录是可以收纳完成后的人偶的箱子以及——§R大腿部件§!，蔷薇少女的共同点就是在大腿部内侧处刻有签名，这个笔迹被认为出自同一人之手。用每期提供的零件制作出来的、只属于您的蔷薇少女。§R本刊为您奉上的是第五人偶——真红§!。\""
 
-roz_shuukan_shoujonotsukurikata_vol3:"周刊——少女的制作方法 Vol.3"
-roz_shuukan_shoujonotsukurikata_vol3_desc:"来历不明的刊物，特辑上详细描述了如何为人偶的眼球贴上眼珠，其中还附带了些许制作工具以及新的人偶部件——小腿及右脚"
+ roz_shuukan_shoujonotsukurikata_vol3:"周刊——少女的制作方法 Vol.3"
+ roz_shuukan_shoujonotsukurikata_vol3_desc:"来历不明的刊物，特辑上详细描述了如何为人偶的眼球贴上眼珠，其中还附带了些许制作工具以及新的人偶部件——小腿及右脚"
 
-roz_shuukan_shoujonotsukurikata_vol4:"周刊——少女的制作方法 Vol.4"
-roz_shuukan_shoujonotsukurikata_vol4_desc:"来历不明的刊物，本期特辑介绍了各种人偶制作工具的详细功能和用法，其中附带了些许制作工具以及新的人偶部件——上臂"
-roz_shuukan_shoujonotsukurikata_vol5:"周刊——少女的制作方法 Vol.5"
-roz_shuukan_shoujonotsukurikata_vol5_desc:"来历不明的刊物，本期特辑讲解了如何使用化妆品来打扮人偶，其中附带了些许制作工具以及新的人偶部件——下臂"
-roz_shuukan_shoujonotsukurikata_vol6:"周刊——少女的制作方法 Vol.6"
-roz_shuukan_shoujonotsukurikata_vol6_desc:"来历不明的刊物，本期特辑为纺织工艺教学，重点介绍了蕾丝织物的制作与应用，其中附带了些许制作工具以及新的人偶部件——手部"
-roz_shuukan_shoujonotsukurikata_vol7:"周刊——少女的制作方法 Vol.7"
-roz_shuukan_shoujonotsukurikata_vol7_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中附带了些许制作工具以及新的人偶部件——眼珠"
-roz_shuukan_shoujonotsukurikata_vol8:"周刊——少女的制作方法 Vol.8"
-roz_shuukan_shoujonotsukurikata_vol8_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中附带了些许制作工具以及新的人偶部件——躯干"
-roz_shuukan_shoujonotsukurikata_vol9:"周刊——少女的制作方法 Vol.9"
-roz_shuukan_shoujonotsukurikata_vol9_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中附带了些许制作工具以及人偶的零件"
+ roz_shuukan_shoujonotsukurikata_vol4:"周刊——少女的制作方法 Vol.4"
+ roz_shuukan_shoujonotsukurikata_vol4_desc:"来历不明的刊物，本期特辑介绍了各种人偶制作工具的详细功能和用法，其中附带了些许制作工具以及新的人偶部件——上臂"
+ roz_shuukan_shoujonotsukurikata_vol5:"周刊——少女的制作方法 Vol.5"
+ roz_shuukan_shoujonotsukurikata_vol5_desc:"来历不明的刊物，本期特辑讲解了如何使用化妆品来打扮人偶，其中附带了些许制作工具以及新的人偶部件——下臂"
+ roz_shuukan_shoujonotsukurikata_vol6:"周刊——少女的制作方法 Vol.6"
+ roz_shuukan_shoujonotsukurikata_vol6_desc:"来历不明的刊物，本期特辑为纺织工艺教学，重点介绍了蕾丝织物的制作与应用，其中附带了些许制作工具以及新的人偶部件——手部"
+ roz_shuukan_shoujonotsukurikata_vol7:"周刊——少女的制作方法 Vol.7"
+ roz_shuukan_shoujonotsukurikata_vol7_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中附带了些许制作工具以及新的人偶部件——眼珠"
+ roz_shuukan_shoujonotsukurikata_vol8:"周刊——少女的制作方法 Vol.8"
+ roz_shuukan_shoujonotsukurikata_vol8_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中附带了些许制作工具以及新的人偶部件——躯干"
+ roz_shuukan_shoujonotsukurikata_vol9:"周刊——少女的制作方法 Vol.9"
+ roz_shuukan_shoujonotsukurikata_vol9_desc:"来历不明的刊物，其上书写了蔷薇少女的制作方法，其中附带了些许制作工具以及人偶的零件"
  roz_shuukan_shoujonotsukurikata_vol10:"周刊——少女的制作方法 Vol.10"
  roz_shuukan_shoujonotsukurikata_vol10_desc:"来历不明的刊物，其上书写了一些炼金知识，似乎是某种后记？"
 
@@ -83,15 +83,16 @@ roz_shuukan_shoujonotsukurikata_vol9_desc:"来历不明的刊物，其上书写�
  roz_shinku's_body_assembly_stage_3: "沉睡的真红"
  roz_shinku's_body_assembly_stage_3_desc: "你已重现蔷薇少女第五人偶的完美身姿——除了不能动以外……"
  roz_shinku's_body_assembly_stage_3_ct: "§R蔷薇圣母缺失§!"
-#
-r_roz_extrinsic_xinlin_crystal_unknow: "§B奇异希灵水晶§!"
-r_roz_extrinsic_xinlin_crystal_unknow_desc: "一个棺材状的晶体，至于为什么要这么形容，这是所有科研人员在审视其外貌后的一致看法……\n物理结构强度极高，我们尚未找到合适的损毁方法来让它破层皮……\n§Y晶体内存储数据仍在解析中§!……"
+ #
+ r_roz_extrinsic_xinlin_crystal_unknow: "§B奇异希灵水晶§!"
+ r_roz_extrinsic_xinlin_crystal_unknow_desc: "一个棺材状的晶体，至于为什么要这么形容，这是所有科研人员在审视其外貌后的一致看法……\n物理结构强度极高，我们尚未找到合适的损毁方法来让它破层皮……\n§Y晶体内存储数据仍在解析中§!……"
 
-r_roz_extrinsic_xinlin_crystal: "§B超限容晶体-12345型(小公主特供版)§!"
-r_roz_extrinsic_xinlin_crystal_desc: "神秘而强大的希灵文明给予我们的关键帮助，逆转神格污染与重塑蔷薇圣母的主控晶体。它的真身如今正镶嵌在破败神国星系中的资讯重构仪上，但仍可独立发挥作用。水银灯对这个命名吐槽了若干次，不过我们的科学家还是决定保留原名。"
+ r_roz_extrinsic_xinlin_crystal: "§B超限容晶体-12345型(小公主特供版)§!"
+ r_roz_extrinsic_xinlin_crystal_desc: "神秘而强大的希灵文明给予我们的关键帮助，逆转神格污染与重塑蔷薇圣母的主控晶体。它的真身如今正镶嵌在破败神国星系中的资讯重构仪上，但仍可独立发挥作用。水银灯对这个命名吐槽了若干次，不过我们的科学家还是决定保留原名。"
 
-r_roz_extrinsic_xinlin_crystal_broken: "§g损毁的超限容晶体§!"
-r_roz_extrinsic_xinlin_crystal_broken_desc: "原本的超限容结晶体-12345型(小公主特供版)，因为唤醒真红项目中的高强度使用，已经过载损坏，大部分结构失去作用。但作为超级文明的技术造物，这个结晶体依然能够让我们的科研人员得到有效启发。"
+ r_roz_extrinsic_xinlin_crystal_broken: "§g损毁的超限容晶体§!"
+ r_roz_extrinsic_xinlin_crystal_broken_desc: "原本的超限容结晶体-12345型(小公主特供版)，因为唤醒真红项目中的高强度使用，已经过载损坏，大部分结构失去作用。但作为超级文明的技术造物，这个结晶体依然能够让我们的科研人员得到有效启发。"
+
 
  ############################
  ####cosmic storm

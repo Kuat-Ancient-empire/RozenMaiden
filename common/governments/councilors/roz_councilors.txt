@@ -9,8 +9,10 @@ councilor_celestial_military = {
 
     }
     is_leader_possible = {
-        leader_class = commander
-        leader_class = official
+        OR = {
+            leader_class = commander
+            leader_class = official
+        }
     }
     modifier = {
         #command_limit_add = 10
@@ -35,8 +37,10 @@ councilor_time_honored = {
 
     }
     is_leader_possible = {
-        leader_class = scientist
-        leader_class = official
+        OR = {
+            leader_class = scientist
+            leader_class = official
+        }
     }
     modifier = {
         country_produces_mult = 0.01
