@@ -8,21 +8,210 @@ ge_:0 ""
 ##########################################
 
 ge_event.0.name:0 "Introduction to Rozen Maiden Mod"
-ge_event.0.desc:0 "Thank you for using this mod.\nThis mod is from the second creation with the theme of Mercury Lamp in the cartoon "Rozen Maiden" created by PEACH-PIT, the copywriting is basically set according to the original, and the story timeline is tentatively set after the finale. The technology side refers  some settings of "the Empire of Xiling", and mixes in some other things. You can pay attention to that in the process of playing. If those can make you smile, it would be better:-). "
+ge_event.0.desc:0 "Thank you for using this mod.\nWelcome to join our chat group for bug reports or feedback: §Y264045681§!, or leave messages directly on the Workshop comment board.\nThis mod is a derivative work themed around characters such as §MSuigintou§! from PEACH-PIT's manga Rozen Maiden. The lore of Rozen Maiden largely adheres to the original work, with the timeline set decades after the grand finale. The sci-fi elements incorporate numerous settings from Outcast of the Beings, and blended with other creative components. You may discover these references during gameplay—if they bring a smile to your face, nothing could be more delightful :)"
 
 ge_event.0.aa:0 "だが、ことわる！（但是，我拒绝！）"
 ge_event.0.bb:0 "搞快点！"
 ge_event.0.cc:0 "Confirm"
 
-ge_event.1.t:0 "Crazy Buff"
-ge_event.1.d:0 "Do you need to strengthen?"
-ge_event.1.zz:0 "§GNo§!"
-ge_event.1.aa:0 "§Y+50%§!"
-ge_event.1.bb:0 "§H+200%§!"
-ge_event.1.cc:0 "§M+500%§!"
-ge_event.1.dd:0 "§R+1000%§!"
-ge_event.1.ee:0 "Reselect"
-ge_event.1.ff:0 "Quit"
+ ge_event.1.t:0 "§PFate's gifts come with a hidden price tag.§!"
+ ge_event.1.d1:0 "The might of Void technology rests on whether you bring mercy or trials upon all beings in the galaxy.\n\n§HThe current $mod_weapon_type_ge_void_energy_weapon_damage_mult$ Multiplier is：[Root.ge_buff_count]%§!\n当前$mod_weapon_type_ge_void_energy_weapon_fire_rate_mult$ Multiplier is：[Root.ge_buff_count_fr]%§!\nThe current §HWeapon Range§! Multiplier is:：[Root.ge_buff_fire_range_count]%§!"
+
+ ge_event.1.zz2:0 "§GComplete the adjustment§!"
+ ge_event.1.zz:0 "§GComplete the adjustment§!"
+ ge_event.1.dm: "§YAdjust damage§!"
+ ge_event.1.fr:0 "§YAdjust fire rate§!"
+ ge_event.1.range: "§YAdjust weapon range§!"
+ ge_event.1.im1: "§RCombat Effectiveness Degradation of Throne-class Warships§!"
+ ge_event.1.01.ct: "If the early-game gifted ships feel overpowered, check this option to drastically downgrade the durability and combat effectiveness of Throne-class and Guardian-class vessels (reverting to vanilla-level stats). This downgrade remains in effect until Void Reactor technology is researched."
+ ge_event.1.im2: "§GRestore Throne-class Warships' Combat Effectiveness§!"
+ ge_event.1.02.ct: "Time to Reclaim Dominance."
+
+ ge_event.1.lgate: "§VL-Cluster~Start!§!"
+ ge_event.1.lgate_ct: "§BUtility Feature: Instantaneously activates the L-Gate and forces Gray Tempest crisis spawn as 'The Gray'. This override enables policy-controlled L-Gate toggling for the duration.§!"
+ ge_event.1.lgate_ct_1:"Multiplayer mode restriction active."
+ ge_event.1.lgate_ct_2:"L-Cluster inaccessible"
+
+ ge_event.1.leader_name_jp:"Leader Name Display: Hiragana Toggle"
+ ge_event.1.leader_name_jp_ct:"Artificial beings' names will update uniformly in one month.\nCurrent display language: §HEnglish§!"
+ ge_event.1.leader_name_sc:"Leader Name Display: English"
+ ge_event.1.leader_name_sc_ct:"Artificial beings' names will update uniformly in one month.\nCurrent display language: §HHiragana Toggle§!"
+
+ ge_event.1.ct1:0 "§PCurrent Kirakishou Events Trigger: Normal Activation§!\n"
+ ge_event.1.ct2:0 "§PCurrent Kirakishou Events Trigger: Early Activation§!\n"
+
+ ge_event.2.t: "§MAdjust $mod_weapon_type_ge_void_energy_weapon_damage_mult$§!"
+ ge_event.2.fr0: "Back"
+ ge_event.2.00:0 "§HReset multiplier§!"
+ ge_event.2.aa:0 "§BMultiplier factor +10%§!"
+ ge_event.2.bb:0 "§YMultiplier factor x2%§!"
+ ge_event.2.cc:0 "§YMultiplier factor x10%§!"
+
+ ge_event.2.dd:0 "§RMultiplier factor -10%§!"
+ ge_event.2.ee:0 "§YMultiplier factor ÷2%§!"
+ ge_event.2.ff:0 "§YMultiplier factor ÷10%§!"
+
+ ge_event.2.d1: "$GetRozDamageDiffTextDef$"
+ ge_event.2.da2:0 "$GetRozDamageDiffTextA1$"
+ ge_event.2.da3:0 "$GetRozDamageDiffTextA2$"
+ ge_event.2.da4:0 "$GetRozDamageDiffTextA3$"
+ ge_event.2.da5:0 "$GetRozDamageDiffTextA4$"
+
+ ge_event.2.db1:0 "$GetRozDamageDiffTextB1$"
+ ge_event.2.db2:0 "$GetRozDamageDiffTextB2$"
+ ge_event.2.db3:0 "$GetRozDamageDiffTextB3$"
+ ge_event.2.db4:0 "$GetRozDamageDiffTextB4$"
+
+
+
+
+ #ge_event.1.cc2:0 "§BMultiplier factor +500%§!"
+ #ge_event.1.ff2:0 "§RMultiplier factor -100%§!"
+
+ ge_event.3.t: "Adjust $mod_weapon_type_ge_void_energy_weapon_fire_rate_mult$"
+ ge_event.3.d:0 "$GetRozFireRateDiffTextDef$"
+ ge_event.3.da2:0 "$GetRozFireRateDiffTextA1$"
+ ge_event.3.da3:0 "$GetRozFireRateDiffTextA2$"
+ ge_event.3.da4:0 "$GetRozFireRateDiffTextA3$"
+ ge_event.3.da5:0 "$GetRozFireRateDiffTextA4$"
+
+ ge_event.3.db1:0 "$GetRozFireRateDiffTextB1$"
+ ge_event.3.db2:0 "$GetRozFireRateDiffTextB2$"
+ ge_event.3.db3:0 "$GetRozFireRateDiffTextB3$"
+ ge_event.3.db4:0 "$GetRozFireRateDiffTextB4$"
+
+
+ ge_event.3.fr0: "Back"
+ ge_event.3.00: "§HReset§!"
+ ge_event.3.aa:0 "§BMultiplier factor +10%§!"
+ ge_event.3.bb:0 "§YMultiplier factor x2%§!"
+ ge_event.3.cc:0 "§YMultiplier factor x10%§!"
+ ge_event.3.dd:0 "§RMultiplier factor -10%§!"
+ ge_event.3.ee:0 "§YMultiplier factor ÷2%§!"
+ ge_event.3.ff:0 "§YMultiplier factor ÷10%§!"
+
+
+
+ ge_event.4.t:0 "Universal Weapon Range adjustment (Non-isolated Multiplier Tier)"
+ ge_event.4.d:0 "$GetRozFireRangeDiffTextDef$"
+
+ ge_event.4.fr0: "Back"
+ ge_event.4.00: "§HReset§!"
+ ge_event.4.aa:0 "§BMultiplier factor +5%§!"
+ ge_event.4.bb:0 "§YMultiplier factor x2%§!"
+ ge_event.4.cc:0 "§YMultiplier factor x5%§!"
+ ge_event.4.dd:0 "§RMultiplier factor -5%§!"
+ ge_event.4.ee:0 "§YMultiplier factor ÷2%§!"
+ ge_event.4.ff:0 "§YMultiplier factor ÷5%§!"
+
+
+ ge_event.1.krks.difficulty_levels: "Kirakishou Events Trigger Time Adjustment"
+ ge_event.5.title: "Kirakishou Events Trigger Time Adjustment"
+ ge_event.5.desc: "Here you can adjust the timeline for Kirakishou acquisition. §HThe default timeline§! begins after acquiring Void Technology and completing the §RRebuild Energy Hub§! situation, presenting higher difficulty. Alternatively, triggering the storyline §Hwhen Suigintou's Favor >20§! will drastically reduce difficulty (≈1% of original) but limit narrative depth. §RAdjustment must be done at game start - changes are locked once the Event Chain initiates.§!"
+ ge_event.5.default: "Normal Activation"
+ ge_event.5.early: "Early Activation"
+
+
+
+
+ ###new ui
+ roz_start.7777.difficult: "Strength adjustment"
+ roz_start.7777.mode1: "Switch mode to §HAdditive§!.\n[GetRozAdjustModeDiffText]"
+ roz_start.7777.mode2: "Switch mode to §HMultipy§!.\n[GetRozAdjustModeDiffText]"
+ roz_start.7777.mode3: "[GetRozAdjustModeDiffText]"
+ roz_start.7777.mode_add: "§c+§!"
+ roz_start.7777.mode_mult: "§cx§!"
+
+ roz_start.7777.mode_clear: "§HReset§!"
+ roz_start.7777.mode_2x: "§W2x§!"
+ roz_start.7777.mode_2x_ct: "§WMult:2x§!"
+ roz_start.7777.mode_5x: "§G5x§!"
+ roz_start.7777.mode_5x_ct: "§GMult:5x§!"
+ roz_start.7777.mode_10x: "§B10x§!"
+ roz_start.7777.mode_10x_ct: "§BMult:10x§!"
+
+ roz_start.7777.a: "§B$mod_weapon_type_ge_void_energy_weapon_damage_mult$:Additive§!"
+ roz_start.7777.a2: "§B$mod_weapon_type_ge_void_energy_weapon_damage_mult$:Multipy§!"
+ roz_start.7777.b: "§P$mod_weapon_type_ge_void_energy_weapon_damage_mult$:Subtract§!"
+ roz_start.7777.b2: "§P$mod_weapon_type_ge_void_energy_weapon_damage_mult$:Divide§!"
+ roz_start.7777.ab: "[GetRozDamageDiffText]"
+ roz_start.7777.clear: "∅"
+ roz_start.7777.ab.clear.ct: "Reset $mod_weapon_type_ge_void_energy_weapon_damage_mult$"
+
+ roz_start.7777.c: "§B$mod_weapon_type_ge_void_energy_weapon_fire_rate_mult$:Additive§!"
+ roz_start.7777.c2: "§B$mod_weapon_type_ge_void_energy_weapon_fire_rate_mult$:Multipy§!"
+ roz_start.7777.d: "§P$mod_weapon_type_ge_void_energy_weapon_fire_rate_mult$:Subtract§!"
+ roz_start.7777.d2: "§P$mod_weapon_type_ge_void_energy_weapon_fire_rate_mult$:Divide§!"
+ roz_start.7777.cd: "[GetRozFireRateDiffText]"
+ roz_start.7777.cd.clear.ct: "Reset $mod_weapon_type_ge_void_energy_weapon_fire_rate_mult$"
+
+ roz_start.7777.e: "§B$ship_weapon_range_mult$:Additive§!"
+ roz_start.7777.e2: "§B$ship_weapon_range_mult$:Multipy§!"
+ roz_start.7777.f: "§P$ship_weapon_range_mult$:Subtract§!"
+ roz_start.7777.f2: "§P$ship_weapon_range_mult$:Divide§!"
+ roz_start.7777.ef: "[GetRozFireRangeDiffText]"
+ roz_start.7777.ef.clear.ct: "Reset"
+
+ roz_start.7777.kirakishou_eventchain_name: "Kirakishou Events Triggered Time  Adjustment"
+ roz_start.7777.kirakishou_eventchain_name.tooltip: "Adjust Kirakishou Event Chain trigger timing here."
+ roz_start.7777.g: "Early Activation"
+ roz_start.7777.g.trigger1.tooltip: "§RStory progression has started and cannot be modified.§!"
+ roz_start.7777.g.trigger2.tooltip: "Selected Mode"
+ roz_start.7777.g.tooltip: "§CUnder the current mode, Kirakishou's storyline will be triggered when §HSuigintou's affinity exceeds 20§!, drastically reducing difficulty while maintaining identical plot progression. §RAdjust trigger timing before game start—modifications are prohibited once Kirakishou's arc initiates.§!"
+ roz_start.7777.h: "Normal Activation"
+ roz_start.7777.h.trigger1.tooltip: "§Story progression has started and cannot be modified.§!"
+ roz_start.7777.h.trigger2.tooltip: "Selected Mode"
+ roz_start.7777.h.tooltip: "In the current mode, after acquiring Void Technology and completing the $roz_ves_state_grid_shock_situation$ situation, you will enter Kirakishou's storyline with moderate difficulty. §RAdjust trigger timing before game start—modifications are prohibited once Kirakishou's arc initiates.§!"
+
+ roz_start.7777.crisis_diff: "Abyss Invasion difficulty adjustment"
+ roz_start.7777.easy: "§BEasy§!"
+ roz_start.7777.normal: "§GNormal§!"
+ roz_start.7777.hard: "§PHard§!"
+ roz_start.7777.xiling: "§RFront Line of Xiling§!"
+ roz_start.7777.easy.tooltip: "['concept_roz_abyss_faction'] will not receive additional bonuses."
+ roz_start.7777.normal.tooltip: "['concept_roz_abyss_faction'] will receive a 100% bonus, generating a standard quantity of enemy fleets."
+ roz_start.7777.hard.tooltip: "['concept_roz_abyss_faction'] will receive a 300% bonus, generating a major quantity of enemy fleets."
+ roz_start.7777.xiling.tooltip: "['concept_roz_abyss_faction'] will receive a 500% bonus, generating a massive quantity of enemy fleets."
+ roz_start.7777.crisis.tooltip: "Developing"
+ roz_start.7777.is_this_diff: "Difficulty selected"
+ roz_start.7777.abyss_has_come: "§RAbyssal Infector§! descends regardless, Difficulty cannot be changed."
+ roz_start.7777.abyss_vass_can_create_timed: "Additional AI time opportunity missed."
+ roz_start.7777.abyss_vass_create_available: "Extra challenge activated"
+ roz_settings_abyss_vass_had_create_available_effect.tooltip: "Extra challenge is currently active and can be toggled off. \nNote: You may enable this option at any time within the first £time£§Y5 years§! of gameplay. Once enabled and confirmed, it §Rcannot be undone§!.\nExtra Challenge: When enabled, additional AI nations will spawn based on ['concept_roz_abyss_vass_difficult']. These nations possess formidable strength, and there is a chance (['concept_roz_abyss_vass_difficult_2']) they will be corrupted during the mid-to-late Abyss Invasion, becoming additional and more powerful ['concept_roz_abyss_vass'].`"
+ roz_start.7777.abyss_vass_create_disable: "Extra Challenge deactivated"
+ roz_settings_abyss_vass_had_create_disable_effect.tooltip: "Extra Challenge is currently deactivated and can be toggled on.\nNote: You may enable this option at any time within the first £time£§Y5 years§! of gameplay. Once enabled and confirmed, it §Rcannot be undone§!. \nExtra Challenge: When enabled, additional AI nations will spawn based on ['concept_roz_abyss_vass_difficult']. These nations possess formidable strength, and there is a chance (['concept_roz_abyss_vass_difficult_2']) they will be corrupted during the mid-to-late Abyssal Invasion, becoming additional and more powerful ['concept_roz_abyss_vass']."
+
+ roz_start.7777.abyss_challenge_available: "§RAbyssal Challenge§! activated"
+ roz_settings_abyss_challenge_available_effect.tooltip: "Current Abyssal Challenge ['concept_roz_abyss_challenge'] difficulty is enabled. Can be switched to OFF.\nNote: Changes will become unalterable once the Abyssal Faction ['concept_roz_abyss_faction'] officially descends."
+ roz_start.7777.abyss_challenge_disable: "§RAbyssal Challenge§! deactivated"
+ roz_settings_abyss_challenge_disable_effect.tooltip: "Current Abyssal Challenge ['concept_roz_abyss_challenge'] difficulty is disabled. Can be switched to ON.\nNote: Changes will become unalterable once the Abyssal Faction ['concept_roz_abyss_faction'] officially descends."
+
+ roz_start.7777.placeholder1: "placeholder"
+ roz_start.7777.placeholder2: "placeholder"
+
+ roz_start.7777.settings: "Other Settings"
+ roz_start.7777.cheat: "?"
+ roz_start.7777.cheat.enable: "¿"
+ roz_start.7777.im1: "§REffectiveness Degradation of Throne-class§!"
+ roz_start.7777.im1.tooltip: "If the early-game gifted ships feel overpowered, check this option to drastically downgrade the durability and combat effectiveness of Throne-class and Guardian-class vessels (reverting to vanilla-level stats). This downgrade remains in effect until Void Reactor technology is researched."
+ roz_start.7777.im2: "§GRestore Throne-class Effectiveness§!"
+ roz_start.7777.im2.tooltip: "Time to Reclaim Dominance."
+
+ roz_start.7777.leader_name_jp: "Leader Name Display: Hiragana Toggle"
+ roz_start.7777.leader_name_jp.ct: "Artificial beings' names will update uniformly in one month.\nCurrent display language: §HEnglish§!"
+ roz_start.7777.leader_name_sc: "Leader Name Display: English"
+ roz_start.7777.leader_name_sc.ct: "Artificial beings' names will update uniformly in one month.\nCurrent display language: §HHiragana Toggle§!"
+
+ roz_start.7777.lgate: "§VL-Cluster~Start!§!"
+ roz_start.7777.lgate.ct: "§BUtility Feature: Instantaneously activates the L-Gate and forces Gray Tempest crisis spawn as 'The Gray'. This override enables policy-controlled L-Gate toggling for the duration.§!"
+
+ roz_start.7777.reload_menu: "Refresh"
+ ge_event.7777.refresh: "Refresh"
+
+ ge_event.7777.title: "Setting Menu"
+ roz_start.7777.name: "Global Settings of §MRozen Maiden MOD§!"
+ ge_event.7777.desc: "The might of Void technology rests on whether you bring mercy or trials upon all beings in the galaxy.\n\n§HThe current $mod_weapon_type_ge_void_energy_weapon_damage_mult$ Multiplier is：[Root.ge_buff_count]%§!\n当前$mod_weapon_type_ge_void_energy_weapon_fire_rate_mult$ Multiplier is：[Root.ge_buff_count_fr]%§!\nThe current §HWeapon Range§! Multiplier is:：[Root.ge_buff_fire_range_count]%§!"
+ ge_event.7777.exit: "§GComplete the adjustment§!"
 
 #########################################
 ge_event.10.t:0 "Enlightenment"

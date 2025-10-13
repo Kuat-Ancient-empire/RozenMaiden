@@ -85,6 +85,42 @@
  r_roz_extrinsic_xinlin_crystal_broken: "§gDamaged Over-Limit Capacitance Crystal§!"
  r_roz_extrinsic_xinlin_crystal_broken_desc: "The original Over-Limit Capacitance Crystal-Type 12345, damaged through overload due to intensive deployment in Project Shinku Awakening, has lost most structural functions. Yet as a technological artifact of a super-civilization, this crystal still provides valuable insights to our researchers."
 
+ ############################
+ ####cosmic storm
+ chronos_storm:"§CChrono Storm§!"
+ chronos_storm_lore_description:"§LAn extremely powerful $chronos_storm$ will threaten this galaxy, causing catastrophic damage to planets. For the safety of life, seek shelter immediately!§!"
+ chronos_storm_desc:"The only deduction we can make is: this cosmic storm appears to be artificially induced. What could possibly unleash such an apocalyptic terror? Within this horror, no one profits—merely surviving is reason enough to be thankful."
+ chronos_storm_aftermath_modifier_severity_desc: "The sheer destructiveness of the $chronos_storm$ makes it impossible to predict what specific forms of devastation it may unleash."
+ chronos_storm_aftermath_modifier_tooltip: "$t$$chronos_storm_aftermath_modifier_severity_desc$"
+ chronos_storm_color_tooltip:"$chronos_storm$"
+
+ chronos_storm_fleet_tt:"—$MOD_SHIP_HULL_REGEN_ADD_PERC$, $MOD_SHIP_ARMOR_REGEN_ADD_PERC$ and $MOD_SHIP_SHIELD_REGEN_ADD_PERC$ are §Rdisabled§! for ships and stations.\n- Inflicts §R$@storm_monthly_dmg_high|0$§! Damage per month to ships and stations with more than $@storm_hp_perc_limit|0Y%$ $HITPOINTS$."
+ chronos_modifier:"$storm_base_modifier$" #This is a hidden modifier
+ chronos_storm_modifier:"$storm_base_modifier$"
+ MESSAGE_CHRONOS_STORM_COSMIC_STORM_SPOTTED_TITLE: "$chronos_storm$ Detected!"
+ MESSAGE_CHRONOS_STORM_COSMIC_STORM_SPOTTED_DESC: "$MESSAGE_COSMIC_STORM_SPOTTED_DESC$$MESSAGE_STORM_INTRO$ $chronos_storm$ poses extreme peril to our colonies, fleets, and space stations. As it rages through these sectors, they inevitably sustain grave damage."
+
+ ######################kirakishou event chain
+
+ roz_krks_battle_win_modifier: "Defeat the Out-of-Control Kirakishou"
+ roz_krks_battle_win_modifier_desc: "\"She changes so much!\""
+
+ disable_ap_ge_0: "N-Gebiet Disabled"
+ disable_ap_ge_1: "N-Gebiet Disabled"
+ ge_kirakishou_invasion_lv1: "Panic Spread"
+ ge_kirakishou_invasion_lv2: "Panic Spread"
+ ge_kirakishou_invasion_lv2.5: "Panic Spread"
+ ge_kirakishou_invasion_lv3: "Panic Spread"
+ ge_kirakishou_invasion_lv4: "Panic Spread"
+ ge_kirakishou_invasion_lv5: "Panic Spread"
+ ge_kirakishou_invasion_lvMAX: "The unknown is the greatest fear"
+ ge_kirakishou_invasion_in_country: "Panic Spread"
+
+
+
+
+
+
 
  #####modifiers
 ge_modifier_1:0 "Initial Buff"
@@ -109,38 +145,11 @@ mod_country_base_physics_research_produces_add:0 "Monthly Physics Produces"
 mod_country_base_society_research_produces_add:0 "Monthly Society Produces"
 mod_country_base_engineering_research_produces_add:0 "Monthly Engineering Produces"
 
-
-
-#######deposit
-ge_site_sgt_deposit:0 "N-Gebiet Research Station"
-
 ########name
 ########单色光
 NAME_ge_suigintou:0 "§MMercury Lamp"
 NAME_ge_sgt_site_planet:0 "Unnormal Black Hole"
 NAME_ge_sgt_site_planet_after:0 "The Entrance of N-Gebiet"
-
-#######ap
-ap_ge_0:0 "The Treasure of N-Gebiet"
-ap_ge_0_desc:0 "We got the keys of the gate in the N-Gebietwhos named Rozen Maiden, Infinite resources and knowledge are waiting for us to exploit...\nOur time has come!"
-enable_ge_0:0 "§BOne of the necessary ascension perk of the Void-Tech event chains."
-
-ap_ge_1:0 "The Mystery of N-Gebiet"
-ap_ge_1_desc:0 "This space is more mysterious than we thought. Maybe we should intensive study for it."
-enable_ge_1:0 "§BBOne of the necessary ascension perk of the Void-Tech event chains."
-
-ap_ge_2:0 "§RThe Awakening of Over-dimensional"
-ap_ge_2_desc:0 "§RGreat, We've come to understand everything......§!"
-enable_ge_2:0 "§BAdding some powerful traits for all leader and root species.\nAdding some powerful civils for your country."
-
-
-
-##########special projects
-ge_reactor_project:0 "Strange Light-spot"
-ge_reactor_project_DESC:0 "我们的实验证明这里似乎不仅仅连接着其他世界，似乎还隐约连接着某些东西..."
-
-ge_ascension_project:0 "初步升华"
-ge_ascension_project_DESC:0 "虚空引擎的创造是划时代的，从现在开始我们有权接过天堂帝国的冠冕，我们将挣脱枷锁、超越平凡！为了这伟大的理想，我们已经准备好了一个初步升华计划，使得我们的同胞们得以全体飞升，成为天堂帝国的子民"
 
 ############
 weapon_type_ge_void_energy:0 "§BVoid Attenuation Energy§!"
@@ -167,17 +176,17 @@ mod_weapon_type_ge_void_energy_weapon_fire_rate_mult:0 "§BVoid Attenuation Ener
  Q_titan_sgt_desc:0 "Sharing the same design as Mini Suigintou Army, this colossal variant wields apocalyptic power in every gesture."
 
  ###############bombardment
- bombardment_q_dolls_bombardment:0 "§M轨道轰炸魔法阵§!"
- bombardment_q_dolls_bombardment_name:0 "§M炼金人偶 - 轨道轰炸魔法阵§!"
- bombardment_q_dolls_bombardment_desc:0 "水银灯的炼金人偶军团可以在近地轨道展开$bombardment_q_dolls_bombardment$，虽然这些人偶可爱的像个小天使，但是她们释放的轰炸却是敌军的末日。\n-对§Y星球§!造成§H大量§!伤害\n-对§Y军队§!造成§R巨量§!伤害\n-对§Y人口§!造成§G一般§!伤害"
+ bombardment_q_dolls_bombardment:0 "§MOrbital Bombardment: Runic Ward Array§!"
+ bombardment_q_dolls_bombardment_name:0 "§MOrbital Bombardment: Runic Ward Array§!§!"
+ bombardment_q_dolls_bombardment_desc:0 "Suigintou's Alchemic Choir deploys ward arrays in low orbit. Though these angelic dolls radiate ethereal charm, the searing light they unleash from the heavens shall annihilate all foes.\n- §RMassive§! damage to §YArmies§!\n- §HHeavy§! damage to §YPlanet§!\n- §gLight§! damage to §YPops§!\n- Will bombard undefended planets"
 
- bombardment_q_dolls_armageddon:0 "§R毁灭轰炸魔法阵§!"
- bombardment_q_dolls_armageddon_name:0 "§R炼金人偶 - 毁灭轰炸魔法阵§!"
- bombardment_q_dolls_armageddon_desc:0 "水银灯的炼金人偶军团可以在近地轨道展开$bombardment_q_dolls_armageddon$，虽然这些人偶可爱的像个小天使，但是她们释放的轰炸却是这颗星球的末日。\n-对§Y星球§!造成§R巨量§!伤害\n-对§Y军队§!造成§R末日级§!伤害\n-对§Y人口§!造成§R末日级§!伤害"
+ bombardment_q_dolls_armageddon:0 "§ROrbital Bombardment: Runic Ward Array of Armageddon§!"
+ bombardment_q_dolls_armageddon_name:0 "§ROrbital Bombardment: Runic Ward Array of Armageddon§!"
+ bombardment_q_dolls_armageddon_desc:0 "Suigintou's Alchemic Choir unleashes orbital scourge unchained from the stratosphere. Seraphic as porcelain cherubs, these dolls bring forth celestial purgation that shall crack the planet's spine. \n- §RMassive§! damage to §YArmies§!\n- §RMassive§! damage to §YPlanet§!\n- §RMassive§! damage to §YPops§!\n- Will bombard undefended planets"
 
- bombardment_roz_crisis_armageddon: "§_终焉之时§!"
- bombardment_roz_crisis_armageddon_name: "§_终焉之时§!"
- bombardment_roz_crisis_armageddon_desc: "深渊自太空而下，任何反抗皆是徒劳。\n-对§Y星球§!、§Y军队§!及§Y人口§!造成§R灭绝性§!伤害"
+ bombardment_roz_crisis_armageddon: "§_Doomsday§!"
+ bombardment_roz_crisis_armageddon_name: "§_Doomsday§!"
+ bombardment_roz_crisis_armageddon_desc: "The abyss descends from space, and all resistance is futile.\n- §RExtinctive§! damage to §YArmies§!\n- §RExtinctive§! damage to §YPlanet§!\n- §RExtinctive§! damage to §YPops§!"
 
  #####resource
  sr_rosa_mystica:0 "Rosa Mystica(Fake)"
@@ -185,8 +194,8 @@ mod_weapon_type_ge_void_energy_weapon_fire_rate_mult:0 "§BVoid Attenuation Ener
  sr_void_core:0 "Void Core"
  sr_void_core_desc:0 "The void core at the heart of the void reactor serves as the source of void attenuation energy. While intrinsically connected to the void, its closed-loop energy circuit and suppression from the N-Gebiet Realm jointly ward off void corrosion."
 
- sr_void_core_hidden: "幽能引擎"
- sr_void_core_hidden_desc: "唯一"
+ sr_void_core_hidden: "Nether Engine"
+ sr_void_core_hidden_desc: "Only one"
  #######deposit
  ge_site_sgt_deposit:0 "N-Gebiet Observatory"
  d_dark_matter_deposit_10:0 "£sr_dark_matter£ §Y+10§!"
@@ -208,101 +217,192 @@ mod_weapon_type_ge_void_energy_weapon_fire_rate_mult:0 "§BVoid Attenuation Ener
  requires_ap_ge_1:0 "Needs ascension perk $ap_ge_1$"
  requires_ge_tech_reactor:0 "Needs technology $GE_tech_reactor$"
 
+ ap_ge_2:0 "§RThe Awakening of Over-dimensional"
+ ap_ge_2_desc:0 "§RGreat, We've come to understand everything......§!"
+ enable_ge_2:0 "§BAdding some powerful traits for all leader and root species.\nAdding some powerful civils for your country."
 
+ ##################
+ #anomaly
+ roz_unknow_crashed_flagship_category: "§REerie Shadow§!"
+ roz_unknow_crashed_flagship_category_desc: "The vessel's surface devours nearly all visible light, blending perfectly into the dark void of space. It remains unresponsive to our hails. Perhaps we should conduct a detailed investigation of this enigmatic Spacecraft."
 
- ge_mozheng1:0 "§YCrazy +50%§!"
-ge_mozheng2:0 "§HCrazy +200%§!"
-ge_mozheng3:0 "§MCrazy +500%§!"
-ge_mozheng4:0 "§RCrazy +1000%§!"
+ roz_destroyed_planet_anomaly: "Psionic Energy Source"
+ roz_destroyed_planet_anomaly_desc: "Our research vessel has detected anomalous energy readings emanating from the rugged surface of [This.GetName]. \nSensor data indicates preternatural signatures within this energy field. Electrified scientists urge us to launch a full-scale expedition."
 
+ ##############
+ #starbase
+ Roz_starbase_placeholder: "Never"
 
+ ###################
+ #Ambient_Object
+ ROZ_SSVL_AO: "Eerie Shadow"
+ ROZ_SSVL_AO_tooltip: "The entity remains elusive—it reflects virtually no electromagnetic waves. We can only discern that this is apparently a vessel from its outer silhouette..."
+ ROZ_SSVL_AO_object_desc: "The entity remains elusive—it reflects virtually no electromagnetic waves. We can only discern that this is apparently a vessel from its outer silhouette..."
+ roz_outland_main_black_hole_station: "Abyssal Anchor Frequencer"
+ roz_outland_main_black_hole_station_desc:"A specialized station designed to entice the Abyssal-Blighted Divinity."
 
+ ###################
+ #opinion
+ opinion_roz_edict_mutiplayer_tech: "Those Player are unite!"
+ opinion_roz_test_postive: "For some reason, this xenotypes has taken a liking to us."
+ triggered_opinion_roz_test_postive: "For some reason, this xenotypes has taken a liking to us."
+ opinion_roz_date_dip_dissatisfied: "Dissatisfied"
 
+ opinion_roz_call_the_abyss_hostile: "Doomed us all"
+ opinion_roz_abyss_vass: "§RAbyssal Function§!"
+ opinion_roz_abyss_vass_hostile: "§RBlighted Target§!"
+ #######Starbase Buildings
+ sm_Roz_starbase_placeholder: "§gLimiter§!"
+ Roz_starbase_placeholder_desc_modifier: "§gNull§!"
 
+ ###############################councilor
 
+ councilor_celestial_military: "§YGrand Commander-in-Chief§!"
+ councilor_celestial_military_female: "§YGrand Commander-in-Chief§!"
+ councilor_celestial_military_desc: "Commander of All Military Affairs Within and Beyond the Capital, Holder of Authority Equivalent to the Three Excellencies, Granted Privileges: Advance to Court Without Hastening, Be Announced at Audiences Without Full Name Recitation, Ascend the Hall with Sword and Footwear, Ennobled as Prince with the Nine Bestowments..."
+ councilor_time_honored: "§BTime-Space Administration Bureau§!"
+ councilor_time_honored_female: "$councilor_time_honored$"
+ councilor_time_honored_desc: "The major organization established and spearheaded by Suigintou, primarily responsible for coordinating and governing all affairs within the N-Gebiet. Its subordinate departments include: Otherworld Exploration & Development Department,Otherworld Immigration Center, Otherworld Embassy, N-Gebiet Garrison Army, N-Gebiet Logistics Support Division, N-Gebiet Transportation Department...\n\n§W ("Then where's the headquarters?")§!\n§M ("HQ is in Shadow City~")§!\n§W ("?")§!"
 
 
+ ####################################
+ ##message
+
+ roz_time_freeze_activity_title: "§BParadox Engine§!"
+ roz_time_freeze_activity_desc: "§RWarning - Time Freeze Activated§!"
+
+ roz_agenda_void_core_boost_available_title: "Unlocks Council agenda: §B能源泄洪§!"
+ roz_agenda_void_core_boost_available_desc: ""
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ ROZ_sgt_gal_MESSAGE: "§MA Hint from Suigintou§!"
+ ROZ_sgt_gal_MESSAGE_TYPE: "§MA Hint from Suigintou§!"
+ ROZ_sgt_gal_MESSAGE_desc: "She Is Ready to Go Out with You Again."
+ MESSAGE_roz_sgt_gal_MESSAGE_TITLE_desc: "She Is Ready to Go Out with You Again."
+
+ ROZ_krks_gal_MESSAGE: "§PAn Invitation from Kirakishou§!"
+ ROZ_krks_gal_MESSAGE_TYPE: "§PAn Invitation from Kirakishou§!"
+ ROZ_krks_gal_MESSAGE_desc: "It seems she greatly looks forward to the upcoming date."
+ MESSAGE_ROZ_krks_gal_MESSAGE_TITLE_desc: "It seems she greatly looks forward to the upcoming date."
+ ###########################################
+ ###agenda
+
+ council_agenda_agenda_void_core_boost_name:0 "§BEnergy Release§!"
+ council_agenda_agenda_void_core_boost_desc:0 "In this golden age, energy surplus has surprisingly become a significant challenge. Thus, implementing periodic energy releases stands as an efficient and logical solution. These vast amounts of inexpensive energy will be fully allocated to space forces and colonies across the galaxy. Many sociologists have warned that this approach fosters wasteful habits of energy consumption—should we ever §Rlose this limitless energy source§!, our entire civilization could §Rcollapse instantly§!..."
+
+
+
+ ###################################
+ #event chains
+
+ roz_void_energy_research_chain_title: "§BOrigin of Void Technology§!"
+ roz_void_energy_research_chain_desc: "The enigmatic pinpoint glow born from experiments on that spatial gate has unveiled its unparalleled value to us, while simultaneously exposing colossal risks. Ultimately, we resolved to proceed with researching this luminous anomaly despite the peril. Concurrently, we must enhance safeguards for research facilities within N-Gebiet to brace for potential contingencies."
+
+ roz_outland_system_chain_title: "§PFallen Celestial Realm§!"
+ roz_outland_system_chain_desc: "That temporal rift has led us here, yet this murky galaxy exists beyond the fabric of reality. Gazing into its depths reveals only an abyssal void, while faint murmurs echo through every mind—whispers akin to the death-rattle of the dying..."
+ outland_systen_counter: "Clue"
+
+ roz_shuukan_shoujonotsukurikata_project_chain_title: "The Art of Creating a Girl"
+ roz_shuukan_shoujonotsukurikata_project_chain_desc: "A mysterious parcel of unknown origin arrived, and upon opening it, I found components of a Rozen Maiden doll. How could a storyline straight out of a manga materialize in reality? Yet, as Suigintou declared, the Gate of Causality has swung open for [Root.GetRulerName]. Though its source and motive remain shrouded in mystery, Mystery Weekly has indeed chosen [Root.GetRulerName] as its recipient. One day, the fifth doll—Shinku's body—shall be restored to wholeness by [Root.GetRulerName]'s hands.\n"§MWatching you toil over assembling those doll components… memories flood back vividly.§!""
+ roz_components_of_shinku: "Quantity of Received Doll Components (Weekly)"
+
+
+
+ ############light
+ sc_roz_dark_box: "§PFallen Celestial Realm§!"
+
+ ############timeline
+ timeline_roz_suigintou_get: "§MFirst Doll§!"
+ TIMELINE_EVENT_timeline_roz_suigintou_get_TOOLTIP: "§MFirst Doll§!\n§YImportant Milestone§!\n\n§L[GetDate]§!, You have forged a contract with Suigintou."
+
+ timeline_ge_sgt_flagship_get: "§BThrone — Weigh Anchor§!"
+ TIMELINE_EVENT_timeline_ge_sgt_flagship_get_TOOLTIP: "§BThrone — Weigh Anchor§!\n§YMilestone§!\n\n§L[GetDate]§!, The$Ge_Vampirilis_Ortaam$, embodying the Xiling Empire's technology and benevolence, has officially joined [Root.GetName]."
+
+ timeline_ge_tech_reactor_get: "§dMastered the secrets of the Void§!"
+ TIMELINE_EVENT_timeline_ge_tech_reactor_get_TOOLTIP: "§dCommands the Void itself§!\n§YMilestone§!\n\n§L[GetDate]§!, After overcoming countless trials, [Root.GetName] has mastered the secrets of the void and now commands the void itself. Thus begins the golden age of progress—the great Void Energy Revolution is underway."
+
+ timeline_roz_kirakishou_get: "§PSeventh Doll§!"
+ TIMELINE_EVENT_timeline_roz_kirakishou_get_TOOLTIP: "§PSeventh Doll§!\n§YImportant Milestone§!\n\n§L[GetDate]§!, You have successfully rescued Kirakishou alongside Suigintou and now become her master."
+
+ timeline_roz_shinku_get: "§HFifth Doll§!"
+ TIMELINE_EVENT_timeline_roz_shinku_get_TOOLTIP: "§HFifth Doll§!\n§RLong-cherished§!\n\n§L[GetDate]§!，[Root.GetName] has achieved an unrepeatable alchemical miracle — fashioning a new Rosa Mystica and restoring Shinku to pristine condition."
+
+
+
+ #####################################megastructure
+ roz_mega_wanxiangtianyin: "Omniverse Attractor"
+ roz_mega_wanxiangtianyin_DESC: "The Omniverse Attractor lies perched upon the gravitational zenith of the stellar basin, excavating Void Cores with preternatural efficiency."
+ roz_mega_wanxiangtianyin_undeploy: "Retract Gravity Anchors"
+ roz_mega_wanxiangtianyin_undeploy_DESC: "No longer moored to the stellar basin, the leviathan stirs — colossal wings of darkness spreading to traverse the void once more."
+
+ roz_mega_information_remodeler_base: "Information Remodeler Site"
+ roz_mega_information_remodeler_base_DESC: "This super-engineering project from the Xiling Empire defies our comprehension. Fortunately, we need only replicate its construction by strictly following the blueprint."
+ roz_mega_information_remodeler_base_MEGASTRUCTURE_DETAILS: "This super-engineering project from the Xiling Empire defies our comprehension. Fortunately, we need only replicate its construction by strictly following the blueprint."
+ #
+ roz_mega_information_remodeler: "§BInformation Remodeler§!"
+ roz_mega_information_remodeler_DESC: "The marvelous technology of creation from nothing—a fleeting glimpse into super-civilization. Anchored here at its core lies the Over-Limit Capacitance Crystal - Type 12345"
+ roz_is_roz_outland_planet:" "Is §PFallen Celestial Realm§! System"
+
+ roz_mega_information_remodeler_effect: "Enabled $roz_mega_information_remodeler$"
+ roz_mega_information_remodeler_effect_DESC: "The marvelous technology of creation from nothing—a fleeting glimpse into super-civilization. Anchored here at its core lies the Over-Limit Capacitance Crystal - Type 12345"
+ roz_mega_information_remodeler_destoryed: "§gDestoryed $roz_mega_information_remodeler$§!"
+ roz_mega_information_remodeler_destoryed_DESC: "Though the technological anchors of the Xiling Empire remain embedded in our universe, the core functions have been rendered inoperable due to the crystal's destruction. Nevertheless, studying its framework and technical principles can still yield profound insights for us."
+
+ #####################################scripted_loc
+
+ #强度调整
+ GetRozDamageDiffTextA1: "§W"I have full confidence in your courage, sense of duty, and combat prowess. Your path leads only to overwhelming victory! Good luck out there!"§!\n\n§BThe current §HDamage§! Multiplier is: [This.ge_buff_count]%§!"
+ GetRozDamageDiffTextA2: "§W"You shall become an unstoppable force!"§!\n\n§BThe current §HDamage§! Multiplier is: [This.ge_buff_count]%§!"
+ GetRozDamageDiffTextA3: "§W"With every press of the boost button, your gameplay stress fades—yet the void within grows deeper..."§!\n\n§BThe current §HDamage§! Multiplier is: [This.ge_buff_count]%§!"
+ GetRozDamageDiffTextA4: "§W"What manner of foe has you so thoroughly spooked?", Unite Fleet？High-rate Crisis？Eternal Fleet? The Third Expedition Fleet? The engraving evil shadow? Starborn? §EShroud Invader§!? ……§!\n\n§BThe current §HDamage§! Multiplier is: [This.ge_buff_count]%§!"
+ GetRozDamageDiffTextB1: "§W"Though our foe crashes upon us like a raging tide—victory may not come swift, but we shall fight on through every loss, unyielding to the last."§!\n\n§RThe current §HDamage§! Multiplier is: [This.ge_buff_count]%§!"
+ GetRozDamageDiffTextB2: "§W\"Three centuries later, as you sink into the armchair with its polyether polyurethane foam cushions, your grandson leaning against your mechanical leg asks: 'What did you do during the great §!§YWar in Heaven§!§W?' You won’t have to clear your throat and mutter: 'Well now... your grandpa was scrapping on Necromunda.'\"§!\n\n§RThe current §HDamage§! Multiplier is: [This.ge_buff_count]%§!"
+ GetRozDamageDiffTextB3: "§W\"I have nothing to offer but blood, toil, tears and sweat.\"§!\n\n§RThe current §HDamage§! Multiplier is: [This.ge_buff_count]%§!"
+ GetRozDamageDiffTextB4: "§W"Really still nerfing? Then we can't beat anyone at all!"\n\n§RThe current §HDamage§! Multiplier is: [This.ge_buff_count]%§!, under this modifier, Void weapons will barely reach base stats or even drop below.§!"
+ GetRozDamageDiffTextDef: "§HThe current §HDamage§! Multiplier is: 0%§!"
+
+ GetRozFireRateDiffTextA1: "§W"I have full confidence in your courage, sense of duty, and combat prowess. Your path leads only to overwhelming victory! Good luck out there!"§!\n\n§BThe current §HFire Rate§! Multiplier is: [This.ge_buff_count_fr]%§!"
+ GetRozFireRateDiffTextA2: "§W"You shall become an unstoppable force!"§!\n\n§BThe current §HFire Rate§! Multiplier is: [This.ge_buff_count_fr]%§!"
+ GetRozFireRateDiffTextA3: "§W"With every press of the boost button, your gameplay stress fades—yet the void within grows deeper..."§!\n\n§BThe current §HFire Rate§! Multiplier is: [This.ge_buff_count_fr]%§!"
+ GetRozFireRateDiffTextA4: "§W"What manner of foe has you so thoroughly spooked?", Unite Fleet？High-rate Crisis？Eternal Fleet? The Third Expedition Fleet? The engraving evil shadow? Starborn? §EShroud Invader§!? ……§!\n\n§BThe current §HFire Rate§! Multiplier is: [This.ge_buff_count_fr]%§!"
+ GetRozFireRateDiffTextB1: "§W"Though our foe crashes upon us like a raging tide—victory may not come swift, but we shall fight on through every loss, unyielding to the last."§!\n\n§RThe current §HFire Rate§! Multiplier is: [This.ge_buff_count_fr]%§!"
+ GetRozFireRateDiffTextB2: "§W\"Three centuries later, as you sink into the armchair with its polyether polyurethane foam cushions, your grandson leaning against your mechanical leg asks: 'What did you do during the great §!§YWar in Heaven§!§W?' You won’t have to clear your throat and mutter: 'Well now... your grandpa was scrapping on Necromunda.'\"§!\n\n§RThe current §HFire Rate§! Multiplier is: [This.ge_buff_count_fr]%§!"
+ GetRozFireRateDiffTextB3: "§W\"I have nothing to offer but blood, toil, tears and sweat.\"§!\n\n§RThe current §HFire Rate§! Multiplier is: [This.ge_buff_count_fr]%§!"
+ GetRozFireRateDiffTextB4: "§W"Really still nerfing? Then we can't beat anyone at all!"\n\n§RThe current §HFire Rate§! Multiplier is: [This.ge_buff_count_fr]%，under this modifier, the majority of Void weapons will function erratically when firing.§!"
+ GetRozFireRateDiffTextDef: "§HThe current §HFire Rate§! Multiplier is: 0%§!"
+
+ GetRozFireRangeDiffTextDef: "§HThe current §HWeapon Range§! Multiplier is: [This.ge_buff_fire_range_count]%§!。\nNote: Excessively long firing range will cause overextension, rendering ships incapable of engagement and weapons inoperable."
+
+ GetRozAdjustModeAddDiffText: "Current Adjustment Mode: §HAdditive§! Current Adjustment Rate: [ge_buff_magnification_value]%"
+ GetRozAdjustModeMultDiffText: "Current Adjustment Mode: §HMultiplication§!\nCurrent Adjustment Rate: [ge_buff_magnification_value]%"
+ ##end
+
+ #########war goals
+ wg_roz_abyss_war: "§RAbyss Invasion§!"
+ wg_roz_abyss_war_desc: "§RAbyss Invasion§!"
+ cb_roz_abyss_war: "§RAbyssal Corrosion§!"
+ cb_roz_abyss_war_desc: "§RAbyssal Corrosion§!"
+ war_goal_wg_roz_abyss_war: "§BCleanse the Abyss§!"
+
+ wg_end_threat_abyss: "§GResist the Abyssal Incursion§!"
+ wg_end_threat_abyss_desc: "§GResist the Abyssal Incursion§!"
+ cb_stop_abyss: "§GWithstand the Abyssal Corrosion§!"
+ cb_stop_abyss_desc: "§GWithstand the Abyssal Corrosion§!"
+ war_goal_wg_end_threat_abyss: "§REmbrace the Corrosion§!"
+
+ roz_abyss_war: "§RAbyss Invasion§!"
+
+ ###decisions
+ decision_roz_shinku_acceleration_time: "Acceleration Time"
+ decision_roz_shinku_acceleration_time_desc: "Accelerate planetary timeflow – boosts resource yields but demands escalating maintenance costs and resolution of temporal convection anomalies."
+ decision_roz_shinku_acceleration_time_effect: "Warning: Spacetime Distortion Detected."
+
+ decision_roz_shinku_deceleration_time: "Time Stasis"
+ decision_roz_shinku_deceleration_time_desc: "Halts planetary timeflow, slowing it relative to external spacetime. Significantly reduces maintenance costs, while balancing: Planetary output penalty, Spacetime convection anomalies"
+ decision_roz_shinku_deceleration_time_effect: "Warning: Spacetime Distortion Detected."
+
+ decision_roz_shinku_cancel_time: "Stop Time Control"
+ decision_roz_shinku_cancel_time_desc: ""
+ decision_roz_shinku_cancel_time_effect: "This planet's spacetime anomalies will naturally resolve."
 
 
 

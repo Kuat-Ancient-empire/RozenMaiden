@@ -65,6 +65,7 @@ decision_roz_shinku_acceleration_time = {
 		hidden_effect = {
 			add_modifier = {
 				modifier = roz_shinku_acceleration_time
+				years = 10
 			}
 		}
 	}
@@ -101,6 +102,7 @@ decision_roz_shinku_deceleration_time = {
 		hidden_effect = {
 			add_modifier = {
 				modifier = roz_shinku_deceleration_time
+				years = 10
 			}
 		}
 	}
