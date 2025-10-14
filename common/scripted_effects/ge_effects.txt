@@ -4990,8 +4990,10 @@ ge_gravity_burst_on_hit_effect = {
 
 
 ge_xl_beam_on_hit_effect = {
-	this = {
-		damage_ship = value:ge_gravity_burst_damage_ship_count
+	add_modifier = {
+		modifier = ge_xl_beam_on_hit_effect_modifier
+		multiplier = value:ge_gravity_burst_damage_ship_count
+		days = 2
 	}
 }
 
@@ -5012,7 +5014,11 @@ ge_wtorpedo_on_hit_effect = {
 	random_list = {
 		70 = {  }
 		30 = {
-			damage_ship = value:ge_wtorpedo_damage_modifier_amount
+			add_modifier = {
+				modifier = ge_wtorpedo_on_hit_modifier
+				multiplier = value:ge_wtorpedo_damage_modifier_amount
+				days = 2
+			}
 		}
 	}
 }
@@ -5022,7 +5028,13 @@ ge_wtorpedo_on_hit_effect = {
 ge_vn_torpedo_on_hit_effect = {
 	random_list = {
 		1 = {  }
-		3 = { damage_ship = value:ge_vn_torpedo_damage_modifier_amount }
+		3 = { 
+			add_modifier = {
+				modifier = ge_vn_torpedo_on_hit_modifier
+				multiplier = value:ge_vn_torpedo_damage_modifier_amount
+				days = 2
+			}
+		}
 	}
 }
 
@@ -5086,7 +5098,11 @@ ge_sgt_torpedo_on_hit_effect = {
 	random_list = {
 		1 = {  }
 		1 = {
-			damage_ship = value:ge_sgt_torpedo_damage_modifier_amount
+			add_modifier = {
+				modifier = ge_sgt_torpedo_on_hit_modifier
+				multiplier = value:ge_sgt_torpedo_damage_modifier_amount
+				days = 2
+			}
 		}
 	}
 }

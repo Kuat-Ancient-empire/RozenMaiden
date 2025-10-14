@@ -753,15 +753,23 @@ ge_gravity_burst_on_hit_effect_modifier = {
 }
 
 ge_xl_beam_on_hit_effect_modifier = {
-    ship_shield_hardening_add = -0.1
+    ship_hull_regen_add_static = -1
 }
 
-ge_xl_beam_on_hit_effect_modifier_2 = {
-    ship_weapon_damage = 1
+ge_wtorpedo_on_hit_modifier = {
+    ship_hull_regen_add_static = -1
 }
 
+ge_vn_torpedo_on_hit_modifier = {
+    ship_hull_regen_add_static = -1
+}
+ 
 ge_t_beam_on_hit_effect_modifier = {
 	ship_damage_reduction_mult = -0.25
+}
+
+ge_sgt_torpedo_on_hit_modifier = {
+	 ship_hull_regen_add_static = -1
 }
 
 ge_stg_laser_on_hit_effect_modifier = {
