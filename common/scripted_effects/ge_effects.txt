@@ -1260,7 +1260,7 @@ create_ge_kirakishou_hostile_ship = {
 	}
 	create_country = {
 		name = "NAME_kirakishou_hostile_country"
-		type = enclave
+		type = roz_hostile_country
 		authority = "auth_oligarchic"
 		civics = {
 			civic = civic_ancient_preservers
