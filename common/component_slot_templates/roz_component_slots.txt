@@ -68,10 +68,12 @@ roz_pd_turret = {
 roz_missile_turret = {
 	size = torpedo
 	component = weapon
-	weapon_type_energy = "SSV_S_Missile_turret_entity"
-	weapon_type_explosive = "SSV_S_Missile_turret_entity"
-	weapon_type_kinetic = "SSV_S_Missile_turret_entity"
-	weapon_type_ge_void_energy = "SSV_S_Missile_turret_entity"
+	entities = {
+		weapon_type_energy = "SSV_S_Missile_turret_entity"
+		weapon_type_explosive = "SSV_S_Missile_turret_entity"
+		weapon_type_kinetic = "SSV_S_Missile_turret_entity"
+		weapon_type_ge_void_energy = "SSV_S_Missile_turret_entity"
+	}
 }
 
 ###########

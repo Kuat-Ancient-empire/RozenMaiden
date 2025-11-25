@@ -63,15 +63,15 @@ llk_over_dimension = {   #ID
 		}
         upkeep = {
             trigger = {
-                NOT = {
-                    has_trait = trait_lithoid
-                }
+                exists = owner
+                owner = { NOT = { has_trait = trait_lithoid } }
             }
             food = 0.05
         }
         upkeep = {
             trigger = {
-                has_trait = trait_lithoid
+                exists = owner
+                owner = { has_trait = trait_lithoid }
             }
             minerals = 0.05
         }

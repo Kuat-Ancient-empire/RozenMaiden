@@ -29,14 +29,6 @@ ge_strike_craft_bomber_DESC:0 "这种轰炸机拥有大当量的虚空炸弹，�
 ge_strike_craft_xuefeng:0 "§LBattle Demon - Snow Wind§!"
 ge_strike_craft_xuefeng_DESC:0 "这些特种轰炸机虽然编队少，但是机动十分出色，搭载的虚空鱼雷能轻易抹杀敌方战舰。（この雪風様なのだ！）"
 
-
-
-
-PLANET_KILLER_Crasher:0 "§RDeath meteor"
-PLANET_KILLER_Crasher_DESC:0 "我们新式的死亡流星已经完全超越了老式的地爆天星！"
-PLANET_KILLER_Crasher_ACTION:0 "§RCrasher"
-FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_Crasher:0 "Preparing Crasher $PLANET|Y$"
-
 ##字体颜色代码
 ##§W W白色
 ##§R R红色
