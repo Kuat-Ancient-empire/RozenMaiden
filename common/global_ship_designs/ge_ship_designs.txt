@@ -595,26 +595,42 @@ ship_design = {
 	hide_size = no
 	
 	section = {
-		template = CORVETTE_MID_S3
+		template = CORVETTE_MID_S2PD1
 		slot = "mid"	
 		component = {
 			slot = SMALL_GUN_01
-			template = MEDIUM_UV_LASER
+			template = POINT_DEFENCE_2
 		}
 		component = {
 			slot = SMALL_GUN_02
-			template = MEDIUM_UV_LASER
+			template = SMALL_DISRUPTOR_3
 		}
 		component = {
 			slot = SMALL_GUN_03
-			template = MEDIUM_MASS_DRIVER_3
+			template = SMALL_DISRUPTOR_3
+		}
+		component = {
+			slot = AUX_UTILITY_1
+			template = ARMOR_HARDENER_2
+		}
+		component = {
+			slot = SMALL_UTILITY_1
+			template = SMALL_SHIELD_5
+		}
+		component = {
+			slot = SMALL_UTILITY_1
+			template = SMALL_SHIELD_5
+		}
+		component = {
+			slot = SMALL_UTILITY_1
+			template = SMALL_ARMOR_5
 		}
 	}
 	required_component= COMBAT_COMPUTER_SWARM_DEFAULT
 	required_component="SHIP_THRUSTER_3"
 	required_component="SENSOR_3"
 	required_component= CORVETTE_COLD_FUSION_REACTOR
-	required_component = HYPER_DRIVE_1
+	required_component = JUMP_DRIVE_1
 }
 
 ship_design = {
@@ -626,15 +642,15 @@ ship_design = {
 		slot = bow
 		component = {
 			slot = SMALL_GUN_01
-			template = MEDIUM_UV_LASER
+			template = SMALL_DISRUPTOR_3
 		}
 		component = {
 			slot = SMALL_GUN_02
-			template = MEDIUM_UV_LASER
+			template = SMALL_DISRUPTOR_3
 		}
 		component = {
 			slot = MEDIUM_GUN_01
-			template = LARGE_MASS_DRIVER_3
+			template = MEDIUM_DISRUPTOR_3
 		}
 	}
 	section = {
@@ -666,7 +682,7 @@ ship_design = {
 		slot = bow
 		component = {
 			slot = EXTRA_LARGE_01
-			template = ENERGY_LANCE_1
+			template = ARC_EMITTER_2
 		}
 	}
 	section = {
@@ -674,15 +690,15 @@ ship_design = {
 		slot = bow
 		component = {
 			slot = LARGE_GUN_01
-			template = ENERGY_TORPEDO_1
+			template = SPACE_CLOUD_LIGHTNING
 		}
 		component = {
 			slot = LARGE_GUN_02
-			template = ENERGY_TORPEDO_1
+			template = SPACE_CLOUD_LIGHTNING
 		}
 		component = {
 			slot = LARGE_GUN_03
-			template = ENERGY_TORPEDO_1
+			template = SPACE_CLOUD_LIGHTNING
 		}		
 	}
 	section = {
@@ -690,7 +706,7 @@ ship_design = {
 		slot = bow
 		component = {
 			slot = LARGE_GUN_01
-			template = ENERGY_TORPEDO_1
+			template = SPACE_CLOUD_LIGHTNING
 		}	
 	}
 	required_component="COMBAT_COMPUTER_LINE_DEFAULT"

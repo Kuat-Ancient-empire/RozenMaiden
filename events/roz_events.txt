@@ -1539,10 +1539,19 @@ country_event = {
 #	}
 #}
 
+###patron
+inline_script = {
+	script = shroud/minor_patron_first_contact_start_event
+	EVENT_ID = ge_event.1030
+	SPECIAL_PROJECT_KEY = "THE_DOOR_OF_ALL_DOORS_FC_PROJECT"
+	PATRON_TYPE = the_door_of_all_doors
+}
 
-
-
-
+inline_script = {
+	script = shroud/minor_patron_first_contact_end_event
+	EVENT_ID = ge_event.1035
+	PATRON_TYPE = the_door_of_all_doors
+}
 
 
 

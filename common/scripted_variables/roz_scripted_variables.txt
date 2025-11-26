@@ -6,3 +6,4 @@
 @roz_UID_hard = 4
 @roz_UID_xiling = 8
 
+@endless_doors_accord = -0.25

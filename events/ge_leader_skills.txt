@@ -859,6 +859,7 @@ ship_event = {
 			}
 			set_ship_flag = roz_Ragnarok_ship_flag
 		}
+		set_ship_flag = starfire_emp
 	}
 }
 

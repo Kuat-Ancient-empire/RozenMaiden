@@ -1339,11 +1339,12 @@ country_event = {
         allow = {
             resource_stockpile_compare = {
                 resource = alloys
-                value > 3000
+                value > 5000
             }
         }
         add_resource = {
-            alloys = -3000
+            alloys = -5000
+            influence = -1000
         }
         hidden_effect = {
             change_variable = {

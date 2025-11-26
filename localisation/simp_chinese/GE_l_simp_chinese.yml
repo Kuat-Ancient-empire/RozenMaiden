@@ -311,16 +311,16 @@ timeline_roz_suigintou_get: "§M第一人偶§!"
 TIMELINE_EVENT_timeline_roz_suigintou_get_TOOLTIP: "§M第一人偶§!\n§Y重要里程碑§!\n\n§L[GetDate]§!，你与水银灯签下契约。"
 
 timeline_ge_sgt_flagship_get: "§B王座——启航§!"
-TIMELINE_EVENT_timeline_ge_sgt_flagship_get_TOOLTIP: "§B王座——启航§!\n§Y里程碑§!\n\n§L[GetDate]§!，蕴含希灵帝国和科技与善意的$Ge_Vampirilis_Ortaam$正式加入[Root.GetName]。"
+TIMELINE_EVENT_timeline_ge_sgt_flagship_get_TOOLTIP: "§B王座——启航§!\n§Y里程碑§!\n\n§L[GetDate]§!，蕴含希灵帝国的科技与善意的$Ge_Vampirilis_Ortaam$正式加入[EVENT_TARGET_0.GetName]。"
 
 timeline_ge_tech_reactor_get: "§d掌控虚空之秘§!"
-TIMELINE_EVENT_timeline_ge_tech_reactor_get_TOOLTIP: "§d掌控虚空§!\n§Y里程碑§!\n\n§L[GetDate]§!，历经困难，[Root.GetName]终于掌握了虚空能源，这是一个黄金时代的开端——伟大的虚空能源革命，开始了。"
+TIMELINE_EVENT_timeline_ge_tech_reactor_get_TOOLTIP: "§d掌控虚空§!\n§Y里程碑§!\n\n§L[GetDate]§!，历经困难，[EVENT_TARGET_0.GetName]终于掌握了虚空能源，这是一个黄金时代的开端——伟大的虚空能源革命，开始了。"
 
 timeline_roz_kirakishou_get: "§P第七人偶§!"
 TIMELINE_EVENT_timeline_roz_kirakishou_get_TOOLTIP: "§P第七人偶§!\n§Y重要里程碑§!\n\n§L[GetDate]§!，你与水银灯成功解救的雪华绮晶，并成为了她的御者。"
 
 timeline_roz_shinku_get: "§H第五人偶§!"
-TIMELINE_EVENT_timeline_roz_shinku_get_TOOLTIP: "§H第五人偶§!\n§R夙愿§!\n\n§L[GetDate]§!，[Root.GetName]完成了无法复现的炼金奇迹——制造了新的蔷薇圣母，并成功复活了真红。"
+TIMELINE_EVENT_timeline_roz_shinku_get_TOOLTIP: "§H第五人偶§!\n§R夙愿§!\n\n§L[GetDate]§!，[EVENT_TARGET_0.GetName]完成了无法复现的炼金奇迹——制造了新的蔷薇圣母，并成功复活了真红。"
 
 
 
@@ -399,3 +399,18 @@ GetRozAdjustModeMultDiffText: "当前调整模式为：§H乘算§!\n当前调�
  decision_roz_shinku_cancel_time: "停止时间操纵"
  decision_roz_shinku_cancel_time_desc: ""
  decision_roz_shinku_cancel_time_effect: "该星球的时空畸变将平复"
+
+###patron
+ the_door_of_all_doors: "§0万门之门§!"
+ code_name_roz_door:"§c门§!"
+ the_door_of_all_doors_article: "$the_door_of_all_doors$"
+ the_door_of_all_doors_article_cap: "$the_door_of_all_doors$"
+ the_door_of_all_doors_color: "$the_door_of_all_doors$"
+ the_door_of_all_doors_color_article: "$the_door_of_all_doors$"
+ the_door_of_all_doors_color_article_cap: "$the_door_of_all_doors$"
+ the_door_of_all_doors_desc: "N之领域在§H虚境§!的映射，与其他虚境超主有着些许源于灵性感知上的差异。"
+ endless_doors_modifier_tt: ""
+ endless_doors_accord_tt: "$accord_minor_patron_tt$§G+$@endless_doors_accord|0%$§!$MOD_FLEET_MIA_TIME_MULT$"
+ THE_DOOR_OF_ALL_DOORS_FC_PROJECT:"与$code_name_roz_door$通灵"
+ THE_DOOR_OF_ALL_DOORS_FC_PROJECT_HIVE:"$THE_DOOR_OF_ALL_DOORS_FC_PROJECT$"
+ THE_DOOR_OF_ALL_DOORS_FC_PROJECT_ROBOT:"$THE_DOOR_OF_ALL_DOORS_FC_PROJECT$"

@@ -1228,4 +1228,28 @@ special_project = {
 	key = "roz_build_information_remodeler"
 }
 
-
+###patron
+special_project = {
+	inline_script = {
+		script = shroud/patron_first_contact_special_project
+		PICTURE = GFX_evt_psionics
+		KEY = "THE_DOOR_OF_ALL_DOORS_FC_PROJECT"
+		EVENT_ID = ge_event.1035
+	}
+}
+special_project = {
+	inline_script = {
+		script = shroud/patron_first_contact_special_project
+		PICTURE = GFX_evt_shroud_psionic_hive_mind
+		KEY = "THE_DOOR_OF_ALL_DOORS_FC_PROJECT_HIVE"
+		EVENT_ID = ge_event.1035
+	}
+}
+special_project = {
+	inline_script = {
+		script = shroud/patron_first_contact_special_project
+		PICTURE = GFX_evt_machine_sapience
+		KEY = "THE_DOOR_OF_ALL_DOORS_FC_PROJECT_ROBOT"
+		EVENT_ID = ge_event.1035
+	}
+}

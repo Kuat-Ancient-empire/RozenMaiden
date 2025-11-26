@@ -259,7 +259,7 @@ weapon_component_template = {
 	armor_damage = 2.50
 	hull_damage = 2.50
 
-	ai_tags = { weapon_role_artillery }	
+	ai_tags = { weapon_role_artillery artillery }
 	ai_tag_weight = 0
 
 	ai_weight = {

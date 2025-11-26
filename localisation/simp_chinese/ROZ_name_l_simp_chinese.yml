@@ -12,14 +12,14 @@ l_simp_chinese:
  NAME_roz_abyss_fleet_outpost: "§_侵蚀据点§!"
 
  NAME_nfield:0 "N之领域"
-NAME_nfield_suigintou: "N之领域-水银灯"
-NAME_nfield_krks: "N之领域-雪华绮晶"
-NAME_nfield_junn: "人偶师-樱田纯"
-NAME_nfield_sk: "N之领域-真红"
-NAME_nfield_hinaichigo: "N之领域-雏莓"
-NAME_ge_br:0 "黑蔷薇"
-NAME_ge_vfs:0 "Y*%§R<数据错误>§!恒"
-NAME_ap_ge_0:0 "N之领域的财富"
+ NAME_nfield_suigintou: "N之领域-水银灯"
+ NAME_nfield_krks: "N之领域-雪华绮晶"
+ NAME_nfield_junn: "人偶师-樱田纯"
+ NAME_nfield_sk: "N之领域-真红"
+ NAME_nfield_hinaichigo: "N之领域-雏莓"
+ NAME_ge_br:0 "黑蔷薇"
+ NAME_ge_vfs:0 "Y*%§R<数据错误>§!恒"
+ NAME_ap_ge_0:0 "N之领域的财富"
  NAME_roz_Uranus: "§R乌拉诺斯§!"
 
 NAME_suigintou: "すいぎんとう"
@@ -61,6 +61,10 @@ NAME_roz_flagship_gardian_IH: "§L钢铁之手§!" #Iron Hands
 NAME_roz_flagship_gardian_U: "§B极限战士§!" #Ultramarines
 NAME_roz_flagship_gardian_S: "§G火蜥蜴§!" #Salamanders
 NAME_roz_flagship_gardian_RG: "§g暗鸦守卫§!" #Raven Guard
+
+ NAME_ge_anti-invasion_corvette: "前卫"
+ NAME_ge_anti-invasion_destroyer: "冬日"
+ NAME_ge_anti-invasion_battleship: "警戒"
 
 roz_dark_box_star: "破败神国"
 roz_outland_star_system: "§R“星空之上”§!"
