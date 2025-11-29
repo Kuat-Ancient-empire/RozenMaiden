@@ -1432,7 +1432,7 @@ create_ge_kirakishou_hostile_ship = {
 
 create_ge_kirakishou_hostile_ship_stage2 = {
 	optimize_memory
-	clear_global_event_target = kirakishou_Avatar_fleet
+	clear_global_event_target = kirakishou_Avatar_fleet@root
 	create_fleet = {
 		name = "NAME_ge_kirakishou_hostile_fleet"
 		settings = {
@@ -1536,7 +1536,7 @@ create_ge_kirakishou_hostile_ship_stage2 = {
 
 create_ge_kirakishou_hostile_ship_stage3 = {
 	optimize_memory
-	clear_global_event_target = kirakishou_Avatar_fleet
+	clear_global_event_target = kirakishou_Avatar_fleet@root
 	create_fleet = {
 		name = "NAME_ge_kirakishou_hostile_fleet"
 		settings = {
@@ -1646,7 +1646,7 @@ create_ge_kirakishou_hostile_ship_stage3 = {
 
 create_ge_kirakishou_hostile_ship_stage4 = {
 	optimize_memory
-	clear_global_event_target = kirakishou_Avatar_fleet
+	clear_global_event_target = kirakishou_Avatar_fleet@root
 	create_fleet = {
 		name = "NAME_ge_kirakishou_hostile_fleet"
 		settings = {
@@ -1848,8 +1848,8 @@ roz_krks_inv_end_loop_effect = {	#scope:country
 	event_target:kirakishou_hostile_country@root = {
 		destroy_country = yes
 	}
-	clear_global_event_target = kirakishou_hostile_country
-	clear_global_event_target = kirakishou_Avatar_fleet
+	clear_global_event_target = kirakishou_hostile_country@root
+	clear_global_event_target = kirakishou_Avatar_fleet@root
 	remove_country_flag = roz_bf_stage2_flag
 	remove_country_flag = roz_bf_stage3_flag
 	remove_country_flag = roz_bf_stage4_flag

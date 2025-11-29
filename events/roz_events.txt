@@ -975,8 +975,17 @@ country_event = {	###e17天赐
 		save_event_target_as = this_country
 		if = {
 			limit = { NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol5_get } }
-			country_event = { id = roz_shinku_evt.50 days = 30 random = 30 }
-			country_event = { id = roz_shinku_evt.55 days = 30 random = 30 }
+			if = {
+				limit = { KZ_VOY_MOD = no }
+				random_list = {
+					2 = { country_event = { id = roz_shinku_evt.50 days = 30 random = 30 } }
+					1 = { country_event = { id = roz_shinku_evt.55 days = 30 random = 30 } }
+				}
+			}
+			if = {
+				limit = { KZ_VOY_MOD = yes }
+				country_event = { id = roz_shinku_evt.55 days = 30 random = 30 }
+			}
 		}
 	}
 	option = {

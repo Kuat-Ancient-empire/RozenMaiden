@@ -147,12 +147,12 @@ country_event = {
 
 ###第五块零件
 # 虚空科技反应堆
-# 狐，不动 todo
+# 狐，不动
 country_event = {
     id = roz_shinku_evt.50
     title = "roz_shinku_evt.50.title"
     desc = "roz_shinku_evt.50.desc"
-    picture = GFX
+    picture = GFX_KZ_VOY_AF_03
     is_triggered_only = yes
     trigger = {
         has_country_flag = roz_leader_suigintou_get
@@ -164,6 +164,75 @@ country_event = {
     option = {
         name = roz_shinku_evt.50.aa
         custom_tooltip = roz_shinku_evt.50.aa.ct
+        country_event = { id = roz_shinku_evt.51 days = 10 }
+    }
+}
+country_event = {
+    id = roz_shinku_evt.51
+    title = "roz_shinku_evt.51.title"
+    desc = "roz_shinku_evt.51.desc"
+    picture = GFX_KZ_VOY_terra_ecumenopolis_deck_05
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = roz_shinku_story_start_flag
+        KZ_VOY_MOD = no
+    }
+    immediate = { set_country_flag = roz_shuukan_shoujonotsukurikata_vol5_get }
+    option = {
+        name = roz_shinku_evt.51.aa
+        custom_tooltip = roz_shinku_evt.51.aa.ct
+        country_event = { id = roz_shinku_evt.52 days = 3 }
+    }
+}
+country_event = {
+    id = roz_shinku_evt.52
+    title = "roz_shinku_evt.52.title"
+    desc = "roz_shinku_evt.52.desc"
+    picture = GFX_KZ_VOY_ancient_database_01
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = roz_shinku_story_start_flag
+        KZ_VOY_MOD = no
+    }
+    immediate = { set_country_flag = roz_shuukan_shoujonotsukurikata_vol5_get }
+    option = {
+        name = roz_shinku_evt.52.aa
+        custom_tooltip = roz_shinku_evt.52.aa.ct
+        country_event = { id = roz_shinku_evt.53 days = 3 }
+    }
+}
+country_event = {
+    id = roz_shinku_evt.53
+    title = "roz_shinku_evt.53.title"
+    desc = "roz_shinku_evt.53.desc"
+    picture = GFX_roz_evt_gashapon_machine
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = roz_shinku_story_start_flag
+        KZ_VOY_MOD = no
+    }
+    immediate = { set_country_flag = roz_shuukan_shoujonotsukurikata_vol5_get }
+    option = {
+        name = roz_shinku_evt.53.aa
+        custom_tooltip = roz_shinku_evt.53.ct
+        country_event = { id = roz_shinku_evt.54  }
+    }
+}
+country_event = {
+    id = roz_shinku_evt.54
+    title = "roz_shinku_evt.54.title"
+    desc = "roz_shinku_evt.54.desc"
+    picture = GFX_evt_roz_shoujonotsukurikata_part
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = roz_leader_suigintou_get
+        has_country_flag = roz_shinku_story_start_flag
+        NOT = { has_active_event = { roz_shinku_evt.1 roz_shinku_evt.2 } }
+        KZ_VOY_MOD = no
+    }
+    option = {
+        name = roz_shinku_evt.54.aa
+        custom_tooltip = roz_shinku_evt.54.ct
     }
 
     after = {  #test
@@ -171,6 +240,9 @@ country_event = {
         enable_special_project = { name = roz_shoujonotsukurikata_project_5 owner = root }
     }
 }
+
+
+
 ###第五块零件
 # 虚空科技反应堆
 # 狐，启动
@@ -184,7 +256,7 @@ country_event = {
         has_country_flag = roz_leader_suigintou_get
         has_country_flag = roz_shinku_story_start_flag
         NOT = { has_active_event = { roz_shinku_evt.1 roz_shinku_evt.2 } }
-        KZ_VOY_MOD = yes
+        #KZ_VOY_MOD = yes
     }
     immediate = { set_country_flag = roz_shuukan_shoujonotsukurikata_vol5_get }
     option = {

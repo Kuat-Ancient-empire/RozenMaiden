@@ -782,6 +782,32 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+
+	#VOY
+	spriteType = {
+		name = "GFX_roz_evt_gashapon_machine"
+		texturefile = "gfx/event_pictures/roz_evt_gashapon_machine.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_KZ_VOY_AF_03"
+		texturefile = "gfx/event_pictures/KZ_VOY_AF_03.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_KZ_VOY_terra_ecumenopolis_deck_05"
+		texturefile = "gfx/event_pictures/KZ_VOY_terra_ecumenopolis_deck_05.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_KZ_VOY_ancient_database_01"
+		texturefile = "gfx/event_pictures/KZ_VOY_ancient_database_01.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 }
 
 

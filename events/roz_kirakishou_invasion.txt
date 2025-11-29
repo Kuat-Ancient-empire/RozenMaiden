@@ -3405,8 +3405,8 @@ country_event = {	#战斗结束
         event_target:kirakishou_hostile_country@root = {
             destroy_country = yes
         }
-        clear_global_event_target = kirakishou_hostile_country
-        clear_global_event_target = kirakishou_Avatar_fleet
+        clear_global_event_target = kirakishou_hostile_country@root
+        clear_global_event_target = kirakishou_Avatar_fleet@root
         remove_country_flag = roz_bf_stage2_flag
         remove_country_flag = roz_bf_stage3_flag
         remove_country_flag = roz_bf_stage4_flag

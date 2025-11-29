@@ -8,26 +8,26 @@ roz_unknow_crashed_flagship_category = {	#abandon
 	#max_once = yes
 	null_spawn_chance = 0
 	spawn_chance = {
-		base = -10
-		# modifier = {
-		# 	add = 1000
-		# 	from.owner = {
-		# 		has_country_flag = roz_leader_suigintou_get
-		# 		is_ai = no
-		# 	}
-		# }
+		base = 1
+		modifier = {
+			add = 1000
+			from.owner = {
+				has_country_flag = roz_leader_suigintou_get
+				is_ai = no
+			}
+		}
 		# modifier = {
 		# 	add = -10000000
 		# 	from.owner = {
 		# 		has_country_flag = roz_sgt_unknow_flagship_spawn_country
 		# 	}
 		# }
-		# modifier = {
-		# 	mult = 0
-		# 	from.owner = {
-		# 		has_country_flag = roz_sgt_unknow_flagship_spawn_country
-		# 	}
-		# }
+		modifier = {
+			mult = 0
+			from.owner = {
+				has_country_flag = roz_sgt_unknow_flagship_spawn_country
+			}
+		}
 	}
 	on_spawn = {
 		# this = {
