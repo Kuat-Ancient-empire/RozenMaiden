@@ -5500,3 +5500,26 @@ roz_leader_affection_change_on_fleet_battle_fail = {
 	}
 	clear_variable = roz_aft_num_ships_in_enemy_fleet_check
 }
+
+#为领袖加经验
+roz_leader_give_exp_effect = {
+	optimize_memory
+	event_target:roz_leader_$who$_global_target@$scope$ = {
+		add_experience = $exp$
+	}
+}
+roz_normal_leader_give_exp_effect = {
+	optimize_memory
+	every_owned_leader = {
+		limit = {
+			NOR = {
+				is_same_value = event_target:roz_leader_suigintou_global_target@$scope$
+				is_same_value = event_target:roz_leader_kirakishou_global_target@$scope$
+				is_same_value = event_target:roz_leader_shinku_global_target@$scope$
+				is_same_value = event_target:roz_leader_hinaichigo_global_target@$scope$
+			}
+			leader_class = $class$
+		}
+		add_experience = $exp$
+	}
+}

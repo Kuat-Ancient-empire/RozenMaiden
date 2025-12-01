@@ -61,7 +61,8 @@ country_event = {
 		# 	flag = roz_sgt_flagship_spawn_timed_flag
 		# 	days = 7200
 		# }
-		set_country_flag = roz_leader_name_jp_flag #开局设置，设定领袖名为片假名
+		#set_country_flag = roz_leader_name_jp_flag #开局设置，设定领袖名为片假名
+		set_country_flag = roz_leader_name_sc_flag #开局设置，设定领袖名为中文
 
 		# hidden_effect = {
 		# 	create_ship_design = { design = ROZ_ITQ_design }
@@ -481,6 +482,7 @@ country_event = {	###研究日志1
 		#	id = ge_event.44
 		#	days = 360
 		#}
+		roz_normal_leader_give_exp_effect = { scope = root class = scientist exp = 150 }
 		enable_special_project = {
 			name = roz_void_energy_research_project_stage_2
 			location = capital_star
@@ -504,6 +506,7 @@ country_event = {	###研究日志2
 	}
 	option = {
 		name = ge_event.44.aa
+		roz_normal_leader_give_exp_effect = { scope = root class = scientist exp = 150 }
 		country_event = {
 		 	id = ge_event.45
 		 	days = 30
@@ -622,6 +625,7 @@ country_event = {
 			value = 1
 		}
 		custom_tooltip = ge_event.452.aa_ct
+		roz_normal_leader_give_exp_effect = { scope = root class = scientist exp = 200 }
 	}
 }
 
@@ -645,6 +649,7 @@ country_event = {
 			resource = engineering_research
 			value = 1
 		}
+		roz_normal_leader_give_exp_effect = { scope = root class = scientist exp = 350 }
 	}
 }
 

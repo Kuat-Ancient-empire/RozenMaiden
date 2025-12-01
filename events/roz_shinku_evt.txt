@@ -824,6 +824,7 @@ country_event = {
     }
     option = {
         name = roz_shinku_evt.4021.aa
+        add_resource = { society_research = 2500 }
         #custom_tooltip = roz_shinku_evt.402.ct
         country_event = { id = roz_shinku_evt.403 }
     }
@@ -1523,15 +1524,13 @@ country_event = {
         remove_country_flag = unholy_invasion_defend_proj_aggressive
         remove_country_flag = ge_sgt_busy
         remove_country_flag = ge_nfield_diplomacy_activated
-        owner = {
-            event_target:roz_leader_kirakishou_global_target@root = {
-                set_owner = root
-                return_leader_from_exile = this
-            }
-            event_target:roz_leader_suigintou_global_target@root = {
-                set_owner = root
-                return_leader_from_exile = this
-            }
+        event_target:roz_leader_kirakishou_global_target@root = {
+            set_owner = root
+            return_leader_from_exile = this
+        }
+        event_target:roz_leader_suigintou_global_target@root = {
+            set_owner = root
+            return_leader_from_exile = this
         }
         clear_global_event_target = roz_ruler_target_temp@root
         roz_madgod_country_initiate = yes
@@ -1546,6 +1545,7 @@ country_event = {
             value = 1
             resource = influence
         }
+
     }
     option = {
         name =  roz_shinku_evt.432.bb
@@ -1556,6 +1556,12 @@ country_event = {
         }
     }
     after = {
+        event_target:roz_leader_kirakishou_global_target@root = {
+            add_experience = 1500
+        }
+        event_target:roz_leader_suigintou_global_target@root = {
+            add_experience = 1500
+        }
         enable_special_project = {
             name = roz_stare_into_the_abyss
             location = event_target:roz_outland_planet@root
@@ -1599,6 +1605,12 @@ country_event = {
         name =  roz_shinku_evt.433.bb
     }
     after = {
+        event_target:roz_leader_kirakishou_global_target@root = {
+            add_experience = 300
+        }
+        event_target:roz_leader_suigintou_global_target@root = {
+            add_experience = 300
+        }
         hidden_effect = { 
             roz_madgod_country_initiate = yes
             roz_madgod_fleet_jtcl_create_direct = yes 
@@ -1652,6 +1664,8 @@ country_event = {
     option = {
         name =  roz_shinku_evt.435.aa
         custom_tooltip = roz_shinku_evt.435.aa.ct
+        roz_leader_give_exp_effect = { who = suigintou scope = root exp = 250 }
+        roz_normal_leader_give_exp_effect = { scope = root class = scientist exp = 150 }
         hidden_effect = {
             country_event = {
                 id = roz_shinku_evt.436
@@ -1764,7 +1778,8 @@ ship_event = {
     option = {
         name =  roz_shinku_evt.441.aa
         custom_tooltip = roz_shinku_evt.441.ct
-        reduce_hp_percent = 0.75
+        leader = { add_experience = 150 }
+        reduce_hp_percent = 0.95
         owner = {
             add_modifier = {
                 modifier = roz_stare_into_the_abyss_debuff
@@ -2185,7 +2200,15 @@ country_event = {
     }
     option = {
         name = roz_shinku_evt.510.aa
+        custom_tooltip = roz_shinku_evt.510.ct
+    }
+    option = {
+        name = roz_shinku_evt.510.bb
+        custom_tooltip = roz_shinku_evt.510.ct
+    }
+    after = {
         add_relic = r_roz_extrinsic_xinlin_crystal
+        roz_normal_leader_give_exp_effect = { scope = root class = scientist exp = 250 }
         hidden_effect = {
             remove_relic = r_roz_extrinsic_xinlin_crystal_unknow
             give_technology = {
