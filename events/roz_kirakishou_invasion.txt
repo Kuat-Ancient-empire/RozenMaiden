@@ -3215,6 +3215,7 @@ country_event = {	#自爆
             current_stage = kr_bf_stage_1
         }
     }
+    immediate = { remove_country_flag = roz_krks_invision_begin_flag }
     option = {
         name = "ge_event.2061.aa"
         #country_event = {

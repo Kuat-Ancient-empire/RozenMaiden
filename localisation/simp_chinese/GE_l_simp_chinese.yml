@@ -269,6 +269,7 @@ roz_time_freeze_activity_desc: "§R警告 - 时间静止已经启动！§!"
 
 roz_agenda_void_core_boost_available_title: "解锁内阁议程：§B能源泄洪§!"
 roz_agenda_void_core_boost_available_desc: ""
+ agenda_void_core_boost_fail: "深渊感染体未被驱逐"
 
 ROZ_sgt_gal_MESSAGE: "§M来自水银灯的暗示§!"
 ROZ_sgt_gal_MESSAGE_TYPE: "§M来自水银灯的暗示§!"

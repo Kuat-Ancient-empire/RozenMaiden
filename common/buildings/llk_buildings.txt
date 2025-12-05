@@ -315,14 +315,35 @@ building_roz_dolls_factory = {
     #}
     planet_modifier = {
         planet_amenities_no_happiness_add = 2000
+    } 				#星球范围内的修正
+    on_built = {
+        set_planet_flag = can_organic_assemble_flag
+    }
+    on_destroy = {
+        remove_planet_flag = can_organic_assemble_flag
+    }
+    on_repaired = {
+        set_planet_flag = can_organic_assemble_flag
+    }
+    on_enabled = {
+        set_planet_flag = can_organic_assemble_flag
+    }
+    triggered_planet_modifier = {   	#条件触发的修正器，不满足条件则无法获得修正
+        potential = {
+            exists = owner
+            owner = { is_mechanical_empire = no }
+        }
         bonus_pop_growth = 3
         fake_pop_growth_mod = 3
-    } 				#星球范围内的修正
-    country_modifier = {
-
-    } 				#国家范围内的修正。
-    triggered_planet_modifier = {   	#条件触发的修正器，不满足条件则无法获得修正
-
+        mult = planet.value:roz_planet_pop_assembly_average_int
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_mechanical_empire = yes }
+        }
+        planet_pop_assembly_add = 3
+        mult = planet.value:roz_planet_pop_assembly_average_int
     }
     resources = {   #资源相关
         category = planet_buildings #类型

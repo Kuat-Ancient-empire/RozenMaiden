@@ -150,4 +150,37 @@ ship_terrify_duration = {
 	mult = value:terrify_duration_factor
 }
 
+#codes from kuat
+roz_pop_free_house = {
+	base = 0
+	add = trigger:free_housing
+	mult = 0.01
+	min = 0
+}
+
+roz_attendant_growth = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = { type = any }
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_owned_pop_group
+		potential = { is_scope_type = planet }
+		trigger_scope = this
+		mode = divide
+	}
+	modifier = {
+		has_modifier = planet_population_control
+		set = 0
+	}
+}
+
+roz_planet_pop_assembly_average_int = {
+	base = 0
+	add = value:roz_attendant_growth
+	max = value:roz_pop_free_house
+}
+#
 

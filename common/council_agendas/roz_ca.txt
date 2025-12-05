@@ -3,8 +3,11 @@ agenda_void_core_boost = {
     agenda_cost = 7000
     allow = {
         has_modifier = roz_void_energy_revolution
-        NOT = {
-            has_country_flag = roz_krks_invision_begin_flag
+        fail_text = {
+            text = "agenda_void_core_boost_fail"
+            NOT = {
+                has_country_flag = roz_krks_invision_begin_flag
+            }
         }
     }
     potential = {
