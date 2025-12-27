@@ -2540,6 +2540,7 @@ country_event = {   #混乱通讯 #深渊入侵正式开始
         name = roz_shinku_evt.523.bb
         response_text = roz_shinku_evt.523.bb.res
         begin_event_chain = { event_chain = roz_SK_madgod_invasion_main target = root }
+        enable_special_project = { name = roz_abyss_fleet_locator owner = root }
     }
     after = {
         hidden_effect = {
@@ -3577,7 +3578,7 @@ country_event = {
 
 #月检据点是否还能存在
 country_event = {
-    id = roz_shinku_evt.563
+    id = roz_shinku_evt.5632
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -3594,6 +3595,49 @@ country_event = {
         roz_abyss_fleet_outpost_remove_effect_monthly = { outpost = 5 }
     }
 }
+
+#检测外部是否还有残余舰队
+country_event = {
+    id = roz_shinku_evt.571
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        from = {
+            has_country_flag = roz_madgod_force_country_flag
+        }
+        fromfrom = {
+            solar_system = { NOT = { has_star_flag = roz_outland_star } }
+            has_fleet_flag = roz_abyss_fleet
+        }
+    }
+    immediate = {
+        from = {
+            country_event = { id = roz_shinku_evt.572 days = 1 }
+        }
+        fromfrom = { save_event_target_as = roz_madgod_force_country_target }
+    }
+}
+
+country_event = {
+    id = roz_shinku_evt.572
+    title = roz_shinku_evt.572.title
+    desc = roz_shinku_evt.572.desc
+    picture = GFX_evt_small_space_battle
+    is_triggered_only = yes
+    trigger = {
+        exists = this
+        from.fromfrom = {
+            any_owned_fleet = { solar_system = { NOT = { has_star_flag = roz_outland_star } } }
+        }
+    }
+    immediate = {
+
+    }
+    option = {
+        name = roz_shinku_evt.572.aa
+    }
+}
+
 ###拟真深渊难度机制
 #舰船复活
 ship_event = {
@@ -4162,7 +4206,7 @@ ship_event = {   ##坏路线-蚍蜉撼树
             has_country_flag = roz_unholy_invasion_darkest_hour_flag
         }
         from = {
-            has_star_flag = roz_outland_system
+            has_star_flag = roz_outland_star
             any_system_planet = { is_same_value = event_target:roz_outland_planet@root }
         }
         roz_is_all_abyss_killed_except_madgod_system = { scope = root }

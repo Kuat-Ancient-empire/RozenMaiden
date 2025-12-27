@@ -616,6 +616,10 @@ roz_shinku_evt.566.aa: "组织反击！"
  roz_shinku_evt.570.desc: "我们的舰队成功拔除了一个深渊据点，后续深渊感染体将无法通过这个入口派遣入侵舰队了！"
  roz_shinku_evt.570.aa: "收获颇丰！"
 
+ roz_shinku_evt.572.title: "入侵舰队已被清剿完毕"
+ roz_shinku_evt.572.desc: "我们终于清理完除了深渊感染体本体所在星系的所有深渊舰队，现在决战时刻到了！"
+ roz_shinku_evt.572.aa: "向终点进军！"
+
  roz_shinku_evt.595.name: "§P倒计时开始§!"
  roz_shinku_evt.595.desc: "深渊感染体的入侵规模似乎有点超乎我们的预期……它们自出现开始就已经在侵蚀本位面的规则了，如果我们不能尽快处理掉它们，要不了多久我们就该迎接末日了。"
  roz_shinku_evt.595.aa: "真正的挑战来了！"

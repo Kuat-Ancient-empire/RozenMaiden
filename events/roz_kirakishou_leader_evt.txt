@@ -1248,7 +1248,7 @@ ship_event = {
     fire_only_once = yes
     trigger = {
         solar_system = {
-            has_star_flag = roz_outland_system
+            has_star_flag = roz_outland_star
         }
     }
     location = this.solar_system

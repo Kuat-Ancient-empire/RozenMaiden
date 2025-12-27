@@ -1211,6 +1211,38 @@ special_project = {
 # 		}
 # 	}
 # }
+#locator
+special_project = {		####
+	key = roz_abyss_fleet_locator
+	desc = {
+		text = roz_abyss_fleet_locator_DESC
+		trigger = { is_ai = no }
+	}
+	location = yes
+	days_to_research = 1
+	event_chain = roz_SK_madgod_invasion_main
+	picture = GFX_evt_fleet_evil
+	icon = gfx/interface/icons/situation_log/situation_log_radar.dds
+	event_scope = country_event
+	abort_trigger = { has_country_flag = roz_abyss_fleet_locator_disable }
+	on_success = {
+		clear_global_event_target = roz_abyss_fleet_located@root
+		if = {
+			limit = { NOT = { has_country_flag = roz_abyss_fleet_locator_disable } }
+			event_target:roz_madgod_force_country@root = {
+				random_owned_fleet = {
+					limit = { solar_system = { NOT = { has_star_flag = roz_outland_star } } }
+					save_global_event_target_as = roz_abyss_fleet_located@root
+				}
+			}
+			enable_special_project = {
+				name = roz_abyss_fleet_locator
+				location = event_target:roz_abyss_fleet_located@root
+				owner = this
+			}
+		}
+	}
+}
 
 special_project = {
 	picture = GFX_evt_roz_megastructure_IR

@@ -30,7 +30,7 @@ roz_gateway = {
 		}
 
 		nexus = {
-			has_star_flag = roz_outland_system
+			has_star_flag = roz_outland_star
 		}
 	}
 }

@@ -292,7 +292,7 @@ roz_is_all_abyss_killed_except_madgod_system = {
 	#abyss vass
 	NOT = { any_playable_country = { has_country_flag = roz_abyss_vass_country } }
 	# any_system = {
-	# 	NOT = { has_star_flag = roz_outland_system }
+	# 	NOT = { has_star_flag = roz_outland_star }
 	# 	NOT = {
 	# 		any_fleet_in_system = {
 	# 			is_owned_by = event_target:roz_madgod_force_country@$scope$
@@ -308,7 +308,7 @@ roz_is_all_abyss_killed_except_madgod_system = {
 	#???
 	NOT = {
 		any_galaxy_fleet = {
-			NOT = { solar_system = { has_star_flag = roz_outland_system } }
+			NOT = { solar_system = { has_star_flag = roz_outland_star } }
 			NOT = { has_fleet_flag = roz_abyss_fleet_madgod_boss }
 			OR = {
 				has_fleet_flag = roz_abyss_fleet
