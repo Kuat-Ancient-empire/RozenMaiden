@@ -3548,6 +3548,7 @@ country_event = {
                 is_country_type = roz_madgod_empire
                 has_country_flag = roz_abyss_vass_country
             }
+            NOT = { has_country_flag = roz_SK_IR_enable }
             has_country_flag = roz_leader_suigintou_get
         }
     }
@@ -3584,6 +3585,7 @@ country_event = {
     trigger = {
         is_ai = no
         NOT = { has_country_flag = roz_abyss_fleet_create_cd }
+        NOT = { has_country_flag = roz_SK_IR_enable }
         has_country_flag = roz_shinku_jtcl_end_flag
         has_country_flag = roz_abyss_faction_arrival
     }
@@ -3602,19 +3604,21 @@ country_event = {
     hide_window = yes
     is_triggered_only = yes
     trigger = {
+        has_country_flag = roz_abyss_faction_arrival
         from = {
             has_country_flag = roz_madgod_force_country_flag
         }
-        fromfrom = {
+        fromfromfrom = {
             solar_system = { NOT = { has_star_flag = roz_outland_star } }
             has_fleet_flag = roz_abyss_fleet
         }
     }
     immediate = {
-        from = {
+        if = {
+            limit = { fromfromfrom = { NOT = { any_fleet_in_system = { is_owned_by = prev } } } }
             country_event = { id = roz_shinku_evt.572 days = 1 }
         }
-        fromfrom = { save_event_target_as = roz_madgod_force_country_target }
+        from = { save_event_target_as = roz_madgod_force_country_target }
     }
 }
 
@@ -3626,8 +3630,9 @@ country_event = {
     is_triggered_only = yes
     trigger = {
         exists = this
-        from.fromfrom = {
-            any_owned_fleet = { solar_system = { NOT = { has_star_flag = roz_outland_star } } }
+        event_target:roz_madgod_force_country_target = {
+            #any_owned_fleet = { solar_system = { has_star_flag = roz_outland_star } }
+            NOT = { any_owned_fleet = { NOT = { solar_system = { has_star_flag = roz_outland_star } } } }
         }
     }
     immediate = {
