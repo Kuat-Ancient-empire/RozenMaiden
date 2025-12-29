@@ -16,7 +16,7 @@ ship_section_template = {
         name = "XL_01"
         template = "invisible_extra_large_fixed"
         rotation = 0
-        locatorname = root
+        locatorname = "weapon_01"
     }
     component_slot = {
         name = "G_01"
@@ -111,12 +111,12 @@ ship_section_template = {
     component_slot = {
     	name = "STRIKE_CRAFT_01"
     	template = "large_strike_craft"
-    	locatorname = "strike_craft_locator_01"
+    	locatorname = "weapon_01"
     }
     component_slot = {
     	name = "STRIKE_CRAFT_02"
     	template = "large_strike_craft"
-    	locatorname = "strike_craft_locator_02"
+    	locatorname = "weapon_02"
     }
 
     large_utility_slots = 18
@@ -297,32 +297,32 @@ ship_section_template = {
     component_slot = {
         name = "STRIKE_CRAFT_01"
         template = "large_strike_craft"
-        locatorname = "strike_craft_locator_01"
+        locatorname = "large_gun_01"
     }
     component_slot = {
         name = "STRIKE_CRAFT_02"
         template = "large_strike_craft"
-        locatorname = "strike_craft_locator_02"
+        locatorname = "large_gun_01"
     }
     component_slot = {
         name = "STRIKE_CRAFT_03"
         template = "large_strike_craft"
-        locatorname = "strike_craft_locator_03"
+        locatorname = "large_gun_01"
     }
     component_slot = {
         name = "STRIKE_CRAFT_04"
         template = "large_strike_craft"
-        locatorname = "strike_craft_locator_04"
+        locatorname = "large_gun_02"
     }
     component_slot = {
         name = "STRIKE_CRAFT_05"
         template = "large_strike_craft"
-        locatorname = "strike_craft_locator_03"
+        locatorname = "large_gun_02"
     }
     component_slot = {
         name = "STRIKE_CRAFT_06"
         template = "large_strike_craft"
-        locatorname = "strike_craft_locator_04"
+        locatorname = "large_gun_02"
     }
 
     large_utility_slots = 14
@@ -384,7 +384,7 @@ ship_section_template = {
     component_slot = {
         name = "STRIKE_CRAFT_01"
         template = "large_strike_craft"
-        locatorname = "strike_craft_locator_01"
+        locatorname = "root"
     }
 
     large_utility_slots = 8

@@ -1211,7 +1211,7 @@ special_project = {
 # 		}
 # 	}
 # }
-#locator
+#locator深渊舰队定位器
 special_project = {		####
 	key = roz_abyss_fleet_locator
 	desc = {
@@ -1231,7 +1231,7 @@ special_project = {		####
 			limit = { NOT = { has_country_flag = roz_abyss_fleet_locator_disable } }
 			event_target:roz_madgod_force_country@root = {
 				random_owned_fleet = {
-					limit = { solar_system = { NOT = { has_star_flag = roz_outland_star } } }
+					limit = { solar_system = { NOT = { has_star_flag = roz_outland_system } } }
 					save_global_event_target_as = roz_abyss_fleet_located@root
 				}
 			}

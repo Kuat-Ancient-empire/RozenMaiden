@@ -3609,7 +3609,7 @@ country_event = {
             has_country_flag = roz_madgod_force_country_flag
         }
         fromfromfrom = {
-            solar_system = { NOT = { has_star_flag = roz_outland_star } }
+            solar_system = { NOT = { has_star_flag = roz_outland_system } }
             has_fleet_flag = roz_abyss_fleet
         }
     }
@@ -3631,8 +3631,8 @@ country_event = {
     trigger = {
         exists = this
         event_target:roz_madgod_force_country_target = {
-            #any_owned_fleet = { solar_system = { has_star_flag = roz_outland_star } }
-            NOT = { any_owned_fleet = { NOT = { solar_system = { has_star_flag = roz_outland_star } } } }
+            #any_owned_fleet = { solar_system = { has_star_flag = roz_outland_system } }
+            NOT = { any_owned_fleet = { NOT = { solar_system = { has_star_flag = roz_outland_system } } } }
         }
     }
     immediate = {
@@ -4211,7 +4211,7 @@ ship_event = {   ##坏路线-蚍蜉撼树
             has_country_flag = roz_unholy_invasion_darkest_hour_flag
         }
         from = {
-            has_star_flag = roz_outland_star
+            has_star_flag = roz_outland_system
             any_system_planet = { is_same_value = event_target:roz_outland_planet@root }
         }
         roz_is_all_abyss_killed_except_madgod_system = { scope = root }

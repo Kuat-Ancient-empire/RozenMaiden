@@ -26,11 +26,17 @@ roz_gateway = {
 	scripted_connection = {
 
 		node = {
-			has_star_flag = roz_outland_star
+			OR = {
+				has_star_flag = roz_outland_star
+				has_star_flag = roz_outland_system
+			}
 		}
 
 		nexus = {
-			has_star_flag = roz_outland_star
+			OR = {
+				has_star_flag = roz_outland_star
+				has_star_flag = roz_outland_system
+			}
 		}
 	}
 }
