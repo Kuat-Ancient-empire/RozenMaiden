@@ -2318,10 +2318,8 @@ situation_event = {   #月检一阶段是否击破，防卡事件链
     trigger = {
         exists = event_target:kirakishou_hostile_country@owner
         event_target:kirakishou_hostile_country@owner = {
-            NOT = {
-                any_owned_fleet = {
-                    has_fleet_flag = kirakishou_Avatar_fleet_flag
-                }
+            NOT = { any_owned_fleet = {
+                has_fleet_flag = kirakishou_Avatar_fleet_flag }
             }
         }
         current_stage = kr_bf_stage_5
@@ -2414,10 +2412,8 @@ situation_event = {   #月检二阶段是否击破，防卡事件链
         exists = event_target:kirakishou_hostile_country@owner
         event_target:kirakishou_hostile_country@owner = {
             #exists = this
-            NOT = {
-                any_owned_fleet = {
-                    has_fleet_flag = kirakishou_dh_fleet_flag
-                }
+            NOT = { any_owned_fleet = {
+                has_fleet_flag = kirakishou_dh_fleet_flag }
             }
         }
         current_stage = kr_bf_stage_4
@@ -2445,6 +2441,7 @@ country_event = {
             has_fleet_flag = kirakishou_dh_fleet_flag
         }
     }
+
     immediate = {
         from = {
             country_event = {
@@ -2505,10 +2502,8 @@ situation_event = {   #月检三阶段是否击破，防卡事件链
         exists = event_target:kirakishou_hostile_country@owner
         event_target:kirakishou_hostile_country@owner = {
             #exists = this
-            NOT = {
-                any_owned_fleet = {
-                    has_fleet_flag = kirakishou_et_fleet_flag
-                }
+            NOT = { any_owned_fleet = {
+                has_fleet_flag = kirakishou_et_fleet_flag }
             }
         }
         current_stage = kr_bf_stage_3
@@ -2516,10 +2511,22 @@ situation_event = {   #月检三阶段是否击破，防卡事件链
             NOT = { has_active_event = { ge_event.3051 ge_event.3061 ge_event.3071 } }
         }
     }
+    # abort_trigger = {
+    #     exists = event_target:kirakishou_hostile_country@owner
+    #     event_target:kirakishou_hostile_country@owner = {
+    #         NOT = { any_owned_fleet = {
+    #             has_fleet_flag = kirakishou_et_fleet_flag }
+    #         }
+    #     }
+    #     any_situation = {
+    #         is_situation_type = kirakishou_battle_field_situation
+    #         current_stage = kr_bf_stage_3
+    #     }
+    # }
     immediate = {
         owner = {
             country_event = {
-                id = ge_event.3061
+                id = ge_event.3071
             }
         }
     }
