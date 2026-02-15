@@ -28,7 +28,7 @@ weapon_component_template = {
 	projectile_gfx = "ge_vn_t_beam_projectile"
 	component_set = "ge_vn_main_beam"
 	power = -35000
-	damage = { min = 30500 max = 50500 }
+	damage = { min = 30500 max = 50540 }
 	windup = { min = 95.0 max = 105.0 }	
 	total_fire_time = 100
 	range = 360.0

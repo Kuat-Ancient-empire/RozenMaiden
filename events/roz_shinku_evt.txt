@@ -1014,6 +1014,14 @@ situation_event = {
             }
         }
     }
+    option = {
+        name = roz_shinku_evt.411.bb
+        owner = {
+            add_resource = {
+                unity = 12500
+            }
+        }
+    }
 }
 
 situation_event = {
