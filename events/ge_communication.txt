@@ -285,6 +285,7 @@ country_event = {
 		NOR = {
 			has_country_flag = ge_nfield_diplomacy_activated
 			has_country_flag = ge_sgt_busy
+			has_country_flag = roz_krks_diplomacy_activated
 		}
 		from = {
 			is_same_value = event_target:roz_suigintou_global_country@root

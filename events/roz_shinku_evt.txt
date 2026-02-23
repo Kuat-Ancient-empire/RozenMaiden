@@ -133,10 +133,28 @@ country_event = {
     }
     option = {
         name = roz_shinku_evt.40.aa
+    }
+    after = {
+        country_event = { id = roz_shinku_evt.41 }
+    }
+}
+country_event = {
+    id = roz_shinku_evt.41
+    title = "roz_shinku_evt.41.title"
+    desc = "roz_shinku_evt.41.desc"
+    picture = GFX_evt_roz_shoujonotsukurikata_vol4
+    is_triggered_only = yes
+    show_sound = event_first_contact_molluscoid
+    trigger = {
+        has_country_flag = roz_leader_suigintou_get
+        has_country_flag = roz_shinku_story_start_flag
+    }
+    option = {
+        name = roz_shinku_evt.41.aa
         custom_tooltip = roz_shinku_evt.40.aa.ct
     }
     option = {
-        name = roz_shinku_evt.40.bb
+        name = roz_shinku_evt.41.bb
         custom_tooltip = roz_shinku_evt.40.bb.ct
     }
     after = {
@@ -261,11 +279,30 @@ country_event = {
     immediate = { set_country_flag = roz_shuukan_shoujonotsukurikata_vol5_get }
     option = {
         name = roz_shinku_evt.55.aa
-        custom_tooltip = roz_shinku_evt.55.aa.ct
+    }
+    after = {
+        country_event = { id = roz_shinku_evt.56 }
+    }
+}
+country_event = {
+    id = roz_shinku_evt.56
+    title = "roz_shinku_evt.56.title"
+    desc = "roz_shinku_evt.56.desc"
+    picture = GFX_evt_roz_suigintou_stare
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = roz_leader_suigintou_get
+        has_country_flag = roz_shinku_story_start_flag
+        NOT = { has_active_event = { roz_shinku_evt.1 roz_shinku_evt.2 } }
+        #KZ_VOY_MOD = yes
     }
     option = {
-        name = roz_shinku_evt.55.bb
-        custom_tooltip = roz_shinku_evt.55.bb.ct
+        name = roz_shinku_evt.56.aa
+        custom_tooltip = roz_shinku_evt.56.aa.ct
+    }
+    option = {
+        name = roz_shinku_evt.56.bb
+        custom_tooltip = roz_shinku_evt.56.bb.ct
     }
     after = {
         add_relic = roz_shuukan_shoujonotsukurikata_vol5
@@ -288,11 +325,30 @@ country_event = {
     }
     option = {
         name = roz_shinku_evt.60.aa
-        custom_tooltip = roz_shinku_evt.60.aa.ct
+    }
+    after = {
+        country_event = { id = roz_shinku_evt.61 }
+    }
+}
+country_event = {
+    id = roz_shinku_evt.61
+    title = "roz_shinku_evt.61.title"
+    desc = "roz_shinku_evt.61.desc"
+    picture = GFX_evt_astral_rift_ancient_battlegrounds
+    show_sound = event_sensor_ping
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = roz_leader_suigintou_get
+        has_country_flag = roz_kirakishou_get
+        has_country_flag = roz_shinku_story_start_flag
     }
     option = {
-        name = roz_shinku_evt.60.bb
-        custom_tooltip = roz_shinku_evt.60.bb.ct
+        name = roz_shinku_evt.61.aa
+        custom_tooltip = roz_shinku_evt.61.aa.ct
+    }
+    option = {
+        name = roz_shinku_evt.61.bb
+        custom_tooltip = roz_shinku_evt.61.bb.ct
     }
     after = {
         add_relic = roz_shuukan_shoujonotsukurikata_vol6
@@ -313,6 +369,7 @@ country_event = {
         has_country_flag = roz_shinku_story_start_flag
         check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 10 }
         NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol7_get }
+        NOT = { has_active_event = { roz_shinku_evt.70 roz_krks_leader_evt.100 } }
     }
     immediate = { set_country_flag = ge_sgt_busy }
     option = {
@@ -366,6 +423,7 @@ country_event = {
         has_country_flag = roz_shinku_story_start_flag
         check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 25 }
         NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol8_get }
+        NOT = { has_active_event = { roz_shinku_evt.80 roz_krks_leader_evt.100 } }
     }
     immediate = { set_country_flag = ge_sgt_busy }
     option = {
@@ -392,11 +450,28 @@ country_event = {
     }
     option = {
         name = roz_shinku_evt.81.aa
-        custom_tooltip = roz_shinku_evt.81.aa.ct
+    }
+    after = {
+        country_event = { id = roz_shinku_evt.82 }
+    }
+}
+country_event = {
+    id = roz_shinku_evt.82
+    title = "roz_shinku_evt.82.title"
+    desc = "roz_shinku_evt.82.desc"
+    picture = GFX_evt_roz_shoujonotsukurikata_vol8_2
+    is_triggered_only = yes
+    show_sound = research_click_01
+    trigger = {
+        has_country_flag = roz_leader_suigintou_get
     }
     option = {
-        name = roz_shinku_evt.81.bb
-        custom_tooltip = roz_shinku_evt.81.bb.ct
+        name = roz_shinku_evt.82.aa
+        custom_tooltip = roz_shinku_evt.82.aa.ct
+    }
+    option = {
+        name = roz_shinku_evt.82.bb
+        custom_tooltip = roz_shinku_evt.82.bb.ct
     }
     after = {
         add_relic = roz_shuukan_shoujonotsukurikata_vol8
@@ -421,7 +496,7 @@ country_event = {
         has_country_flag = roz_shinku_story_start_flag
         check_variable = { which = roz_leader_aft_suigintou_reduced_score value >= 35 }
         NOT = { has_country_flag = roz_shuukan_shoujonotsukurikata_vol9_get }
-        NOT = { has_active_event = { roz_shinku_evt.90 } }
+        NOT = { has_active_event = { roz_shinku_evt.90 roz_krks_leader_evt.100 } }
     }
     immediate = {
         get_ge_leader_target = {
@@ -514,8 +589,23 @@ country_event = {
     option = {
         name = roz_shinku_evt.95.aa
     }
+    after = { country_event = { id = roz_shinku_evt.951 } }
+}
+country_event = {
+    id = roz_shinku_evt.951
+    title = "roz_shinku_evt.951.title"
+    desc = "roz_shinku_evt.951.desc"
+    picture = GFX_evt_roz_shoujonotsukurikata_vol9
+    is_triggered_only = yes
+    show_sound = research_click_01
+    trigger = {
+        has_country_flag = roz_leader_suigintou_get
+    }
     option = {
-        name = roz_shinku_evt.95.bb
+        name = roz_shinku_evt.951.aa
+    }
+    option = {
+        name = roz_shinku_evt.951.bb
     }
     after = { country_event = { id = roz_shinku_evt.96 } }
 }

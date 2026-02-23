@@ -129,9 +129,10 @@ on_space_battle_lost = {
 # From = source country
 on_custom_diplomacy = {
 	events = {
-		ge_communication.100
+
 		roz_krks_leader_evt.100
 		roz_krks_leader_evt.101
+		ge_communication.100
 		#ge_leader_event.3
 		ge_communication.102
 		roz_shinku_evt.1001
