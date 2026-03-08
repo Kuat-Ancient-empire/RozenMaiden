@@ -1983,7 +1983,10 @@ roz_abyss_vass_annex = {
 					owner = prev
 					location = prevprev
 				}
+				remove_all_buildings = yes
+				change_pc = pc_shrouded
 				destroy_colony = yes
+
 			}
 			destroy_country = yes
 		}

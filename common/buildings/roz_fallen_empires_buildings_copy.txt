@@ -1640,9 +1640,9 @@ building_roz_fe_lab_2 = {
 			alloys = @b3_minerals
 		}
 		upkeep = {
-			exotic_gases = 1
-			alloys = @b3_alloy_upkeep
-			energy = 30
+			exotic_gases = 3
+			alloys = 25
+			energy = 100
 		}
 		cost = {
 			trigger = {

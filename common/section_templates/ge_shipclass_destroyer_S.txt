@@ -12,6 +12,7 @@ ship_section_template = {
 	prerequisites = {
 		tech_ge_section
 	}
+	ai_tags = { artillery artillery_stealth }
 	ai_weight = {
 		modifier = {
 			factor = 0
@@ -94,6 +95,7 @@ ship_section_template = {
 	prerequisites = {
 		tech_ge_section
 	}
+	ai_tags = { gunship brawler }
 	component_slot = {
 		name = "MEDIUM_GUN_01"
 		template = "medium_turret"

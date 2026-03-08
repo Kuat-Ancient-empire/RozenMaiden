@@ -13,7 +13,11 @@ ge_battleship_S_stern_L4G4:0 "重型战列舰-舰艉"
 ge_flagship_core:0 "虚空领舰舰体"
 Ge_Ragnarok_Core:0 "Odin（ban）"
 
- ROZ_juggernaut: "主宰-先进型"
+ ROZ_FRIGATE_MID: "猎鹰"
+ ROZ_COSMO_CRISIS_DESTROYER: "不败"
+ ROZ_COSMO_CRISIS_BATTLECRUISER: "星体"
+ ROZ_COSMO_CRISIS_TITAN: "典范"
+ ROZ_juggernaut: "攻势"
 
 Ge_Ragnarok_Core_1:0 "永恒之枪"
 

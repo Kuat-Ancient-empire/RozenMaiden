@@ -1604,7 +1604,7 @@ utility_component_template = {
 		ship_disengage_chance_mult = 0.15
 	}
 	potential = {
-		ship_size_multiplier >= 4
+		ship_size_multiplier >= 2
 		from = {
 			OR = {
 				country_uses_bio_ships = yes

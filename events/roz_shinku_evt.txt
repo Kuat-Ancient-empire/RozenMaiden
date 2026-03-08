@@ -151,11 +151,11 @@ country_event = {
     }
     option = {
         name = roz_shinku_evt.41.aa
-        custom_tooltip = roz_shinku_evt.40.aa.ct
+        custom_tooltip = roz_shinku_evt.41.aa.ct
     }
     option = {
         name = roz_shinku_evt.41.bb
-        custom_tooltip = roz_shinku_evt.40.bb.ct
+        custom_tooltip = roz_shinku_evt.41.bb.ct
     }
     after = {
         add_relic = roz_shuukan_shoujonotsukurikata_vol4

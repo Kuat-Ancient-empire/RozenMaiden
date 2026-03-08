@@ -12,6 +12,7 @@ ship_section_template = {
 	prerequisites = {
 		tech_ge_section
 	}
+	ai_tags = { gunship artillery brawler brawler_stealth }
 	ai_weight = {
 		modifier = {
 			factor = 0
