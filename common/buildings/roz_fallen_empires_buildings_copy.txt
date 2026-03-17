@@ -1651,9 +1651,9 @@ building_roz_fe_lab_2 = {
 			biomass = @b3_biomass
 		}
 		produces = {
-			physics_research = 500
-			society_research = 500
-			engineering_research = 500
+			physics_research = 300
+			society_research = 300
+			engineering_research = 300
 		}
 	}
 
@@ -1675,11 +1675,11 @@ building_roz_fe_lab_2 = {
 
 	inline_script = {
 		script = jobs/researchers_add
-		AMOUNT = 500
+		AMOUNT = 300
 	}
     inline_script = {
 		script = jobs/biologists_add
-		AMOUNT = 500
+		AMOUNT = 300
 	}
 
 	triggered_planet_modifier = {
@@ -1693,7 +1693,7 @@ building_roz_fe_lab_2 = {
 			has_modifier = pm_extradimensional_experimentation
 		}
 		modifier = {
-			job_physicist_add = 300
+			job_physicist_add = 200
 		}
 	}
 
@@ -1708,7 +1708,7 @@ building_roz_fe_lab_2 = {
 			has_modifier = pm_extradimensional_experimentation
 		}
 		modifier = {
-			job_calculator_physicist_add = 300
+			job_calculator_physicist_add = 200
 		}
 	}
 }

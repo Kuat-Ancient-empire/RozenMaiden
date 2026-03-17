@@ -51,7 +51,7 @@ weapon_component_template = {
 	shield_damage = 3.5
 	armor_damage = 3.75
 	hull_damage = 3.25
-	size_damage_factor = 1
+	size_damage_factor = 0.3
 
 	ai_tags = { weapon_role_artillery artillery }
 	ai_tag_weight = 0
@@ -115,7 +115,7 @@ weapon_component_template = {
 	total_fire_time = 70
 
 	
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	range = 300.0
 	accuracy = 1.0
 	tracking = 1.0
@@ -333,7 +333,7 @@ weapon_component_template = {
 			#energy = 10
 		}
 	}
-	size_damage_factor = 1.5
+	size_damage_factor = 0.4
 	power = -4000
 	damage = { min = 17900 max = 19400 }
 	windup = { min = 140 max = 160 }

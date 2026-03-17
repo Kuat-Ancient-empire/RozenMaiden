@@ -13,8 +13,9 @@ roz_crisis_ship_battlecruiser = {
         ship_weapon_range_mult = 0.15
     }
     max_hitpoints = 15000
-    size_multiplier = 4
-    fleet_slot_size = 4
+    map_counter_icon = ship_counter_4
+    size_multiplier = 20
+    fleet_slot_size = 546
     section_slots = { "mid" = { locator = "root" } }
     num_target_locators = 0
     is_space_station = no
@@ -49,8 +50,9 @@ roz_crisis_ship_titan = {
         ship_weapon_range_mult = 0.25
     }
     max_hitpoints = 50000
-    size_multiplier = 8
-    fleet_slot_size = 8
+    map_counter_icon = ship_counter_8
+    size_multiplier = 40
+    fleet_slot_size = 547
     section_slots = { "mid" = { locator = "part1" } }
     num_target_locators = 0
     is_space_station = no
@@ -84,8 +86,9 @@ roz_crisis_madgod_boss = {
         ship_weapon_range_mult = 0.25
     }
     max_hitpoints = 50000
-    size_multiplier = 100
-    fleet_slot_size = 100
+    map_counter_icon = ship_counter_128
+    size_multiplier = 200
+    fleet_slot_size = 548
     section_slots = { "mid" = { locator = "part1" } }
     num_target_locators = 0
     is_space_station = no
@@ -121,8 +124,9 @@ roz_crisis_ship_probe = {
         ship_weapon_range_mult = 0.25
     }
     max_hitpoints = 7500
-    size_multiplier = 1
-    fleet_slot_size = 1
+    map_counter_icon = ship_counter_1
+    size_multiplier = 5
+    fleet_slot_size = 549
     section_slots = { "mid" = { locator = "part1" } }
     num_target_locators = 0
     is_space_station = no

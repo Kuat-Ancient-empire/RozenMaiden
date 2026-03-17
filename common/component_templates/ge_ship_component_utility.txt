@@ -802,7 +802,7 @@ utility_component_template = {
 	}
 	power = 50
 	modifier = {
-		ship_armor_add = 1350
+		ship_armor_add = 1450
 		ship_hull_add = 990
 		ship_armor_regen_add_static = 15
 		ship_hull_regen_add_static = 5
@@ -832,20 +832,20 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 155
-			energy = 80
-			sr_void_core = 2
+			alloys = 225
+			energy = 120
+			sr_void_core = 3
 		}
 		upkeep = {
-			alloys = 0.065
+			alloys = 0.1
 		}
 	}
 	power = 100
 	modifier = {
-		ship_armor_add = 2660
-		ship_hull_add = 2150
-		ship_armor_regen_add_static = 25
-		ship_hull_regen_add_static = 10
+		ship_armor_add = 4350
+		ship_hull_add = 2980
+		ship_armor_regen_add_static = 45
+		ship_hull_regen_add_static = 15
 	}
 	prerequisites = {
 		"tech_ge_sf_armor"
@@ -872,20 +872,20 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 320
-			energy = 120
-			sr_void_core = 3
+			alloys = 675
+			energy = 360
+			sr_void_core = 9
 		}
 		upkeep = {
-			alloys = 0.075
+			alloys = 0.2
 		}
 	}
 	power = 150
 	modifier = {
-		ship_armor_add = 5010
-		ship_hull_add = 4230
-		ship_armor_regen_add_static = 50
-		ship_hull_regen_add_static = 20
+		ship_armor_add = 14500
+		ship_hull_add = 8970
+		ship_armor_regen_add_static = 150
+		ship_hull_regen_add_static = 45
 	}
 	prerequisites = {
 		"tech_ge_sf_armor"
@@ -918,15 +918,14 @@ utility_component_template = {
 			sr_void_core = 1
 		}
 		upkeep = {
-			alloys = 0.01
-			energy = 0.1
+			alloys = 0.05
 		}
 	}
 	power = -200
 	modifier = {
-		ship_shield_add = 1550
-		ship_hull_add = 3
-		ship_shield_regen_add_static = 15
+		ship_shield_add = 2100
+		ship_hull_add = 90
+		ship_shield_regen_add_static = 20
 	}
 	prerequisites = {
 		"tech_ge_shield"
@@ -958,14 +957,13 @@ utility_component_template = {
 			sr_void_core = 2
 		}
 		upkeep = {
-			alloys = 0.02
-			energy = 0.2
+			alloys = 0.1
 		}
 	}
 	power = -450
 	modifier = {
-		ship_shield_add = 2850
-		ship_hull_add = 6
+		ship_shield_add = 6300
+		ship_hull_add = 270
 		ship_shield_regen_add_static = 25
 	}
 	prerequisites = {
@@ -998,14 +996,13 @@ utility_component_template = {
 			sr_void_core = 3
 		}
 		upkeep = {
-			alloys = 0.03
-			energy = 0.3
+			alloys = 0.2
 		}
 	}
 	power = -600
 	modifier = {
-		ship_shield_add = 5450
-		ship_hull_add = 9
+		ship_shield_add = 18900
+		ship_hull_add = 810
 		ship_shield_regen_add_static = 55
 	}
 	prerequisites = {
@@ -2067,7 +2064,7 @@ utility_component_template = {
 	#}
 	modifier = {
 		ship_shield_mult = 0.15
-		ship_armor_mult = 0.1
+		ship_armor_mult = 0.15
 		ship_hull_mult = 0.05
 		ship_hull_regen_add_perc = 0.25
 		ship_armor_regen_add_perc = 0.5

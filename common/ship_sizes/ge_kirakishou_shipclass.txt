@@ -18,7 +18,8 @@ ge_kirakishou_avatar = {
 	}
 	combat_size_multiplier = 0
 	size_multiplier = 1000
-	fleet_slot_size = 1000
+	map_counter_icon = ship_counter_128
+	fleet_slot_size = 545
 	section_slots = {
 		"mid" = {
 			locator = "part1"

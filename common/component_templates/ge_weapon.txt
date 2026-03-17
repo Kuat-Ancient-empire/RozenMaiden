@@ -50,7 +50,7 @@ weapon_component_template = {
 	shield_damage = 2.75
 	armor_damage = 1.25
 	hull_damage = 1.75
-	size_damage_factor = 0.6
+	size_damage_factor = 0.12
 
     tags = { weapon_type_energy weapon_type_ge_void_energy l_slot }
 
@@ -681,7 +681,7 @@ weapon_component_template = {
 	missile_evasion = 0.9					   
 	missile_retarget_range = 100		   
 	missile_speed = 40
-	size_damage_factor = 0.3			   
+	size_damage_factor = 0.06
 	
 	prerequisites = { tech_ge_bhmissile } 
 	component_set = "ge_bhmissile"	
@@ -747,7 +747,7 @@ weapon_component_template = {
 	missile_evasion = 0.9					   
 	missile_retarget_range = 150		   
 	missile_speed = 20
-	size_damage_factor = 0.8	   
+	size_damage_factor = 0.16
 	
 	prerequisites = { tech_ge_wtorpedo } 
 	component_set = "ge_wtorpedo"	

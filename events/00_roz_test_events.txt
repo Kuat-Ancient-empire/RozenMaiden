@@ -849,6 +849,7 @@ country_event = { #控制台effect测试区
 		#effect = {while = { count = 10 every_country = {limit = {is_ai = yes or = { has_ethic = ethic_fanatic_xenophile has_ethic = ethic_xenophile } }add_opinion_modifier = {who = root	modifier = opinion_roz_test_postive}} }}
 		#effect = {while = { count = 5 every_country = {limit = {is_ai = yes}add_opinion_modifier = {who = root	modifier = opinion_roz_test_postive}} }}
 		#effect = {while = { count = 2 every_country = {limit = {is_ai = yes }add_opinion_modifier = {who = root	modifier = opinion_roz_test_postive}} }}
+		#effect = {while = { count = 6 every_country = {limit = {is_ai = yes }add_opinion_modifier = {who = root	modifier = triggered_opinion_roz_test_postive}} }}
 		#every_owned_pop = {
 		#	set_pop_flag = 1111
 		#}
