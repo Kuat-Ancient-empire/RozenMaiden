@@ -2103,7 +2103,7 @@ roz_abyss_vass_select_diff = {
 roz_abyss_vass_integrated = {
 	optimize_memory
 	create_species = {
-		name_list = roz_abyss_faction
+		namelist = roz_abyss_faction
 		name = random
 		class = random_non_machine
 		portrait = random

@@ -96,9 +96,6 @@ on_entering_battle = {
 		roz_shinku_evt.588 		#深渊压制
 
 		ge_skills.60			#真红机制 里莲华
-
-		VOP_evt_ModifierUpdated.1
-		VOP_evt_ModifierUpdated.2
 	}
 }
 

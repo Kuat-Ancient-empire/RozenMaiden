@@ -124,7 +124,7 @@ roz_crisis_ship_probe = {
         ship_weapon_range_mult = 0.25
     }
     max_hitpoints = 7500
-    map_counter_icon = ship_counter_1
+    map_counter_icon = ship_counter_4
     size_multiplier = 5
     fleet_slot_size = 549
     section_slots = { "mid" = { locator = "part1" } }
