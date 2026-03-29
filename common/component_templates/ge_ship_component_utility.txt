@@ -215,8 +215,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 35
-			energy = 135
+			alloys = 100
+			energy = 350
 			sr_void_core = 2
 		}
 		upkeep = {
@@ -290,8 +290,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 65
-			energy = 255
+			alloys = 200
+			energy = 750
 			sr_void_core = 4
 		}
 		upkeep = {
@@ -353,8 +353,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 95
-			energy = 580
+			alloys = 300
+			energy = 1500
 			sr_void_core = 6
 		}
 		upkeep = {
@@ -420,8 +420,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 135
-			energy = 1480
+			alloys = 400
+			energy = 4000
 			sr_void_core = 8
 		}
 		upkeep = {
@@ -496,8 +496,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 270
-			energy = 4330
+			alloys = 800
+			energy = 8000
 			sr_void_core = 12
 		}
 		upkeep = {
@@ -575,8 +575,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 456
-			energy = 9630
+			alloys = 1600
+			energy = 16000
 			sr_void_core = 20
 		}
 		upkeep = {
@@ -640,8 +640,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 40
-			energy = 770
+			alloys = 100
+			energy = 1200
 			sr_void_core = 4
 		}
 		upkeep = {
@@ -693,8 +693,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 120
-			energy = 1940
+			alloys = 360
+			energy = 5500
 			sr_void_core = 18
 		}
 		upkeep = {

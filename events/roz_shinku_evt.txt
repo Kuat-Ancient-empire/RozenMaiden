@@ -4183,6 +4183,8 @@ country_event = {   ##背水一战, 首次进入1
 #         }
 #     }
 # }
+
+#判定boss击杀
 country_event = {   #on_fleet_destroyed_perp
     id = roz_shinku_evt.620
     is_triggered_only = yes
@@ -4243,7 +4245,7 @@ country_event = {   ##局势-好结局路线
     }
 }
 
-country_event = {   ##局势-#坏路线 阿萨的杂事D啊哇塞触发
+country_event = {   ##局势-#坏路线 触发
     id = roz_shinku_evt.630
     title = roz_shinku_evt.630.title
     desc = roz_shinku_evt.630.desc

@@ -140,10 +140,10 @@ roz_mega_information_remodeler_base = {
 				fail_text = "must_build_around_star"
 				is_star = yes
 			}
-            # custom_tooltip = {
-            #     solar_system = { is_same_value = event_target:roz_outland_main_black_hole@space_owner }
-            #     fail_text = "roz_is_roz_outland_planet"
-            # }
+            custom_tooltip = {
+                solar_system = { is_same_value = event_target:roz_outland_main_black_hole@space_owner }
+                fail_text = "roz_is_roz_outland_planet"
+            }
             custom_tooltip = {
                 fail_text = "roz_must_build_no_more_stars"
                 OR = {

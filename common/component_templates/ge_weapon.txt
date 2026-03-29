@@ -24,13 +24,13 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 250
-			energy = 250
-			sr_void_core = 1
+			alloys = 750
+			energy = 1050
+			sr_void_core = 4
 		}		
 		upkeep = {
-			energy = 0.5
-			alloys = 0.05
+			energy = 3
+			alloys = 0.5
 		}
 	}
 
@@ -91,13 +91,13 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 35
-			energy = 35
+			alloys = 50
+			energy = 50
 			sr_void_core = 1
 		}		
 		upkeep = {
-			energy = 0.05
-			alloys = 0.01
+			energy = 0.5
+			alloys = 0.1
 		}
 	}
 
@@ -158,13 +158,13 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 200
-			rare_crystals = 10
-			sr_void_core = 1
+			alloys = 2500
+			rare_crystals = 250
+			sr_void_core = 10
 		}		
 		upkeep = {
-			energy = 3
-			alloys = 0.5
+			energy = 12
+			alloys = 3
 		}
 	}
 
@@ -219,8 +219,8 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 1200			
-			sr_void_core = 1
+			alloys = 4000
+			sr_void_core = 10
 		}		
 		upkeep = {
 			energy = 5
@@ -303,8 +303,8 @@ weapon_component_template = {
 			sr_void_core = 1
 		}		
 		upkeep = {
-			energy = 0.25
-			alloys = 0.02
+			energy = 0.75
+			alloys = 0.15
 		}
 	}
 
@@ -359,13 +359,13 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 105
-			energy = 105
-			sr_void_core = 1
+			alloys = 180
+			energy = 180
+			sr_void_core = 1.5
 		}		
 		upkeep = {
-			energy = 0.3
-			alloys = 0.025
+			energy = 1.75
+			alloys = 0.35
 		}
 	}
 
@@ -421,13 +421,13 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 155
-			energy = 155
-			sr_void_core = 1
+			alloys = 360
+			energy = 360
+			sr_void_core = 2.5
 		}		
 		upkeep = {
-			energy = 0.35
-			alloys = 0.03
+			energy = 3.0
+			alloys = 0.75
 		}
 	}
 
@@ -484,13 +484,13 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 65
-			energy = 65
+			alloys = 75
+			energy = 75
 			sr_void_core = 1
 		}		
 		upkeep = {
-			energy = 0.20
-			alloys = 0.025
+			energy = 0.75
+			alloys = 0.15
 		}
 	}
 
@@ -544,13 +544,13 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 95
-			energy = 95
-			sr_void_core = 1
+			alloys = 180
+			energy = 180
+			sr_void_core = 1.5
 		}		
 		upkeep = {
-			energy = 0.25
-			alloys = 0.03
+			energy = 1.55
+			alloys = 0.35
 		}
 	}
 
@@ -605,13 +605,13 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 145
-			energy = 145
-			sr_void_core = 1
+			alloys = 350
+			energy = 350
+			sr_void_core = 2.5
 		}		
 		upkeep = {
-			energy = 0.6
-			alloys = 0.035
+			energy = 3.0
+			alloys = 0.65
 		}
 	}
 
@@ -656,11 +656,11 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 100
-			sr_void_core = 1
+			alloys = 200
+			sr_void_core = 2
 		}		
 		upkeep = {
-			energy = 0.5
+			alloys = 1
 		}
 	}
 	
@@ -715,11 +715,11 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 160
-			sr_void_core = 1
+			alloys = 330
+			sr_void_core = 2
 		}		
 		upkeep = {
-			energy = 0.7
+			energy = 1.5
 		}
 	}
 
@@ -781,11 +781,12 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 200
-			sr_void_core = 1
+			alloys = 500
+			sr_void_core = 4
 		}		
 		upkeep = {
-			energy = 1
+			energy = 4
+			alloys = 2
 		}
 	}
 
@@ -853,11 +854,12 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 250
-			sr_void_core = 1
+			alloys = 500
+			sr_void_core = 2
 		}		
 		upkeep = {
-			energy = 1
+			energy = 4
+			alloys = 2
 		}
 	}
 
@@ -923,11 +925,12 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 250
+			alloys = 550
 			sr_void_core = 1
 		}		
 		upkeep = {
-			energy = 1
+			energy = 2
+			alloys = 1
 		}
 	}
 
