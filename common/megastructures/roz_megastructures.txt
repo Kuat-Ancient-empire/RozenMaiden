@@ -141,7 +141,18 @@ roz_mega_information_remodeler_base = {
 				is_star = yes
 			}
             custom_tooltip = {
-                solar_system = { is_same_value = event_target:roz_outland_main_black_hole@space_owner }
+                OR = {
+                    solar_system = {
+                        any_system_planet = {
+                            OR = {
+                                is_same_value = event_target:roz_outland_main_black_hole@space_owner
+                                has_planet_flag = roz_outland_main_black_hole
+                            }
+                        }
+                    }
+                    is_same_value = event_target:roz_outland_main_black_hole@space_owner
+                    has_planet_flag = roz_outland_main_black_hole
+                }
                 fail_text = "roz_is_roz_outland_planet"
             }
             custom_tooltip = {
