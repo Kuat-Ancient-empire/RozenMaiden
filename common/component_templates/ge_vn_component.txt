@@ -333,7 +333,7 @@ weapon_component_template = {
 			#energy = 10
 		}
 	}
-	size_damage_factor = 0.4
+	size_damage_factor = 0.6
 	power = -4000
 	damage = { min = 17900 max = 19400 }
 	windup = { min = 140 max = 160 }
@@ -531,6 +531,7 @@ utility_component_template = {
 		}
 	}
 	modifier = {
+		ship_damage_reduction_add = 3
 		ship_hull_add = 924000
 		ship_armor_add = 972000
 		ship_shield_add = 1083000
@@ -574,8 +575,8 @@ utility_component_template = {
 		}
 	}
 	modifier = {
-		ship_shield_hardening_add = 0.20
-		ship_armor_hardening_add = 0.20
+		ship_shield_hardening_add = 0.30
+		ship_armor_hardening_add = 0.30
 		ship_armor_regen_add_static = 5000
 		ship_shield_regen_add_static = 5000
 		ship_hull_regen_add_static = 5000

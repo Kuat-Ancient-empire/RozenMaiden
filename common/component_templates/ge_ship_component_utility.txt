@@ -802,6 +802,8 @@ utility_component_template = {
 	}
 	power = 50
 	modifier = {
+        ship_armor_hardening_add = 0.05
+		ship_damage_reduction_add = 1
 		ship_armor_add = 1450
 		ship_hull_add = 990
 		ship_armor_regen_add_static = 15
@@ -842,6 +844,8 @@ utility_component_template = {
 	}
 	power = 100
 	modifier = {
+		ship_armor_hardening_add = 0.05
+		ship_damage_reduction_add = 3
 		ship_armor_add = 4350
 		ship_hull_add = 2980
 		ship_armor_regen_add_static = 45
@@ -882,6 +886,8 @@ utility_component_template = {
 	}
 	power = 150
 	modifier = {
+		ship_armor_hardening_add = 0.05
+		ship_damage_reduction_add = 9
 		ship_armor_add = 14500
 		ship_hull_add = 8970
 		ship_armor_regen_add_static = 150
@@ -923,9 +929,10 @@ utility_component_template = {
 	}
 	power = -200
 	modifier = {
+		ship_shield_hardening_add = 0.05
 		ship_shield_add = 2100
 		ship_hull_add = 90
-		ship_shield_regen_add_static = 20
+		ship_shield_regen_add_static = 25
 	}
 	prerequisites = {
 		"tech_ge_shield"
@@ -962,9 +969,10 @@ utility_component_template = {
 	}
 	power = -450
 	modifier = {
+		ship_shield_hardening_add = 0.05
 		ship_shield_add = 6300
 		ship_hull_add = 270
-		ship_shield_regen_add_static = 25
+		ship_shield_regen_add_static = 75
 	}
 	prerequisites = {
 		"tech_ge_shield"
@@ -1001,9 +1009,10 @@ utility_component_template = {
 	}
 	power = -600
 	modifier = {
+		ship_shield_hardening_add = 0.05
 		ship_shield_add = 18900
 		ship_hull_add = 810
-		ship_shield_regen_add_static = 55
+		ship_shield_regen_add_static = 185
 	}
 	prerequisites = {
 		"tech_ge_shield"
@@ -2066,11 +2075,12 @@ utility_component_template = {
 		ship_shield_mult = 0.15
 		ship_armor_mult = 0.15
 		ship_hull_mult = 0.05
+		ship_damage_reduction_mult = 0.01
 		ship_hull_regen_add_perc = 0.25
 		ship_armor_regen_add_perc = 0.5
 		ship_shield_regen_add_perc = 0.5
-		ship_shield_hardening_add = 0.15
-		ship_armor_hardening_add = 0.15
+		ship_shield_hardening_add = 0.25
+		ship_armor_hardening_add = 0.25
 		ship_cloaking_strength_add = 2
 	}
 	#class_restriction = { shipclass_military }

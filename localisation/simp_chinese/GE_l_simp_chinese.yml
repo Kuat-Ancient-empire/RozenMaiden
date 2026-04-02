@@ -413,5 +413,6 @@ GetRozAdjustModeMultDiffText: "当前调整模式为：§H乘算§!\n当前调�
  endless_doors_modifier_tt: ""
  endless_doors_accord_tt: "$accord_minor_patron_tt$§G+$@endless_doors_accord|0%$§!$MOD_FLEET_MIA_TIME_MULT$"
  THE_DOOR_OF_ALL_DOORS_FC_PROJECT:"与$code_name_roz_door$通灵"
+ THE_DOOR_OF_ALL_DOORS_FC_PROJECT_DESC:"这是N之领域在§H虚境§!的映射，很难说这个虚境存在是否有思维，在水银灯看来，她或许通过这种映射对虚境产生影响。"
  THE_DOOR_OF_ALL_DOORS_FC_PROJECT_HIVE:"$THE_DOOR_OF_ALL_DOORS_FC_PROJECT$"
  THE_DOOR_OF_ALL_DOORS_FC_PROJECT_ROBOT:"$THE_DOOR_OF_ALL_DOORS_FC_PROJECT$"

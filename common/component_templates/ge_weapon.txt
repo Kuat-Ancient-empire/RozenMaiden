@@ -681,7 +681,7 @@ weapon_component_template = {
 	missile_evasion = 0.9					   
 	missile_retarget_range = 100		   
 	missile_speed = 40
-	size_damage_factor = 0.06
+	size_damage_factor = 0.2
 	
 	prerequisites = { tech_ge_bhmissile } 
 	component_set = "ge_bhmissile"	
@@ -747,7 +747,7 @@ weapon_component_template = {
 	missile_evasion = 0.9					   
 	missile_retarget_range = 150		   
 	missile_speed = 20
-	size_damage_factor = 0.16
+	size_damage_factor = 0.4
 	
 	prerequisites = { tech_ge_wtorpedo } 
 	component_set = "ge_wtorpedo"	
