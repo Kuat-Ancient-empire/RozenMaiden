@@ -593,8 +593,8 @@ sr_rozen_mystica_deficit = {
 #####
 roz_resource_stoke_add = {
 	country_resource_max_add = 100000
-	country_resource_max_alloys_add = 100000
-	country_resource_max_energy_add = 200000
+	country_resource_max_alloys_add = 200000
+	country_resource_max_energy_add = 400000
 }
 #####
 
