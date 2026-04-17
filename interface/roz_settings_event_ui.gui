@@ -566,7 +566,7 @@ guiTypes = {
                 spriteType = "GFX_diplomacy_portrait_frame"
                 orientation = center_up
                 centerPosition = yes
-                position = { x = 257 y = 184 }
+                position = { x = 2 y = 91 }
                 alwaystransparent = yes
                 scale = 0.471
             }
