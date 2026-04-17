@@ -27,7 +27,7 @@
  concept_roz_kaban_desc:"绝大多数蔷薇少女沉睡时所放置的箱子，其上镶着金色蔷薇花，蔷薇少女必须在皮箱内睡觉才能获得真正的休息，里面可能有着一些附带的物品。"
 
  concept_chronos_storm:"$chronos_storm$"
- concept_chronos_storm_desc:"§R这种宇宙风暴似乎不是自然形成的。究竟是何种事物引发了这世界末日般的恐怖威胁？在这恐怖的时空畸变里面没有人能够侥幸获益；光是幸存下去就已经谢天谢地了。§!"
+ concept_chronos_storm_desc:"§R这种宇宙风暴似乎不是自然形成的。究竟是何种事物引发了这世界末日般的恐怖威胁？在这恐怖的时空畸变面前没有人能够侥幸获益；光是幸存下去就已经谢天谢地了。§!"
 
  concept_roz_abyss_faction: "§R深渊势力§!"
  concept_roz_abyss_faction_desc: "§R深渊势力§!包括其自身和['concept_roz_abyss_vass']"

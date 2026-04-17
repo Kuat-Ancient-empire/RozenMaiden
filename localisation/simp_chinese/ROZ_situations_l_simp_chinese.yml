@@ -7,7 +7,7 @@
  kirakishou_planet_invasion_situation: "[Target.GetName]的异动"
  krks_pi_situ_ges: "前线基地人员向N之领域误发射的那段强烈的脉冲信号像是打开了潘多拉魔盒，我们似乎引来了个神秘之客。（纸屑没有人权的.jpg）"
  krks_pi_situ_standard: "前线基地人员向N之领域误发射的那段强烈的脉冲信号像是打开了潘多拉魔盒，我们似乎引来了个神秘之客。"
- krks_pi_situ_early: "前段时间N之领域中侦测到的奇怪新号似乎是某位神秘之客来临的预兆，但她似乎不是带着友好来的……"
+ krks_pi_situ_early: "前段时间N之领域中侦测到的奇怪信号似乎是某位神秘之客来临的预兆，但她似乎不是带着友好来的……"
  krks_pis_complete_ct: "[Target.GetName]的稳定将受到挑战。"
  krks_pis_fail_ct: "由雪华绮晶造成的异常事件将平息。获得修正：星球凝聚力产出 £unity£ §B+25%§!"
 

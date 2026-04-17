@@ -30,14 +30,14 @@ col_roz_YS_planet_desc: "和虚境星球相比，这里浓厚的紫色大气层�
  ##relics
 
 r_roz_stasis_field: "§M虚空盾发生器§!"
-r_roz_stasis_field_desc: "这是那段失落历史留下来的丰碑. 由于这玩意儿已经爆炸过一次了，因此工程部只能修复发挥静滞场作用的那部分元件，对于产生迷彩隐形的那部分暂时是无能为力了。"
+r_roz_stasis_field_desc: "这是那段失落历史留下来的丰碑. 由于这玩意儿已经爆炸过一次了，因此工程部只能修复了发挥静滞场作用的那部分元件，对于产生迷彩隐形的那部分暂时是无能为力了。"
 r_roz_doll_Annabelle:"§P安娜贝尔§!"
 r_roz_doll_Annabelle_desc:"模因：§R不详§!"
 
  #Beacon of Space-Time
 r_roz_Chronos_Label:"§C时空道标§!"
 r_roz_Chronos_Label_desc:"螺旋状的雾团，拿在手中具有相当的重量。与雪华绮晶建立了灵魂绑定。即使是被封存的状态下也会不断扭曲折叠周围时空，激活状态下可轻松造成IV级时空畸变。\n§C--祂曾是无尽星空的引路者，祂曾被深渊的污染侵蚀，这片残破但纯粹的权柄碎片或许是祂最后的净土§!……\n§R需注意：激活§C时空道标§!会轻微破坏当前时空的连续性，我们将在一段时间内无法获取准确时间！§!"
-r_roz_Chronos_Label_active_effect_tt:"\n在选择的星系中制造一场§C时空风暴§!。伴随风暴产生的时空畸变将§R杀死§!当前风暴范围内的星系殖民地上的15%的人口£pop£§!§!，对星球的生产生活造成§R灾难性的破坏§!，并将星系内随机一颗无价值星球破坏为§H破碎星球§!。\n "
+r_roz_Chronos_Label_active_effect_tt:"\n在选择的星系中制造一场§C时空风暴§!。伴随风暴产生的时空畸变将§R杀死§!当前风暴范围内星系殖民地上15%的人口£pop£§!§!，对星球的生产生活造成§R灾难性的破坏§!，并将星系内随机一颗无价值星球破坏为§H破碎星球§!。\n "
 r_roz_Chronos_Label_effect:"激活后的一年内，§C时空道标§!将允许所有舰船跳跃，绕过超空间航道。\n激活时,若处于战时，将向所有正在战斗的敌方舰队释放时空乱流，迫使其进行§R紧急超光速跃迁§!。"
 
  ##tps
@@ -75,7 +75,7 @@ r_roz_orgel_desc: "这个小巧的八音盒曾经是水银灯最重要的宝物�
  roz_shuukan_shoujonotsukurikata_vol10_desc:"来历不明的刊物，其上书写了一些炼金知识，似乎是某种后记？"
 
  roz_shinku's_body_assembly_stage_1: "真红的人偶身体（未完成）"
- roz_shinku's_body_assembly_stage_1_desc: "未完成的人偶，话虽如此，零件那被精细打磨过的痕迹依旧证明着制作者的付出"
+ roz_shinku's_body_assembly_stage_1_desc: "未完成的人偶，话虽如此，零件被精细打磨过的痕迹依旧证明着制作者的付出"
  roz_shinku's_body_assembly_stage_1_ct: "§R人偶尚未完工§!"
  roz_shinku's_body_assembly_stage_2: "真红的人偶身体（接近完成）"
  roz_shinku's_body_assembly_stage_2_desc: "大体完成的人偶，让人对其完整的姿态浮想联翩"
@@ -98,7 +98,7 @@ r_roz_orgel_desc: "这个小巧的八音盒曾经是水银灯最重要的宝物�
  ####cosmic storm
  chronos_storm:"§C时空风暴§!"
  chronos_storm_lore_description:"§L一场极强的$chronos_storm$将威胁该星系，对行星造成破坏。为了生命安全务必寻找庇护！§!"
- chronos_storm_desc:"我们唯一能推测的是：这种宇宙风暴似乎不是自然形成的。究竟是何种事物引发了这世界末日般的恐怖威胁？在这恐怖之物里面没有人能够侥幸获益；光是幸存下去就已经谢天谢地了。"
+ chronos_storm_desc:"我们唯一能推测的是：这种宇宙风暴似乎不是自然形成的。究竟是何种事物引发了这世界末日般的恐怖威胁？在这恐怖之物面前没有人能够侥幸获益；光是幸存下去就已经谢天谢地了。"
  chronos_storm_aftermath_modifier_severity_desc: "$chronos_storm$极具破坏力的性质导致也难以预测究竟会产生何种类型的破坏。"
  chronos_storm_aftermath_modifier_tooltip: "$t$$chronos_storm_aftermath_modifier_severity_desc$"
  chronos_storm_color_tooltip:"$chronos_storm$"
@@ -211,7 +211,7 @@ enable_ge_2:0 "§B为主要种族和所有领袖增加飞升特质，增加三�
 ##################
 #anomaly
 roz_unknow_crashed_flagship_category: "§R诡异暗影§!"
-roz_unknow_crashed_flagship_category_desc: "这艘船的表面吞噬了几乎所有的可见光，它隐匿于黑暗的空间背景中. 它没有回应我们的呼叫，或许我们该详细调查一下这个神秘飞船。"
+roz_unknow_crashed_flagship_category_desc: "这艘船的表面吞噬了几乎所有的可见光，它隐匿于漆黑的宇宙背景中. 它没有回应我们的呼叫，或许我们该详细调查一下这个神秘飞船。"
 
 roz_destroyed_planet_anomaly: "不明灵能源"
 roz_destroyed_planet_anomaly_desc: "我们的科研船在[This.GetName]那崎岖不平的地表上发现了一处奇怪的能量源。\n根据探测器传回的数据来判断，这种能量具有某种超自然特征，兴奋的能量学家们建议我们应该一探究竟。"
@@ -337,7 +337,7 @@ roz_mega_wanxiangtianyin_undeploy_DESC: "不再锚定星系重力井，让这个
 #
 roz_mega_information_remodeler: "§B资讯重构仪§!"
 roz_mega_information_remodeler_DESC: "无中生有的神奇技术，超级文明的惊鸿一瞥。"
-roz_is_roz_outland_planet:" "是§P破败神国§!星系"
+roz_is_roz_outland_planet:"是§P破败神国§!星系"
 
 roz_mega_information_remodeler_effect: "运行中的$roz_mega_information_remodeler$"
 roz_mega_information_remodeler_effect_DESC: "无中生有的神奇技术，超级文明的惊鸿一瞥。超限容晶体-12345型（小公主特供版）作为技术核心，镶嵌于此。"
@@ -353,8 +353,8 @@ GetRozDamageDiffTextA3: "§W随着您不停按下加成按钮，您的游玩压�
 GetRozDamageDiffTextA4: "§W究竟是什么样的对手让您如此如临大敌呢，联合舰队？万倍天灾？永恒舰队？第三远征舰队？蚀念恶印？喵块？发光人？虚境侵军？……§!\n\n§B目前的§H伤害§!buff倍数为：[This.ge_buff_count]%§!"
 GetRozDamageDiffTextB1: "§W敌强如斯，能如奔涛般击溃我军. 我们或许不会马到成功，但将屡败屡战，百战不挠。§!\n\n§R目前的§H伤害§!buff倍数为：[This.ge_buff_count]%§!"
 GetRozDamageDiffTextB2: "§W三百年后，当你坐在装有聚醚型聚氨酯泡沫海绵的靠背扶手四角宽凳上，你机械义腿上的孙子问你：\"您在那场伟大的§!§Y天堂之战§!§W期间都干了什么？\"你不用咳嗽一声说：\"这个嘛，你爷爷在涅克洛蒙达星拾荒.\"§!\n\n§R目前的§H伤害§!buff倍数为：[This.ge_buff_count]%§!"
-GetRozDamageDiffTextB3: "§W\"我能尽心奉献的别无他物，只有热血、辛劳、眼泪和汗水.\"§!\n\n§R目前的§H伤害和伤害§!buff倍数为：[This.ge_buff_count]%§!"
-GetRozDamageDiffTextB4: "§W真…真的还要减吗?再减下去可是要当RBQ的呀~§!\n\n§R目前的§H伤害§!buff倍数为：[This.ge_buff_count]%，在此加成下虚空武器将将趋近原版或更低。§!"
+GetRozDamageDiffTextB3: "§W\"我能尽心奉献的别无他物，只有热血、辛劳、眼泪和汗水.\"§!\n\n§R目前的§H伤害§!buff倍数为：[This.ge_buff_count]%§!"
+GetRozDamageDiffTextB4: "§W真…真的还要减吗?再减下去可是要当RBQ的呀~§!\n\n§R目前的§H伤害§!buff倍数为：[This.ge_buff_count]%，在此加成下虚空武器将趋近原版或更低。§!"
 GetRozDamageDiffTextDef: "§H目前的§H伤害§!buff倍数为：0%§!，当前没有任何修正值。"
 
 GetRozFireRateDiffTextA1: "§W我对你们的勇敢、责任心和作战技巧充满了信心，你们迎接的只会是彻底的胜利，祝你们好运！§!\n\n§B目前的§H射速§!buff倍数为：[This.ge_buff_count_fr]%§!"
@@ -363,7 +363,7 @@ GetRozFireRateDiffTextA3: "§W随着您不停按下加成按钮，您的游玩�
 GetRozFireRateDiffTextA4: "§W究竟是什么样的对手让您如此如临大敌呢，联合舰队？万倍天灾？永恒舰队？第三远征舰队？蚀念恶印？喵块？发光人？虚境侵军？……§!\n\n§B目前的§H射速§!buff倍数为：[This.ge_buff_count_fr]%§!"
 GetRozFireRateDiffTextB1: "§W敌强如斯，能如奔涛般击溃我军. 我们或许不会马到成功，但将屡败屡战，百战不挠。§!\n\n§R目前的§H射速§!buff倍数为：[This.ge_buff_count_fr]%§!"
 GetRozFireRateDiffTextB2: "§W三百年后，当你坐在装有聚醚型聚氨酯泡沫海绵的靠背扶手四角宽凳上，你机械义腿上的孙子问你：\"您在那场伟大的§!§Y天堂之战§!§W期间都干了什么？\"你不用咳嗽一声说：\"这个嘛，你爷爷在涅克洛蒙达星拾荒.\"§!\n\n§R目前的§H射速§!buff倍数为：[This.ge_buff_count_fr]%§!"
-GetRozFireRateDiffTextB3: "§W\"我能尽心奉献的别无他物，只有热血、辛劳、眼泪和汗水.\"§!\n\n§R目前的§H射速和射速§!buff倍数为：[This.ge_buff_count_fr]%§!"
+GetRozFireRateDiffTextB3: "§W\"我能尽心奉献的别无他物，只有热血、辛劳、眼泪和汗水.\"§!\n\n§R目前的§H射速§!buff倍数为：[This.ge_buff_count_fr]%§!"
 GetRozFireRateDiffTextB4: "§W真…真的还要减吗?再减下去可是要当RBQ的呀~§!\n\n§R目前的§H射速§!buff倍数为：[This.ge_buff_count_fr]%，在此加成下大部分虚空武器将几乎无法正常开火。§!"
 GetRozFireRateDiffTextDef: "§H目前的§H射速§!buff倍数为：0%§!，当前没有任何修正值。"
 

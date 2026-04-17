@@ -37,32 +37,32 @@ ge_sgt_site = {		###水银灯
 
 	stage = {
 		difficulty = 2
-		icon = GFX_ge_sgt_site_D1
+		icon = GFX_archaeology_runes_A1
 		event = ge_sites.11
 	}
 	stage = {
 		difficulty = 3
-		icon = GFX_ge_sgt_site_D2
+		icon = GFX_archaeology_runes_A2
 		event = ge_sites.12
 	}
 	stage = {
 		difficulty = 1
-		icon = GFX_ge_sgt_site_D3
+		icon = GFX_archaeology_runes_A3
 		event = ge_sites.13
 	}
 	stage = {
 		difficulty = 2
-		icon = GFX_ge_sgt_site_D4
+		icon = GFX_archaeology_runes_A4
 		event = ge_sites.14
 	}
 	stage = {
 		difficulty = 1
-		icon = GFX_ge_sgt_site_D5
+		icon = GFX_archaeology_runes_A5
 		event = ge_sites.15
 	}
 	stage = {
 		difficulty = 1
-		icon = GFX_ge_sgt_site_D6
+		icon = GFX_archaeology_runes_A6
 		event = ge_sites.16
 	}	
 
@@ -101,7 +101,7 @@ roz_the_fields_of_growth_site = {
 
 	stage = {
 		difficulty = 2
-		icon = GFX_ge_sgt_site_D1
+		icon = GFX_archaeology_runes_A1
 		event = ge_sites.11
 	}
 
@@ -136,37 +136,37 @@ roz_relic_of_eras_site = {
 	}
 	stage = {
 		difficulty = 1
-		icon = GFX_roz_roe_site_D1
+		icon = GFX_archaeology_runes_A1
 		event = ge_sites.401
 	}
 	stage = {
 		difficulty = 4
-		icon = GFX_roz_roe_site_2
+		icon = GFX_archaeology_runes_A2
 		event = ge_sites.402
 	}
 	stage = {
 		difficulty = 3
-		icon = GFX_roz_roe_site_3
+		icon = GFX_archaeology_runes_A3
 		event = ge_sites.403
 	}
 	stage = {
 		difficulty = 3
-		icon = GFX_roz_roe_site_4
+		icon = GFX_archaeology_runes_A4
 		event = ge_sites.404
 	}
 	stage = {
 		difficulty = 3
-		icon = GFX_roz_roe_site_5
+		icon = GFX_archaeology_runes_A5
 		event = ge_sites.405
 	}
 	stage = {
 		difficulty = 3
-		icon = GFX_roz_roe_site_6
+		icon = GFX_archaeology_runes_A6
 		event = ge_sites.406
 	}
 	stage = {
 		difficulty = 3
-		icon = GFX_roz_roe_site_7
+		icon = GFX_archaeology_runes_A6
 		event = ge_sites.407
 	}
 	on_roll_failed = {
@@ -209,27 +209,27 @@ roz_ruined_paradise_site = {
 	}
 	stage = {
 		difficulty = 4
-		icon = GFX_roz_roe_site_D1
+		icon = GFX_archaeology_runes_A1
 		event = ge_sites.511
 	}
 	stage = {
 		difficulty = 4
-		icon = GFX_roz_roe_site_2
+		icon = GFX_archaeology_runes_A2
 		event = ge_sites.512
 	}
 	stage = {
 		difficulty = 3
-		icon = GFX_roz_roe_site_3
+		icon = GFX_archaeology_runes_A3
 		event = ge_sites.513
 	}
 	stage = {
 		difficulty = 3
-		icon = GFX_roz_roe_site_4
+		icon = GFX_archaeology_runes_A4
 		event = ge_sites.514
 	}
 	stage = {
 		difficulty = 5
-		icon = GFX_roz_roe_site_5
+		icon = GFX_archaeology_runes_A5
 		event = ge_sites.515
 	}
 

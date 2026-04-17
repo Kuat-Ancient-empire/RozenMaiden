@@ -110,7 +110,7 @@ guiTypes = {
             text = "roz_start.7777.difficult"
             tooltipText = "roz_start.7777.crisis.tooltip"
             textureFile = "gfx/interface/tiles/tooltip.dds"
-            position = { x = 508 y = @button_y_text1 }
+            position = { x = 508 y = 85 }
             maxWidth = 144
             maxHeight = 40
             fixedSize = yes
@@ -331,7 +331,7 @@ guiTypes = {
             text = "roz_start.7777.kirakishou_eventchain_name"
             tooltipText = "roz_start.7777.kirakishou_eventchain_name.tooltip"
             textureFile = "gfx/interface/tiles/tooltip.dds"
-            position = { x = 508 y = @button_y_text2 }
+            position = { x = 508 y = 275 }
             maxWidth = 144
             maxHeight = 40
             fixedSize = yes
@@ -374,7 +374,7 @@ guiTypes = {
             text = "roz_start.7777.crisis_diff"
             #tooltipText = "roz_start.7777.crisis.tooltip"
             textureFile = "gfx/interface/tiles/tooltip.dds"
-            position = { x = 508 y = @button_y_text3 }
+            position = { x = 508 y = 355 }
             maxWidth = 360
             maxHeight = 40
             fixedSize = yes
@@ -383,7 +383,7 @@ guiTypes = {
         effectButtonType = {
             name = "roz_settings_unholy_invasion_easy_option"
             quadTextureSprite = "GFX_button_animated_116"
-            position = { x = @button_x_4_1 y = @button_y_line5 }
+            position = { x = 495 y = 375 }
 			clicksound = queuing_building
             font = "cg_16b"
             text = "roz_start.7777.easy"
@@ -471,7 +471,7 @@ guiTypes = {
             text = "roz_start.7777.settings"
             #tooltipText = "roz_start.7777.crisis.tooltip"
             textureFile = "gfx/interface/tiles/tooltip.dds"
-            position = { x = 508 y = @button_y_text4 }
+            position = { x = 508 y = 495 }
             maxWidth = 144
             maxHeight = 40
             fixedSize = yes
@@ -563,12 +563,12 @@ guiTypes = {
         # the portrait, actually room.
         containerWindowType = {
             name = "portrait"
-            size = { width = 490 height = 620 }
-            position = { x = 0 y = -88 }
+            size = { width = 490 height = 181 }
+            position = { x = 0 y = 36 }
             clipping = yes
             iconType = {
                 name = "portrait"
-                position = { x = 20 y = 135 }
+                position = { x = 21 y = 12 }
                 spriteType = "GFX_portrait_gamesetup_mask"
                 alwaysTransparent = yes
                 scale = 0.471
@@ -578,7 +578,7 @@ guiTypes = {
                 spriteType = "GFX_diplomacy_portrait_frame"
                 orientation = center_up
                 centerPosition = yes
-                position = { x = 0 y = 215 }
+                position = { x = 257 y = 184 }
                 alwaystransparent = yes
                 scale = 0.471
             }
@@ -780,10 +780,11 @@ guiTypes = {
             alwaysTransparent = yes
         }
         instantTextBoxType = {
+        	scale = 1
             name = "alien_message"
             font = "cg_16b"
             textureFile = "gfx/interface/tiles/diplomacy_textbox_positive.dds"
-            position = { x = 25 y = 237 }
+            position = { x = 25 y = 236 }
             maxWidth = 440
             maxHeight = 420
             format = left
@@ -800,7 +801,7 @@ guiTypes = {
             instantTextBoxType={
                 name = "action_title"
                 font = "malgun_goth_24"
-                position = { x = -100 y = -50 }
+                position = { x = 23333 y = -96 }
                 maxWidth = 400
                 maxHeight = 40
                 alwaysTransparent = yes
@@ -821,7 +822,7 @@ guiTypes = {
             # option pos
             listboxType = {
                 name = "option_list"
-                position = { x = -63 y = 515 }
+                position = { x = -66 y = 514 }
                 size = { x=480 y=56 }
                 spacing = 12
                 scrollbartype = "standardlistbox_slider"
