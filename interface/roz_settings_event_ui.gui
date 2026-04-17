@@ -37,20 +37,8 @@ guiTypes = {
         origo = center
         background = {
             name = "background"
-            quadTextureSprite ="GFX_invisible"
+            quadTextureSprite ="GFX_tile_outliner_bg_synth_queen"
             position = { x = 0 y = 0 }
-        }
-        containerWindowType = {
-            name = "roz_event_window_background"
-            orientation = UPPER_LEFT
-            origo = UPPER_LEFT
-            movable = no
-            size = { width = 1200 height = 720 }
-            background = {
-                alwaysTransparent = yes
-                name = "background"
-                quadTextureSprite = "GFX_tile_outliner_bg_synth_queen"
-            }
         }
         @button_x_left  = 495
         @button_x_right = 836
