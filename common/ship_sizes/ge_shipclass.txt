@@ -28,7 +28,7 @@ ge_flagship = {
 	# }
 	map_counter_icon = ship_counter_32
 	combat_size_multiplier = 4
-	size_multiplier = 120
+	size_multiplier = 80
 	fleet_slot_size = 534
 	section_slots = {
 		"core" = {
@@ -117,9 +117,9 @@ ge_flagship = {
 	resources = {
 		category = ships
 		upkeep = {
-			energy = 250
-			alloys = 50
-			sr_void_core = 10
+			energy = 4250
+			alloys = 2250
+			sr_void_core = 30
 
 		}
 	}
@@ -201,6 +201,7 @@ Ge_Ragnarok = {	#永恒之枪
 					OR = {
 						is_megastructure_type = mega_shipyard_3
 						is_megastructure_type = mega_shipyard_restored
+						is_megastructure_type = roz_mega_wanxiangtianyin
 					}
 				}
 				AND = {
@@ -539,7 +540,7 @@ Ge_Vampirilis_Ortaam = {	#斗士
 		cloaked = GFX_fleet_presence_kaiju_icons_cloaked
 	}
 	combat_size_multiplier = 40
-	size_multiplier = 100
+	size_multiplier = 80
 	fleet_slot_size = 540
 	section_slots = {
 		"mid" = {
@@ -674,9 +675,9 @@ Ge_Vampirilis_Ortaam_normal = {	#斗士
 		cost = {
 			#sr_void_core_hidden = 1
 			#sr_void_core = 0
-			alloys = 3500
-			energy = 6000
-			sr_void_core = 40
+			alloys = 6000
+			energy = 10000
+			sr_void_core = 50
 		}
 		upkeep = {
 			energy = 30
@@ -748,8 +749,8 @@ Ge_Vampirilis_Letum = {	#
 		cost = {
 			#sr_void_core_hidden = 1
 			#sr_void_core = 0
-			alloys = 1000
-			energy = 2500
+			alloys = 2000
+			energy = 4500
 		}
 		upkeep = {
 			energy = 10
@@ -829,8 +830,8 @@ ROZ_ITQ = {	#
 		category = ships
 		cost = {
 
-			alloys = 500
-			energy = 2000
+			alloys = 1500
+			energy = 2500
 		}
 		upkeep = {
 			energy = 8
@@ -952,13 +953,13 @@ roz_juggernaut_wanxiang = {	#万象
 
 		}
 		cost = {
-			energy = 100000
-			alloys = 35000
-			sr_void_core = 100
+			energy = 125000
+			alloys = 55000
+			sr_void_core = 125
 		}
 		upkeep = {
-			energy = 150
-			alloys = 50
+			energy = 100
+			alloys = 25
 			sr_void_core = 5
 		}
 	}

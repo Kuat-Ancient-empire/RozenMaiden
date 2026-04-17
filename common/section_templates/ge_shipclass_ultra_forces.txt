@@ -1563,12 +1563,12 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = {
-			energy = 51200
-			alloys = 25600
-			sr_void_core = 750
-			sr_dark_matter = 2560
-			sr_living_metal = 2560
-			sr_zro = 1024
+			energy = 73800
+			alloys = 32500
+			sr_void_core = 1000
+			sr_dark_matter = 3250
+			sr_living_metal = 3250
+			sr_zro = 500
 		}
 	}
 	ai_weight = {

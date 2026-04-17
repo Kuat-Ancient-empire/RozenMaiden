@@ -575,6 +575,7 @@ utility_component_template = {
 		}
 	}
 	modifier = {
+		ship_damage_reduction_mult = 0.01
 		ship_shield_hardening_add = 0.30
 		ship_armor_hardening_add = 0.30
 		ship_armor_regen_add_static = 5000

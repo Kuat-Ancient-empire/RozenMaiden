@@ -1,12 +1,12 @@
 Q_sgt = {
 	damage = 4.0
-	morale = 1.5
-	morale_damage = 1.5
+	morale = 1.0
+	morale_damage = 1.0
 	collateral_damage = 0.1
 	war_exhaustion = 0.005
 	has_species = no
-	health = 1.250
-	time = 18
+	health = 1.0
+	time = 15
 	icon = GFX_ge_army_Q_sgt
 	resources = {
 		category = armies
@@ -17,9 +17,9 @@ Q_sgt = {
 			sr_rosa_mystica = 5
 		}
 		upkeep = {
-			energy = 2
-			alloys = 1
-			minerals = 1
+			energy = 1
+			alloys = 0.5
+			minerals = 0.5
 		}
 	}
 	potential = {
