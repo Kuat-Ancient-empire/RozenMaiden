@@ -343,11 +343,8 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = roz_leader_suigintou_get
-				AND = {
-					#为应对某些奇怪的情况下会导致flag出问题
-					has_country_flag = roz_suigintou_commander_active
-					has_country_flag = roz_suigintou_scientist_active
-				}
+				has_country_flag = roz_suigintou_commander_active
+				has_country_flag = roz_suigintou_scientist_active
 			}
 			random_list = {
 				1 = {

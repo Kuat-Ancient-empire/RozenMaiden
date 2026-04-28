@@ -19,84 +19,30 @@ ship_design = {
 	section = {
 		template = "ge_sgt_ship_core"
 		slot = "core"	
-		component = {
-			slot = xl_gun_01
-			template = ge_vn_main_beam
-		}
+		component = { slot = xl_gun_01 template = ge_vn_main_beam }
 	
-		component = {
-			slot = large_gun_1
-			template = ge_large_vn_laser
-		}
-		component = {
-			slot = large_gun_2
-			template = ge_large_vn_laser
-		}
-		component = {
-			slot = large_gun_3
-			template = ge_large_vn_laser
-		}
+		component = { slot = large_gun_1 template = ge_large_vn_laser }
+		component = { slot = large_gun_2 template = ge_large_vn_laser }
+		component = { slot = large_gun_3 template = ge_large_vn_laser }
 
-		component = {
-			slot = large_gun_10
-			template = ge_large_vn_laser
-		}
-		component = {
-			slot = large_gun_11
-			template = ge_large_vn_laser
-		}
-		component = {
-			slot = large_gun_12
-			template = ge_large_vn_laser
-		}
+		component = { slot = large_gun_10 template = ge_large_vn_laser }
+		component = { slot = large_gun_11 template = ge_large_vn_laser }
+		component = { slot = large_gun_12 template = ge_large_vn_laser }
 
-		component = {
-			slot = small_gun_1
-			template = ge_vn_pd
-		}
-		component = {
-			slot = small_gun_2
-			template = ge_vn_pd
-		}
-		component = {
-			slot = small_gun_5
-			template = ge_vn_pd
-		}
-		component = {
-			slot = small_gun_6
-			template = ge_vn_pd
-		}
-		component = {
-			slot = small_gun_9
-			template = ge_vn_pd
-		}
-		component = {
-			slot = small_gun_10
-			template = ge_vn_pd
-		}
+		component = { slot = small_gun_1 template = ge_vn_pd }
+		component = { slot = small_gun_2 template = ge_vn_pd }
+		component = { slot = small_gun_5 template = ge_vn_pd }
+		component = { slot = small_gun_6 template = ge_vn_pd }
+		component = { slot = small_gun_9 template = ge_vn_pd }
+		component = { slot = small_gun_10 template = ge_vn_pd }
 
 
-		component = {
-			slot = LARGE_UTILITY_1
-			template = ge_vn_shield
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = ge_vn_shield
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = ge_vn_shield
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = ge_vn_shield
-		}
+		component = { slot = LARGE_UTILITY_1 template = ge_vn_shield }
+		component = { slot = LARGE_UTILITY_2 template = ge_vn_shield }
+		component = { slot = LARGE_UTILITY_3 template = ge_vn_shield }
+		component = { slot = LARGE_UTILITY_4 template = ge_vn_shield }
 
-		component = {
-			slot = AUX_UTILITY_1
-			template = ge_vn_aux
-		}
+		component = { slot = AUX_UTILITY_1 template = ge_vn_aux }
 
 	
 	}
@@ -117,461 +63,117 @@ ship_design = {
 	section = {
 		template = ge_void_lord_core
 		slot = "core"	
-		component = {
-			slot = TITANIC_01
-			template = ge_vn_main_beam
-		}
-	
-		component = {
-			slot = TITANIC_02
-			template = ge_vn_main_beam
-		}
+		component = { slot = TITANIC_01 template = ge_vn_main_beam }
+		component = { slot = TITANIC_02 template = ge_vn_main_beam }
+		component = { slot = TITANIC_03 template = ge_vn_main_beam }
+		component = { slot = EXTRA_LARGE_01 template = ge_vn_secondary_beam }
+		component = { slot = EXTRA_LARGE_02 template = ge_vn_secondary_beam }
+		component = { slot = EXTRA_LARGE_03 template = ge_vn_secondary_beam }
+		component = { slot = EXTRA_LARGE_04 template = ge_vn_secondary_beam }
+		component = { slot = EXTRA_LARGE_05 template = ge_vn_secondary_beam }
+		component = { slot = EXTRA_LARGE_06 template = ge_vn_secondary_beam }
+		component = { slot = LARGE_GUN_01 template = ge_large_vn_laser }
+		component = { slot = LARGE_GUN_02 template = ge_large_vn_laser }
+		component = { slot = LARGE_GUN_03 template = ge_large_vn_laser }
+		component = { slot = LARGE_GUN_04 template = ge_large_vn_laser }
+		component = { slot = LARGE_GUN_05 template = ge_large_vn_laser }
+		component = { slot = LARGE_GUN_06 template = ge_large_vn_laser }
+		component = { slot = LARGE_GUN_07 template = ge_large_vn_laser }
+		component = { slot = LARGE_GUN_08 template = ge_large_vn_laser }
+		component = { slot = MEDIUM_GUN_01 template = ge_medium_vn_laser }
+		component = { slot = MEDIUM_GUN_02 template = ge_medium_vn_laser }
+		component = { slot = MEDIUM_GUN_03 template = ge_medium_vn_laser }
+		component = { slot = MEDIUM_GUN_04 template = ge_medium_vn_laser }
+		component = { slot = MEDIUM_GUN_05 template = ge_medium_vn_laser }
+		component = { slot = MEDIUM_GUN_06 template = ge_medium_vn_laser }
+		component = { slot = MEDIUM_GUN_07 template = ge_medium_vn_laser }
+		component = { slot = MEDIUM_GUN_08 template = ge_medium_vn_laser }
+		component = { slot = MEDIUM_GUN_09 template = ge_vn_torpedo }
+		component = { slot = MEDIUM_GUN_10 template = ge_vn_torpedo }
+		component = { slot = MEDIUM_GUN_11 template = ge_vn_torpedo }
+		component = { slot = MEDIUM_GUN_12 template = ge_vn_torpedo }
+		component = { slot = SMALL_GUN_01 template = ge_small_vn_laser }
+		component = { slot = SMALL_GUN_02 template = ge_small_vn_laser }
+		component = { slot = SMALL_GUN_03 template = ge_small_vn_laser }
+		component = { slot = SMALL_GUN_04 template = ge_small_vn_laser }
+		component = { slot = SMALL_GUN_05 template = ge_small_vn_laser }
+		component = { slot = SMALL_GUN_06 template = ge_small_vn_laser }
+		component = { slot = SMALL_GUN_07 template = ge_small_vn_laser }
+		component = { slot = SMALL_GUN_08 template = ge_small_vn_laser }
+		component = { slot = SMALL_GUN_09 template = ge_vn_pd }
+		component = { slot = SMALL_GUN_10 template = ge_vn_pd }
+		component = { slot = SMALL_GUN_11 template = ge_vn_pd }
+		component = { slot = SMALL_GUN_12 template = ge_vn_pd }
+		component = { slot = SMALL_GUN_13 template = ge_vn_pd }
+		component = { slot = SMALL_GUN_14 template = ge_vn_pd }
+		component = { slot = SMALL_GUN_15 template = ge_vn_pd }
+		component = { slot = SMALL_GUN_16 template = ge_vn_pd }
 
-		component = {
-			slot = TITANIC_03
-			template = ge_vn_main_beam
-		}
+		component = { slot = STRIKE_CRAFT_01 template = ge_strike_craft_fighter }
+		component = { slot = STRIKE_CRAFT_02 template = ge_strike_craft_fighter }
+		component = { slot = STRIKE_CRAFT_03 template = ge_strike_craft_fighter }
+		component = { slot = STRIKE_CRAFT_04 template = ge_strike_craft_fighter }
+		component = { slot = STRIKE_CRAFT_05 template = ge_strike_craft_bomber }
+		component = { slot = STRIKE_CRAFT_06 template = ge_strike_craft_bomber }
+		component = { slot = STRIKE_CRAFT_07 template = ge_strike_craft_bomber }
+		component = { slot = STRIKE_CRAFT_08 template = ge_strike_craft_bomber }
+		component = { slot = STRIKE_CRAFT_09 template = ge_strike_craft_xuefeng }
+		component = { slot = STRIKE_CRAFT_10 template = ge_strike_craft_xuefeng }
+		component = { slot = STRIKE_CRAFT_11 template = ge_strike_craft_xuefeng }
+		component = { slot = STRIKE_CRAFT_12 template = ge_strike_craft_xuefeng }
 
-		component = {
-			slot = EXTRA_LARGE_01
-			template = ge_vn_secondary_beam
-		}
-	
-		component = {
-			slot = EXTRA_LARGE_02
-			template = ge_vn_secondary_beam
-		}
+		component = { slot = LARGE_UTILITY_1 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_2 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_3 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_4 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_5 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_6 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_7 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_8 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_9 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_10 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_11 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_12 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_13 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_14 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_15 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_16 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_17 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_18 template = LARGE_G_SHIELD }
 
-		component = {
-			slot = EXTRA_LARGE_03
-			template = ge_vn_secondary_beam
-		}
-
-		component = {
-			slot = EXTRA_LARGE_04
-			template = ge_vn_secondary_beam
-		}
-	
-		component = {
-			slot = EXTRA_LARGE_05
-			template = ge_vn_secondary_beam
-		}
-
-		component = {
-			slot = EXTRA_LARGE_06
-			template = ge_vn_secondary_beam
-		}
-
-		component = {
-			slot = LARGE_GUN_01
-			template = ge_large_vn_laser
-		}
-
-		component = {
-			slot = LARGE_GUN_02
-			template = ge_large_vn_laser
-		}
-
-		component = {
-			slot = LARGE_GUN_03
-			template = ge_large_vn_laser
-		}
-
-		component = {
-			slot = LARGE_GUN_04
-			template = ge_large_vn_laser
-		}
-
-		component = {
-			slot = LARGE_GUN_05
-			template = ge_large_vn_laser
-		}
-
-		component = {
-			slot = LARGE_GUN_06
-			template = ge_large_vn_laser
-		}
-
-		component = {
-			slot = LARGE_GUN_07
-			template = ge_large_vn_laser
-		}
-
-		component = {
-			slot = LARGE_GUN_08
-			template = ge_large_vn_laser
-		}
-
-		component = {
-			slot = MEDIUM_GUN_01
-			template = ge_medium_vn_laser
-		}
-
-		component = {
-			slot = MEDIUM_GUN_02
-			template = ge_medium_vn_laser
-		}
-
-		component = {
-			slot = MEDIUM_GUN_03
-			template = ge_medium_vn_laser
-		}
-
-		component = {
-			slot = MEDIUM_GUN_04
-			template = ge_medium_vn_laser
-		}
-
-		component = {
-			slot = MEDIUM_GUN_05
-			template = ge_medium_vn_laser
-		}
-
-		component = {
-			slot = MEDIUM_GUN_06
-			template = ge_medium_vn_laser
-		}
-
-		component = {
-			slot = MEDIUM_GUN_07
-			template = ge_medium_vn_laser
-		}
-		component = {
-			slot = MEDIUM_GUN_08
-			template = ge_medium_vn_laser
-		}
-		component = {
-			slot = MEDIUM_GUN_09
-			template = ge_vn_torpedo
-		}
-		component = {
-			slot = MEDIUM_GUN_10
-			template = ge_vn_torpedo
-		}
-		component = {
-			slot = MEDIUM_GUN_11
-			template = ge_vn_torpedo
-		}
-		component = {
-			slot = MEDIUM_GUN_12
-			template = ge_vn_torpedo
-		}
-		component = {
-			slot = SMALL_GUN_01
-			template = ge_small_vn_laser
-		}
-		component = {
-			slot = SMALL_GUN_02
-			template = ge_small_vn_laser
-		}
-		component = {
-			slot = SMALL_GUN_03
-			template = ge_small_vn_laser
-		}
-		component = {
-			slot = SMALL_GUN_04
-			template = ge_small_vn_laser
-		}
-		component = {
-			slot = SMALL_GUN_05
-			template = ge_small_vn_laser
-		}
-		component = {
-			slot = SMALL_GUN_06
-			template = ge_small_vn_laser
-		}
-		component = {
-			slot = SMALL_GUN_07
-			template = ge_small_vn_laser
-		}
-		component = {
-			slot = SMALL_GUN_08
-			template = ge_small_vn_laser
-		}
-		component = {
-			slot = SMALL_GUN_09
-			template = ge_vn_pd
-		}
-		component = {
-			slot = SMALL_GUN_10
-			template = ge_vn_pd
-		}
-		component = {
-			slot = SMALL_GUN_11
-			template = ge_vn_pd
-		}
-		component = {
-			slot = SMALL_GUN_12
-			template = ge_vn_pd
-		}
-		component = {
-			slot = SMALL_GUN_13
-			template = ge_vn_pd
-		}
-		component = {
-			slot = SMALL_GUN_14
-			template = ge_vn_pd
-		}
-		component = {
-			slot = SMALL_GUN_15
-			template = ge_vn_pd
-		}
-		component = {
-			slot = SMALL_GUN_16
-			template = ge_vn_pd
-		}
-
-		component = {
-			slot = STRIKE_CRAFT_01
-			template = ge_strike_craft_fighter
-		}
-		component = {
-			slot = STRIKE_CRAFT_02
-			template = ge_strike_craft_fighter
-		}
-		component = {
-			slot = STRIKE_CRAFT_03
-			template = ge_strike_craft_fighter
-		}
-		component = {
-			slot = STRIKE_CRAFT_04
-			template = ge_strike_craft_fighter
-		}
-		component = {
-			slot = STRIKE_CRAFT_05
-			template = ge_strike_craft_bomber
-		}
-		component = {
-			slot = STRIKE_CRAFT_06
-			template = ge_strike_craft_bomber
-		}
-		component = {
-			slot = STRIKE_CRAFT_07
-			template = ge_strike_craft_bomber
-		}
-		component = {
-			slot = STRIKE_CRAFT_08
-			template = ge_strike_craft_bomber
-		}
-		component = {
-			slot = STRIKE_CRAFT_09
-			template = ge_strike_craft_xuefeng
-		}
-		component = {
-			slot = STRIKE_CRAFT_10
-			template = ge_strike_craft_xuefeng
-		}
-		component = {
-			slot = STRIKE_CRAFT_11
-			template = ge_strike_craft_xuefeng
-		}
-		component = {
-			slot = STRIKE_CRAFT_12
-			template = ge_strike_craft_xuefeng
-		}
-
-		component = {
-			slot = LARGE_UTILITY_1
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_5
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_6
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_7
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_8
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_9
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_10
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_11
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_12
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_13
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_14
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_15
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_16
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_17
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_18
-			template = LARGE_G_SHIELD
-		}
-
-		component = {
-			slot = LARGE_UTILITY_19
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_20
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_21
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_22
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_23
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_24
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_25
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_26
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_27
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_28
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_29
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_30
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_31
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_32
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_33
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_34
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_35
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_36
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_37
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_38
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_39
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_40
-			template = LARGE_SF_ARMOR
-		}
+		component = { slot = LARGE_UTILITY_19 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_20 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_21 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_22 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_23 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_24 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_25 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_26 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_27 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_28 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_29 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_30 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_31 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_32 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_33 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_34 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_35 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_36 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_37 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_38 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_39 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_40 template = LARGE_SF_ARMOR }
 		
-		component = {
-			slot = AUX_UTILITY_1
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_2
-			template = GE_CB_L
-		}
-		component = {
-			slot = AUX_UTILITY_3
-			template = ge_vn_aux
-		}
-		component = {
-			slot = AUX_UTILITY_4
-			template = ge_vn_aux
-		}
-		component = {
-			slot = AUX_UTILITY_5
-			template = ge_vn_aux
-		}
-		component = {
-			slot = AUX_UTILITY_6
-			template = ge_vn_aux
-		}
-		component = {
-			slot = AUX_UTILITY_7
-			template = ge_vn_aux
-		}
-		component = {
-			slot = AUX_UTILITY_8
-			template = ge_vn_aux
-		}
-		component = {
-			slot = AUX_UTILITY_9
-			template = ge_vn_aux
-		}
-		component = {
-			slot = AUX_UTILITY_10
-			template = ge_vn_aux
-		}
+		component = { slot = AUX_UTILITY_1 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_2 template = GE_CB_L }
+		component = { slot = AUX_UTILITY_3 template = ge_vn_aux }
+		component = { slot = AUX_UTILITY_4 template = ge_vn_aux }
+		component = { slot = AUX_UTILITY_5 template = ge_vn_aux }
+		component = { slot = AUX_UTILITY_6 template = ge_vn_aux }
+		component = { slot = AUX_UTILITY_7 template = ge_vn_aux }
+		component = { slot = AUX_UTILITY_8 template = ge_vn_aux }
+		component = { slot = AUX_UTILITY_9 template = ge_vn_aux }
+		component = { slot = AUX_UTILITY_10 template = ge_vn_aux }
 
 	}
 	required_component = "STARBASE_GE_REACTOR"
@@ -597,34 +199,13 @@ ship_design = {
 	section = {
 		template = CORVETTE_MID_S2PD1
 		slot = "mid"	
-		component = {
-			slot = SMALL_GUN_01
-			template = POINT_DEFENCE_2
-		}
-		component = {
-			slot = SMALL_GUN_02
-			template = SMALL_DISRUPTOR_3
-		}
-		component = {
-			slot = SMALL_GUN_03
-			template = SMALL_DISRUPTOR_3
-		}
-		component = {
-			slot = AUX_UTILITY_1
-			template = ARMOR_HARDENER_2
-		}
-		component = {
-			slot = SMALL_UTILITY_1
-			template = SMALL_SHIELD_5
-		}
-		component = {
-			slot = SMALL_UTILITY_1
-			template = SMALL_SHIELD_5
-		}
-		component = {
-			slot = SMALL_UTILITY_1
-			template = SMALL_ARMOR_5
-		}
+		component = { slot = SMALL_GUN_01 template = POINT_DEFENCE_2 }
+		component = { slot = SMALL_GUN_02 template = SMALL_DISRUPTOR_3 }
+		component = { slot = SMALL_GUN_03 template = SMALL_DISRUPTOR_3 }
+		component = { slot = AUX_UTILITY_1 template = ARMOR_HARDENER_2 }
+		component = { slot = SMALL_UTILITY_1 template = SMALL_SHIELD_5 }
+		component = { slot = SMALL_UTILITY_1 template = SMALL_SHIELD_5 }
+		component = { slot = SMALL_UTILITY_1 template = SMALL_ARMOR_5 }
 	}
 	required_component= COMBAT_COMPUTER_SWARM_DEFAULT
 	required_component="SHIP_THRUSTER_3"
@@ -640,30 +221,15 @@ ship_design = {
 	section = {
 		template = DESTROYER_BOW_M1S2
 		slot = bow
-		component = {
-			slot = SMALL_GUN_01
-			template = SMALL_DISRUPTOR_3
-		}
-		component = {
-			slot = SMALL_GUN_02
-			template = SMALL_DISRUPTOR_3
-		}
-		component = {
-			slot = MEDIUM_GUN_01
-			template = MEDIUM_DISRUPTOR_3
-		}
+		component = { slot = SMALL_GUN_01 template = SMALL_DISRUPTOR_3 }
+		component = { slot = SMALL_GUN_02 template = SMALL_DISRUPTOR_3 }
+		component = { slot = MEDIUM_GUN_01 template = MEDIUM_DISRUPTOR_3 }
 	}
 	section = {
 		template = DESTROYER_STERN_PD2
 		slot = bow
-		component = {
-			slot = SMALL_GUN_01
-			template = POINT_DEFENCE_2
-		}
-		component = {
-			slot = SMALL_GUN_02
-			template = POINT_DEFENCE_2
-		}
+		component = { slot = SMALL_GUN_01 template = POINT_DEFENCE_2 }
+		component = { slot = SMALL_GUN_02 template = POINT_DEFENCE_2 }
 		
 	}
 	required_component= COMBAT_COMPUTER_PICKET_SAPIENT
@@ -680,34 +246,19 @@ ship_design = {
 	section = {
 		template = BATTLESHIP_BOW_M2S4
 		slot = bow
-		component = {
-			slot = EXTRA_LARGE_01
-			template = ARC_EMITTER_2
-		}
+		component = { slot = EXTRA_LARGE_01 template = ARC_EMITTER_2 }
 	}
 	section = {
 		template = BATTLESHIP_MID_L3
 		slot = bow
-		component = {
-			slot = LARGE_GUN_01
-			template = SPACE_CLOUD_LIGHTNING
-		}
-		component = {
-			slot = LARGE_GUN_02
-			template = SPACE_CLOUD_LIGHTNING
-		}
-		component = {
-			slot = LARGE_GUN_03
-			template = SPACE_CLOUD_LIGHTNING
-		}		
+		component = { slot = LARGE_GUN_01 template = SPACE_CLOUD_LIGHTNING }
+		component = { slot = LARGE_GUN_02 template = SPACE_CLOUD_LIGHTNING }
+		component = { slot = LARGE_GUN_03 template = SPACE_CLOUD_LIGHTNING }		
 	}
 	section = {
 		template = BATTLESHIP_STERN_L1
 		slot = bow
-		component = {
-			slot = LARGE_GUN_01
-			template = SPACE_CLOUD_LIGHTNING
-		}	
+		component = { slot = LARGE_GUN_01 template = SPACE_CLOUD_LIGHTNING }	
 	}
 	required_component="COMBAT_COMPUTER_LINE_DEFAULT"
 	required_component="SHIP_THRUSTER_3"
@@ -726,38 +277,14 @@ ship_design = {
 		template = space_cloud_section
 		slot = "mid"
 
-		component = {
-			slot = "LARGE_GUN_01"
-			template = Kirakishou_Blast
-		}
-		component = {
-			slot = "LARGE_GUN_02"
-			template = Kirakishou_Blast
-		}
-		component = {
-			slot = "LARGE_GUN_03"
-			template = Kirakishou_Blast
-		}
-		component = {
-			slot = "LARGE_GUN_04"
-			template = Kirakishou_Blast
-		}
-		component = {
-			slot = "LARGE_GUN_05"
-			template = Kirakishou_Blast
-		}
-		component = {
-			slot = "LARGE_GUN_06"
-			template = Kirakishou_Blast
-		}
-		component = {
-			slot = "LARGE_GUN_07"
-			template = Kirakishou_Blast
-		}
-		component = {
-			slot = "LARGE_GUN_08"
-			template = Kirakishou_Blast
-		}
+		component = { slot = "LARGE_GUN_01" template = Kirakishou_Blast }
+		component = { slot = "LARGE_GUN_02" template = Kirakishou_Blast }
+		component = { slot = "LARGE_GUN_03" template = Kirakishou_Blast }
+		component = { slot = "LARGE_GUN_04" template = Kirakishou_Blast }
+		component = { slot = "LARGE_GUN_05" template = Kirakishou_Blast }
+		component = { slot = "LARGE_GUN_06" template = Kirakishou_Blast }
+		component = { slot = "LARGE_GUN_07" template = Kirakishou_Blast }
+		component = { slot = "LARGE_GUN_08" template = Kirakishou_Blast }
 	}
 	required_component="COMBAT_COMPUTER_LINE_DEFAULT"
 	required_component="SHIP_THRUSTER_1"
@@ -774,10 +301,7 @@ ship_design = {	#stage1
 		template = "ge_kirakishou_hostile_ship"
 		slot = "mid"
 
-		component = {
-			slot = "MEDIUM_GUN_01"
-			template = "Kirakishou_Blast"
-		}
+		component = { slot = "MEDIUM_GUN_01" template = "Kirakishou_Blast" }
 		 component = {
 		 	slot = "MEDIUM_GUN_02"
 		 	template = "Kirakishou_Blast"
@@ -790,42 +314,15 @@ ship_design = {	#stage1
 		 	slot = "MEDIUM_GUN_04"
 		 	template = "Kirakishou_Blast"
 		 }
-		component = {
-			slot = LARGE_UTILITY_1
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_5
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_6
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_7
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_8
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = AUX_UTILITY_1
-			template = GE_RDS_L
-		}
+		component = { slot = LARGE_UTILITY_1 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_2 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_3 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_4 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_5 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_6 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_7 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_8 template = LARGE_G_SHIELD }
+		component = { slot = AUX_UTILITY_1 template = GE_RDS_L }
 	}
 	required_component= "COMBAT_COMPUTER_LINE_DEFAULT"
 	required_component= SHIP_THRUSTER_1
@@ -842,70 +339,25 @@ ship_design = {	#stage2
 		template = "ge_kirakishou_hostile_ship_dh"
 		slot = "mid"
 
-		component = {
-			slot = "MEDIUM_GUN_01"
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = "MEDIUM_GUN_02"
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = "MEDIUM_GUN_03"
-			template = "Kirakishou_Blast"
-		}
+		component = { slot = "MEDIUM_GUN_01" template = "Kirakishou_Blast" }
+		component = { slot = "MEDIUM_GUN_02" template = "Kirakishou_Blast" }
+		component = { slot = "MEDIUM_GUN_03" template = "Kirakishou_Blast" }
 		# component = {
 		# 	slot = "MEDIUM_GUN_04"
 		# 	template = "Kirakishou_Blast"
 		# }
-		component = {
-			slot = LARGE_UTILITY_1
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_5
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_6
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_7
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_8
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_9
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_10
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = AUX_UTILITY_1
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_2
-			template = GE_RDS_L
-		}
+		component = { slot = LARGE_UTILITY_1 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_2 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_3 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_4 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_5 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_6 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_7 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_8 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_9 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_10 template = LARGE_G_SHIELD }
+		component = { slot = AUX_UTILITY_1 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_2 template = GE_RDS_L }
 	}
 	required_component= "COMBAT_COMPUTER_LINE_DEFAULT"
 	required_component= SHIP_THRUSTER_1
@@ -922,98 +374,29 @@ ship_design = {	#stage3
 		template = "ge_kirakishou_hostile_ship_et"
 		slot = "mid"
 
-		component = {
-			slot = "MEDIUM_GUN_01"
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = "MEDIUM_GUN_02"
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = "MEDIUM_GUN_03"
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = "MEDIUM_GUN_04"
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = LARGE_GUN_01
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = LARGE_GUN_02
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = LARGE_UTILITY_1
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_5
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_6
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_7
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_8
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_9
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_10
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_11
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_12
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_13
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_14
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = AUX_UTILITY_1
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_2
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_1
-			template = GE_RDS_L
-		}
+		component = { slot = "MEDIUM_GUN_01" template = "Kirakishou_Blast" }
+		component = { slot = "MEDIUM_GUN_02" template = "Kirakishou_Blast" }
+		component = { slot = "MEDIUM_GUN_03" template = "Kirakishou_Blast" }
+		component = { slot = "MEDIUM_GUN_04" template = "Kirakishou_Blast" }
+		component = { slot = LARGE_GUN_01 template = "Kirakishou_Blast" }
+		component = { slot = LARGE_GUN_02 template = "Kirakishou_Blast" }
+		component = { slot = LARGE_UTILITY_1 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_2 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_3 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_4 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_5 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_6 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_7 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_8 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_9 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_10 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_11 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_12 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_13 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_14 template = LARGE_G_SHIELD }
+		component = { slot = AUX_UTILITY_1 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_2 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_1 template = GE_RDS_L }
 	}
 	required_component= "COMBAT_COMPUTER_LINE_DEFAULT"
 	required_component= SHIP_THRUSTER_1
@@ -1030,124 +413,37 @@ ship_design = {	#stage3
 		template = "ge_kirakishou_hostile_ship_everything"
 		slot = "mid"
 
-		component = {
-			slot = "MEDIUM_GUN_01"
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = "MEDIUM_GUN_02"
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = "MEDIUM_GUN_03"
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = "MEDIUM_GUN_04"
-			template = "Kirakishou_Blast"
-		}
+		component = { slot = "MEDIUM_GUN_01" template = "Kirakishou_Blast" }
+		component = { slot = "MEDIUM_GUN_02" template = "Kirakishou_Blast" }
+		component = { slot = "MEDIUM_GUN_03" template = "Kirakishou_Blast" }
+		component = { slot = "MEDIUM_GUN_04" template = "Kirakishou_Blast" }
 
-		component = {
-			slot = LARGE_GUN_01
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = LARGE_GUN_02
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = LARGE_GUN_03
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = LARGE_GUN_04
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = LARGE_GUN_05
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = LARGE_GUN_06
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = LARGE_GUN_07
-			template = "Kirakishou_Blast"
-		}
-		component = {
-			slot = LARGE_GUN_08
-			template = "Kirakishou_Blast"
-		}
+		component = { slot = LARGE_GUN_01 template = "Kirakishou_Blast" }
+		component = { slot = LARGE_GUN_02 template = "Kirakishou_Blast" }
+		component = { slot = LARGE_GUN_03 template = "Kirakishou_Blast" }
+		component = { slot = LARGE_GUN_04 template = "Kirakishou_Blast" }
+		component = { slot = LARGE_GUN_05 template = "Kirakishou_Blast" }
+		component = { slot = LARGE_GUN_06 template = "Kirakishou_Blast" }
+		component = { slot = LARGE_GUN_07 template = "Kirakishou_Blast" }
+		component = { slot = LARGE_GUN_08 template = "Kirakishou_Blast" }
 
-		component = {
-			slot = LARGE_UTILITY_1
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_5
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_6
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_7
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_8
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_9
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_10
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_11
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_12
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_13
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_14
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = AUX_UTILITY_1
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_2
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_1
-			template = GE_RDS_L
-		}
+		component = { slot = LARGE_UTILITY_1 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_2 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_3 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_4 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_5 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_6 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_7 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_8 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_9 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_10 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_11 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_12 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_13 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_14 template = LARGE_G_SHIELD }
+		component = { slot = AUX_UTILITY_1 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_2 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_1 template = GE_RDS_L }
 	}
 	required_component= "COMBAT_COMPUTER_LINE_DEFAULT"
 	required_component= SHIP_THRUSTER_1
@@ -1162,42 +458,15 @@ ship_design = {
 		template = "ge_black_dragon_core"
 		slot = core
 
-		component = {
-			slot = xl_gun_01
-			template = DRAGON_WEAPON_ICE
-		}
-		component = {
-			slot = LARGE_GUN_01
-			template = "PSIONIC_BLAST_1"
-		}
-		component = {
-			slot = LARGE_GUN_02
-			template = "PSIONIC_BLAST_1"
-		}
-		component = {
-			slot = LARGE_GUN_03
-			template = "PSIONIC_BLAST_1"
-		}
-		component = {
-			slot = LARGE_GUN_04
-			template = "PSIONIC_BLAST_1"
-		}
-		component = {
-			slot = pd_01
-			template = DRAGON_TERTIARY_WEAPON_ICE
-		}
-		component = {
-			slot = pd_02
-			template = DRAGON_TERTIARY_WEAPON_ICE
-		}
-		component = {
-			slot = pd_03
-			template = DRAGON_TERTIARY_WEAPON_ICE
-		}
-		component = {
-			slot = pd_04
-			template = DRAGON_TERTIARY_WEAPON_ICE
-		}
+		component = { slot = xl_gun_01 template = DRAGON_WEAPON_ICE }
+		component = { slot = LARGE_GUN_01 template = "PSIONIC_BLAST_1" }
+		component = { slot = LARGE_GUN_02 template = "PSIONIC_BLAST_1" }
+		component = { slot = LARGE_GUN_03 template = "PSIONIC_BLAST_1" }
+		component = { slot = LARGE_GUN_04 template = "PSIONIC_BLAST_1" }
+		component = { slot = pd_01 template = DRAGON_TERTIARY_WEAPON_ICE }
+		component = { slot = pd_02 template = DRAGON_TERTIARY_WEAPON_ICE }
+		component = { slot = pd_03 template = DRAGON_TERTIARY_WEAPON_ICE }
+		component = { slot = pd_04 template = DRAGON_TERTIARY_WEAPON_ICE }
 	}
 	required_component= GE_COMBAT_COMPUTER_PICKET
 	required_component= SHIP_THRUSTER_1
@@ -1220,231 +489,63 @@ ship_design = {
 	section = {
 		template = ROZ_ITQ_ship
 		slot = "mid"
-		component = {
-			slot = TITANIC_01
-			template = GE_T_BEAM
-		}
-		component = {
-			slot = TITANIC_02
-			template = GE_T_BEAM
-		}
-		component = {
-			slot = LARGE_GUN_01
-			template = roz_iqt_gun
-		}
-		component = {
-			slot = LARGE_GUN_02
-			template = roz_iqt_gun
-		}
-		component = {
-			slot = LARGE_GUN_03
-			template = roz_iqt_gun
-		}
-		component = {
-			slot = LARGE_GUN_04
-			template = roz_iqt_gun
-		}
-		component = {
-			slot = LARGE_GUN_05
-			template = roz_iqt_gun
-		}
-		component = {
-			slot = LARGE_GUN_06
-			template = roz_iqt_gun
-		}
-		component = {
-			slot = LARGE_GUN_07
-			template = roz_iqt_gun
-		}
-		component = {
-			slot = LARGE_GUN_08
-			template = roz_iqt_gun
-		}
-		component = {
-			slot = LARGE_GUN_09
-			template = roz_iqt_gun
-		}component = {
-			slot = LARGE_GUN_10
-			template = roz_iqt_gun
-		}
-		component = {
-			slot = LARGE_GUN_11
-			template = roz_iqt_gun
-		}
-		component = {
-			slot = LARGE_GUN_12
-			template = roz_iqt_gun
-		}
-		component = {
-			slot = PD_01
-			template = GE_PD
-		}
-		component = {
-			slot = PD_02
-			template = GE_PD
-		}
-		component = {
-			slot = PD_03
-			template = GE_PD
-		}
-		component = {
-			slot = PD_04
-			template = GE_PD
-		}
-		component = {
-			slot = PD_05
-			template = GE_PD
-		}
-		component = {
-			slot = PD_06
-			template = GE_PD
-		}
+		component = { slot = TITANIC_01 template = GE_T_BEAM }
+		component = { slot = TITANIC_02 template = GE_T_BEAM }
+		component = { slot = LARGE_GUN_01 template = roz_iqt_gun }
+		component = { slot = LARGE_GUN_02 template = roz_iqt_gun }
+		component = { slot = LARGE_GUN_03 template = roz_iqt_gun }
+		component = { slot = LARGE_GUN_04 template = roz_iqt_gun }
+		component = { slot = LARGE_GUN_05 template = roz_iqt_gun }
+		component = { slot = LARGE_GUN_06 template = roz_iqt_gun }
+		component = { slot = LARGE_GUN_07 template = roz_iqt_gun }
+		component = { slot = LARGE_GUN_08 template = roz_iqt_gun }
+		component = { slot = LARGE_GUN_09 template = roz_iqt_gun }component = { slot = LARGE_GUN_10 template = roz_iqt_gun }
+		component = { slot = LARGE_GUN_11 template = roz_iqt_gun }
+		component = { slot = LARGE_GUN_12 template = roz_iqt_gun }
+		component = { slot = PD_01 template = GE_PD }
+		component = { slot = PD_02 template = GE_PD }
+		component = { slot = PD_03 template = GE_PD }
+		component = { slot = PD_04 template = GE_PD }
+		component = { slot = PD_05 template = GE_PD }
+		component = { slot = PD_06 template = GE_PD }
 
-		component = {
-			slot = LARGE_UTILITY_1
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_5
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_6
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_7
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_8
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_9
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_10
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_11
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_12
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_13
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_14
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_15
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_16
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_17
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_18
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_19
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_20
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_21
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_22
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_23
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_24
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_25
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_26
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_27
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_28
-			template = LARGE_SF_ARMOR
-		}
+		component = { slot = LARGE_UTILITY_1 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_2 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_3 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_4 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_5 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_6 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_7 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_8 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_9 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_10 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_11 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_12 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_13 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_14 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_15 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_16 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_17 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_18 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_19 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_20 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_21 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_22 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_23 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_24 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_25 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_26 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_27 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_28 template = LARGE_SF_ARMOR }
 
-		component = {
-			slot = AUX_UTILITY_1
-			template = GE_CB_L
-		}
-		component = {
-			slot = AUX_UTILITY_2
-			template = GE_CB_L
-		}
-		component = {
-			slot = AUX_UTILITY_3
-			template = GE_CB_L
-		}
-		component = {
-			slot = AUX_UTILITY_4
-			template = GE_CB_L
-		}
-		component = {
-			slot = AUX_UTILITY_5
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_6
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_7
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_8
-			template = GE_RDS_L
-		}
+		component = { slot = AUX_UTILITY_1 template = GE_CB_L }
+		component = { slot = AUX_UTILITY_2 template = GE_CB_L }
+		component = { slot = AUX_UTILITY_3 template = GE_CB_L }
+		component = { slot = AUX_UTILITY_4 template = GE_CB_L }
+		component = { slot = AUX_UTILITY_5 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_6 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_7 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_8 template = GE_RDS_L }
 
 	}
 	required_component = COLOSSUS_GE_REACTOR
@@ -1461,10 +562,7 @@ ship_design = {
 	section = {
 		template = ROZ_ITQ_ship
 		slot = "mid"
-		component = {
-			slot = TITANIC_01
-			template = ge_sgt_normal_beam
-		}
+		component = { slot = TITANIC_01 template = ge_sgt_normal_beam }
 	}
 
 	required_component = COLOSSUS_GE_REACTOR
@@ -1482,374 +580,104 @@ ship_design = {
 	section = {
 		template = roz_juggernaut_wanxiang_section
 		slot = "mid"
-		component = {
-			slot = PLANET_KILLER_GUN_01
-			template = roz_juggernaut_wanxiang_deployer
-		}
+		component = { slot = PLANET_KILLER_GUN_01 template = roz_juggernaut_wanxiang_deployer }
 
-		component = {
-			slot = "TITANIC_01"
-			template = "GE_T_BEAM"
-		}
-		component = {
-			slot = "TITANIC_02"
-			template = "GE_T_BEAM"
-		}
-		component = {
-			slot = "TITANIC_03"
-			template = "GE_T_BEAM"
-		}
+		component = { slot = "TITANIC_01" template = "GE_T_BEAM" }
+		component = { slot = "TITANIC_02" template = "GE_T_BEAM" }
+		component = { slot = "TITANIC_03" template = "GE_T_BEAM" }
 
-		component = {
-			slot = "LARGE_GUN_01"
-			template = "GE_GRAVITY_BURST"
-		}
-		component = {
-			slot = "LARGE_GUN_02"
-			template = "GE_GRAVITY_BURST"
-		}
-		component = {
-			slot = "LARGE_GUN_03"
-			template = "GE_GRAVITY_BURST"
-		}
-		component = {
-			slot = "LARGE_GUN_04"
-			template = "GE_GRAVITY_BURST"
-		}
-		component = {
-			slot = "LARGE_GUN_05"
-			template = "GE_GRAVITY_BURST"
-		}
-		component = {
-			slot = "LARGE_GUN_06"
-			template = "GE_GRAVITY_BURST"
-		}
-		component = {
-			slot = "LARGE_GUN_07"
-			template = "GE_LARGE_LASER_CANNON"
-		}
-		component = {
-			slot = "LARGE_GUN_08"
-			template = "GE_LARGE_LASER_CANNON"
-		}
-		component = {
-			slot = "LARGE_GUN_09"
-			template = "GE_LARGE_LASER_CANNON"
-		}
-		component = {
-			slot = "LARGE_GUN_10"
-			template = "GE_LARGE_LASER_CANNON"
-		}
-		component = {
-			slot = "LARGE_GUN_11"
-			template = "GE_LARGE_LASER_CANNON"
-		}
-		component = {
-			slot = "LARGE_GUN_12"
-			template = "GE_LARGE_LASER_CANNON"
-		}
+		component = { slot = "LARGE_GUN_01" template = "GE_GRAVITY_BURST" }
+		component = { slot = "LARGE_GUN_02" template = "GE_GRAVITY_BURST" }
+		component = { slot = "LARGE_GUN_03" template = "GE_GRAVITY_BURST" }
+		component = { slot = "LARGE_GUN_04" template = "GE_GRAVITY_BURST" }
+		component = { slot = "LARGE_GUN_05" template = "GE_GRAVITY_BURST" }
+		component = { slot = "LARGE_GUN_06" template = "GE_GRAVITY_BURST" }
+		component = { slot = "LARGE_GUN_07" template = "GE_LARGE_LASER_CANNON" }
+		component = { slot = "LARGE_GUN_08" template = "GE_LARGE_LASER_CANNON" }
+		component = { slot = "LARGE_GUN_09" template = "GE_LARGE_LASER_CANNON" }
+		component = { slot = "LARGE_GUN_10" template = "GE_LARGE_LASER_CANNON" }
+		component = { slot = "LARGE_GUN_11" template = "GE_LARGE_LASER_CANNON" }
+		component = { slot = "LARGE_GUN_12" template = "GE_LARGE_LASER_CANNON" }
 
-		component = {
-			slot = "Craft_1"
-			template = "ge_strike_craft_fighter"
-		}
-		component = {
-			slot = "Craft_2"
-			template = "ge_strike_craft_xuefeng"
-		}
-		component = {
-			slot = "Craft_3"
-			template = "ge_strike_craft_xuefeng"
-		}
-		component = {
-			slot = "Craft_4"
-			template = "ge_strike_craft_xuefeng"
-		}
+		component = { slot = "Craft_1" template = "ge_strike_craft_fighter" }
+		component = { slot = "Craft_2" template = "ge_strike_craft_xuefeng" }
+		component = { slot = "Craft_3" template = "ge_strike_craft_xuefeng" }
+		component = { slot = "Craft_4" template = "ge_strike_craft_xuefeng" }
 
-		component = {
-			slot = "PD_01"
-			template = GE_PD
-		}
-		component = {
-			slot = "PD_02"
-			template = GE_PD
-		}
-		component = {
-			slot = "PD_03"
-			template = GE_PD
-		}
-		component = {
-			slot = "PD_04"
-			template = GE_PD
-		}
-		component = {
-			slot = "PD_05"
-			template = GE_PD
-		}
-		component = {
-			slot = "PD_06"
-			template = GE_PD
-		}
+		component = { slot = "PD_01" template = GE_PD }
+		component = { slot = "PD_02" template = GE_PD }
+		component = { slot = "PD_03" template = GE_PD }
+		component = { slot = "PD_04" template = GE_PD }
+		component = { slot = "PD_05" template = GE_PD }
+		component = { slot = "PD_06" template = GE_PD }
 
-		component = {
-			slot = LARGE_UTILITY_1
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_5
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_6
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_7
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_8
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_9
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_10
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_11
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_12
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_13
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_14
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_15
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_16
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_17
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_18
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_19
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_20
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_21
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_22
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_23
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_24
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_25
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_26
-			template = LARGE_G_SHIELD
-		}
+		component = { slot = LARGE_UTILITY_1 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_2 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_3 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_4 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_5 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_6 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_7 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_8 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_9 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_10 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_11 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_12 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_13 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_14 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_15 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_16 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_17 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_18 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_19 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_20 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_21 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_22 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_23 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_24 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_25 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_26 template = LARGE_G_SHIELD }
 
-		component = {
-			slot = LARGE_UTILITY_27
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_28
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_29
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_30
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_31
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_32
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_33
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_34
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_35
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_36
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_37
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_38
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_39
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_40
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_41
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_42
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_43
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_44
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_45
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_46
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_47
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_48
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_49
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_50
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_51
-			template = LARGE_SF_ARMOR
-		}
-		component = {
-			slot = LARGE_UTILITY_52
-			template = LARGE_SF_ARMOR
-		}
+		component = { slot = LARGE_UTILITY_27 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_28 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_29 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_30 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_31 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_32 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_33 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_34 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_35 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_36 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_37 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_38 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_39 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_40 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_41 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_42 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_43 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_44 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_45 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_46 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_47 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_48 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_49 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_50 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_51 template = LARGE_SF_ARMOR }
+		component = { slot = LARGE_UTILITY_52 template = LARGE_SF_ARMOR }
 
 
-		component = {
-			slot = AUX_UTILITY_1
-			template = GE_CB_L
-		}
-		component = {
-			slot = AUX_UTILITY_2
-			template = GE_CB_L
-		}
-		component = {
-			slot = AUX_UTILITY_3
-			template = GE_CB_L
-		}
-		component = {
-			slot = AUX_UTILITY_4
-			template = GE_CB_L
-		}
-		component = {
-			slot = AUX_UTILITY_5
-			template = GE_CB_L
-		}
-		component = {
-			slot = AUX_UTILITY_6
-			template = GE_CB_L
-		}
-		component = {
-			slot = AUX_UTILITY_7
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_8
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_9
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_10
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_11
-			template = GE_RDS_L
-		}
-		component = {
-			slot = AUX_UTILITY_12
-			template = GE_RDS_L
-		}
+		component = { slot = AUX_UTILITY_1 template = GE_CB_L }
+		component = { slot = AUX_UTILITY_2 template = GE_CB_L }
+		component = { slot = AUX_UTILITY_3 template = GE_CB_L }
+		component = { slot = AUX_UTILITY_4 template = GE_CB_L }
+		component = { slot = AUX_UTILITY_5 template = GE_CB_L }
+		component = { slot = AUX_UTILITY_6 template = GE_CB_L }
+		component = { slot = AUX_UTILITY_7 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_8 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_9 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_10 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_11 template = GE_RDS_L }
+		component = { slot = AUX_UTILITY_12 template = GE_RDS_L }
 
 
 	}
@@ -1879,75 +707,24 @@ ship_design = {
 	section = {
 		template = roz_crisis_ship_probe_section
 		slot = "mid"
-		component = {
-			slot = G_01
-			template = roz_reality_disruptor
-		}
-		component = {
-			slot = LARGE_GUN_01
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_02
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_03
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_04
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = SMALL_GUN_01
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_02
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = STRIKE_CRAFT_01
-			template = roz_abyss_swarmers
-		}
+		component = { slot = G_01 template = roz_reality_disruptor }
+		component = { slot = LARGE_GUN_01 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_02 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_03 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_04 template = roz_abyss_rift_cascade_l }
+		component = { slot = SMALL_GUN_01 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_02 template = roz_abyssal_glare }
+		component = { slot = STRIKE_CRAFT_01 template = roz_abyss_swarmers }
 
-		component = {
-			slot = LARGE_UTILITY_1
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_5
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_6
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_7
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_8
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = AUX_UTILITY_1
-			template = roz_abyss_aux
-		}
+		component = { slot = LARGE_UTILITY_1 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_2 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_3 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_4 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_5 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_6 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_7 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_8 template = roz_abyss_armor }
+		component = { slot = AUX_UTILITY_1 template = roz_abyss_aux }
 	}
 
 	required_component = roz_abyss_power_core
@@ -1964,307 +741,88 @@ ship_design = {
 	section = {
 		template = roz_crisis_ship_titan_bow_section
 		slot = "mid"
-		component = {
-			slot = TITANIC_01
-			template = roz_abyss_churning_locus_titan
-		}
-		component = {
-			slot = G_01
-			template = roz_reality_disruptor
-		}
-		component = {
-			slot = G_02
-			template = roz_reality_disruptor
-		}
-		component = {
-			slot = LARGE_UTILITY_1
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_5
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_6
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_7
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_8
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_9
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_10
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_11
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_12
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_13
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_14
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = AUX_UTILITY_1
-			template = roz_abyss_aux
-		}
+		component = { slot = TITANIC_01 template = roz_abyss_churning_locus_titan }
+		component = { slot = G_01 template = roz_reality_disruptor }
+		component = { slot = G_02 template = roz_reality_disruptor }
+		component = { slot = LARGE_UTILITY_1 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_2 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_3 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_4 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_5 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_6 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_7 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_8 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_9 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_10 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_11 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_12 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_13 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_14 template = roz_abyss_armor }
+		component = { slot = AUX_UTILITY_1 template = roz_abyss_aux }
 	}
 	section = {
 		template = roz_crisis_ship_titan_mid_section
 		slot = "mid"
-		component = {
-			slot = LARGE_GUN_01
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_02
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_03
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_04
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_05
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_06
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_07
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_08
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_09
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_10
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_11
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_12
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = G_01
-			template = roz_reality_disruptor
-		}
-		component = {
-			slot = G_02
-			template = roz_reality_disruptor
-		}
-		component = {
-			slot = LARGE_UTILITY_1
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_5
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_6
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_7
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_8
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_9
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_10
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_11
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_12
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_13
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_14
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = AUX_UTILITY_1
-			template = roz_abyss_aux
-		}
+		component = { slot = LARGE_GUN_01 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_02 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_03 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_04 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_05 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_06 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_07 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_08 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_09 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_10 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_11 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_12 template = roz_abyss_rift_cascade_l }
+		component = { slot = G_01 template = roz_reality_disruptor }
+		component = { slot = G_02 template = roz_reality_disruptor }
+		component = { slot = LARGE_UTILITY_1 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_2 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_3 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_4 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_5 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_6 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_7 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_8 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_9 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_10 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_11 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_12 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_13 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_14 template = roz_abyss_armor }
+		component = { slot = AUX_UTILITY_1 template = roz_abyss_aux }
 	}
 	section = {
 		template = roz_crisis_ship_titan_stern_section
 		slot = "stern"
-		component = {
-			slot = SMALL_GUN_01
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_02
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_03
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_04
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = STRIKE_CRAFT_01
-			template = roz_abyss_swarmers
-		}
-		component = {
-			slot = STRIKE_CRAFT_02
-			template = roz_abyss_swarmers
-		}
-		component = {
-			slot = STRIKE_CRAFT_03
-			template = roz_abyss_swarmers
-		}
-		component = {
-			slot = STRIKE_CRAFT_04
-			template = roz_abyss_swarmers
-		}
-		component = {
-			slot = STRIKE_CRAFT_05
-			template = roz_abyss_swarmers
-		}
-		component = {
-			slot = STRIKE_CRAFT_06
-			template = roz_abyss_swarmers
-		}
+		component = { slot = SMALL_GUN_01 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_02 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_03 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_04 template = roz_abyssal_glare }
+		component = { slot = STRIKE_CRAFT_01 template = roz_abyss_swarmers }
+		component = { slot = STRIKE_CRAFT_02 template = roz_abyss_swarmers }
+		component = { slot = STRIKE_CRAFT_03 template = roz_abyss_swarmers }
+		component = { slot = STRIKE_CRAFT_04 template = roz_abyss_swarmers }
+		component = { slot = STRIKE_CRAFT_05 template = roz_abyss_swarmers }
+		component = { slot = STRIKE_CRAFT_06 template = roz_abyss_swarmers }
 
-		component = {
-			slot = LARGE_UTILITY_1
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_5
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_6
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_7
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_8
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_9
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_10
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_11
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_12
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_13
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_14
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = AUX_UTILITY_1
-			template = roz_abyss_aux
-		}
-		component = {
-			slot = AUX_UTILITY_2
-			template = roz_abyss_aux
-		}
+		component = { slot = LARGE_UTILITY_1 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_2 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_3 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_4 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_5 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_6 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_7 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_8 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_9 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_10 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_11 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_12 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_13 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_14 template = roz_abyss_armor }
+		component = { slot = AUX_UTILITY_1 template = roz_abyss_aux }
+		component = { slot = AUX_UTILITY_2 template = roz_abyss_aux }
 	}
 
 	required_component = roz_abyss_power_core
@@ -2282,168 +840,48 @@ ship_design = {
 	section = {
 		template = roz_crisis_ship_battlecruiser_section
 		slot = "mid"
-		component = {
-			slot = G_01
-			template = roz_reality_disruptor
-		}
+		component = { slot = G_01 template = roz_reality_disruptor }
 
-		component = {
-			slot = XL_01
-			template = roz_abyss_rift_cascade_xl
-		}
-		component = {
-			slot = G_02
-			template = roz_reality_disruptor
-		}
-		component = {
-			slot = LARGE_GUN_01
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_02
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_03
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_04
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_05
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_06
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_07
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_08
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = SMALL_GUN_01
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_02
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_03
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_04
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_05
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_06
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = STRIKE_CRAFT_01
-			template = roz_abyss_swarmers
-		}
-		component = {
-			slot = STRIKE_CRAFT_02
-			template = roz_abyss_swarmers
-		}
+		component = { slot = XL_01 template = roz_abyss_rift_cascade_xl }
+		component = { slot = G_02 template = roz_reality_disruptor }
+		component = { slot = LARGE_GUN_01 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_02 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_03 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_04 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_05 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_06 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_07 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_08 template = roz_abyss_rift_cascade_l }
+		component = { slot = SMALL_GUN_01 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_02 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_03 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_04 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_05 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_06 template = roz_abyssal_glare }
+		component = { slot = STRIKE_CRAFT_01 template = roz_abyss_swarmers }
+		component = { slot = STRIKE_CRAFT_02 template = roz_abyss_swarmers }
 
-		component = {
-			slot = LARGE_UTILITY_1
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_5
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_6
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_7
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_8
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_9
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_10
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_11
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_12
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_13
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_14
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_15
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_16
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_17
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_18
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = AUX_UTILITY_1
-			template = roz_abyss_aux
-		}
-		component = {
-			slot = AUX_UTILITY_2
-			template = roz_abyss_aux
-		}
-		component = {
-			slot = AUX_UTILITY_3
-			template = roz_abyss_aux
-		}
+		component = { slot = LARGE_UTILITY_1 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_2 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_3 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_4 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_5 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_6 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_7 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_8 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_9 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_10 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_11 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_12 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_13 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_14 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_15 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_16 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_17 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_18 template = roz_abyss_armor }
+		component = { slot = AUX_UTILITY_1 template = roz_abyss_aux }
+		component = { slot = AUX_UTILITY_2 template = roz_abyss_aux }
+		component = { slot = AUX_UTILITY_3 template = roz_abyss_aux }
 	}
 
 	required_component = roz_abyss_power_core
@@ -2460,361 +898,101 @@ ship_design = {
 	section = {
 		template = roz_crisis_madgod_boss_section
 		slot = "mid"
-		component = {
-			slot = G_01
-			template = roz_reality_disruptor
-		}
-		component = {
-			slot = G_02
-			template = roz_reality_disruptor
-		}
-		component = {
-			slot = G_03
-			template = roz_reality_disruptor
-		}
-		component = {
-			slot = G_04
-			template = roz_reality_disruptor
-		}
+		component = { slot = G_01 template = roz_reality_disruptor }
+		component = { slot = G_02 template = roz_reality_disruptor }
+		component = { slot = G_03 template = roz_reality_disruptor }
+		component = { slot = G_04 template = roz_reality_disruptor }
 
 		component = {
-			slot =TITANIC_01
-			template = roz_abyss_churning_locus_titan
-		}
+			slot =TITANIC_01 template = roz_abyss_churning_locus_titan }
 		component = {
-			slot =TITANIC_02
-			template = roz_abyss_churning_locus_titan
-		}
+			slot =TITANIC_02 template = roz_abyss_churning_locus_titan }
 		component = {
-			slot =TITANIC_03
-			template = roz_abyss_churning_locus_titan
-		}
+			slot =TITANIC_03 template = roz_abyss_churning_locus_titan }
 		component = {
-			slot =TITANIC_04
-			template = roz_abyss_churning_locus_titan
-		}
+			slot =TITANIC_04 template = roz_abyss_churning_locus_titan }
 
-		component = {
-			slot = LARGE_GUN_01
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_02
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_03
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_04
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_05
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_06
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_07
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_08
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_09
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_10
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_11
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = LARGE_GUN_12
-			template = roz_abyss_rift_cascade_l
-		}
-		component = {
-			slot = SMALL_GUN_01
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_02
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_03
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_04
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_05
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_06
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_07
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = SMALL_GUN_08
-			template = roz_abyssal_glare
-		}
-		component = {
-			slot = STRIKE_CRAFT_01
-			template = roz_abyss_swarmers
-		}
-		component = {
-			slot = STRIKE_CRAFT_02
-			template = roz_abyss_swarmers
-		}
-		component = {
-			slot = STRIKE_CRAFT_03
-			template = roz_abyss_swarmers
-		}
-		component = {
-			slot = STRIKE_CRAFT_04
-			template = roz_abyss_swarmers
-		}
-		component = {
-			slot = STRIKE_CRAFT_05
-			template = roz_abyss_swarmers
-		}
-		component = {
-			slot = STRIKE_CRAFT_06
-			template = roz_abyss_swarmers
-		}
+		component = { slot = LARGE_GUN_01 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_02 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_03 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_04 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_05 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_06 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_07 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_08 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_09 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_10 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_11 template = roz_abyss_rift_cascade_l }
+		component = { slot = LARGE_GUN_12 template = roz_abyss_rift_cascade_l }
+		component = { slot = SMALL_GUN_01 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_02 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_03 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_04 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_05 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_06 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_07 template = roz_abyssal_glare }
+		component = { slot = SMALL_GUN_08 template = roz_abyssal_glare }
+		component = { slot = STRIKE_CRAFT_01 template = roz_abyss_swarmers }
+		component = { slot = STRIKE_CRAFT_02 template = roz_abyss_swarmers }
+		component = { slot = STRIKE_CRAFT_03 template = roz_abyss_swarmers }
+		component = { slot = STRIKE_CRAFT_04 template = roz_abyss_swarmers }
+		component = { slot = STRIKE_CRAFT_05 template = roz_abyss_swarmers }
+		component = { slot = STRIKE_CRAFT_06 template = roz_abyss_swarmers }
 
-		component = {
-			slot = LARGE_UTILITY_1
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_2
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_3
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_4
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_5
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_6
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_7
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_8
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_9
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_10
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_11
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_12
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_13
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_14
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_15
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_16
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_17
-			template = LARGE_G_SHIELD
-		}
-		component = {
-			slot = LARGE_UTILITY_18
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_19
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_20
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_21
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_22
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_23
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_24
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_25
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_26
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_27
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_28
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_29
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_30
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_31
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_32
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_33
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_34
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_35
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_36
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_37
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_38
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_39
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_40
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_41
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_42
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_43
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_44
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_45
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_46
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_47
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = LARGE_UTILITY_48
-			template = roz_abyss_armor
-		}
-		component = {
-			slot = AUX_UTILITY_1
-			template = roz_abyss_aux
-		}
-		component = {
-			slot = AUX_UTILITY_2
-			template = roz_abyss_aux
-		}
-		component = {
-			slot = AUX_UTILITY_3
-			template = roz_abyss_aux
-		}
-		component = {
-			slot = AUX_UTILITY_4
-			template = roz_abyss_aux
-		}
-		component = {
-			slot = AUX_UTILITY_5
-			template = roz_abyss_aux
-		}
-		component = {
-			slot = AUX_UTILITY_6
-			template = roz_abyss_aux
-		}
+		component = { slot = LARGE_UTILITY_1 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_2 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_3 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_4 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_5 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_6 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_7 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_8 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_9 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_10 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_11 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_12 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_13 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_14 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_15 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_16 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_17 template = LARGE_G_SHIELD }
+		component = { slot = LARGE_UTILITY_18 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_19 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_20 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_21 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_22 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_23 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_24 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_25 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_26 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_27 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_28 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_29 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_30 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_31 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_32 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_33 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_34 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_35 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_36 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_37 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_38 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_39 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_40 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_41 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_42 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_43 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_44 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_45 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_46 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_47 template = roz_abyss_armor }
+		component = { slot = LARGE_UTILITY_48 template = roz_abyss_armor }
+		component = { slot = AUX_UTILITY_1 template = roz_abyss_aux }
+		component = { slot = AUX_UTILITY_2 template = roz_abyss_aux }
+		component = { slot = AUX_UTILITY_3 template = roz_abyss_aux }
+		component = { slot = AUX_UTILITY_4 template = roz_abyss_aux }
+		component = { slot = AUX_UTILITY_5 template = roz_abyss_aux }
+		component = { slot = AUX_UTILITY_6 template = roz_abyss_aux }
 	}
 
 	required_component = roz_abyss_power_core

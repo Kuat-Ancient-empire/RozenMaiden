@@ -1322,13 +1322,13 @@ country_event = {
 			force_add_civic = civic_cor_time_honored
 			force_add_civic = civic_cor_celestial_military
 		}
-		while = {
-			count = 1
-			limit = {}
-			if = {
-				limit = {}
-			}
-		}
+		# while = {
+		# 	count = 1
+		# 	limit = {}
+		# 	if = {
+		# 		limit = {}
+		# 	}
+		# }
 		hidden_effect = {
 			set_country_flag = ge_final_ascension_project_completed
 			every_country = {

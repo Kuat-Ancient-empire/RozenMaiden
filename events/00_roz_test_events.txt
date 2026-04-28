@@ -1563,10 +1563,6 @@ country_event = {
 					has_country_flag = enable_roz_cheat
 				}
 				roz_lgate_create_reward_planet = yes
-				# country_event = {
-				# 	id = ge_test_event.202
-				# 	days = 40
-				# }
 			}
 		}
 	}
@@ -1671,110 +1667,110 @@ country_event = { # Remove Date Distortion
 
 #effect = {country_event = { id = ge_event.2063 }  event_target:krks_bf_situation_target@root = { add_situation_progress = -100 } every_situation = { limit = { is_situation_type = kirakishou_planet_invasion_situation } destroy_situation = this } every_situation = { limit = { is_situation_type = kirakishou_battle_field_situation }destroy_situation = this } remove_modifier = disable_ap_ge_0 remove_modifier = disable_ap_ge_1 remove_country_flag = ge_krks_time_freeze_loop_start_flag if = {limit = { has_country_flag = roz_krks_dl_normal_flag } add_modifier = { modifier = ge_gravity_knowledge_plus } } if = { limit = { has_country_flag = roz_krks_dl_early_flag } add_modifier = { modifier = ge_gravity_knowledge } } capital_scope = { switch = { trigger = has_modifier ge_kirakishou_invasion_lv1 = { remove_modifier = ge_kirakishou_invasion_lv1 } ge_kirakishou_invasion_lv2 = { remove_modifier = ge_kirakishou_invasion_lv2 } ge_kirakishou_invasion_lv2.5 = { remove_modifier = ge_kirakishou_invasion_lv2.5 } ge_kirakishou_invasion_lv3 = { remove_modifier = ge_kirakishou_invasion_lv3 } ge_kirakishou_invasion_lv4 = { remove_modifier = ge_kirakishou_invasion_lv4 } ge_kirakishou_invasion_lv5 = { remove_modifier = ge_kirakishou_invasion_lv5 } ge_kirakishou_invasion_lvMAX = { remove_modifier = ge_kirakishou_invasion_lvMAX } } }}
 
-country_event = {
-	id = ge_test_event.1200
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		create_country = {
-			name = "NAME_nfield"
-			type = ROZ_friendly
-			flag = {
-				icon = {
-					category = "nfield_flags"
-					file = "flag_ge_nfield.dds"
-				}
-				background = {
-					category = "backgrounds"
-					file = "inverted_v.dds"
-				}
-				colors = {
-					"black"
-					"black"
-					"null"
-					"null"
-				}
-			}
-			effect = {
-				save_global_event_target_as = roz_suigintou_global_country_test
-				establish_communications_no_message = prev
-				set_graphical_culture = prev
-				set_faction_hostility = {
-					target = prev
-					set_friendly = yes
-				}
+# country_event = {
+# 	id = ge_test_event.1200
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		create_country = {
+# 			name = "NAME_nfield"
+# 			type = ROZ_friendly
+# 			flag = {
+# 				icon = {
+# 					category = "nfield_flags"
+# 					file = "flag_ge_nfield.dds"
+# 				}
+# 				background = {
+# 					category = "backgrounds"
+# 					file = "inverted_v.dds"
+# 				}
+# 				colors = {
+# 					"black"
+# 					"black"
+# 					"null"
+# 					"null"
+# 				}
+# 			}
+# 			effect = {
+# 				save_global_event_target_as = roz_suigintou_global_country_test
+# 				establish_communications_no_message = prev
+# 				set_graphical_culture = prev
+# 				set_faction_hostility = {
+# 					target = prev
+# 					set_friendly = yes
+# 				}
 
-			}
-		}
-		last_created_country = {
-			create_leader = {
-				class = commander
-				name = 111
-				skill = 1
-				traits = {
-					trait = leader_trait_roz_test_HD
-				}
-				effect = {
-					save_global_event_target_as = roz_test_leader_target
-				}
-			}
-		}
-	}
-}
+# 			}
+# 		}
+# 		last_created_country = {
+# 			create_leader = {
+# 				class = commander
+# 				name = 111
+# 				skill = 1
+# 				traits = {
+# 					trait = leader_trait_roz_test_HD
+# 				}
+# 				effect = {
+# 					save_global_event_target_as = roz_test_leader_target
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
-planet_event = {
-	id = ge_test_event.1201
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		always = no
-		owner = {
-			is_ai = no
-		}
-		any_fleet_in_orbit = {
-			owner = {
-				is_hostile_to = root.owner
-				has_existing_ship_design = HD_SD_super_destroyer
-			}
-			any_owned_ship = {
-				is_ship_size = transport
-			}
-		}
-	}
-	immediate = {
-		planet_event = {
-			id = ge_test_event.1202
-			days = 18
-		}
-		from = {
-			save_event_target_as = roz_test_country_bombardment
-		}
-	}
-}
+# planet_event = {
+# 	id = ge_test_event.1201
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		always = no
+# 		owner = {
+# 			is_ai = no
+# 		}
+# 		any_fleet_in_orbit = {
+# 			owner = {
+# 				is_hostile_to = root.owner
+# 				has_existing_ship_design = HD_SD_super_destroyer
+# 			}
+# 			any_owned_ship = {
+# 				is_ship_size = transport
+# 			}
+# 		}
+# 	}
+# 	immediate = {
+# 		planet_event = {
+# 			id = ge_test_event.1202
+# 			days = 18
+# 		}
+# 		from = {
+# 			save_event_target_as = roz_test_country_bombardment
+# 		}
+# 	}
+# }
 
-planet_event = {
-	id = ge_test_event.1202
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
+# planet_event = {
+# 	id = ge_test_event.1202
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
 
-	}
-	immediate = {
-		random_planet_army = {
-			limit = {
-				owner = {
-					is_hostile = root.owner
-				}
-			}
-			set_leader = event_target:roz_test_leader_target
-			assign_leader = event_target:roz_test_leader_target
-		}
-		random_ground_combat_attacker = {
-			set_leader = event_target:roz_test_leader_target
-			assign_leader = event_target:roz_test_leader_target
-		}
-	}
-}
+# 	}
+# 	immediate = {
+# 		random_planet_army = {
+# 			limit = {
+# 				owner = {
+# 					is_hostile = root.owner
+# 				}
+# 			}
+# 			set_leader = event_target:roz_test_leader_target
+# 			assign_leader = event_target:roz_test_leader_target
+# 		}
+# 		random_ground_combat_attacker = {
+# 			set_leader = event_target:roz_test_leader_target
+# 			assign_leader = event_target:roz_test_leader_target
+# 		}
+# 	}
+# }
 
 
 

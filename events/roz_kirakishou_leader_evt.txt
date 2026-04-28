@@ -1059,9 +1059,9 @@ country_event = {
                 id = roz_krks_leader_evt.51
             }
         }
-        else_if = {
-            limit = {}
-        }
+        # else_if = {
+        #     limit = {}
+        # }
     }
 }
 

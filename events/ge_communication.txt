@@ -675,18 +675,16 @@ country_event = {
 		#发电查询
 		name = ge_communication.100.display_fadian
 		trigger = {
-			AND = {
-				has_country_flag = ge_jyzzlfd_flag
-				has_technology = tech_titans
-				has_technology = tech_ge_HTEP
-				check_variable = {
-					which = ge_country_generatorship_var
-					value > 0
-				}
-				any_owned_fleet = {
-					any_owned_ship = {
-						has_component = ge_shippart_hyper_generator
-					}
+			has_country_flag = ge_jyzzlfd_flag
+			has_technology = tech_titans
+			has_technology = tech_ge_HTEP
+			check_variable = {
+				which = ge_country_generatorship_var
+				value > 0
+			}
+			any_owned_fleet = {
+				any_owned_ship = {
+					has_component = ge_shippart_hyper_generator
 				}
 			}
 		}

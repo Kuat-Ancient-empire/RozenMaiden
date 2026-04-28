@@ -66,13 +66,11 @@ country_event = {
                     reroll_random = yes
                     modifier = {
                         factor = 2
-                        AND = {
-                            has_country_flag = roz_date_ld_flag
-                            has_country_flag = roz_date_tg_flag
-                            has_country_flag = roz_date_nibiru_flag
-                            has_country_flag = roz_date_uhive_flag
-                            has_country_flag = roz_date_thive_flag
-                        }
+                        has_country_flag = roz_date_ld_flag
+                        has_country_flag = roz_date_tg_flag
+                        has_country_flag = roz_date_nibiru_flag
+                        has_country_flag = roz_date_uhive_flag
+                        has_country_flag = roz_date_thive_flag
                     }
                     country_event = {
                         id = ge_communication.2510
@@ -654,9 +652,7 @@ country_event = {
             }
             set_country_flag = roz_date_kyj_flag
         }
-        add_resource = {
-            time = 1921
-        }
+        add_resource = { time = 1921 }
     }
     option = {
         name = ge_communication.2507.aa

@@ -1825,7 +1825,7 @@ roz_abyss_vass_create = {
 						set_age = 25
 						class = scientist
 						skill = 1
-						traits = { trait = random_trait trait = random_trait }
+						randomize_traits = yes
 						species = owner_main_species
 						effect = { last_created_fleet = { assign_leader = prev } }
 					}
@@ -1861,7 +1861,7 @@ roz_abyss_vass_create = {
 						set_age = 21
 						class = commander
 						skill = 1
-						traits = { trait = random_trait trait = random_trait }
+						randomize_traits = yes
 						species = owner_main_species
 						effect = { last_created_fleet = { assign_leader = prev } }
 					}

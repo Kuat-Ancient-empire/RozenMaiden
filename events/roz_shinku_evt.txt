@@ -2697,15 +2697,15 @@ country_event = {
     immediate = {   #比较ai态度并计数
         play_sound = { sound = event_red_alert location = root.capital_scope }
         roz_unholy_invasion_dip_effect = {  #支持者
-            sign = ">="
+          #  sign = ">="
             opinion = aggressive
         }
         roz_unholy_invasion_dip_effect = {  #反对者
-            sign = "<="
+           # sign = "<="
             opinion = negative
         }
         roz_unholy_invasion_dip_effect = {  #中立者
-            sign = "="
+           # sign = "="
             opinion = neutral
         }
 
@@ -2887,18 +2887,18 @@ country_event = {
         }
         ###
         roz_unholy_invasion_dip_effect = {  #支持者
-            sign = ">"
-            opinion_set = neutral
+          #  sign = ">"
+          #  opinion_set = neutral
             opinion = aggressive
         }
         roz_unholy_invasion_dip_effect = {  #反对者
-            sign = "<"
-            opinion_set = neutral
+          #  sign = "<"
+          #  opinion_set = neutral
             opinion = negative
         }
         roz_unholy_invasion_dip_effect = {  #中立者
-            sign = "="
-            opinion_set = neutral
+           # sign = "="
+          #  opinion_set = neutral
             opinion = neutral
         }
         ###深渊仆从国计数
