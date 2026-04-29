@@ -69,7 +69,7 @@ roz_hinaichigo_country_create = {
 roz_madgod_country_initiate = {
 	optimize_memory
 	create_species = {
-		name_list = roz_abyss_faction
+		namelist = roz_abyss_faction
 		name = NAME_roz_Uranus
 		class = random_non_machine
 		portrait = roz_exd_red

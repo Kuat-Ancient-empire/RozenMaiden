@@ -263,7 +263,6 @@ utility_component_template = {
     resources = {
         category = ship_components
     }
-    potential = { always = no }
     modifier = {
         ship_shield_regen_add_static = -100
         ship_armor_regen_add_static = -100
@@ -288,7 +287,6 @@ utility_component_template = {
     resources = {
         category = ship_components
     }
-    potential = { always = no }
     sensor_range = 24
     hyperlane_range = 24
     modifier = {
@@ -316,7 +314,6 @@ utility_component_template = {
     resources = {
         category = ship_components
     }
-    potential = { always = no }
     potential = {
         always = no
     }
@@ -341,7 +338,6 @@ utility_component_template = {
     resources = {
         category = ship_components
     }
-    potential = { always = no }
     modifier = {
         ship_base_speed_mult = 0.20
         ship_evasion_add = 15
@@ -371,7 +367,6 @@ utility_component_template = {
         ship_weapon_damage = 0.10
         ship_fire_rate_mult = 0.10
     }
-    potential = { always = no }
     class_restriction = {
         shipclass_military
     }
@@ -401,9 +396,6 @@ utility_component_template = {
         ship_tracking_add = 5
         ship_accuracy_add = 5
     }
-    potential = {
-        always = no
-    }
     potential = { always = no }
     class_restriction = {
         shipclass_military
@@ -424,7 +416,6 @@ utility_component_template = {
     resources = {
         category = ship_components
     }
-    potential = { always = no }
     modifier = {
         ship_weapon_damage = 0.2
         ship_weapon_range_mult = 0.15
