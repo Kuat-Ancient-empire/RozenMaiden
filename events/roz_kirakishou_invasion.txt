@@ -61,7 +61,7 @@ country_event = {
     immediate = {
         set_country_flag = ge_nfield_develop_flag
         ##后续再改吧……这个多此一举的event target
-        event_target:roz_n_field_site_target@root = {
+        event_target:roz_n_field_site_target@root? = {
             save_event_target_as = Nfield_black_hole_target
         }
     }
@@ -125,9 +125,9 @@ country_event = {
                     }
                     random_galaxy_planet = {
                         limit = {
-                            has_planet_flag = ge_planet_flag_sgt@root
+                            has_carrier_flag = ge_carrier_flag_sgt@root
                         }
-                        set_planet_flag = roz_sgt_site_krksevtc_flag
+                        set_carrier_flag = roz_sgt_site_krksevtc_flag
                     }
                 }
             }
@@ -156,9 +156,9 @@ country_event = {
             }
             random_galaxy_planet = {
                 limit = {
-                    has_planet_flag = ge_planet_flag_sgt@root
+                    has_carrier_flag = ge_carrier_flag_sgt@root
                 }
-                set_planet_flag = roz_sgt_site_krksevtc_flag
+                set_carrier_flag = roz_sgt_site_krksevtc_flag
             }
         }
     }
@@ -773,10 +773,10 @@ country_event = {	#谣言
             if = {
                 limit = {
                     NOT = {
-                        has_planet_flag = ge_krks_pi_cap_flag
+                        has_carrier_flag = ge_krks_pi_cap_flag
                     }
                 }
-                set_planet_flag = ge_krks_pi_cap_flag
+                set_carrier_flag = ge_krks_pi_cap_flag
             }
         }
     }
@@ -1728,8 +1728,8 @@ country_event = {	#血舞
             }
         }
         hidden_effect = {
-            event_target:roz_n_field_site_target@root = {
-                solar_system = {
+            event_target:roz_n_field_site_target@root? = {
+                solar_system? = {
                     create_ge_defense_fleet = yes
                 }
             }
@@ -1761,9 +1761,9 @@ country_event = {	#陷落 #局势开始
             while = {
                 count = 10
                 limit = {
-                    NOT = { has_planet_flag = roz_krks_inv_zakko_fleet_planet }
+                    NOT = { has_carrier_flag = roz_krks_inv_zakko_fleet_planet }
                 }
-                set_planet_flag = roz_krks_inv_zakko_fleet_planet
+                set_carrier_flag = roz_krks_inv_zakko_fleet_planet
             }
         }
     }
@@ -1772,7 +1772,7 @@ country_event = {	#陷落 #局势开始
         remove_modifier = ge_gravity_knowledge_plus
         remove_modifier = ge_gravity_knowledge
         hidden_effect = {
-            event_target:roz_n_field_site_target@root = {
+            event_target:roz_n_field_site_target@root? = {
                 create_ge_kirakishou_hostile_ship = yes
                 last_created_country = {
                     last_created_fleet = {
@@ -1783,7 +1783,7 @@ country_event = {	#陷落 #局势开始
             every_owned_planet = { #雪华绮晶的杂兵
                 limit = {
                     is_under_colonization = no
-                    has_planet_flag = roz_krks_inv_zakko_fleet_planet
+                    has_carrier_flag = roz_krks_inv_zakko_fleet_planet
                 }
                 create_fleet = {
                     name = "NAME_roz_krks_zakko"
@@ -1797,7 +1797,7 @@ country_event = {	#陷落 #局势开始
                         set_owner = last_created_country
                         if = {
                             limit = {
-                                root = {
+                                root? = {
                                     has_country_flag = roz_krks_dl_normal_flag
                                 }
                             }
@@ -1827,7 +1827,7 @@ country_event = {	#陷落 #局势开始
 
                             else_if = {
                                 limit = {
-                                    root = {
+                                    root? = {
                                         has_country_flag = roz_krks_dl_early_flag
                                     }
                                 }
@@ -2002,7 +2002,7 @@ country_event = {	#成龙.jpg
             #exile_leader_as = this
         }
         ####幽默save，不过懒得改了
-        event_target:roz_n_field_site_target@root = {
+        event_target:roz_n_field_site_target@root? = {
             create_ge_stg_bwd_ship = yes
         }
         #让水银灯指挥刚召唤的黑羽龙
@@ -2020,7 +2020,7 @@ country_event = {	#成龙.jpg
         #        }
         #        randomize_traits = no
         #        skip_background_generation = yes
-        #        custom_catch_phrase = suigintou_sci_catch_phrase
+        #        custom_catch_phrase = suigintou_scientist_catch_phrase
         #        custom_description = suigintou_backstory
         #
         #        effect = {
@@ -2116,7 +2116,7 @@ country_event = {	#开局时停
                     count = 0
                     limit = { is_ship_size = ge_black_dragon }
                 }
-                solar_system = {
+                solar_system? = {
                     has_star_flag = ge_suigintou_site_star_flag@root
                 }
 
@@ -2156,9 +2156,9 @@ country_event = {
     immediate = {
         every_owned_fleet = {
             limit = {
-                solar_system = {
+                solar_system? = {
                     any_system_planet = {
-                        has_planet_flag = ge_planet_flag_sgt@root
+                        has_carrier_flag = ge_carrier_flag_sgt@root
                     }
                 }
                 count_owned_ship = {
@@ -2185,13 +2185,13 @@ country_event = {
 #    hide_window = yes
 #    is_triggered_only = yes
 #    trigger = {
-#        fromfromfrom = {
+#        fromfromfrom? = {
 #            has_fleet_flag = kirakishou_hostile_fleet_flag
 #        }
 #        has_country_flag = ge_krks_time_freeze_loop_start_flag
 #    }
 #    immediate = {
-#        fromfrom = {
+#        fromfrom? = {
 #
 #            set_fleet_flag = kirakishou_effected_fleet_flag
 #        }
@@ -2204,7 +2204,7 @@ country_event = {
 #    hide_window = yes
 #    is_triggered_only = yes
 #    trigger = {
-#        fromfrom = {
+#        fromfrom? = {
 #            has_fleet_flag = kirakishou_effected_fleet_flag
 #            NOT = {
 #                leader = {
@@ -2212,7 +2212,7 @@ country_event = {
 #                }
 #            }
 #        }
-#        fromfromfrom = {
+#        fromfromfrom? = {
 #            has_fleet_flag = kirakishou_hostile_fleet_flag
 #        }
 #        has_country_flag = ge_krks_time_freeze_loop_start_flag
@@ -2220,13 +2220,13 @@ country_event = {
 #    immediate = {
 #        if = {
 #            limit = {
-#                fromfrom = {
+#                fromfrom? = {
 #                    NOT = {
 #                        has_modifier = ge_modifier_time_freeze
 #                    }
 #                }
 #            }
-#            fromfrom = {
+#            fromfrom? = {
 #                add_modifier = {
 #                    modifier = ge_modifier_time_freeze
 #                    days = 6
@@ -2273,7 +2273,7 @@ country_event = {	#防御舰队被消灭
     fire_only_once = yes
     picture = GFX_evt_exploding_ship
     trigger = {
-        fromfrom = {
+        fromfrom? = {
             has_fleet_flag = ge_nf_defense_fleet_flag
         }
     }
@@ -2343,12 +2343,12 @@ country_event = {
     fire_only_once = yes
     trigger = {
         has_country_flag = kirakishou_hostile_country
-        fromfrom = {
+        fromfrom? = {
             has_fleet_flag = kirakishou_Avatar_fleet_flag
         }
     }
     immediate = {
-        from = {
+        from? = {
             country_event = {
                 id = ge_event.3051
                 days = 1
@@ -2369,11 +2369,11 @@ country_event = {
         #防止多次触发
         NOT = { has_country_flag = roz_bf_stage2_flag }
         has_country_flag = roz_krks_invision_begin_flag
-        event_target:kirakishou_hostile_country@root = { exists = this }
+        event_target:kirakishou_hostile_country@root? = { exists = this }
     }
     immediate = {
         set_country_flag = roz_bf_stage2_flag
-        event_target:krks_bf_situation_target@root = {
+        event_target:krks_bf_situation_target@root? = {
             add_situation_progress = -25
         }
         if = {
@@ -2390,7 +2390,7 @@ country_event = {
         name = ge_event.3051.aa
         hidden_effect = {
             ##唉
-            event_target:roz_n_field_site_target@root = {
+            event_target:roz_n_field_site_target@root? = {
                 create_ge_kirakishou_hostile_ship_stage2 = yes
             }
         }
@@ -2437,13 +2437,13 @@ country_event = {
     fire_only_once = yes
     trigger = {
         has_country_flag = kirakishou_hostile_country
-        fromfrom = {
+        fromfrom? = {
             has_fleet_flag = kirakishou_dh_fleet_flag
         }
     }
 
     immediate = {
-        from = {
+        from? = {
             country_event = {
                 id = ge_event.3061
                 days = 1
@@ -2462,7 +2462,7 @@ country_event = {
     trigger = {
         NOT = { has_country_flag = roz_bf_stage3_flag }
         has_country_flag = roz_krks_invision_begin_flag
-        event_target:kirakishou_hostile_country@root = { exists = this }
+        event_target:kirakishou_hostile_country@root? = { exists = this }
     }
     immediate = {
         if = {
@@ -2481,9 +2481,9 @@ country_event = {
         default_hide_option = yes
         hidden_effect = {
             set_country_flag = roz_bf_stage3_flag
-            event_target:roz_n_field_site_target@root = {
+            event_target:roz_n_field_site_target@root? = {
                 create_ge_kirakishou_hostile_ship_stage3 = yes
-                event_target:krks_bf_situation_target@root = {
+                event_target:krks_bf_situation_target@root? = {
                     add_situation_progress = -25
                 }
             }
@@ -2539,12 +2539,12 @@ country_event = {
     fire_only_once = yes
     trigger = {
         has_country_flag = kirakishou_hostile_country
-        fromfrom = {
+        fromfrom? = {
             has_fleet_flag = kirakishou_et_fleet_flag
         }
     }
     immediate = {
-        from = {
+        from? = {
             country_event = {
                 id = ge_event.3071
                 days = 1
@@ -2563,13 +2563,13 @@ country_event = {
     trigger = {
         NOT = { has_country_flag = roz_bf_stage4_flag }
         has_country_flag = roz_krks_invision_begin_flag
-        event_target:kirakishou_hostile_country@root = { exists = this }
+        event_target:kirakishou_hostile_country@root? = { exists = this }
     }
     immediate = {
         set_country_flag = roz_bf_stage4_flag
-        event_target:roz_n_field_site_target@root = {
+        event_target:roz_n_field_site_target@root? = {
             create_ge_kirakishou_hostile_ship_stage4 = yes
-            event_target:krks_bf_situation_target@root = {
+            event_target:krks_bf_situation_target@root? = {
                 add_situation_progress = -25
             }
             every_owned_fleet = {
@@ -2579,7 +2579,7 @@ country_event = {
                 }
             }
         }
-        event_target:roz_suigintou_owner@root = {
+        event_target:roz_suigintou_owner@root? = {
             every_controlled_fleet = {
                 add_modifier = {
                     modifier = ge_modifier_time_freeze
@@ -2614,7 +2614,7 @@ country_event = {
                         current_stage = kr_bf_stage_1
                     }
                     NOT = {
-                        event_target:kirakishou_hostile_country@root = {
+                        event_target:kirakishou_hostile_country@root? = {
                             NOT = {
                                 any_owned_fleet = {
                                     has_fleet_flag = kirakishou_hostile_fleet_flag
@@ -2646,7 +2646,7 @@ country_event = {
             current_stage = kr_bf_stage_1
         }
         NOT = {
-            event_target:kirakishou_hostile_country@root = {
+            event_target:kirakishou_hostile_country@root? = {
                 NOT = {
                     any_owned_fleet = {
                         has_fleet_flag = kirakishou_hostile_fleet_flag
@@ -2671,7 +2671,7 @@ country_event = {
                         is_situation_type = kirakishou_battle_field_situation
                         current_stage = kr_bf_stage_1
                     }
-                    event_target:kirakishou_hostile_country@root = {
+                    event_target:kirakishou_hostile_country@root? = {
                         any_owned_fleet = {
                             has_fleet_flag = kirakishou_hostile_fleet_flag
                         }
@@ -2792,7 +2792,7 @@ country_event = {
             is_situation_type = kirakishou_battle_field_situation
             current_stage = kr_bf_stage_1
         }
-        event_target:kirakishou_hostile_country@root = {
+        event_target:kirakishou_hostile_country@root? = {
             any_owned_fleet = {
                 has_fleet_flag = kirakishou_hostile_fleet_flag
             }
@@ -2807,7 +2807,7 @@ country_event = {
                         is_situation_type = kirakishou_battle_field_situation
                         current_stage = kr_bf_stage_1
                     }
-                    event_target:kirakishou_hostile_country@root = {
+                    event_target:kirakishou_hostile_country@root? = {
                         any_owned_fleet = {
                             has_fleet_flag = kirakishou_hostile_fleet_flag
                         }
@@ -2834,7 +2834,7 @@ country_event = {
             is_situation_type = kirakishou_battle_field_situation
             current_stage = kr_bf_stage_1
         }
-        event_target:kirakishou_hostile_country@root = {
+        event_target:kirakishou_hostile_country@root? = {
             any_owned_fleet = {
                 has_fleet_flag = kirakishou_hostile_fleet_flag
             }
@@ -3189,10 +3189,10 @@ country_event = {
     fire_only_once = yes
     trigger = {
         OR = {
-            event_target:kirakishou_Avatar_fleet@root = {
+            event_target:kirakishou_Avatar_fleet@root? = {
                 has_hp < 10
             }
-            event_target:kirakishou_hostile_country@root = {
+            event_target:kirakishou_hostile_country@root? = {
                 NOT = {
                     any_owned_fleet = {
                         has_fleet_flag = kirakishou_hostile_fleet_flag
@@ -3237,7 +3237,7 @@ country_event = {	#自爆
 #    hide_window = yes
 #    is_triggered_only = yes
 #    trigger = {
-#        event_target:kirakishou_hostile_country@root = {
+#        event_target:kirakishou_hostile_country@root? = {
 #            NOT = {
 #                any_owned_fleet = {
 #                    has_fleet_flag = kirakishou_dh_fleet_flag
@@ -3250,7 +3250,7 @@ country_event = {	#自爆
 #        }
 #    }
 #    immediate = {
-#        event_target:kirakishou_hostile_country@root = {
+#        event_target:kirakishou_hostile_country@root? = {
 #            country_event = {
 #                id = ge_event.3061
 #            }
@@ -3271,7 +3271,7 @@ country_event = {
     immediate = {
         if = {
             limit = {
-                event_target:kirakishou_hostile_country@root = {
+                event_target:kirakishou_hostile_country@root? = {
                     any_owned_fleet = { has_fleet_flag = kirakishou_everything_fleet_flag }
                 }
             }
@@ -3282,7 +3282,7 @@ country_event = {
         }
         else_if = {
             limit = {
-                event_target:kirakishou_hostile_country@root = {
+                event_target:kirakishou_hostile_country@root? = {
                     NOT = {
                         any_owned_fleet = {
                             has_fleet_flag = kirakishou_hostile_fleet_flag
@@ -3314,14 +3314,14 @@ country_event = {	#战斗结束
         }
         OR = {
             AND = {
-                From = {
+                from? = {
                     is_same_empire = event_target:kirakishou_hostile_country@root
                 }
-                FromFromFrom = {
+                FromFromfrom? = {
                     has_fleet_flag = kirakishou_everything_fleet_flag
                 }
             }
-            event_target:kirakishou_hostile_country@root = {
+            event_target:kirakishou_hostile_country@root? = {
                 NOT = {
                     any_owned_fleet = {
                         has_fleet_flag = kirakishou_hostile_fleet_flag
@@ -3346,7 +3346,7 @@ country_event = {	#战斗结束
         #}
         remove_modifier = disable_ap_ge_0
         remove_modifier = disable_ap_ge_1
-        fromfromfrom = {
+        fromfromfrom? = {
             create_ambient_object = {
                 type = "star_explosion"
                 #duration = 4
@@ -3376,7 +3376,7 @@ country_event = {	#战斗结束
             limit = {
                 is_ship_size = ge_black_dragon
             }
-            solar_system = {
+            solar_system? = {
                 create_ambient_object = {
                     type = "star_explosion"
                     play_animation_once = yes
@@ -3405,12 +3405,12 @@ country_event = {	#战斗结束
             exile_leader_as = this.leader
             destroy_fleet = this
         }
-        event_target:roz_suigintou_bwg_leader_target@root = {
+        event_target:roz_suigintou_bwg_leader_target@root? = {
             unassign_leader = this
             exile_leader_as = this
         }
         #清理全局目标,以及flag
-        event_target:kirakishou_hostile_country@root = {
+        event_target:kirakishou_hostile_country@root? = {
             destroy_country = yes
         }
         clear_global_event_target = kirakishou_hostile_country@root
@@ -3421,7 +3421,7 @@ country_event = {	#战斗结束
         remove_country_flag = roz_krks_dl_early_flag
         remove_country_flag = roz_krks_story_begin_flag
 
-        event_target:krks_bf_situation_target@root = {
+        event_target:krks_bf_situation_target@root? = {
             add_situation_progress = -25
         }
         every_situation = { limit = { is_situation_type = kirakishou_battle_field_situation } destroy_situation = this }

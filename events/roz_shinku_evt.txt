@@ -1012,7 +1012,7 @@ country_event = {
     desc = "roz_shinku_evt.404.desc"
     picture = GFX_evt_roz_acknowledge_border
     trigger = {
-        # from = {
+        # from? = {
         #     is_situation_type = roz_awaken_of_shinku_1_acknowledge_border
         # }
         is_ai = no
@@ -1590,10 +1590,10 @@ country_event = {
             set_country_flag = roz_unholy_invasion_defend_proj_aggressive
             set_country_flag = ge_sgt_busy
             set_country_flag = ge_nfield_diplomacy_activated
-            event_target:roz_leader_kirakishou_global_target@root = {
+            event_target:roz_leader_kirakishou_global_target@root? = {
                 exile_leader_as = this
             }
-            event_target:roz_leader_suigintou_global_target@root = {
+            event_target:roz_leader_suigintou_global_target@root? = {
                 exile_leader_as = this
             }
             ruler = {
@@ -1622,11 +1622,11 @@ country_event = {
         remove_country_flag = unholy_invasion_defend_proj_aggressive
         remove_country_flag = ge_sgt_busy
         remove_country_flag = ge_nfield_diplomacy_activated
-        event_target:roz_leader_kirakishou_global_target@root = {
+        event_target:roz_leader_kirakishou_global_target@root? = {
             set_owner = root
             return_leader_from_exile = this
         }
-        event_target:roz_leader_suigintou_global_target@root = {
+        event_target:roz_leader_suigintou_global_target@root? = {
             set_owner = root
             return_leader_from_exile = this
         }
@@ -1654,10 +1654,10 @@ country_event = {
         }
     }
     after = {
-        event_target:roz_leader_kirakishou_global_target@root = {
+        event_target:roz_leader_kirakishou_global_target@root? = {
             add_experience = 1500
         }
-        event_target:roz_leader_suigintou_global_target@root = {
+        event_target:roz_leader_suigintou_global_target@root? = {
             add_experience = 1500
         }
         enable_special_project = {
@@ -1684,11 +1684,11 @@ country_event = {
         remove_country_flag = ge_sgt_busy
         remove_country_flag = ge_nfield_diplomacy_activated
         owner = {
-            event_target:roz_leader_kirakishou_global_target@root = {
+            event_target:roz_leader_kirakishou_global_target@root? = {
                 set_owner = root
                 return_leader_from_exile = this
             }
-            event_target:roz_leader_suigintou_global_target@root = {
+            event_target:roz_leader_suigintou_global_target@root? = {
                 set_owner = root
                 return_leader_from_exile = this
             }
@@ -1703,10 +1703,10 @@ country_event = {
         name =  roz_shinku_evt.433.bb
     }
     after = {
-        event_target:roz_leader_kirakishou_global_target@root = {
+        event_target:roz_leader_kirakishou_global_target@root? = {
             add_experience = 300
         }
-        event_target:roz_leader_suigintou_global_target@root = {
+        event_target:roz_leader_suigintou_global_target@root? = {
             add_experience = 300
         }
         hidden_effect = { 
@@ -1737,7 +1737,7 @@ country_event = {
             energy = -50000
             sr_rosa_mystica = -1000
         }
-        event_target:roz_outland_planet@root = {
+        event_target:roz_outland_planet@root? = {
             enable_special_project = {#在n之领域坟头刷
                 name = roz_unholy_invasion_defproj_1_decoy
                 owner = root
@@ -1819,17 +1819,17 @@ country_event = {
         This = {
             has_country_flag = roz_madgod_force_country_flag
         }
-        From = {    #player country
+        from? = {    #player country
             has_country_flag = roz_unholy_invasion_defend_flag
             has_country_flag = roz_leader_suigintou_get
             is_ai = no
         }
-        FromFrom = {    #enemy fleet
+        Fromfrom? = {    #enemy fleet
             has_fleet_flag = roz_madgod_jtcl_fleet
         }
     }
     immediate = {
-        From = {
+        from? = {
             country_event = {
                 id = roz_shinku_evt.440
             }
@@ -2504,8 +2504,8 @@ country_event = {
     }
     location = event_target:roz_outland_planet@root.solar_system.star
     immediate = {
-        event_target:roz_outland_planet@root = {
-            solar_system = {
+        event_target:roz_outland_planet@root? = {
+            solar_system? = {
                 star = { save_global_event_target_as = roz_outland_main_black_hole@root }
             }
         }
@@ -2542,8 +2542,8 @@ country_event = {   #部署墨水人诱饵装置
     location = event_target:roz_outland_main_black_hole@root
     immediate = {
         set_country_flag = roz_SK_4_decoyII_start
-        event_target:roz_outland_planet@root = {
-            solar_system = {
+        event_target:roz_outland_planet@root? = {
+            solar_system? = {
                 star = { save_global_event_target_as = roz_outland_main_black_hole@root }
             }
         }
@@ -2564,7 +2564,7 @@ country_event = {   #装置部署完成
         is_ai = no
     }
     immediate = {
-        event_target:roz_outland_main_black_hole@root = {
+        event_target:roz_outland_main_black_hole@root? = {
             create_ambient_object = {
                 type = roz_outland_main_black_hole_station
             }
@@ -2574,7 +2574,7 @@ country_event = {   #装置部署完成
     location = event_target:roz_outland_main_black_hole@root
     option = {
         name = roz_shinku_evt.521.aa
-        event_target:roz_outland_main_black_hole@root = {
+        event_target:roz_outland_main_black_hole@root? = {
             create_ambient_object = {
                 type = roz_SK4_decoyII_beacon
                 location = this
@@ -2624,7 +2624,7 @@ country_event = {   #混乱通讯 #深渊入侵正式开始
     }
     immediate = {
         set_country_flag = roz_abyss_faction_arrival
-        event_target:roz_madgod_force_country@root = { establish_communications_no_message = root }
+        event_target:roz_madgod_force_country@root? = { establish_communications_no_message = root }
         #4月内深渊不会刷怪
         set_timed_country_flag = { flag = roz_abyss_fleet_create_cd months = 4 }
     }
@@ -2671,7 +2671,7 @@ country_event = {   #混乱通讯 #深渊入侵正式开始
             set_variable = { which = roz_abyss_vass_country_amount value = 0 }
             every_country = {
                 limit = { has_country_flag = roz_abyss_vass_country }
-                root = { change_variable = { which = roz_abyss_vass_country_amount value = 1 } }
+                root? = { change_variable = { which = roz_abyss_vass_country_amount value = 1 } }
             }
             ###
             #country_event = { id = roz_shinku_evt.5231 days = 1 }
@@ -2905,7 +2905,7 @@ country_event = {
         # set_variable = { which = roz_abyss_vass_country_amount value = 0 }
         # every_playable_country = {
         #     limit = { has_country_flag = roz_abyss_vass_country }
-        #     root = { change_variable = { which = roz_abyss_vass_country_amount value = 1 } }
+        #     root? = { change_variable = { which = roz_abyss_vass_country_amount value = 1 } }
         # }
         ###
         country_event = {
@@ -2940,17 +2940,17 @@ country_event = {
             is_country_type = roz_madgod_empire
             has_country_flag = roz_abyss_vass_country
         }
-        From = {
+        from? = {
             OR = {
                 is_country_type = roz_madgod_empire
                 has_country_flag = roz_abyss_vass_country
             }
         }
-        #FromFrom = { fleet = { NOT = { has_fleet_flag = roz_abyss_fleet } } }
-        #FromFromFrom = { fleet = { has_fleet_flag = roz_abyss_fleet } }
+        #Fromfrom? = { fleet = { NOT = { has_fleet_flag = roz_abyss_fleet } } }
+        #FromFromfrom? = { fleet = { has_fleet_flag = roz_abyss_fleet } }
     }
     immediate = {
-        # FROM = {
+        # from? = {
         #     add_event_chain_counter = {
         #         event_chain = "roz_SK_madgod_invasion_main"
         #         counter = "roz_abyss_kills_us"
@@ -2992,7 +2992,7 @@ country_event = {
     show_sound = event_galactic_community
     trigger = {
         is_ai = no
-        from = {
+        from? = {
             is_same_value = event_target:roz_madgod_force_country@root
             is_country_type = roz_madgod_empire
         }
@@ -3032,14 +3032,14 @@ country_event = {
             is_country_type = roz_madgod_empire
             has_country_flag = roz_abyss_vass_country
         }
-        From = {
+        from? = {
             NOR = {
                 is_country_type = roz_madgod_empire
                 has_country_flag = roz_abyss_vass_country
             }
         }
-        FromFrom = { fleet = { has_fleet_flag = roz_abyss_fleet } }
-        FromFromFrom = { fleet = { NOT = { has_fleet_flag = roz_abyss_fleet } } }
+        Fromfrom? = { fleet = { has_fleet_flag = roz_abyss_fleet } }
+        FromFromfrom? = { fleet = { NOT = { has_fleet_flag = roz_abyss_fleet } } }
     }
 
     immediate = {
@@ -3071,10 +3071,10 @@ country_event = {
 #     is_triggered_only = yes
 #     trigger = {
 #         has_country_flag = roz_abyss_vass_country
-#         fromfrom = { NOT = { has_modifier = roz_abyss_vass_combat_negative_modifier } }
+#         fromfrom? = { NOT = { has_modifier = roz_abyss_vass_combat_negative_modifier } }
 #     }
 #     immediate = {
-#         fromfrom = {
+#         fromfrom? = {
 #             add_modifier = { modifier = roz_abyss_vass_combat_negative_modifier }
 #         }
 #     }
@@ -3102,7 +3102,7 @@ country_event = {
         #     every_owned_planet = {
         #         limit = {
         #             is_capital = no
-        #             solar_system = { any_system_planet = { is_colony = yes } }
+        #             solar_system? = { any_system_planet = { is_colony = yes } }
         #         }
         #         roz_abyss_fleet_create_small_defense_in_diff = {
         #             owner = prevprevprev
@@ -3113,7 +3113,7 @@ country_event = {
         #随机星系刷据点和守卫舰队
         roz_abyss_fleet_outpost_create_in_diff = yes
         #刷boss
-        event_target:roz_madgod_force_country@root = {
+        event_target:roz_madgod_force_country@root? = {
             #为深渊仆从国殖民地刷防御舰队
             every_owned_planet = {
                 limit = {
@@ -3146,28 +3146,28 @@ ship_event = {
     is_triggered_only = yes
     trigger = {
         is_ship_size = roz_crisis_madgod_boss
-        from = { owner = { NOT = { has_country_flag = roz_crisis_madgod_boss_first_blood } } }
+        from? = { owner = { NOT = { has_country_flag = roz_crisis_madgod_boss_first_blood } } }
     }
     immediate = {
         fleet = { remove_fleet_flag = roz_abyss_fleet }
         #由击败者触发
-        from = { owner = { country_event = { id = roz_shinku_evt.550 } } }
+        from? = { owner = { country_event = { id = roz_shinku_evt.550 } } }
         #复活
         if = {  #检测深渊势力是否只剩下boss星系且击杀者为非ai，如果返回yes，则只给予最后一次复活
             limit = {
-                from = { owner = { is_ai = no } }
+                from? = { owner = { is_ai = no } }
                 roz_is_all_abyss_killed_except_madgod_system = { scope = prev.from }
             }
             roz_ship_disable_protect_effect = yes
             set_disable_at_health = -1
-            from = { owner = {
+            from? = { owner = {
                 country_event = { id = roz_shinku_evt.555 }
                 set_country_flag = roz_crisis_madgod_boss_last_breath
             } }
         }
         else = {    #否则将无限复活
             ship_event = { id = roz_shinku_evt.549 days = 5 }
-            from = { owner = { country_event = { id = roz_shinku_evt.555 days = 5 } } }
+            from? = { owner = { country_event = { id = roz_shinku_evt.555 days = 5 } } }
         }
     }
 }
@@ -3180,7 +3180,7 @@ ship_event = {
     is_triggered_only = yes
     trigger = {
         is_ship_size = roz_crisis_madgod_boss
-        from = { owner = { has_country_flag = roz_crisis_madgod_boss_first_blood } }
+        from? = { owner = { has_country_flag = roz_crisis_madgod_boss_first_blood } }
     }
     immediate = {
         #复活
@@ -3188,14 +3188,14 @@ ship_event = {
             limit = { roz_is_all_abyss_killed_except_madgod_system = { scope = prev.from } }
             roz_ship_disable_protect_effect = yes
             set_disable_at_health = -1
-            from = { owner = {
+            from? = { owner = {
                 country_event = { id = roz_shinku_evt.555 }
                 set_country_flag = roz_crisis_madgod_boss_last_breath
             } }
         }
         else = {
             ship_event = { id = roz_shinku_evt.549 }
-            from = { owner = { country_event = { id = roz_shinku_evt.555 } } }
+            from? = { owner = { country_event = { id = roz_shinku_evt.555 } } }
         }
     }
 }
@@ -3318,11 +3318,11 @@ country_event = {
     is_triggered_only = yes
     picture = GFX_evt_roz_madgod_system
     trigger = {
-        fromfromfrom = {
+        fromfromfrom? = {
             exists = starbase
-            solar_system = { any_system_planet = { is_same_value = event_target:roz_outland_planet@root } }
+            solar_system? = { any_system_planet = { is_same_value = event_target:roz_outland_planet@root } }
         }
-        from = {
+        from? = {
             is_ai = no
             NOT = { has_country_flag = roz_crisis_madgod_system_lost_dont_remind }
             NOT = { has_active_event = { roz_shinku_evt.560 } }
@@ -3367,7 +3367,7 @@ country_event = {
     immediate = {
         if = {  #仆从国不更新寻路
             limit = { exists = event_target:roz_madgod_force_country@root }
-            event_target:roz_madgod_force_country@root = {
+            event_target:roz_madgod_force_country@root? = {
                 every_owned_fleet = {
                     limit = {
                         roz_is_abyss_attack_fleet = yes
@@ -3425,7 +3425,7 @@ country_event = {
 }
 
 #深渊阵营获得刷舰队次数(每摧毁一个殖民地获得一定基数)
-planet_event = {
+carrier_event = {
     id = roz_shinku_evt.564
     hide_window = yes
     is_triggered_only = yes
@@ -3473,7 +3473,7 @@ country_event = {
 }
 
 #殖民地星系被轰炸
-planet_event = {
+carrier_event = {
     id = roz_shinku_evt.566
     title = roz_shinku_evt.566.title
     desc = roz_shinku_evt.566.desc
@@ -3481,14 +3481,14 @@ planet_event = {
     picture = GFX_evt_small_space_battle
     location = this
     trigger = {
-        NOT = { has_planet_flag = roz_planet_has_being_bombarded }
+        NOT = { has_carrier_flag = roz_planet_has_being_bombarded }
         has_orbital_bombardment_stance = roz_crisis_armageddon
-        from = {
+        from? = {
             is_ai = no
             NOT = { has_country_flag = roz_unholy_invasion_starbase_destroy_dont_remind }
         }
     }
-    immediate = { set_timed_planet_flag = { flag = roz_planet_has_being_bombarded days = 360 } }
+    immediate = { set_timed_carrier_flag = { flag = roz_planet_has_being_bombarded days = 360 } }
     option = {
         name = roz_shinku_evt.566.aa
     }
@@ -3512,7 +3512,7 @@ country_event = {
         if = {
             limit = { exists = event_target:roz_madgod_force_country@root }
             remove_country_flag = roz_abyss_hunter_fleet_can_create
-            event_target:roz_madgod_force_country@root = {
+            event_target:roz_madgod_force_country@root? = {
                 set_variable = { which = roz_abyss_hunter_fleet_count value = 0 }
                 every_owned_fleet = {
                     limit = {
@@ -3523,24 +3523,24 @@ country_event = {
                             has_fleet_flag = roz_abyss_attack_fleet_marvelous
                         }
                     }
-                    prev = { change_variable = { which = roz_abyss_hunter_fleet_count value = 1 } }
+                    prev? = { change_variable = { which = roz_abyss_hunter_fleet_count value = 1 } }
                 }
                 #
                 if = {
                     limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 1 } } }
-                    if = { limit = { check_variable = { which = roz_abyss_hunter_fleet_count value <= 10 } } root = { set_country_flag = roz_abyss_hunter_fleet_can_create } }
+                    if = { limit = { check_variable = { which = roz_abyss_hunter_fleet_count value <= 10 } } root? = { set_country_flag = roz_abyss_hunter_fleet_can_create } }
                 }
                 else_if = {
                     limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 2 } } }
-                    if = { limit = { check_variable = { which = roz_abyss_hunter_fleet_count value <= 15 } } root = { set_country_flag = roz_abyss_hunter_fleet_can_create } }
+                    if = { limit = { check_variable = { which = roz_abyss_hunter_fleet_count value <= 15 } } root? = { set_country_flag = roz_abyss_hunter_fleet_can_create } }
                 }
                 else_if = {
                     limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 3 } } }
-                    if = { limit = { check_variable = { which = roz_abyss_hunter_fleet_count value <= 20 } } root = { set_country_flag = roz_abyss_hunter_fleet_can_create } }
+                    if = { limit = { check_variable = { which = roz_abyss_hunter_fleet_count value <= 20 } } root? = { set_country_flag = roz_abyss_hunter_fleet_can_create } }
                 }
                 else_if = {
                     limit = { event_target:global_event_country = { check_variable = { which = roz_unholy_invasion_difficulty value = 4 } } }
-                    if = { limit = { check_variable = { which = roz_abyss_hunter_fleet_count value <= 30 } } root = { set_country_flag = roz_abyss_hunter_fleet_can_create } }
+                    if = { limit = { check_variable = { which = roz_abyss_hunter_fleet_count value <= 30 } } root? = { set_country_flag = roz_abyss_hunter_fleet_can_create } }
                 }
             }
         }
@@ -3548,7 +3548,7 @@ country_event = {
 }
 
 #深渊的轨道轰炸
-planet_event = {
+carrier_event = {
     id =  roz_shinku_evt.568
     hide_window = yes
     is_triggered_only = yes
@@ -3580,8 +3580,8 @@ planet_event = {
             if = {
                 limit = { exists = orbital_defence }
                 destroy_fleet = orbital_defence
-                set_planet_flag = ruined_orbital_ring_planet
-                solar_system = {
+                set_carrier_flag = ruined_orbital_ring_planet
+                solar_system? = {
                     spawn_megastructure = {
                         type = orbital_ring_ruined
                         planet = prev
@@ -3637,9 +3637,9 @@ country_event = {
     hide_window = yes
     is_triggered_only = yes
     trigger = {
-        fromfromfrom = {
+        fromfromfrom? = {
             has_fleet_flag = roz_abyss_fleet_marvelous
-            solar_system = { has_star_flag = roz_abyss_fleet_outpost_system }
+            solar_system? = { has_star_flag = roz_abyss_fleet_outpost_system }
         }
         this = {
             NOR = {
@@ -3703,20 +3703,20 @@ country_event = {
     is_triggered_only = yes
     trigger = {
         has_country_flag = roz_abyss_faction_arrival
-        from = {
+        from? = {
             has_country_flag = roz_madgod_force_country_flag
         }
-        fromfromfrom = {
-            solar_system = { NOT = { has_star_flag = roz_outland_system } }
+        fromfromfrom? = {
+            solar_system? = { NOT = { has_star_flag = roz_outland_system } }
             has_fleet_flag = roz_abyss_fleet
         }
     }
     immediate = {
         if = {
-            limit = { fromfromfrom = { NOT = { any_fleet_in_system = { is_owned_by = prev } } } }
+            limit = { fromfromfrom? = { NOT = { any_fleet_in_system = { is_owned_by = prev } } } }
             country_event = { id = roz_shinku_evt.572 days = 1 }
         }
-        from = { save_event_target_as = roz_madgod_force_country_target }
+        from? = { save_event_target_as = roz_madgod_force_country_target }
     }
 }
 
@@ -3729,8 +3729,8 @@ country_event = {
     trigger = {
         exists = this
         event_target:roz_madgod_force_country_target = {
-            #any_owned_fleet = { solar_system = { has_star_flag = roz_outland_system } }
-            NOT = { any_owned_fleet = { NOT = { solar_system = { has_star_flag = roz_outland_system } } } }
+            #any_owned_fleet = { solar_system? = { has_star_flag = roz_outland_system } }
+            NOT = { any_owned_fleet = { NOT = { solar_system? = { has_star_flag = roz_outland_system } } } }
         }
     }
     immediate = {
@@ -3779,15 +3779,15 @@ country_event = {
     hide_window = yes
     is_triggered_only = yes
     trigger = {
-        fromfrom = {
+        fromfrom? = {
             has_fleet_flag = roz_abyss_fleet
             NOT = { has_fleet_flag = roz_abyss_fleet_effect_cd }
             has_global_flag = roz_abyss_challenge_available
         }
-        from = { is_invisable_faction = no } #Stop the repeated inspection of dynamic modifier
+        from? = { is_invisable_faction = no } #Stop the repeated inspection of dynamic modifier
     }
     immediate = {
-        fromfromfrom = {
+        fromfromfrom? = {
             set_fleet_flag = roz_fleet_combat_has_been_suppressed
             roz_abyss_fleet_suppress_modifier_effect = { modifier = ship_shield_penetration_mult roz_abyss_var_temp = 1 }
             roz_abyss_fleet_suppress_modifier_effect = { modifier = ship_armor_penetration_mult roz_abyss_var_temp = 1 }
@@ -3795,7 +3795,7 @@ country_event = {
             fleet_event = { id = roz_shinku_evt.589 days = 5 }
             fleet_event = { id = roz_shinku_evt.590 days = 7 }
         }
-        fromfrom = {
+        fromfrom? = {
             set_fleet_flag = roz_fleet_combat_has_been_protected
             set_timed_fleet_flag = { flag = roz_abyss_fleet_effect_cd days = 20 }
             roz_abyss_fleet_protection_modifier_effect = { modifier = ship_damage_reduction_mult roz_abyss_var_temp = 0.50 } # 这个修正是用于自身的，不要给敌人
@@ -3876,7 +3876,7 @@ country_event = {
     show_sound = event_red_alert
     picture = GFX_evt_worrying_signal
     trigger = {
-        from = { is_situation_type = roz_sk_4_madgod_invasion_explose_the_galaxy }
+        from? = { is_situation_type = roz_sk_4_madgod_invasion_explose_the_galaxy }
         has_global_flag = roz_abyss_challenge_available
         has_country_flag = roz_abyss_faction_arrival
     }
@@ -3892,7 +3892,7 @@ country_event = {
     show_sound = event_super_explosion
     picture = GFX_evt_supernova
     trigger = {
-        from = { is_situation_type = roz_sk_4_madgod_invasion_explose_the_galaxy }
+        from? = { is_situation_type = roz_sk_4_madgod_invasion_explose_the_galaxy }
         has_global_flag = roz_abyss_challenge_available
         has_country_flag = roz_abyss_faction_arrival
         has_country_flag = roz_end_of_allthings
@@ -3902,7 +3902,7 @@ country_event = {
         set_global_flag = roz_end_of_allthings_global
         if = {
             limit = {
-                from = { is_situation_type = roz_sk_4_madgod_invasion_explose_the_galaxy }
+                from? = { is_situation_type = roz_sk_4_madgod_invasion_explose_the_galaxy }
                 has_global_flag = roz_abyss_challenge_available
                 has_country_flag = roz_abyss_faction_arrival
                 has_country_flag = roz_end_of_allthings
@@ -4162,16 +4162,16 @@ country_event = {   ##背水一战, 首次进入1
 #     hide_window = yes
 #     trigger = {
 #         is_country_type = roz_madgod_empire
-#         from = {
+#         from? = {
 #             is_ai = no
 #             #NOT = { has_country_flag = roz_fall_in_abyss_flag }
 #             is_same_value = event_target:roz_suigintou_owner@this
 #             has_country_flag = roz_crisis_madgod_boss_last_breath
 #         }
-#         fromfrom = { is_ship_size = roz_crisis_madgod_boss }
+#         fromfrom? = { is_ship_size = roz_crisis_madgod_boss }
 #     }
 #     immediate = {
-#         from = {
+#         from? = {
 #             if = {
 #                 limit = { NOR = { has_country_flag = roz_unholy_invasion_darkest_hour_flag } }
 #                 country_event = { id = roz_shinku_evt.628 }
@@ -4190,14 +4190,14 @@ country_event = {   #on_fleet_destroyed_perp
     is_triggered_only = yes
     hide_window = yes
     trigger = {
-        from = { is_country_type = roz_madgod_empire }
+        from? = { is_country_type = roz_madgod_empire }
         this = {
             is_ai = no
             #NOT = { has_country_flag = roz_fall_in_abyss_flag }
             is_same_value = event_target:roz_suigintou_owner@this
             has_country_flag = roz_crisis_madgod_boss_last_breath
         }
-        fromfromfrom = { has_fleet_flag = roz_abyss_fleet_madgod_boss }
+        fromfromfrom? = { has_fleet_flag = roz_abyss_fleet_madgod_boss }
     }
     immediate = {
         set_country_flag = defeated_abyss_invate
@@ -4305,12 +4305,12 @@ ship_event = {   ##坏路线-蚍蜉撼树
     show_sound = event_space_battle
     picture = GFX_evt_situation_the_seal
     trigger = {
-        fromfrom = {
+        fromfrom? = {
             is_ai = no
             NOT = { has_country_flag = roz_unholy_invision_outland_planet_dont_remind }
             has_country_flag = roz_unholy_invasion_darkest_hour_flag
         }
-        from = {
+        from? = {
             has_star_flag = roz_outland_system
             any_system_planet = { is_same_value = event_target:roz_outland_planet@root }
         }
@@ -4393,7 +4393,7 @@ country_event = {   ##路线收束：万事俱备  #资讯重构仪可启用
     }
     immediate = {
         set_country_flag = roz_SK_IR_enable
-        event_target:roz_madgod_force_country@root = { destroy_country = yes }
+        event_target:roz_madgod_force_country@root? = { destroy_country = yes }
     }
     option = {
         name = roz_shinku_evt.650.aa
@@ -4530,7 +4530,7 @@ country_event = {
         random_owned_megastructure = {
             limit = { is_megastructure_type = roz_mega_information_remodeler_effect }
             remove_megastructure = this
-            solar_system = {
+            solar_system? = {
                 create_ambient_object = {
                     type = "star_explosion"
                     #duration = 5
@@ -4698,7 +4698,7 @@ country_event = {
         last_created_country = {
             establish_communications_no_message = root
         }
-        event_target:roz_shinku_global_country@root = { }
+        event_target:roz_shinku_global_country@root? = { }
         roz_shinku_leader_initiate = yes
     }
 }
@@ -4837,7 +4837,7 @@ country_event = {   #真红通讯主界面
         NOT = {
             has_country_flag = ge_nfield_diplomacy_activated
         }
-        from = {
+        from? = {
             is_country_type = ge_N_Field
             is_same_value = event_target:roz_shinku_global_country@root
         }
@@ -5084,7 +5084,7 @@ country_event = {
             has_country_flag = ge_nfield_diplomacy_activated
             has_country_flag = roz_junn_dip_locked
         }
-        from = { #是小纯缓存国家
+        from? = { #是小纯缓存国家
             is_country_type = ge_N_Field
             is_same_value = event_target:roz_junn_global_country@root
             has_country_flag = roz_junn_country
@@ -5265,7 +5265,7 @@ country_event = {
         NOR = {
             has_country_flag = ge_nfield_diplomacy_activated
         }
-        from = { #是雏莓缓存国家
+        from? = { #是雏莓缓存国家
             is_country_type = ge_N_Field
             is_same_value = event_target:roz_hinaichigo_global_country@root
             has_country_flag = roz_hinaichigo_country
@@ -5383,7 +5383,7 @@ country_event = {
         NOT = {
             has_country_flag = ge_nfield_diplomacy_activated
         }
-        from = { #是雏莓缓存国家
+        from? = { #是雏莓缓存国家
             is_country_type = ge_N_Field
             is_same_value = event_target:roz_hinaichigo_global_country@root
             has_country_flag = roz_hinaichigo_country

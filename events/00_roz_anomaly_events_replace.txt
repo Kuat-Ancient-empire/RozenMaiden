@@ -71,7 +71,7 @@ ship_event = {
 		hidden_effect = {
 			destroy_fleet = this.fleet
 		}
-		from = { set_deposit = d_physics_7 }
+		from? = { set_deposit = d_physics_7 }
 	}
 }
 

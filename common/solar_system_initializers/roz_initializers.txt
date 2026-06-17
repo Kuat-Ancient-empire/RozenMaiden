@@ -23,7 +23,7 @@ roz_outland_star_system = {
 		has_ring = no
 		init_effect = {
 			#save_global_event_target_as = roz_outland_main_black_hole@root
-			set_planet_flag = roz_outland_main_black_hole
+			set_carrier_flag = roz_outland_main_black_hole
 		}
 	}
 	change_orbit = 50
@@ -65,7 +65,7 @@ roz_outland_star_system = {
 		}
 		init_effect = {
 			#save_event_target_as = roz_outland_broken_planet
-			set_planet_flag = roz_outland_broken_planet
+			set_carrier_flag = roz_outland_broken_planet
 		}
 	}
 	planet = {
@@ -89,14 +89,14 @@ roz_outland_star_system = {
 				radius = 140
 				center = this.solar_system
 			}
-			# set_planet_flag = fallen_empire_world
+			# set_carrier_flag = fallen_empire_world
 			prevent_anomaly = yes
 			#set_owner = root
 			# set_controller = root
 			#set_capital = yes
-			set_planet_flag = colony_event
-			set_planet_flag = fallen_empire_world
-			set_planet_flag = can_not_be_changed_by_akx_worm
+			set_carrier_flag = colony_event
+			set_carrier_flag = fallen_empire_world
+			set_carrier_flag = can_not_be_changed_by_akx_worm
 			add_modifier = {
 				modifier = lush_planet
 			}
@@ -209,7 +209,7 @@ roz_outland_star_system = {
 			size = 2
 			init_effect = {
 				prevent_anomaly = yes
-				set_planet_flag = roz_outland_planet_moon
+				set_carrier_flag = roz_outland_planet_moon
 				change_pc = pc_black_hole
 			}
 		}

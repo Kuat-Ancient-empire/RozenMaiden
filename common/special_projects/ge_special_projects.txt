@@ -1,8 +1,11 @@
-special_project = {		####Q_sgt
+special_project = {
+	####Q_sgt
 	key = "ge_sgt_army_proj"
 	desc = {
 		text = ge_sgt_army_proj_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	location = no
 	cost = 0
@@ -12,7 +15,6 @@ special_project = {		####Q_sgt
 	event_scope = country_event
 	timelimit = -1
 	abort_trigger = {
-
 	}
 	on_success = {
 		owner = {
@@ -23,15 +25,17 @@ special_project = {		####Q_sgt
 				sr_rosa_mystica = 5
 			}
 		}
-	 }
+	}
 }
 
-
-special_project = {		###ap1
+special_project = {
+	###ap1
 	key = "ge_reactor_project"
 	desc = {
 		text = ge_reactor_project_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	cost = 0
 	days_to_research = 180
@@ -40,30 +44,29 @@ special_project = {		###ap1
 	location = no
 	icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
 	timelimit = -1
-	
 	event_scope = planet_event
-	
 	on_success = {
 		space_owner = {
-			country_event = { id = ge_event.39 }
+			country_event = {
+				id = ge_event.39
+			}
 		}
 	}
 }
-
-
 
 special_project = {
 	key = "roz_void_energy_research_project_stage_1_a"
 	desc = {
 		text = "roz_void_energy_research_project_stage_1_a_desc"
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	event_chain = "roz_void_energy_research_chain"
 	cost = 6000
 	#days_to_research = 360
 	tech_department = engineering_technology
 	picture = GFX_evt_physics_research
-
 	event_scope = planet_event
 	#event_scope = country_event
 	#requirements = {
@@ -73,7 +76,6 @@ special_project = {
 	abort_trigger = {
 		#has_country_flag =
 	}
-
 	on_success = {
 		event_target:roz_suigintou_owner@space_owner = {
 			set_country_flag = roz_ve_proj_s1a_flag
@@ -83,17 +85,17 @@ special_project = {
 			}
 		}
 	}
-
 	on_fail = {
 	}
 }
-
 
 special_project = {
 	key = "roz_void_energy_research_project_stage_1"
 	desc = {
 		text = "roz_void_energy_research_project_stage_1_desc"
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	event_chain = "roz_void_energy_research_chain"
 	#cost = 0
@@ -102,7 +104,6 @@ special_project = {
 	picture = GFX_evt_physics_research
 	location = no
 	event_scope = planet_event
-
 	on_success = {
 		event_target:roz_suigintou_owner@space_owner = {
 			country_event = {
@@ -114,27 +115,24 @@ special_project = {
 	}
 }
 
-
-
 special_project = {
 	key = "roz_void_energy_research_project_stage_2"
 	desc = {
 		text = "roz_void_energy_research_project_stage_2_desc"
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	event_chain = "roz_void_energy_research_chain"
 	cost = 12000
 	#days_to_research = 360
 	tech_department = physics_technology
 	picture = GFX_evt_physics_research
-
 	event_scope = planet_event
 	#event_scope = country_event
-
 	requirements = {
 		shipclass_science_ship = 1
 	}
-
 	abort_trigger = {
 		#has_country_flag = queen_snatched
 	}
@@ -145,45 +143,39 @@ special_project = {
 			}
 		}
 	}
-
 	on_fail = {
 	}
 }
-
 
 special_project = {
 	key = "roz_void_energy_research_project_stage_3_1"
 	desc = {
 		text = "roz_void_energy_research_project_stage_3_1_desc"
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	event_chain = "roz_void_energy_research_chain"
 	cost = 10000
 	#days_to_research = 360
 	tech_department = physics_technology
 	picture = GFX_evt_physics_research
-
 	event_scope = planet_event
 	#event_scope = country_event
-
 	requirements = {
 		shipclass_science_ship = 1
 	}
-
 	abort_trigger = {
 		#has_country_flag = queen_snatched
 	}
-
 	on_success = {
 		event_target:roz_suigintou_owner@space_owner = {
 			country_event = {
 				id = ge_event.451
 			}
-
 		}
 		#
 	}
-
 	on_fail = {
 	}
 }
@@ -192,25 +184,23 @@ special_project = {
 	key = "roz_void_energy_research_project_stage_3_a"
 	desc = {
 		text = "roz_void_energy_research_project_stage_3_a_desc"
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	event_chain = "roz_void_energy_research_chain"
 	cost = 2500
 	#days_to_research = 360
 	tech_department = physics_technology
 	picture = GFX_evt_physics_research
-
 	event_scope = planet_event
 	#event_scope = country_event
-
 	requirements = {
 		shipclass_science_ship = 1
 	}
-
 	abort_trigger = {
 		#has_country_flag = queen_snatched
 	}
-
 	on_success = {
 		event_target:roz_suigintou_owner@space_owner = {
 			remove_country_flag = ge_wait_zero_point
@@ -230,7 +220,6 @@ special_project = {
 		}
 		#
 	}
-
 	on_fail = {
 	}
 }
@@ -239,25 +228,23 @@ special_project = {
 	key = "roz_void_energy_research_project_stage_3_a2"
 	desc = {
 		text = "roz_void_energy_research_project_stage_3_a2_desc"
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	event_chain = "roz_void_energy_research_chain"
 	cost = 2000
 	#days_to_research = 360
 	tech_department = physics_technology
 	picture = GFX_evt_physics_research
-
 	#event_scope = planet_event
 	event_scope = country_event
-
 	requirements = {
 		shipclass_constructor = 1
 	}
-
 	abort_trigger = {
 		#has_country_flag = queen_snatched
 	}
-
 	on_success = {
 		remove_country_flag = ge_wait_zero_point
 		event_target:roz_suigintou_owner@space_owner = {
@@ -267,37 +254,20 @@ special_project = {
 				days = 1
 			}
 		}
-
 		#
 	}
-
 	on_fail = {
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-special_project = {		###ap2
+special_project = {
+	###ap2
 	key = "ge_ascension_project"
 	desc = {
 		text = ge_ascension_project_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	cost = 150000
 	tech_department = society_technology
@@ -305,12 +275,12 @@ special_project = {		###ap2
 	location = no
 	icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
 	timelimit = -1
-	
 	event_scope = planet_event
-	
 	on_success = {
 		owner = {
-			country_event = { id = ge_event.50 }
+			country_event = {
+				id = ge_event.50
+			}
 			set_country_flag = ge_ap2_complate
 		}
 	}
@@ -339,7 +309,7 @@ special_project = {		###ap2
 #
 #	}
 #	on_success = {
-#		planet_event = {
+#		carrier_event = {
 #			id = ge_sgt_flagship_events.1
 #		}
 #	}
@@ -360,7 +330,7 @@ special_project = {		###ap2
 #	icon = ""
 #	event_scope = planet_event
 #	on_success = {
-#		planet_event = {
+#		carrier_event = {
 #			id = ge_sgt_flagship_events.2
 #		}
 #	}
@@ -384,12 +354,11 @@ special_project = {		###ap2
 #		shipclass_constructor = 2
 #	}
 #	on_success = {
-#		planet_event = {
+#		carrier_event = {
 #			id = ge_sgt_flagship_events.3
 #		}
 #	}
 #}
-
 special_project = {
 	key = ge_sgt_flagship_proj_start
 	event_scope = ship_event
@@ -413,11 +382,14 @@ special_project = {
 	}
 }
 
-special_project = {		####王座守卫
+special_project = {
+	####王座守卫
 	key = "ge_sgt_flagship_proj_1"
 	desc = {
 		text = ge_sgt_flagship_proj_1_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	location = no
 	cost = 14800
@@ -447,23 +419,20 @@ special_project = {		####王座守卫
 			}
 			set_country_flag = get_tech_ge_sgt_flagship_normal_flag
 		}
-
 	}
 }
-
-
-
-
 
 ##################################################################
 ##################################################################
 ###############krks_invi
-
-special_project = {		####万恶之源
+special_project = {
+	####万恶之源
 	key = roz_N_field_great_development_plan
 	desc = {
 		text = roz_N_field_great_development_plan_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	location = yes
 	#cost = 360
@@ -479,13 +448,15 @@ special_project = {		####万恶之源
 	abort_trigger = {
 		is_multiplayer = yes
 		OR = {
-			any_country = {	#已有玩家完成特殊计划，开始事件链
+			any_country = {
+				#已有玩家完成特殊计划，开始事件链
 				has_country_flag = roz_great_development_of_Nfield
 				NOT = {
 					has_country_flag = roz_kirakishou_get
 				}
 			}
-			any_country = {	#已有玩家提前触发
+			any_country = {
+				#已有玩家提前触发
 				has_country_flag = roz_krks_dl_early_flag
 				has_country_flag = roz_krks_story_begin_flag
 			}
@@ -501,20 +472,17 @@ special_project = {		####万恶之源
 	}
 }
 
-
-
-
-
-
 ##################################################################
 ##################################################################
 ###############krks_outland
-
-special_project = {		####
+special_project = {
+	####
 	key = roz_outland_main_black_hole_project
 	desc = {
 		text = roz_outland_main_black_hole_project_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	location = yes
 	days_to_research = 60
@@ -542,7 +510,9 @@ special_project = {		####
 						event_chain = roz_outland_system_chain
 						counter = specimens_collected
 					}
-					NOT = { has_country_flag = roz_outland_locator_disable }
+					NOT = {
+						has_country_flag = roz_outland_locator_disable
+					}
 				}
 				country_event = {
 					id = roz_krks_leader_evt.55
@@ -551,11 +521,15 @@ special_project = {		####
 		}
 	}
 }
-special_project = {		####
+
+special_project = {
+	####
 	key = roz_outland_broken_planet_project
 	desc = {
 		text = roz_outland_broken_planet_project_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	location = yes
 	days_to_research = 60
@@ -582,7 +556,9 @@ special_project = {		####
 						event_chain = roz_outland_system_chain
 						counter = specimens_collected
 					}
-					NOT = { has_country_flag = roz_outland_locator_disable }
+					NOT = {
+						has_country_flag = roz_outland_locator_disable
+					}
 				}
 				country_event = {
 					id = roz_krks_leader_evt.55
@@ -591,11 +567,15 @@ special_project = {		####
 		}
 	}
 }
-special_project = {		####
+
+special_project = {
+	####
 	key = roz_outland_small_black_hole_project
 	desc = {
 		text = roz_outland_small_black_hole_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	location = yes
 	days_to_research = 60
@@ -623,7 +603,9 @@ special_project = {		####
 						event_chain = roz_outland_system_chain
 						counter = specimens_collected
 					}
-					NOT = { has_country_flag = roz_outland_locator_disable }
+					NOT = {
+						has_country_flag = roz_outland_locator_disable
+					}
 				}
 				country_event = {
 					id = roz_krks_leader_evt.55
@@ -632,11 +614,15 @@ special_project = {		####
 		}
 	}
 }
-special_project = {		####
+
+special_project = {
+	####
 	key = roz_outland_YS_planet_project
 	desc = {
 		text = roz_outland_YS_planet_project_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	location = yes
 	days_to_research = 60
@@ -660,7 +646,9 @@ special_project = {		####
 						event_chain = roz_outland_system_chain
 						counter = specimens_collected
 					}
-					NOT = { has_country_flag = roz_outland_locator_disable }
+					NOT = {
+						has_country_flag = roz_outland_locator_disable
+					}
 				}
 				country_event = {
 					id = roz_krks_leader_evt.55
@@ -671,11 +659,14 @@ special_project = {		####
 }
 
 #locator
-special_project = {		####
+special_project = {
+	####
 	key = roz_outland_locator
 	desc = {
 		text = roz_outland_locator_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	location = yes
 	days_to_research = 1
@@ -683,15 +674,21 @@ special_project = {		####
 	picture = GFX_roz_evt_outland
 	icon = gfx/interface/icons/situation_log/situation_log_radar.dds
 	event_scope = country_event
-	abort_trigger = { has_country_flag = roz_outland_locator_disable }
+	abort_trigger = {
+		has_country_flag = roz_outland_locator_disable
+	}
 	on_success = {
 		if = {
-			limit = { NOT = { has_country_flag = roz_outland_locator_disable } }
-			event_target:roz_outland_planet@root = {
-				solar_system = {
+			limit = {
+				NOT = {
+					has_country_flag = roz_outland_locator_disable
+				}
+			}
+			event_target:roz_outland_planet@root? = {
+				solar_system? = {
 					random_system_planet = {
 						limit = {
-							has_planet_flag = roz_outland_main_black_hole
+							has_carrier_flag = roz_outland_main_black_hole
 						}
 						save_global_event_target_as = roz_outland_main_black_hole@root
 					}
@@ -706,13 +703,15 @@ special_project = {		####
 	}
 }
 
-
 ########################真红事件
-special_project = {		####
+special_project = {
+	####
 	key = roz_shoujonotsukurikata_project_1
 	desc = {
 		text = roz_shoujonotsukurikata_project_1_DESC
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	location = yes
 	days_to_research = 60
@@ -721,16 +720,26 @@ special_project = {		####
 	icon = gfx/interface/icons/situation_log/situation_log_roz_shoujonotsukurikata_vol1.dds
 	event_scope = country_event
 	on_success = {
-		set_variable = { which = roz_shinku_progress_count value = 1 }
-		add_event_chain_counter = { event_chain = roz_shoujonotsukurikata_chain counter = roz_shinku_progress amount = 1 }
+		set_variable = {
+			which = roz_shinku_progress_count
+			value = 1
+		}
+		add_event_chain_counter = {
+			event_chain = roz_shoujonotsukurikata_chain
+			counter = roz_shinku_progress
+			amount = 1
+		}
 	}
 }
 
-special_project = {		####
+special_project = {
+	####
 	key = roz_shoujonotsukurikata_project_2
 	desc = {
 		text = roz_shoujonotsukurikata_project_2_DESC
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	location = yes
 	days_to_research = 15
@@ -738,25 +747,44 @@ special_project = {		####
 	picture = GFX_evt_roz_the_box
 	icon = gfx/interface/icons/situation_log/situation_log_roz_shoujonotsukurikata_vol2.dds
 	event_scope = country_event
-	on_start = { change_variable = { which = roz_shuukan_project_start value = 1 } }
-	on_cancel = { subtract_variable = { which = roz_shuukan_project_start value = 1 } }
+	on_start = {
+		change_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
+	on_cancel = {
+		subtract_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
 	#abort_trigger = { check_variable = { which = roz_shuukan_project_start value > 1 } }
 	on_success = {
 		hidden_effect = {
-			subtract_variable = { which = roz_shuukan_project_start value = 1 }
+			subtract_variable = {
+				which = roz_shuukan_project_start
+				value = 1
+			}
 			set_country_flag = roz_shoujonotsukurikata_project_2_complete
-			change_variable = { which = roz_shinku_progress_count value = 1 }
+			change_variable = {
+				which = roz_shinku_progress_count
+				value = 1
+			}
 			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
 }
 
-special_project = {		####
+special_project = {
+	####
 	key = roz_shoujonotsukurikata_project_3
 	desc = {
 		text = roz_shoujonotsukurikata_project_3_DESC
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	location = yes
 	days_to_research = 15
@@ -764,25 +792,44 @@ special_project = {		####
 	picture = GFX_evt_roz_shoujonotsukurikata_part
 	icon = gfx/interface/icons/situation_log/situation_log_roz_shoujonotsukurikata_vol3.dds
 	event_scope = country_event
-	on_start = { change_variable = { which = roz_shuukan_project_start value = 1 } }
-	on_cancel = { subtract_variable = { which = roz_shuukan_project_start value = 1 } }
+	on_start = {
+		change_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
+	on_cancel = {
+		subtract_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
 	#abort_trigger = { check_variable = { which = roz_shuukan_project_start value > 1 } }
 	on_success = {
 		hidden_effect = {
-			subtract_variable = { which = roz_shuukan_project_start value = 1 }
+			subtract_variable = {
+				which = roz_shuukan_project_start
+				value = 1
+			}
 			set_country_flag = roz_shoujonotsukurikata_project_3_complete
-			change_variable = { which = roz_shinku_progress_count value = 1 }
+			change_variable = {
+				which = roz_shinku_progress_count
+				value = 1
+			}
 			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
 }
 
-special_project = {		####
+special_project = {
+	####
 	key = roz_shoujonotsukurikata_project_4
 	desc = {
 		text = roz_shoujonotsukurikata_project_4_DESC
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	location = yes
 	days_to_research = 15
@@ -790,25 +837,44 @@ special_project = {		####
 	picture = GFX_evt_roz_shoujonotsukurikata_part
 	icon = gfx/interface/icons/situation_log/situation_log_roz_shoujonotsukurikata_vol4.dds
 	event_scope = country_event
-	on_start = { change_variable = { which = roz_shuukan_project_start value = 1 } }
-	on_cancel = { subtract_variable = { which = roz_shuukan_project_start value = 1 } }
+	on_start = {
+		change_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
+	on_cancel = {
+		subtract_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
 	#abort_trigger = { check_variable = { which = roz_shuukan_project_start value > 1 } }
 	on_success = {
 		hidden_effect = {
-			subtract_variable = { which = roz_shuukan_project_start value = 1 }
+			subtract_variable = {
+				which = roz_shuukan_project_start
+				value = 1
+			}
 			set_country_flag = roz_shoujonotsukurikata_project_4_complete
-			change_variable = { which = roz_shinku_progress_count value = 1 }
+			change_variable = {
+				which = roz_shinku_progress_count
+				value = 1
+			}
 			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
 }
 
-special_project = {		####
+special_project = {
+	####
 	key = roz_shoujonotsukurikata_project_5
 	desc = {
 		text = roz_shoujonotsukurikata_project_5_DESC
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	location = yes
 	days_to_research = 15
@@ -816,25 +882,44 @@ special_project = {		####
 	picture = GFX_evt_roz_shoujonotsukurikata_part
 	icon = gfx/interface/icons/situation_log/situation_log_roz_shoujonotsukurikata_vol5.dds
 	event_scope = country_event
-	on_start = { change_variable = { which = roz_shuukan_project_start value = 1 } }
-	on_cancel = { subtract_variable = { which = roz_shuukan_project_start value = 1 } }
+	on_start = {
+		change_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
+	on_cancel = {
+		subtract_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
 	#abort_trigger = { check_variable = { which = roz_shuukan_project_start value > 1 } }
 	on_success = {
 		hidden_effect = {
-			subtract_variable = { which = roz_shuukan_project_start value = 1 }
+			subtract_variable = {
+				which = roz_shuukan_project_start
+				value = 1
+			}
 			set_country_flag = roz_shoujonotsukurikata_project_5_complete
-			change_variable = { which = roz_shinku_progress_count value = 1 }
+			change_variable = {
+				which = roz_shinku_progress_count
+				value = 1
+			}
 			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
 }
 
-special_project = {		####
+special_project = {
+	####
 	key = roz_shoujonotsukurikata_project_6
 	desc = {
 		text = roz_shoujonotsukurikata_project_6_DESC
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	location = yes
 	days_to_research = 15
@@ -842,25 +927,44 @@ special_project = {		####
 	picture = GFX_evt_roz_shoujonotsukurikata_part
 	icon = gfx/interface/icons/situation_log/situation_log_roz_shoujonotsukurikata_vol6.dds
 	event_scope = country_event
-	on_start = { change_variable = { which = roz_shuukan_project_start value = 1 } }
-	on_cancel = { subtract_variable = { which = roz_shuukan_project_start value = 1 } }
+	on_start = {
+		change_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
+	on_cancel = {
+		subtract_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
 	#abort_trigger = { check_variable = { which = roz_shuukan_project_start value > 1 } }
 	on_success = {
 		hidden_effect = {
-			subtract_variable = { which = roz_shuukan_project_start value = 1 }
+			subtract_variable = {
+				which = roz_shuukan_project_start
+				value = 1
+			}
 			set_country_flag = roz_shoujonotsukurikata_project_6_complete
-			change_variable = { which = roz_shinku_progress_count value = 1 }
+			change_variable = {
+				which = roz_shinku_progress_count
+				value = 1
+			}
 			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
 }
 
-special_project = {		####
+special_project = {
+	####
 	key = roz_shoujonotsukurikata_project_7
 	desc = {
 		text = roz_shoujonotsukurikata_project_7_DESC
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	location = yes
 	days_to_research = 15
@@ -868,25 +972,44 @@ special_project = {		####
 	picture = GFX_evt_roz_shoujonotsukurikata_part
 	icon = gfx/interface/icons/situation_log/situation_log_roz_shoujonotsukurikata_vol7.dds
 	event_scope = country_event
-	on_start = { change_variable = { which = roz_shuukan_project_start value = 1 } }
-	on_cancel = { subtract_variable = { which = roz_shuukan_project_start value = 1 } }
+	on_start = {
+		change_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
+	on_cancel = {
+		subtract_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
 	#abort_trigger = { check_variable = { which = roz_shuukan_project_start value > 1 } }
 	on_success = {
 		hidden_effect = {
-			subtract_variable = { which = roz_shuukan_project_start value = 1 }
+			subtract_variable = {
+				which = roz_shuukan_project_start
+				value = 1
+			}
 			set_country_flag = roz_shoujonotsukurikata_project_7_complete
-			change_variable = { which = roz_shinku_progress_count value = 1 }
+			change_variable = {
+				which = roz_shinku_progress_count
+				value = 1
+			}
 			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
 }
 
-special_project = {		####
+special_project = {
+	####
 	key = roz_shoujonotsukurikata_project_8
 	desc = {
 		text = roz_shoujonotsukurikata_project_8_DESC
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	location = yes
 	days_to_research = 15
@@ -894,25 +1017,44 @@ special_project = {		####
 	picture = GFX_evt_roz_shoujonotsukurikata_part
 	icon = gfx/interface/icons/situation_log/situation_log_roz_shoujonotsukurikata_vol8.dds
 	event_scope = country_event
-	on_start = { change_variable = { which = roz_shuukan_project_start value = 1 } }
-	on_cancel = { subtract_variable = { which = roz_shuukan_project_start value = 1 } }
+	on_start = {
+		change_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
+	on_cancel = {
+		subtract_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
 	#abort_trigger = { check_variable = { which = roz_shuukan_project_start value > 1 } }
 	on_success = {
 		hidden_effect = {
-			subtract_variable = { which = roz_shuukan_project_start value = 1 }
+			subtract_variable = {
+				which = roz_shuukan_project_start
+				value = 1
+			}
 			set_country_flag = roz_shoujonotsukurikata_project_8_complete
-			change_variable = { which = roz_shinku_progress_count value = 1 }
+			change_variable = {
+				which = roz_shinku_progress_count
+				value = 1
+			}
 			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
 }
 
-special_project = {		####
+special_project = {
+	####
 	key = roz_shoujonotsukurikata_project_9
 	desc = {
 		text = roz_shoujonotsukurikata_project_9_DESC
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	location = yes
 	days_to_research = 15
@@ -920,25 +1062,44 @@ special_project = {		####
 	picture = GFX_evt_roz_shoujonotsukurikata_part
 	icon = gfx/interface/icons/situation_log/situation_log_roz_shoujonotsukurikata_vol9.dds
 	event_scope = country_event
-	on_start = { change_variable = { which = roz_shuukan_project_start value = 1 } }
-	on_cancel = { subtract_variable = { which = roz_shuukan_project_start value = 1 } }
+	on_start = {
+		change_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
+	on_cancel = {
+		subtract_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
 	#abort_trigger = { check_variable = { which = roz_shuukan_project_start value > 1 } }
 	on_success = {
 		hidden_effect = {
-			subtract_variable = { which = roz_shuukan_project_start value = 1 }
+			subtract_variable = {
+				which = roz_shuukan_project_start
+				value = 1
+			}
 			set_country_flag = roz_shoujonotsukurikata_project_9_complete
-			change_variable = { which = roz_shinku_progress_count value = 1 }
+			change_variable = {
+				which = roz_shinku_progress_count
+				value = 1
+			}
 			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
 	}
 }
 
-special_project = {		####
+special_project = {
+	####
 	key = roz_shoujonotsukurikata_project_10
 	desc = {
 		text = roz_shoujonotsukurikata_project_10_DESC
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 	}
 	location = yes
 	days_to_research = 15
@@ -946,14 +1107,30 @@ special_project = {		####
 	picture = GFX_evt_roz_heart_lost_doll
 	icon = gfx/interface/icons/situation_log/situation_log_roz_shoujonotsukurikata_vol10.dds
 	event_scope = country_event
-	on_start = { change_variable = { which = roz_shuukan_project_start value = 1 } }
-	on_cancel = { subtract_variable = { which = roz_shuukan_project_start value = 1 } }
+	on_start = {
+		change_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
+	on_cancel = {
+		subtract_variable = {
+			which = roz_shuukan_project_start
+			value = 1
+		}
+	}
 	#abort_trigger = { check_variable = { which = roz_shuukan_project_start value > 1 } }
 	on_success = {
 		hidden_effect = {
-			subtract_variable = { which = roz_shuukan_project_start value = 1 }
+			subtract_variable = {
+				which = roz_shuukan_project_start
+				value = 1
+			}
 			set_country_flag = roz_shoujonotsukurikata_project_10_complete
-			change_variable = { which = roz_shinku_progress_count value = 1 }
+			change_variable = {
+				which = roz_shinku_progress_count
+				value = 1
+			}
 			roz_shoujonotsukurikata_project_early_complete_without_vol10 = yes
 			roz_shoujonotsukurikata_project_common_effect = yes
 		}
@@ -961,15 +1138,19 @@ special_project = {		####
 }
 
 ###
-special_project = {		####
+special_project = {
+	####
 	key = roz_shinku_phone_of_junn_analysis
 	desc = {
 		text = roz_shinku_phone_of_junn_analysis_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	on_start = {
 		if = {
-			limit = {  }
+			limit = {
+			}
 			#complete_special_project = {  }
 		}
 	}
@@ -995,7 +1176,9 @@ special_project = {
 	key = "roz_junn_rosa_flexible_employment"
 	desc = {
 		text = roz_junn_rosa_flexible_employment_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	picture = GFX_evt_engineering_bay
 	location = no
@@ -1015,7 +1198,9 @@ special_project = {
 	key = "roz_junn_rosa_enhance"
 	desc = {
 		text = roz_junn_rosa_enhance_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	picture = GFX_evt_engineering_bay
 	location = no
@@ -1033,21 +1218,25 @@ special_project = {
 
 #######真红的觉醒
 special_project = {
-	key	= roz_border_of_technical_proj
+	key = roz_border_of_technical_proj
 	desc = {
 		text = roz_border_of_technical_proj_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	location = no
 	days_to_research = 1234567890
 	#event_chain = roz_wake-up_shinku_chain
 	event_scope = country_event
-	requirements = { #由事件完成，玩家无法也无需进行
+	requirements = {
+		#由事件完成，玩家无法也无需进行
 		has_trait = leader_trait_scientist_mind_wipe_02
 	}
-	picture = GFX_
+	picture = GFX_evt_ap_ge_1 #TODO 
 	icon = gfx/interface/icons/situation_log/situation_log_tutorial.dds
-	on_success = {  }
+	on_success = {
+	}
 }
 
 special_project = {
@@ -1055,7 +1244,9 @@ special_project = {
 	key = roz_unholy_invasion_defproj_1
 	desc = {
 		text = roz_unholy_invasion_defproj_1_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	#event_chain = roz_wake-up_shinku_chain
 	event_scope = country_event
@@ -1066,16 +1257,31 @@ special_project = {
 	on_success = {
 		random_list = {
 			1 = {
-				modifier = { event_target:roz_leader_suigintou_global_target@root = { has_total_skill >= 7 } factor = 1.5 }
-				modifier = { event_target:roz_leader_kirakishou_global_target@root = { has_total_skill >= 5 } factor = 1.5 }
-				country_event = { id = roz_shinku_evt.432 days = 30 }
+				modifier = {
+					event_target:roz_leader_suigintou_global_target@root? = {
+						has_total_skill >= 7
+					}
+					factor = 1.5
+				}
+				modifier = {
+					event_target:roz_leader_kirakishou_global_target@root? = {
+						has_total_skill >= 5
+					}
+					factor = 1.5
+				}
+				country_event = {
+					id = roz_shinku_evt.432
+					days = 30
+				}
 			}
 			1 = {
-				country_event = { id = roz_shinku_evt.433 days = 60 }
+				country_event = {
+					id = roz_shinku_evt.433
+					days = 60
+				}
 				set_country_flag = roz_unholy_invasion_defend_flag
 			}
 		}
-
 	}
 }
 
@@ -1084,7 +1290,9 @@ special_project = {
 	key = roz_unholy_invasion_defproj_1_decoy
 	desc = {
 		text = roz_unholy_invasion_defproj_1_decoy_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	requirements = {
 		shipclass_constructor = 1
@@ -1112,7 +1320,9 @@ special_project = {
 	key = roz_stare_into_the_abyss
 	desc = {
 		text = roz_stare_into_the_abyss_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	requirements = {
 		shipclass_science_ship = 1
@@ -1122,7 +1332,9 @@ special_project = {
 	picture = GFX_evt_astral_rift_ancient_battlegrounds
 	icon = gfx/interface/icons/situation_log/situation_log_debris.dds
 	on_success = {
-		ship_event = { id = roz_shinku_evt.441 }
+		ship_event = {
+			id = roz_shinku_evt.441
+		}
 	}
 }
 
@@ -1132,7 +1344,9 @@ special_project = {
 	key = roz_poring_xiling_crystal
 	desc = {
 		text = roz_poring_xiling_crystal_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	requirements = {
 		leader = scientist
@@ -1159,7 +1373,9 @@ special_project = {
 	key = roz_unholy_invasion_defproj_decoy_II
 	desc = {
 		text = roz_unholy_invasion_defproj_decoy_II_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	requirements = {
 		shipclass_constructor = 1
@@ -1177,7 +1393,7 @@ special_project = {
 				id = roz_shinku_evt.520
 			}
 		}
-	}	
+	}
 	on_success = {
 		owner = {
 			country_event = {
@@ -1212,11 +1428,14 @@ special_project = {
 # 	}
 # }
 #locator深渊舰队定位器
-special_project = {		####
+special_project = {
+	####
 	key = roz_abyss_fleet_locator
 	desc = {
 		text = roz_abyss_fleet_locator_DESC
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+		}
 	}
 	location = yes
 	days_to_research = 1
@@ -1224,14 +1443,26 @@ special_project = {		####
 	picture = GFX_evt_fleet_evil
 	icon = gfx/interface/icons/situation_log/situation_log_radar.dds
 	event_scope = country_event
-	abort_trigger = { has_country_flag = roz_abyss_fleet_locator_disable }
+	abort_trigger = {
+		has_country_flag = roz_abyss_fleet_locator_disable
+	}
 	on_success = {
 		clear_global_event_target = roz_abyss_fleet_located@root
 		if = {
-			limit = { NOT = { has_country_flag = roz_abyss_fleet_locator_disable } }
-			event_target:roz_madgod_force_country@root = {
+			limit = {
+				NOT = {
+					has_country_flag = roz_abyss_fleet_locator_disable
+				}
+			}
+			event_target:roz_madgod_force_country@root? = {
 				random_owned_fleet = {
-					limit = { solar_system = { NOT = { has_star_flag = roz_outland_system } } }
+					limit = {
+						solar_system? = {
+							NOT = {
+								has_star_flag = roz_outland_system
+							}
+						}
+					}
 					save_global_event_target_as = roz_abyss_fleet_located@root
 				}
 			}
@@ -1269,6 +1500,7 @@ special_project = {
 		EVENT_ID = ge_event.1035
 	}
 }
+
 special_project = {
 	inline_script = {
 		script = shroud/patron_first_contact_special_project
@@ -1277,6 +1509,7 @@ special_project = {
 		EVENT_ID = ge_event.1035
 	}
 }
+
 special_project = {
 	inline_script = {
 		script = shroud/patron_first_contact_special_project

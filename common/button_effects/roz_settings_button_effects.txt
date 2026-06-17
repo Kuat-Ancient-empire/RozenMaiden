@@ -6,11 +6,11 @@ roz_settings_difficult_adjust_mode_add_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.mode1
         }
         hidden_effect = {
-            from = {
+            from? = {
             if = {
                 limit = {
                     NOT = {
@@ -40,11 +40,11 @@ roz_settings_difficult_adjust_mode_mult_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.mode2
         }
         hidden_effect = {
-            from = {
+            from? = {
             if = {
                 limit = {
                     NOT = {
@@ -73,11 +73,11 @@ roz_settings_difficult_adjust_mode_clear_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.mode3
         }
         hidden_effect = {
-            from = {
+            from? = {
             hidden_effect = {
                 set_variable = {
                     which = ge_buff_magnification_value
@@ -95,11 +95,11 @@ roz_settings_difficult_adjust_mode_clear_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.mode3
         }
         hidden_effect = {
-            from = {
+            from? = {
             hidden_effect = {
                 set_variable = {
                     which = ge_buff_magnification_value
@@ -117,11 +117,11 @@ roz_settings_difficult_adjust_mode_2x_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.mode_2x_ct
         }
         hidden_effect = {
-            from = {
+            from? = {
                 hidden_effect = {
                     set_variable = {
                         which = ge_buff_magnification_value
@@ -138,11 +138,11 @@ roz_settings_difficult_adjust_mode_5x_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.mode_5x_ct
         }
         hidden_effect = {
-            from = {
+            from? = {
                 hidden_effect = {
                     set_variable = {
                         which = ge_buff_magnification_value
@@ -159,11 +159,11 @@ roz_settings_difficult_adjust_mode_10x_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.mode_10x_ct
         }
         hidden_effect = {
-            from = {
+            from? = {
                 hidden_effect = {
                     set_variable = {
                         which = ge_buff_magnification_value
@@ -183,11 +183,11 @@ roz_settings_difficult_damage_up_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.ab
         }
         hidden_effect = { 
-            from = {
+            from? = {
                 change_variable = {
                     which = ge_buff_count
                     value = ge_buff_magnification_value
@@ -202,11 +202,11 @@ roz_settings_difficult_damage_mult_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.ab
         }
         hidden_effect = { 
-            from = {
+            from? = {
                 multiply_variable = {
                     which = ge_buff_count
                     value = ge_buff_magnification_value
@@ -221,11 +221,11 @@ roz_settings_difficult_damage_down_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.ab
         }
         hidden_effect = { 
-            from = {
+            from? = {
                 subtract_variable = {
                     which = ge_buff_count
                     value = ge_buff_magnification_value
@@ -240,11 +240,11 @@ roz_settings_difficult_damage_devide_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.ab
         }
         hidden_effect = { 
-            from = {
+            from? = {
                 divide_variable = {
                     which = ge_buff_count
                     value = ge_buff_magnification_value
@@ -261,7 +261,7 @@ roz_settings_difficult_damage_clear_effect = {
     effect = {
         custom_tooltip = roz_start.7777.ab.clear.ct
         hidden_effect = { 
-            from = {  
+            from? = {  
                 set_variable = {
                     which = ge_buff_count
                     value = 0
@@ -277,11 +277,11 @@ roz_settings_difficult_fire_rate_up_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.cd
         }
         hidden_effect = { 
-            from = {
+            from? = {
                 change_variable = {
                     which = ge_buff_count_fr
                     value = ge_buff_magnification_value
@@ -296,11 +296,11 @@ roz_settings_difficult_fire_rate_mult_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.cd
         }
         hidden_effect = { 
-            from = {
+            from? = {
                 multiply_variable = {
                     which = ge_buff_count_fr
                     value = ge_buff_magnification_value
@@ -315,11 +315,11 @@ roz_settings_difficult_fire_rate_down_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.cd
         }
         hidden_effect = { 
-            from = {
+            from? = {
                 subtract_variable = {
                     which = ge_buff_count_fr
                     value = ge_buff_magnification_value
@@ -334,11 +334,11 @@ roz_settings_difficult_fire_rate_devide_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.cd
         }
         hidden_effect = { 
-            from = {
+            from? = {
                 divide_variable = {
                     which = ge_buff_count_fr
                     value = ge_buff_magnification_value
@@ -355,7 +355,7 @@ roz_settings_difficult_fire_rate_clear_effect = {
     effect = {
         custom_tooltip = roz_start.7777.cd.clear.ct
         hidden_effect = { 
-            from = {  
+            from? = {  
                 set_variable = {
                     which = ge_buff_count_fr
                     value = 0
@@ -372,11 +372,11 @@ roz_settings_difficult_fire_range_up_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.ef
         }
         hidden_effect = { 
-            from = {
+            from? = {
                 change_variable = {
                     which = ge_buff_fire_range_count
                     value = ge_buff_magnification_value
@@ -391,11 +391,11 @@ roz_settings_difficult_fire_range_mult_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.ef
         }
         hidden_effect = { 
-            from = {
+            from? = {
                 multiply_variable = {
                     which = ge_buff_fire_range_count
                     value = ge_buff_magnification_value
@@ -410,11 +410,11 @@ roz_settings_difficult_fire_range_down_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.ef
         }
         hidden_effect = { 
-            from = {
+            from? = {
                 subtract_variable = {
                     which = ge_buff_fire_range_count
                     value = ge_buff_magnification_value
@@ -429,11 +429,11 @@ roz_settings_difficult_fire_range_devide_effect = {
         always = yes
     }
     effect = {
-        from = {
+        from? = {
             custom_tooltip = roz_start.7777.ef
         }
         hidden_effect = { 
-            from = {
+            from? = {
                 divide_variable = {
                     which = ge_buff_fire_range_count
                     value = ge_buff_magnification_value
@@ -450,7 +450,7 @@ roz_settings_difficult_fire_range_clear_effect = {
     effect = {
         custom_tooltip = roz_start.7777.ef.clear.ct
         hidden_effect = { 
-            from = {  
+            from? = {  
                 set_variable = {
                     which = ge_buff_fire_range_count
                     value = 0
@@ -472,7 +472,7 @@ roz_settings_kirakishou_eventchain_early_effect = {
     allow = {
         custom_tooltip = {
             fail_text = "roz_start.7777.g.trigger1.tooltip"
-            from = {
+            from? = {
                 NOR = {
                     has_country_flag = roz_krks_story_begin_flag
                     has_country_flag = roz_kirakishou_get
@@ -482,7 +482,7 @@ roz_settings_kirakishou_eventchain_early_effect = {
         }
         custom_tooltip = {
             fail_text = "roz_start.7777.g.trigger2.tooltip"
-            from = {
+            from? = {
                 NOT = {
                     has_country_flag = roz_krks_dl_early_flag
                 }
@@ -492,7 +492,7 @@ roz_settings_kirakishou_eventchain_early_effect = {
     effect = {
         custom_tooltip = "roz_start.7777.g.tooltip"
         hidden_effect = {
-            from = {
+            from? = {
                 if = {
                     limit = {
                         NOT = { has_country_flag = roz_krks_dl_early_flag }
@@ -509,7 +509,7 @@ roz_settings_kirakishou_eventchain_late_effect = {
     allow = { 
         custom_tooltip = {
             fail_text = "roz_start.7777.h.trigger1.tooltip"
-            from = {
+            from? = {
                 NOR = {
                     has_country_flag = roz_krks_story_begin_flag
                     has_country_flag = roz_kirakishou_get
@@ -519,7 +519,7 @@ roz_settings_kirakishou_eventchain_late_effect = {
         }
         custom_tooltip = {
             fail_text = "roz_start.7777.h.trigger2.tooltip"
-            from = {
+            from? = {
                 NOT = {
                     has_country_flag = roz_krks_dl_normal_flag
                 }  
@@ -529,7 +529,7 @@ roz_settings_kirakishou_eventchain_late_effect = {
     effect = {
         custom_tooltip = "roz_start.7777.h.tooltip"
         hidden_effect = {
-            from = { 
+            from? = { 
                 if = {
                     limit = {
                         NOT = { has_country_flag = roz_krks_dl_normal_flag }
@@ -561,7 +561,7 @@ roz_settings_crisis_easy = {
         }
         custom_tooltip = {
             fail_text = roz_start.7777.abyss_has_come
-            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
+            root? = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
         }
     }
     effect = {
@@ -585,7 +585,7 @@ roz_settings_crisis_normal = {
         }
         custom_tooltip = {
             fail_text = roz_start.7777.abyss_has_come
-            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
+            root? = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
         }
     }
     effect = {
@@ -609,7 +609,7 @@ roz_settings_crisis_hard = {
         }
         custom_tooltip = {
             fail_text = roz_start.7777.abyss_has_come
-            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
+            root? = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
         }
     }
     effect = {
@@ -633,7 +633,7 @@ roz_settings_crisis_xiling = {
         }
         custom_tooltip = {
             fail_text = roz_start.7777.abyss_has_come
-            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
+            root? = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
         }
     }
     effect = {
@@ -649,41 +649,41 @@ roz_settings_crisis_xiling = {
 #额外AI
 roz_settings_abyss_vass_had_create_available_effect = {
     potential = {
-        from = { has_country_flag = roz_abyss_vass_had_create_available }
+        from? = { has_country_flag = roz_abyss_vass_had_create_available }
     }
     allow = {
         custom_tooltip = {
             fail_text = roz_start.7777.abyss_vass_can_create_timed
-            root = { has_country_flag = roz_abyss_vass_can_create_timed }
+            root? = { has_country_flag = roz_abyss_vass_can_create_timed }
         }
         custom_tooltip = {
             fail_text = roz_start.7777.abyss_has_come
-            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
+            root? = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
         }
     }
     effect = {
         custom_tooltip = roz_settings_abyss_vass_had_create_available_effect.tooltip
-        from = { remove_country_flag = roz_abyss_vass_had_create_available }
+        from? = { remove_country_flag = roz_abyss_vass_had_create_available }
     }
 }
 roz_settings_abyss_vass_had_create_disable_effect = {
     potential = {
-        NOT = { from = { has_country_flag = roz_abyss_vass_had_create_available } }
+        NOT = { from? = { has_country_flag = roz_abyss_vass_had_create_available } }
     }
     allow = {
         custom_tooltip = {
             fail_text = roz_start.7777.abyss_vass_can_create_timed
-            root = { has_country_flag = roz_abyss_vass_can_create_timed }
+            root? = { has_country_flag = roz_abyss_vass_can_create_timed }
         }
         custom_tooltip = {
             fail_text = roz_start.7777.abyss_has_come
-            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
+            root? = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
         }
     }
     effect = {
         custom_tooltip = roz_settings_abyss_vass_had_create_disable_effect.tooltip
         hidden_effect = {
-            from = { set_country_flag = roz_abyss_vass_had_create_available }
+            from? = { set_country_flag = roz_abyss_vass_had_create_available }
         }
     }
 }
@@ -696,7 +696,7 @@ roz_settings_abyss_challenge_available_effect = {
     allow = {
         custom_tooltip = {
             fail_text = roz_start.7777.abyss_has_come
-            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
+            root? = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
         }
     }
     effect = {
@@ -714,13 +714,13 @@ roz_settings_abyss_challenge_disable_effect = {
     allow = {
         custom_tooltip = {
             fail_text = roz_start.7777.abyss_has_come
-            root = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
+            root? = { NOT = { has_country_flag = roz_abyss_faction_arrival } }
         }
     }
     effect = {
         custom_tooltip = roz_settings_abyss_challenge_disable_effect.tooltip
         hidden_effect = {
-            from = { set_country_flag = roz_abyss_challenge_available }
+            from? = { set_country_flag = roz_abyss_challenge_available }
             set_global_flag = roz_abyss_challenge_available
         }
     }
@@ -731,7 +731,7 @@ roz_settings_abyss_challenge_disable_effect = {
 #王座系列战力调整
 roz_settings_im1 = {
     potential = {  
-        from = { NOT = { has_country_flag = roz_sgt_flagship_not_immune_tech_limit } } 
+        from? = { NOT = { has_country_flag = roz_sgt_flagship_not_immune_tech_limit } } 
     }
     allow = { 
         always = yes
@@ -739,7 +739,7 @@ roz_settings_im1 = {
     effect = {
         custom_tooltip = roz_start.7777.im1.tooltip
         hidden_effect = {
-            from = {
+            from? = {
                 hidden_effect = {
                     set_country_flag = roz_sgt_flagship_not_immune_tech_limit       
                     every_owned_ship = {
@@ -773,7 +773,7 @@ roz_settings_im1 = {
 }
 roz_settings_im2 = {
     potential = {
-        from = { has_country_flag = roz_sgt_flagship_not_immune_tech_limit }
+        from? = { has_country_flag = roz_sgt_flagship_not_immune_tech_limit }
     }
     allow = { 
         always = yes
@@ -781,7 +781,7 @@ roz_settings_im2 = {
     effect = {
         custom_tooltip = roz_start.7777.im2.tooltip
         hidden_effect = {
-        from = {
+        from? = {
                 remove_country_flag = roz_sgt_flagship_not_immune_tech_limit
             every_owned_ship = {
                 limit = {
@@ -802,16 +802,16 @@ roz_settings_im2 = {
 
 
 roz_settings_cheat_disable = {
-    potential = { from = { NOT = { has_country_flag = enable_roz_cheat } } }
+    potential = { from? = { NOT = { has_country_flag = enable_roz_cheat } } }
     allow = { always = yes }
     effect = {
-        from = {
+        from? = {
             set_country_flag = enable_roz_cheat
         }
     }
 }
 roz_settings_cheat_enable = {
-    potential = { from = { has_country_flag = enable_roz_cheat } }
+    potential = { from? = { has_country_flag = enable_roz_cheat } }
     allow = { always = yes }
     effect = {
         remove_country_flag = enable_roz_cheat
@@ -827,7 +827,7 @@ roz_settings_leader_name_jp_effect = {
     effect = {
         custom_tooltip =  roz_start.7777.leader_name_jp.ct
         hidden_effect = {
-            from = {
+            from? = {
                 set_country_flag = roz_leader_name_jp_flag
                 remove_country_flag = roz_leader_name_sc_flag
             }
@@ -842,7 +842,7 @@ roz_settings_leader_name_sc_effect = {
     effect = {
         custom_tooltip =  roz_start.7777.leader_name_sc.ct
         hidden_effect = {
-            from = {
+            from? = {
                 set_country_flag = roz_leader_name_sc_flag
                 remove_country_flag = roz_leader_name_jp_flag
             }
@@ -865,7 +865,7 @@ roz_settings_lgate_effect = {
     effect = { 
         custom_tooltip = roz_start.7777.lgate.ct
         hidden_effect = {
-            from = { country_event = { id = ge_test_event.200 } } 
+            from? = { country_event = { id = ge_test_event.200 } } 
         }
     }
 }
@@ -874,7 +874,7 @@ roz_settings_reload_menu_effect = {
     potential = { always = yes }
     allow = { always = yes }
     effect = {
-        from = {
+        from? = {
             
         }
     }

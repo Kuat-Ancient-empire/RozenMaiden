@@ -1,4 +1,5 @@
-ge_sgt_site = {		###水银灯
+ge_sgt_site = {
+	###水银灯
 	desc = ge_sgt_site_desc
 	picture = GFX_ge_sgt_site
 	stages = 5
@@ -13,10 +14,11 @@ ge_sgt_site = {		###水银灯
 	visible = {
 		default_site_visible_trigger = yes
 	}
+	situation_log_category = dig_sites
 	on_visible = {
-		root = {
+		root? = {
 			if = {
-				limit = { 
+				limit = {
 					has_country_flag = ge_sgt_site_find_2_flag
 				}
 				country_event = {
@@ -25,16 +27,16 @@ ge_sgt_site = {		###水银灯
 				}
 			}
 			else_if = {
-				limit = { 
+				limit = {
 					is_ai = no
 				}
-				country_event = { id = ge_sites.10 days = 1 }
+				country_event = {
+					id = ge_sites.10
+					days = 1
+				}
 			}
-			
 		}
-		
 	}
-
 	stage = {
 		difficulty = 2
 		icon = GFX_archaeology_runes_A1
@@ -64,23 +66,22 @@ ge_sgt_site = {		###水银灯
 		difficulty = 1
 		icon = GFX_archaeology_runes_A6
 		event = ge_sites.16
-	}	
-
+	}
 	on_roll_failed = {
-		from = {
-			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		from? = {
+			standard_archaeological_site_on_roll_failed = {
+				RANDOM_EVENTS = all_random_events
+			}
 		}
 	}
 }
 
-
-
 roz_the_fields_of_growth_site = {
 	###生长区
 	desc = roz_tfog_site_desc
-	picture = GFX_roz_tfog_site
+	picture = GFX_evt_roz_evt_monumental
 	stages = 4
-	max_instances = 30    #坟的全局数量限制，影响重复刷坟
+	max_instances = 30	#坟的全局数量限制，影响重复刷坟
 	allow = {
 		is_ship_class = shipclass_science_ship
 		exists = leader
@@ -89,30 +90,27 @@ roz_the_fields_of_growth_site = {
 			has_leader_flag = roz_suigintou_flag
 		}
 	}
+	situation_log_category = dig_sites
 	visible = {
 		default_site_visible_trigger = yes
 	}
 	on_visible = {
-		root = {
-
+		root? = {
 		}
-
 	}
-
 	stage = {
 		difficulty = 2
 		icon = GFX_archaeology_runes_A1
 		event = ge_sites.11
 	}
-
 	on_roll_failed = {
-		from = {
-			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		from? = {
+			standard_archaeological_site_on_roll_failed = {
+				RANDOM_EVENTS = all_random_events
+			}
 		}
 	}
 }
-
-
 
 roz_relic_of_eras_site = {
 	desc = roz_relic_of_eras_site_desc
@@ -127,13 +125,13 @@ roz_relic_of_eras_site = {
 		default_site_visible_trigger = yes
 	}
 	on_visible = {
-		root = {
-				country_event = {
-					id = ge_sites.400
-				}
+		root? = {
+			country_event = {
+				id = ge_sites.400
+			}
 		}
-
 	}
+	situation_log_category = dig_sites
 	stage = {
 		difficulty = 1
 		icon = GFX_archaeology_runes_A1
@@ -170,17 +168,16 @@ roz_relic_of_eras_site = {
 		event = ge_sites.407
 	}
 	on_roll_failed = {
-		from = {
-			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		from? = {
+			standard_archaeological_site_on_roll_failed = {
+				RANDOM_EVENTS = all_random_events
+			}
 		}
 	}
 }
 
 ###
 #坟：被欺诈的种族灭绝
-
-
-
 ###破败神国坟
 #
 roz_ruined_paradise_site = {
@@ -188,24 +185,26 @@ roz_ruined_paradise_site = {
 	picture = GFX_evt_roz_evt_monumental
 	stages = 5
 	#max_instances = 1
+	situation_log_category = dig_sites
 	allow = {
 		is_ship_class = shipclass_science_ship
 		exists = leader
 		owner = {
-			NOT = { has_relic = r_roz_Chronos_Label }
+			NOT = {
+				has_relic = r_roz_Chronos_Label
+			}
 		}
 	}
 	visible = {
 		default_site_visible_trigger = yes
 	}
 	on_visible = {
-		root = {
+		root? = {
 			country_event = {
 				id = ge_sites.501
 				days = 3
 			}
 		}
-
 	}
 	stage = {
 		difficulty = 4
@@ -232,17 +231,11 @@ roz_ruined_paradise_site = {
 		icon = GFX_archaeology_runes_A5
 		event = ge_sites.515
 	}
-
 	on_roll_failed = {
-		from = {
-			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		from? = {
+			standard_archaeological_site_on_roll_failed = {
+				RANDOM_EVENTS = all_random_events
+			}
 		}
 	}
 }
-
-
-
-
-
-
-

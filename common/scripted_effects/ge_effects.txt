@@ -8,54 +8,54 @@ get_ge_leader_target = {
 	}
 }
 
-generate_sgt_site_on_game_start = {	#give up
-	##scope = country
-	optimize_memory
-	random_planet_within_border = {
-		weights = {
-			base = 1
-			modifier = {
-				factor = 100
-				is_capital = yes
-			}
-		}
-		solar_system = {
-			closest_system = {
-				min_steps = 0
-				max_steps = 17
-				limit = {
-					NOT = {
-						has_star_flag = ge_suigintou_site_counted
-					}
-					has_owner = no
-					#has_access_fleet = root
-					roz_sgt_site_planet_select_condition = yes
-				}
-				this = {
-					set_star_flag = ge_suigintou_site_star_flag@root
-				}
-				set_timed_star_flag = {
-					flag = ge_suigintou_site_counted
-					days = 1
-				}
-				random_system_planet = {
-					limit = {
-						roz_sgt_site_planet_select_condition = yes
-					}
-					set_name = "NAME_roz_sgt_site_planet"
-					change_pc = pc_black_hole
-					set_planet_size = 1
-					clear_deposits = yes
-					set_planet_flag = ge_planet_flag_sgt@root
-					create_archaeological_site = roz_sgt_site
-					root = {
-						set_country_flag = roz_sgt_site_owner_flag_for_multiplayer
-					}
-				}
-			}
-		}
-	}
-}
+# generate_sgt_site_on_game_start = {	#give up
+# 	##scope = country
+# 	optimize_memory
+# 	random_planet_within_border = {
+# 		weights = {
+# 			base = 1
+# 			modifier = {
+# 				factor = 100
+# 				is_capital = yes
+# 			}
+# 		}
+# 		solar_system? = {
+# 			closest_system = {
+# 				min_steps = 0
+# 				max_steps = 17
+# 				limit = {
+# 					NOT = {
+# 						has_star_flag = ge_suigintou_site_counted
+# 					}
+# 					has_owner = no
+# 					#has_access_fleet = root
+# 					roz_sgt_site_planet_select_condition = yes
+# 				}
+# 				this = {
+# 					set_star_flag = ge_suigintou_site_star_flag@root
+# 				}
+# 				set_timed_star_flag = {
+# 					flag = ge_suigintou_site_counted
+# 					days = 1
+# 				}
+# 				random_system_planet = {
+# 					limit = {
+# 						roz_sgt_site_planet_select_condition = yes
+# 					}
+# 					set_name = "NAME_roz_sgt_site_planet"
+# 					change_pc = pc_black_hole
+# 					set_planet_size = 1
+# 					clear_deposits = yes
+# 					set_carrier_flag = ge_carrier_flag_sgt@root
+# 					create_archaeological_site = roz_sgt_site
+# 					root? = {
+# 						set_country_flag = roz_sgt_site_owner_flag_for_multiplayer
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 generate_sgt_site_on_game_start_when_singleplayer = {
 	optimize_memory
@@ -85,7 +85,7 @@ generate_sgt_site_on_game_start_when_singleplayer = {
 					has_anomaly = no
 					NOR = {
 						exists = archaeological_site
-						has_planet_flag = hatchling_egg
+						has_carrier_flag = hatchling_egg
 					}
 					OR = {
 						is_planet_class = pc_molten
@@ -101,9 +101,9 @@ generate_sgt_site_on_game_start_when_singleplayer = {
 				set_planet_size = 1
 				clear_deposits = yes
 				#add_deposit = ge_sgt_depo	#_添加deposit
-				set_planet_flag = ge_planet_flag_sgt@root
+				set_carrier_flag = ge_carrier_flag_sgt@root
 				create_archaeological_site = ge_sgt_site
-				root = {
+				root? = {
 					set_country_flag = ge_sgt_site_owner_flag_for_multiplayer
 				}
 				save_global_event_target_as = roz_n_field_site_target@root
@@ -118,7 +118,7 @@ create_ge_suigintou_scientist = {
 	set_country_flag = roz_suigintou_scientist_active
 	remove_country_flag = roz_suigintou_commander_active
 	#缓存国家目标领袖更新替换,当前水银灯为舰队司令，要转科学家,先kill了再说
-	event_target:roz_suigintou_commander_inactive_temp@root = { #令临时存储国家的舰队司令水银灯消失
+	event_target:roz_suigintou_commander_inactive_temp@root? = { #令临时存储国家的舰队司令水银灯消失
 		kill_leader = {
 			show_notification = no
 		}
@@ -138,7 +138,7 @@ create_ge_suigintou_scientist = {
 			}
 			#东方繁星录兼容
 			if = {
-				limit = { this = { spth_check_gensokyo_auth = yes } }
+				limit = { spth_check_gensokyo_auth = yes }
 				set_leader_flag = own_th_leader_trait
 			}
 			# add_trait = { trait = leader_trait_ge_mercury_lamp }
@@ -147,7 +147,7 @@ create_ge_suigintou_scientist = {
 		}
 	}
 	#移除玩家的指挥官水银灯
-	event_target:roz_leader_suigintou_global_target@root = { kill_leader = { show_notification = no } }
+	event_target:roz_leader_suigintou_global_target@root? = { kill_leader = { show_notification = no } }
 	#创建或从缓存国家复制科学家水银灯
 	roz_leader_type_switch_create_leader_initiate_effect = {
 		leader = suigintou
@@ -172,7 +172,7 @@ create_ge_suigintou_admiral = {
 	set_country_flag = roz_suigintou_commander_active
 	remove_country_flag = roz_suigintou_scientist_active
 	#缓存国家目标领袖更新替换
-	event_target:roz_suigintou_scientist_inactive_temp@root = { #科学家
+	event_target:roz_suigintou_scientist_inactive_temp@root? = { #科学家
 		kill_leader = {
 			show_notification = no
 		}
@@ -191,7 +191,7 @@ create_ge_suigintou_admiral = {
 			}
 			#东方繁星录兼容
 			if = {
-				limit = { this = { spth_check_gensokyo_auth = yes } }
+				limit = { spth_check_gensokyo_auth = yes }
 				set_leader_flag = own_th_leader_trait
 			}
 			# add_trait = { trait = leader_trait_ge_meimei_scientist }
@@ -200,7 +200,7 @@ create_ge_suigintou_admiral = {
 		}
 	}
 	#移除玩家的科学家水银灯
-	event_target:roz_leader_suigintou_global_target@root = {
+	event_target:roz_leader_suigintou_global_target@root? = {
 		kill_leader = {
 			show_notification = no
 		}
@@ -227,7 +227,7 @@ create_ge_suigintou_admiral = {
 roz_suigintou_clone_scientist_from_cache_country = {
 	clone_leader = {#从临时国家取科学家水银灯到玩家国家
 		target = event_target:roz_suigintou_scientist_inactive_temp@root
-		custom_catch_phrase = suigintou_sci_catch_phrase
+		custom_catch_phrase = suigintou_scientist_catch_phrase
 		custom_description = suigintou_backstory
 		effect = {
 			freeze_leader_age = yes
@@ -249,7 +249,7 @@ roz_suigintou_clone_scientist_from_cache_country = {
 roz_suigintou_clone_admiral_from_cache_country = {
 	clone_leader = {
 		target = event_target:roz_suigintou_commander_inactive_temp@root
-		custom_catch_phrase = suigintou_sci_catch_phrase
+		custom_catch_phrase = suigintou_scientist_catch_phrase
 		custom_description = suigintou_backstory
 		effect = {
 			#set_name = "NAME_suigintou"
@@ -370,7 +370,7 @@ roz_leader_suigintou_counting_check = {
 				}
 			}
 			set_leader_flag = roz_suigintou_checking_flag
-			Root = {
+			root? = {
 				change_variable = {
 					which = roz_suigintou_counting_var
 					value = 1
@@ -442,19 +442,19 @@ roz_suigintou_scientist_backup = {
 		limit = {
 			has_country_flag = roz_suigintou_scientist_active
 			exists = event_target:roz_leader_suigintou_global_target@root
-			event_target:roz_leader_suigintou_global_target@root = {
+			event_target:roz_leader_suigintou_global_target@root? = {
 				leader_class = scientist
 			}
 		}
 		#缓存国家目标领袖更新替换
-		event_target:roz_suigintou_scientist_inactive_temp@root = {
+		event_target:roz_suigintou_scientist_inactive_temp@root? = {
 			kill_leader = {
 				show_notification = no
 			}
 		}
 		clone_leader = { #替换
 			target = event_target:roz_leader_suigintou_global_target@root
-			custom_catch_phrase = suigintou_sci_catch_phrase
+			custom_catch_phrase = suigintou_scientist_catch_phrase
 			custom_description = suigintou_backstory
 			effect = {
 				save_global_event_target_as = roz_suigintou_scientist_inactive_temp@root
@@ -480,19 +480,19 @@ roz_suigintou_admiral_backup = {
 		limit = {
 			has_country_flag = roz_suigintou_commander_active
 			exists = event_target:roz_leader_suigintou_global_target@root
-			event_target:roz_leader_suigintou_global_target@root = {
+			event_target:roz_leader_suigintou_global_target@root? = {
 				leader_class = commander
 			}
 		}
 		#缓存国家目标领袖更新替换
-		event_target:roz_suigintou_commander_inactive_temp@root = { #令临时存储国家的舰队司令水银灯消失
+		event_target:roz_suigintou_commander_inactive_temp@root? = { #令临时存储国家的舰队司令水银灯消失
 			kill_leader = {
 				show_notification = no
 			}
 		}
 		clone_leader = {
 			target = event_target:roz_leader_suigintou_global_target@root
-			custom_catch_phrase = suigintou_sci_catch_phrase
+			custom_catch_phrase = suigintou_scientist_catch_phrase
 			custom_description = suigintou_backstory
 			effect = {
 				save_global_event_target_as = roz_suigintou_commander_inactive_temp@root
@@ -515,7 +515,7 @@ roz_suigintou_admiral_backup = {
 
 ###revive suigintou for cache country
 roz_suigintou_revive_reset_scientist = {
-	event_target:roz_suigintou_global_country@root = {
+	event_target:roz_suigintou_global_country@root? = {
 		create_leader = {
 			class = scientist
 			name = "NAME_suigintou"
@@ -528,7 +528,7 @@ roz_suigintou_revive_reset_scientist = {
 			set_age = 17
 			traits = { }
 			skip_background_generation = yes
-			custom_catch_phrase = suigintou_sci_catch_phrase
+			custom_catch_phrase = suigintou_scientist_catch_phrase
 			custom_description = suigintou_backstory
 			effect = {
 				add_skill_without_trait_selection = 1
@@ -602,7 +602,7 @@ roz_suigintou_revive_reset_scientist = {
 }
 
 roz_suigintou_revive_reset_admiral = {
-	event_target:roz_suigintou_global_country@root = {
+	event_target:roz_suigintou_global_country@root? = {
 		create_leader = {
 			class = commander
 			species = owner_main_species
@@ -614,7 +614,7 @@ roz_suigintou_revive_reset_admiral = {
 			event_leader = yes
 			traits = { }
 			skip_background_generation = yes
-			custom_catch_phrase = suigintou_adm_catch_phrase
+			custom_catch_phrase = suigintou_commander_catch_phrase
 			custom_description = suigintou_backstory
 			effect = {
 				add_skill_without_trait_selection = 1
@@ -961,7 +961,7 @@ ge_add_aft_scientist_on_research = {
 	#随机数，0.5-2-0
 	ge_add_random_var = yes
 	###与科研三产挂钩，增加变量
-	root = {
+	root? = {
 		export_resource_income_to_variable = {
 			resource = physics_research
 			variable = roz_aft_temp_var
@@ -1052,7 +1052,7 @@ ge_add_aft_scientist_on_research = {
 	}
 	clear_variable = ge_custom_variable
 	clear_variable =roz_aft_temp_var
-	root = {
+	root? = {
 		clear_variable = roz_aft_temp_var
 	}
 }
@@ -1062,14 +1062,14 @@ roz_add_aft_govern_planet = {
 	#蔷薇少女在星球上任职时,增加好感度
 	if = {
 		limit = {
-			event_target:roz_leader_suigintou_global_target@root = {
+			event_target:roz_leader_suigintou_global_target@root? = {
 				planet = {
 					exists = this
 				}
 			}
 		}
 		hidden_effect = {
-			event_target:roz_leader_suigintou_global_target@root = {
+			event_target:roz_leader_suigintou_global_target@root? = {
 				change_variable = {
 					which = roz_suigintou_affection
 					value = 0.05
@@ -1079,14 +1079,14 @@ roz_add_aft_govern_planet = {
 	}
 	if = {
 		limit = {
-			event_target:roz_leader_shinku_global_target@root = {
+			event_target:roz_leader_shinku_global_target@root? = {
 				planet = {
 					exists = this
 				}
 			}
 		}
 		hidden_effect = {
-			event_target:roz_leader_shinku_global_target@root = {
+			event_target:roz_leader_shinku_global_target@root? = {
 				change_variable = {
 					which = roz_shinku_affection
 					value = 0.1
@@ -1351,7 +1351,7 @@ create_ge_kirakishou_hostile_ship = {
 				}
 				if = {
 					limit = {
-						root = {
+						root? = {
 							has_country_flag = roz_krks_dl_normal_flag
 						}
 					}
@@ -1361,7 +1361,7 @@ create_ge_kirakishou_hostile_ship = {
 				}
 				else_if = {
 					limit = {
-						root = {
+						root? = {
 							has_country_flag = roz_krks_dl_early_flag
 						}
 					}
@@ -1373,7 +1373,7 @@ create_ge_kirakishou_hostile_ship = {
 				save_global_event_target_as = kirakishou_Avatar_fleet@root
 				set_fleet_flag = kirakishou_Avatar_fleet_flag
 				set_fleet_flag = kirakishou_hostile_fleet_flag
-				prev = {
+				prev? = {
 					#set_custom_capital_location = event_target:kirakishou_Avatar
 				}
 			}
@@ -1389,7 +1389,7 @@ create_ge_kirakishou_hostile_ship = {
 				set_owner = last_created_country
 				if = {
 					limit = {
-						root = {
+						root? = {
 							has_country_flag = roz_krks_dl_normal_flag
 						}
 					}
@@ -1418,10 +1418,11 @@ create_ge_kirakishou_hostile_ship = {
 
 				else_if = {
 					limit = {
-						root = {
+						root? = {
 							has_country_flag = roz_krks_dl_early_flag
 						}
 					}
+					no_events = yes #TODO
 				}
 
 			}
@@ -1463,7 +1464,7 @@ create_ge_kirakishou_hostile_ship_stage2 = {
 			set_owner = event_target:kirakishou_hostile_country@root
 			if = {
 				limit = {
-					root = {
+					root? = {
 						has_country_flag = roz_krks_dl_normal_flag
 					}
 				}
@@ -1473,7 +1474,7 @@ create_ge_kirakishou_hostile_ship_stage2 = {
 			}
 			else_if = {
 				limit = {
-					root = {
+					root? = {
 						has_country_flag = roz_krks_dl_early_flag
 					}
 				}
@@ -1495,7 +1496,7 @@ create_ge_kirakishou_hostile_ship_stage2 = {
 			set_owner = event_target:kirakishou_hostile_country@root
 			if = {
 				limit = {
-					root = {
+					root? = {
 						has_country_flag = roz_krks_dl_normal_flag
 					}
 				}
@@ -1524,10 +1525,11 @@ create_ge_kirakishou_hostile_ship_stage2 = {
 
 			else_if = {
 				limit = {
-					root = {
+					root? = {
 						has_country_flag = roz_krks_dl_early_flag
 					}
 				}
+				no_events = yes #TODO
 			}
 
 		}
@@ -1563,7 +1565,7 @@ create_ge_kirakishou_hostile_ship_stage3 = {
 			}
 			if = {
 				limit = {
-					root = {
+					root? = {
 						has_country_flag = roz_krks_dl_normal_flag
 					}
 				}
@@ -1573,7 +1575,7 @@ create_ge_kirakishou_hostile_ship_stage3 = {
 			}
 			else_if = {
 				limit = {
-					root = {
+					root? = {
 						has_country_flag = roz_krks_dl_early_flag
 					}
 				}
@@ -1586,7 +1588,7 @@ create_ge_kirakishou_hostile_ship_stage3 = {
 			set_fleet_flag = kirakishou_et_fleet_flag
 			set_fleet_flag = kirakishou_hostile_fleet_flag
 			set_owner = event_target:kirakishou_hostile_country@root
-			root = {
+			root? = {
 				#先不能死
 				#set_custom_capital_location = event_target:kirakishou_Avatar
 			}
@@ -1603,7 +1605,7 @@ create_ge_kirakishou_hostile_ship_stage3 = {
 			set_owner = event_target:kirakishou_hostile_country@root
 			if = {
 				limit = {
-					root = {
+					root? = {
 						has_country_flag = roz_krks_dl_normal_flag
 					}
 				}
@@ -1632,7 +1634,7 @@ create_ge_kirakishou_hostile_ship_stage3 = {
 
 			else_if = {
 				limit = {
-					root = {
+					root? = {
 						has_country_flag = roz_krks_dl_early_flag
 					}
 				}
@@ -1673,7 +1675,7 @@ create_ge_kirakishou_hostile_ship_stage4 = {
 			}
 			if = {
 				limit = {
-					root = {
+					root? = {
 						has_country_flag = roz_krks_dl_normal_flag
 					}
 				}
@@ -1683,7 +1685,7 @@ create_ge_kirakishou_hostile_ship_stage4 = {
 			}
 			else_if = {
 				limit = {
-					root = {
+					root? = {
 						has_country_flag = roz_krks_dl_early_flag
 					}
 				}
@@ -1698,7 +1700,7 @@ create_ge_kirakishou_hostile_ship_stage4 = {
 			set_fleet_flag = kirakishou_hostile_fleet_flag
 			set_owner = event_target:kirakishou_hostile_country@root
 			#set_event_locked = yes
-			root = {
+			root? = {
 				#先不能死
 				#set_custom_capital_location = event_target:kirakishou_Avatar
 			}
@@ -1715,7 +1717,7 @@ create_ge_kirakishou_hostile_ship_stage4 = {
 			set_owner = event_target:kirakishou_hostile_country@root
 			if = {
 				limit = {
-					root = {
+					root? = {
 						has_country_flag = roz_krks_dl_normal_flag
 					}
 				}
@@ -1744,10 +1746,11 @@ create_ge_kirakishou_hostile_ship_stage4 = {
 
 			else_if = {
 				limit = {
-					root = {
+					root? = {
 						has_country_flag = roz_krks_dl_early_flag
 					}
 				}
+				no_events = yes #TODO
 			}
 
 		}
@@ -1816,7 +1819,7 @@ roz_krks_inv_end_loop_effect = {	#scope:country
 		limit = {
 			is_ship_size = ge_black_dragon
 		}
-		solar_system = {
+		solar_system? = {
 			create_ambient_object = {
 				type = "star_explosion"
 				play_animation_once = yes
@@ -1845,7 +1848,7 @@ roz_krks_inv_end_loop_effect = {	#scope:country
 		destroy_fleet = this
 	}
 	#清理全局目标,以及flag
-	event_target:kirakishou_hostile_country@root = {
+	event_target:kirakishou_hostile_country@root? = {
 		destroy_country = yes
 	}
 	clear_global_event_target = kirakishou_hostile_country@root
@@ -1860,7 +1863,7 @@ roz_krks_inv_end_loop_effect = {	#scope:country
 		id = ge_event.2063
 		#days = 1
 	}
-	event_target:krks_bf_situation_target@root = {
+	event_target:krks_bf_situation_target@root? = {
 		add_situation_progress = -25
 	}
 	every_situation = {
@@ -1869,7 +1872,10 @@ roz_krks_inv_end_loop_effect = {	#scope:country
 		}
 		destroy_situation = this
 	}
-	every_situation = { limit = { is_situation_type = kirakishou_battle_field_situation }destroy_situation = this }
+	every_situation = { 
+		limit = { is_situation_type = kirakishou_battle_field_situation } 
+		destroy_situation = this 
+	}
 	remove_modifier = disable_ap_ge_0
 	remove_modifier = disable_ap_ge_1
 	remove_country_flag = ge_krks_time_freeze_loop_start_flag
@@ -1958,7 +1964,7 @@ roz_remove_all_affection_traits = {
 }
 
 roz_outland_planet_change = {
-	event_target:roz_outland_planet@root = {
+	event_target:roz_outland_planet@root? = {
 	    change_pc = pc_roz_YS_planet
 		change_planet_size = 15
 	    hidden_effect = {
@@ -2359,7 +2365,7 @@ ge_generater_effect = {
 				value = 10
 			}
 		}
-		root = {
+		root? = {
 			change_variable = {
 				which = ge_country_generatorship_var
 				value = prev.ge_fleet_generatorship_var
@@ -4298,7 +4304,7 @@ roz_lgate_create_reward_planet = {
 	random_planet_within_border = {
 		limit = {
 			is_planet_class = pc_gray_goo
-			solar_system = {
+			solar_system? = {
 				is_same_value = event_target:graygoo_factory_system
 			}
 			#always = no
@@ -4659,7 +4665,6 @@ roz_leader_change_skin_flag_locate_effect = {
 			has_leader_flag = $leader_flag$
 		}
 		change_leader_portrait = $portrait_key$
-
 	}
 }
 
@@ -4881,7 +4886,7 @@ roz_leader_name_set_effect = {	#领袖名语种切换
 	#this = leader
 	if = {
 		limit = {
-			root = {
+			root? = {
 				has_country_flag = roz_leader_name_jp_flag
 			}
 		}
@@ -4889,7 +4894,7 @@ roz_leader_name_set_effect = {	#领袖名语种切换
 	}
 	if = {
 		limit = {
-			root = {
+			root? = {
 				has_country_flag = roz_leader_name_sc_flag
 			}
 		}
@@ -5071,7 +5076,7 @@ ge_vn_torpedo_on_hit_effect = {
 ge_vn_main_beam_on_hit_effect = {
 	if = {
 		limit = { 
-			from = {
+			from? = {
 				#has_component = ge_shippart_time_freeze
 				check_modifier_value = { modifier = roz_timefreeze_modifier_tooltip value > 0 }
 			}
@@ -5095,7 +5100,7 @@ ge_vn_secondary_beam_on_hit_effect = {
 					has_modifier = ge_modifier_time_freeze
 					ship_size_multiplier >= 8
 				}
-				from = { repair_amount = 400000 }
+				from? = { repair_amount = 400000 }
 			}
 		}
 	}
@@ -5233,7 +5238,7 @@ roz_sgt_flagship_protect_remove_effect = {
 
 roz_leader_affection_change_on_fleet_battle_won = {
 	optimize_memory
-	fromfrom = {	#winner fleet
+	fromfrom? = {	#winner fleet
 		leader = {
 			change_variable = {
 				#摧毁敌舰数
@@ -5370,7 +5375,7 @@ roz_leader_affection_change_on_fleet_battle_won = {
 
 roz_leader_affection_change_on_fleet_battle_fail = {
 	optimize_memory
-	fromfrom = {
+	fromfrom? = {
 		leader = {
 			change_variable = {
 				#摧毁敌舰数

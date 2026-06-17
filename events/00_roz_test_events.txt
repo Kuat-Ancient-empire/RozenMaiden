@@ -20,12 +20,12 @@ country_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = ge_test_event.1000
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		#from = {
+		#from? = {
 		#	is_in_combat = no
 		#}
 	}
@@ -37,7 +37,7 @@ planet_event = {
 			remove_megastructure = this
 		}
 		#set_update_modifiers_batch = begin
-		from = {
+		from? = {
 
 			owner = {
 				save_event_target_as = crisis_country
@@ -83,7 +83,7 @@ planet_event = {
 				}
 			}
 		}
-		solar_system = {
+		solar_system? = {
 			save_event_target_as = destroyed_system
 			
 		}
@@ -151,7 +151,7 @@ planet_event = {
 				}
 			}
 		}
-		solar_system = {
+		solar_system? = {
 			destroy_star_system = yes
 			
 		}
@@ -264,7 +264,7 @@ country_event = { #控制台effect测试区
 		
 	}
 	# trigger = {
-	# 	event_target:roz_suigintou_global_country@root = {
+	# 	event_target:roz_suigintou_global_country@root? = {
 	# 		any_owned_leader = {
 	# 			leader_class = commander
 	# 			has_trait = leader_trait_ge_mercury_lamp			
@@ -276,14 +276,14 @@ country_event = { #控制台effect测试区
 		# event_target:roz_test = {
 		# 	set_player = event_target:roz_suigintou_owner@root
 		# }
-		#trigger event_target:roz_madgod_force_country@root = { exists = this }
-		#event_target:roz_madgod_force_country@root = { set_player = event_target:roz_suigintou_owner@root }
+		#trigger event_target:roz_madgod_force_country@root? = { exists = this }
+		#event_target:roz_madgod_force_country@root? = { set_player = event_target:roz_suigintou_owner@root }
 		#trigger roz_is_all_abyss_killed_except_madgod_system = { scope = root }
 		every_country = {
 			limit = { has_country_flag = roz_abyss_vass_country }
 			destroy_country = yes
 		}
-		event_target:roz_madgod_force_country@root = {
+		event_target:roz_madgod_force_country@root? = {
 			every_owned_planet = {
 				destroy_colony = yes
 			}
@@ -379,7 +379,7 @@ country_event = { #控制台effect测试区
 		# 	}
 		# 	roz_unholy_invision_difficult_modifier_add_effect = yes
 		# }
-		#trigger event_target:roz_abyss_vass_extra_1_target@root = { exists = this }
+		#trigger event_target:roz_abyss_vass_extra_1_target@root? = { exists = this }
 		#trigger event_target:roz_abyss_vass_extra_4_target0 = { exists = this }
 
 		#effect = { set_country_type = default }
@@ -563,7 +563,7 @@ country_event = { #控制台effect测试区
 		# 		}
 		# 		event_target:KZ_VOY_solaria_target = {
 		# 			add_building = building_KZ_VOY_magical_medicine_institute
-		# 			set_planet_flag = KZ_VOY_SBM_mode_all_flag
+		# 			set_carrier_flag = KZ_VOY_SBM_mode_all_flag
 		# 			KZ_VOY_SBM_refresh = yes
 		# 		}
 		# 	}
@@ -747,8 +747,8 @@ country_event = { #控制台effect测试区
 		# 		change_planet_size = 30
 		# 		change_pc = pc_KZ_VOY_hyper_sphare_solaria
 		# 		save_global_event_target_as = KZ_VOY_solaria_target
-		# 		set_planet_flag = megastructure
-		# 		set_planet_flag = has_megastructure
+		# 		set_carrier_flag = megastructure
+		# 		set_carrier_flag = has_megastructure
 		# 		add_modifier = {
 		# 			modifier = KZ_VOY_PM_ten_in_one
 		# 		}
@@ -796,7 +796,7 @@ country_event = { #控制台effect测试区
 		# 	attacker_war_goal = wg_colossus
 		# }
 		# save_global_event_target_as = roz_temp_wargoal
-		#effect = { event_target:ge_site_sgt_target = { solar_system = { set_star_flag = roz_outland_star spawn_natural_wormhole = { bypass_type = roz_gateway random_pos = no orbit_angle = 360 } set_surveyed = { surveyed = yes surveyor = root } } } set_spawn_system_batch = begin no_scope = { spawn_system = { min_distance >= 500 max_distance <= 700 min_orientation_angle = 90 max_orientation_angle = 270 initializer = roz_outland_star_system hyperlane = no } last_created_system = { set_name = "NAME_roz_outland_system" star = { set_name = "NAME_roz_outland_system" } event_target:roz_outland_planet_moon = { change_pc = pc_black_hole } } } set_spawn_system_batch = end }
+		#effect = { event_target:ge_site_sgt_target = { solar_system? = { set_star_flag = roz_outland_star spawn_natural_wormhole = { bypass_type = roz_gateway random_pos = no orbit_angle = 360 } set_surveyed = { surveyed = yes surveyor = root } } } set_spawn_system_batch = begin no_scope = { spawn_system = { min_distance >= 500 max_distance <= 700 min_orientation_angle = 90 max_orientation_angle = 270 initializer = roz_outland_star_system hyperlane = no } last_created_system = { set_name = "NAME_roz_outland_system" star = { set_name = "NAME_roz_outland_system" } event_target:roz_outland_planet_moon = { change_pc = pc_black_hole } } } set_spawn_system_batch = end }
 
 
 		#effect = { add_modifier = { modifier = roz_ap_slot_add } }
@@ -871,7 +871,7 @@ country_event = { #控制台effect测试区
 		#effect =  {queue_actions = { find_closest_system = { trigger = { id = KZ_VOY_demon_fleet_action_trigger.1 any_system_planet = { is_colony = yes num_pops > 0 is_KZ_VOY_Demon_Castle = no } } found_system = { move_to = this find_closest_planet = { trigger = { id = KZ_VOY_demon_fleet_action_trigger.2 is_colony = yes num_pops > 0 is_KZ_VOY_Demon_Castle = no } found_planet = { move_to = this orbit_planet = this } } } }}}
 
 		#effect = {set_ship_design = {  design = corvette random_existing_design = 1 }}
-		#effect = { set_country_flag = roz_sgt_unknow_flagship_spawn_country give_technology = { tech = tech_ge_sgt_flagship } add_modifier = { modifier = roz_sgt_flagship_completed_buff days = -1 } home_planet = { solar_system = { starbase = { create_ambient_object = { type = ROZ_SSVL_AO location = this scale = 0.4 use_3d_location = yes entity_offset = { min = 5 max = 20 } entity_offset_height = { min = 5 max = 5 } } last_created_ambient_object = { save_global_event_target_as =ROZ_SSVL_AO_home_target } } } } set_country_flag = ge_sgt_flagship_project_enable event_target:ROZ_SSVL_AO_target@owner = { destroy_ambient_object = this } country_event = { id = ge_sgt_flagship_events.10 days = 720 random = 1800 } }
+		#effect = { set_country_flag = roz_sgt_unknow_flagship_spawn_country give_technology = { tech = tech_ge_sgt_flagship } add_modifier = { modifier = roz_sgt_flagship_completed_buff days = -1 } home_planet = { solar_system? = { starbase = { create_ambient_object = { type = ROZ_SSVL_AO location = this scale = 0.4 use_3d_location = yes entity_offset = { min = 5 max = 20 } entity_offset_height = { min = 5 max = 5 } } last_created_ambient_object = { save_global_event_target_as =ROZ_SSVL_AO_home_target } } } } set_country_flag = ge_sgt_flagship_project_enable event_target:ROZ_SSVL_AO_target@owner = { destroy_ambient_object = this } country_event = { id = ge_sgt_flagship_events.10 days = 720 random = 1800 } }
 
 
 		#effect = {add_event_chain_counter = { amount = 4 counter = specimens_collected event_chain = roz_outland_system_chain } country_event = { id = roz_krks_leader_evt.55 }}
@@ -998,7 +998,7 @@ country_event = { #控制台effect测试区
 		#effect = {force_add_civic = civic_reanimated_armies}
 
 		#给每个拥有的星系刷出超空间中继器
-		#effect = {every_owned_starbase = { limit = { NOT = { solar_system = { has_megastructure = hyper_relay } } } solar_system = { spawn_megastructure = { type = hyper_relay orbit_angle = 0 orbit_distance = 0 owner = root graphical_culture = root random_pos = yes init_effect = {} } } }}
+		#effect = {every_owned_starbase = { limit = { NOT = { solar_system? = { has_megastructure = hyper_relay } } } solar_system? = { spawn_megastructure = { type = hyper_relay orbit_angle = 0 orbit_distance = 0 owner = root graphical_culture = root random_pos = yes init_effect = {} } } }}
 		#
 		#effect = {random_owned_leader = { limit = { has_leader_flag = roz_suigintou_flag } remove_leader_flag = leader_BA_30 }}
 
@@ -1007,12 +1007,12 @@ country_event = { #控制台effect测试区
 		#effect = { set_country_flag = q_sgt_army_get add_modifier = {modifier = ge_sgt_Q_dolls } add_modifier = {modifier = ge_rm_fake_prod }}
 		#effect = { export_modifier_to_variable = { modifier = category_field_manipulation_research_speed_mult variable = roz_test_var }}
 
-		#effect = {solar_system = {set_star_flag = ge_suigintou_site_star_flag} set_name = "NAME_ge_sgt_site_planet" change_pc = pc_black_hole set_planet_size = 1 clear_deposits = yes set_planet_flag = ge_planet_flag_sgt@space_owner create_archaeological_site = ge_sgt_site space_owner = { set_country_flag = ge_sgt_site_owner_flag_for_multiplayer }}
+		#effect = {solar_system? = {set_star_flag = ge_suigintou_site_star_flag} set_name = "NAME_ge_sgt_site_planet" change_pc = pc_black_hole set_planet_size = 1 clear_deposits = yes set_carrier_flag = ge_carrier_flag_sgt@space_owner create_archaeological_site = ge_sgt_site space_owner = { set_country_flag = ge_sgt_site_owner_flag_for_multiplayer }}
 
-		#effect every_owned_planet = { limit = { is_under_colonization = no } while = { count = 10 limit = { NOT = { has_planet_flag = roz_krks_inv_zakko_fleet_planet } } set_planet_flag = roz_krks_inv_zakko_fleet_planet } } remove_modifier = ge_gravity_knowledge_plus remove_modifier = ge_gravity_knowledge event_target:roz_n_field_site_target@root = { save_event_target_as = ge_site_sgt_target create_ge_kirakishou_hostile_ship = yes } start_situation = { type = kirakishou_battle_field_situation target = event_target:kirakishou_hostile_country@root } country_event = { id = ge_event.2040 days = 2 }
+		#effect every_owned_planet = { limit = { is_under_colonization = no } while = { count = 10 limit = { NOT = { has_carrier_flag = roz_krks_inv_zakko_fleet_planet } } set_carrier_flag = roz_krks_inv_zakko_fleet_planet } } remove_modifier = ge_gravity_knowledge_plus remove_modifier = ge_gravity_knowledge event_target:roz_n_field_site_target@root? = { save_event_target_as = ge_site_sgt_target create_ge_kirakishou_hostile_ship = yes } start_situation = { type = kirakishou_battle_field_situation target = event_target:kirakishou_hostile_country@root } country_event = { id = ge_event.2040 days = 2 }
 
 
-		 #effect ={ every_owned_fleet = {limit = {is_ship_size = ge_black_dragon }solar_system = {create_ambient_object = {type = "star_explosion"duration = 5entity_scale_to_size = no use_3d_location = yes entity_offset = { min = 0 max = 0 } entity_offset_angle = { min = 0 max = 0 }entity_offset_height = { min = 0 max = 0 }scale = 4 location = this }create_ambient_object = { type = nebula_1 duration = 30 entity_scale_to_size = no use_3d_location = yes entity_offset = { min = 0 max = 0 } entity_offset_angle = { min = 0 max = 0 }entity_offset_height = { min = 0 max = 0 }scale = 2 location = this } }  unassign_leader = event_target:roz_suigintou_bwg_leader_target@root exile_leader_as = this.leader destroy_fleet = this }event_target:roz_suigintou_bwg_leader_target@root = { unassign_leader = this exile_leader_as = this } }
+		 #effect ={ every_owned_fleet = {limit = {is_ship_size = ge_black_dragon }solar_system? = {create_ambient_object = {type = "star_explosion"duration = 5entity_scale_to_size = no use_3d_location = yes entity_offset = { min = 0 max = 0 } entity_offset_angle = { min = 0 max = 0 }entity_offset_height = { min = 0 max = 0 }scale = 4 location = this }create_ambient_object = { type = nebula_1 duration = 30 entity_scale_to_size = no use_3d_location = yes entity_offset = { min = 0 max = 0 } entity_offset_angle = { min = 0 max = 0 }entity_offset_height = { min = 0 max = 0 }scale = 2 location = this } }  unassign_leader = event_target:roz_suigintou_bwg_leader_target@root exile_leader_as = this.leader destroy_fleet = this }event_target:roz_suigintou_bwg_leader_target@root? = { unassign_leader = this exile_leader_as = this } }
 
 		
 		#remove_hyperlane
@@ -1052,7 +1052,7 @@ country_event = { #控制台effect测试区
 		#effect event_target:artist_enclave_country = { establish_communications_no_message = root }
 
 		#trigger any_system = { has_star_flag = ag_ancient_anchor_system }
-		#effect solar_system = { set_star_flag = ag_ancient_anchor_system }
+		#effect solar_system? = { set_star_flag = ag_ancient_anchor_system }
 		# effect roz_madgod_country_initiate = yes
 		# effect roz_abyss_vass_select_diff = yes
 		# effect every_country = { establish_communications_no_message = root }
@@ -1109,7 +1109,7 @@ country_event = { #控制台effect测试区
 					}
 					#加buff
 					roz_unholy_invision_difficult_modifier_effect = { value = 2 dif_factor = 1 }
-					root = {
+					root? = {
 						create_point_of_interest = {
 							id = roz_abyss_vass_country
 							name = roz_abyss_vass_country_name
@@ -1234,10 +1234,10 @@ country_event = {
 			if = {
 				limit = {
 					NOT = {
-						has_planet_flag = ge_krks_pi_cap_flag
+						has_carrier_flag = ge_krks_pi_cap_flag
 					}
 				}
-				set_planet_flag = ge_krks_pi_cap_flag
+				set_carrier_flag = ge_krks_pi_cap_flag
 			}
 			every_megastructure = {
 				remove_megastructure = this
@@ -1323,7 +1323,7 @@ country_event = {
 
 	immediate = {
 		capital_scope = {
-			solar_system = { 
+			solar_system? = { 
 				set_star_flag = roz_outland_star
 				spawn_natural_wormhole = {
 					bypass_type = roz_gateway
@@ -1464,7 +1464,7 @@ country_event = {
 				activate_gateway = this
 				set_megastructure_flag = lgate_activated
 			}
-			solar_system = {
+			solar_system? = {
 				create_starbase = {
 					owner = root
 					size = starbase_starport
@@ -1482,7 +1482,7 @@ country_event = {
 			}
 			activate_gateway = this
 			set_megastructure_flag = lgate_activated
-			solar_system = {
+			solar_system? = {
 				create_starbase = {
 					owner = root
 					size = starbase_outpost
@@ -1501,7 +1501,7 @@ country_event = {
 				activate_gateway = this
 				set_megastructure_flag = lgate_activated
 			}
-			# solar_system = {
+			# solar_system? = {
 			# 	set_star_flag = lgate
 			# 	set_star_flag = lgate_guaranteed
 			# }
@@ -1576,7 +1576,7 @@ country_event = {
 		is_ai = no
 	}
 	immediate = {
-		event_target:roz_graygoo_factory_system_gaia@root = {
+		event_target:roz_graygoo_factory_system_gaia@root? = {
 			add_building = building_roz_master_archive
 			add_building = building_roz_nano_forge
 			add_building = building_roz_class_5_singularity
@@ -1622,10 +1622,10 @@ country_event = { # Remove Date Distortion
 #	hide_window = yes
 #	trigger = {
 #		has_country_flag = roz_suigintou_scientist_active
-#		from = {
+#		from? = {
 #			has_leader_flag = roz_suigintou_flag
 #		}
-#			from = {
+#			from? = {
 #				fleet = {
 #					space_owner = {
 #						has_opinion_modifier = {
@@ -1640,7 +1640,7 @@ country_event = { # Remove Date Distortion
 #		}
 #	}
 #	immediate = {
-#		from = {
+#		from? = {
 #			clone_leader = {
 #				target = this
 #				effect = {
@@ -1665,7 +1665,7 @@ country_event = { # Remove Date Distortion
 
 
 
-#effect = {country_event = { id = ge_event.2063 }  event_target:krks_bf_situation_target@root = { add_situation_progress = -100 } every_situation = { limit = { is_situation_type = kirakishou_planet_invasion_situation } destroy_situation = this } every_situation = { limit = { is_situation_type = kirakishou_battle_field_situation }destroy_situation = this } remove_modifier = disable_ap_ge_0 remove_modifier = disable_ap_ge_1 remove_country_flag = ge_krks_time_freeze_loop_start_flag if = {limit = { has_country_flag = roz_krks_dl_normal_flag } add_modifier = { modifier = ge_gravity_knowledge_plus } } if = { limit = { has_country_flag = roz_krks_dl_early_flag } add_modifier = { modifier = ge_gravity_knowledge } } capital_scope = { switch = { trigger = has_modifier ge_kirakishou_invasion_lv1 = { remove_modifier = ge_kirakishou_invasion_lv1 } ge_kirakishou_invasion_lv2 = { remove_modifier = ge_kirakishou_invasion_lv2 } ge_kirakishou_invasion_lv2.5 = { remove_modifier = ge_kirakishou_invasion_lv2.5 } ge_kirakishou_invasion_lv3 = { remove_modifier = ge_kirakishou_invasion_lv3 } ge_kirakishou_invasion_lv4 = { remove_modifier = ge_kirakishou_invasion_lv4 } ge_kirakishou_invasion_lv5 = { remove_modifier = ge_kirakishou_invasion_lv5 } ge_kirakishou_invasion_lvMAX = { remove_modifier = ge_kirakishou_invasion_lvMAX } } }}
+#effect = {country_event = { id = ge_event.2063 }  event_target:krks_bf_situation_target@root? = { add_situation_progress = -100 } every_situation = { limit = { is_situation_type = kirakishou_planet_invasion_situation } destroy_situation = this } every_situation = { limit = { is_situation_type = kirakishou_battle_field_situation }destroy_situation = this } remove_modifier = disable_ap_ge_0 remove_modifier = disable_ap_ge_1 remove_country_flag = ge_krks_time_freeze_loop_start_flag if = {limit = { has_country_flag = roz_krks_dl_normal_flag } add_modifier = { modifier = ge_gravity_knowledge_plus } } if = { limit = { has_country_flag = roz_krks_dl_early_flag } add_modifier = { modifier = ge_gravity_knowledge } } capital_scope = { switch = { trigger = has_modifier ge_kirakishou_invasion_lv1 = { remove_modifier = ge_kirakishou_invasion_lv1 } ge_kirakishou_invasion_lv2 = { remove_modifier = ge_kirakishou_invasion_lv2 } ge_kirakishou_invasion_lv2.5 = { remove_modifier = ge_kirakishou_invasion_lv2.5 } ge_kirakishou_invasion_lv3 = { remove_modifier = ge_kirakishou_invasion_lv3 } ge_kirakishou_invasion_lv4 = { remove_modifier = ge_kirakishou_invasion_lv4 } ge_kirakishou_invasion_lv5 = { remove_modifier = ge_kirakishou_invasion_lv5 } ge_kirakishou_invasion_lvMAX = { remove_modifier = ge_kirakishou_invasion_lvMAX } } }}
 
 # country_event = {
 # 	id = ge_test_event.1200
@@ -1718,7 +1718,7 @@ country_event = { # Remove Date Distortion
 # 	}
 # }
 
-# planet_event = {
+# carrier_event = {
 # 	id = ge_test_event.1201
 # 	hide_window = yes
 # 	is_triggered_only = yes
@@ -1738,17 +1738,17 @@ country_event = { # Remove Date Distortion
 # 		}
 # 	}
 # 	immediate = {
-# 		planet_event = {
+# 		carrier_event = {
 # 			id = ge_test_event.1202
 # 			days = 18
 # 		}
-# 		from = {
+# 		from? = {
 # 			save_event_target_as = roz_test_country_bombardment
 # 		}
 # 	}
 # }
 
-# planet_event = {
+# carrier_event = {
 # 	id = ge_test_event.1202
 # 	hide_window = yes
 # 	is_triggered_only = yes

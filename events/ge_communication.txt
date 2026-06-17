@@ -70,7 +70,7 @@ country_event = {
 			#set_global_flag = ge_nfield_country_set
 		}
 		save_global_event_target_as = roz_suigintou_owner@root
-		event_target:roz_suigintou_global_country@root = {
+		event_target:roz_suigintou_global_country@root? = {
 			clone_leader = {
 				target = event_target:roz_leader_suigintou_global_target@root
 				effect = {
@@ -82,7 +82,7 @@ country_event = {
 				}
 			}
 		}
-		#event_target:roz_suigintou_global_country@root = { establish_communications_no_message = root }
+		#event_target:roz_suigintou_global_country@root? = { establish_communications_no_message = root }
 
 	}
 	after = {
@@ -161,7 +161,7 @@ country_event = {
 	desc = {
 		text = "ge_communication.100.a.f1.desc"
 		trigger = {
-			root = {
+			root? = {
 				event_target:ge_leader = {
 					ge_aft_fri = yes
 				}
@@ -171,7 +171,7 @@ country_event = {
 	desc = {
 		text = "ge_communication.100.a.f2.desc"
 		trigger = {
-			root = {
+			root? = {
 				event_target:ge_leader = {
 					ge_aft_fri = yes
 				}
@@ -181,7 +181,7 @@ country_event = {
 	desc = {
 		text = "ge_communication.100.a.f3.desc"
 		trigger = {
-			root = {
+			root? = {
 				event_target:ge_leader = {
 					ge_aft_fri = yes
 				}
@@ -191,7 +191,7 @@ country_event = {
 	desc = {
 		text = "ge_communication.100.a.f4.desc"
 		trigger = {
-			root = {
+			root? = {
 				event_target:ge_leader = {
 					ge_aft_fri = yes
 				}
@@ -201,7 +201,7 @@ country_event = {
 	desc = {
 		text = "ge_communication.100.a.f5.desc"
 		trigger = {
-			root = {
+			root? = {
 				event_target:ge_leader = {
 					ge_aft_fri = yes
 				}
@@ -211,7 +211,7 @@ country_event = {
 	desc = {
 		text = "ge_communication.100.a.like1.desc"
 		trigger = {
-			root = {
+			root? = {
 				event_target:ge_leader = {
 					ge_aft_lik = yes
 				}
@@ -221,7 +221,7 @@ country_event = {
 	desc = {
 		text = "ge_communication.100.a.like2.desc"
 		trigger = {
-			root = {
+			root? = {
 				event_target:ge_leader = {
 					ge_aft_lik = yes
 				}
@@ -231,7 +231,7 @@ country_event = {
 	desc = {
 		text = "ge_communication.100.a.like3.desc"
 		trigger = {
-			root = {
+			root? = {
 				event_target:ge_leader = {
 					ge_aft_lik = yes
 				}
@@ -241,7 +241,7 @@ country_event = {
 	desc = {
 		text = "ge_communication.100.a.love1.desc"
 		trigger = {
-			root = {
+			root? = {
 				event_target:ge_leader = {
 					ge_aft_lov = yes
 				}
@@ -251,7 +251,7 @@ country_event = {
 	desc = {
 		text = "ge_communication.100.a.love2.desc"
 		trigger = {
-			root = {
+			root? = {
 				event_target:ge_leader = {
 					ge_aft_lov = yes
 				}
@@ -261,7 +261,7 @@ country_event = {
 	desc = {
 		text = "ge_communication.100.a.love3.desc"
 		trigger = {
-			root = {
+			root? = {
 				event_target:ge_leader = {
 					ge_aft_lov = yes
 				}
@@ -287,7 +287,7 @@ country_event = {
 			has_country_flag = ge_sgt_busy
 			has_country_flag = roz_krks_diplomacy_activated
 		}
-		from = {
+		from? = {
 			is_same_value = event_target:roz_suigintou_global_country@root
 			NOR = {
 				is_same_value = event_target:roz_kirakishou_global_country@root
@@ -627,9 +627,9 @@ country_event = {
 		trigger = {
 			capital_scope = {
 				OR = {
-					has_planet_flag = has_GFnyto_planetary_defense
-					has_planet_flag = BA_enemy_just_defeated
-					has_planet_flag = GF_nyto_elid_attack_begin
+					has_carrier_flag = has_GFnyto_planetary_defense
+					has_carrier_flag = BA_enemy_just_defeated
+					has_carrier_flag = GF_nyto_elid_attack_begin
 				}
 			}
 		}
@@ -818,7 +818,7 @@ country_event = {
 			has_country_flag = ge_nfield_diplomacy_activated
 			has_country_flag = ge_sgt_busy
 		}
-		from = {
+		from? = {
 			OR = {
 				is_country_type = ge_N_Field
 				is_same_value = event_target:roz_suigintou_global_country@root
@@ -919,7 +919,7 @@ country_event = {
 		is_ai = no
 		#if = {
 		#	limit = {
-		#		from = {
+		#		from? = {
 		#			has_leader_flag = roz_suigintou_flag
 		#
 		#		}
@@ -983,7 +983,7 @@ country_event = {
 		is_ai = no
 		#if = {
 		#	limit = {
-		#		from = {
+		#		from? = {
 		#			has_leader_flag = roz_suigintou_flag
 		#
 		#		}
@@ -1056,7 +1056,7 @@ country_event = {
 		is_ai = no
 		#if = {
 		#	limit = {
-		#		from = {
+		#		from? = {
 		#			has_leader_flag = roz_suigintou_flag
 		#
 		#		}
@@ -1128,7 +1128,7 @@ country_event = {
 		is_ai = no
 		#if = {
 		#	limit = {
-		#		from = {
+		#		from? = {
 		#			has_leader_flag = roz_suigintou_flag
 		#
 		#		}
@@ -1196,7 +1196,7 @@ country_event = {
 		is_ai = no
 		#if = {
 		#	limit = {
-		#		from = {
+		#		from? = {
 		#			has_leader_flag = roz_suigintou_flag
 		#
 		#		}

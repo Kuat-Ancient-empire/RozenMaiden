@@ -31,7 +31,7 @@ country_event = {
 	}	
 	immediate = {
 		#set_update_modifiers_batch = begin
-		fromfrom = {
+		fromfrom? = {
 			add_modifier = {
 				modifier = ge_buff_lv
 			}
@@ -94,7 +94,7 @@ country_event = {
 					modifier = ge_generater_effect_debuff
 					days = 30
 				}
-				root = {
+				root? = {
 					change_variable = {
 						which = ge_country_generatorship_var
 						value = prev.ge_fleet_generatorship_var

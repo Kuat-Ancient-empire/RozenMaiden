@@ -89,7 +89,7 @@ country_event = {
 					}
 				}
 				#save_global_event_target_as = ge_sgt_aft@root
-				root = {
+				root? = {
 					set_variable = {
 						which = roz_leader_aft_suigintou
 						value = prev.roz_suigintou_affection
@@ -125,7 +125,7 @@ country_event = {
 						has_trait = leader_trait_roz_kirakishou_main
 					}
 				}
-				root = {
+				root? = {
 					set_variable = {
 						which = roz_leader_aft_krks
 						value = prev.roz_kirakishou_affection
@@ -160,7 +160,7 @@ country_event = {
 						has_trait = leader_trait_roz_shinku_main
 					}
 				}
-				root = {
+				root? = {
 					set_variable = {
 						which = roz_leader_aft_shinku
 						value = prev.roz_shinku_affection
@@ -195,7 +195,7 @@ country_event = {
 						has_trait = leader_trait_roz_hinaichigo_main
 					}
 				}
-				root = {
+				root? = {
 					set_variable = {
 						which = roz_leader_aft_hinaichigo
 						value = prev.roz_hinaichigo_affection
@@ -453,8 +453,8 @@ country_event = {
 					}
 				}
 			}
-			event_target:roz_n_field_site_target@root = {
-				set_planet_flag = roz_sgt_site_krksevtc_flag
+			event_target:roz_n_field_site_target@root? = {
+				set_carrier_flag = roz_sgt_site_krksevtc_flag
 			}
 			country_event = {
 				id = ge_event.2000
@@ -559,7 +559,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		from = {
+		from? = {
 			OR = {
 				has_leader_flag = roz_suigintou_flag
 				has_leader_flag = roz_kirakishou_flag
@@ -759,10 +759,10 @@ country_event = {
 		has_country_flag = roz_leader_suigintou_get
 	}
 	immediate = {
-		event_target:roz_leader_suigintou_global_target@root = {	#水银灯
+		event_target:roz_leader_suigintou_global_target@root? = {	#水银灯
 			roz_leader_affection_change_effect = yes
 		}
-		event_target:roz_leader_kirakishou_global_target@root = { #雪华绮晶
+		event_target:roz_leader_kirakishou_global_target@root? = { #雪华绮晶
 			if = {
 				###lv4
 				limit = {
@@ -778,10 +778,10 @@ country_event = {
 				add_trait = { trait = leader_trait_krks_governor_a_love }
 			}
 		}
-		event_target:roz_leader_shinku_global_target@root = {	#真红
+		event_target:roz_leader_shinku_global_target@root? = {	#真红
 			roz_leader_affection_change_effect = yes
 		}
-		event_target:roz_leader_hinaichigo_global_target@root = {	#雏莓
+		event_target:roz_leader_hinaichigo_global_target@root? = {	#雏莓
 			roz_leader_affection_change_effect = yes
 		}
 	}
@@ -816,7 +816,7 @@ country_event = {	#接战数据初始化
 	immediate = {
 		if = {
 			limit = {
-				fromfrom = {
+				fromfrom? = {
 					exists = leader
 					leader = {
 						OR = {
@@ -826,7 +826,7 @@ country_event = {	#接战数据初始化
 					}
 				}
 			}
-			FromFromFrom = {
+			FromFromfrom? = {
 				save_event_target_as = roz_aft_enemy_fleet_target
 				export_trigger_value_to_variable = {
 					#敌方舰队舰船计数
@@ -878,7 +878,7 @@ country_event = {
 			has_country_flag = roz_leader_suigintou_get
 			has_country_flag = roz_leader_shinku_get
 		}
-		fromfrom = {
+		fromfrom? = {
 			exists = leader
 			leader = {
 				OR = {
@@ -894,7 +894,7 @@ country_event = {
 			flag = roz_aft_fleet_combat_win_timed_flag
 			days = 1
 		}
-		fromfromfrom = {
+		fromfromfrom? = {
 			save_event_target_as = roz_aft_enemy_fleet_target
 			export_trigger_value_to_variable = {
 				trigger = num_ships
@@ -922,7 +922,7 @@ country_event = {
 			has_country_flag = roz_leader_suigintou_get
 			has_country_flag = roz_leader_shinku_get
 		}
-		fromfrom = {
+		fromfrom? = {
 			exists = leader
 			leader = {
 				OR = {
@@ -940,7 +940,7 @@ country_event = {
 			flag = roz_aft_fleet_combat_lose_timed_flag
 			days = 1
 		}
-		fromfromfrom = {
+		fromfromfrom? = {
 			save_event_target_as = roz_aft_enemy_fleet_target
 			export_trigger_value_to_variable = {
 				#敌方舰队当前剩余的舰船数量

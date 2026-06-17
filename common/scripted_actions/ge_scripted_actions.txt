@@ -1,0 +1,66 @@
+roz_time_freeze_menu_title = {
+	user_scope = fleet
+	scope = self
+	finish_anim_state = "attack"
+	possible = {
+		#scope:fleet
+		# NOT = {
+		# 	has_fleet_flag = roz_time_freeze_clam_flag
+		# }
+		always = yes
+		#custom_tooltip = "roz_time_freeze_cooldown_ct"
+	}
+	button_clickable = {
+		custom_tooltip = {
+			fail_text = BLANK_STRING
+			always = yes
+		}
+	}
+	on_completed = on_roz_time_freeze_triggered
+	tooltip = roz_time_freeze_ship_button
+	icon = GFX_ge_time_freeze
+	activity_key = roz_time_freeze_activity_key
+	context_menu_name = roz_time_freeze_menu_title
+	progress_activity_key = roz_time_freeze_progress_activity_key
+	required_progress = 1
+	on_click_sound = roz_the_world_available
+	cooldown = 30
+	cost = {
+		energy = 1000
+	}
+	shortcut = "SHIFT+I"
+}
+
+
+roz_phase_cloak_menu_title = {
+	user_scope = fleet
+	scope = self
+
+	finish_anim_state = "phase_cloak"
+
+	possible = {	#scope:fleet
+		always = yes
+		#custom_tooltip = "roz_phase_cloak_ct"
+	}
+
+	button_clickable = {
+		custom_tooltip = {
+			fail_text = BLANK_STRING
+			always = yes
+		}
+	}
+
+	on_completed = on_roz_phase_cloak_triggered
+	tooltip = roz_phase_cloak_ship_button
+	icon = GFX_ship_skill_roz_phase_cloak
+	activity_key = roz_phase_cloak_activity_key
+	context_menu_name = roz_phase_cloak_menu_title
+	progress_activity_key = roz_phase_cloak_progress_activity_key
+	required_progress = 1
+	on_click_sound = roz_phase_cloak_collision
+
+	cooldown = 25
+	cost = { energy = 1000 }
+
+	shortcut = "SHIFT+P"
+}

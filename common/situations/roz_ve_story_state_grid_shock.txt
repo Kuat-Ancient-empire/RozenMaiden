@@ -1,5 +1,6 @@
 roz_ves_state_grid_shock_situation = {
     ##
+    situation_log_category = crises
     desc = {
         text = roz_ves_state_grid_crisis_hard_situation_text
         trigger = {

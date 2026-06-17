@@ -1,5 +1,5 @@
 ge_kirakishou_avatar = {
-	#
+	entity = ge_locator_entity
 	formation_priority = 100
 	max_speed = 20
 	acceleration = 0.1

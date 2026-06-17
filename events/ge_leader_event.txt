@@ -49,7 +49,7 @@ country_event = {
 					}
 					randomize_traits = no
 					skip_background_generation = yes
-					custom_catch_phrase = suigintou_sci_catch_phrase
+					custom_catch_phrase = suigintou_scientist_catch_phrase
 					custom_description = suigintou_backstory
 					effect = {
 						roz_leader_name_set_effect = {
@@ -240,7 +240,7 @@ country_event = {
 # 	}
 # 	trigger = {
 # 		is_ai = no
-# 		from = {
+# 		from? = {
 # 			has_leader_flag = roz_suigintou_flag
 # 			is_country_type = ge_N_Field
 # 		}

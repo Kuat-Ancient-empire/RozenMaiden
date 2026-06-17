@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="english">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/localisation/english/english.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

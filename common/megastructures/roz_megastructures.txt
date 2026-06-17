@@ -30,7 +30,7 @@ roz_mega_wanxiangtianyin = {
     station_modifier = {
         starbase_shipyard_capacity_add = 15
     }
-    #upgrade_from = {
+    #upgrade_from? = {
     #
     #}
 
@@ -65,7 +65,7 @@ roz_mega_wanxiangtianyin_undeploy = {
         }
     }
 
-    upgrade_from = {
+    upgrade_from? = {
         roz_mega_wanxiangtianyin
     }
     on_build_complete = {
@@ -87,7 +87,7 @@ roz_mega_wanxiangtianyin_undeploy = {
                 }
             }
         }
-        fromfrom = {
+        fromfrom? = {
             remove_megastructure = this
         }
     }
@@ -142,16 +142,16 @@ roz_mega_information_remodeler_base = {
 			}
             custom_tooltip = {
                 OR = {
-                    solar_system = {
+                    solar_system? = {
                         any_system_planet = {
                             OR = {
                                 is_same_value = event_target:roz_outland_main_black_hole@space_owner
-                                has_planet_flag = roz_outland_main_black_hole
+                                has_carrier_flag = roz_outland_main_black_hole
                             }
                         }
                     }
                     is_same_value = event_target:roz_outland_main_black_hole@space_owner
-                    has_planet_flag = roz_outland_main_black_hole
+                    has_carrier_flag = roz_outland_main_black_hole
                 }
                 fail_text = "roz_is_roz_outland_planet"
             }
@@ -176,7 +176,7 @@ roz_mega_information_remodeler_base = {
         country_produces_mult = 0.10
     }
     on_build_complete = {
-        from = {
+        from? = {
             country_event = {
                 id = roz_shinku_evt.512
                 days = 2
@@ -220,17 +220,17 @@ roz_mega_information_remodeler = {
     }
     possible = {
         has_megastructure = roz_mega_information_remodeler_base
-        from = {
+        from? = {
             has_relic = r_roz_extrinsic_xinlin_crystal
             has_technology = tech_roz_information_remodeler
         }
 
     }
-    upgrade_from = {
+    upgrade_from? = {
         roz_mega_information_remodeler_base
     }
     on_build_complete = {
-        from = {
+        from? = {
             country_event = {
                 id = roz_shinku_evt.513
                 days = 2
@@ -269,7 +269,7 @@ roz_mega_information_remodeler_effect = {
         all_technology_research_speed = 0.30
     }
     possible = {
-        from = {
+        from? = {
             NOT = { has_country_flag = roz_mega_information_remodeler_active }
             has_country_flag = roz_SK_IR_enable
         }
@@ -278,21 +278,21 @@ roz_mega_information_remodeler_effect = {
         NOT = { has_country_flag = roz_mega_information_remodeler_active }
         has_country_flag = roz_SK_IR_enable
     }
-    upgrade_from = {
+    upgrade_from? = {
         roz_mega_information_remodeler
     }
     on_build_complete = {
-        # solar_system = {
+        # solar_system? = {
         #     spawn_megastructure = {
 		# 		type = roz_mega_information_remodeler
 		# 		planet = root.star
 		# 		owner = prev.from
 		# 	}
         # }
-        # fromfrom = {
+        # fromfrom? = {
         #     remove_megastructure = this
         # }
-        from = {
+        from? = {
             country_event = {
                 id = roz_shinku_evt.651
             }

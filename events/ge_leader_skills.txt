@@ -10,7 +10,7 @@ country_event = {
 	immediate = {
 		#set_update_modifiers_batch = begin
 		###
-		fromfrom = {
+		fromfrom? = {
 			###黑羽龙机制清除
 			###永恒之枪复活机制清除
 			if = {
@@ -23,7 +23,7 @@ country_event = {
 				}
 			}
 		}
-		FromFromFrom = {
+		FromFromfrom? = {
 			remove_fleet_flag = roz_time_freeze_active_flag
 			every_owned_ship = {
 				remove_ship_flag = roz_krks_mind_drain_flag
@@ -43,7 +43,7 @@ country_event = {
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
-		fromfrom = {
+		fromfrom? = {
 			###黑羽龙机制清除
 			###永恒之枪复活机制清除
 			if = {
@@ -56,7 +56,7 @@ country_event = {
 				}
 			}
 		}
-		FromFromFrom = {
+		FromFromfrom? = {
 			remove_fleet_flag = roz_time_freeze_active_flag
 			every_owned_ship = {
 				remove_ship_flag = roz_krks_mind_drain_flag
@@ -87,7 +87,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		fromfrom = {
+		fromfrom? = {
 			OR = {
 				AND = {
 					exists = leader
@@ -109,11 +109,11 @@ country_event = {
 	immediate = {
 		#修正会自我替换，重新更新没有意义
 		#set_update_modifiers_batch = begin
-		fromfromfrom = {
+		fromfromfrom? = {
 			add_modifier = { modifier = ge_modifier_time_freeze days = 30 }
 			set_timed_fleet_flag = { flag = roz_time_freeze_active_flag days = 30 }
 		}
-		FromFrom = {
+		Fromfrom? = {
 			every_controlled_ship = {
 				limit = {
 					or = {
@@ -150,7 +150,7 @@ country_event = {
 				is_ship_size = Ge_Ragnarok
 				is_in_combat = yes
 			}
-			solar_system = {
+			solar_system? = {
 				save_event_target_as = roz_Ragnarok_time_freeze_system_target
 			}
 		}
@@ -190,7 +190,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		fromfromfrom = {
+		fromfromfrom? = {
 			OR = {
 				AND = {
 					exists = leader
@@ -207,7 +207,7 @@ country_event = {
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
-		fromfrom = {
+		fromfrom? = {
 			add_modifier = { modifier = ge_modifier_time_freeze days = 40 }
 			set_timed_fleet_flag = { flag = roz_time_freeze_active_flag days = 40 }
 		}
@@ -230,7 +230,7 @@ fleet_event = {
 			flag = roz_time_freeze_clam_flag
 			days = 30
 		}
-		solar_system = {
+		solar_system? = {
 			every_fleet_in_system = {
 				limit = {
 					exists = owner
@@ -272,7 +272,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		fromfrom = {
+		fromfrom? = {
 			exists = leader
 			leader = {
 				AND = {
@@ -286,7 +286,7 @@ country_event = {
 		}
 	}
 	immediate = {
-		fromfrom = {
+		fromfrom? = {
 			set_fleet_flag = ge_skill_bwg_activated_flag
 			fleet_event = { id = ge_skills.4 }
 		}
@@ -326,7 +326,7 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		OR = {
-			fromfrom = {
+			fromfrom? = {
 				exists = leader
 				leader = {
 					AND = {
@@ -339,7 +339,7 @@ country_event = {
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
-		fromfrom = {
+		fromfrom? = {
 			add_modifier = {
 				modifier = ge_modifier_azoth
 				days = 40
@@ -355,7 +355,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		fromfrom = {
+		fromfrom? = {
 			exists = leader
 			leader = {
 				AND = {
@@ -367,14 +367,14 @@ country_event = {
 	}
 	immediate = {
 		#set_update_modifiers_batch = begin
-		fromfrom = {
+		fromfrom? = {
 			#set_fleet_flag = ge_skill_nfield_friendly_activated_flag
 			add_modifier = {
 				modifier = ge_modifier_nfield_friendly
 				days = 130
 			}
 		}
-		fromfromfrom = {
+		fromfromfrom? = {
 			#set_fleet_flag = ge_skill_nfield_hostile_activated_flag
 			add_modifier = {
 				modifier = ge_modifier_nfield_hostile
@@ -392,7 +392,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		fromfrom = {
+		fromfrom? = {
 			exists = leader
 			leader = {
 				AND = {
@@ -401,12 +401,12 @@ country_event = {
 				}
 			}
 		}
-		from = {
+		from? = {
 			is_invisable_faction = no
 		}
 	}
 	immediate = {
-		fromfrom = {
+		fromfrom? = {
 			leader = {
 				export_trigger_value_to_variable = {
 					trigger = has_base_skill
@@ -418,7 +418,7 @@ country_event = {
 				}
 			}
 		}
-		fromfromfrom = {
+		fromfromfrom? = {
 			#enemy fleet
 			every_owned_ship = {
 				set_variable = {
@@ -437,12 +437,12 @@ country_event = {
 		}
 	}
 	after = {
-		fromfrom = {
+		fromfrom? = {
 			leader = {
 				clear_variable = roz_krks_level_var
 			}
 		}
-		fromfromfrom = {
+		fromfromfrom? = {
 			clear_variable = roz_krks_level_var
 		}
 	}
@@ -457,7 +457,7 @@ ship_event = {
 		has_ship_flag = roz_krks_mind_drain_flag
 	}
 	immediate = {
-		solar_system = {
+		solar_system? = {
 			#
 			every_ship_in_system = {
 				limit = {
@@ -538,7 +538,7 @@ country_event = {
 			has_country_flag = roz_sgt_scientist_main_skill_timed_flag
 		}
 		exists = event_target:roz_leader_suigintou_global_target@root
-		event_target:roz_leader_suigintou_global_target@root = {
+		event_target:roz_leader_suigintou_global_target@root? = {
 			is_councilor = yes
 			leader_class = scientist
 		}
@@ -666,7 +666,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		fromfrom = {
+		fromfrom? = {
 			#leader = {
 			#	has_leader_flag = roz_suigintou_flag
 			#}
@@ -683,7 +683,7 @@ country_event = {
 		}
 	}
 	immediate = {
-		fromfrom = {
+		fromfrom? = {
 			export_trigger_value_to_variable = {
 				trigger = count_owned_ship
 				variable = roz_skills_temp_var_fleet
@@ -713,7 +713,7 @@ country_event = {
 				flag = roz_sgt_flagship_guardian_spawn_flag
 				years = 15
 			}
-			fromfrom = {
+			fromfrom? = {
 				while = {
 					count = 4
 					random_list = {
@@ -953,7 +953,7 @@ fleet_event = {
 			limit = { has_modifier = leader_trait_roz_shinku_hollye_commander_fleet_self_modifier_1 }
 			remove_modifier = leader_trait_roz_shinku_hollye_commander_fleet_self_modifier_1
 			remove_modifier = leader_trait_roz_shinku_hollye_commander_fleet_self_modifier_2
-			From = { remove_modifier = leader_trait_roz_shinku_hollye_commander_fleet_enemy_modifier }
+			from? = { remove_modifier = leader_trait_roz_shinku_hollye_commander_fleet_enemy_modifier }
 		}
 		THIS = {
 			add_modifier = { modifier = leader_trait_roz_shinku_hollye_commander_fleet_self_modifier_1 months = 3 }
@@ -963,7 +963,7 @@ fleet_event = {
 				months = 3
 			}
 		}
-		From = { add_modifier = { modifier = leader_trait_roz_shinku_hollye_commander_fleet_enemy_modifier months = 3 } }
+		from? = { add_modifier = { modifier = leader_trait_roz_shinku_hollye_commander_fleet_enemy_modifier months = 3 } }
 	}
 }
 
@@ -1001,7 +1001,7 @@ country_event = {
 }
 
 #真红-陆军将领机制
-planet_event = {
+carrier_event = {
 	id = ge_skills.80
 	hide_window = yes
 	is_triggered_only = yes
@@ -1035,19 +1035,19 @@ planet_event = {
 		}
 		#from
 		if = {
-			limit = { event_target:roz_leader_shinku_global_target@from = { has_trait = leader_trait_roz_a_strangeness } }
+			limit = { event_target:roz_leader_shinku_global_target@from? = { has_trait = leader_trait_roz_a_strangeness } }
 			every_planet_army = { limit = { is_rozen_army = yes } set_variable = { which = roz_shinku_army_revive value = 1 } }
 		}
 		else_if = {
-			limit = { event_target:roz_leader_shinku_global_target@from = { has_trait = leader_trait_roz_a_friendly } }
+			limit = { event_target:roz_leader_shinku_global_target@from? = { has_trait = leader_trait_roz_a_friendly } }
 			every_planet_army = { limit = { is_rozen_army = yes } set_variable = { which = roz_shinku_army_revive value = 2 } }
 		}
 		else_if = {
-			limit = { event_target:roz_leader_shinku_global_target@from = { has_trait = leader_trait_roz_a_like } }
+			limit = { event_target:roz_leader_shinku_global_target@from? = { has_trait = leader_trait_roz_a_like } }
 			every_planet_army = { limit = { is_rozen_army = yes } set_variable = { which = roz_shinku_army_revive value = 3 } }
 		}
 		else_if = {
-			limit = { event_target:roz_leader_shinku_global_target@from = { has_trait = leader_trait_roz_a_love } }
+			limit = { event_target:roz_leader_shinku_global_target@from? = { has_trait = leader_trait_roz_a_love } }
 			every_planet_army = { limit = { is_rozen_army = yes } set_variable = { which = roz_shinku_army_revive value = 4 } }
 		}
 	}
@@ -1059,19 +1059,19 @@ country_event = {
 	trigger = {
 		is_ai = no
 		has_country_flag = roz_leader_shinku_get
-		from = { is_rozen_army = yes }
+		from? = { is_rozen_army = yes }
 	}
 	immediate = {
-		from = {
+		from? = {
 			if = {
 				limit = {
-					event_target:roz_leader_shinku_global_target@root = { leader_class = commander }
+					event_target:roz_leader_shinku_global_target@root? = { leader_class = commander }
 					check_variable = { which = roz_shinku_army_revive value > 0 }
 				}
 				subtract_variable = { which = roz_shinku_army_revive value = 1 }
 			}
 		}
-		fromfromfrom = { create_army = { type = Q_sgt owner = root } }
+		fromfromfrom? = { create_army = { type = Q_sgt owner = root } }
 	}
 }
 

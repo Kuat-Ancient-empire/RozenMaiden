@@ -17,7 +17,7 @@ triggered_opinion_roz_test_postive = {
 
 opinion_roz_test_postive = {
 	trigger = {
-		FROM = {
+		from? = {
 			has_modifier = roz_ap_slot_add
 		}
 		# Is not a Fallen Empire, Awakened Empire or Pre-FTL Empire
@@ -28,7 +28,7 @@ opinion_roz_test_postive = {
 			# Or a subject of another empire that is capable of independent diplomacy
 			AND = {
 				is_subject = yes
-				FROM = {
+				from? = {
 					NOT = { is_overlord_to = PREV }
 				}
 			}

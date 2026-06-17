@@ -32,7 +32,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				root = {
+				root? = {
 					is_ai = no
 				}
 			}
@@ -70,7 +70,7 @@ country_event = {	#发现神秘舰船
 			}
 			set_country_flag = roz_sgt_unknow_flagship_spawn_country
 		}
-		event_target:roz_sgt_flagship_target@root = {
+		event_target:roz_sgt_flagship_target@root? = {
 			create_ambient_object = {
 				type = ROZ_SSVL_AO
 				location = event_target:roz_sgt_flagship_target@root
@@ -587,11 +587,11 @@ situation_event = {	#stage3随机事件-猜谜
 
 
 ###
-planet_event = {	##特殊计划完成
+carrier_event = {	##特殊计划完成
 	id = ge_sgt_flagship_events.1
 	title = "ge_sgt_flagship_events.1.name"
 	desc = "ge_sgt_flagship_events.1.desc"
-	picture = GFX_evt_
+	picture = GFX_evt_generator_powerup #TODO
 	show_sound = event_radio_chatter
 	location = from
 	is_triggered_only = yes
@@ -609,18 +609,18 @@ planet_event = {	##特殊计划完成
 		hidden_effect = {
 			solar_system.space_owner = {
 				enable_special_project = {
-					name = ge_sgt_flagship_proj_2
+					name = ge_sgt_flagship_proj_2 #TODO
 				}
 			}
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = ge_sgt_flagship_events.2
 	title = "ge_sgt_flagship_events.2.name"
 	desc = "ge_sgt_flagship_events.2.desc"
-	picture = GFX_evt_
+	picture = GFX_evt_generator_powerup #TODO
 	show_sound = event_radio_chatter
 	location = from
 	is_triggered_only = yes
@@ -638,7 +638,7 @@ planet_event = {
 		hidden_effect = {
 			solar_system.space_owner = {
 				enable_special_project = {
-					name = ge_sgt_flagship_proj_3
+					name = ge_sgt_flagship_proj_3 #TODO
 				}
 			}
 		}
@@ -654,14 +654,14 @@ country_event = {
 	show_sound = event_super_explosion
 	is_triggered_only = yes
 	trigger = {
-		fromfrom = {
+		fromfrom? = {
 			is_ship_size = Ge_Vampirilis_Ortaam
 			NOT = { is_variable_set = roz_sgt_flagship_disable_count }
 		}
 	}
 	immediate = {
 		remove_country_flag = ge_sgt_flagship_project_enable
-		fromfrom = {
+		fromfrom? = {
 			create_ambient_object = {
 				type = "star_explosion"
 				play_animation_once = yes
@@ -686,7 +686,7 @@ country_event = {
 				location = this
 			}
 			#set_update_modifiers_batch = begin
-			solar_system = {
+			solar_system? = {
 				every_fleet_in_system = {
 					add_modifier = {
 						modifier = ge_instant_damage_effect_50
@@ -697,7 +697,7 @@ country_event = {
 			#set_update_modifiers_batch = end
 			unassign_leader = leader
 		}
-		fromfromfrom = {
+		fromfromfrom? = {
 			#set_update_modifiers_batch = begin
 			add_modifier = {
 				modifier = ge_instant_damage_effect_40
@@ -709,7 +709,7 @@ country_event = {
 	}
 	option = {
 		name = "ge_sgt_flagship_events.4.a"
-		fromfrom = {
+		fromfrom? = {
 			leader = {
 				add_experience = 500
 			}
@@ -727,7 +727,7 @@ country_event = {
 	show_sound = event_super_explosion
 	is_triggered_only = yes
 	trigger = {
-		fromfrom = {
+		fromfrom? = {
 			#has_fleet_flag = ge_sgt_flagship_limit
 			#is_ship_size = Ge_Vampirilis_Ortaam
 			any_owned_ship = {
@@ -737,7 +737,7 @@ country_event = {
 	}
 	immediate = {
 		remove_country_flag = ge_sgt_flagship_project_enable
-		fromfrom = {
+		fromfrom? = {
 			create_ambient_object = {
 				type = "star_explosion"
 				duration = 5
@@ -763,7 +763,7 @@ country_event = {
 				location = this
 			}
 			#set_update_modifiers_batch = begin
-			solar_system = {
+			solar_system? = {
 				every_fleet_in_system = {
 					add_modifier = {
 						modifier = ge_instant_damage_effect_50
@@ -773,7 +773,7 @@ country_event = {
 			}
 			#set_update_modifiers_batch = end
 		}
-		fromfromfrom = {
+		fromfromfrom? = {
 			#set_update_modifiers_batch = begin
 			add_modifier = {
 				modifier = ge_instant_damage_effect_40
@@ -875,7 +875,7 @@ country_event = {
 	desc = "ge_sgt_flagship_events.200.desc"
 	is_triggered_only = yes
 	show_sound = event_ship_thrusters
-	picture = GFX_evt_
+	picture = GFX_evt_generator_powerup #TODO
 	trigger = {
 
 	}
@@ -900,8 +900,8 @@ country_event = {
 	title = "ge_sgt_flagship_events.201.title"
 	desc = "ge_sgt_flagship_events.201.desc"
 	is_triggered_only = yes
-	show_sound = event_
-	picture = GFX_evt_
+	show_sound = event_ship_thrusters #TODO
+	picture = GFX_evt_generator_powerup #TODO
 	trigger = {
 
 	}

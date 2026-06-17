@@ -146,8 +146,8 @@ weapon_component_template = {
 	
 	firing_arc = 90
 	min_range = 10
-	static_rotation = no
-	use_ship_kill_target = yes
+	#static_rotation = no
+	##use_ship_kill_target = yes
 	power = -800
 	prerequisites = { "tech_ge_xl_beam" }
 	component_set = "GE_XL_BEAM"
@@ -230,8 +230,8 @@ weapon_component_template = {
 
 	firing_arc = 50.0
 	min_range = 20.0
-	static_rotation = no
-	use_ship_kill_target = yes
+	#static_rotation = no
+	##use_ship_kill_target = yes
 
 	tags = { weapon_type_energy weapon_type_ge_void_energy t_slot }
 	projectile_gfx = "ge_t_beam_projectile"
@@ -991,7 +991,7 @@ weapon_component_template = { #死亡流星
 	#entity = "invisible_turret_#entity"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = yes
+	#use_ship_kill_target = yes
 
 	prerequisites = { tech_ge_planet_killer }
 
@@ -1025,7 +1025,7 @@ weapon_component_template = { # World Cracker
 	key = "GE_PLANET_KILLER_CRACKER"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = yes
+	#use_ship_kill_target = yes
 
 	prerequisites = { "tech_pk_cracker" }
 
@@ -1047,7 +1047,7 @@ weapon_component_template = { # Pacifier
 	key = "GE_PLANET_KILLER_SHIELDER"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = yes
+	#use_ship_kill_target = yes
 
 	prerequisites = { "tech_pk_shielder" }
 
@@ -1073,7 +1073,7 @@ weapon_component_template = { # Neutron Beam
 	key = "GE_PLANET_KILLER_NEUTRON"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = yes
+	#use_ship_kill_target = yes
 
 	prerequisites = { "tech_pk_neutron" }
 
@@ -1099,7 +1099,7 @@ weapon_component_template = { # God Ray
 	key = "GE_PLANET_KILLER_GODRAY"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = yes
+	#use_ship_kill_target = yes
 
 	prerequisites = { "tech_pk_godray" }
 
@@ -1125,7 +1125,7 @@ weapon_component_template = { # Nanobot Assimilation
 	key = "GE_PLANET_KILLER_NANOBOTS"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = yes
+	#use_ship_kill_target = yes
 
 	prerequisites = { "tech_pk_nanobots" }
 
@@ -1151,7 +1151,7 @@ weapon_component_template = { # Deluge
 	key = "GE_PLANET_KILLER_DELUGE"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = yes
+	#use_ship_kill_target = yes
 
 	valid_for_country = {
 		has_ascension_perk = ap_hydrocentric
@@ -1175,7 +1175,7 @@ weapon_component_template = {
 	key = "GE_PLANET_KILLER_TOXIFIER"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = yes
+	#use_ship_kill_target = yes
 
 	icon = GFX_ship_part_nanobot_diffuser
 	icon_frame = 1
@@ -1191,7 +1191,7 @@ weapon_component_template = { # Archaeo Devolving Beam
 	key = "GE_PLANET_KILLER_DEVOLUTION"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = yes
+	#use_ship_kill_target = yes
 
 	prerequisites = { "tech_archaeo_pk_devolving_beam" }
 
@@ -1226,7 +1226,7 @@ weapon_component_template = { #deployer
 	#entity = "invisible_turret_#entity"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = yes
+	#use_ship_kill_target = yes
 
 	#prerequisites = { tech_ge_planet_killer }
 

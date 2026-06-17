@@ -12,7 +12,7 @@ weapon_component_template = {
 	firing_arc = 30.0
 	min_range = 1.0
 	#static_rotation = yes
-	use_ship_kill_target = yes
+	##use_ship_kill_target = yes
 	tags = { weapon_type_ge_void_energy weapon_type_energy }
 	projectile_gfx = "ge_vn_t_beam_projectile"
 	component_set = "ge_sgt_main_beam"
@@ -61,7 +61,7 @@ weapon_component_template = {
 	firing_arc = 15.0
 	min_range = 1.0
 	#static_rotation = yes
-	use_ship_kill_target = yes
+	##use_ship_kill_target = yes
 	tags = { weapon_type_ge_void_energy weapon_type_energy }
 	projectile_gfx = "ge_vn_t_beam_projectile"
 	component_set = "ge_sgt_main_beam"
@@ -110,7 +110,7 @@ weapon_component_template = {
 	firing_arc = 30.0
 	min_range = 1.0
 	#static_rotation = yes
-	use_ship_kill_target = no
+	##use_ship_kill_target = no
 	tags = { weapon_type_ge_void_energy weapon_type_energy }
 	projectile_gfx = "ge_vn_t_beam_projectile"
 	component_set = "ge_sgt_main_beam_1"
@@ -414,35 +414,7 @@ utility_component_template = {
 	component_set = "roz_flagship_slot"
 
 	scripted_action = {
-		scope = self
-
-        finish_anim_state = "phase_cloak"
-
-		possible = {	#scope:fleet
-			always = yes
-			#custom_tooltip = "roz_phase_cloak_ct"
-		}
-
-		button_clickable = {
-			custom_tooltip = {
-				fail_text = BLANK_STRING
-				always = yes
-			}
-		}
-
-		name = on_roz_phase_cloak_triggered
-		tooltip = roz_phase_cloak_ship_button
-		icon = GFX_ship_skill_roz_phase_cloak
-		activity_key = roz_phase_cloak_activity_key
-		context_menu_name = roz_phase_cloak_menu_title
-		progress_activity_key = roz_phase_cloak_progress_activity_key
-		required_progress = 1
-		on_click_sound = roz_phase_cloak_collision
-
-		cooldown = 25
-		cost = { energy = 1000 }
-
-		shortcut = "SHIFT+P"
+		roz_phase_cloak_menu_title
 	}
 
 	friendly_aura = {
@@ -509,7 +481,7 @@ weapon_component_template = {
 	firing_arc = 10.0
 	min_range = 1.0
 	#static_rotation = yes
-	use_ship_kill_target = no
+	##use_ship_kill_target = no
 	tags = { weapon_type_energy }
 	projectile_gfx = "ge_vn_t_beam_projectile"
 	component_set = "ge_sgt_normal_beam"

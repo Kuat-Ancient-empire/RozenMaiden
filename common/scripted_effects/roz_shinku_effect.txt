@@ -29,7 +29,7 @@ roz_junn_country_create = {
 	}
 	if = {
 		limit = { exists = event_target:roz_junn_global_country@root }
-		event_target:roz_junn_global_country@root = {
+		event_target:roz_junn_global_country@root? = {
 		}
 	}
 }
@@ -373,7 +373,7 @@ roz_leader_type_switch_create_leader_initiate_effect = {	#生成领袖
 	if = {	#从缓存国家复制备份
 		limit = {
 			OR = {
-				event_target:roz_$leader$_global_country@root = {
+				event_target:roz_$leader$_global_country@root? = {
 					any_owned_leader = {
 						leader_class = $leader_type$
 						has_trait = $symbolic_trait_1$
@@ -467,9 +467,9 @@ roz_leader_type_switch_create_leader_initiate_effect = {	#生成领袖
 					# }
 				}
 			}
-			add_trait = { trait = $symbolic_trait_1$ }
-			add_trait = { trait = $symbolic_trait_2$ }
-			add_trait = { trait = $symbolic_trait_3$ }
+		 	[[symbolic_trait_1] add_trait = { trait = $symbolic_trait_1$ } ]
+			[[symbolic_trait_2] add_trait = { trait = $symbolic_trait_2$ } ]
+			[[symbolic_trait_3] add_trait = { trait = $symbolic_trait_3$ } ]
 		}
 	}
 }
@@ -583,7 +583,7 @@ roz_shinku_leader_initiate = {
 		#randomize_traits = no
 		hide_age = yes
 		skip_background_generation = yes
-		custom_catch_phrase = shinku_gov_catch_phrase
+		custom_catch_phrase = shinku_official_catch_phrase
 		custom_description = shinku_backstory
 		effect = {
 			add_skill_without_trait_selection = 2
@@ -659,14 +659,14 @@ roz_shinku_leader_type_switch_scientist = {
 	if = {
 		limit = {
 			exists = event_target:roz_leader_shinku_global_target@root
-			event_target:roz_leader_shinku_global_target@root = {
+			event_target:roz_leader_shinku_global_target@root? = {
 				leader_class = commander
 			}
 		}
 		remove_country_flag = roz_shinku_commander_active
 		#缓存国家目标领袖更新替换
-		event_target:roz_shinku_commander_inactive_temp@root = {
-		kill_leader = {
+		event_target:roz_shinku_commander_inactive_temp@root? = {
+			kill_leader = {
 				show_notification = no
 			}
 		}
@@ -692,7 +692,7 @@ roz_shinku_leader_type_switch_scientist = {
 			}
 		}
 		#移除玩家的指挥官真红
-		event_target:roz_leader_shinku_global_target@root = {
+		event_target:roz_leader_shinku_global_target@root? = {
 			kill_leader = {
 				show_notification = no
 			}
@@ -704,7 +704,7 @@ roz_shinku_leader_type_switch_scientist = {
 			leader_type = scientist
 			symbolic_trait_1 = leader_trait_roz_shinku_main
 			symbolic_trait_2 = leader_trait_roz_shinku_hollye
-			symbolic_trait_3 = leader_trait_roz
+			#symbolic_trait_3 = leader_trait_roz #TODO
 		}
 
 		roz_leader_initialize_after_create_effect = {
@@ -718,13 +718,13 @@ roz_shinku_leader_type_switch_scientist = {
 	if = {
 		limit = {
 			exists = event_target:roz_leader_shinku_global_target@root
-			event_target:roz_leader_shinku_global_target@root = {
+			event_target:roz_leader_shinku_global_target@root? = {
 				leader_class = official
 			}
 		}
 		remove_country_flag = roz_shinku_official_active
 		#缓存国家目标领袖更新替换, 先kill了再说
-		event_target:roz_shinku_official_inactive_temp@root = { #令临时存储国家的舰队司令真红消失
+		event_target:roz_shinku_official_inactive_temp@root? = { #令临时存储国家的舰队司令真红消失
 		kill_leader = {
 				show_notification = no
 			}
@@ -750,7 +750,7 @@ roz_shinku_leader_type_switch_scientist = {
 			}
 		}
 		#移除玩家的指挥官真红
-		event_target:roz_leader_shinku_global_target@root = {
+		event_target:roz_leader_shinku_global_target@root? = {
 			kill_leader = {
 				show_notification = no
 			}
@@ -762,7 +762,7 @@ roz_shinku_leader_type_switch_scientist = {
 			leader_type = scientist
 			symbolic_trait_1 = leader_trait_roz_shinku_main
 			symbolic_trait_2 = leader_trait_roz_shinku_hollye
-			symbolic_trait_3 = leader_trait_roz
+			#symbolic_trait_3 = leader_trait_roz #TODO
 		}
 
 		roz_leader_initialize_after_create_effect = {
@@ -780,13 +780,13 @@ roz_shinku_leader_type_switch_commander = {
 	if = {
 		limit = {
 			exists = event_target:roz_leader_shinku_global_target@root
-			event_target:roz_leader_shinku_global_target@root = {
+			event_target:roz_leader_shinku_global_target@root? = {
 				leader_class = scientist
 			}
 		}
 		remove_country_flag = roz_shinku_scientist_active
 		#缓存国家目标领袖更新替换
-		event_target:roz_shinku_scientist_inactive_temp@root = {
+		event_target:roz_shinku_scientist_inactive_temp@root? = {
 		kill_leader = {
 				show_notification = no
 			}
@@ -812,7 +812,7 @@ roz_shinku_leader_type_switch_commander = {
 			}
 		}
 		#移除玩家的科学家真红
-		event_target:roz_leader_shinku_global_target@root = {
+		event_target:roz_leader_shinku_global_target@root? = {
 			kill_leader = {
 				show_notification = no
 			}
@@ -824,7 +824,7 @@ roz_shinku_leader_type_switch_commander = {
 			leader_type = commander
 			symbolic_trait_1 = leader_trait_roz_shinku_main
 			symbolic_trait_2 = leader_trait_roz_shinku_hollye
-			symbolic_trait_3 = leader_trait_roz
+			#symbolic_trait_3 = leader_trait_roz #TODO
 		}
 
 		roz_leader_initialize_after_create_effect = {
@@ -842,13 +842,13 @@ roz_shinku_leader_type_switch_commander = {
 	if = {
 		limit = {
 			exists = event_target:roz_leader_shinku_global_target@root
-			event_target:roz_leader_shinku_global_target@root = {
+			event_target:roz_leader_shinku_global_target@root? = {
 				leader_class = official
 			}
 		}
 		remove_country_flag = roz_shinku_official_active
 		#缓存国家目标领袖更新替换, 先kill了再说
-		event_target:roz_shinku_official_inactive_temp@root = { #令临时存储国家的舰队司令真红消失
+		event_target:roz_shinku_official_inactive_temp@root? = { #令临时存储国家的舰队司令真红消失
 		kill_leader = {
 				show_notification = no
 			}
@@ -874,7 +874,7 @@ roz_shinku_leader_type_switch_commander = {
 			}
 		}
 		#移除玩家的指挥官真红
-		event_target:roz_leader_shinku_global_target@root = {
+		event_target:roz_leader_shinku_global_target@root? = {
 			kill_leader = {
 				show_notification = no
 			}
@@ -886,7 +886,7 @@ roz_shinku_leader_type_switch_commander = {
 			leader_type = commander
 			symbolic_trait_1 = leader_trait_roz_shinku_main
 			symbolic_trait_2 = leader_trait_roz_shinku_hollye
-			symbolic_trait_3 = leader_trait_roz
+			#symbolic_trait_3 = leader_trait_roz #TODO
 		}
 
 		roz_leader_initialize_after_create_effect = {
@@ -908,13 +908,13 @@ roz_shinku_leader_type_switch_official = {
 	if = {
 		limit = {
 			exists = event_target:roz_leader_shinku_global_target@root
-			event_target:roz_leader_shinku_global_target@root = {
+			event_target:roz_leader_shinku_global_target@root? = {
 				leader_class = scientist
 			}
 		}
 		remove_country_flag = roz_shinku_scientist_active
 		#缓存国家目标领袖更新替换
-		event_target:roz_shinku_scientist_inactive_temp@root = {
+		event_target:roz_shinku_scientist_inactive_temp@root? = {
 		kill_leader = {
 				show_notification = no
 			}
@@ -940,7 +940,7 @@ roz_shinku_leader_type_switch_official = {
 			}
 		}
 		#移除玩家的科学家真红
-		event_target:roz_leader_shinku_global_target@root = {
+		event_target:roz_leader_shinku_global_target@root? = {
 			kill_leader = {
 				show_notification = no
 			}
@@ -952,7 +952,7 @@ roz_shinku_leader_type_switch_official = {
 			leader_type = official
 			symbolic_trait_1 = leader_trait_roz_shinku_main
 			symbolic_trait_2 = leader_trait_roz_shinku_hollye
-			symbolic_trait_3 = leader_trait_roz
+			#symbolic_trait_3 = leader_trait_roz #TODO
 		}
 
 		roz_leader_initialize_after_create_effect = {
@@ -965,13 +965,13 @@ roz_shinku_leader_type_switch_official = {
 	#若当前真红职位为指挥官
 	if = {
 		limit = {
-			event_target:roz_leader_shinku_global_target@root = {
+			event_target:roz_leader_shinku_global_target@root? = {
 				leader_class = commander
 			}
 		}
 		remove_country_flag = roz_shinku_commander_active
 		#缓存国家目标领袖更新替换, 先kill了再说
-		event_target:roz_shinku_commander_inactive_temp@root = { #令临时存储国家的舰队司令真红消失
+		event_target:roz_shinku_commander_inactive_temp@root? = { #令临时存储国家的舰队司令真红消失
 		kill_leader = {
 				show_notification = no
 			}
@@ -997,7 +997,7 @@ roz_shinku_leader_type_switch_official = {
 			}
 		}
 		#移除玩家的指挥官真红
-		event_target:roz_leader_shinku_global_target@root = {
+		event_target:roz_leader_shinku_global_target@root? = {
 			kill_leader = {
 				show_notification = no
 			}
@@ -1008,7 +1008,7 @@ roz_shinku_leader_type_switch_official = {
 			leader_type = official
 			symbolic_trait_1 = leader_trait_roz_shinku_main
 			symbolic_trait_2 = leader_trait_roz_shinku_hollye
-			symbolic_trait_3 = leader_trait_roz
+			#symbolic_trait_3 = leader_trait_roz #TODO
 		}
 
 		roz_leader_initialize_after_create_effect = {
@@ -1023,11 +1023,11 @@ roz_shinku_leader_type_switch_official = {
 roz_shinku_leader_backup = {
     if = {	#指挥官备份
         limit = {
-            event_target:roz_leader_shinku_global_target@root = {
+            event_target:roz_leader_shinku_global_target@root? = {
                 leader_class = commander
             }
         }
-        event_target:roz_shinku_commander_inactive_temp@root = { #去掉全局国家的缓存真红
+        event_target:roz_shinku_commander_inactive_temp@root? = { #去掉全局国家的缓存真红
             kill_leader = {
                 show_notification = no
             }
@@ -1054,11 +1054,11 @@ roz_shinku_leader_backup = {
 	if = {	#科学家备份
         limit = {
 			exists = event_target:roz_leader_shinku_global_target@root
-            event_target:roz_leader_shinku_global_target@root = {
+            event_target:roz_leader_shinku_global_target@root? = {
                 leader_class = scientist
             }
         }
-        event_target:roz_shinku_scientist_inactive_temp@root = { #去掉全局国家的缓存真红
+        event_target:roz_shinku_scientist_inactive_temp@root? = { #去掉全局国家的缓存真红
             kill_leader = {
                 show_notification = no
             }
@@ -1084,11 +1084,11 @@ roz_shinku_leader_backup = {
     }
 	if = {	#行政官备份
         limit = {
-            event_target:roz_leader_shinku_global_target@root = {
+            event_target:roz_leader_shinku_global_target@root? = {
                 leader_class = official
             }
         }
-        event_target:roz_shinku_official_inactive_temp@root = { #去掉全局国家的缓存真红
+        event_target:roz_shinku_official_inactive_temp@root? = { #去掉全局国家的缓存真红
             kill_leader = {
                 show_notification = no
             }
@@ -1369,7 +1369,7 @@ roz_hinaichigo_leader_initiate = {
 		#randomize_traits = no
 		hide_age = yes
 		skip_background_generation = yes
-		custom_catch_phrase = hinaichigo_gov_catch_phrase
+		custom_catch_phrase = hinaichigo_official_catch_phrase
 		custom_description = hinaichigo_backstory
 		effect = {
 			add_skill_without_trait_selection = 1
@@ -1444,14 +1444,14 @@ roz_hinaichigo_leader_type_switch_commander = {
 	# if = {
 	# 	limit = {
 	# 		exists = event_target:roz_leader_hinaichigo_global_target@root
-	# 		event_target:roz_leader_hinaichigo_global_target@root = {
+	# 		event_target:roz_leader_hinaichigo_global_target@root? = {
 	# 			leader_class = official
 	# 		}
 	# 	}
 	# }
 	remove_country_flag = roz_hinaichigo_official_active
 	#缓存国家目标领袖更新替换, kill了
-	event_target:roz_hinaichigo_official_inactive_temp@root = { #令临时存储国家的舰队司令雏莓消失
+	event_target:roz_hinaichigo_official_inactive_temp@root? = { #令临时存储国家的舰队司令雏莓消失
 		kill_leader = {
 			show_notification = no
 		}
@@ -1477,7 +1477,7 @@ roz_hinaichigo_leader_type_switch_commander = {
 		}
 	}
 	#移除玩家的指挥官雏莓
-	event_target:roz_leader_hinaichigo_global_target@root = {
+	event_target:roz_leader_hinaichigo_global_target@root? = {
 		kill_leader = {
 			show_notification = no
 		}
@@ -1489,7 +1489,7 @@ roz_hinaichigo_leader_type_switch_commander = {
 		leader_type = commander
 		symbolic_trait_1 = leader_trait_roz_hinaichigo_main
 		symbolic_trait_2 = leader_trait_roz_hinaichigo_berry_bell
-		symbolic_trait_3 = leader_trait_roz
+		#symbolic_trait_3 = leader_trait_roz #TODO
 	}
 
 	roz_leader_initialize_after_create_effect = {
@@ -1505,13 +1505,13 @@ roz_hinaichigo_leader_type_switch_official = {
 	#若当前雏莓职位为指挥官
 	if = {
 		limit = {
-			event_target:roz_leader_hinaichigo_global_target@root = {
+			event_target:roz_leader_hinaichigo_global_target@root? = {
 				leader_class = commander
 			}
 		}
 		remove_country_flag = roz_hinaichigo_commander_active
 		#缓存国家目标领袖更新替换, 先kill了再说
-		event_target:roz_hinaichigo_commander_inactive_temp@root = { #令临时存储国家的舰队司令雏莓消失
+		event_target:roz_hinaichigo_commander_inactive_temp@root? = { #令临时存储国家的舰队司令雏莓消失
 			kill_leader = {
 				show_notification = no
 			}
@@ -1537,7 +1537,7 @@ roz_hinaichigo_leader_type_switch_official = {
 			}
 		}
 		#移除玩家的指挥官雏莓
-		event_target:roz_leader_hinaichigo_global_target@root = {
+		event_target:roz_leader_hinaichigo_global_target@root? = {
 			kill_leader = {
 				show_notification = no
 			}
@@ -1548,7 +1548,7 @@ roz_hinaichigo_leader_type_switch_official = {
 			leader_type = official
 			symbolic_trait_1 = leader_trait_roz_hinaichigo_main
 			symbolic_trait_2 = leader_trait_roz_hinaichigo_berry_bell
-			symbolic_trait_3 = leader_trait_roz
+			#symbolic_trait_3 = leader_trait_roz #TODO
 		}
 
 		roz_leader_initialize_after_create_effect = {
@@ -1683,7 +1683,7 @@ roz_abyss_vass_create = {
 				NOR = {
 					is_planet_class = pc_asteroid
 					is_planet_class = pc_ice_asteroid
-					has_planet_flag = roz_abyss_vass_capital
+					has_carrier_flag = roz_abyss_vass_capital
 				}
 			}
 			change_pc = pc_gaia
@@ -1719,7 +1719,7 @@ roz_abyss_vass_create = {
 						name = random
 						skill = 5
 					}
-					copy_techs_from = { target = root }
+					copy_techs_from? = { target = root }
 					add_resource = {
 						minerals = 10000
 						energy = 10000
@@ -1737,7 +1737,7 @@ roz_abyss_vass_create = {
 			set_owner = last_created_country
 			set_capital = yes
 			set_name = random
-			set_planet_flag = roz_abyss_vass_capital
+			set_carrier_flag = roz_abyss_vass_capital
 			add_building = building_capital
 			add_building = building_roz_abyss_altar_unknow
 			remove_building = building_colony_shelter
@@ -1795,7 +1795,7 @@ roz_abyss_vass_create = {
 				#establish_communications_no_message = root
 				set_name = random
 			}
-			solar_system = {
+			solar_system? = {
 				create_starbase = {
 					owner = last_created_country
 					size = starbase_starport
@@ -1901,12 +1901,12 @@ roz_abyss_vass_create_in_diff = {
 
 roz_abyss_vass_extra_awaken = {
 	optimize_memory
-	event_target:roz_abyss_vass_extra_$index$_target@root = {
+	event_target:roz_abyss_vass_extra_$index$_target@root? = {
 		set_country_flag = roz_abyss_vass_country
 		set_subject_of = {
 			who = event_target:roz_madgod_force_country@root
 		}
-		root = {
+		root? = {
 			create_point_of_interest = {
 				id = roz_abyss_vass_country_extra_$index$
 				name = roz_abyss_vass_country_name
@@ -1925,7 +1925,7 @@ roz_abyss_vass_extra_awaken = {
 		# 	set_hostile = prev
 		# 	set_faction_hostility = { target = prev set_hostile = yes set_neutral = no set_friendly = no }
 		# 	add_opinion_modifier = { modifier = opinion_roz_abyss_vass who = prev }
-		# 	event_target:roz_abyss_vass_extra_$index$_target@root = { add_opinion_modifier = { modifier = opinion_roz_abyss_vass who = prev } }
+		# 	event_target:roz_abyss_vass_extra_$index$_target@root? = { add_opinion_modifier = { modifier = opinion_roz_abyss_vass who = prev } }
 		# }
 	}
 }
@@ -1967,12 +1967,12 @@ roz_abyss_vass_annex = {
 				is_roz_abyss_vass_extra_country_global_target = yes
 				is_country_type = roz_madgod_empire
 			}
-			NOT = { root = { is_overlord_to = prev } }
+			NOT = { root? = { is_overlord_to = prev } }
 			NOT = { is_in_federation_with = root }
 		}
 		set_country_flag = roz_abyss_vass_country
 	}
-	event_target:roz_madgod_force_country@root = {
+	event_target:roz_madgod_force_country@root? = {
 		every_playable_country = {
 			limit = { has_country_flag = roz_abyss_vass_country }
 			every_owned_fleet = { destroy_fleet = this }
@@ -2011,7 +2011,7 @@ roz_abyss_vass_select = {
 						is_roz_abyss_vass_extra_country_global_target = yes
 						is_country_type = roz_madgod_empire
 					}
-					NOT = { root = { is_overlord_to = prev } }
+					NOT = { root? = { is_overlord_to = prev } }
 					NOT = { is_in_federation_with = root }
 				}
 				if = {
@@ -2027,7 +2027,7 @@ roz_abyss_vass_select = {
 				set_subject_of = { who = event_target:roz_madgod_force_country@root }
 				#加buff
 				roz_unholy_invision_difficult_modifier_effect = { value = $value$ dif_factor = $dif_factor$ }
-				root = {
+				root? = {
 					create_point_of_interest = {
 						id = roz_abyss_vass_country_$dif_factor$
 						name = roz_abyss_vass_country_name
@@ -2072,12 +2072,12 @@ roz_abyss_vass_after_select = {
 			set_hostile = prev
 			set_faction_hostility = { target = prev set_hostile = yes set_neutral = no set_friendly = no }
 			add_opinion_modifier = { modifier = opinion_roz_abyss_vass who = prev }
-			prev = { add_opinion_modifier = { modifier = opinion_roz_abyss_vass_hostile who = this } }
+			prev? = { add_opinion_modifier = { modifier = opinion_roz_abyss_vass_hostile who = this } }
 		}
 		#set_hostile = prev
 		#set_faction_hostility = { target = prev set_hostile = yes set_neutral = no set_friendly = no }
 		join_war = overlord
-		# root = {
+		# root? = {
 		# 	create_point_of_interest = {
 		# 		id = roz_abyss_vass_country
 		# 		name = roz_abyss_vass_country_name
@@ -2251,7 +2251,7 @@ roz_abyss_leader_create = {
 	optimize_memory
 	if = {
 		limit = { exists = event_target:roz_madgod_force_country@root }
-		event_target:roz_madgod_force_country@root = {
+		event_target:roz_madgod_force_country@root? = {
 			create_leader = {
 				name = $name$
 				class = $leader_class$
@@ -2296,13 +2296,13 @@ roz_abyss_create_jump_particle_effect = {
 roz_abyss_fleet_jump_drive_planet_action  = {
 	optimize_memory
 	random_list = {
-		80 = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
+		80 = { prevprev? = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
 		20 = {
 			modifier = {
 				factor = 0
-				prevprev = { any_owned_ship = { has_ship_flag = roz_abyss_jump_drive_cooldown } }
+				prevprev? = { any_owned_ship = { has_ship_flag = roz_abyss_jump_drive_cooldown } }
 			}
-			prevprev = {
+			prevprev? = {
 				set_location = { target = prev distance = 300 angle = random }
 				every_owned_ship = { roz_abyss_create_jump_particle_effect = yes }
 				while = {
@@ -2326,9 +2326,9 @@ roz_abyss_fleet_wandering_action = {
 	random_list = {
 		#周围星系随机设置目标
 		75 = {
-			solar_system = { random_neighbor_system = {
+			solar_system? = { random_neighbor_system = {
 				limit = {
-					prevprev = { can_access_system = prev }
+					prevprev? = { can_access_system = prev }
 					#kuat_is_invisable_target_system = no
 				}
 				save_event_target_as = $TYPE$_invasion_fleet_wandering_action_target
@@ -2336,20 +2336,20 @@ roz_abyss_fleet_wandering_action = {
 			if = {
 				limit = { exists = event_target:$TYPE$_invasion_fleet_wandering_action_target }
 				event_target:$TYPE$_invasion_fleet_wandering_action_target = {
-					system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
+					system_star = { prevprev? = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
 				}
 			}
 			else_if = {
 				limit = { any_system = {
-					prev = { can_access_system = prev }
+					prev? = { can_access_system = prev }
 					#kuat_is_invisable_target_system = no
 				} }
 				random_system = {
-					limit = { prev = { can_access_system = prev } }
+					limit = { prev? = { can_access_system = prev } }
 					save_event_target_as = $TYPE$_invasion_fleet_wandering_action_target
 				}
 				event_target:$TYPE$_invasion_fleet_wandering_action_target = {
-					system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
+					system_star = { prevprev? = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
 				}
 			}
 			else = {
@@ -2404,7 +2404,7 @@ roz_abyss_fleet_wandering_action = {
 				event_target:$TYPE$_invasion_fleet_wandering_action_target = {
 					random_system_planet = {
 						limit = { is_primary_star = yes }
-						prevprev = {
+						prevprev? = {
 							set_location = { target = prev distance = 300 angle = random }
 							every_owned_ship = { roz_abyss_create_jump_particle_effect = yes }
 							auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes }
@@ -2413,9 +2413,9 @@ roz_abyss_fleet_wandering_action = {
 				}
 			}
 			else = {
-				solar_system = { random_neighbor_system = {
+				solar_system? = { random_neighbor_system = {
 					limit = {
-						prevprev = { can_access_system = prev }
+						prevprev? = { can_access_system = prev }
 						#kuat_is_invisable_target_system = no
 					}
 					save_event_target_as = $TYPE$_invasion_fleet_wandering_action_target
@@ -2423,20 +2423,20 @@ roz_abyss_fleet_wandering_action = {
 				if = {
 					limit = { exists = event_target:$TYPE$_invasion_fleet_wandering_action_target }
 					event_target:$TYPE$_invasion_fleet_wandering_action_target = {
-						system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
+						system_star = { prevprev? = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
 					}
 				}
 				else_if = {
 					limit = { any_system = {
-						prev = { can_access_system = prev }
+						prev? = { can_access_system = prev }
 						#kuat_is_invisable_target_system = no
 					} }
 					random_system = {
-						limit = { prev = { can_access_system = prev } }
+						limit = { prev? = { can_access_system = prev } }
 						save_event_target_as = $TYPE$_invasion_fleet_wandering_action_target
 					}
 					event_target:$TYPE$_invasion_fleet_wandering_action_target = {
-						system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
+						system_star = { prevprev? = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
 					}
 				}
 				else = {
@@ -2451,16 +2451,16 @@ roz_abyss_fleet_wandering_action = {
 roz_abyss_fleet_jump_drive_fleet_action  = {
 	optimize_memory
 	random_list = {
-		75 = { prevprev = {
+		75 = { prevprev? = {
 			auto_follow_fleet = { target = prev attack_fleet = yes }
 			#set_fleet_flag = kuat_disable_other_fleet_in_system
 		} }
 		25 = {
 			modifier = {
 				factor = 0
-				prevprev = { any_owned_ship = { has_ship_flag = roz_abyss_jump_drive_cooldown } }
+				prevprev? = { any_owned_ship = { has_ship_flag = roz_abyss_jump_drive_cooldown } }
 			}
-			prevprev = {
+			prevprev? = {
 				set_location = { target = prev distance = 200 angle = random }
 				every_owned_ship = { roz_abyss_create_jump_particle_effect = yes }
 				while = {
@@ -2506,14 +2506,14 @@ roz_abyss_fleet_invision_action_1 = {
 	# 				orbit_planet = THIS
 	# 				effect = {
 	# 					id = roz_abyss_crisis_fleet_action_standard.3
-	# 					set_planet_flag = ruins_planet
-	# 					ROOT = { set_fleet_flag = roz_abyss_bombaring_fleet }
+	# 					set_carrier_flag = ruins_planet
+	# 					root? = { set_fleet_flag = roz_abyss_bombaring_fleet }
 	# 				}
 	# 				repeat = {
-	# 					while = { id = roz_abyss_crisis_fleet_action_standard.3.t0 ROOT = { has_fleet_flag = roz_abyss_bombaring_fleet } }
+	# 					while = { id = roz_abyss_crisis_fleet_action_standard.3.t0 root? = { has_fleet_flag = roz_abyss_bombaring_fleet } }
 	# 					effect = {
 	# 						id = roz_abyss_crisis_fleet_action_standard.3.t1
-	# 						if = { limit = { is_colony = no } ROOT = { remove_fleet_flag = roz_abyss_bombaring_fleet } }
+	# 						if = { limit = { is_colony = no } root? = { remove_fleet_flag = roz_abyss_bombaring_fleet } }
 	# 					}
 	# 					wait = 5
 	# 				}
@@ -2526,7 +2526,7 @@ roz_abyss_fleet_invision_action_1 = {
 	if = {
 		limit = {
 			exists = solar_system
-			solar_system = {
+			solar_system? = {
 				any_system_planet = {
 					exists = controller
 					controller = { is_hostile = event_target:$OWNER$ }
@@ -2542,7 +2542,7 @@ roz_abyss_fleet_invision_action_1 = {
 				}
 			}
 		}
-		solar_system = {
+		solar_system? = {
 			random_system_planet = {
 				limit = {
 					exists = controller
@@ -2557,7 +2557,7 @@ roz_abyss_fleet_invision_action_1 = {
 						NOT = { is_same_value = prevprevprev }
 					} }
 				}
-				prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } }
+				prevprev? = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } }
 			}
 		}
 	}
@@ -2565,20 +2565,20 @@ roz_abyss_fleet_invision_action_1 = {
 	else_if = {
 		limit = {
 			exists = solar_system
-			solar_system = { any_ship_in_system = {
+			solar_system? = { any_ship_in_system = {
 				exists = owner
 				owner = { is_hostile = event_target:$OWNER$ }
 				is_disabled = no is_cloaked = no
 			} }
 		}
-		solar_system = {
+		solar_system? = {
 			random_fleet_in_system = {
 				limit = {
 					exists = owner
 					owner = { is_hostile = event_target:$OWNER$ }
 					any_owned_ship = { is_disabled = no is_cloaked = no }
 				}
-				prevprev = {
+				prevprev? = {
 					auto_follow_fleet = { target = prev attack_fleet = yes }
 					#set_fleet_flag = kuat_disable_other_fleet_in_system
 				}
@@ -2588,7 +2588,7 @@ roz_abyss_fleet_invision_action_1 = {
 	# 寻找周围星系有无敌对单位
 	else_if = {
 		limit = {
-			solar_system = { any_neighbor_system = {
+			solar_system? = { any_neighbor_system = {
 				OR = {
 					AND = {
 						exists = starbase
@@ -2603,7 +2603,7 @@ roz_abyss_fleet_invision_action_1 = {
 				##kuat_is_invisable_target_system = no
 			} }
 		}
-		solar_system = { random_neighbor_system = {
+		solar_system? = { random_neighbor_system = {
 			limit = {
 				OR = {
 					AND = {
@@ -2618,7 +2618,7 @@ roz_abyss_fleet_invision_action_1 = {
 				}
 				##kuat_is_invisable_target_system = no
 			}
-			system_star = { prevprevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
+			system_star = { prevprevprev? = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } }
 		} }
 	}
 	# 自主行为启动
@@ -2654,7 +2654,7 @@ roz_abyss_fleet_invision_action_1 = {
 							}
 						}
 						##kuat_is_invisable_target_system = no
-						prev = { can_access_system = prev }
+						prev? = { can_access_system = prev }
 					}
 					save_event_target_as = $TYPE$_invasion_fleet_action_target
 				}
@@ -2697,7 +2697,7 @@ roz_abyss_fleet_invision_action_1 = {
 								roz_abyss_fleet_jump_drive_planet_action = yes
 							}
 						}
-						else = { system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } } }
+						else = { system_star = { prevprev? = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } } }
 					}
 				}
 				#找不到目标，再找一次
@@ -2771,7 +2771,7 @@ roz_abyss_fleet_invision_action_1 = {
 									roz_abyss_fleet_jump_drive_planet_action = yes
 								}
 							}
-							else = { system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } } }
+							else = { system_star = { prevprev? = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } } }
 						}
 					}
 					#找不到目标，摆烂了，开始转圈
@@ -2810,7 +2810,7 @@ roz_abyss_fleet_invision_action_1 = {
 							}
 						}
 						##kuat_is_invisable_target_system = no
-						prev = { can_access_system = prev }
+						prev? = { can_access_system = prev }
 					}
 					save_event_target_as = $TYPE$_invasion_fleet_action_target
 				}
@@ -2852,7 +2852,7 @@ roz_abyss_fleet_invision_action_1 = {
 								roz_abyss_fleet_jump_drive_planet_action = yes
 							}
 						}
-						else = { system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } } }
+						else = { system_star = { prevprev? = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } } }
 					}
 				}
 				#找不到目标，再找一次
@@ -2931,7 +2931,7 @@ roz_abyss_fleet_invision_action_1 = {
 									roz_abyss_fleet_jump_drive_planet_action = yes
 								}
 							}
-							else = { system_star = { prevprev = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } } }
+							else = { system_star = { prevprev? = { auto_move_to_planet = { target = prev clear_auto_move_on_arrival = yes } } } }
 						}
 					}
 					#找不到目标，摆烂了，开始转圈
@@ -2950,7 +2950,7 @@ roz_abyss_fleet_invision_action_1 = {
 							is_disabled = no is_cloaked = no
 						}
 						##kuat_is_invisable_target_system = no
-						prev = { can_access_system = prev }
+						prev? = { can_access_system = prev }
 					}
 					save_event_target_as = $TYPE$_invasion_fleet_action_target
 				}
@@ -3019,7 +3019,7 @@ roz_abyss_fleet_invision_action_1 = {
 							is_disabled = no is_cloaked = no
 						}
 						##kuat_is_invisable_target_system = no
-						prev = { can_access_system = prev }
+						prev? = { can_access_system = prev }
 					}
 					save_event_target_as = $TYPE$_invasion_fleet_action_target
 				}
@@ -3088,7 +3088,7 @@ roz_abyss_fleet_invision_action_on_entering_system = {
 			while = {
 				id = roz_abyss_crisis_fleet_action_standard_trigger.2
 				exists = solar_system
-				solar_system = {
+				solar_system? = {
 					any_system_planet = {
 						#is_colony = yes
 						exists = controller
@@ -3107,14 +3107,14 @@ roz_abyss_fleet_invision_action_on_entering_system = {
 					orbit_planet = THIS
 					effect = {
 						id = roz_abyss_crisis_fleet_action_standard.3
-						set_planet_flag = ruins_planet
-						ROOT = { set_fleet_flag = roz_abyss_bombaring_fleet }
+						set_carrier_flag = ruins_planet
+						root? = { set_fleet_flag = roz_abyss_bombaring_fleet }
 					}
 					repeat = {
-						while = { id = roz_abyss_crisis_fleet_action_standard.3.t0 ROOT = { has_fleet_flag = roz_abyss_bombaring_fleet } }
+						while = { id = roz_abyss_crisis_fleet_action_standard.3.t0 root? = { has_fleet_flag = roz_abyss_bombaring_fleet } }
 						effect = {
 							id = roz_abyss_crisis_fleet_action_standard.3.t1
-							if = { limit = { is_colony = no } ROOT = { remove_fleet_flag = roz_abyss_bombaring_fleet } }
+							if = { limit = { is_colony = no } root? = { remove_fleet_flag = roz_abyss_bombaring_fleet } }
 						}
 						wait = 5
 					}
@@ -3137,7 +3137,7 @@ roz_abyss_fleet_create_small = {
 	}
 	if = {
 		limit = { exists = event_target:roz_madgod_force_country@root }
-		event_target:roz_madgod_force_country@root = {
+		event_target:roz_madgod_force_country@root? = {
 			create_fleet = {
 				name = "NAME_roz_abyss_small_fleet"
 				settings = {
@@ -3205,7 +3205,7 @@ roz_abyss_fleet_create_median = {
 	}
 	if = {
 		limit = { exists = event_target:roz_madgod_force_country@root }
-		event_target:roz_madgod_force_country@root = {
+		event_target:roz_madgod_force_country@root? = {
 			create_fleet = {
 				#name = random
 				settings = {
@@ -3280,7 +3280,7 @@ roz_abyss_fleet_create_large = {
 		limit = {
 			exists = event_target:roz_madgod_force_country@root
 		}
-		event_target:roz_madgod_force_country@root = {
+		event_target:roz_madgod_force_country@root? = {
 			create_fleet = {
 				#name = random
 				settings = {
@@ -3349,7 +3349,7 @@ roz_abyss_fleet_create_marvelous = {
 	}
 	if = {
 		limit = { exists = event_target:roz_madgod_force_country@root }
-		event_target:roz_madgod_force_country@root = {
+		event_target:roz_madgod_force_country@root? = {
 			create_fleet = {
 				name = NAME_roz_abyss_marvelous_fleet
 				settings = {
@@ -3422,7 +3422,7 @@ roz_abyss_fleet_create_madgod_boss = {
 	}
 	if = {
 		limit = { exists = event_target:roz_madgod_force_country@root }
-		event_target:roz_madgod_force_country@root = {
+		event_target:roz_madgod_force_country@root? = {
 			create_fleet = {
 				name = NAME_roz_abyss_madgod_boss
 				settings = {
@@ -3506,7 +3506,7 @@ roz_abyss_fleet_outpost_create = {
 				has_anomaly = no
 				NOR = {
 					exists = archaeological_site
-					has_planet_flag = hatchling_egg
+					has_carrier_flag = hatchling_egg
 				}
 				OR = {
 					is_planet_class = pc_molten
@@ -3522,10 +3522,10 @@ roz_abyss_fleet_outpost_create = {
 			set_planet_size = 1
 			clear_deposits = yes
 			#add_deposit = ge_sgt_depo	#_添加deposit
-			set_planet_flag = roz_abyss_fleet_outpost@root
+			set_carrier_flag = roz_abyss_fleet_outpost@root
 			save_global_event_target_as = roz_abyss_fleet_outpost_target_$num$_@root
-			solar_system = { set_star_flag = roz_abyss_fleet_outpost_system }
-			root = {
+			solar_system? = { set_star_flag = roz_abyss_fleet_outpost_system }
+			root? = {
 				create_point_of_interest = {
 					id = roz_abyss_fleet_outpost_$num$
 					name = roz_abyss_fleet_outpost_target
@@ -3943,13 +3943,13 @@ roz_abyss_fleet_outpost_remove_effect = {
 	optimize_memory
 	if = {
 		limit = {
-			solar_system = {
+			solar_system? = {
 				is_same_value = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root
 				NOT = { has_star_flag = roz_abyss_fleet_outpost_system_disable_@root }
 			}
 		}
 		clear_global_event_target = roz_abyss_fleet_outpost_target_$outpost$_@root
-		solar_system = {
+		solar_system? = {
 			remove_star_flag = roz_abyss_fleet_outpost_system
 			set_star_flag = roz_abyss_fleet_outpost_system_disable_@root
 		}
@@ -3969,16 +3969,16 @@ roz_abyss_fleet_outpost_remove_effect_monthly = {
 	optimize_memory
 	if = {
 		limit = { exists = event_target:roz_abyss_fleet_outpost_target_$outpost$_@root }
-		event_target:roz_abyss_fleet_outpost_target_$outpost$_@root = {
+		event_target:roz_abyss_fleet_outpost_target_$outpost$_@root? = {
 			if = {
 				limit = {
 					NOT = { any_fleet_in_system = { has_fleet_flag = roz_abyss_fleet_marvelous } }
 					NOT = { has_star_flag = roz_abyss_fleet_outpost_system_disable_@root }
 				}
 				clear_global_event_target = roz_abyss_fleet_outpost_target_$outpost$_@root
-				solar_system = { remove_star_flag = roz_abyss_fleet_outpost_system }
+				solar_system? = { remove_star_flag = roz_abyss_fleet_outpost_system }
 				set_star_flag = roz_abyss_fleet_outpost_system_disable_@root
-				root = { country_event = { id = roz_shinku_evt.570 } }
+				root? = { country_event = { id = roz_shinku_evt.570 } }
 			}
 		}	
 	}

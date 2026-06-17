@@ -7,6 +7,7 @@ roz_unknow_crashed_flagship_category = {	#abandon
 	#max_once_global = yes
 	#max_once = yes
 	null_spawn_chance = 0
+	situation_log_category = anomalies
 	spawn_chance = {
 		base = 1
 		modifier = {
@@ -33,7 +34,7 @@ roz_unknow_crashed_flagship_category = {	#abandon
 		# this = {
 		# 	save_event_target_as = roz_sgt_flagship_target
 		# }
-		# from = {
+		# from? = {
 		# 	ship_event = {
 		# 		id = ge_sgt_flagship_events.100
 		# 	}
@@ -55,11 +56,12 @@ roz_destroyed_planet_anomaly = { #不明灵能源
 	should_ai_use = no
 	null_spawn_chance = 0
 	max_once = yes
+	situation_log_category = anomalies
 	spawn_chance = {
 		base = 0.5
 		# modifier = {
 		# 	add = 2
-		# 	from = {
+		# 	from? = {
 		# 		leader = {
 		# 			has_leader_flag = roz_suigintou_flag
 		# 		}
@@ -69,7 +71,7 @@ roz_destroyed_planet_anomaly = { #不明灵能源
 		# 			has_country_flag = roz_destroyed_planet_anomaly_flag
 		# 		}
 		# 	}
-		# 	Root = {
+		# 	root? = {
 		# 		OR = {
 		# 			is_planet_class = pc_barren
 		# 			is_planet_class = pc_barren_cold
@@ -93,7 +95,7 @@ roz_destroyed_planet_anomaly = { #不明灵能源
 					has_country_flag = roz_destroyed_planet_anomaly_flag
 				}
 			}
-			Root = {
+			root? = {
 				OR = {
 					is_planet_class = pc_barren
 					is_planet_class = pc_barren_cold
@@ -121,12 +123,13 @@ disco_gray_cat = {
 	desc = "disco_gray_cat_desc"
 	picture = "GFX_evt_ship_in_orbit_2"
 	level = 3
+	situation_log_category = anomalies
 
 	spawn_chance = {
 		modifier = {
 			add = 10000
 			is_planet_class = pc_gray_goo
-			solar_system = { has_star_flag = lcluster }
+			solar_system? = { has_star_flag = lcluster }
 		}
 		modifier = {
 			factor = 0

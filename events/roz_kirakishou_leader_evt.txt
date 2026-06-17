@@ -39,7 +39,7 @@ country_event = {
                 #randomize_traits = no
                 hide_age = yes
                 skip_background_generation = yes
-                custom_catch_phrase = kirakishou_gov_catch_phrase
+                custom_catch_phrase = kirakishou_official_catch_phrase
                 custom_description = kirakishou_backstory
                 effect = {
                     add_skill_without_trait_selection = 1
@@ -160,7 +160,7 @@ country_event = {
                 }
             }
         }
-        event_target:roz_kirakishou_global_country@root = {
+        event_target:roz_kirakishou_global_country@root? = {
             owner = {
                 clone_leader = {
                     target = event_target:roz_leader_kirakishou_global_target@root
@@ -187,7 +187,7 @@ country_event = {
                     #randomize_traits = no
                     hide_age = yes
                     skip_background_generation = yes
-                    custom_catch_phrase = kirakishou_gov_catch_phrase
+                    custom_catch_phrase = kirakishou_official_catch_phrase
                     custom_description = kirakishou_backstory
                     effect = {
                         add_skill_without_trait_selection = 1
@@ -311,7 +311,7 @@ country_event = {
             remove_country_flag = ge_sgt_busy
             remove_country_flag = ge_nfield_diplomacy_activated
             remove_country_flag = ge_sgt_chat
-            event_target:roz_suigintou_bwg_leader_target@root = {
+            event_target:roz_suigintou_bwg_leader_target@root? = {
                 set_owner = root
                 return_leader_from_exile = this
             }
@@ -350,7 +350,7 @@ country_event = {
             #             exists != this
             #         }
             #     }
-            #     event_target:roz_suigintou_global_country@root = {
+            #     event_target:roz_suigintou_global_country@root? = {
             #         random_system_planet = {
             #             save_event_target_as = roz_location_temp_target
             #         }
@@ -628,7 +628,7 @@ country_event = {   #雪华绮晶通讯主界面
         NOT = {
             has_country_flag = ge_nfield_diplomacy_activated
         }
-        from = {
+        from? = {
             is_country_type = ge_N_Field
             is_same_value = event_target:roz_kirakishou_global_country@root
             NOR = {
@@ -813,7 +813,7 @@ country_event = {
         NOT = {
             has_country_flag = ge_nfield_diplomacy_activated
         }
-        from = {
+        from? = {
             is_country_type = ge_N_Field
             is_same_value = event_target:roz_kirakishou_global_country@root
             NOT = { is_same_value = event_target:roz_suigintou_global_country@root }
@@ -1118,7 +1118,7 @@ country_event = {
     immediate = {
         #创建星系
         #event_target:ge_site_sgt_target = {
-        #    solar_system = {
+        #    solar_system? = {
         #        set_star_flag = roz_outland_star
         #        spawn_natural_wormhole = {
         #            bypass_type = roz_gateway
@@ -1132,8 +1132,8 @@ country_event = {
         #
         #    }
         #}
-        event_target:roz_n_field_site_target@root = {
-            solar_system = {
+        event_target:roz_n_field_site_target@root? = {
+            solar_system? = {
                 set_star_flag = roz_nfield_wormhole_target
                 set_star_flag = roz_outland_star  #坟星系的，并非域外星系
                 spawn_natural_wormhole = {
@@ -1191,7 +1191,7 @@ country_event = {
                 }
                 random_system_planet = {
                     limit = {
-                        has_planet_flag = roz_outland_planet
+                        has_carrier_flag = roz_outland_planet
                     }
                     save_global_event_target_as = roz_outland_planet@root
                 }
@@ -1201,14 +1201,14 @@ country_event = {
                 }
                 random_system_planet = {
                     limit = {
-                        has_planet_flag = roz_outland_main_black_hole
+                        has_carrier_flag = roz_outland_main_black_hole
                     }
                     save_global_event_target_as = roz_outland_main_black_hole@root
                 }
             }
         }
         set_spawn_system_batch = end
-        #solar_system = {
+        #solar_system? = {
         #    spawn_megastructure = {  }
         #}
     }
@@ -1249,28 +1249,28 @@ ship_event = {
     show_sound = event_ship_thrusters
     fire_only_once = yes
     trigger = {
-        solar_system = {
+        solar_system? = {
             has_star_flag = roz_outland_system
         }
     }
     location = this.solar_system
     immediate = {
-        solar_system = {
+        solar_system? = {
             random_system_planet = {
                 limit = {
-                    has_planet_flag = roz_outland_main_black_hole
+                    has_carrier_flag = roz_outland_main_black_hole
                 }
                 save_global_event_target_as = roz_outland_main_black_hole@root
             }
             random_system_planet = {
                 limit = {
-                    has_planet_flag = roz_outland_broken_planet
+                    has_carrier_flag = roz_outland_broken_planet
                 }
                 save_event_target_as = roz_outland_broken_planet
             }
             random_system_planet = {
                 limit = {
-                    has_planet_flag = roz_outland_planet_moon
+                    has_carrier_flag = roz_outland_planet_moon
                 }
                 save_event_target_as = roz_outland_planet_moon
             }
@@ -1313,8 +1313,8 @@ country_event = {
         name = roz_krks_leader_evt.55.aa
         complete_special_project = { type = roz_outland_locator }
         end_event_chain = roz_outland_system_chain
-        event_target:roz_outland_planet@root = {
-            solar_system = {
+        event_target:roz_outland_planet@root? = {
+            solar_system? = {
                 set_surveyed = {
                     surveyed = yes
                     surveyor = root
@@ -1322,7 +1322,7 @@ country_event = {
             }
             create_archaeological_site = roz_ruined_paradise_site
         }
-        from.solar_system = {
+        from.solar_system? = {
             create_starbase = {
                 size = starbase_outpost
                 effect = {
@@ -1330,7 +1330,7 @@ country_event = {
                 }
             }
         }
-        from = {
+        from? = {
             leader = {
                 add_experience = 500
                 if = {

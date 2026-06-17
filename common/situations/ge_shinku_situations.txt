@@ -267,6 +267,7 @@
 
 ##########真红的觉醒-解析蔷薇圣母
 roz_awaken_of_shinku_1_acknowledge_border = {
+    situation_log_category = developments
     desc = {
         text = roz_awaken_of_shinku_1_acknowledge_border_desc
         trigger = { always = yes }
@@ -573,6 +574,7 @@ roz_awaken_of_shinku_1_acknowledge_border = {
 
 ###局势：Boss战 深渊感染体入侵 
 roz_sk_4_madgod_invasion_placard = {
+    situation_log_category = crises
     desc = {
         text = roz_sk_4_madgod_invasion_placard_1_desc
         trigger = {
@@ -750,6 +752,7 @@ roz_sk_4_madgod_invasion_placard = {
 
 ###拟真深渊-毁灭倒计时
 roz_sk_4_madgod_invasion_explose_the_galaxy = {
+    situation_log_category = crises
     desc = {
         text = roz_sk_4_madgod_invasion_explose_the_galaxy_1_desc
         trigger = {

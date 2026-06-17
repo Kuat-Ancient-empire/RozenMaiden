@@ -31,7 +31,7 @@ roz_sgt_site_planet_select_condition = { ##scope:solar system
 		has_anomaly = no
 		NOR = {
 			exists = archaeological_site
-			has_planet_flag = hatchling_egg
+			has_carrier_flag = hatchling_egg
 		}
 		OR = {
 			is_planet_class = pc_molten
@@ -312,7 +312,7 @@ roz_is_all_abyss_killed_except_madgod_system = {
 				has_fleet_flag = roz_abyss_fleet
 				is_owned_by = event_target:roz_madgod_force_country@$scope$
 			}
-			NOT = { solar_system = { has_star_flag = roz_outland_system } }
+			NOT = { solar_system? = { has_star_flag = roz_outland_system } }
 			NOT = { has_fleet_flag = roz_abyss_fleet_madgod_boss }
 		}
 	}

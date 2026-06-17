@@ -818,7 +818,7 @@ r_roz_Chronos_Label = {
                                     }
                                     NOR = {
                                         exists = archaeological_site
-                                        has_planet_flag = hatchling_egg
+                                        has_carrier_flag = hatchling_egg
                                     }
                                     OR = {
                                         is_planet_class = pc_molten
@@ -914,7 +914,7 @@ r_roz_Chronos_Label = {
                     every_owned_fleet = {
                         limit = {
                             is_in_combat = yes
-                            solar_system = {
+                            solar_system? = {
                                 any_fleet_in_system = {
                                     owner = {
                                         OR = {
@@ -941,7 +941,7 @@ r_roz_Chronos_Label = {
                     every_owned_fleet = {
                         limit = {
                             is_in_combat = yes
-                            solar_system = {
+                            solar_system? = {
                                 any_fleet_in_system = {
                                     owner = {
                                         OR = {

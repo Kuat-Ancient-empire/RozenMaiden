@@ -329,7 +329,7 @@ country_event = {	###侵蚀终止
 		set_country_flag = ge_tech_continue
 		hidden_effect = {
 			#。。。以后再改
-			event_target:roz_n_field_site_target@root = {
+			event_target:roz_n_field_site_target@root? = {
 				save_event_target_as = roz_sgt_site_target
 			}
 		}
@@ -387,7 +387,7 @@ country_event = {	##
 	}
 	option = {
 		name = ge_event.411.aa
-		event_target:roz_n_field_site_target@root = {
+		event_target:roz_n_field_site_target@root? = {
 			add_deposit = ge_site_sgt_deposit_2
 		}
 		enable_special_project = {
@@ -443,7 +443,7 @@ country_event = {
 					if = {
 						limit = { NOT = { has_special_project = roz_void_energy_research_project_stage_1 } }
 						random_owned_planet = {
-							solar_system = {
+							solar_system? = {
 								star = { save_event_target_as = roz_location_temp_target }
 							}
 						}
@@ -1023,7 +1023,7 @@ country_event = {	###e17天赐
 		hidden_effect = {
 			remove_country_flag = ge_tech_continue
 			remove_global_flag = abandon_ge_research
-			event_target:roz_n_field_site_target@root = {
+			event_target:roz_n_field_site_target@root? = {
 				add_deposit = ge_site_vc_deposit
 			}
 			every_owned_ship = {
@@ -1297,7 +1297,7 @@ country_event = {
 		#			is_subspecies = root
 		#			NOT = { has_trait = trait_cor_dragon_totem }
 		#		}
-		#		root = {
+		#		root? = {
 		#			modify_species = {
 		#				species = event_target:give_ge_dragon_totem
 		#				add_trait = trait_cor_dragon_totem
@@ -1447,7 +1447,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		#from = {
+		#from? = {
 			#species = {
 				#has_trait = trait_cor_dragon_totem
 			#}
@@ -1457,7 +1457,7 @@ country_event = {
 		}
 	}
 	immediate = {
-		from = {
+		from? = {
 			add_trait = { trait = leader_trait_ge_ruler_bond }
 			#if = {
 			#	limit = {
@@ -1606,7 +1606,7 @@ inline_script = {
 #	hide_window = yes
 #	is_triggered_only = yes
 #	trigger = {
-#		from = {
+#		from? = {
 #			is_megastructure_type = roz_mega_wanxiangtianyin_undeploy
 #		}
 #	}
@@ -1629,18 +1629,18 @@ inline_script = {
 #				}
 #			}
 #		}
-#		from = {
+#		from? = {
 #			remove_megastructure = this
 #		}
 #	}
 #}
 
-planet_event = {
+carrier_event = {
 	id = ge_event.3002
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		solar_system = {
+		solar_system? = {
 			has_owner = yes
 			owner = {
 				is_same_value = prev.from.owner
@@ -1659,7 +1659,7 @@ planet_event = {
 		#
 		#}
 
-		solar_system = {
+		solar_system? = {
 			spawn_megastructure = {
 				type = roz_mega_wanxiangtianyin
 				planet = root
@@ -1670,10 +1670,10 @@ planet_event = {
 			}
 			#every_neighbor_system = { }
 		}
-		from = {
+		from? = {
 			delete_fleet = this
 		}
-		solar_system = {
+		solar_system? = {
 			owner = {
 				country_event = {
 					id = ge_event.3003

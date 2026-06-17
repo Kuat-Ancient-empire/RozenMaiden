@@ -261,7 +261,7 @@ utility_component_template = {
 	potential = {
 		ship_size_multiplier < 5
 		NOT = { is_ship_class = shipclass_military_station }
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -324,7 +324,7 @@ utility_component_template = {
 		ship_size_multiplier >= 5
 		ship_size_multiplier < 10
 		NOT = { is_ship_class = shipclass_military_station }
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -391,7 +391,7 @@ utility_component_template = {
 		ship_size_multiplier >= 10
 		ship_size_multiplier < 20
 		NOT = { is_ship_class = shipclass_military_station }
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -467,7 +467,7 @@ utility_component_template = {
 		ship_size_multiplier >= 20
 		ship_size_multiplier < 40
 		NOT = { is_ship_class = shipclass_military_station }
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -546,7 +546,7 @@ utility_component_template = {
 		ship_size_multiplier >= 40
 		ship_size_multiplier < 80
 		NOT = { is_ship_class = shipclass_military_station }
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -611,7 +611,7 @@ utility_component_template = {
 	potential = {
 		ship_size_multiplier >= 80
 		NOT = { is_ship_class = shipclass_military_station }
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -664,7 +664,7 @@ utility_component_template = {
 	# }
 	potential = {
 		is_ship_class = shipclass_military_station
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -720,7 +720,7 @@ utility_component_template = {
 			is_ship_class = shipclass_military_station
 			is_ship_size = ion_cannon
 		}
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -762,7 +762,7 @@ utility_component_template = {
 		shipclass_starbase
 	}
 	potential = {
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -1124,7 +1124,7 @@ utility_component_template = {
 	# }
 	potential = {
 		ship_size_multiplier < 5
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -1183,7 +1183,7 @@ utility_component_template = {
 	potential = {
 		ship_size_multiplier >= 5
 		ship_size_multiplier < 10
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -1249,7 +1249,7 @@ utility_component_template = {
 	potential = {
 		ship_size_multiplier >= 10
 		ship_size_multiplier < 20
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -1317,7 +1317,7 @@ utility_component_template = {
 	potential = {
 		ship_size_multiplier >= 20
 		ship_size_multiplier < 40
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -1381,7 +1381,7 @@ utility_component_template = {
 	# }
 	potential = {
 		ship_size_multiplier >= 40
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -1490,7 +1490,7 @@ utility_component_template = {
 	# }
 	potential = {
 		ship_size_multiplier < 20
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -1556,7 +1556,7 @@ utility_component_template = {
 	# }
 	potential = {
 		ship_size_multiplier < 20
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -1611,7 +1611,7 @@ utility_component_template = {
 	}
 	potential = {
 		ship_size_multiplier >= 5
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -1693,7 +1693,7 @@ utility_component_template = {
 	}
 	potential = {
 		ship_size_multiplier >= 20
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -1787,7 +1787,7 @@ utility_component_template = {
 	}
 	potential = {
 		ship_size_multiplier >= 20
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -1867,7 +1867,7 @@ utility_component_template = {
 			is_ship_class = shipclass_military_station
 			is_ship_class = shipclass_starbase
 		}
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -1941,7 +1941,7 @@ utility_component_template = {
 	# }
 	potential = {
 		NOT = { is_ship_class = shipclass_military_station }
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -2329,7 +2329,7 @@ utility_component_template = {
 	# }
 	potential = {
 		ship_size_multiplier <= 80
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -2370,7 +2370,7 @@ utility_component_template = {
 	# }
 	potential = {
 		ship_size_multiplier <= 80
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -2470,7 +2470,7 @@ utility_component_template = {
 	# }
 	potential = {
 		ship_size_multiplier <= 80
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -2583,7 +2583,7 @@ utility_component_template = {
 	# }
 	potential = {
 		ship_size_multiplier >= 80
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -2682,7 +2682,7 @@ utility_component_template = {
 	# }
 	potential = {
 		ship_size_multiplier >= 80
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -2790,7 +2790,7 @@ utility_component_template = {
 	# }
 	potential = {
 		is_ship_size = Ge_Ragnarok
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no
@@ -2799,38 +2799,7 @@ utility_component_template = {
 	}
 
 	scripted_action = {
-		scope = self
-
-        finish_anim_state = "attack"
-
-		possible = {	#scope:fleet
-			# NOT = {
-			# 	has_fleet_flag = roz_time_freeze_clam_flag
-			# }
-			always = yes
-			#custom_tooltip = "roz_time_freeze_cooldown_ct"
-		}
-
-		button_clickable = {
-			custom_tooltip = {
-				fail_text = BLANK_STRING
-				always = yes
-			}
-		}
-
-		name = on_roz_time_freeze_triggered
-		tooltip = roz_time_freeze_ship_button
-		icon = GFX_ge_time_freeze
-		activity_key = roz_time_freeze_activity_key
-		context_menu_name = roz_time_freeze_menu_title
-		progress_activity_key = roz_time_freeze_progress_activity_key
-		required_progress = 1
-		on_click_sound = roz_the_world_available
-
-		cooldown = 30
-		cost = { energy = 1000 }
-
-		shortcut = "SHIFT+I"
+		roz_time_freeze_menu_title
 	}
 
 	ship_modifier = {
@@ -3085,7 +3054,7 @@ utility_component_template = {
 			is_ship_size = Ge_Vampirilis_Ortaam_normal
 			is_ship_size = ge_aura_ship
 		}
-		from = {
+		from? = {
 			OR = {
 				country_uses_bio_ships = yes
 				country_uses_bio_ships = no

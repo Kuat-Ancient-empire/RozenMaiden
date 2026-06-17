@@ -51,7 +51,7 @@ can_destroy_planet_with_roz_juggernaut_wanxiang_deployer = {
 			is_ai = no
 		}
 	}
-	#from = {
+	#from? = {
 	#	any_controlled_ship = {
 	#		OR = {
 	#			has_component =roz_shippart_wx_aura_1
@@ -99,7 +99,7 @@ can_destroy_planet_with_GE_PLANET_KILLER_CRACKER = {
 	}
 	custom_tooltip = {
 		fail_text = fotd_cant_collossus
-		NOT = { has_planet_flag = fotd_seperatist_planet@from.owner }
+		NOT = { has_carrier_flag = fotd_seperatist_planet@from.owner }
 		exists = from.owner
 		from.owner = {
 			NOT = { has_country_flag = fotd_seperatist_country@from.owner }
@@ -231,7 +231,7 @@ can_destroy_planet_with_GE_PLANET_KILLER_SHIELDER = {
 	}
 	custom_tooltip = {
 		fail_text = fotd_cant_collossus
-		NOT = { has_planet_flag = fotd_seperatist_planet@from.owner }
+		NOT = { has_carrier_flag = fotd_seperatist_planet@from.owner }
 		exists = from.owner
 		from.owner = {
 			NOT = { has_country_flag = fotd_seperatist_country@from.owner }
@@ -444,7 +444,7 @@ can_destroy_planet_with_GE_PLANET_KILLER_DELUGE = {
 	# 	from.owner = {
 	# 		any_owned_starbase = {
 	# 			has_starbase_building = ice_mining_station
-	# 			solar_system = {
+	# 			solar_system? = {
 	# 				OR = {
 	# 					NOT = { has_star_flag = ice_mining_in_progress }
 	# 					has_star_flag = ice_mining@root.from
@@ -533,7 +533,7 @@ can_destroy_planet_with_GE_PLANET_KILLER_TOXIFIER = {
 	}
 	custom_tooltip = {
 		fail_text = fotd_cant_collossus
-		NOT = { has_planet_flag = fotd_seperatist_planet@from.owner }
+		NOT = { has_carrier_flag = fotd_seperatist_planet@from.owner }
 		exists = from.owner
 		from.owner = {
 			NOT = { has_country_flag = fotd_seperatist_country@from.owner }
@@ -618,7 +618,7 @@ can_destroy_planet_with_GE_PLANET_KILLER_DEVOLUTION = {
 	}
 	custom_tooltip = {
 		fail_text = recently_devolved
-		NOT = { has_planet_flag = devolved_planet }
+		NOT = { has_carrier_flag = devolved_planet }
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -630,7 +630,7 @@ can_destroy_planet_with_GE_PLANET_KILLER_DEVOLUTION = {
 	}
 	custom_tooltip = {
 		fail_text = fotd_cant_collossus
-		NOT = { has_planet_flag = fotd_seperatist_planet@from.owner }
+		NOT = { has_carrier_flag = fotd_seperatist_planet@from.owner }
 		exists = from.owner
 		from.owner = {
 			NOT = { has_country_flag = fotd_seperatist_country@from.owner }

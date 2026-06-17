@@ -216,3 +216,12 @@ animation = { name = "ROZ_AS_main_idle_animation" file = "ROZ_AS_main_idle.anim"
 animation = { name = "ROZ_IRR10_idle_animation" file = "IRR10_idle.anim" }
 animation = { name = "ROZ_IRR11_idle_animation" file = "IRR11_idle.anim" }
 animation = { name = "ROZ_IRR12_idle_animation" file = "IRR12_idle.anim" }
+
+entity = {
+	name = ge_locator_entity
+	scale = 1
+	locator = { name = "root"	position = { 0 0 0 } }
+	locator = { name = "part1"	position = { 0 0 0 } }
+	locator = { name = "part2"	position = { 0 0 0 } }
+	locator = { name = "part3"	position = { 0 0 0 } }
+}

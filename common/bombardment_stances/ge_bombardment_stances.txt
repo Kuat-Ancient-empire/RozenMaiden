@@ -30,7 +30,7 @@ q_dolls_bombardment = {
 		modifier = {
 			factor = 0.01
 			exists = from
-			from = {
+			from? = {
 				owner = { NOT = { is_hostile = root.owner } }
 			}
 			exists = owner
@@ -70,7 +70,7 @@ q_dolls_armageddon = {
 		modifier = {
 			factor = 0.01
 			exists = from
-			from = {
+			from? = {
 				owner = { NOT = { is_hostile = root.owner } }
 			}
 			exists = owner

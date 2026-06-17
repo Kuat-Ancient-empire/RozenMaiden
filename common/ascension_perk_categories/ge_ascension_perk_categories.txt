@@ -1,0 +1,7 @@
+ap_category_ge_ascensions = {
+	ascension_perks = {
+		ap_ge_0
+		ap_ge_1
+		ap_ge_2
+	}
+}

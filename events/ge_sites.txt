@@ -27,7 +27,6 @@ country_event = {
 		is_fallen_empire = no
 	}
 	immediate = {
-		#generate_sgt_site_on_game_start = yes
 		hidden_effect = {
 			country_event = {
 				id = ge_sites.2
@@ -35,11 +34,6 @@ country_event = {
 			}
 		}
 		random_planet_within_border = {
-			# limit = {
-			# 	space_owner = {
-			# 		is_fallen_empire = no
-			# 	}
-			# }
 			weights = {
 				base = 1
 				modifier = {
@@ -48,7 +42,7 @@ country_event = {
 					#space_owner = { is_fallen_empire = no }
 				}
 			}
-			solar_system = {
+			solar_system? = {
 				closest_system = {
 					min_steps = 2
 					max_steps = 17
@@ -74,7 +68,7 @@ country_event = {
 							#has_anomaly = no
 							NOR = {
 								exists = archaeological_site
-								has_planet_flag = hatchling_egg
+								has_carrier_flag = hatchling_egg
 							}
 							OR = {
 								is_planet_class = pc_molten
@@ -105,7 +99,7 @@ country_event = {
 								has_anomaly = no
 								NOR = {
 									exists = archaeological_site
-									has_planet_flag = hatchling_egg
+									has_carrier_flag = hatchling_egg
 								}
 								OR = {
 									is_planet_class = pc_molten
@@ -121,9 +115,9 @@ country_event = {
 							set_planet_size = 1
 							clear_deposits = yes
 							#add_deposit = ge_sgt_depo	#_添加deposit
-							set_planet_flag = ge_planet_flag_sgt@root
+							set_carrier_flag = ge_carrier_flag_sgt@root
 							create_archaeological_site = ge_sgt_site
-							root = {
+							root? = {
 								set_country_flag = ge_sgt_site_owner_flag_for_multiplayer
 							}
 							save_global_event_target_as = roz_n_field_site_target@root
@@ -185,7 +179,7 @@ ship_event = {
 				has_country_flag = ge_sgt_site_find_flag
 			}
 		}
-		solar_system = {
+		solar_system? = {
 			has_star_flag = ge_suigintou_site_star_flag@root.owner
 		}
 
@@ -200,12 +194,12 @@ ship_event = {
 		name = ge_sites.9.aa
 
 
-		#solar_system = {
+		#solar_system? = {
 		#	star = {
 		#		add_anomaly = {
 		#			category = abandoned_outpost_category
 		#		}
-		#		prevprev = {
+		#		prevprev? = {
 		#
 		#		}
 		#	}
@@ -243,13 +237,13 @@ fleet_event = {
 	archaeology = yes
 	is_triggered_only = yes
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -274,13 +268,13 @@ fleet_event = {
 				limit = {
 					always = yes
 				}
-				solar_system = {
+				solar_system? = {
 					random_system_planet = {
 						limit = {
-							has_planet_flag = ge_planet_flag_sgt@root.owner
+							has_carrier_flag = ge_carrier_flag_sgt@root.owner
 						}
 						#save_global_event_target_as = roz_n_field_site_target@root.owner
-						set_planet_flag = shroud_storm_changed
+						set_carrier_flag = shroud_storm_changed
 					}
 				}
 			}
@@ -299,12 +293,12 @@ fleet_event = {
 	archaeology = yes
 	is_triggered_only = yes
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -321,7 +315,7 @@ fleet_event = {
 				}
 				every_planet_within_border = {
 					limit = {
-						has_planet_flag = ge_planet_flag_sgt@root.owner
+						has_carrier_flag = ge_carrier_flag_sgt@root.owner
 					}
 					set_name = "NAME_ge_sgt_site_planet_after"
 				}
@@ -341,12 +335,12 @@ fleet_event = {
 	archaeology = yes
 	is_triggered_only = yes
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -367,12 +361,12 @@ fleet_event = {
 	archaeology = yes
 	is_triggered_only = yes
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -393,12 +387,12 @@ fleet_event = {
 	archaeology = yes
 	is_triggered_only = yes
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -426,12 +420,12 @@ fleet_event = {
 	archaeology = yes
 	is_triggered_only = yes
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -450,7 +444,7 @@ fleet_event = {
 				}
 				every_planet_within_border = {
 					limit = {
-						has_planet_flag = ge_planet_flag_sgt@root.owner
+						has_carrier_flag = ge_carrier_flag_sgt@root.owner
 					}
 					add_deposit = ge_site_sgt_deposit
 				}
@@ -729,7 +723,7 @@ country_event = {
 					}
 				}
 			}
-			solar_system = {
+			solar_system? = {
 				closest_system = {
 					min_steps = 0
 					max_steps = 17
@@ -750,7 +744,7 @@ country_event = {
 							has_anomaly = no
 							NOR = {
 								exists = archaeological_site
-								has_planet_flag = hatchling_egg
+								has_carrier_flag = hatchling_egg
 							}
 							OR = {
 								is_planet_class = pc_molten
@@ -843,7 +837,7 @@ country_event = {
 					has_anomaly = no
 					NOR = {
 						exists = archaeological_site
-						has_planet_flag = hatchling_egg
+						has_carrier_flag = hatchling_egg
 					}
 					OR = {
 						is_planet_class = pc_molten
@@ -859,7 +853,7 @@ country_event = {
 				change_pc = pc_relic
 				set_planet_size = 20
 				relic_world_deposits = yes
-				set_planet_flag = roz_relic40K_flag
+				set_carrier_flag = roz_relic40K_flag
 				create_archaeological_site = roz_relic_of_eras_site
 			}
 		}
@@ -885,7 +879,7 @@ country_event = {
 			}
 			random_system_planet = {
 				limit = {
-					has_planet_flag = roz_relic40K_flag
+					has_carrier_flag = roz_relic40K_flag
 				}
 				save_event_target_as = roz_relic40K_target
 			}
@@ -907,12 +901,12 @@ fleet_event = {
 	archaeology = yes
 	is_triggered_only = yes
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -942,12 +936,12 @@ fleet_event = {
 	archaeology = yes
 	is_triggered_only = yes
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -978,12 +972,12 @@ fleet_event = {
 	archaeology = yes
 	is_triggered_only = yes
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -1013,12 +1007,12 @@ fleet_event = {
 	archaeology = yes
 	is_triggered_only = yes
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -1064,12 +1058,12 @@ fleet_event = {
 	archaeology = yes
 	is_triggered_only = yes
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -1089,7 +1083,7 @@ fleet_event = {
 				progress = 0.05
 			}
 		}
-		from = {
+		from? = {
 			planet = {
 				add_deposit = roz_site_hive_museum_deposit
 			}
@@ -1107,12 +1101,12 @@ fleet_event = {
 	archaeology = yes
 	is_triggered_only = yes
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -1145,12 +1139,12 @@ fleet_event = {
 	archaeology = yes
 	is_triggered_only = yes
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -1358,12 +1352,12 @@ fleet_event = {
 		}
 	}
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -1392,12 +1386,12 @@ fleet_event = {
 		}
 	}
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -1427,13 +1421,13 @@ fleet_event = {
 		}
 	}
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 			save_event_target_as = roz_site_temp_target
 		}
 	}
 	#after = {
-	#	from = {
+	#	from? = {
 	#		set_site_progress_locked = no
 	#	}
 	#}
@@ -1503,12 +1497,12 @@ fleet_event = {
 		}
 	}
 	immediate = {
-		from = {
+		from? = {
 			set_site_progress_locked = yes
 		}
 	}
 	after = {
-		from = {
+		from? = {
 			set_site_progress_locked = no
 		}
 	}
@@ -1673,7 +1667,7 @@ country_event = {
 		}
 	}
 	immediate = {
-		event_target:roz_outland_planet@root = {
+		event_target:roz_outland_planet@root? = {
 			create_ambient_object = {
 				type = "star_explosion"
 				play_animation_once = yes

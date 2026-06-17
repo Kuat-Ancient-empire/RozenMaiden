@@ -2,6 +2,7 @@
 roz_void_energy_research_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
 	picture = GFX_evt_ap_ge_0
+	situation_log_category = developments
 }
 
 roz_outland_system_chain = {
@@ -12,6 +13,7 @@ roz_outland_system_chain = {
 			max = 3
 		}
 	}
+	situation_log_category = ambitions
 }
 
 roz_shoujonotsukurikata_chain = {
@@ -22,6 +24,7 @@ roz_shoujonotsukurikata_chain = {
 			max = 10
 		}
 	}
+	situation_log_category = ambitions
 }
 
 roz_wake-up_shinku_chain = {
@@ -32,6 +35,7 @@ roz_wake-up_shinku_chain = {
 			max = 4
 		}
 	}
+	situation_log_category = ambitions
 }
 
 roz_SK_madgod_invasion_main = {
@@ -44,6 +48,7 @@ roz_SK_madgod_invasion_main = {
 		roz_abyss_victims = {}
 		roz_abyss_kills = {}
 	}
+	situation_log_category = crises
 }
 
 #TODO

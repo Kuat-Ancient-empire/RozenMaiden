@@ -1,4 +1,5 @@
 sgt_flagship_exploration_situation = {
+	situation_log_category = anomalies
 	##
 	desc = {
 		text = sgt_flagship_exploration_situation_text
@@ -57,7 +58,7 @@ sgt_flagship_exploration_situation = {
 			}
 			hidden_effect = {
 				home_planet = {
-					solar_system = {
+					solar_system? = {
 						starbase = {
 							create_ambient_object = {
 								type = ROZ_SSVL_AO

@@ -406,6 +406,7 @@ ge_void_lord = {
 }
 ge_crime_and_punishment = {
 	#罪与罚
+	entity = ge_locator_entity
 	formation_priority = 65
 	max_speed = 100
 	acceleration = 0.1
@@ -932,7 +933,7 @@ roz_juggernaut_wanxiang = {	#万象
 				}
 				AND = {
 					is_scope_type = starbase
-					has_starbase_building = colossus_yards
+					has_starbase_building = capital_yards
 				}
 			}
 		}

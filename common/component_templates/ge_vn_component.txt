@@ -22,8 +22,8 @@ weapon_component_template = {
 	}
 	firing_arc = 30.0
 	min_range = 1.0
-	static_rotation = no
-	use_ship_kill_target = yes
+	#static_rotation = no
+	##use_ship_kill_target = yes
 	tags = { weapon_type_ge_void_energy }
 	projectile_gfx = "ge_vn_t_beam_projectile"
 	component_set = "ge_vn_main_beam"
@@ -83,8 +83,8 @@ weapon_component_template = {
 	
 	firing_arc = 30
 	min_range = 1.0
-	static_rotation = no
-	use_ship_kill_target = yes
+	#static_rotation = no
+	##use_ship_kill_target = yes
 	power = -12500
 	component_set = "ge_vn_secondary_beam"
 	projectile_gfx = "ge_vn_xl_beam_projectile"
