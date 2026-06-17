@@ -489,3 +489,6 @@ GetRozAdjustModeMultDiffText: "当前调整模式为：§H乘算§!\n当前调�
  leader_trait_roz_shinku_hollye_commander_fleet_enemy_modifier:0 "REPLACE_ME"
  begin_modifier_updated_batch_modifier:0 "REPLACE_ME"
  mod_begin_modifier_updated_batch:0 "REPLACE_ME"
+ ### Ascension Perk Categories ###
+ ap_category_ge_ascensions:0 "§Y蔷薇少女§!飞升"
+ ap_category_ge_ascensions_desc:0 "与蔷薇少女相关的飞升天赋。"
