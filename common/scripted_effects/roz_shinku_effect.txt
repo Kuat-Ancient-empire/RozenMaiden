@@ -1719,7 +1719,7 @@ roz_abyss_vass_create = {
 						name = random
 						skill = 5
 					}
-					copy_techs_from? = { target = root }
+					copy_techs_from = { target = root }
 					add_resource = {
 						minerals = 10000
 						energy = 10000

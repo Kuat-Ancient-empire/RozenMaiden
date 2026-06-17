@@ -30,7 +30,7 @@ roz_mega_wanxiangtianyin = {
     station_modifier = {
         starbase_shipyard_capacity_add = 15
     }
-    #upgrade_from? = {
+    #upgrade_from = {
     #
     #}
 
@@ -65,7 +65,7 @@ roz_mega_wanxiangtianyin_undeploy = {
         }
     }
 
-    upgrade_from? = {
+    upgrade_from = {
         roz_mega_wanxiangtianyin
     }
     on_build_complete = {
@@ -226,7 +226,7 @@ roz_mega_information_remodeler = {
         }
 
     }
-    upgrade_from? = {
+    upgrade_from = {
         roz_mega_information_remodeler_base
     }
     on_build_complete = {
@@ -278,7 +278,7 @@ roz_mega_information_remodeler_effect = {
         NOT = { has_country_flag = roz_mega_information_remodeler_active }
         has_country_flag = roz_SK_IR_enable
     }
-    upgrade_from? = {
+    upgrade_from = {
         roz_mega_information_remodeler
     }
     on_build_complete = {

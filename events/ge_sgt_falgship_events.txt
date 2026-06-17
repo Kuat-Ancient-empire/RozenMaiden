@@ -536,7 +536,7 @@ situation_event = {	#stage2随机事件-舰载工坊-获得科技冶金技术1
 	desc = "ge_sgt_flagship_events.122.desc"
 	is_triggered_only = yes
 	fire_only_once = yes
-	picture = GFX_evt_
+	picture = GFX_evt_horizon_needle #TODO
 	trigger = {
 		has_situation_flag = triggered_ge_sgt_falgship_2
 	}
@@ -555,7 +555,7 @@ situation_event = {	#stage3随机事件-猜谜
 	title = "ge_sgt_flagship_events.123.name"
 	desc = "ge_sgt_flagship_events.123.desc"
 	is_triggered_only = yes
-	picture = GFX_evt_
+	picture = GFX_evt_horizon_needle #TODO
 	trigger = {
 		has_situation_flag = triggered_ge_sgt_falgship_3
 		NOT = {
