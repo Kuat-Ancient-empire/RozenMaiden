@@ -1,0 +1,6 @@
+roz_pd_debuff_craft = {
+	strike_craft_hull_mult = -0.2
+	strike_craft_regeneration_mult = -0.8
+}
+
+

@@ -359,6 +359,16 @@ weapon_component_template = {
     power = -750
 	component_set = "ge_sgt_pd"
 	projectile_gfx = "ge_vn_pd_projectile"
+	injected_modifier = {
+		modifier = {
+			modifier = roz_pd_debuff_craft
+			days = 3
+		}
+		stack_info = {
+			id = roz_pd_debuff
+			priority = 2
+		}
+	}
 	
 	ai_tags = { weapon_role_point_defense }
 	ai_tag_weight = 0
@@ -704,7 +714,16 @@ weapon_component_template = {
 	power = -250
 	component_set = "ge_normal_pd"
 	projectile_gfx = "ge_vn_pd_projectile"
-
+	injected_modifier = {
+		modifier = {
+			modifier = roz_pd_debuff_craft
+			days = 3
+		}
+		stack_info = {
+			id = roz_pd_debuff
+			priority = 2
+		}
+	}
 	ai_tags = { weapon_role_point_defense }
 	ai_tag_weight = 0
 

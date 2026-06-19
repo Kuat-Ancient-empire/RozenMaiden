@@ -239,7 +239,7 @@ country_event = {
 		#}
 		enable_special_project = {
 			name = "ge_reactor_project"
-			location = capital_star
+			location = capital_scope
 			owner = root
 		}
 		
@@ -340,7 +340,7 @@ country_event = {	###侵蚀终止
 
 		enable_special_project = {
 			name = roz_void_energy_research_project_stage_1_a
-			location = capital_star
+			location = capital_scope
 			owner = this
 		}
 
@@ -392,7 +392,7 @@ country_event = {	##
 		}
 		enable_special_project = {
 			name = roz_void_energy_research_project_stage_1
-			location = capital_star
+			location = capital_scope
 			owner = root
 		}
 		#capital_scope = {}
@@ -423,7 +423,7 @@ country_event = {
 			}
 			enable_special_project = {
 				name = roz_void_energy_research_project_stage_1
-				location = capital_star
+				location = capital_scope
 				owner = root
 			}
 			if = {
@@ -437,7 +437,7 @@ country_event = {
 					limit = { NOT = { has_special_project = roz_void_energy_research_project_stage_1 } }
 					enable_special_project = {
 						name = roz_void_energy_research_project_stage_1
-						location = home_planet
+						location = capital_scope
 						owner = root
 					}
 					if = {
@@ -485,7 +485,7 @@ country_event = {	###研究日志1
 		roz_normal_leader_give_exp_effect = { scope = root class = scientist exp = 150 }
 		enable_special_project = {
 			name = roz_void_energy_research_project_stage_2
-			location = capital_star
+			location = capital_scope
 			owner = root
 		}
 	}
@@ -548,7 +548,7 @@ country_event = {	###研究日志3
 		name = ge_event.45.aa
 		enable_special_project = {
 			name = roz_void_energy_research_project_stage_3_1
-			location = capital_star
+			location = capital_scope
 			owner = root
 		}
 	}
@@ -584,7 +584,7 @@ country_event = {	###研究日志3-2
 		}
 		enable_special_project = {
 			name = roz_void_energy_research_project_stage_3_a2
-			location = capital_star
+			location = capital_scope
 			owner = this
 		}
 	}
@@ -598,7 +598,7 @@ country_event = {	###研究日志3-2
 		set_country_flag = ge_wait_zero_point
 		enable_special_project = {
 			name = roz_void_energy_research_project_stage_3_a
-			location = capital_star
+			location = capital_scope
 			owner = root
 		}
 	}

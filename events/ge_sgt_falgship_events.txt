@@ -446,7 +446,7 @@ situation_event = {
 			# 				prefix = yes
 			# 			}
 			# 			set_location = {
-			# 				target = root.owner.home_planet
+			# 				target = root.owner.capital_scope
 			# 				angle = random
 			# 				distance = 10
 			# 			}

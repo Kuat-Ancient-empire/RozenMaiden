@@ -852,4 +852,3 @@ leader_trait_roz_shinku_hollye_commander_fleet_enemy_modifier = {
 }
 
 
-

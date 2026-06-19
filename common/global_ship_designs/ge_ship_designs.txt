@@ -460,11 +460,11 @@ ship_design = {
 
 		component = { slot = xl_gun_01 template = DRAGON_WEAPON_ICE }
 		component = { slot = LARGE_GUN_01 template = "PSIONIC_BLAST_1" }
-		component = { slot = LARGE_GUN_02 template = "PSIONIC_BLAST_1" }
-		component = { slot = LARGE_GUN_03 template = "PSIONIC_BLAST_1" }
-		component = { slot = LARGE_GUN_04 template = "PSIONIC_BLAST_1" }
-		component = { slot = pd_01 template = DRAGON_TERTIARY_WEAPON_ICE }
-		component = { slot = pd_02 template = DRAGON_TERTIARY_WEAPON_ICE }
+		#component = { slot = LARGE_GUN_02 template = "PSIONIC_BLAST_1" }
+		#component = { slot = LARGE_GUN_03 template = "PSIONIC_BLAST_1" }
+		#component = { slot = LARGE_GUN_04 template = "PSIONIC_BLAST_1" }
+		#component = { slot = pd_01 template = DRAGON_TERTIARY_WEAPON_ICE }
+		#component = { slot = pd_02 template = DRAGON_TERTIARY_WEAPON_ICE }
 		component = { slot = pd_03 template = DRAGON_TERTIARY_WEAPON_ICE }
 		component = { slot = pd_04 template = DRAGON_TERTIARY_WEAPON_ICE }
 	}

@@ -235,5 +235,12 @@ roz_mega_information_remodeler_active_bonus_desc: ""
  roz_shinku_deceleration_time: "时光凝滞"
  roz_shinku_deceleration_time_desc: "凝滞该星球的时间，使其时间流速慢于外界，该星球的维护费将大幅降低，但代价是星球产出遭受影响且需要解决时空对流问题。"
 
+###weapon inject
+roz_pd_debuff_craft: "§R机库调度混乱§!"
+
+
+
+
+
 
 

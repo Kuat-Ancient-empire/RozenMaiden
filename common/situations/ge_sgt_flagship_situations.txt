@@ -57,7 +57,7 @@ sgt_flagship_exploration_situation = {
 				days = -1
 			}
 			hidden_effect = {
-				home_planet = {
+				capital_scope = {
 					solar_system? = {
 						starbase = {
 							create_ambient_object = {

@@ -6,12 +6,17 @@ GE_tech_default_reactor = {
 	cost = 0
 	tier = 0
 	category = { particles }
-	prerequisites = { "tech_starbase_2" }
 	ai_update_type = all
 	
 	is_reverse_engineerable = no
 	
 	gateway = power_generation
+	starting_potential = {
+		always = yes
+	}
+	potential = {
+		always = yes
+	}
 
 	prereqfor_desc = {
 		hide_prereq_for_desc = component

@@ -929,7 +929,7 @@ r_roz_Chronos_Label = {
                     }
                     add_static_war_exhaustion = {
                         attacker = root
-                        location = home_planet
+                        location = capital_scope
                         value_for_planet_destruction = 5
                     }
                 }
@@ -956,7 +956,7 @@ r_roz_Chronos_Label = {
                     }
                     add_static_war_exhaustion = {
                         attacker = root
-                        location = home_planet
+                        location = capital_scope
                         value_for_planet_destruction = 5
                     }
                 }

@@ -3487,7 +3487,7 @@ country_event = {	#战斗结束
                 }
             }
         }
-        home_planet = {
+        capital_scope = {
             switch = {
                 trigger = has_modifier
                 ge_kirakishou_invasion_lv1 = {

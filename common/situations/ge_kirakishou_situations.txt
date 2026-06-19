@@ -52,7 +52,7 @@ kirakishou_planet_invasion_situation = {
 	}
 	on_progress_complete = {
 		owner = {
-			home_planet = {
+			capital_scope = {
 				owner = {
 					start_situation = {
 						type = situation_planetary_revolt
@@ -63,75 +63,75 @@ kirakishou_planet_invasion_situation = {
 			hidden_effect = {
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lv1
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lv1
 					}
 				}
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lv2
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lv2
 					}
 				}
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lv2.5
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lv2.5
 					}
 				}
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lv3
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lv3
 					}
 				}
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lv4
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lv4
 					}
 				}
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lv5
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lv5
 					}
 				}
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lvMAX
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lvMAX
 					}
 				}
-				home_planet = {
+				capital_scope = {
 					add_modifier = {
 						modifier = ge_kirakishou_invasion_lvMAX
 						days = 1800
@@ -149,82 +149,82 @@ kirakishou_planet_invasion_situation = {
 	}
 	on_fail = {
 		owner = {
-			home_planet = {
+			capital_scope = {
 				remove_carrier_flag = ge_krks_pi_cap_flag
 			}
 			#移除debuff
 			hidden_effect = {
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lv1
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lv1
 					}
 				}
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lv2
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lv2
 					}
 				}
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lv2.5
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lv2.5
 					}
 				}
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lv3
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lv3
 					}
 				}
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lv4
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lv4
 					}
 				}
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lv5
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lv5
 					}
 				}
 				if = {
 					limit = {
-						home_planet = {
+						capital_scope = {
 							has_modifier = ge_kirakishou_invasion_lvMAX
 						}
 					}
-					home_planet = {
+					capital_scope = {
 						remove_modifier = ge_kirakishou_invasion_lvMAX
 					}
 				}
-				home_planet = {
+				capital_scope = {
 					switch = {
 						trigger = has_modifier
 						ge_kirakishou_invasion_lv1 = {
@@ -286,7 +286,7 @@ kirakishou_planet_invasion_situation = {
 		#Modifier applying to the target planet of a Situation, if the triggers are true. Does not work on other scope types!
 		potential = {
 			owner = {
-				home_planet = {
+				capital_scope = {
 					has_carrier_flag = ge_krks_pi_cap_flag
 				}
 			}

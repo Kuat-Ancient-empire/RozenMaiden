@@ -97,11 +97,11 @@ country_event = {
             type = roz_agenda_void_core_boost_available
             localization = roz_agenda_void_core_boost_available_desc
             days = 10
-            target = home_planet
+            target = capital_scope
             variable = {
                 type = name
                 localization = PLANET
-                scope = home_planet
+                scope = capital_scope
             }
         }
         hidden_effect = {

@@ -31,7 +31,7 @@ roz_ves_state_grid_shock_situation = {
                 id = roz_state_grid_crisis.10
                 days = 60
             }
-            home_planet = {
+            capital_scope = {
                 add_modifier = {
                     modifier =  roz_stc_zp_homeplanet_debuff
                 }
@@ -103,7 +103,7 @@ roz_ves_state_grid_shock_situation = {
                     id = roz_state_grid_crisis.14
                 }
             }
-            home_planet = {
+            capital_scope = {
                 remove_modifier =  roz_stc_zp_homeplanet_debuff
             }
             end_event_chain = roz_void_energy_research_chain

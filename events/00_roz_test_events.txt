@@ -14,7 +14,7 @@ country_event = {
 		#add_global_ship_design = ROZ_ITQ_design
 		#create_ship_design = { design = ROZ_ITQ_design }
 		#add_ship_design = last_created_design
-		home_planet = {
+		capital_scope = {
 			
 		}
 	}
@@ -742,7 +742,7 @@ country_event = { #控制台effect测试区
 		# 	}
 		# }		
 		# effect = {
-		# 	home_planet = {
+		# 	capital_scope = {
 		# 		set_name = KZ_VOY_Solaria
 		# 		change_planet_size = 30
 		# 		change_pc = pc_KZ_VOY_hyper_sphare_solaria
@@ -780,7 +780,7 @@ country_event = { #控制台effect测试区
 
 		#event KZ_VOY_SEA.100
 		# effect = {
-		# 	home_planet = {
+		# 	capital_scope = {
 		# 		add_building = building_KZ_VOY_chateau_picard
 		# 		add_building = building_KZ_VOY_complex_structure_capital
 		# 		add_building = building_KZ_VOY_space_magic_silo
@@ -812,7 +812,7 @@ country_event = { #控制台effect测试区
 
 
 		#effect = { add_modifier = { modifier = roz_void_energy_revolution } }
-		#effect = { home_planet = { while = { count = 50 create_pop = {species = owner_main_species}}}}
+		#effect = { capital_scope = { while = { count = 50 create_pop = {species = owner_main_species}}}}
 		#effect = {  while = { count = 50 create_pop = {species = owner_main_species}}}
 		#effect = {  while = { count = 1 create_pop = {species = owner_main_species}}}
 		#effect = {  while = { count = 10 create_pop = {species = owner_main_species}}}
@@ -861,8 +861,8 @@ country_event = { #控制台effect测试区
 
 		#effect = {set_country_flag = ge_tech_continue country_event={id=ge_event.47}    }
 
-		#effect = {home_planet = { enable_special_project = { name = roz_void_energy_research_project_stage_1 owner = root } }}
-		#effect = {home_planet = { enable_special_project = { name = roz_void_energy_research_project_stage_1_a owner = root } }}
+		#effect = {capital_scope = { enable_special_project = { name = roz_void_energy_research_project_stage_1 owner = root } }}
+		#effect = {capital_scope = { enable_special_project = { name = roz_void_energy_research_project_stage_1_a owner = root } }}
 
 		#effect = { change_dominant_species = { species = owner_main_species change_all = yes } }
 
@@ -871,7 +871,7 @@ country_event = { #控制台effect测试区
 		#effect =  {queue_actions = { find_closest_system = { trigger = { id = KZ_VOY_demon_fleet_action_trigger.1 any_system_planet = { is_colony = yes num_pops > 0 is_KZ_VOY_Demon_Castle = no } } found_system = { move_to = this find_closest_planet = { trigger = { id = KZ_VOY_demon_fleet_action_trigger.2 is_colony = yes num_pops > 0 is_KZ_VOY_Demon_Castle = no } found_planet = { move_to = this orbit_planet = this } } } }}}
 
 		#effect = {set_ship_design = {  design = corvette random_existing_design = 1 }}
-		#effect = { set_country_flag = roz_sgt_unknow_flagship_spawn_country give_technology = { tech = tech_ge_sgt_flagship } add_modifier = { modifier = roz_sgt_flagship_completed_buff days = -1 } home_planet = { solar_system? = { starbase = { create_ambient_object = { type = ROZ_SSVL_AO location = this scale = 0.4 use_3d_location = yes entity_offset = { min = 5 max = 20 } entity_offset_height = { min = 5 max = 5 } } last_created_ambient_object = { save_global_event_target_as =ROZ_SSVL_AO_home_target } } } } set_country_flag = ge_sgt_flagship_project_enable event_target:ROZ_SSVL_AO_target@owner = { destroy_ambient_object = this } country_event = { id = ge_sgt_flagship_events.10 days = 720 random = 1800 } }
+		#effect = { set_country_flag = roz_sgt_unknow_flagship_spawn_country give_technology = { tech = tech_ge_sgt_flagship } add_modifier = { modifier = roz_sgt_flagship_completed_buff days = -1 } capital_scope = { solar_system? = { starbase = { create_ambient_object = { type = ROZ_SSVL_AO location = this scale = 0.4 use_3d_location = yes entity_offset = { min = 5 max = 20 } entity_offset_height = { min = 5 max = 5 } } last_created_ambient_object = { save_global_event_target_as =ROZ_SSVL_AO_home_target } } } } set_country_flag = ge_sgt_flagship_project_enable event_target:ROZ_SSVL_AO_target@owner = { destroy_ambient_object = this } country_event = { id = ge_sgt_flagship_events.10 days = 720 random = 1800 } }
 
 
 		#effect = {add_event_chain_counter = { amount = 4 counter = specimens_collected event_chain = roz_outland_system_chain } country_event = { id = roz_krks_leader_evt.55 }}
@@ -1230,7 +1230,7 @@ country_event = {
 
 	}
 	immediate = {
-		home_planet = {
+		capital_scope = {
 			if = {
 				limit = {
 					NOT = {
@@ -1245,7 +1245,7 @@ country_event = {
 		}
 		start_situation = {
 			type = kirakishou_planet_invasion_situation
-			target = home_planet
+			target = capital_scope
 		}
 		#if = {
 		#	limit = {}
