@@ -95,7 +95,7 @@ ge_flagship = {
 				}
 				AND = {
 					is_scope_type = starbase
-					has_starbase_building = colossus_yards
+					has_starbase_building = capital_yards
 				}
 			}
 		}
