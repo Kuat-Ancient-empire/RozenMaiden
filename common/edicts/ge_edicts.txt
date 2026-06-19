@@ -1,3 +1,4 @@
+#最高参考系
 ge_highest_reference_frame_edicts = {
 	length = -1
 	icon = GFX_edict_type_policy
@@ -23,6 +24,7 @@ ge_highest_reference_frame_edicts = {
 	}
 }
 
+#联系N之领域
 roz_suigintou_transmission_when_OGAS_enable_edicts = {
 	length = -1
 	icon = GFX_sgt_edit_icon_1
@@ -70,6 +72,7 @@ roz_suigintou_transmission_when_OGAS_enable_edicts = {
 # 	}
 # }
 
+#增强：魔法战备
 roz_rosa_mystica_enhance_war_edicts = {
 	length = -1
 	icon = GFX_sgt_edit_icon_2
@@ -87,6 +90,7 @@ roz_rosa_mystica_enhance_war_edicts = {
 	}
 }
 
+#增强：提高生产
 roz_rosa_mystica_enhance_affairs_edicts = {
 	length = -1
 	icon = GFX_sgt_edit_icon_2
@@ -97,7 +101,7 @@ roz_rosa_mystica_enhance_affairs_edicts = {
 		upkeep = { sr_rosa_mystica = 5 }
 	}
 	modifier = {
-		pop_bonus_workforce_mult = 0.25
+		country_produces_mult = 0.20
 	}
 }
 
@@ -132,6 +136,7 @@ ge_mozheng_edicts = {
 	}
 }
 
+#重启虚空计划
 ge_restart_boost_plan_edicts = {
 	length = -1
 	icon = GFX_edict_type_policy
@@ -163,6 +168,7 @@ ge_restart_boost_plan_edicts = {
 	}
 }
 
+#孤立星系刷坟
 ge_site_edicts = {
 	length = -1
 	icon = GFX_edict_type_policy
@@ -241,11 +247,13 @@ ge_HTEP_edicts = {	#hyper_transmit_electricity_protocol
 	}
 }
 
+#获得考古遗迹所在星系的控制权
 get_suigintou_site_star_edicts = {
 	length = 1
 	icon = GFX_sgt_edit_icon_1
 	potential = {
 		NOR = {
+			is_nomadic = yes
 			has_country_flag = roz_leader_suigintou_get
 			has_country_flag = get_suigintou_site_star_edicts_used
 			any_owned_starbase = {

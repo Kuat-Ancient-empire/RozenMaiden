@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21ccedd1-5d18-4372-acb1-6e38d769219e" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/events/ge_sites.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/ge_sites.txt" afterDir="false" />
-    </list>
+    <list default="true" id="21ccedd1-5d18-4372-acb1-6e38d769219e" name="更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
