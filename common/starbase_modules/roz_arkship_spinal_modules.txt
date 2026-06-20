@@ -1,0 +1,52 @@
+roz_arkship_T_battery = {
+	icon = GFX_ship_part_roz_arkship_t_beam
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = 720
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_ge_t_beam
+			is_nomadic = yes
+		}
+	}
+
+	show_in_tech = "tech_ge_t_beam"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 5000
+			rare_crystals = 300
+			sr_void_core = 50
+		}
+		upkeep = {
+			sr_void_core = 1
+		}
+	}
+
+	component_set = ROZ_ARK_T_BEAM
+	show_component_tooltips = yes
+	custom_tooltip_with_modifiers = roz_sm_arkship_spinal_devastator_mount_tt
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}

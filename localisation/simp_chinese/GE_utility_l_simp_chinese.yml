@@ -175,6 +175,27 @@ roz_phase_cloak_activity_key: "§M相位潜航中§!"
  roz_abyss_aux_DESC: "$roz_abyss_rift_cascade_xl_DESC$"
  roz_abyss_armor: "§R侵蚀镀层§!"
  roz_abyss_armor_DESC: "$roz_abyss_rift_cascade_xl_DESC$"
+
+sm_roz_arkship_G_shield: "$LARGE_G_SHIELD$阵列"
+sm_roz_arkship_G_shield_desc: "$GE_SF_ARMOR_DESC$"
+sm_roz_arkship_G_shield_tt: "$ARKSHIP_COMPONENTS$\n$t$$ADDS_ARKSHIP_L_UTILITY_SLOTS$\n$t$这些专用槽位将会装有$LARGE_G_SHIELD$"
+
+sm_roz_arkship_SF_ARMOR: "$LARGE_SF_ARMOR$阵列"
+sm_roz_arkship_SF_ARMOR_desc: "$GE_SHIELD_DESC$"
+sm_roz_arkship_SF_ARMOR_tt: "$ARKSHIP_COMPONENTS$\n$t$$ADDS_ARKSHIP_L_UTILITY_SLOTS$\n$t$这些通用槽位将会装有$LARGE_SF_ARMOR$"
+
+sm_roz_arkship_GE_RDS_L: "$GE_RDS_L$矩阵"
+sm_roz_arkship_GE_RDS_L_desc: "$GE_RDS_L_DESC$"
+sm_roz_arkship_GE_RDS_L_tt: "$ARKSHIP_COMPONENTS$\n$t$$ADDS_ARKSHIP_AUX_SLOTS$\n$t$这些专用辅助槽位将装备$GE_RDS_L$"
+
+sm_roz_arkship_GE_CB_L: "$GE_CB_L$矩阵"
+sm_roz_arkship_GE_CB_L_desc: "$GE_CB_L_DESC$"
+sm_roz_arkship_GE_CB_L_tt: "$ARKSHIP_COMPONENTS$\n$t$$ADDS_ARKSHIP_AUX_SLOTS$\n$t$这些专用辅助槽位将装备$GE_RDS_L$"
+
+sm_roz_arkship_ge_shippart_Flagship_B: "$ge_shippart_titian_B$"
+sm_roz_arkship_ge_shippart_Flagship_B_desc: "$ge_shippart_titian_B_DESC$"
+sm_roz_arkship_ge_shippart_Flagship_B_tt: "§H方舟光环§!"
+
 ###字体颜色代码
 ##§W W白色
 ##§R R红色

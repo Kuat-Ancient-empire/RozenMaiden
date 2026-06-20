@@ -32,3 +32,222 @@ Roz_starbase_placeholder = {
 		weight = 0 #use same weight here - ai weighting is done in starbase_types.txt
 	}
 }
+
+#arkship
+roz_arkship_G_shield = {
+	icon = "GFX_ship_part_ge_shield"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1		# Uncapped
+	}
+
+	potential = {
+		owner? = {
+			has_technology = tech_ge_shield
+			is_nomadic = yes
+		}
+	}
+
+	show_in_tech = "tech_ge_shield"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 200
+			energy = 3000
+			sr_void_core = 15
+		}
+	}
+
+	equipped_component = LARGE_G_SHIELD
+	equipped_component = LARGE_G_SHIELD
+	equipped_component = LARGE_G_SHIELD
+	equipped_component = LARGE_G_SHIELD
+	show_component_tooltips = yes
+	custom_tooltip = sm_roz_arkship_G_shield_tt
+
+	ai_weight = {
+		weight = 125 
+	}
+}
+
+roz_arkship_SF_ARMOR = {
+	icon = "GFX_ship_part_ge_sf_armor"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1		# Uncapped
+	}
+
+	potential = {
+		owner? = {
+			has_technology = tech_ge_shield
+			is_nomadic = yes
+		}
+	}
+
+	show_in_tech = "tech_ge_shield"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 2750
+			energy = 1500
+			sr_void_core = 40
+		}
+	}
+
+	equipped_component = LARGE_SF_ARMOR
+	equipped_component = LARGE_SF_ARMOR
+	equipped_component = LARGE_SF_ARMOR
+	equipped_component = LARGE_SF_ARMOR
+	show_component_tooltips = yes
+	custom_tooltip = sm_roz_arkship_SF_ARMOR_tt
+
+	ai_weight = {
+		weight = 125 
+	}
+}
+
+roz_arkship_GE_RDS_L = {
+	icon = "GFX_ship_part_reinforcement_defense_system"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1		# Uncapped
+	}
+
+	potential = {
+		owner? = {
+			has_technology = tech_ge_rds
+			is_nomadic = yes
+		}
+	}
+
+	show_in_tech = "tech_ge_rds"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 100
+			energy = 750
+			sr_void_core = 6
+		}
+	}
+
+	equipped_component = GE_RDS_L
+	equipped_component = GE_RDS_L
+	equipped_component = GE_RDS_L
+	show_component_tooltips = yes
+	custom_tooltip = sm_roz_arkship_GE_RDS_L_tt
+
+	ai_weight = {
+		weight = 125 
+	}
+}
+
+roz_arkship_GE_CB_L = {
+	icon = "GFX_ship_part_ge_chaos_booster"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1		# Uncapped
+	}
+
+	potential = {
+		owner? = {
+			has_technology = tech_ge_cb
+			is_nomadic = yes
+		}
+	}
+
+	show_in_tech = "tech_ge_cb"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 150
+			energy = 1500
+			sr_void_core = 10
+		}
+	}
+
+	equipped_component = GE_CB_L
+	equipped_component = GE_CB_L
+	equipped_component = GE_CB_L
+	show_component_tooltips = yes
+	custom_tooltip = sm_roz_arkship_GE_CB_L_tt
+
+	ai_weight = {
+		weight = 125 
+	}
+}
+
+roz_arkship_ge_shippart_Flagship_B = {
+	icon = "GFX_ge_shippart_titian_B"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_aura_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = tech_ge_shippart_titian_aura
+			is_nomadic = yes
+		}
+	}
+
+	show_in_tech = "tech_ge_shippart_titian_aura"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 1000
+			energy = 3000
+			sr_dark_matter = 500
+			sr_void_core = 10
+		}
+	}
+
+	equipped_component = ge_shippart_Flagship_B
+	show_component_tooltips = yes
+	custom_tooltip = sm_roz_arkship_ge_shippart_Flagship_B_tt
+
+	ai_weight = {
+		weight = 125
+	}
+}
+
+

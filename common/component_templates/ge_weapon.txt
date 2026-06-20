@@ -180,6 +180,9 @@ weapon_component_template = {
 			ge_t_beam_on_hit_effect = yes
 		}
 	}
+
+	collateral_damage = 250
+	collateral_range = 20
 	
 	range = 280.0
 	accuracy = 1.0
@@ -244,6 +247,9 @@ weapon_component_template = {
 		hidden_effect = { ge_xl_beam_on_hit_effect = yes }
 	}
 
+	collateral_damage = 450
+	collateral_range = 30
+
 	power = -3000
 	damage = { min = 20880.50 max = 64880.00 }
 	windup = { min = 405.0 max = 515.0 }
@@ -274,6 +280,79 @@ weapon_component_template = {
 		}
 		
 		
+	}
+}
+
+weapon_component_template = {
+	key = "ROZ_ARK_T_BEAM"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+	hidden = yes
+	icon = "GFX_ship_part_roz_arkship_t_beam"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 4000
+			sr_void_core = 10
+		}		
+		upkeep = {
+			#sr_void_core = 5
+		}
+	}
+
+	firing_arc = 30.0
+	min_range = 5.0
+	#static_rotation = no
+	##use_ship_kill_target = yes
+
+	tags = { weapon_type_energy weapon_type_ge_void_energy t_slot }
+	projectile_gfx = "ge_t_beam_projectile"
+	prerequisites = { "tech_ge_t_beam" }
+	component_set = ROZ_ARK_T_BEAM
+	potential = {
+		is_arkship_starbase = yes
+	}
+
+	on_hit = {
+		custom_tooltip = "ge_xl_beam_on_hit_s_tt"
+		hidden_effect = { ge_xl_beam_on_hit_effect = yes }
+	}
+
+	collateral_damage = 1250
+	collateral_range = 50
+
+	damage = { min = 20880.50 max = 64880.00 }
+	windup = { min = 405.0 max = 515.0 }
+	#windup = { min = 105.0 max = 115.0 }
+	total_fire_time = 110
+	range = 330.0
+	accuracy = 1.0
+	tracking = 1.0
+
+	shield_penetration = 1.0
+	armor_penetration = 1.0
+	shield_damage = 2.00
+	armor_damage = 2.50
+	hull_damage = 2.50
+
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		modifier = {
+			factor = 0.0
+			is_fallen_empire = yes
+		}
+
+
 	}
 }
 

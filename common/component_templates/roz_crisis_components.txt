@@ -35,6 +35,9 @@ weapon_component_template = {
     hull_damage = 3.00
     size_damage_factor = 1.0
 
+    collateral_damage = 450
+    collateral_range = 30
+
     tags = { weapon_type_roz_abyss }
 
 
@@ -68,6 +71,9 @@ weapon_component_template = {
     damage = { min = 8192 max = 16384 }
     windup = { min = 150.0 max = 250.0 }
     total_fire_time = 100
+
+    collateral_damage = 250
+    collateral_range = 30
 
     range = 250.0
     accuracy = 1.0

@@ -1,0 +1,190 @@
+roz_arkship_pd_battery = {
+	icon = GFX_ship_part_ge_pd
+	section = "ARKSHIP_PD_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_pd_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_ge_pd
+			is_nomadic = yes
+		}
+	}
+
+	show_in_tech = "tech_ge_pd"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			energy = 400
+			alloys = 400
+			sr_void_core = 10
+		}
+	}
+
+	component_set = GE_PD
+	show_component_tooltips = yes
+	custom_tooltip_with_modifiers = roz_sm_arkship_pd_battery_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+roz_arkship_laser_battery = {
+	icon = "GFX_ship_part_ge_laser_cannon"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_ge_laser_cannon
+			is_nomadic = yes
+		}
+	}
+
+	show_in_tech = "tech_ge_laser_cannon"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 750
+			rare_crystals = 750
+			sr_void_core = 10
+		}
+	}
+
+	component_set = GE_LASER_CANNON
+	show_component_tooltips = yes
+	custom_tooltip_with_modifiers = roz_sm_arkship_laser_battery_tt
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+
+roz_arkship_burst_battery = {
+	icon = "GFX_ship_part_ge_gravity_burst"
+	section = "ARKSHIP_LARGE_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_ge_energy_torpedo
+			is_nomadic = yes
+		}
+	}
+
+	show_in_tech = "tech_ge_energy_torpedo"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 1500
+			energy = 2050
+			sr_void_core = 10
+		}
+	}
+
+	component_set = GE_GRAVITY_BURST
+	show_component_tooltips = yes
+	custom_tooltip_with_modifiers = roz_sm_arkship_burst_battery_tt
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+
+roz_arkship_xl_battery = {
+	icon = GFX_ship_part_ge_xl_beam
+	section = "ARKSHIP_XL_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_ge_xl_beam
+			is_nomadic = yes
+		}
+	}
+
+	show_in_tech = "tech_ge_xl_beam"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 3000
+			rare_crystals = 300
+			sr_void_core = 30
+		}
+	}
+
+	component_set = GE_XL_BEAM
+	show_component_tooltips = yes
+	custom_tooltip_with_modifiers = roz_sm_arkship_xl_battery_tt
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+

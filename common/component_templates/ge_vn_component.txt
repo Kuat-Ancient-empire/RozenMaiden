@@ -46,6 +46,9 @@ weapon_component_template = {
 		}
 	}
 
+	collateral_damage = 750
+	collateral_range = 50
+
 	shield_penetration = 2.0
 	armor_penetration = 2.0
 	shield_damage = 3.5
@@ -109,6 +112,9 @@ weapon_component_template = {
 			ge_vn_secondary_beam_on_hit_effect = yes
 		}
 	}
+
+	collateral_damage = 450
+	collateral_range = 30
 
 	damage = { min = 5000.0 max = 20000.0 }
 	windup = { min = 60.0 max = 100.0 }	

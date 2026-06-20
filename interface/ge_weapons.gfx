@@ -177,6 +177,23 @@ spriteTypes = {
 	  }
     }
 
+	spriteType = {
+		name = "GFX_ship_part_roz_arkship_t_beam"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_roz_arkship_t_beam.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_roz_arkship_t_beam.dds"
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds"	# <- the animated file
+			animationrotation = 45.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.2				# in seconds
+			animationdelay = 6			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = pulsing      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
   spriteType = {
 		name = "GFX_ship_part_ge_laser_cannon"
     texturefile = "gfx/interface/icons/ship_parts/ship_part_ge_laser_cannon_2.dds"

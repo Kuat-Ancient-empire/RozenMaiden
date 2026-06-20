@@ -38,6 +38,9 @@ weapon_component_template = {
 		component_lifesteal_add = 1
 	}
 
+	collateral_damage = 450
+	collateral_range = 10
+
 	size_restriction = { Ge_Vampirilis_Ortaam }
 
 	ai_weight = {
@@ -87,6 +90,9 @@ weapon_component_template = {
 		component_lifesteal_add = 1
 	}
 
+	collateral_damage = 450
+	collateral_range = 30
+
 	size_restriction = { Ge_Vampirilis_Ortaam }
 
 	ai_weight = {
@@ -127,6 +133,9 @@ weapon_component_template = {
 	shield_damage = 2.0
 	armor_damage = 2.0
 	hull_damage = 3.0
+
+	collateral_damage = 450
+	collateral_range = 10
 
 	triggered_ship_modifier = {
 		potential = { is_in_combat = yes }
@@ -508,6 +517,9 @@ weapon_component_template = {
 	hull_damage = 1.75
 	ai_tags = { weapon_role_artillery artillery }
 	ai_tag_weight = 0
+
+	collateral_damage = 350
+	collateral_range = 10
 
 	size_restriction = { Ge_Vampirilis_Letum Ge_Vampirilis_Ortaam_normal }
 	resources = {

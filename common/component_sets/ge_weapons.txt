@@ -62,6 +62,13 @@ component_set = {
 }
 
 component_set = {
+	key = "ROZ_ARK_T_BEAM"
+
+	icon = GFX_ship_part_roz_arkship_t_beam
+	icon_frame = 1
+}
+
+component_set = {
 	key = "GE_LASER_CANNON"
 
 	icon = "GFX_ship_part_ge_laser_cannon"
