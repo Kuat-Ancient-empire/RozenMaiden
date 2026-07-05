@@ -4301,205 +4301,388 @@ roz_lgate_create_reward_planet = {
 
 	give_technology = { tech = tech_food_processing_1 }
 
-	random_planet_within_border = {
-		limit = {
-			is_planet_class = pc_gray_goo
-			solar_system? = {
-				is_same_value = event_target:graygoo_factory_system
-			}
-			#always = no
-		}
-		change_pc = pc_gaia
-		change_planet_size = 25
-		clear_deposits = yes
-		clear_blockers = yes
-		set_owner = space_owner
-		set_controller = space_owner
-		#set_capital = yes
-		save_global_event_target_as = roz_graygoo_factory_system_gaia@root
-		create_colony = {
-			owner = root
-			species = root.owner_main_species
-		}
-		create_cluster = {
-			id = fe1_cluster
-			radius = 120
-			center = this.solar_system
-		}
-
-		remove_all_districts = yes
-		validate_and_repair_planet_buildings_and_districts = yes
-
-		add_deposit = d_meals_in_pods
-		add_deposit = d_prisoner_intergration
-		add_deposit = d_ancient_particle_accelerator
-		add_deposit = d_alien_sanctuary
-		add_deposit = d_betharian_deposit
-		add_deposit = d_underwater_vent
-		add_deposit = d_tempestous_mountain
-		add_deposit = d_submerged_ore_veins
-		add_deposit = d_rich_mountain
-		add_deposit = d_black_soil
-		add_deposit = d_teeming_reef
-
-
-		while = {
-			count = 25
-			add_district = district_city
-		}
-
-		set_variable = {
-			which = energy_districts
-			value = 2
-		}
-		set_variable = {
-			which = mining_districts
-			value = 2
-		}
-		set_variable = {
-			which = farming_districts
-			value = 2
-		}
-		add_district_and_planet_size_if_needed_effect_amount = {
-			amount = energy_districts
-			district = district_generator
-		}
-		add_district_and_planet_size_if_needed_effect_amount = {
-			amount = mining_districts
-			district = district_mining
-		}
-		add_district_and_planet_size_if_needed_effect_amount = {
-			amount = farming_districts
-			district = district_farming
-		}
-		clear_variable = energy_districts
-		clear_variable = mining_districts
-		clear_variable = farming_districts
-
-		add_zone = {
-			district = district_city
-			zone = zone_research_unity
-			zone_slot = 1
-		}
-		add_zone = {
-			district = district_city
-			zone = zone_industrial
-			zone_slot = 2
-		}
-		add_zone = {
-			district = district_mining
-			zone = zone_minerals
-			zone_slot = 1
-		}
-		add_zone = {
-			district = district_generator
-			zone = zone_energy
-			zone_slot = 1
-		}
-		add_zone = {
-			district = district_farming
-			zone = zone_food
-			zone_slot = 1
-		}
-
-		while = {
+	if = {
+		limit = { is_nomadic = no }
+		random_planet_within_border = {
 			limit = {
-				pop_amount < 20000
-				free_housing > 0
+				is_planet_class = pc_gray_goo
+				solar_system? = {
+				is_same_value = event_target:graygoo_factory_system
+				}
+				#always = no
 			}
-			create_pop_group = {
-				size = 100
+			change_pc = pc_gaia
+			change_planet_size = 25
+			clear_deposits = yes
+			clear_blockers = yes
+			set_owner = space_owner
+			set_controller = space_owner
+			#set_capital = yes
+			save_global_event_target_as = roz_graygoo_factory_system_gaia@root
+			create_colony = {
+				owner = root
 				species = root.owner_main_species
 			}
-		}
+			create_cluster = {
+				id = fe1_cluster
+				radius = 120
+				center = this.solar_system
+			}
 
-		#add_building = building_capital
-		#remove_building = building_colony_shelter
+			remove_all_districts = yes
+			validate_and_repair_planet_buildings_and_districts = yes
 
-		#add_building = building_roz_ancient_palace
-		add_building = {
-			building = building_roz_fe_stronghold
-			district = district_city
-			#zone = zone_default
-		}
-		add_building = {
-			building = building_roz_fe_dome
-			district = district_city
-			#zone = zone_default
-		}
-		add_building = {
-			building = building_roz_fe_clinic_2
-			district = district_city
-		}
-
-		add_building = { 
-			building = building_roz_fe_administration_2
-			district = district_city
-			zone = zone_research_unity
-		}
-		add_building = { 
-			building = building_roz_fe_lab_2
-			district = district_city
-			zone = zone_research_unity
-		}
-		add_building = { 
-			building = building_roz_master_archive
-			district = district_city
-			zone = zone_research_unity
-		}
-
-		add_building = { 
-			building = building_roz_dimensional_fabricator
-			district = district_city
-			zone = zone_industrial
-		}
-		add_building = { 
-			building = building_roz_affluence_center
-			district = district_city
-			zone = zone_industrial
-		}
-		add_building = { 
-			building = building_roz_nano_forge
-			district = district_city
-			zone = zone_industrial
-		}
-
-		add_building = { 
-			building = building_roz_class_5_singularity
-			district = district_generator
-			zone = zone_energy
-		}
-		add_building = { 
-			building = building_roz_fe_market_2
-			district = district_generator
-			zone = zone_energy
-		}
-
-		add_building = { 
-			building = building_roz_fe_mine_2
-			district = district_mining
-			zone = zone_minerals
-		}
-		add_building = { 
-			building = building_roz_fe_silo_2
-			district = district_mining
-			zone = zone_minerals
-		}
-
-		add_building = { 
-			building = building_roz_nourishment_center
-			district = district_farming
-			zone = zone_food
-		}
-		add_building = { 
-			building = building_roz_fe_entertainment_2
-			district = district_farming
-			zone = zone_food
-		}
+			add_deposit = d_meals_in_pods
+			add_deposit = d_prisoner_intergration
+			add_deposit = d_ancient_particle_accelerator
+			add_deposit = d_alien_sanctuary
+			add_deposit = d_betharian_deposit
+			add_deposit = d_underwater_vent
+			add_deposit = d_tempestous_mountain
+			add_deposit = d_submerged_ore_veins
+			add_deposit = d_rich_mountain
+			add_deposit = d_black_soil
+			add_deposit = d_teeming_reef
 
 
-		set_name = NAME_roz_lgate
-		
+			while = {
+				count = 25
+				add_district = district_city
+			}
+
+			set_variable = {
+				which = energy_districts
+				value = 2
+			}
+			set_variable = {
+				which = mining_districts
+				value = 2
+			}
+			set_variable = {
+				which = farming_districts
+				value = 2
+			}
+			add_district_and_planet_size_if_needed_effect_amount = {
+				amount = energy_districts
+				district = district_generator
+			}
+			add_district_and_planet_size_if_needed_effect_amount = {
+				amount = mining_districts
+				district = district_mining
+			}
+			add_district_and_planet_size_if_needed_effect_amount = {
+				amount = farming_districts
+				district = district_farming
+			}
+			clear_variable = energy_districts
+			clear_variable = mining_districts
+			clear_variable = farming_districts
+
+			add_zone = {
+				district = district_city
+				zone = zone_research_unity
+				zone_slot = 1
+			}
+			add_zone = {
+				district = district_city
+				zone = zone_industrial
+				zone_slot = 2
+			}
+			add_zone = {
+				district = district_mining
+				zone = zone_minerals
+				zone_slot = 1
+			}
+			add_zone = {
+				district = district_generator
+				zone = zone_energy
+				zone_slot = 1
+			}
+			add_zone = {
+				district = district_farming
+				zone = zone_food
+				zone_slot = 1
+			}
+
+			while = {
+				limit = {
+					pop_amount < 20000
+					free_housing > 0
+				}
+				create_pop_group = {
+					size = 100
+					species = root.owner_main_species
+				}
+			}
+
+			#add_building = building_capital
+			#remove_building = building_colony_shelter
+
+			#add_building = building_roz_ancient_palace
+			add_building = {
+				building = building_roz_fe_stronghold
+				district = district_city
+				#zone = zone_default
+			}
+			add_building = {
+				building = building_roz_fe_dome
+				district = district_city
+				#zone = zone_default
+			}
+			add_building = {
+				building = building_roz_fe_clinic_2
+				district = district_city
+			}
+
+			add_building = {
+				building = building_roz_fe_administration_2
+				district = district_city
+				zone = zone_research_unity
+			}
+			add_building = {
+				building = building_roz_fe_lab_2
+				district = district_city
+				zone = zone_research_unity
+			}
+			add_building = {
+				building = building_roz_master_archive
+				district = district_city
+				zone = zone_research_unity
+			}
+
+			add_building = {
+				building = building_roz_dimensional_fabricator
+				district = district_city
+				zone = zone_industrial
+			}
+			add_building = {
+				building = building_roz_affluence_center
+				district = district_city
+				zone = zone_industrial
+			}
+			add_building = {
+				building = building_roz_nano_forge
+				district = district_city
+				zone = zone_industrial
+			}
+
+			add_building = {
+				building = building_roz_class_5_singularity
+				district = district_generator
+				zone = zone_energy
+			}
+			add_building = {
+				building = building_roz_fe_market_2
+				district = district_generator
+				zone = zone_energy
+			}
+
+			add_building = {
+				building = building_roz_fe_mine_2
+				district = district_mining
+				zone = zone_minerals
+			}
+			add_building = {
+				building = building_roz_fe_silo_2
+				district = district_mining
+				zone = zone_minerals
+			}
+
+			add_building = {
+				building = building_roz_nourishment_center
+				district = district_farming
+				zone = zone_food
+			}
+			add_building = {
+				building = building_roz_fe_entertainment_2
+				district = district_farming
+				zone = zone_food
+			}
+			set_name = NAME_roz_lgate
+
+		}
+	}
+	else_if = {
+		limit = { is_nomadic = yes }
+		give_technology = { tech = tech_civilian_arkship }
+		give_technology = { tech = tech_military_arkship }
+		give_technology = { tech = tech_science_arkship }
+		give_technology = { tech = tech_power_hub_1 }
+		give_technology = { tech = tech_planetary_unification }
+		give_technology = { tech = tech_doctrine_navy_size_1 }
+		random_owned_fleet = {
+			owner = {
+				create_leader = {
+					class = commander
+					species = owner_main_species
+					name = random
+					skill = 3
+				}
+				create_fleet = {
+					effect = {
+						set_owner = prev
+						create_ship = {
+							name = random
+							create_colony = yes
+							random_existing_design = civilian_arkship_tier_1
+							effect = {
+								save_event_target_as = roz_arkship
+								initialize_arkship_starbase_effect = yes
+								starbase = {
+									set_starbase_building = {
+										slot = 4
+										building = arkship_shield
+									}
+									set_starbase_building = {
+										slot = 3
+										building = arkship_armor
+									}
+								}
+								set_graphical_culture = civilian_arkship
+								colony = {
+									add_deposit = d_meals_in_pods
+									set_carrier_flag = roz_lgate_arkship
+									save_global_event_target_as = roz_graygoo_factory_system_gaia@root
+									set_planet_size = 35
+
+									while = {
+										count = 20
+										add_district = district_ark_city
+									}
+									while = {
+										count = 3
+										add_district = district_ark_basic
+									}
+									while = {
+										count = 3
+										add_district = district_ark_generator
+									}
+									while = {
+										count = 3
+										add_district = district_ark_military
+									}
+									add_zone = {
+										district = district_ark_city
+										zone = zone_ark_research_unity
+										zone_slot = 1
+									}
+									add_zone = {
+										district = district_ark_city
+										zone = zone_ark_industrial
+										zone_slot = 2
+									}
+									add_zone = {
+										district = district_ark_basic
+										zone = zone_ark_food
+									}
+									add_zone = {
+										district = district_ark_generator
+										zone = zone_energy
+									}
+									add_zone = {
+										district = district_ark_military
+										zone = zone_ark_shipwright
+									}
+
+
+									while = {
+										limit = {
+											pop_amount < 20000
+											free_housing > 0
+										}
+										create_pop_group = {
+											size = 100
+											species = root.owner_main_species
+										}
+									}
+
+									add_building = {
+										building = building_roz_fe_stronghold
+										district = district_ark_city
+										#zone = zone_default
+									}
+									add_building = {
+										building = building_roz_fe_clinic_2
+										district = district_ark_city
+									}
+
+									add_building = {
+										building = building_roz_fe_administration_2
+										district = district_ark_city
+										zone = zone_ark_research_unity
+									}
+									add_building = {
+										building = building_roz_fe_lab_2
+										district = district_ark_city
+										zone = zone_ark_research_unity
+									}
+									add_building = {
+										building = building_roz_master_archive
+										district = district_ark_city
+										zone = zone_ark_research_unity
+									}
+
+									add_building = {
+										building = building_roz_dimensional_fabricator
+										district = district_ark_city
+										zone = zone_ark_industrial
+									}
+									add_building = {
+										building = building_roz_affluence_center
+										district = district_ark_city
+										zone = zone_ark_industrial
+									}
+									add_building = {
+										building = building_roz_nano_forge
+										district = district_ark_city
+										zone = zone_ark_industrial
+									}
+
+									add_building = {
+										building = building_roz_class_5_singularity
+										district = district_ark_generator
+										zone = zone_energy
+									}
+									add_building = {
+										building = building_roz_fe_market_2
+										district = district_ark_generator
+										zone = zone_energy
+									}
+
+									add_building = {
+										building = building_roz_fe_mine_2_ark
+										district = district_ark_military
+										zone = zone_ark_shipwright
+									}
+									add_building = {
+										building = building_roz_fe_silo_2_ark
+										district = district_ark_military
+										zone = zone_ark_shipwright
+									}
+
+									add_building = {
+										building = building_roz_nourishment_center_ark
+										zone = zone_ark_food
+									}
+									add_building = {
+										building = building_roz_fe_entertainment_2_ark
+										zone = zone_ark_food
+									}
+								}
+							}
+						}
+						set_location = {
+							target = graygoo_factory_system.system_star
+							distance = 0
+							angle = random
+						}
+					}
+				}
+				last_created_fleet = {
+					assign_leader = last_created_leader
+				}
+			}
+		}
 	}
 }
 

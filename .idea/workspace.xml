@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70f6159c-a2c2-439a-8b46-23bdc14ff8ba" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/GE_Events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/GE_Events_l_simp_chinese.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/roz_nomadic_event.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/buildings/roz_fallen_empires_buildings_copy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/roz_fallen_empires_buildings_copy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/ge_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/ge_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/00_roz_test_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/00_roz_test_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/GE_building_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/GE_building_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

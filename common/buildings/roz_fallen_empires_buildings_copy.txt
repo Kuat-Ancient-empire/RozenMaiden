@@ -77,11 +77,16 @@ building_roz_affluence_center = {
 	category = manufacturing
 	potential = {
 		exists = owner
-		solar_system? = {
-			has_star_flag = graygoo_factory_system
-		}
-		owner = {
-			has_country_flag = roz_lgate_create_flag
+		OR = {
+			has_carrier_flag = roz_lgate_arkship
+			AND = {
+				solar_system? = {
+					has_star_flag = graygoo_factory_system
+				}
+				owner = {
+					has_country_flag = roz_lgate_create_flag
+				}
+			}
 		}
 	}
 	planet_modifier = {
@@ -117,6 +122,7 @@ building_roz_nourishment_center = {
 		origin
 		farming_automation
 		farming
+		hydroponics
 	}
 	category = resource
 	destroy_trigger = {
@@ -124,11 +130,16 @@ building_roz_nourishment_center = {
 	}
 	potential = {
 		exists = owner
-		solar_system? = {
-			has_star_flag = graygoo_factory_system
-		}
-		owner = {
-			has_country_flag = roz_lgate_create_flag
+		OR = {
+			has_carrier_flag = roz_lgate_arkship
+			AND = {
+				solar_system? = {
+					has_star_flag = graygoo_factory_system
+				}
+				owner = {
+					has_country_flag = roz_lgate_create_flag
+				}
+			}
 		}
 	}
 	planet_modifier = {
@@ -167,11 +178,16 @@ building_roz_dimensional_fabricator = {
 	category = manufacturing
 	potential = {
 		exists = owner
-		solar_system? = {
-			has_star_flag = graygoo_factory_system
-		}
-		owner = {
-			has_country_flag = roz_lgate_create_flag
+		OR = {
+			has_carrier_flag = roz_lgate_arkship
+			AND = {
+				solar_system? = {
+					has_star_flag = graygoo_factory_system
+				}
+				owner = {
+					has_country_flag = roz_lgate_create_flag
+				}
+			}
 		}
 	}
 	planet_modifier = {
@@ -292,11 +308,16 @@ building_roz_nano_forge = {
 	}
 	potential = {
 		exists = owner
-		solar_system? = {
-			has_star_flag = graygoo_factory_system
-		}
-		owner = {
-			has_country_flag = roz_lgate_create_flag
+		OR = {
+			has_carrier_flag = roz_lgate_arkship
+			AND = {
+				solar_system? = {
+					has_star_flag = graygoo_factory_system
+				}
+				owner = {
+					has_country_flag = roz_lgate_create_flag
+				}
+			}
 		}
 	}
 	destroy_trigger = {
@@ -344,11 +365,16 @@ building_roz_master_archive = {
 	}
 	potential = {
 		exists = owner
-		solar_system? = {
-			has_star_flag = graygoo_factory_system
-		}
-		owner = {
-			has_country_flag = roz_lgate_create_flag
+		OR = {
+			has_carrier_flag = roz_lgate_arkship
+			AND = {
+				solar_system? = {
+					has_star_flag = graygoo_factory_system
+				}
+				owner = {
+					has_country_flag = roz_lgate_create_flag
+				}
+			}
 		}
 	}
 	triggered_planet_modifier = {
@@ -461,11 +487,16 @@ building_roz_fe_dome = {
 	category = amenity
 	potential = {
 		exists = owner
-		solar_system? = {
-			has_star_flag = graygoo_factory_system
-		}
-		owner = {
-			has_country_flag = roz_lgate_create_flag
+		OR = {
+			has_carrier_flag = roz_lgate_arkship
+			AND = {
+				solar_system? = {
+					has_star_flag = graygoo_factory_system
+				}
+				owner = {
+					has_country_flag = roz_lgate_create_flag
+				}
+			}
 		}
 	}
 	planet_modifier = {
@@ -513,11 +544,16 @@ building_roz_fe_stronghold = {
 	category = army
 	potential = {
 		exists = owner
-		solar_system? = {
-			has_star_flag = graygoo_factory_system
-		}
-		owner = {
-			has_country_flag = roz_lgate_create_flag
+		OR = {
+			has_carrier_flag = roz_lgate_arkship
+			AND = {
+				solar_system? = {
+					has_star_flag = graygoo_factory_system
+				}
+				owner = {
+					has_country_flag = roz_lgate_create_flag
+				}
+			}
 		}
 	}
 	destroy_trigger = {
@@ -979,43 +1015,13 @@ building_roz_fe_silo_2 = {
 	}
 	building_sets = {
 		origin
-		#     automation
-		#     urban_automation
 		mining_automation
-		#     farming_automation
-		#     generator_automation
-		#
 		government
 		urban
 		entertainment
-		#     resort
-		#     industrial
-		#     research_unity
-		#     research
-		#     unity
-		#     trade
-		#     society
-		#     physics
-		#     engineering
-		#     cosmogenesis_world
-		#     fallen_empire
-		#     farming
-		#     foundry
-		#     zoo
-		#
-		#     fallen_empire_farming
-		#     generator
-		#     fallen_empire_generator
 		mining
 		fallen_empire_mining
-		#
-		#     knights
-		#     hydroponics
-		#     medical
-		#     betharian
-		#     fortress
-		#     hunting_zone
-		#     bio_trophy
+		fortress
 		#
 	}
 	destroy_trigger = {
@@ -1061,43 +1067,13 @@ building_roz_fe_entertainment_2 = {
 	}
 	building_sets = {
 		origin
-		#     automation
-		#     urban_automation
-		#     mining_automation
 		farming_automation
-		#     generator_automation
-		#
 		government
 		urban
 		entertainment
-		#     resort
-		#     industrial
-		#     research_unity
-		#     research
-		#     unity
-		#     trade
-		#     society
-		#     physics
-		#     engineering
-		#     cosmogenesis_world
-		#     fallen_empire
 		farming
-		#     foundry
-		#     zoo
-		#
 		fallen_empire_farming
-		#     generator
-		#     fallen_empire_generator
-		#     mining
-		#     fallen_empire_mining
-		#
-		#     knights
-		#     hydroponics
-		#     medical
-		#     betharian
-		#     fortress
-		#     hunting_zone
-		#     bio_trophy
+		hydroponics
 		#
 	}
 	destroy_trigger = {
@@ -1206,6 +1182,7 @@ building_roz_fe_lab_2 = {
 			owner = {
 				has_country_flag = building_roz_fe_lab_2_can_built
 			}
+			has_carrier_flag = roz_lgate_arkship
 		}
 	}
 	destroy_trigger = {
@@ -1299,6 +1276,8 @@ building_roz_fe_mine_2 = {
 		origin
 		mining_automation
 		mining
+		government
+		fortress
 	}
 	destroy_trigger = {
 		always = no
@@ -1318,7 +1297,7 @@ building_roz_fe_mine_2 = {
 			energy = 30
 		}
 		produces = {
-			minerals = 1000
+			minerals = 1500
 		}
 	}
 	planet_modifier = {
@@ -1366,3 +1345,235 @@ building_roz_fe_mine_2 = {
 		text = job_fe_acolyte_mine_effect_desc
 	}
 }
+
+#ark
+building_roz_fe_entertainment_2_ark = {
+	base_buildtime = @b2_time
+	can_build = yes
+	icon = building_fe_entertainment_2
+	category = amenity
+	potential = {
+		exists = owner
+	}
+	building_sets = {
+		generator
+		mining
+		farming
+		urban
+		harvest
+	}
+	destroy_trigger = {
+		always = no
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			#rare_crystals = 2
+			alloys = @b2_upkeep
+			energy = 15
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
+			}
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
+	}
+	planet_modifier = {
+		job_entertainer_add = 1500
+		planet_amenities_add = 12500
+		pop_bonus_workforce_mult = 0.2
+		planet_entertainers_upkeep_mult = -0.2
+	}
+	triggered_desc = {
+		text = job_entertainer_effect_desc
+	}
+}
+
+building_roz_nourishment_center_ark = {
+	base_buildtime = @b2_time
+	can_build = no
+	can_demolish = yes
+	can_be_disabled = no
+	can_be_ruined = no
+	icon = building_nourishment_center
+	building_sets = {
+		generator
+		mining
+		farming
+		urban
+		harvest
+	}
+	category = resource
+	destroy_trigger = {
+		always = no
+	}
+	potential = {
+		exists = owner
+		OR = {
+			has_carrier_flag = roz_lgate_arkship
+			AND = {
+				solar_system? = {
+					has_star_flag = graygoo_factory_system
+				}
+				owner = {
+					has_country_flag = roz_lgate_create_flag
+				}
+			}
+		}
+	}
+	planet_modifier = {
+		pop_environment_tolerance = 0.1
+		planet_farmers_produces_mult = 0.2
+	}
+	inline_script = {
+		script = jobs/farmers_add
+		AMOUNT = @roz_fe_jobs
+	}
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 750
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+	upgrades = {
+	}
+}
+
+building_roz_fe_silo_2_ark = {
+	base_buildtime = @b2_time
+	can_build = no
+	icon = building_fe_silo_2
+	category = resource
+	potential = {
+		exists = owner
+	}
+	building_sets = {
+		government
+		fortress
+		industrial
+	}
+	destroy_trigger = {
+		always = no
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			alloys = @b2_upkeep
+			energy = 15
+		}
+	}
+	planet_modifier = {
+		pop_bonus_workforce_mult = 0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
+			}
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
+	}
+	country_modifier = {
+		country_resource_max_add = 750000
+		country_resource_max_minor_artifacts_add = 7500
+	}
+}
+
+building_roz_fe_mine_2_ark = {
+	base_buildtime = @b2_time
+	can_build = no
+	icon = building_fe_mine_2
+	category = resource
+	potential = {
+		exists = owner
+	}
+	building_sets = {
+		government
+		fortress
+		industrial
+	}
+	destroy_trigger = {
+		always = no
+	}
+	inline_script = {
+		script = jobs/miners_add
+		AMOUNT = @roz_fe_jobs
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			#volatile_motes = 2
+			alloys = @b3_upkeep
+			energy = 30
+		}
+		produces = {
+			minerals = 1500
+		}
+	}
+	planet_modifier = {
+		district_mining_max = @b4_max_districts_add
+	}
+	inline_script = {
+		script = jobs/miners_add
+		AMOUNT = @roz_fe_jobs
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
+			}
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
+	}
+	triggered_planet_modifier = {
+		potential = {
+			NOT = {
+				is_planet_class = pc_shattered_ring_habitable
+			}
+			exists = owner
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		modifier = {
+			job_fe_acolyte_mine_add = @roz_fe_jobs
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			NOT = {
+				is_planet_class = pc_shattered_ring_habitable
+			}
+			exists = owner
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		text = job_fe_acolyte_mine_effect_desc
+	}
+}
+

@@ -1,0 +1,192 @@
+namespace = roz_nomadic_event
+#test
+country_event = {
+	id = roz_nomadic_event.10
+	hide_window = yes	#DEBUG TO NO TO SEE WHERE THE NOMADS SPAWN
+	#location = event_target:nomad_spawn
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		give_technology = { tech = tech_civilian_arkship }
+		give_technology = { tech = tech_military_arkship }
+		give_technology = { tech = tech_science_arkship }
+        give_technology = { tech = tech_power_hub_1 }
+        give_technology = { tech = tech_planetary_unification }
+        give_technology = { tech = tech_doctrine_navy_size_1 }
+		random_owned_fleet = {
+			owner = {
+				create_leader = {
+					class = commander
+					species = owner_main_species
+					name = random
+					skill = 3
+				}
+				create_fleet = {
+                    name = random
+					effect = {
+						set_owner = prev
+						create_ship = {
+							create_colony = yes
+							random_existing_design = civilian_arkship_tier_1
+							effect = {
+								save_event_target_as = roz_arkship
+								initialize_arkship_starbase_effect = yes
+								starbase = {
+									set_starbase_building = {
+										slot = 4
+										building = arkship_shield
+									}
+									set_starbase_building = {
+										slot = 3
+										building = arkship_armor
+									}
+								}
+								set_graphical_culture = civilian_arkship
+								colony = {
+									add_deposit = d_meals_in_pods
+									set_carrier_flag = roz_lgate_arkship
+									save_global_event_target_as = roz_graygoo_factory_system_gaia@root
+									set_planet_size = 35
+
+                                    while = {
+                                    	count = 20
+                                    	add_district = district_ark_city
+                                    }
+                                    while = {
+                                    	count = 3
+                                    	add_district = district_ark_basic
+                                    }
+                                    while = {
+                                    	count = 3
+                                    	add_district = district_ark_generator
+                                    }
+                                    while = {
+                                    	count = 3
+                                    	add_district = district_ark_military
+                                    }
+                                    add_zone = {
+                                    	district = district_ark_city
+                                    	zone = zone_ark_research_unity
+                                    	zone_slot = 1
+                                    }
+                                    add_zone = {
+                                    	district = district_ark_city
+                                    	zone = zone_ark_industrial
+                                    	zone_slot = 2
+                                    }
+                                    add_zone = {
+                                    	district = district_ark_basic
+                                    	zone = zone_ark_food
+                                    }
+                                    add_zone = {
+                                    	district = district_ark_generator
+                                    	zone = zone_energy
+                                    }
+                                    add_zone = {
+                                    	district = district_ark_military
+                                    	zone = zone_ark_shipwright
+                                    }
+
+
+                                    while = {
+                                    	limit = {
+                                    		pop_amount < 20000
+                                    		free_housing > 0
+                                    	}
+                                    	create_pop_group = {
+                                    		size = 100
+                                    		species = root.owner_main_species
+                                    	}
+                                    }
+
+                                    add_building = {
+                                    	building = building_roz_fe_stronghold
+                                    	district = district_ark_city
+                                    	#zone = zone_default
+                                    }
+                                    add_building = {
+                                    	building = building_roz_fe_clinic_2
+                                    	district = district_ark_city
+                                    }
+
+                                    add_building = {
+                                    	building = building_roz_fe_administration_2
+                                    	district = district_ark_city
+                                    	zone = zone_ark_research_unity
+                                    }
+                                    add_building = {
+                                    	building = building_roz_fe_lab_2
+                                    	district = district_ark_city
+                                    	zone = zone_ark_research_unity
+                                    }
+                                    add_building = {
+                                    	building = building_roz_master_archive
+                                    	district = district_ark_city
+                                    	zone = zone_ark_research_unity
+                                    }
+
+                                    add_building = {
+                                    	building = building_roz_dimensional_fabricator
+                                    	district = district_ark_city
+                                    	zone = zone_ark_industrial
+                                    }
+                                    add_building = {
+                                    	building = building_roz_affluence_center
+                                    	district = district_ark_city
+                                    	zone = zone_ark_industrial
+                                    }
+                                    add_building = {
+                                    	building = building_roz_nano_forge
+                                    	district = district_ark_city
+                                    	zone = zone_ark_industrial
+                                    }
+
+                                    add_building = {
+                                    	building = building_roz_class_5_singularity
+                                    	district = district_ark_generator
+                                    	zone = zone_energy
+                                    }
+                                    add_building = {
+                                    	building = building_roz_fe_market_2
+                                    	district = district_ark_generator
+                                    	zone = zone_energy
+                                    }
+
+                                    add_building = {
+                                    	building = building_roz_fe_mine_2_ark
+                                    	district = district_ark_military
+                                    	zone = zone_ark_shipwright
+                                    }
+                                    add_building = {
+                                    	building = building_roz_fe_silo_2_ark
+                                    	district = district_ark_military
+                                    	zone = zone_ark_shipwright
+                                    }
+
+                                    add_building = {
+                                    	building = building_roz_nourishment_center_ark
+                                    	zone = zone_ark_food
+                                    }
+                                    add_building = {
+                                    	building = building_roz_fe_entertainment_2_ark
+                                    	zone = zone_ark_food
+                                    }
+								}
+							}
+						}
+						set_location = {
+							target = PREVPREV.solar_system.system_star
+							distance = 0
+							angle = random
+						}
+					}
+				}
+				last_created_fleet = {
+					assign_leader = last_created_leader
+				}
+			}
+		}
+	}
+}

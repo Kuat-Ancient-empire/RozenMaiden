@@ -38,7 +38,6 @@ carrier_event = {
 		}
 		#set_update_modifiers_batch = begin
 		from? = {
-
 			owner = {
 				save_event_target_as = crisis_country
 				add_victory_score = {

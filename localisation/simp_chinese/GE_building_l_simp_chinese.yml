@@ -63,6 +63,15 @@ building_roz_fe_market_2: "§L星际贸易枢纽§!"
 building_roz_fe_market_2_desc: "这个贸易区划在星系贸易中占据着至高无上的地位，甚至从轨道上都能看到它的巨大尖顶。"
 
 
+building_roz_fe_mine_2_ark: "$building_roz_fe_mine_2$"
+building_roz_fe_mine_2_ark_desc: "$building_roz_fe_mine_2_desc$"
+building_roz_nourishment_center_ark: "$building_roz_nourishment_center$"
+building_roz_nourishment_center_ark_desc: "$building_roz_nourishment_center_desc$"
+building_roz_fe_entertainment_2_ark: "$building_roz_fe_entertainment_2$"
+building_roz_fe_entertainment_2_ark_desc: "$building_roz_fe_entertainment_2_desc$"
+building_roz_fe_silo_2_ark: "$building_roz_fe_silo_2$"
+building_roz_fe_silo_2_ark_desc: "$building_roz_fe_silo_2_desc$"
+
 
 
 
