@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70f6159c-a2c2-439a-8b46-23bdc14ff8ba" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/component_sets/ge_weapons.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/component_sets/ge_weapons.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/component_templates/ge_sp_ship_components.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/component_templates/ge_sp_ship_components.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/component_templates/ge_vn_component.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/component_templates/ge_vn_component.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/component_templates/ge_weapon.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/component_templates/ge_weapon.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/component_templates/roz_crisis_components.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/component_templates/roz_crisis_components.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/starbase_buildings/roz_starbase_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/starbase_buildings/roz_starbase_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/descriptor.mod" beforeDir="false" afterPath="$PROJECT_DIR$/descriptor.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/ge_weapons.gfx" beforeDir="false" afterPath="$PROJECT_DIR$/interface/ge_weapons.gfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/GE_Weapons_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/GE_Weapons_l_simp_chinese.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/GE_utility_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/GE_utility_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/GE_Events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/GE_Events_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
