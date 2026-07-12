@@ -781,7 +781,11 @@ country_event = {
 			}
 			#set_update_modifiers_batch = end
 			reduce_hp_percent = 90
-			damage_ship = 15000
+			damage_ship = {
+				amount = 15000
+				attacker = prev.fromfrom
+			}
+
 		}
 	}
 	option = {

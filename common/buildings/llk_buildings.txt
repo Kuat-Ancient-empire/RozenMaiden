@@ -16,11 +16,11 @@ building_llk_paradox_origin = {
 	allow = {
         has_upgraded_capital = yes
 	}
-	building_sets = {
-		origin
-		government
-		urban
-	}
+	# building_sets = {
+	# 	origin
+	# 	government
+	# 	urban
+	# }
 	potential = {
 		exists = owner
 	}
@@ -192,17 +192,17 @@ building_roz_dolls_factory = {
 	#allow = {       				#允许，满足下列条件，则该建筑可以被允许建造
 	#    has_upgraded_capital = yes
 	#}
-	building_sets = {
-		origin
-		government
-		urban
-		industrial
-		research_unity
-		research
-		unity
-		trade
-		foundry
-	}
+	# building_sets = {
+	# 	origin
+	# 	government
+	# 	urban
+	# 	industrial
+	# 	research_unity
+	# 	research
+	# 	unity
+	# 	trade
+	# 	foundry
+	# }
 	potential = {
 		exists = planet
 		#planet = { is_capital = yes }

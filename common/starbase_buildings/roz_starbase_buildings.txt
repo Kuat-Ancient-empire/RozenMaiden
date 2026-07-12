@@ -45,9 +45,12 @@ roz_arkship_G_shield = {
 	}
 
 	potential = {
-		owner? = {
-			has_technology = tech_ge_shield
-			is_nomadic = yes
+		OR = {
+			has_starbase_size = roz_ultra_arkship_tier_X
+			owner? = {
+				has_technology = tech_ge_shield
+				is_nomadic = yes
+			}
 		}
 	}
 
@@ -89,9 +92,12 @@ roz_arkship_SF_ARMOR = {
 	}
 
 	potential = {
-		owner? = {
-			has_technology = tech_ge_shield
-			is_nomadic = yes
+		OR = {
+			has_starbase_size = roz_ultra_arkship_tier_X
+			owner? = {
+				has_technology = tech_ge_shield
+				is_nomadic = yes
+			}
 		}
 	}
 
@@ -133,9 +139,12 @@ roz_arkship_GE_RDS_L = {
 	}
 
 	potential = {
-		owner? = {
-			has_technology = tech_ge_rds
-			is_nomadic = yes
+		OR = {
+			has_starbase_size = roz_ultra_arkship_tier_X
+			owner? = {
+				has_technology = tech_ge_rds
+				is_nomadic = yes
+			}
 		}
 	}
 
@@ -176,9 +185,12 @@ roz_arkship_GE_CB_L = {
 	}
 
 	potential = {
-		owner? = {
-			has_technology = tech_ge_cb
-			is_nomadic = yes
+		OR = {
+			has_starbase_size = roz_ultra_arkship_tier_X
+			owner? = {
+				has_technology = tech_ge_cb
+				is_nomadic = yes
+			}
 		}
 	}
 
@@ -219,9 +231,12 @@ roz_arkship_ge_shippart_Flagship_B = {
 	}
 
 	potential = {
-		owner? = {
+		OR = {
+			has_starbase_size = roz_ultra_arkship_tier_X
+			owner? = {
 			has_technology = tech_ge_shippart_titian_aura
 			is_nomadic = yes
+			}
 		}
 	}
 
@@ -249,5 +264,33 @@ roz_arkship_ge_shippart_Flagship_B = {
 		weight = 125
 	}
 }
+
+roz_weapon_range = {
+	icon = "GFX_ship_part_roz_advanced_targeting_core"
+	starbase_type = arkship
+	construction_days = 5
+	category = sm_aura_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		has_starbase_size = roz_ultra_arkship_tier_X
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	equipped_component = ENIGMATIC_DECODER
+	equipped_component = ENIGMATIC_DECODER
+	equipped_component = ENIGMATIC_DECODER
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
 
 

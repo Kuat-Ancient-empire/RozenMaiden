@@ -162,6 +162,15 @@ gev_platform_DESC:0 "防御平台将保持静止并向射程内的任何敌人�
  roz_crisis_madgod_boss_DESC: "$roz_crisis_madgod_boss$"
  roz_crisis_madgod_boss_cap: "$roz_crisis_madgod_boss$"
  roz_crisis_madgod_boss_section: "混沌神躯"
+
+###arkship
+ roz_ultra_arkship_tier_X:"§_远航星§!"
+ roz_ultra_arkship_tier_X_DESC:""
+roz_ultra_arkship_tier_X_plural:""
+ roz_ultra_arkship_tier_X_template:"浮雨聚合"
+ roz_ultra_arkship_tier_X_template_plural:"浮雨聚合"
+ roz_ultra_arkship_tier_X_template_DESC:""
+
 ###字体颜色代码
 ##§W W白色
 ##§R R红色

@@ -62,6 +62,9 @@ building_roz_fe_silo_2_desc: "我们可以通过创造一个局部口袋维度�
 building_roz_fe_market_2: "§L星际贸易枢纽§!"
 building_roz_fe_market_2_desc: "这个贸易区划在星系贸易中占据着至高无上的地位，甚至从轨道上都能看到它的巨大尖顶。"
 
+ building_roz_omnipotent_center:"§B全能中心§!"
+ building_roz_omnipotent_center_desc:"这个建筑已经脱离了宇宙常理。"
+
 
 building_roz_fe_mine_2_ark: "$building_roz_fe_mine_2$"
 building_roz_fe_mine_2_ark_desc: "$building_roz_fe_mine_2_desc$"

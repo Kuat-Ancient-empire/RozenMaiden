@@ -9,6 +9,21 @@
 # 	}
 
 # }
+ship_design = {
+	name = NAME_roz_Uranus
+	ship_size = roz_ultra_arkship_tier_X
+	section = {
+		template = roz_ultra_arkship_tier_X_template
+		slot = mid
+
+	}
+	required_component = "JUGGERNAUT_COLD_FUSION_REACTOR"
+	required_component = "HYPER_DRIVE_3"
+	required_component = "COLOSSUS_SHIP_THRUSTER_3"
+	required_component = "SENSOR_3"
+	required_component = "COMBAT_COMPUTER_ARKSHIP"
+}
+
 
 ship_design = {
 	#name = "NAME_ge_sgt_ship"

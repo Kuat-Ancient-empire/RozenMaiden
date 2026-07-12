@@ -5,5 +5,24 @@ starbase_level_roz_juggernaut_wanxiang = {
     collects_trade = no
 }
 
-
+starbase_level_roz_ultra_arkship_tier_X = {
+    ship_size = roz_ultra_arkship_tier_X
+    starbase_capacity_used = 1
+    level_tooltip = military_arkship_tier_3_level_tooltip
+    picture = "GFX_arkship_blueprint_military_tier_3"
+    picture = { trigger = { is_scope_type = fleet } picture = "GFX_arkship_blueprint_military_tier_3" }
+    ai_weight = { weight = 5 }
+    potential_home_base = yes
+    show_in_outliner = yes
+    # display_map_icon = yes
+    # display_empire_shield = yes
+    display_shipyard_button = no
+    downgrade_potential = { always = no }
+    module_slots = {
+        1 2 3 4 5 6 7 8		# Regular slots
+        spinal_mount_1	# Special slot
+        spinal_mount_2
+    }
+    building_slots = { 1 2 3 4 5 6 7 8 9 10 lower_1 lower_2 lower_3 lower_4 }
+}
 

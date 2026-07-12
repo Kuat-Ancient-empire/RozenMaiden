@@ -41,16 +41,12 @@ special_project = {
 	days_to_research = 180
 	tech_department = physics_technology
 	picture = GFX_evt_ap_ge_1
-	location = no
+	location = yes
 	icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
 	timelimit = -1
-	event_scope = planet_event
+	event_scope = country_event
 	on_success = {
-		owner = {
-			country_event = {
-				id = ge_event.39
-			}
-		}
+		country_event = { id = ge_event.39 }
 	}
 }
 

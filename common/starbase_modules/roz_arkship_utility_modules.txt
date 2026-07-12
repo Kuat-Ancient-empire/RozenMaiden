@@ -1,0 +1,141 @@
+roz_engineering_bay = {
+    icon = "GFX_arkship_engineering_bay"
+    construction_days = 5
+    starbase_type = arkship
+    category = sm_naval_support_cat
+
+    potential = {
+        # owner? = {
+        #     has_technology = tech_ge_t_beam
+        #     is_nomadic = yes
+        # }
+        has_starbase_size = roz_ultra_arkship_tier_X
+    }
+
+    possible = {
+    }
+    cannot_fit_on_slots = { spinal_mount_1 }
+
+    resources = {
+        category = starbase_arkship_upgrades
+    }
+
+    station_modifier = {
+        show_only_custom_tooltip = no
+        megastructure_build_speed_mult = 0.05
+    }
+    planet_modifier = {
+        planet_building_capacity_add = 2
+    }
+
+    on_finished = {
+        set_ship_construction_type = starbase_shipyard
+    }
+    on_destroyed = {
+    }
+
+    inline_script = {
+        script = jobs/arkship_module_soldiers_add
+        ZONE = zone_ark_shipwright
+        AMOUNT = @arkship_module_jobs
+    }
+
+    ai_weight = {
+        weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+    }
+}
+roz_grand_archive = {
+    icon = "GFX_arkship_grand_archive"
+    construction_days = 5
+    starbase_type = arkship
+    category = sm_utility_cat
+
+    empire_limit = {
+        base = 1
+    }
+
+    potential = {
+        owner? = {
+            has_technology = tech_galactic_archivism
+            has_grand_archive = no
+            #is_nomadic = yes
+        }
+        has_starbase_size = roz_ultra_arkship_tier_X
+    }
+
+    cannot_fit_on_slots = { spinal_mount_1 }
+
+    resources = {
+        category = starbase_arkship_upgrades
+    }
+
+    country_modifier = {
+        country_vivarium_max_capacity_add = 1000
+    }
+
+    on_finished = {
+        owner = {
+            if = {
+                limit = { has_country_flag = grand_archive_destroyed }
+                remove_country_flag = grand_archive_destroyed
+            }
+            set_country_flag = has_arkship_grand_archive_module
+            country_event = { id = grand_archive.4120 }
+            country_event = { id = grand_archive.4199 }
+            if = {
+                limit = { has_origin = origin_treasure_hunters }
+                country_event = {
+                    id = grand_archive.8090
+                    scopes = { from = prev.solar_system }
+                }
+            }
+        }
+    }
+    on_destroyed = {
+        owner = {
+            remove_country_flag = ga_destroyed_contains_space_fauna
+            if = {
+                limit = { num_vivarium_slots > 0 }
+                set_country_flag = ga_destroyed_contains_space_fauna
+                release_all_vivarium_fauna = { LOCATION = prev.solar_system }
+            }
+            set_country_flag = grand_archive_destroyed
+            remove_country_flag = has_arkship_grand_archive_module
+        }
+    }
+
+    ai_weight = {
+        weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+    }
+}
+
+roz_docking_bay = {
+    icon = "GFX_arkship_docking_bay"
+    construction_days = 5
+    starbase_type = arkship
+    category = sm_utility_cat
+
+    potential = {
+        has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+    }
+    cannot_fit_on_slots = { spinal_mount_1 }
+
+    resources = {
+        category = starbase_arkship_upgrades
+    }
+
+    country_modifier = {
+        country_naval_cap_add = 300
+    }
+
+    station_modifier = {
+        ship_starbase_stockpile_collection_rate_mult = 1
+    }
+
+    ai_weight = {
+        weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+    }
+}
+
+
+

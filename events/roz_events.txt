@@ -234,12 +234,9 @@ country_event = {
 	picture = GFX_evt_ap_ge_1
 	option = {
 		name = ge_event.11.aa
-		#give_technology = {
-			#tech = tech_ge_pd
-		#}
 		enable_special_project = {
 			name = "ge_reactor_project"
-			location = capital_scope
+			#location = capital_scope
 			owner = root
 		}
 		

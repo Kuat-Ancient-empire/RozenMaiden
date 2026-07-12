@@ -222,11 +222,13 @@ ge_event.7777.exit: "§G完成调整§!"
 
 #####
  roz_sgt_aft_up_count_0_2: "水银灯好感度增加0.2点"
+ roz_sgt_aft_up_count_0_5: "水银灯好感度增加0.5点"
  roz_sgt_aft_up_count_1: "水银灯好感度增加1点"
  roz_sgt_aft_up_count_1_5: "水银灯好感度增加1.5点"
  roz_sgt_aft_up_count_5: "水银灯好感度增加5点"
  roz_sgt_aft_down_count_1: "水银灯好感度降低1点"
 
+ roz_krks_aft_up_count_3: "雪华绮晶好感度增加3点"
 
 #########################################
 ge_event.10.t:0 "启示"

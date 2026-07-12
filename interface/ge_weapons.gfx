@@ -818,6 +818,11 @@ spriteTypes = {
 		textureFile = gfx/interface/icons/ship_parts/roz_abyss_armor.dds
 	}
 
+	spriteType = {
+		name = "GFX_ship_part_roz_advanced_targeting_core"
+		textureFile = gfx/interface/icons/ship_parts/ship_part_roz_advanced_targeting_core.dds
+	}
+
 }
 
 

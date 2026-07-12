@@ -168,7 +168,10 @@ Kirakishou_Blast_DESC: "在空间极大的宇宙环境中用蔷薇藤蔓来战�
  roz_abyss_swarmers: "§_深渊感染集群§!"
  roz_abyss_swarmers_DESC: "$roz_abyss_rift_cascade_xl_DESC$"
 
-###starbase modules
+ #ark
+ roz_ultra_arkship_tier_X_level_tooltip: "military_arkship_tier_3_level_tooltip"
+
+###ark modules weapon
  sm_roz_arkship_pd_battery: "$GE_PD$阵列"
  sm_roz_arkship_pd_battery_desc: "覆盖舰体的虚空能点防御阵列体系，能够在来袭的威胁到达舰船之前对其抹除。"
  roz_sm_arkship_pd_battery_tt: "$ARKSHIP_COMPONENTS$\n$t$$ADDS_ARKSHIP_PD_SLOTS$\n$t$这些炮塔将会装有$GE_PD$。\n"
@@ -188,6 +191,18 @@ Kirakishou_Blast_DESC: "在空间极大的宇宙环境中用蔷薇藤蔓来战�
  sm_roz_arkship_T_battery: "$ROZ_ARK_T_BEAM$"
  sm_roz_arkship_T_battery_desc: "$ROZ_ARK_T_BEAM_DESC$"
  roz_sm_arkship_spinal_devastator_mount_tt: "$ARKSHIP_COMPONENTS$\n$t$$ADDS_ARKSHIP_PD_SLOTS$\n$t$这些炮塔将会装有$ROZ_ARK_T_BEAM$。\n"
+
+#ark modules utility
+ sm_roz_engineering_bay: "巨型工程港"
+ sm_roz_engineering_bay_desc: "远超常规的工程枢纽，足以维持方舟的日常运转。"
+ sm_roz_docking_bay: "停泊港区"
+ sm_roz_docking_bay_desc: "这个宏大的$sm_arkship_docking_bay_desc$"
+ sm_roz_grand_archive: "$sm_arkship_grand_archive$"
+ sm_roz_grand_archive_desc: "$sm_arkship_grand_archive_desc$"
+
+#ark building
+ sm_roz_weapon_range: "先进目标定位核心"
+ sm_roz_weapon_range_desc: "Starsector®"
 
 ##字体颜色代码
 ##§W W白色

@@ -1096,6 +1096,19 @@ roz_add_aft_govern_planet = {
 	}
 }
 
+#收集真红碎片增加的好感度
+roz_shinku_parts_collection_increase_aft = {
+	optimize_memory
+	custom_tooltip = roz_sgt_aft_up_count_0_5
+	hidden_effect = { event_target:roz_leader_suigintou_global_target@root = { change_variable = { which = roz_suigintou_affection value = 0.5 } } }
+	if = {
+		limit = { has_country_flag = roz_kirakishou_get }
+		custom_tooltip = roz_krks_aft_up_count_3
+		hidden_effect = { event_target:roz_leader_kirakishou_global_target@root = { change_variable = { which = roz_kirakishou_affection value = 3 } } }
+	}
+}
+
+
 # ge_hostile_fleet_modifier = {
 # 	optimize_memory
 # 	add_modifier = {
@@ -4510,6 +4523,7 @@ roz_lgate_create_reward_planet = {
 		give_technology = { tech = tech_power_hub_1 }
 		give_technology = { tech = tech_planetary_unification }
 		give_technology = { tech = tech_doctrine_navy_size_1 }
+		give_technology = { tech = tech_hyper_entertainment_forum }
 		random_owned_fleet = {
 			owner = {
 				create_leader = {
@@ -4597,77 +4611,82 @@ roz_lgate_create_reward_planet = {
 									}
 
 									add_building = {
-										building = building_roz_fe_stronghold
+										building = building_roz_omnipotent_center
 										district = district_ark_city
 										#zone = zone_default
 									}
-									add_building = {
-										building = building_roz_fe_clinic_2
-										district = district_ark_city
-									}
-
-									add_building = {
-										building = building_roz_fe_administration_2
-										district = district_ark_city
-										zone = zone_ark_research_unity
-									}
-									add_building = {
-										building = building_roz_fe_lab_2
-										district = district_ark_city
-										zone = zone_ark_research_unity
-									}
-									add_building = {
-										building = building_roz_master_archive
-										district = district_ark_city
-										zone = zone_ark_research_unity
-									}
-
-									add_building = {
-										building = building_roz_dimensional_fabricator
-										district = district_ark_city
-										zone = zone_ark_industrial
-									}
-									add_building = {
-										building = building_roz_affluence_center
-										district = district_ark_city
-										zone = zone_ark_industrial
-									}
-									add_building = {
-										building = building_roz_nano_forge
-										district = district_ark_city
-										zone = zone_ark_industrial
-									}
-
-									add_building = {
-										building = building_roz_class_5_singularity
-										district = district_ark_generator
-										zone = zone_energy
-									}
-									add_building = {
-										building = building_roz_fe_market_2
-										district = district_ark_generator
-										zone = zone_energy
-									}
-
-									add_building = {
-										building = building_roz_fe_mine_2_ark
-										district = district_ark_military
-										zone = zone_ark_shipwright
-									}
-									add_building = {
-										building = building_roz_fe_silo_2_ark
-										district = district_ark_military
-										zone = zone_ark_shipwright
-									}
-
-									add_building = {
-										building = building_roz_nourishment_center_ark
-										zone = zone_ark_food
-									}
-									add_building = {
-										building = building_roz_fe_entertainment_2_ark
-										zone = zone_ark_food
-									}
+									# add_building = {
+									# 	building = building_roz_fe_stronghold
+									# 	district = district_ark_city
+									# 	#zone = zone_default
+									# }
+									# add_building = {
+									# 	building = building_roz_fe_clinic_2
+									# 	district = district_ark_city
+									# }
+									#
+									# add_building = {
+									# 	building = building_roz_fe_administration_2
+									# 	district = district_ark_city
+									# 	zone = zone_ark_research_unity
+									# }
+									# add_building = {
+									# 	building = building_roz_fe_lab_2
+									# 	district = district_ark_city
+									# 	zone = zone_ark_research_unity
+									# }
+									# add_building = {
+									# 	building = building_roz_master_archive
+									# 	district = district_ark_city
+									# 	zone = zone_ark_research_unity
+									# }
+									#
+									# add_building = {
+									# 	building = building_roz_dimensional_fabricator
+									# 	district = district_ark_city
+									# 	zone = zone_ark_industrial
+									# }
+									# add_building = {
+									# 	building = building_roz_affluence_center
+									# 	district = district_ark_city
+									# 	zone = zone_ark_industrial
+									# }
+									# add_building = {
+									# 	building = building_roz_nano_forge
+									# 	district = district_ark_city
+									# 	zone = zone_ark_industrial
+									# }
+									#
+									# add_building = {
+									# 	building = building_roz_class_5_singularity
+									# 	district = district_ark_generator
+									# 	zone = zone_energy
+									# }
+									# add_building = {
+									# 	building = building_roz_fe_market_2
+									# 	district = district_ark_generator
+									# 	zone = zone_energy
+									# }
+									#
+									# add_building = {
+									# 	building = building_roz_fe_mine_2_ark
+									# 	district = district_ark_military
+									# 	zone = zone_ark_shipwright
+									# }
+									# add_building = {
+									# 	building = building_roz_fe_silo_2_ark
+									# 	district = district_ark_military
+									# 	zone = zone_ark_shipwright
+									# }
+									#
+									# add_building = {
+									# 	building = building_roz_nourishment_center_ark
+									# 	zone = zone_ark_food
+									# }
+									# add_building = {
+									# 	building = building_roz_fe_entertainment_2_ark
+									# 	zone = zone_ark_food
+									# }
 								}
 							}
 						}

@@ -6,9 +6,12 @@ roz_arkship_pd_battery = {
 	category = sm_pd_cat
 
 	potential = {
-		owner? = {
-			has_technology = tech_ge_pd
-			is_nomadic = yes
+		OR = {
+			has_starbase_size = roz_ultra_arkship_tier_X
+			owner? = {
+				has_technology = tech_ge_pd
+				is_nomadic = yes
+			}
 		}
 	}
 
@@ -46,9 +49,12 @@ roz_arkship_laser_battery = {
 	category = sm_energy_cat
 
 	potential = {
-		owner? = {
-			has_technology = tech_ge_laser_cannon
-			is_nomadic = yes
+		OR = {
+			has_starbase_size = roz_ultra_arkship_tier_X
+			owner? = {
+				has_technology = tech_ge_laser_cannon
+				is_nomadic = yes
+			}
 		}
 	}
 
@@ -96,9 +102,12 @@ roz_arkship_burst_battery = {
 	category = sm_energy_cat
 
 	potential = {
-		owner? = {
-			has_technology = tech_ge_energy_torpedo
-			is_nomadic = yes
+		OR = {
+			has_starbase_size = roz_ultra_arkship_tier_X
+			owner? = {
+				has_technology = tech_ge_energy_torpedo
+				is_nomadic = yes
+			}
 		}
 	}
 
@@ -146,9 +155,12 @@ roz_arkship_xl_battery = {
 	category = sm_energy_cat
 
 	potential = {
-		owner? = {
-			has_technology = tech_ge_xl_beam
-			is_nomadic = yes
+		OR = {
+			has_starbase_size = roz_ultra_arkship_tier_X
+			owner? = {
+				has_technology = tech_ge_xl_beam
+				is_nomadic = yes
+			}
 		}
 	}
 

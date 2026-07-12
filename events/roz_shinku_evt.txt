@@ -741,6 +741,7 @@ country_event = {
         roz_remove_shinkureilc_effect = yes
         add_relic = roz_shinku's_body_assembly_stage_1
         add_event_chain_counter = { event_chain = roz_shoujonotsukurikata_chain amount = 1 counter = roz_shinku_progress }
+        roz_shinku_parts_collection_increase_aft = yes
     }
 }
 
@@ -768,6 +769,7 @@ country_event = {   #没有雪华的情况
         #roz_remove_shinkureilc_effect = yes
         country_event = { id = roz_shinku_evt.121 }
         add_event_chain_counter = { event_chain = roz_shoujonotsukurikata_chain amount = 1 counter = roz_shinku_progress }
+        roz_shinku_parts_collection_increase_aft = yes
     }
 }
 
@@ -808,6 +810,7 @@ country_event = {   #有雪华的情况
         roz_remove_shinkureilc_effect = yes
         country_event = { id = roz_shinku_evt.131 }
         add_event_chain_counter = { event_chain = roz_shoujonotsukurikata_chain amount = 1 counter = roz_shinku_progress }
+        roz_shinku_parts_collection_increase_aft = yes
     }
 }
 
@@ -839,6 +842,7 @@ country_event = {
         add_relic = roz_shinku's_body_assembly_stage_3
         remove_relic = roz_shinku's_body_assembly_stage_2
         country_event = { id = roz_shinku_evt.401 days = 30 }
+        roz_shinku_parts_collection_increase_aft = yes
     }
 }
 

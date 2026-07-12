@@ -97,6 +97,7 @@ ge_flagship = {
 					is_scope_type = starbase
 					has_starbase_building = capital_yards
 				}
+				has_starbase_module = arkship_capital_shipyard
 			}
 		}
 	}
@@ -135,6 +136,10 @@ Ge_Ragnarok = {	#永恒之枪
 	acceleration = 0.15
 	rotation_speed = 0.1
 	collision_radius = 40
+	hero_ship = {						# Use the Hero Ship UI, not the Juggernaut's.
+		hero_ship_fleet_background = "GFX_fleet_view_paladin_ship"
+		custom_class_text_color = R
+	}
 	modifier = {
 		ship_armor_add = 194000
 		ship_armor_regen_add_static = 1000
@@ -208,6 +213,7 @@ Ge_Ragnarok = {	#永恒之枪
 					is_scope_type = starbase
 					has_starbase_size >= starbase_citadel
 				}
+				has_starbase_module = arkship_capital_shipyard
 			}
 		}
 	}	
@@ -501,6 +507,10 @@ ge_black_dragon = {
 	required_component_set = "combat_computers"
 	required_component_set = "ship_aura_components"
 
+	hero_ship = {						# Use the Hero Ship UI, not the Juggernaut's.
+		hero_ship_fleet_background = "GFX_fleet_view_behemoth_stage_2"
+		custom_class_text_color = M
+	}
 }
 
 
@@ -519,6 +529,10 @@ Ge_Vampirilis_Ortaam = {	#斗士
 		ship_shield_regen_add_static = 200
 		ship_cloaking_detection_add = 10
 		ship_cloaking_strength_add = 10
+	}
+	hero_ship = {						# Use the Hero Ship UI, not the Juggernaut's.
+		hero_ship_fleet_background = "GFX_fleet_view_behemoth_stage_4"
+		custom_class_text_color = M
 	}
 	ship_modifier = {
 		ship_accuracy_add = 5
@@ -919,6 +933,7 @@ roz_juggernaut_wanxiang = {	#万象
 					is_scope_type = starbase
 					has_starbase_size >= starbase_citadel
 				}
+				has_starbase_module = arkship_capital_shipyard
 			}
 		}
 		custom_tooltip = {
@@ -935,6 +950,7 @@ roz_juggernaut_wanxiang = {	#万象
 					is_scope_type = starbase
 					has_starbase_building = capital_yards
 				}
+				has_starbase_module = arkship_capital_shipyard
 			}
 		}
 	}
@@ -970,7 +986,146 @@ roz_juggernaut_wanxiang = {	#万象
 }
 
 
+###arkship
+roz_ultra_arkship_tier_X = {
+	#preserve_movement_animation_progress = yes
+	# Arkship specific stuff
+	hero_ship = {						# Use the Hero Ship UI, not the Juggernaut's.
+		hero_ship_fleet_background = "GFX_arkship_fleetview_military"
+		custom_class_text_color = R
+	}
+	class = shipclass_starbase			# Needs to be a Starbase to have starbase modules and buildings.
+	carries_colony = pc_ark				# Enables Arkship custom UI.
+	display_attack_neutral_fleet_button = no
+	automation_icon = GFX_fleet_order_auto_explore_arkship
+	arkship_picture = "arkship_military"
+	auto_upgrade = no					# Arkships automatically upgrade their components.
+	can_disable = yes					# Arkships can be disabled.
+	stay_disabled = yes					# Arkships stay disabled until explicitly re-enabled from script.
+	never_lost = yes
+	collects_stockpile_from = {			# Arkships can collect resources from Waystations or Logistic Ships.
+		shipclass_starbase
+		shipclass_constructor
+	}
+	collects_stockpile_to_country = yes
+	accepts_all_modifiers = yes
 
+	takes_name_from_ship_design = yes
+
+	potential_construction = {
+		always = no
+	}
+	possible_construction = {
+		always = no
+	}
+
+	# Audio
+	on_click_sound = "arkship_military_selection"
+
+	# 2D Art
+	icon = SRA_ship_size_SOGZ
+	icon_frame = 16
+	ship_class_icon_frame = 64
+	map_icon_override = {
+		normal = GFX_ship_icons_type_arkship
+		mixed = GFX_ship_icons_type_arkship_mixed
+		cloaked = GFX_ship_icons_type_arkship_cloaked
+		encamped = GFX_ship_icons_type_arkship_encamped
+	}
+
+	# 3D Art
+	entity = military_arkship_01_stage_3_entity
+	section_slots = {
+		"mid"				=	{ locator = "part1" }
+		"1"					=	{ locator = "part1" }
+		"2"					=	{ locator = "part1" }
+		"3"					=	{ locator = "part1" }
+		"4"					=	{ locator = "part1" }
+		"5"					=	{ locator = "part1" }
+		"6"					=	{ locator = "part1" }
+		"spinal_mount_1"		=	{ locator = "part1" }
+	}
+
+	# Ship setup
+	formation_priority = 256
+	max_speed = 100
+	acceleration = 0.35
+	rotation_speed = 0.15
+	construction_offset_mult = @arkship_construction_offset_4
+	collision_radius = 128
+	max_hitpoints = 20000
+	modifier = {
+		ship_evasion_add = 25
+		ship_armor_add = 50000
+		ship_shield_add = 50000
+		ship_hull_regen_add_static = 250
+		ship_armor_regen_add_static = 750
+		ship_shield_regen_add_static = 750
+		ship_cloaking_strength_add = 16
+		ship_cloaking_detection_add = 16
+		starbase_module_capacity_add = 7
+		starbase_building_capacity_add = 8
+		planet_max_districts_add = 10
+		planet_storm_devastation_mult = -0.5
+		planet_jobs_produces_mult = 0.1
+	}
+	ship_modifier = {
+		ship_starbase_stockpile_collection_rate_add = @arkship_collection_rate_add_625
+		ship_shield_hardening_add = 0.1
+		ship_armor_hardening_add = 0.1
+		ship_damage_reduction_add = 25
+		ship_shield_damage_mult = 0.01
+		ship_armor_damage_mult = 0.1
+		ship_hull_damage_mult = 0.1
+	}
+	size_multiplier = @SRA_size_multiplier_flagship
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 32
+
+	is_designable = no
+	num_target_locators = 12
+	is_space_station = no
+	can_have_federation_design = no
+	is_civilian = no
+	components_add_to_cost = no
+
+	available_to_everyone = yes
+
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+
+
+	combat_disengage_chance = 5
+
+	construction_type = starbase_shipyard
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+
+	base_buildtime = 2000
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_7 * SRA_global_ship_cost_factor ]
+		}
+		# upkeep = {
+		# 	energy = @[ SRA_ship_cost_7 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+		# 	alloys = @[ SRA_ship_cost_7 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		# }
+	}
+
+	min_upgrade_cost = {
+		alloys = 1
+	}
+
+	ai_ship_data = {
+	}
+}
 
 
 

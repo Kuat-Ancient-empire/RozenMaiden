@@ -1354,14 +1354,26 @@ building_roz_fe_entertainment_2_ark = {
 	category = amenity
 	potential = {
 		exists = owner
+		OR = {
+			has_carrier_flag = roz_lgate_arkship
+			AND = {
+				solar_system? = {
+					has_star_flag = graygoo_factory_system
+				}
+				owner = {
+					has_country_flag = roz_lgate_create_flag
+				}
+			}
+		}
 	}
-	building_sets = {
-		generator
-		mining
-		farming
-		urban
-		harvest
-	}
+	planet_limit = 1
+	# building_sets = {
+	# 	generator
+	# 	mining
+	# 	farming
+	# 	urban
+	# 	harvest
+	# }
 	destroy_trigger = {
 		always = no
 	}
@@ -1405,13 +1417,13 @@ building_roz_nourishment_center_ark = {
 	can_be_disabled = no
 	can_be_ruined = no
 	icon = building_nourishment_center
-	building_sets = {
-		generator
-		mining
-		farming
-		urban
-		harvest
-	}
+	# building_sets = {
+	# 	generator
+	# 	mining
+	# 	farming
+	# 	urban
+	# 	harvest
+	# }
 	category = resource
 	destroy_trigger = {
 		always = no
@@ -1453,17 +1465,30 @@ building_roz_nourishment_center_ark = {
 
 building_roz_fe_silo_2_ark = {
 	base_buildtime = @b2_time
-	can_build = no
+	can_build = yes
 	icon = building_fe_silo_2
 	category = resource
 	potential = {
 		exists = owner
+		OR = {
+			has_carrier_flag = roz_lgate_arkship
+			AND = {
+				solar_system? = {
+					has_star_flag = graygoo_factory_system
+				}
+				owner = {
+					has_country_flag = roz_lgate_create_flag
+				}
+			}
+		}
 	}
-	building_sets = {
-		government
-		fortress
-		industrial
-	}
+	planet_limit = 1
+	# building_sets = {
+	# 	government
+	# 	unity
+	# 	fortress
+	# 	industrial
+	# }
 	destroy_trigger = {
 		always = no
 	}
@@ -1499,17 +1524,30 @@ building_roz_fe_silo_2_ark = {
 
 building_roz_fe_mine_2_ark = {
 	base_buildtime = @b2_time
-	can_build = no
+	can_build = yes
 	icon = building_fe_mine_2
 	category = resource
 	potential = {
 		exists = owner
+		OR = {
+			has_carrier_flag = roz_lgate_arkship
+			AND = {
+				solar_system? = {
+					has_star_flag = graygoo_factory_system
+				}
+				owner = {
+					has_country_flag = roz_lgate_create_flag
+				}
+			}
+		}
 	}
-	building_sets = {
-		government
-		fortress
-		industrial
-	}
+	planet_limit = 1
+	# building_sets = {
+	# 	government
+	# 	unity
+	# 	fortress
+	# 	industrial
+	# }
 	destroy_trigger = {
 		always = no
 	}
@@ -1574,6 +1612,631 @@ building_roz_fe_mine_2_ark = {
 			}
 		}
 		text = job_fe_acolyte_mine_effect_desc
+	}
+}
+
+########合并建筑
+building_roz_omnipotent_center = {
+	base_buildtime = @b2_time
+	can_build = no
+	can_demolish = yes
+	can_be_disabled = no
+	can_be_ruined = no
+	icon = building_roz_omnipotent_center
+	# building_sets = {
+	# 	origin
+	# 	government
+	# 	urban
+	# }
+	category = manufacturing
+	potential = {
+		exists = owner
+		OR = {
+			has_carrier_flag = roz_lgate_arkship
+			AND = {
+				solar_system? = {
+				has_star_flag = graygoo_factory_system
+				}
+				owner = {
+					has_country_flag = roz_lgate_create_flag
+				}
+			}
+		}
+	}
+	planetary_ftl_inhibitor = yes
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_politician_add = @roz_fe_jobs
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_head_researcher_effect_desc
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+			job_calculator_physicist_add = @roz_fe_jobs
+			job_calculator_biologist_add = @roz_fe_jobs
+			job_calculator_engineer_add = @roz_fe_jobs
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		text = job_brain_drone_effect_desc
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			job_calculator_physicist_add = @roz_fe_jobs
+			job_calculator_biologist_add = @roz_fe_jobs
+			job_calculator_engineer_add = @roz_fe_jobs
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		text = job_calculator_effect_desc
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+	}
+	planet_modifier = {
+		planet_physicists_physics_research_produces_add = 3
+		planet_biologists_society_research_produces_add = 3
+		planet_engineers_engineering_research_produces_add = 3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1000
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+		job_bio_trophy_add = 5000
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			NOT = {
+				has_modifier = slave_colony
+			}
+		}
+		modifier = {
+			job_soldier_add = @roz_fe_jobs
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			has_modifier = slave_colony
+		}
+		modifier = {
+			job_battle_thrall_add = @roz_fe_jobs
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_warrior_drone_add = @roz_fe_jobs
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		text = job_soldier_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_warrior_drone_effect_desc
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire = no
+				is_megacorp = no
+				is_worker_coop_empire = no
+			}
+		}
+		modifier = {
+			job_bureaucrat_add = @roz_fe_jobs
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_fallen_empire = no
+				is_megacorp = no
+				is_worker_coop_empire = no
+			}
+		}
+		text = job_bureaucrat_effect_desc
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire = no
+				is_megacorp = yes
+				is_worker_coop_empire = no
+			}
+		}
+		modifier = {
+			job_bureaucrat_add = @roz_fe_jobs
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_fallen_empire = no
+				is_megacorp = yes
+				is_worker_coop_empire = no
+			}
+		}
+		text = job_manager_effect_desc
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire = no
+				is_worker_coop_empire = yes
+			}
+		}
+		modifier = {
+			job_bureaucrat_add = @roz_fe_jobs
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_fallen_empire = no
+				is_worker_coop_empire = yes
+			}
+		}
+		text = job_steward_effect_desc
+	}
+	triggered_planet_pop_group_modifier_for_all = {
+		potential = {
+			always = yes
+		}
+		bonus_pop_growth = 20
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_cloning_tradition = yes
+				has_tradition = tr_genetics_efficient_cloning
+			}
+		}
+		fake_pop_growth_mod = 20
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 200
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				game_start_auto_mod_empire = yes
+			}
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 200
+		}
+	}
+	##
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_building_build_speed_mult = 0.1
+		planet_decision_enact_speed_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_healthcare_add = 300
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 600
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				game_start_auto_mod_empire = yes
+			}
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 600
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = clone_army_full_potential
+				has_active_tradition = tr_cloning_artificial_population_clone_army
+			}
+		}
+		clone_soldiers_sustained = @clones_sustained_low
+		mult = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_purity_heightened_attributes_tradition = yes
+					has_cloning_artificial_population_tradition = yes
+					has_mutation_somatic_subversiveness_tradition = yes
+				}
+			}
+		}
+		pop_bonus_workforce_mult = @medical_workforce_mult
+		mult = 2
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_healthcare_effect_desc
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
+			}
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+			}
+		}
+		branch_office_value_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
+			}
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
+			}
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
+			}
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_galactic_community_member = yes
+			}
+			is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+			has_modifier = pm_extradimensional_experimentation
+		}
+		modifier = {
+			job_physicist_add = 200
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_galactic_community_member = yes
+			}
+			is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+			has_modifier = pm_extradimensional_experimentation
+		}
+		modifier = {
+			job_calculator_physicist_add = 200
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+				has_tradition = tr_purity_finish
+			}
+		}
+		planet_building_build_speed_mult = 0.03
+		planet_decision_enact_speed_mult = 0.03
+	}
+	triggered_planet_modifier = {
+		potential = {
+			NOT = {
+				is_planet_class = pc_shattered_ring_habitable
+			}
+			exists = owner
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		modifier = {
+			job_fe_acolyte_mine_add = @roz_fe_jobs
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			NOT = {
+				is_planet_class = pc_shattered_ring_habitable
+			}
+			exists = owner
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		text = job_fe_acolyte_mine_effect_desc
+	}
+	country_modifier = {
+		country_scientist_cap_add = 1
+		ship_shield_hardening_add = 0.2
+		country_naval_cap_mult = 0.15
+		leader_lifespan_add = 25
+		country_trade_produces_mult = 0.35
+		country_trade_fee = -0.1
+		country_resource_max_add = 750000
+		country_resource_max_minor_artifacts_add = 7500
+
+	}
+	planet_modifier = {
+		planet_artisans_produces_mult = 0.2
+		pop_environment_tolerance = 0.1
+		planet_farmers_produces_mult = 0.2
+		planet_miners_produces_mult = 0.2
+		planet_farmers_exotic_gases_produces_add = 0.05
+		planet_miners_volatile_motes_produces_add = 0.05
+		planet_technician_rare_crystals_produces_add = 0.05
+		planet_technician_produces_mult = 0.2
+		planet_structures_upkeep_mult = -0.1
+		planet_metallurgists_produces_mult = 0.15
+		planet_housing_add = 8000
+		planet_amenities_add = 25000
+		planet_pops_upkeep_mult = -0.2
+		planet_crime_add = -75
+		planet_orbital_bombardment_damage = -1
+		pop_housing_usage_mult = -0.2
+		planet_bureaucrats_unity_produces_add = 5
+		planet_bureaucrats_trade_produces_add = 2
+		planet_jobs_unity_produces_mult = 0.15
+		planet_civilians_unity_produces_add = 0.5
+		pop_bureaucrat_bonus_workforce_mult = 0.15
+		district_automated_workforce = 0.25
+		planet_traders_trade_produces_add = 3
+		pop_trader_bonus_workforce_mult = 0.15
+		job_entertainer_add = 1500
+		pop_bonus_workforce_mult = 0.25
+		planet_entertainers_upkeep_mult = -0.2
+		planet_biologists_minor_artifacts_produces_add = 0.15
+		district_mining_max = @b4_max_districts_add
+
+	}
+	inline_script = {
+		script = jobs/miners_add
+		AMOUNT = 2000
+	}
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = 300
+	}
+	inline_script = {
+		script = jobs/biologists_add
+		AMOUNT = 300
+	}
+	inline_script = {
+		script = "jobs/trader_add"
+		AMOUNT = 1500
+	}
+	inline_script = {
+		script = jobs/spawning_drone_add
+		AMOUNT = 300
+	}
+	inline_script = {
+		script = jobs/factory_add
+		AMOUNT = @roz_fe_jobs
+	}
+	inline_script = {
+		script = jobs/farmers_add
+		AMOUNT = @roz_fe_jobs
+	}
+	inline_script = {
+		script = jobs/technicians_add
+		AMOUNT = @roz_fe_jobs
+	}
+	inline_script = {
+		script = jobs/foundry_add
+		AMOUNT = @roz_fe_jobs
+	}
+	resources = {
+		category = planet_buildings
+		produces = {
+			energy = 1000
+			consumer_goods = 500
+			alloys = 350
+			food = 750
+			minerals = 2000
+			rare_crystals = 30
+			exotic_gases = 30
+			volatile_motes = 30
+			sr_zro = 10
+			sr_dark_matter = 10
+			sr_living_metal = 10
+			nanites = 10
+			minor_artifacts = 2
+			physics_research = 650
+			society_research = 650
+			engineering_research = 650
+			unity = 250
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_KZ_VOY_astral_magic
+				}
+			}
+			KZ_VOY_astraldites = 25
+			KZ_VOY_cavorites = 20
+			KZ_VOY_stellar_core = 10
+			KZ_VOY_astral_sakura = 5
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_KZ_VOY_astral_magic
+					has_technology = tech_KZ_VOY_hyperstructure
+				}
+			}
+			KZ_VOY_hyperstructure_alloys = 10
+		}
+		upkeep = {
+			minerals = 25
+			energy = 10
+		}
+	}
+	upgrades = {
 	}
 }
 

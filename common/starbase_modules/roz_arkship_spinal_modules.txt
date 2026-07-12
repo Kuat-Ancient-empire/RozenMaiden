@@ -6,9 +6,12 @@ roz_arkship_T_battery = {
 	category = sm_spinal_cat
 
 	potential = {
-		owner? = {
-			has_technology = tech_ge_t_beam
-			is_nomadic = yes
+		OR = {
+			has_starbase_size = roz_ultra_arkship_tier_X
+			owner? = {
+				has_technology = tech_ge_t_beam
+				is_nomadic = yes
+			}
 		}
 	}
 
