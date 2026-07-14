@@ -21,7 +21,8 @@ roz_arkship_T_battery = {
 		is_nomadic = yes
 	}
 
-	fits_on_slots = { spinal_mount_1 }
+	fits_on_slots = { spinal_mount_1 spinal_mount_2 spinal_mount_3 spinal_mount_4 }
+
 
 	resources = {
 		category = starbase_arkship_upgrades
@@ -53,3 +54,67 @@ roz_arkship_T_battery = {
 		}
 	}
 }
+
+roz_arkship_capital_shipyard = {
+	icon = "GFX_arkship_capital_shipyard"
+	section = "ARKSHIP_SPINAL_SHIPYARD"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_ge_section
+		}
+		has_starbase_size = roz_ultra_arkship_tier_X
+	}
+
+	show_in_tech = "tech_arkship_tier_3"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			volatile_motes = @arkship_cost_strategic_500
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			volatile_motes = @arkship_upkeep_strategic_2
+		}
+	}
+
+	station_modifier = {
+		show_only_custom_tooltip = no
+		custom_tooltip = sm_arkship_capital_shipyard_tt
+		starbase_shipyard_build_speed_mult = 0.750
+	}
+	planet_modifier = {
+		planet_building_capacity_add = 8
+		planet_building_build_speed_mult = 0.750
+	}
+
+	ship_modifier = {
+		ship_starting_experience_add = 300
+	}
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_shipwright
+		AMOUNT = 100
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+

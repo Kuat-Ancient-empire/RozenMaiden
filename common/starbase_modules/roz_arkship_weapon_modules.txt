@@ -200,3 +200,90 @@ roz_arkship_xl_battery = {
 	}
 }
 
+roz_arkship_pd_battery_lowtech = {
+	icon = "GFX_arkship_pd_battery"
+	section = "ARKSHIP_PD_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_pd_cat
+
+	potential = {
+		owner? = {
+		has_technology = tech_pd_tracking_1
+		}
+		has_starbase_size = roz_ultra_arkship_tier_X
+	}
+
+	show_in_tech = "tech_pd_tracking_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_85
+		}
+	}
+
+	component_set = POINT_DEFENCE_1
+	show_component_tooltips = yes
+	custom_tooltip_with_modifiers = sm_arkship_pd_battery_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+roz_arkship_hangar_bay_lowtech = {
+	icon = "GFX_arkship_hangar_bay"
+	section = "ARKSHIP_HANGAR_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_strike_craft_cat
+
+	potential = {
+		owner? = {
+		has_technology = tech_strike_craft_1
+		}
+		has_starbase_size = roz_ultra_arkship_tier_X
+	}
+
+	show_in_tech = "tech_strike_craft_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+			exotic_gases = @arkship_cost_strategic_45
+		}
+	}
+
+	component_set = SCOUT_HANGAR_1
+	show_component_tooltips = yes
+	custom_tooltip_with_modifiers = sm_arkship_hangar_bay_tt
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_flight_decks
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_strike_craft = yes
+		}
+	}
+}
+

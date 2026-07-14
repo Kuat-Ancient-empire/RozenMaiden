@@ -292,5 +292,96 @@ roz_weapon_range = {
 	}
 }
 
+roz_arkship_shield = {
+	icon = "GFX_arkship_shield"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
 
+	starbase_limit = {
+		base = -1		# Uncapped
+	}
+
+	potential = {
+		owner? = {
+		has_technology = tech_shields_1
+		}
+		has_starbase_size = roz_ultra_arkship_tier_X
+	}
+
+	show_in_tech = "tech_shields_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 80
+			exotic_gases = 60
+		}
+	}
+
+	equipped_component = LARGE_SHIELD_1
+	equipped_component = LARGE_SHIELD_1
+	equipped_component = LARGE_SHIELD_1
+	equipped_component = LARGE_SHIELD_1
+	show_component_tooltips = yes
+	custom_tooltip = sm_arkship_shield_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_shields = yes
+		}
+	}
+}
+
+roz_arkship_armor = {
+	icon = "GFX_arkship_armor"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1		# Uncapped
+	}
+
+	potential = {
+		owner? = {
+		has_technology = tech_ship_armor_1
+		}
+		has_starbase_size = roz_ultra_arkship_tier_X
+	}
+
+	show_in_tech = "tech_ship_armor_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 350
+		}
+	}
+
+	equipped_component = LARGE_ARMOR_1
+	equipped_component = LARGE_ARMOR_1
+	equipped_component = LARGE_ARMOR_1
+	equipped_component = LARGE_ARMOR_1
+	show_component_tooltips = yes
+	custom_tooltip = sm_arkship_armor_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_armor = yes
+		}
+	}
+}
 

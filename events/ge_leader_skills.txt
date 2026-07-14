@@ -937,6 +937,15 @@ fleet_event = {
 }
 
 #真红-里莲华
+country_event = {
+	id = ge_skills.601
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+}
+
 fleet_event = {
 	id = ge_skills.60
 	hide_window = yes

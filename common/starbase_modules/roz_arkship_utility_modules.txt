@@ -116,7 +116,7 @@ roz_docking_bay = {
     category = sm_utility_cat
 
     potential = {
-        has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+        has_starbase_size = roz_ultra_arkship_tier_X
     }
     cannot_fit_on_slots = { spinal_mount_1 }
 
