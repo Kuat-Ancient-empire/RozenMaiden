@@ -4532,27 +4532,29 @@ roz_lgate_create_reward_planet = {
 					name = random
 					skill = 3
 				}
+				add_ship_design = NAME_roz_Uranus
 				create_fleet = {
 					effect = {
 						set_owner = prev
 						create_ship = {
 							name = random
 							create_colony = yes
-							random_existing_design = civilian_arkship_tier_1
+							design = NAME_roz_Uranus
+							#random_existing_design = civilian_arkship_tier_1
 							effect = {
 								save_event_target_as = roz_arkship
 								initialize_arkship_starbase_effect = yes
 								starbase = {
-									set_starbase_building = {
-										slot = 4
-										building = arkship_shield
-									}
-									set_starbase_building = {
-										slot = 3
-										building = arkship_armor
-									}
+									# set_starbase_building = {
+									# 	slot = 4
+									# 	building = arkship_shield
+									# }
+									# set_starbase_building = {
+									# 	slot = 3
+									# 	building = arkship_armor
+									# }
 								}
-								set_graphical_culture = civilian_arkship
+								#set_graphical_culture = civilian_arkship
 								colony = {
 									add_deposit = d_meals_in_pods
 									set_carrier_flag = roz_lgate_arkship
@@ -4691,7 +4693,7 @@ roz_lgate_create_reward_planet = {
 							}
 						}
 						set_location = {
-							target = graygoo_factory_system.system_star
+							target = event_target:graygoo_factory_system.system_star
 							distance = 0
 							angle = random
 						}

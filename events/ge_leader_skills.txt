@@ -942,7 +942,16 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		
+		fromfrom = {
+			exists = leader
+			leader = {
+				has_leader_flag = roz_shinku_flag
+				leader_class = commander
+			}
+		}
+	}
+	immediate = {
+		fromfrom = { fleet_event = { id = ge_skills.60 } }
 	}
 }
 

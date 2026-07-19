@@ -95,7 +95,7 @@ on_entering_battle = {
 		ge_affection.15 		#接战数值初始化-敌方战力计算
 		roz_shinku_evt.588 		#深渊压制
 
-		ge_skills.60			#真红机制 里莲华
+		ge_skills.601			#真红机制 里莲华
 	}
 }
 
