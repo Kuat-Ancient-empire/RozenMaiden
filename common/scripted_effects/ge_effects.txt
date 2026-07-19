@@ -1380,7 +1380,7 @@ create_ge_kirakishou_hostile_ship = {
 					}
 					add_modifier = {
 						modifier = roz_krks_bf_stage1_HK_buff
-						multiplier = 0.0005
+						multiplier = 0.05
 					}
 				}
 				save_global_event_target_as = kirakishou_Avatar_fleet@root
@@ -1493,7 +1493,7 @@ create_ge_kirakishou_hostile_ship_stage2 = {
 				}
 				add_modifier = {
 					modifier = roz_krks_bf_stage2_HK_buff
-					multiplier = 0.0005
+					multiplier = 0.05
 				}
 			}
 
@@ -1594,7 +1594,7 @@ create_ge_kirakishou_hostile_ship_stage3 = {
 				}
 				add_modifier = {
 					modifier = roz_krks_bf_stage3_HK_buff
-					multiplier = 0.0005
+					multiplier = 0.05
 				}
 			}
 			save_global_event_target_as = kirakishou_Avatar_fleet@root
@@ -1705,7 +1705,7 @@ create_ge_kirakishou_hostile_ship_stage4 = {
 				add_modifier = {
 					modifier = roz_krks_bf_stage4_HK_buff
 					#time_multiplier = 0.01
-					multiplier = 0.001
+					multiplier = 0.1
 				}
 			}
 			save_global_event_target_as = kirakishou_Avatar_fleet@root

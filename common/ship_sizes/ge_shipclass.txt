@@ -532,10 +532,10 @@ Ge_Vampirilis_Ortaam = {	#斗士
 		ship_cloaking_detection_add = 10
 		ship_cloaking_strength_add = 10
 	}
-	hero_ship = {						# Use the Hero Ship UI, not the Juggernaut's.
-		hero_ship_fleet_background = "GFX_fleet_view_behemoth_stage_4"
-		custom_class_text_color = M
-	}
+	# hero_ship = {						# Use the Hero Ship UI, not the Juggernaut's.
+	# 	hero_ship_fleet_background = "GFX_fleet_view_behemoth_stage_4"
+	# 	custom_class_text_color = M
+	# }
 	ship_modifier = {
 		ship_accuracy_add = 5
 		ship_evasion_add = 5
