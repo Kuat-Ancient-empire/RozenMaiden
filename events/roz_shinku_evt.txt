@@ -1628,11 +1628,11 @@ country_event = {
         remove_country_flag = ge_nfield_diplomacy_activated
         event_target:roz_leader_kirakishou_global_target@root? = {
             set_owner = root
-            return_leader_from_exile = this
+            prev = { return_leader_from_exile = prev }
         }
         event_target:roz_leader_suigintou_global_target@root? = {
             set_owner = root
-            return_leader_from_exile = this
+            prev = { return_leader_from_exile = prev }
         }
         clear_global_event_target = roz_ruler_target_temp@root
         roz_madgod_country_initiate = yes
@@ -1690,11 +1690,11 @@ country_event = {
         owner = {
             event_target:roz_leader_kirakishou_global_target@root? = {
                 set_owner = root
-                return_leader_from_exile = this
+                prev = { return_leader_from_exile = prev }
             }
             event_target:roz_leader_suigintou_global_target@root? = {
                 set_owner = root
-                return_leader_from_exile = this
+                prev = { return_leader_from_exile = prev }
             }
             set_leader = event_target:roz_ruler_target_temp@root
         }
@@ -3717,7 +3717,7 @@ country_event = {
     }
     immediate = {
         if = {
-            limit = { fromfromfrom? = { NOT = { any_fleet_in_system = { is_owned_by = prev } } } }
+            limit = { fromfromfrom.solar_system? = { NOT = { any_fleet_in_system = { is_owned_by = prev } } } }
             country_event = { id = roz_shinku_evt.572 days = 1 }
         }
         from? = { save_event_target_as = roz_madgod_force_country_target }

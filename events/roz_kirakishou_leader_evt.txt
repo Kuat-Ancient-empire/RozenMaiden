@@ -152,12 +152,10 @@ country_event = {
             save_event_target_as = secondary_species
         }
         capital_scope = {
-            while = {
-                count = 20
-                create_pop = {
-                    species = event_target:secondary_species
-                    ethos = random
-                }
+            create_pop_group = {
+                size = 2000
+                species = event_target:secondary_species
+                ethos = random
             }
         }
         event_target:roz_kirakishou_global_country@root? = {
@@ -313,7 +311,7 @@ country_event = {
             remove_country_flag = ge_sgt_chat
             event_target:roz_suigintou_bwg_leader_target@root? = {
                 set_owner = root
-                return_leader_from_exile = this
+                prev = { return_leader_from_exile = prev }
             }
         
             # if = {

@@ -9,7 +9,10 @@ country_event = {
 		is_ai = no
 	}
 	immediate = {
-		add_ship_design = NAME_roz_Uranus
+		create_ship_design = {
+			design = NAME_roz_Uranus
+		}
+		add_ship_design = last_created_design
 		give_technology = { tech = tech_civilian_arkship }
 		give_technology = { tech = tech_military_arkship }
 		give_technology = { tech = tech_science_arkship }

@@ -2572,7 +2572,7 @@ country_event = {
             event_target:krks_bf_situation_target@root? = {
                 add_situation_progress = -25
             }
-            every_owned_fleet = {
+            every_fleet_in_orbit = {
                 add_modifier = {
                     modifier = ge_modifier_time_freeze
                     days = 25
@@ -3190,7 +3190,7 @@ country_event = {
     trigger = {
         OR = {
             event_target:kirakishou_Avatar_fleet@root? = {
-                has_hp < 10
+                NOT = { any_owned_ship = { has_hp > 10 } }
             }
             event_target:kirakishou_hostile_country@root? = {
                 NOT = {
