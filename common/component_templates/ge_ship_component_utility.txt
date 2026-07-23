@@ -672,7 +672,7 @@ utility_component_template = {
 		}
 	}
 	ai_weight = {
-		weight = 7000
+		weight = 1
 		modifier = {
 			factor = 0
 			is_ai = yes
