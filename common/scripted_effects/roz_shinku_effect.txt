@@ -3374,7 +3374,7 @@ roz_abyss_fleet_create_marvelous = {
 						name = random
 					}
 					roz_abyss_ship_create = {
-						num_ships = 12
+						num_ships = 16
 						design = titan_design_A
 						name = random
 					}
@@ -3383,6 +3383,7 @@ roz_abyss_fleet_create_marvelous = {
 						distance = 45
 						angle = random
 					}
+					add_modifier = roz_abyss_marvelous_fleet_modifier
 					roz_abyss_leader_assign = yes
 					roz_unholy_invision_difficult_modifier_add_effect = yes
 				}
@@ -3977,13 +3978,29 @@ roz_abyss_fleet_outpost_remove_effect_monthly = {
 						NOT = { has_star_flag = roz_abyss_fleet_outpost_system_disable_@root }
 					}
 				}
-				clear_global_event_target = roz_abyss_fleet_outpost_target_$outpost$_@root
 				solar_system? = { 
 					remove_star_flag = roz_abyss_fleet_outpost_system 
 					set_star_flag = roz_abyss_fleet_outpost_system_disable_@root
 				}
 				root? = { country_event = { id = roz_shinku_evt.570 } }
 			}
-		}	
+		}
+		clear_global_event_target = roz_abyss_fleet_outpost_target_$outpost$_@root
 	}
 }
+
+###消灭哨站守卫后清初兴趣点
+roz_abyss_fleet_outpost_remove_interest = {
+	event_target:roz_abyss_outpost_target = {
+		switch = {
+			trigger = is_same_value
+			event_target:roz_abyss_fleet_outpost_target_1_@root = { root = { remove_point_of_interest = roz_abyss_fleet_outpost_1 } }
+			event_target:roz_abyss_fleet_outpost_target_2_@root = { root = { remove_point_of_interest = roz_abyss_fleet_outpost_2 } }
+			event_target:roz_abyss_fleet_outpost_target_3_@root = { root = { remove_point_of_interest = roz_abyss_fleet_outpost_3 } }
+			event_target:roz_abyss_fleet_outpost_target_4_@root = { root = { remove_point_of_interest = roz_abyss_fleet_outpost_4 } }
+			event_target:roz_abyss_fleet_outpost_target_5_@root = { root = { remove_point_of_interest = roz_abyss_fleet_outpost_5 } }
+		}
+	}
+}
+
+

@@ -793,7 +793,7 @@ roz_unholy_invasion_difficult_modifier = {
 	ship_accuracy_mult = 1.0
 
 	ship_weapon_range_mult = 0.1
-	ship_hull_mult = 0.25
+	ship_hull_mult = 0.5
 	ship_armor_mult = 1
 	ship_shield_mult = 1
 }
@@ -841,6 +841,9 @@ roz_shinku_deceleration_time = {
 	roz_timeslow_modifier_tooltip = 0.1
 }
 
+roz_abyss_marvelous_fleet_modifier = {
+	ship_damage_reduction_mult = 0.5
+}
 leader_trait_roz_shinku_hollye_commander_fleet_self_modifier_1 = {
 	ship_damage_reduction_mult = -0.8
 }

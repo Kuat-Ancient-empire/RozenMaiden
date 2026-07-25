@@ -672,7 +672,7 @@ utility_component_template = {
 		}
 	}
 	ai_weight = {
-		weight = 1
+		weight = 7000
 		modifier = {
 			factor = 0
 			is_ai = yes
@@ -1876,7 +1876,7 @@ utility_component_template = {
 	}
 	component_set = "combat_computers"
 	ai_weight = {
-		weight = 5000
+		weight = 0.1
 		modifier = {
 			factor = 0
 			is_ai = yes

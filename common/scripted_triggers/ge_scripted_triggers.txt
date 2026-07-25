@@ -286,7 +286,7 @@ roz_is_regular_authority = {
 	is_galactic_emperor = no
 }
 
-#或许是本mod消耗最高的检测了
+#检测深渊据点是否清除完，boss是否还能复活
 roz_is_all_abyss_killed_except_madgod_system = {
 	optimize_memory
 	#abyss vass
@@ -306,16 +306,17 @@ roz_is_all_abyss_killed_except_madgod_system = {
 	# 	# }
 	# }
 	#???
-	NOT = {
-		any_galaxy_fleet = {
-			OR = {
-				has_fleet_flag = roz_abyss_fleet
-				is_owned_by = event_target:roz_madgod_force_country@$scope$
-			}
-			NOT = { solar_system? = { has_star_flag = roz_outland_system } }
-			NOT = { has_fleet_flag = roz_abyss_fleet_madgod_boss }
-		}
-	}
+	# NOT = {
+	# 	any_galaxy_fleet = {
+	# 		OR = {
+	# 			has_fleet_flag = roz_abyss_fleet
+	# 			is_owned_by = event_target:roz_madgod_force_country@$scope$
+	# 		}
+	# 		NOT = { solar_system? = { has_star_flag = roz_outland_system } }
+	# 		NOT = { has_fleet_flag = roz_abyss_fleet_madgod_boss }
+	# 	}
+	# }
+	NOT	= { any_system = { has_star_flag = roz_abyss_fleet_outpost_system } }
 }
 
 #可被深渊势力轰炸的星球

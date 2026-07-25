@@ -3240,6 +3240,7 @@ country_event = {
     }
     option = {
         name = roz_shinku_evt.550.aa
+        custom_tooltip = roz_shinku_evt.550.ct
         add_resource = { influence = 100 }
         add_modifier = { modifier = roz_madgod_country_foible }
         hidden_effect = { country_event = { id = roz_shinku_evt.551 days = 2 } }
@@ -3655,7 +3656,10 @@ country_event = {
         }
     }
     immediate = {
-        roz_abyss_fleet_outpost_remove_effect_all = yes
+        fromfrom = {
+            roz_abyss_fleet_outpost_remove_effect_all = yes
+            save_event_target_as = roz_abyss_outpost_target
+        }
         country_event = { id = roz_shinku_evt.570 }
     }
 }
@@ -3676,6 +3680,7 @@ country_event = {
             influence = 250
             unity = 135000
         }
+        roz_abyss_fleet_outpost_remove_interest = yes
     }
 }
 
@@ -3686,7 +3691,7 @@ country_event = {
     is_triggered_only = yes
     trigger = {
         is_ai = no
-        NOT = { has_country_flag = roz_abyss_fleet_create_cd }
+        #NOT = { has_country_flag = roz_abyss_fleet_create_cd }
         NOT = { has_country_flag = roz_SK_IR_enable }
         has_country_flag = roz_shinku_jtcl_end_flag
         has_country_flag = roz_abyss_faction_arrival
