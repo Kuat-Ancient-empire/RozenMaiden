@@ -3658,7 +3658,7 @@ country_event = {
     immediate = {
         fromfrom = {
             roz_abyss_fleet_outpost_remove_effect_all = yes
-            save_event_target_as = roz_abyss_outpost_target
+            solar_system = { save_event_target_as = roz_abyss_outpost_target }
         }
         country_event = { id = roz_shinku_evt.570 }
     }
@@ -3672,6 +3672,7 @@ country_event = {
     show_sound = event_space_battle
     picture = GFX_evt_small_space_battle
     is_triggered_only = yes
+    immediate = { roz_abyss_fleet_outpost_remove_interest = yes }
     option = {
         name = roz_shinku_evt.570.aa
         add_resource = {
@@ -3680,7 +3681,6 @@ country_event = {
             influence = 250
             unity = 135000
         }
-        roz_abyss_fleet_outpost_remove_interest = yes
     }
 }
 

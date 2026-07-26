@@ -3983,6 +3983,7 @@ roz_abyss_fleet_outpost_remove_effect_monthly = {
 					set_star_flag = roz_abyss_fleet_outpost_system_disable_@root
 				}
 				root? = { country_event = { id = roz_shinku_evt.570 } }
+
 			}
 		}
 		clear_global_event_target = roz_abyss_fleet_outpost_target_$outpost$_@root
@@ -3999,6 +4000,18 @@ roz_abyss_fleet_outpost_remove_interest = {
 			event_target:roz_abyss_fleet_outpost_target_3_@root = { root = { remove_point_of_interest = roz_abyss_fleet_outpost_3 } }
 			event_target:roz_abyss_fleet_outpost_target_4_@root = { root = { remove_point_of_interest = roz_abyss_fleet_outpost_4 } }
 			event_target:roz_abyss_fleet_outpost_target_5_@root = { root = { remove_point_of_interest = roz_abyss_fleet_outpost_5 } }
+		}
+	}
+	from.fromfrom = {
+		solar_system = {
+			switch = {
+				trigger = is_same_value
+				event_target:roz_abyss_fleet_outpost_target_1_@root = { root = { remove_point_of_interest = roz_abyss_fleet_outpost_1 } }
+				event_target:roz_abyss_fleet_outpost_target_2_@root = { root = { remove_point_of_interest = roz_abyss_fleet_outpost_2 } }
+				event_target:roz_abyss_fleet_outpost_target_3_@root = { root = { remove_point_of_interest = roz_abyss_fleet_outpost_3 } }
+				event_target:roz_abyss_fleet_outpost_target_4_@root = { root = { remove_point_of_interest = roz_abyss_fleet_outpost_4 } }
+				event_target:roz_abyss_fleet_outpost_target_5_@root = { root = { remove_point_of_interest = roz_abyss_fleet_outpost_5 } }
+			}
 		}
 	}
 }
