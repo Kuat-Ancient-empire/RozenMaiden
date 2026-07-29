@@ -4532,7 +4532,8 @@ roz_lgate_create_reward_planet = {
 					name = random
 					skill = 3
 				}
-				add_ship_design = NAME_roz_Uranus
+				create_ship_design = { design = NAME_roz_Uranus }
+				add_ship_design = last_created_design
 				create_fleet = {
 					effect = {
 						set_owner = prev

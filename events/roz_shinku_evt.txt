@@ -5524,7 +5524,7 @@ country_event = {
                 portrait = roz_hinaichigo
                 flag = roz_hinaichigo_portrait_change
                 leader_flag = roz_hinaichigo_flag
-                portrait_key = roz_hinaichigo_1
+                portrait_key = roz_hinaichigo_01
             }
         }
     }
@@ -5538,7 +5538,7 @@ country_event = {
                 portrait = roz_hinaichigo
                 flag = roz_hinaichigo_portrait_change
                 leader_flag = roz_hinaichigo_flag
-                portrait_key = roz_hinaichigo_2
+                portrait_key = roz_hinaichigo_02
             }
         }
     }

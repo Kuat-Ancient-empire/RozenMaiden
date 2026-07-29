@@ -1344,7 +1344,7 @@ roz_leader_change_skin_reset_shinku_effect = {
                 who = shinku
                 portrait = roz_shinku
                 flag = roz_shinku_portrait_change
-                portrait_key = roz_shinku_01
+                portrait_key = roz_shinku_1
                 leader_flag = roz_shinku_flag
             }
         }
