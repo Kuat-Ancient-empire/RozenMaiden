@@ -1,0 +1,30 @@
+{
+  "runId": "run_1781929683560_h0ig",
+  "topicId": "topic_1781857260383",
+  "status": "failed",
+  "mode": "build",
+  "userPromptPreview": "请获取并修复当前文件 `common/starbase_modules/roz_arkship_modules.txt` 中的所有 CWTools 诊断错误。",
+  "startedAt": 1781929683560,
+  "createdAt": 1781929683560,
+  "updatedAt": 1781932270721,
+  "steps": [],
+  "metrics": {
+    "totalTokens": 0,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "cachedTokens": 0,
+    "costCny": 0,
+    "iterations": 1,
+    "maxIterations": 0,
+    "toolCalls": 0,
+    "modelCallCount": 1,
+    "compactionCount": 1,
+    "repeatedToolSignatureCount": 0,
+    "failedToolCount": 0,
+    "permissionRequested": 0,
+    "permissionApproved": 0,
+    "permissionDenied": 0,
+    "artifactizedResultCount": 0
+  },
+  "writtenFiles": []
+}
