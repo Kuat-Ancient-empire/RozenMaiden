@@ -901,7 +901,7 @@ country_event = {
         enable_special_project = {
             name = roz_shinku_phone_of_junn_analysis
             owner = root
-            location = root.capital_scope
+            #location = root.capital_scope
         }
     }
 }

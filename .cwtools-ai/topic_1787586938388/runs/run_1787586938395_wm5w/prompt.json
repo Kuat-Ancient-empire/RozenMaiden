@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "prompt": "请获取并修复当前文件 `events/roz_shinku_evt.txt` 中的所有 CWTools 诊断错误。",
+  "sha256": "95983d42d67a2bbd6b0238a59f318cc227715ebeec7e7eea8d861cbdcb0bc31f"
+}

@@ -1,0 +1,36 @@
+{
+  "runId": "run_1787586938395_wm5w",
+  "topicId": "topic_1787586938388",
+  "status": "failed",
+  "mode": "script",
+  "userPromptPreview": "请获取并修复当前文件 `events/roz_shinku_evt.txt` 中的所有 CWTools 诊断错误。",
+  "startedAt": 1787586938395,
+  "createdAt": 1787586938395,
+  "updatedAt": 1787586938695,
+  "steps": [],
+  "metrics": {
+    "totalTokens": 0,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "cachedTokens": 0,
+    "costCny": 0,
+    "iterations": 1,
+    "maxIterations": 0,
+    "toolCalls": 0,
+    "modelCallCount": 1,
+    "compactionCount": 1,
+    "repeatedToolSignatureCount": 0,
+    "failedToolCount": 0,
+    "permissionRequested": 0,
+    "permissionApproved": 0,
+    "permissionDenied": 0,
+    "artifactizedResultCount": 0
+  },
+  "context": {
+    "promptRef": "prompt.json",
+    "promptSha256": "95983d42d67a2bbd6b0238a59f318cc227715ebeec7e7eea8d861cbdcb0bc31f",
+    "lastStableEventId": "evt_1787586938695_5f58",
+    "lastStableSequence": 9
+  },
+  "writtenFiles": []
+}

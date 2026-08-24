@@ -1144,11 +1144,7 @@ special_project = {
 		}
 	}
 	on_start = {
-		if = {
-			limit = {
-			}
-			#complete_special_project = {  }
-		}
+		
 	}
 	location = yes
 	#days_to_research = 60
@@ -1157,13 +1153,11 @@ special_project = {
 	event_chain = roz_shoujonotsukurikata_chain
 	picture = GFX_evt_roz_junn_phone_1
 	icon = gfx/interface/icons/situation_log/situation_log_society.dds
-	event_scope = planet_event
+	event_scope = country_event
 	on_success = {
-		owner = {
-			country_event = {
-				id = roz_shinku_evt.4021
-				days = 1
-			}
+		country_event = {
+			id = roz_shinku_evt.4021
+			days = 1
 		}
 	}
 }

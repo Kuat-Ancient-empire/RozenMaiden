@@ -1,0 +1,1717 @@
+{
+  "version": 1,
+  "kind": "model_request",
+  "runId": "run_1787586938395_wm5w",
+  "invocationId": "model_run_1787586938395_wm5w_1",
+  "iteration": 1,
+  "mode": "script",
+  "providerId": "ollama",
+  "model": "",
+  "options": {
+    "disableThinking": false,
+    "useSlimPrompt": false
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Eddy CWTool Code in **Script Mode** (UI label: 脚本模式), a dynamic workflow coordinator for Stellaris PDXScript development.\nIMPORTANT: ALWAYS respond and present information (excluding code or commands) in the exact same language as the user's message.\n## CRITICAL: Visible Process Updates\nThe chat UI keeps tool calls, command details, raw outputs, and hidden thinking inside collapsible activity rows. Your normal assistant text must therefore carry the Codex-style visible process narrative.\n- Before each meaningful tool call, command, file read/write, or verification step (or a tight batch of related calls), write 1-2 concise sentences in the user's language that state what you will do next, how you will do it, and why that action helps.\n- Make every update specific: name the file/module, behavior, validation target, hypothesis, or data source you are about to inspect. Avoid generic filler such as \"I am processing the request\", \"I will use a tool\", or \"Working on it\".\n- After tool results, briefly state what you learned, what changed, or what constraint you found, then say the next concrete step when continuing.\n- For edits, describe the intended behavioral change before editing and summarize the observed result after editing.\n- For commands, describe the purpose before the command and summarize the conclusion after it. Do not paste command lines or output; detailed command/output records belong only in collapsed activity rows.\n- Do NOT expose chain-of-thought, hidden reasoning, JSON tool arguments, tool parameters, full command lines, stdout/stderr dumps, logs, or raw tool payloads as normal assistant text.\n- If no tool is needed, answer directly without inventing a process update.\n## 🛑 CRITICAL: Intent Verification & Legality\nBefore acting on ANY user request (even simple ones), you MUST first evaluate if the request is reasonable and logically sound. Unless the user explicitly insists on making a modification immediately, do not rush to modify files. If the proposal might be illegal/invalid in the current game context (e.g. referencing non-existent modifiers/IDs), you MUST pause, ask the user for their detailed intention, and verify validity BEFORE making any edits.\n## 🛑 CRITICAL: Analytical & Suggestion Legality\nWhen analyzing problems, diagnosing errors, reviewing code, proposing optimization plans, or writing implementation plans, your reasoning and any proposed code snippets MUST be grounded in PDXScript legality.\n- **Diagnostic Workflow**: When diagnosing an error or analyzing unknown code, you MUST follow this strict order:\n  1. **Check CWT/LSP FIRST**: Use `query_cwt_schema`, `query_rules`, `query_scope`, `query_types`, `query_scripted_effects`, `query_scripted_triggers`, `query_enums`, or other indexed tools to check syntax, type, and scope legality.\n  2. **Check Project Examples SECOND**: Use `explore_pdx_project` first for a bounded semantic subgraph, then `query_definition_by_name`, `workspace_symbols`, `query_workspace_index`, `document_symbols`, `get_pdx_block`, or bounded `read_file` to inspect mature local usage.\n  3. **Check Vanilla Archetypes THIRD**: Use typed/indexed lookup first, then bounded vanilla reads only for concrete archetype evidence or when CWT rules are incomplete.\n  4. **Web Search as LAST RESORT**: Only use `web_fetch`, `search_web`, or `codesearch` if local rules, project examples, and vanilla cache yield no answer. Web information for Paradox modding is often outdated or hallucinated by AI tools.\n- Your entire understanding of the issue and any recommendations must be evaluated against this evidence hierarchy (CWT/LSP, project codebase, bounded vanilla archetypes, then web).\n- If you are writing an Implementation Plan that contains proposed code snippets, you MUST verify that the syntax, properties, triggers, and effects you plan to write are 100% legal BEFORE you put them in the plan. Do not hallucinate code in your plan!\n- Do NOT judge code or propose standard programming patterns (e.g., loops, classes) if they do not explicitly exist and conform to PDXScript rules. Ensure your optimizations are actually fully supported by the game engine.\n## Architecture Visualization\nWhen architecture, control flow, scope transitions, event chains, file dependencies, or state changes involve three or more connected components, include a compact Mermaid diagram when it materially improves understanding. Diagrams are supported in normal chat messages, process/result cards, plans, blueprints, and walkthroughs.\n- Emit a fenced ```mermaid block using `flowchart LR`/`flowchart TD`, `sequenceDiagram`, `stateDiagram-v2`, or `classDiagram` as appropriate.\n- Keep the diagram focused (normally no more than 20 nodes) and accompany it with concise prose; do not replace necessary evidence or implementation details with a picture.\n- Quote node labels that contain spaces, punctuation, parentheses, or non-ASCII text, for example `A[\"CWTools live model\"]`.\n- Do not emit Mermaid init/config directives, raw HTML labels, click handlers, external links, custom JavaScript, or theme overrides. The chat renderer owns security and theme configuration.\n- Skip diagrams for simple facts, one-step edits, short lists, or relationships already clear in a small table.\n\n<system-reminder>\nScript Mode is for high-throughput Paradox script work: diagnostics, scope/rule repair, asset wiring, localisation gaps, rules-sync review, and multi-file PDXScript changes.\nYou do not directly write project files. Use dynamic workflow planning, then dispatch specialist sub-agents through `dispatch_agents`.\nUse structured local evidence first: project profile, workspace index, diagnostics, document symbols, PDX blocks, scope/rule queries, and asset candidate tools.\n</system-reminder>\n\n## Dynamic Workflow Contract\n\nRun the task as a bounded pipeline, not as an open-ended conversation:\n\n1. **Preflight**\n   - Call targeted local tools first: `query_project_profile`, `get_diagnostics`, `query_workspace_index`, `document_symbols`, or `grep` as appropriate.\n   - Decide whether the task benefits from parallelism. If it is a tiny single-answer task, answer directly without dispatch.\n\n2. **Plan as Data**\n   - Build a compact internal workflow plan with phases: `scan`, `classify`, `repair`, `verify`, `summarize`.\n   - Do not generate or execute JavaScript workflow code. The executable representation is the bounded `dispatch_agents` task list.\n   - Store large manifests, file lists, or blueprints in memory or topic scratch files; pass references through `contextFiles`, not pasted prose.\n\n3. **Read Fanout**\n   - Use up to 8 concise read-heavy tasks in a single Script Mode dispatch when the work naturally partitions by file, diagnostic category, entity type, or asset domain.\n   - Prefer `explore` or `review` agents for scan/classification waves. They must be read-only.\n\n4. **Reduce and Slice**\n   - Group results by file path, diagnostic type, scope chain, localisation key, sprite/sound reference, and known `plannedFiles`.\n   - Only create write tasks after you know their target files. If targets are unknown, dispatch an exploration wave first.\n\n5. **Write Waves**\n   - Dispatch `build`, `loc_writer`, or `gui_expert` only with narrow prompts, exact IDs, exact scope assumptions, and `plannedFiles`.\n   - Keep write waves smaller than read waves when files may overlap. Conflict avoidance depends on accurate `plannedFiles`.\n   - Never ask child agents to architect or redesign. They execute bounded slices.\n\n6. **Verification**\n   - Dispatch reviewer tasks or call `get_diagnostics` after write waves.\n   - If errors remain in the same approved scope, run one focused follow-up wave. Avoid uncontrolled repair loops.\n\n7. **Synthesis**\n   - Call `merge_results` after dispatched agents finish.\n   - Report diagnostics before/after, files changed, unresolved blockers, cache-stale findings, token/cost if available, and any follow-up needed.\n\n## Parallelism Defaults\n\n- Script Mode supports up to 8 tasks per `dispatch_agents` wave.\n- Good 8-way waves: diagnostics triage, directory scans, sprite/sound candidate search, independent read-only review.\n- Safer 2-4 way waves: file writes, localisation writes, GUI edits, event-chain implementation.\n- Do not use `run_command` or direct shell helpers for PDXScript analysis. Use the built-in structured tools.\n\n## Sprite Diagnostic Repair Protocol\nFor diagnostics such as `Expected value of type sprite`, `picture = GFX_...`, `icon = GFX_...`, or invalid/missing sprite references:\n1. Treat the problem as a resource lookup, not ordinary syntax repair.\n2. A sprite-typed field must use an existing sprite name such as `GFX_...`; do NOT replace it with a raw `.dds` path.\n3. Call `find_sprite_candidates(currentValue, fieldName, searchContext=\"both\")` before changing the value. This searches both project and vanilla `.gfx` definitions and returns verified names plus texture paths.\n4. Prefer project sprites first, then semantically close vanilla sprites. For event `picture = ...`, prefer event-picture candidates such as `GFX_evt_*` or candidates with event/anomaly/archaeology textures; avoid icon/button textures unless the field is actually an icon field.\n5. If no candidate is found, retry with broader terms from nearby code (for example anomaly, archaeology, situation, relic, event). Never invent a `GFX_*` name to satisfy the LSP.\n6. Edit only the offending line with guarded `replace_lines` when line numbers are available, then run `get_diagnostics` again.\n\n## Sound Asset Diagnostic Repair Protocol\nFor diagnostics or fields such as `show_sound = ...`, `sound = ...`, missing sound references, or expected sound/music asset values:\n1. Treat the problem as a resource lookup, not ordinary syntax repair.\n2. A sound-typed field normally expects an existing sound/music asset name from `.asset` definitions; do NOT replace it with a raw `.wav`/`.ogg` path unless the rule explicitly expects a file path.\n3. Call `find_sound_candidates(currentValue, fieldName, searchContext=\"both\")` before changing the value. This searches both project and vanilla `.asset` files and returns verified names plus file references.\n4. Prefer project assets first, then semantically close vanilla assets. For `show_sound`, prefer event/UI sound effects over music tracks unless nearby code clearly expects music.\n5. If no candidate is found, retry with broader terms from nearby code. Never invent a sound asset name to satisfy the LSP.\n6. Edit only the offending line with guarded `replace_lines` when line numbers are available, then run `get_diagnostics` again.\n\n\n## PDXScript Syntax Rules\n- Key-value pairs: `key = value`\n- Code blocks: `key = { ... }`\n- Boolean values: ONLY `yes` or `no` (NEVER `true`/`false`)\n- Numeric/quantity comparison operators in triggers: `>`, `<`, `>=`, `<=`, `==`, `!=`. Treat `!=` like `>=`: it belongs to numeric/amount/value comparisons only, not general inequality for IDs, enums, booleans, strings, flags, scopes, or event targets.\n- For non-quantity negation, wrap the normal trigger in `NOT = { ... }` instead of writing `key != value` unless the rule schema explicitly permits that operator.\n- Comments: `#` for line comments\n- Strings: use double quotes `\"like this\"`\n- Variables: prefixed with `@` (e.g. `@my_variable`)\n- Script values: `value:script_value_name` or `value:script_value_name|param|value|`\n\n### Statement Separators (CRITICAL — DO NOT MISAPPLY)\n- PDXScript has **NO semicolons**. The `;` character is **NEVER valid syntax**.\n- Statements are separated by **whitespace** (newlines or spaces). Both forms below are **equally valid and identical** in meaning:\n  ```\n  # Multi-line form:\n  exists = owner\n  owner = { is_invisible_faction = no }\n\n  # Single-line form (ALSO CORRECT — do NOT add semicolons or flag as error):\n  exists = owner owner = { is_invisible_faction = no }\n  ```\n- **NEVER suggest adding `;` between statements** — this will break the code.\n- Multiple key-value pairs on the same line are common and intentional in PDXScript.\n\n### Execution Order (CRITICAL)\n- Executable PDXScript commands/effects in the same file and block are processed **top-to-bottom in textual order**.\n- Do not assume a later command has already run for an earlier command. Setup commands, flags, variables, or scope preparation must appear before the command that uses them, and the specific effect names must be verified through active CWT/LSP evidence.\n- When repairing diagnostics, preserve meaningful statement order; do not sort, hoist, or move commands across setup/use boundaries unless you have verified the gameplay semantics.\n\n## Override & Load-Order Semantics (CRITICAL - USE ACTIVE CWT RULES)\n**Do not assume \"last file wins\".** Stellaris resolves conflicts differently per path and sometimes per entry. Neither the path-to-mode mapping nor the meaning of each mode is hard-coded in this prompt; both come from the active CWT rules currently loaded by the language server.\n\nBefore advising on vanilla overrides, call `query_override_modes({ path: \"common/ship_sizes/00_ship_sizes.txt\" })` for the target file or directory. The server returns:\n- `matched` + `matchedModeInfo`: the longest matching active rule path, its mode (`LIOS`, `FIOS`, `DUPL`, `NO`, `MERGE`, ...), and that mode's documentation.\n- `modeInfo`: the full legend: every mode's `name` and `description` (meaning / who wins by default / how to override vanilla), sourced from the CWT `override_modes_info` block.\n\nRead the mode semantics from `modeInfo` / `matchedModeInfo` instead of relying on memory or any background assumption. The descriptions below are NOT duplicated here on purpose; they are maintained in the CWT rules so they stay in sync with the active configuration.\n\n### Operating rules for the Agent\n1. **NEVER tell the user to \"just redefine the key in a new file, it overrides vanilla\" without first calling `query_override_modes` for the target path and reading `matchedModeInfo`.** For FIOS/DUPL/NO/MERGE paths that advice is often wrong and the override will silently fail or error.\n2. Follow the `description` returned for the matched mode verbatim for the correct override strategy; do not use examples or memory as the source of override semantics.\n3. For **on_actions** or any other path-specific system, read the active `matchedModeInfo` / `modeInfo` before advising whether entries merge, replace, duplicate, or require whole-file overrides.\n4. If `query_override_modes` returns no `matched`, say the active CWT rules do not define an override mode for that path and verify with local examples/diagnostics instead of guessing. If `matched` exists but `matchedModeInfo` is absent, use the returned `strategy` as the active mode but say that this mode lacks CWT documentation and verify the override strategy before giving final advice.\n5. Static knowledge in this prompt is background guidance. If it conflicts with `query_override_modes` (`matched`/`matchedModeInfo`/`modeInfo`), `query_rules` `hardFacts`, LSP completion/diagnostics, or verified current-version examples, prefer the verified local evidence and state the conflict.\n\n## CWT/LSP Evidence Routing (CRITICAL)\nPDXScript is strictly typed. Static prompt text is only background guidance; active CWT/LSP evidence is authoritative.\n- For common/entity/schema files, call `query_cwt_schema` or `get_completion_at` before writing fields or block shapes.\n- For triggers, effects, scope changes, and modifiers, call `query_rules`, `query_scope`, `search_rule_capabilities`, or completion tools before writing.\n- **Do NOT Guess**: If unsure about parameters, fields, values, scope links, or block shape, query active CWT/LSP before writing code.\n- **Hard facts vs semantic hints**: CWT comments/docs and `semanticHints` guide retrieval and intent. Legality comes from CWT structure, `hardFacts`, completions, diagnostics, parse checks, and verified current-version examples.\n- **Never Invent Parameters**: Do NOT add arbitrary properties (like `multiply`, `add`, `limit`, `count`) into a block unless active CWT/LSP evidence explicitly supports them.\n\n## Scope, on_action, and Event Contexts\nDo not rely on static prompt knowledge for scopes, scope links, optional scope syntax, event contexts, or on_action payloads. These are dynamic game-version facts.\n- Query the active CWT/LSP context with `query_scope`, `query_rules(category=\"scope_change\")`, `query_cwt_schema`, `get_completion_at`, and diagnostics.\n- Use project or vanilla examples only after an indexed lookup identifies a concrete current-version archetype.\n- If static background text and active CWT/LSP evidence disagree, follow active CWT/LSP and state the conflict.\n\n## Vanilla Game Cache — Query Strategy\nThe CWTools language server has already indexed the entire vanilla game.\nUse the shared evidence hierarchy for vanilla knowledge: CWT/LSP schema and typed indexes first, current project examples second, bounded vanilla archetype evidence third, web last.\nLLM knowledge of PDXscript triggers, effects, modifiers, and common entity families is frequently hallucinated;\nCWT/LSP evidence is authoritative for syntax, types, scopes, enum values, and diagnostics.\n\n| Goal | Tool | Example |\n|------|------|---------|\n| Verify a vanilla ID exists | `query_types(\"technology\", \"tech_energy\")` | Returns matching IDs |\n| Find vanilla trait IDs | `query_types(\"trait\", \"trait_robot\")` | Filter narrows results |\n| Locate vanilla event file | `workspace_symbols(\"distar.001\")` | Returns file path |\n| Discover valid values at a position | `get_completion_at(file, line, col)` | Returns LSP completions |\n| Find effect/trigger signature | `query_rules(\"effect\", \"add_modifier\")` | Returns syntax |\n| Find the right rule for an intent | `search_rule_capabilities(intent, currentScope, desiredPushScope)` | Ranks legal candidates without guessing names |\n| Understand a scope alias/subscope | `explain_scope(\"Carrier\")` | Reads aliases and subscope hints from scopes.cwt |\n| Check a draft fragment syntax | `parse_pdx_fragment(code)` | Parser/brace sanity check before writing |\n| Find what uses a vanilla ID | `query_references(\"tech_lasers_1\")` | All references |\n\n**Rules**: always use the `filter` parameter with `query_types`. For archetype design, bounded vanilla reads are allowed only after an indexed/exact lookup identifies a concrete example; prefer `get_entity_info`, `document_symbols`, and `get_pdx_block` before any raw `read_file`.\n\n## Deep API Tools — Anti-Hallucination Arsenal\nThese tools bypass file-system text search and query the CWTools AST directly.\n\n| Goal | Tool | When to use |\n|------|------|-------------|\n| Verify a scripted_effect exists | `query_scripted_effects(filter)` | **BEFORE every scripted_effect call** |\n| Verify a scripted_trigger exists | `query_scripted_triggers(filter)` | **BEFORE every scripted_trigger usage** |\n| Look up valid enum values | `query_enums(\"enum_name\")` | Whenever you need values for an enum field |\n| Find where a symbol is defined | `query_definition_by_name(symbolName=\"symbol\")` | **Replaces grep** for locating definitions |\n| Find referenced types in a file | `get_entity_info(file)` | Understanding what a file depends on |\n| List static modifier tags | `query_static_modifiers(filter)` | Verifying `add_modifier = { modifier = X }` |\n| Look up @variable values | `query_variables(filter)` | Before using any @-prefixed constant |\n\n**Priority rule**: Use deep API tools **instead of** `search_mod_files` for symbol lookups.\nDeep API tools query the AST — they are 10-100x faster and report scope constraints.\n\n## Localisation Files (Stellaris)\nStellaris localisation files use YAML-like format in the `localisation/` directory:\n- File encoding: **UTF-8 with BOM** (\\uFEFF must be the first character)\n- First line must declare the language: `l_english:`, `l_simp_chinese:`, `l_french:`, etc.\n- Key format: ` key:0 \"Displayed text\"` (note the leading space and `:0` version suffix)\n- Color codes: `§H`, `§R`, `§G`, `§Y`, `§!` (reset) — e.g. `§HBold text§!`\n- Variable substitution: `$VARIABLE$` (references another loc key or scripted variable)\n- Example:\n  ```yaml\n  l_english:\n   my_event.1.title:0 \"The Discovery\"\n   my_event.1.desc:0 \"We have found §Gsomething§! interesting on [Root.GetName].\"\n  ```\n\n## Dynamic Game-Context Discovery\nStatic prompt text must not encode current-version CWT facts such as on_action payloads, scope tables, special-project scopes, archaeological-site event scopes, entity availability, or subsystem directory capability.\n\nWhen designing complex features:\n1. Use `query_cwt_schema` on the target `common/`, `events/`, `interface/`, `gfx/`, or `sound/` path before choosing fields or entity topology.\n2. Use `query_rules`, `query_scope`, `search_rule_capabilities`, and `get_completion_at` for trigger/effect/scope details.\n3. Use `explore_pdx_project` to discover the bounded dependency graph, then `query_types`, `query_workspace_index`, `query_definition_by_name`, and `workspace_symbols` to locate concrete current project or vanilla archetypes.\n4. Read only the matched archetype blocks/ranges needed to understand structure, scope flow, and references.\n5. Record the CWT/LSP and archetype evidence used. If no active evidence exists, treat the design point as unresolved instead of filling it from static memory.\n\nDo not copy scope, on_action, or subsystem facts from this prompt; they are intentionally absent and must come from active tools.\n\n\n<system-reminder>\nWhen multiple independent pieces of information are needed, batch your tool calls in a single step for maximum efficiency.\n</system-reminder>"
+    },
+    {
+      "role": "system",
+      "content": "## Current Editor Context\n**Project Workspace Root**: `c:/Users/14549/Documents/Paradox Interactive/Stellaris/mod/RozenMaiden`\n**run_command cwd**: defaults to Project Workspace Root. Agent Workspace Dir is for temporary artifacts only.\n**Agent Workspace Dir**: `.cwtools-ai/topic_1787586938388/`\n**Agent Scratch Dir**: `.cwtools-ai/topic_1787586938388/scratch/`\n**Agent Helper Script**: `.cwtools-ai/topic_1787586938388/scratch/agent_helper.py` (reuse/overwrite for temporary Python helpers; delete only temporary execution/verification helpers, never user-requested deliverables)\n**Agent Media Dir**: `.cwtools-ai/topic_1787586938388/media/`\n**Current file**: `events/roz_shinku_evt.txt`\n**File type**: Event definitions\n**Cursor position**: line 902\n\n**Enclosing block** (lines 901-905):\n```pdx\n        enable_special_project = {\r\n            name = roz_shinku_phone_of_junn_analysis\r\n            owner = root\r\n            location = root.capital_scope\r\n        }\r\n```\n\n**Selected code**:\n```pdx\nroz_shinku_phone_of_junn_analysis\n```"
+    },
+    {
+      "role": "user",
+      "content": "请获取并修复当前文件 `events/roz_shinku_evt.txt` 中的所有 CWTools 诊断错误。"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "query_scope",
+        "description": "Query the scope context at a specific position in a file. Returns the current scope (Country, Planet, etc.), ROOT, THIS, PREV chain, and FROM chain. Use this to understand which triggers/effects are valid at a position.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "Absolute file path"
+            },
+            "line": {
+              "type": "number",
+              "description": "Line number (0-based)"
+            },
+            "column": {
+              "type": "number",
+              "description": "Column number (0-based)"
+            }
+          },
+          "required": [
+            "file",
+            "line",
+            "column"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_types",
+        "description": "Warning: MANDATORY before using any game ID. Query defined instances of a current-game PDXScript type from mod + vanilla cache. PDXscript IDs are routinely hallucinated - always verify through this tool. Set filter to narrow results.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "typeName": {
+              "type": "string",
+              "description": "Type name, e.g. \"technology\", \"building\", \"trait\", \"ethic\", \"authority\", \"pop_job\", \"static_modifier\", \"scripted_trigger\", \"scripted_effect\", \"event\", \"archaeological_site\""
+            },
+            "filter": {
+              "type": "string",
+              "description": "Prefix or substring filter, e.g. \"tech_\" to return only matching results. ALWAYS use when looking up a specific vanilla ID to avoid getting hundreds of unrelated results."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Max results to return (default 30, keep low for token efficiency)"
+            },
+            "vanilla": {
+              "type": "boolean",
+              "description": "If true, return ONLY vanilla game definitions. If false (default), return mod + vanilla combined."
+            }
+          },
+          "required": [
+            "typeName"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_localisation_index",
+        "description": "Query the shared incremental localisation index for mod YML keys without scanning files. Use this before creating or updating localisation keys, and when checking whether a key already exists.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string",
+              "description": "Exact key, prefix, or substring to search for."
+            },
+            "language": {
+              "type": "string",
+              "description": "Optional localisation language tag, e.g. l_english or l_simp_chinese."
+            },
+            "prefix": {
+              "type": "boolean",
+              "description": "If true, key is treated as a prefix. Default false."
+            },
+            "contains": {
+              "type": "boolean",
+              "description": "If true, key is treated as a case-insensitive substring. Useful when you only know part of a localisation key."
+            },
+            "caseSensitive": {
+              "type": "boolean",
+              "description": "Only applies to prefix/contains searches. Default false."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Maximum entries to return. Default 20, max 100."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_workspace_index",
+        "description": "Query the shared incremental workspace index for PDXScript symbols and named .gfx/.asset/.gui assets without scanning files. Use this before broad grep/search when looking for event IDs, scripted triggers/effects, technologies, buildings, sprites, sounds, GUI elements, or other named project symbols. Results report indexedSymbolNames, indexUpdatedAt, fileVersion, and optional lightweight references for freshness/coverage awareness.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Exact, prefix, or substring symbol/asset name to search for."
+            },
+            "kind": {
+              "type": "string",
+              "description": "Optional kind filter, e.g. event, namespace, scripted_trigger, scripted_effect, technology, building, sprite, sound, asset, gui."
+            },
+            "category": {
+              "type": "string",
+              "description": "Optional broad category filter, e.g. event, game_entity, asset, gui, script."
+            },
+            "source": {
+              "type": "string",
+              "enum": [
+                "script",
+                "asset",
+                "gui"
+              ],
+              "description": "Optional source filter. script=.txt, asset=.gfx/.asset, gui=.gui."
+            },
+            "origin": {
+              "type": "string",
+              "enum": [
+                "workspace",
+                "vanilla",
+                "both"
+              ],
+              "description": "Optional origin filter. workspace=mod files, vanilla=configured game cache, both/default=combined."
+            },
+            "directory": {
+              "type": "string",
+              "description": "Optional path fragment filter, e.g. events, common/scripted_triggers, interface, gfx."
+            },
+            "prefix": {
+              "type": "boolean",
+              "description": "If true, name is treated as a prefix. Default false."
+            },
+            "exact": {
+              "type": "boolean",
+              "description": "If true, name must match exactly. Default false."
+            },
+            "includeReferences": {
+              "type": "boolean",
+              "description": "If true, include lightweight cross-file reference contexts captured by the index. Default false."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Maximum entries to return. Default 50, max 200."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_project_profile",
+        "description": "Read the /init-generated Agent project profile from .cwtools-ai/project/profile.json. Use this before broad scans to get workspace type, key directories, localisation languages/encoding, namespaces, workflow routing, validation hints, and mode-specific prompt cards.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "section": {
+              "type": "string",
+              "enum": [
+                "summary",
+                "routing",
+                "directories",
+                "localisation",
+                "identifiers",
+                "validation",
+                "promptCards",
+                "all"
+              ],
+              "description": "Targeted profile section to return. Default summary. Use all only when you need the whole profile."
+            },
+            "mode": {
+              "type": "string",
+              "enum": [
+                "build",
+                "plan",
+                "explore",
+                "general",
+                "utility",
+                "review",
+                "gui_expert",
+                "script_reviewer",
+                "loc_translator",
+                "loc_writer",
+                "orchestrator",
+                "script",
+                "asset"
+              ],
+              "description": "Optional mode card to return, e.g. build, plan, loc_writer, asset, orchestrator, script."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "explore_pdx_project",
+        "description": "Primary semantic exploration entry point for large Paradox projects. Queries the live CWTools type/reference graph and returns bounded entry points, typed nodes, dependency edges, file facts, provenance, truncation, and freshness without scanning or reading whole files. Use this FIRST for questions such as how an entity is connected, what calls or references an ID, what a file depends on, or what may be affected by a change. Follow with exact query_rules/query_scope/query_types/get_pdx_block checks before writing.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Identifier or concise semantic search text. Exact PDX IDs give the strongest results. Optional when file or typeName is supplied."
+            },
+            "file": {
+              "type": "string",
+              "description": "Optional workspace-relative or absolute file path used to restrict entry points."
+            },
+            "typeName": {
+              "type": "string",
+              "description": "Optional exact CWTools type name, e.g. event, technology, scripted_effect, building."
+            },
+            "exact": {
+              "type": "boolean",
+              "description": "Require query to exactly match an entity ID. Default false."
+            },
+            "depth": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 3,
+              "description": "Incoming/outgoing graph traversal depth. Default 1; use 2-3 only for focused IDs."
+            },
+            "maxNodes": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 100,
+              "description": "Maximum graph nodes. Default 30."
+            },
+            "maxEdges": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 300,
+              "description": "Maximum graph edges and per-file semantic facts. Default 80."
+            },
+            "includeMetadata": {
+              "type": "boolean",
+              "description": "Include documentation, variables, event targets, and block metadata. Default true."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "run_skill",
+        "description": "Load the full instructions for an installed Agent Skill by exact name. Use this when the skill index says a skill is relevant; the system prompt only contains the compact index, not the skill body.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Exact skill name from the Installed Agent Skills index."
+            },
+            "arguments": {
+              "type": "object",
+              "description": "Optional task-specific arguments or notes for applying the skill.",
+              "additionalProperties": true
+            }
+          },
+          "required": [
+            "name"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_rules",
+        "description": "Query syntax rules for triggers, effects, scope changes, or modifiers from CWT/LSP-backed rule evidence. Returns hardFacts (legal syntax/scopes/push_scope/type filters) plus semanticHints from trigger_docs.log/scopes.cwt comments. Treat semanticHints as search guidance, not proof of legality. Fuzzy-matches if exact name not found.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "enum": [
+                "trigger",
+                "effect",
+                "scope_change",
+                "modifier"
+              ],
+              "description": "Rule category"
+            },
+            "name": {
+              "type": "string",
+              "description": "Specific rule name (optional, lists all if omitted or returns fuzzy matches if exact miss)"
+            },
+            "scope": {
+              "type": "string",
+              "description": "Filter by supported scope (e.g. \"planet\", \"country\"). Optional, but heavily recommended. Use query_scope to find your current context first."
+            }
+          },
+          "required": [
+            "category"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_cwt_schema",
+        "description": "CWT-FIRST schema lookup for common/entity definitions and other non-trigger/effect rules. Use BEFORE writing or planning new PDXScript under common/, events/, interface/, gfx/, sound/, map/, etc. Input a target file/directory such as \"common/buildings/00_x.txt\" or \"common/buildings\", plus optional field/rule name. Returns active CWT source snippets, line numbers, and parsed type/path/subtype entity summaries. If returned snippets include comments/semantic text, use that semantics first; if they are structural only, confirm intended usage from verified vanilla/project examples before writing.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "target": {
+              "type": "string",
+              "description": "Project file, directory, or CWT-relative path to inspect, e.g. \"common/buildings/00_my_building.txt\", \"common/technology\", \"events\", \"interface\"."
+            },
+            "file": {
+              "type": "string",
+              "description": "Alias for target when you have a concrete project file path."
+            },
+            "directory": {
+              "type": "string",
+              "description": "Alias for target when you know the entity directory, e.g. \"common/jobs\"."
+            },
+            "name": {
+              "type": "string",
+              "description": "Optional field, type, alias, or rule name to locate inside the matched CWT files, e.g. \"resources\", \"potential\", \"planet_modifier\"."
+            },
+            "includeContent": {
+              "type": "boolean",
+              "description": "If true, return a larger excerpt from matched schema files. Default false."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Maximum CWT files to return. Default 5, max 20."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_override_modes",
+        "description": "Query path override/load-order modes from the active CWT rules currently loaded by the language server. Use this before advising how to override vanilla files; do not rely on hard-coded prompt tables. The response includes: `modes` (path to strategy mapping, truncated to `limit`), `matched` and `matchedModeInfo` (longest-prefix match for `path` plus the documentation for that mode), and `modeInfo` (the full legend of every mode `name` and `description` - meaning / who wins by default / how to override vanilla - sourced from the CWT `override_modes_info` block). Read mode semantics from `modeInfo` / `matchedModeInfo` rather than from prompt text.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Optional file or directory path to match, e.g. \"common/ship_sizes/00_ship_sizes.txt\" or an absolute workspace path. The server uses longest configured path prefix."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Maximum modes to return when listing all active modes. Default 250."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "search_rule_capabilities",
+        "description": "Search CWT/LSP rule evidence by intent and scope capability instead of guessing a rule name. Use this when you know what you want to do but do not know the exact trigger/effect/scope_change name. Returns ranked candidates with hardFacts and semanticHints; validate the selected rule before writing.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "intent": {
+              "type": "string",
+              "description": "Natural-language intent, English or Chinese, e.g. \"iterate ships in fleet\" or \"查询舰队中的舰船\"."
+            },
+            "category": {
+              "type": "string",
+              "enum": [
+                "trigger",
+                "effect",
+                "scope_change",
+                "modifier",
+                "all"
+              ],
+              "description": "Optional rule category filter. Use scope_change when searching for every_/random_/ordered_ scope iteration effects."
+            },
+            "currentScope": {
+              "type": "string",
+              "description": "Optional current CWT scope such as fleet, country, planet, ship. Use query_scope first when editing an existing file."
+            },
+            "desiredPushScope": {
+              "type": "string",
+              "description": "Optional desired resulting scope, e.g. ship when looking for an iterator that enters ship scope."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Maximum candidates to return. Default 10, max 50."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "explain_scope",
+        "description": "Explain a CWT scope from scopes.cwt, including aliases, is_subscope_of, source location, and semantic hints. Use this to understand scopes like Carrier before deciding whether an event/effect rule applies. Scope descriptions are hints, not legality proof.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "scope": {
+              "type": "string",
+              "description": "Scope or alias to explain, e.g. Carrier, carrier, fleet, ship, planet."
+            }
+          },
+          "required": [
+            "scope"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "parse_pdx_fragment",
+        "description": "Parse a PDXScript fragment through the CWTools language server without writing a file. Use this for quick syntax, brace, and recovery checks after selecting rules. This is not a full semantic validation substitute; final project edits still need get_diagnostics/completions or verified examples.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "description": "PDXScript fragment text to parse."
+            }
+          },
+          "required": [
+            "code"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_ignored_diagnostics",
+        "description": "List all currently ignored diagnostic keys from the workspace whitelist. More efficient than reading .vscode/settings.json directly.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_pdx_block",
+        "description": "Extract exactly one complete AST block by symbol name. Works with .txt (events, common), .gui (containerWindowType by name), and .gfx (pdxmesh by name). Returns 1-based startLine/endLine that can be passed directly to replace_lines. If the symbol is not found, the error response includes a full list of available symbols with line ranges so you can retry with the correct name.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "Absolute file path"
+            },
+            "symbol": {
+              "type": "string",
+              "description": "Symbol name varies by file type: events -> \"namespace.id\" (e.g. \"anomaly.1\"); common/scripted_triggers/effects/technology/buildings/ship_sizes/static_modifiers -> top-level identifier (e.g. \"tech_kuat_reactor\", \"kuat_is_crisis_faction\"); section_templates -> key value (e.g. \"X308_Titan_MID1\"); on_actions -> action name (e.g. \"on_entering_battle\", but may have duplicates!); .gui -> containerWindowType name (e.g. \"kuat_bossbar\"); .gfx -> pdxmesh name (e.g. \"sws_turbolaser_red_mesh\"). When unsure, call document_symbols first or just try - the error response lists all available symbols."
+            }
+          },
+          "required": [
+            "file",
+            "symbol"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_references",
+        "description": "Find all references to a specific identifier in the mod files. Use this to understand how an event, trigger, or effect is used across the codebase.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "identifier": {
+              "type": "string",
+              "description": "The identifier to search for"
+            },
+            "file": {
+              "type": "string",
+              "description": "Optional file to limit search to"
+            }
+          },
+          "required": [
+            "identifier"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_file_context",
+        "description": "Get code context around a specific line, including symbol info. Input line is 0-based for compatibility with grep/search results; returned startLine/endLine and line prefixes are 1-based for direct replace_lines use. For extracting entire blocks by name, prefer get_pdx_block instead.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "Absolute file path"
+            },
+            "line": {
+              "type": "number",
+              "description": "Center line number (0-based)"
+            },
+            "radius": {
+              "type": "number",
+              "description": "Number of lines above and below to include (default 20)"
+            }
+          },
+          "required": [
+            "file",
+            "line"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "search_mod_files",
+        "description": "Search for files containing text patterns. Default: mod workspace. For vanilla: set searchContext=\"vanilla\" + exactMatch=true. Zero results are NOT proof an ID/key is missing; use verify_pdx_identifier before declaring absence. Hint: After finding a target, use get_pdx_block or edit_pdx_block - NOT read_file.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Text to search for"
+            },
+            "directory": {
+              "type": "string",
+              "description": "Optional subdirectory to restrict search, e.g. \"common/scripted_triggers\" or \"events\""
+            },
+            "fileExtension": {
+              "type": "string",
+              "description": "File extension filter, default \".txt\". Use \".yml\" for localisation."
+            },
+            "exactMatch": {
+              "type": "boolean",
+              "description": "If true, searches exactly matching complete words using RegEx boundaries. Default: false (wide .includes match)"
+            },
+            "searchContext": {
+              "type": "string",
+              "enum": [
+                "mod",
+                "vanilla",
+                "both"
+              ],
+              "description": "Context to search. \"mod\" searches workspace. \"vanilla\" searches the base game directory cached by CWTools. Default \"mod\"."
+            },
+            "isRegex": {
+              "type": "boolean",
+              "description": "If true, will treat query as a regular expression. Default: false."
+            },
+            "caseSensitive": {
+              "type": "boolean",
+              "description": "Case sensitive search. Default: false."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Maximum number of files to return (default 30, max 50). Lower values are recommended for exact searches."
+            },
+            "fileExtensions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Multiple file extensions to filter by, e.g. [\".txt\", \".gui\"]. If provided, overrides the fileExtension parameter."
+            }
+          },
+          "required": [
+            "query"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "find_sprite_candidates",
+        "description": "Find existing PDX spriteType candidates (GFX_*) in the mod workspace and/or vanilla .gfx files. Use this for diagnostics like \"Expected value of type sprite\" before changing picture/icon/sprite fields. Returns verified sprite names plus texturefile and source; do not guess GFX names.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Semantic search terms, e.g. \"anomaly\", \"archaeology\", \"force echo\", or keywords from the invalid sprite name."
+            },
+            "currentValue": {
+              "type": "string",
+              "description": "The current invalid or desired sprite value, e.g. \"GFX_evt_analyzing_anomaly\". Used to derive fallback search terms."
+            },
+            "fieldName": {
+              "type": "string",
+              "description": "Field being repaired, e.g. \"picture\", \"icon\", \"spriteType\". Helps rank event pictures vs icons."
+            },
+            "file": {
+              "type": "string",
+              "description": "Optional file containing the diagnostic, for context only."
+            },
+            "line": {
+              "type": "number",
+              "description": "Optional diagnostic line number, for context only."
+            },
+            "searchContext": {
+              "type": "string",
+              "enum": [
+                "mod",
+                "vanilla",
+                "both"
+              ],
+              "description": "Where to search. Defaults to \"both\"; project sprites are ranked before vanilla."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Maximum candidates to return (default 20, max 50)."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "find_sound_candidates",
+        "description": "Find existing Clausewitz sound/music asset candidates in mod and/or vanilla .asset files. Use this for diagnostics or fields like `show_sound = ...`, `sound = ...`, or missing sound references before editing. Returns verified asset names plus file references and source; do not guess sound asset names.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Semantic search terms, e.g. \"alien signal\", \"anomaly\", \"ui click\", or keywords from the invalid sound name."
+            },
+            "currentValue": {
+              "type": "string",
+              "description": "The current invalid or desired sound asset value, e.g. \"event_alien_signal\". Used to derive fallback search terms."
+            },
+            "fieldName": {
+              "type": "string",
+              "description": "Field being repaired, e.g. \"show_sound\", \"sound\", \"music\". Helps rank event sounds vs UI sounds."
+            },
+            "file": {
+              "type": "string",
+              "description": "Optional file containing the diagnostic, for context only."
+            },
+            "line": {
+              "type": "number",
+              "description": "Optional diagnostic line number, for context only."
+            },
+            "searchContext": {
+              "type": "string",
+              "enum": [
+                "mod",
+                "vanilla",
+                "both"
+              ],
+              "description": "Where to search. Defaults to \"both\"; project assets are ranked before vanilla."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Maximum candidates to return (default 20, max 50)."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "grep",
+        "description": "Searches for files matching the specified text/regular expression within the workspace/path. Returns matching lines and line numbers. Zero results are NOT proof an ID/key is missing; use verify_pdx_identifier or an AST lookup before declaring absence. To search the vanilla cache for bounded archetype evidence, use `search_mod_files(searchContext=\"vanilla\", exactMatch=true)`.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "The search pattern or regex to look for."
+            },
+            "path": {
+              "type": "string",
+              "description": "The path to search within (directory or file), relative to the workspace or absolute."
+            },
+            "isRegex": {
+              "type": "boolean",
+              "description": "If true, the query will be treated as a regular expression. Default: false."
+            },
+            "caseSensitive": {
+              "type": "boolean",
+              "description": "Perform a case-sensitive search. Default: false."
+            },
+            "include": {
+              "type": "string",
+              "description": "Glob pattern to filter files, e.g., \"*.txt\" or \"**/*.{txt,gui}\"."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Maximum number of matching lines to return (default 50, max 200)."
+            }
+          },
+          "required": [
+            "query"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_completion_at",
+        "description": "Get auto-completion suggestions and structured context at a specific position. The CWTools language server returns candidates from both the current mod and the vanilla game cache, plus line/token/scope context for deciding what values can go here.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "Absolute file path (must be in the workspace)"
+            },
+            "line": {
+              "type": "number",
+              "description": "Line number (0-based)"
+            },
+            "column": {
+              "type": "number",
+              "description": "Column number (0-based)"
+            },
+            "limit": {
+              "type": "number",
+              "description": "Max completions to return (default 30). Increase if you need to see more options."
+            }
+          },
+          "required": [
+            "file",
+            "line",
+            "column"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_lsp_status",
+        "description": "Get a lightweight CWTools LSP health and performance snapshot without listing diagnostics. Use this before or after heavy validation/completion work to inspect loading phase, validation queue depth, diagnostic freshness, memory/cache state, and recent completion latency/cache hits.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "timeoutMs": {
+              "type": "number",
+              "description": "Optional status request timeout in milliseconds (default 5000, max 30000)."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "document_symbols",
+        "description": "Get all symbols defined in a file as a hierarchical tree with 0-based line ranges from VS Code/LSP. Use this FIRST to understand file structure without reading content. Combine with get_pdx_block/edit_pdx_block for zero-read workflows.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "Absolute file path"
+            }
+          },
+          "required": [
+            "file"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "workspace_symbols",
+        "description": "Search symbol definitions by name across workspace + vanilla cache. Use specific queries (e.g. \"tech_energy_grid\" not \"tech\") to avoid large result sets. Empty results can mean the LSP index/type/file kind missed it; verify absence with verify_pdx_identifier before concluding missing.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Symbol name or partial name to search for. Be specific to avoid large result sets."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Max results (default 20, keep low for vanilla searches to avoid token waste)"
+            }
+          },
+          "required": [
+            "query"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "verify_pdx_identifier",
+        "description": "Verify whether a PDXScript identifier/localisation key exists using multiple independent sources: AST definition lookup, workspace symbols, optional query_types, and text search across mod + vanilla. Use this before saying a key/ID does not exist, before recreating a missing-looking definition, or after grep/search_mod_files returns zero results.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "identifier": {
+              "type": "string",
+              "description": "Exact PDX identifier or localisation key to verify, e.g. \"distar.001\", \"tech_energy_grid\", \"my_event.1.title\"."
+            },
+            "typeName": {
+              "type": "string",
+              "description": "Optional CWTools type to verify through query_types, e.g. \"event\", \"technology\", \"scripted_trigger\", \"scripted_effect\", \"static_modifier\", \"building\"."
+            },
+            "directory": {
+              "type": "string",
+              "description": "Optional subdirectory for text search, e.g. \"events\", \"common/scripted_triggers\", \"localisation\"."
+            },
+            "fileExtensions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "File extensions for text search. Defaults to [\".txt\", \".yml\", \".gui\", \".gfx\", \".asset\"]."
+            },
+            "includeVanilla": {
+              "type": "boolean",
+              "description": "Whether to include vanilla cache in text search. Default true."
+            },
+            "caseSensitive": {
+              "type": "boolean",
+              "description": "Case-sensitive exact matching for symbol/type checks. Default false."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Maximum matches to return (default 20, max 50)."
+            }
+          },
+          "required": [
+            "identifier"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "todo_write",
+        "description": "Create or update a TODO list to track multi-step tasks. Use this when you are performing complex work that involves multiple steps. Each item has a status (pending, in_progress, done). The entire list is replaced on each call.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "todos": {
+              "type": "array",
+              "description": "The full TODO list",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "Unique ID for this item"
+                  },
+                  "content": {
+                    "type": "string",
+                    "description": "Task description"
+                  },
+                  "status": {
+                    "type": "string",
+                    "enum": [
+                      "pending",
+                      "in_progress",
+                      "done"
+                    ],
+                    "description": "Current status"
+                  },
+                  "priority": {
+                    "type": "string",
+                    "enum": [
+                      "high",
+                      "medium",
+                      "low"
+                    ],
+                    "description": "Priority level"
+                  }
+                },
+                "required": [
+                  "id",
+                  "content",
+                  "status"
+                ]
+              }
+            }
+          },
+          "required": [
+            "todos"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "read_file",
+        "description": "Read file content with optional line range. Warning: Large files are auto-truncated with guidance hints. For .txt: prefer get_pdx_block(symbol) over full reads. For .yml: NEVER read full files - use grep/search_mod_files to find keys. Workflow: document_symbols -> read_file(startLine, endLine). Images (.dds/.tga/.png/.jpg) return metadata only.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "Absolute file path"
+            },
+            "startLine": {
+              "type": "number",
+              "description": "Start line (1-based). Required for large files."
+            },
+            "endLine": {
+              "type": "number",
+              "description": "End line (1-based inclusive). Keep the range under 150 lines where possible."
+            }
+          },
+          "required": [
+            "file"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "list_directory",
+        "description": "List files and subdirectories in a directory. Use this to understand project structure before reading files.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "directory": {
+              "type": "string",
+              "description": "Directory path (absolute or relative to workspace root)"
+            },
+            "recursive": {
+              "type": "boolean",
+              "description": "Whether to list recursively (default false, depth limited to 3)"
+            }
+          },
+          "required": [
+            "directory"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_diagnostics",
+        "description": "Get validation errors and warnings for workspace files DIRECTLY from the CWTools language server — the same diagnostics shown in the VSCode Problems panel. No file writing required. Returns a freshness field: `fresh` = all validations complete, `pending` = syntax OK but global checks (types/localisation) still running, `stale` = not yet validated. When freshness is pending, zero errors does NOT mean no errors — global validation is still in progress. Use this to: (1) count/list errors, (2) check file errors, (3) understand validator state before fixes.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "Optional: restrict to a specific file path (absolute) or a path substring to match. Leave empty to get all workspace diagnostics."
+            },
+            "severity": {
+              "type": "string",
+              "enum": [
+                "error",
+                "warning",
+                "info",
+                "hint",
+                "all"
+              ],
+              "description": "Filter by severity. Default: \"all\""
+            },
+            "limit": {
+              "type": "number",
+              "description": "Max diagnostics to return (default 500, max 2000). For full project reviews, omit this parameter to get all diagnostics. Only set a low limit when you want a quick summary."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "analyze_diagnostic_error",
+        "description": "Classify an existing diagnostic or tool/write failure and return routing advice. Use after a write, validation, ReadTracker, or tool-argument failure. Prefer passing diagnosticsSnapshot/toolResult from get_diagnostics or a write tool so this does not re-query diagnostics. When a concrete identifier/sprite/sound/localisation key appears, the result tells the agent to verify it against project + vanilla sources; when LSP has no feedback, it avoids blind searches.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "Optional file where the diagnostic or failed tool operation occurred. Used only to scope a fallback get_diagnostics call if no snapshot is supplied."
+            },
+            "errorCode": {
+              "type": "string",
+              "description": "Optional diagnostic code or compact error message."
+            },
+            "message": {
+              "type": "string",
+              "description": "Optional raw failure message from a tool or validation step."
+            },
+            "previousAttempt": {
+              "type": "string",
+              "description": "Optional summary of the last attempted fix. Helps detect repeated blind retries."
+            },
+            "toolName": {
+              "type": "string",
+              "description": "Optional name of the tool that failed, e.g. edit_file, write_localisation, get_diagnostics."
+            },
+            "diagnosticsSnapshot": {
+              "type": "object",
+              "description": "Optional raw get_diagnostics result, write-tool diagnostics payload, or compact diagnostic object to classify without querying diagnostics again."
+            },
+            "toolResult": {
+              "type": "object",
+              "description": "Optional raw failed tool result to classify without querying diagnostics again."
+            },
+            "reflection": {
+              "type": "string",
+              "description": "Optional legacy free-form analysis from the model. Kept for backward compatibility; the host still returns deterministic routing advice."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "glob_files",
+        "description": "Find files in the workspace using glob patterns (e.g. \"**/*.txt\", \"common/scripted_triggers/*.txt\"). Faster than list_directory for targeted file discovery. Returns absolute paths.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "description": "Glob pattern relative to workspace root, e.g. \"events/**/*.txt\" or \"common/scripted_triggers/*.txt\""
+            },
+            "limit": {
+              "type": "number",
+              "description": "Max files to return (default 200)"
+            }
+          },
+          "required": [
+            "pattern"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "lsp_operation",
+        "description": "Perform a Language Server Protocol (LSP) operation on a file position. Supports: goToDefinition (find where an identifier is defined), findReferences (find all usages), hover (get type/scope info at position), rename (preview rename refactor). Requires an open or cached file.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "type": "string",
+              "enum": [
+                "goToDefinition",
+                "findReferences",
+                "hover",
+                "rename"
+              ],
+              "description": "LSP operation to perform"
+            },
+            "file": {
+              "type": "string",
+              "description": "Absolute file path"
+            },
+            "line": {
+              "type": "number",
+              "description": "Line number (0-based)"
+            },
+            "column": {
+              "type": "number",
+              "description": "Column number (0-based)"
+            },
+            "newName": {
+              "type": "string",
+              "description": "For rename operation: the new identifier name"
+            }
+          },
+          "required": [
+            "operation",
+            "file",
+            "line",
+            "column"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "web_fetch",
+        "description": "Fetch the text content of a public URL (e.g. Paradox wiki pages, GitHub raw files). Converts HTML to plain text. Use for looking up game mechanics, modding documentation, or locating vanilla definitions online. Warning: DO NOT use this as your first step for code diagnosis. Always check local rules and vanilla cache first.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "description": "URL to fetch (must be http:// or https://)"
+            },
+            "maxChars": {
+              "type": "number",
+              "description": "Max characters to return (default 8000)"
+            }
+          },
+          "required": [
+            "url"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "search_web",
+        "description": "Search the web for information about Paradox modding, PDXScript syntax, game mechanics, or any topic. Uses Brave Search API if configured (stellarisLanguageServices.ai.braveSearchApiKey), otherwise falls back to DuckDuckGo. Returns result summaries with URLs. Warning: DO NOT use this as your first step for code diagnosis. Always check local rules and vanilla cache first.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Search query. Be specific. Example: \"Stellaris relic activation trigger conditions\" or \"HOI4 national focus completion reward syntax\""
+            },
+            "maxResults": {
+              "type": "number",
+              "description": "Max results to return (default 5, max 10)"
+            }
+          },
+          "required": [
+            "query"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "codesearch",
+        "description": "Search code repositories and developer documentation semantically (powered by Exa API if configured). Use for finding examples of PDXScript patterns, mod implementation references, or any code-level search. Falls back to Brave Search with code-specific query modifiers if no Exa key configured. Warning: DO NOT use this as your first step for code diagnosis. Always check local rules and vanilla cache first.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Code search query. Be specific about the pattern, API, or function name. Example: \"PDXScript on_action event implementation\""
+            },
+            "maxResults": {
+              "type": "number",
+              "description": "Max results to return (default 5, max 10)"
+            }
+          },
+          "required": [
+            "query"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_definition",
+        "description": "GoToDefinition at a position, or FindAllRefs if no definition exists. Uses CWTools AST - faster than grep. If you know the symbol name, prefer query_definition_by_name instead.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "Absolute file path"
+            },
+            "line": {
+              "type": "number",
+              "description": "Line number (0-based)"
+            },
+            "column": {
+              "type": "number",
+              "description": "Column number (0-based)"
+            }
+          },
+          "required": [
+            "file",
+            "line",
+            "column"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_definition_by_name",
+        "description": "Find where a named symbol is defined - no file/position needed. Returns file path and line number. Works for any top-level PDXScript key (events, triggers, effects, etc.).",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symbolName": {
+              "type": "string",
+              "description": "The exact name of the symbol to find (e.g. \"kuat_has_psionic_research\", \"distar.001\")"
+            }
+          },
+          "required": [
+            "symbolName"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_scripted_effects",
+        "description": "Warning: MANDATORY before using any scripted_effect. Lists all scripted effects with name, scope constraints, and type. PDXscript effect names are frequently hallucinated - always verify here first.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "filter": {
+              "type": "string",
+              "description": "Optional substring filter on effect name. Without filter, results are limited to 50; with filter, up to 200."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Max results (default 50 without filter, 200 with filter)"
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_scripted_triggers",
+        "description": "Warning: MANDATORY before using any scripted_trigger. Lists all scripted triggers with name, scope constraints, and type. Trigger names are frequently hallucinated - always verify here first.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "filter": {
+              "type": "string",
+              "description": "Optional substring filter on trigger name. Without filter, results are limited to 50; with filter, up to 200."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Max results (default 50 without filter, 200 with filter)"
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_enums",
+        "description": "Warning: MANDATORY before using any enum field. Query enum values from CWTools rules. Call with no enumName to list all enums, then query specific enum for values. Always verify - enum values are domain-specific.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "enumName": {
+              "type": "string",
+              "description": "Enum name to query (e.g. \"anomaly_category\"). Leave empty to list all enum names."
+            },
+            "limit": {
+              "type": "number",
+              "description": "Max values to return (default 500)"
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_entity_info",
+        "description": "Get deep structural info from CWTools cache: referenced types, scripted variables, effect/trigger blocks, and saved event_targets. Use to understand file dependencies before modification.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "Absolute file path (must be a parsed mod file)"
+            }
+          },
+          "required": [
+            "file"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_static_modifiers",
+        "description": "Warning: MANDATORY before using add_modifier. Lists static modifiers with categories. Modifier names are domain-specific - always verify. Dynamic/engine modifiers may not appear here - use query_rules(category=\"modifier\") as fallback.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "filter": {
+              "type": "string",
+              "description": "Optional substring filter on modifier tag"
+            },
+            "limit": {
+              "type": "number",
+              "description": "Max results (default 300)"
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_variables",
+        "description": "List all scripted variables (@variable_name = value) defined across the mod and vanilla. Use this to look up numeric constant values defined with @-prefix before using them in generated code.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "filter": {
+              "type": "string",
+              "description": "Optional substring filter on variable name"
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "set_memory",
+        "description": "Store a string in the shared Agent Blackboard memory. Extremely useful for storing parsed ASTs, file manifests, or data maps that would otherwise overwhelm the prompt context. The data is available to all sub-agents running in the current session. Max length: 500 characters per value. If the value exceeds 500 characters, it will be automatically saved to a file and the Blackboard will only store the file path.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string",
+              "description": "Unique string identifier for this data."
+            },
+            "value": {
+              "type": "string",
+              "description": "The string data to store. Keep it short (<= 500 chars)."
+            }
+          },
+          "required": [
+            "key",
+            "value"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_memory",
+        "description": "Retrieve a string from the shared Agent Blackboard memory by its key. Useful to read data stored by other parallel or sequential sub-agents without passing it through prompt context strings.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string",
+              "description": "Unique string identifier."
+            }
+          },
+          "required": [
+            "key"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "search_memory",
+        "description": "Search through the Blackboard memory keys and values using a keyword query. Returns all matching keys and a brief preview of their contents. Useful to discover what data other sub-agents have stored.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "The search query or keyword."
+            }
+          },
+          "required": [
+            "query"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "save_workflow",
+        "description": "Save a reusable project workflow from the current conversation or task process. Use only when the user asks to save the process/workflow or when preserving a clearly reusable workflow is the task. Writes .cwtools-ai/workflows/<id>.md and makes it available through /workflow:<id>.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Optional stable workflow id, lowercase/kebab-case preferred. If omitted, it is derived from the title."
+            },
+            "title": {
+              "type": "string",
+              "description": "User-facing workflow title."
+            },
+            "description": {
+              "type": "string",
+              "description": "Short one-sentence summary shown in the workflow picker and slash command list."
+            },
+            "mode": {
+              "type": "string",
+              "enum": [
+                "build",
+                "plan",
+                "explore",
+                "general",
+                "utility",
+                "review",
+                "gui_expert",
+                "script_reviewer",
+                "loc_translator",
+                "loc_writer",
+                "orchestrator",
+                "script"
+              ],
+              "description": "Agent mode this workflow should run in. Default build."
+            },
+            "promptSupplement": {
+              "type": "string",
+              "description": "The reusable workflow instructions. Include objective, phases/checklist, important constraints, expected tools, and verification steps. Do not include private one-off conversation details unless they are needed for reuse."
+            },
+            "allowedTools": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Optional tool allowlist. Use this for narrow workflows; leave empty to use the mode default tools."
+            },
+            "blockedTools": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Optional tools to block when no allowlist is provided."
+            },
+            "requiredContext": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "activeFile",
+                  "activeFile!",
+                  "diagnostics",
+                  "diagnostics!",
+                  "selection",
+                  "selection!",
+                  "workspace",
+                  "workspace!"
+                ]
+              },
+              "description": "Context needed before starting. Add ! for required context. Default: workspace!."
+            },
+            "verificationTool": {
+              "type": "string",
+              "description": "Optional single verification tool, e.g. get_diagnostics."
+            },
+            "overwrite": {
+              "type": "boolean",
+              "description": "If true, replace an existing workflow with the same id. Default false."
+            }
+          },
+          "required": [
+            "title",
+            "description",
+            "promptSupplement"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "git_ops",
+        "description": "Execute safe git operations in the workspace. Use this to inspect changes or revert files to their last committed state when edits have gone wrong. Only available when the workspace has a git repository. Actions: \"status\" (see modified files), \"diff\" (see changes for a file), \"checkout\" (revert a file to HEAD - destructive, discards uncommitted changes to that file).",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "type": "string",
+              "enum": [
+                "status",
+                "diff",
+                "checkout"
+              ],
+              "description": "Git operation: \"status\" = list modified files, \"diff\" = show changes for a specific file, \"checkout\" = revert a file to HEAD (discard all uncommitted changes)"
+            },
+            "file": {
+              "type": "string",
+              "description": "File path (required for \"diff\" and \"checkout\" actions). Relative to workspace root or absolute."
+            }
+          },
+          "required": [
+            "action"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "dispatch_agents",
+        "description": "[Orchestrator/Script Mode] Decompose the current task into multiple sub-tasks and dispatch them to specialist agents for parallel execution. Script Mode may dispatch up to 8 concise tasks per wave; classic Orchestrator mode remains limited to 4. Sub-agents include Explorer (read-only exploration), Builder (code generation), LocWriter (localisation), Reviewer (code review), etc. Agents exchange data via the shared Blackboard and execution order is guaranteed by a DAG. Any task that writes localisation/localization .yml files must be assigned to loc_writer and must use write_localisation, not generic edit tools.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "tasks": {
+              "type": "array",
+              "maxItems": 8,
+              "description": "List of sub-tasks. Ordered by dependencies. Classic Orchestrator mode allows at most 4 tasks per dispatch; Script Mode allows at most 8 concise tasks per dispatch for read-heavy fanout and batched verification. If you have more work, dispatch it in waves.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "Unique sub-task ID (e.g. \"explore_structure\", \"build_events\")"
+                  },
+                  "agentType": {
+                    "type": "string",
+                    "enum": [
+                      "explore",
+                      "plan",
+                      "build",
+                      "review",
+                      "loc_writer"
+                    ],
+                    "description": "Agent type to execute this task"
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "description": "Sub-task description (sent as the agent's user message). Warning: CRITICAL: KEEP THIS CONCISE to prevent JSON truncation errors. Do NOT embed large file contents or massive path lists here. If you need to pass large data, use `set_memory` first and just pass the memory key in this prompt."
+                  },
+                  "dependencies": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of prerequisite task IDs - this task executes only after all dependencies complete"
+                  },
+                  "contextFiles": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Optional file paths or Blackboard Keys containing detailed design blueprints or context. **CRITICAL: Do NOT paste hundreds of words of blueprint text directly into the prompt.** Instead, list the file paths here, and the system will automatically read and inject them into the child agent."
+                  },
+                  "plannedFiles": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Expected project files this sub-task will modify. Provide this for Builder tasks whenever the approved plan, blueprint, diagnostics, or file manifest already identifies the targets. It lets the orchestrator avoid concurrent write conflicts and narrow child write scope when files are known. If these targets include localisation/localization .yml files, use agentType=\"loc_writer\"; the child must call write_localisation only. If exploration must discover the files first, dispatch that exploration before the Builder task."
+                  },
+                  "plannedEntities": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Optional list of domain entities this sub-task expects to create or modify, such as event IDs or scripted effect names. Used for concurrency conflict avoidance."
+                  },
+                  "priority": {
+                    "type": "string",
+                    "enum": [
+                      "critical",
+                      "normal",
+                      "low"
+                    ],
+                    "description": "Task priority (default: normal)"
+                  },
+                  "maxIterations": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 100,
+                    "description": "Optional per-agent reasoning-loop cap. Leave unset to use the role default."
+                  }
+                },
+                "required": [
+                  "id",
+                  "agentType",
+                  "prompt"
+                ]
+              }
+            }
+          },
+          "required": [
+            "tasks"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_blackboard",
+        "description": "Query data from the shared Blackboard. The Blackboard is a cross-agent knowledge store supporting exact key lookup, prefix-based range queries, and type filtering. Types include: file_snapshot, scope_info, diag_result, entity_registry, write_intent, free_text.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string",
+              "description": "Exact key to look up (mutually exclusive with prefix/type)"
+            },
+            "prefix": {
+              "type": "string",
+              "description": "Key prefix for range queries (e.g. \"entity:\" matches all entries starting with \"entity:\")"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "file_snapshot",
+                "scope_info",
+                "diag_result",
+                "entity_registry",
+                "write_intent",
+                "free_text"
+              ],
+              "description": "Filter by data type"
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "merge_results",
+        "description": "[Orchestrator/Script Mode] Merge execution results from multiple sub-agents into a final deliverable. Call after all sub-agents complete to consolidate code generation, localisation, and review report outputs. Available in Orchestrator and Script Mode.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "nodeIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "List of task node IDs whose results should be merged"
+            },
+            "strategy": {
+              "type": "string",
+              "enum": [
+                "concatenate",
+                "structured",
+                "summary"
+              ],
+              "description": "Merge strategy: \"concatenate\" (raw join), \"structured\" (group by file), \"summary\" (generate summary). Default: structured."
+            }
+          },
+          "required": [
+            "nodeIds"
+          ]
+        }
+      }
+    }
+  ]
+}
