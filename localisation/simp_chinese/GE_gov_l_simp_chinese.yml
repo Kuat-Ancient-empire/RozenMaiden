@@ -51,6 +51,12 @@ edict_roz_mutiplayer_tech_edict_desc: "我们联合!"
  edict_roz_graygoo_enable_edict:"召唤灰风"
  edict_roz_graygoo_enable_edict_desc:""
 
+ edict_roz_diplp_weight_debuff_add_edict:"§M添加外交权重平衡修正§!"
+ edict_roz_diplp_weight_debuff_add_edict_desc:"或许能拯救你溢出的权重值呢？"
+ edict_roz_diplp_weight_debuff_remove_edict:"§2移除外交权重平衡修正§!"
+ edict_roz_diplp_weight_debuff_remove_edict_desc:"看起来你不需要再防止外交权重溢出了。"
+
+
 ############### 公民性 ###############
 
 civic_ge_military_strategist:0 "兵者诡道"

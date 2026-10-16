@@ -58,6 +58,7 @@ Ge_Ragnarok_plural: "永恒之枪"
  SHIP_GRAPHICS_GE_RAGNAROK_DESC: "这艘宏伟巨舰有着海量的独特武备，不过能将霎那流逝的时光化为永恒，这才是永恒之枪最令人印象深刻的特性。"
 ge_aura_ship: "光环舰"
 ge_aura_ship_key: "光环舰"
+ge_aura_ship_cap: "光环舰"
 ge_aura_ship_plural: "光环舰"
  SHIP_GRAPHICS_GE_AURA_SHIP_DESC: "众所周知，光环系统一般只能由泰坦级以上的舰船才能搭载，但虚空反应堆的出现给了我们新的选择，能源区段的大幅节省足以让我们在一艘小型舰船上安装光环系统。"
 

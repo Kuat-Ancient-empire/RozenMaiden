@@ -4285,29 +4285,29 @@ roz_lgate_create_reward_planet = {
 	# give_technology = { tech = tech_fe_nourishment_2 }
 
 	# give_technology = { tech = tech_fe_fabricator_2 }
-
+	#
 	# give_technology = { tech = tech_fe_singularity_2 }
-
+	#
 	# give_technology = { tech = tech_fe_forge_2 }
-
+	#
 	# give_technology = { tech = tech_fe_dome_2 }
-
+	#
 	# give_technology = { tech = tech_fe_fortress_2 }
-
+	#
 	# give_technology = { tech = tech_fe_administration_2 }
-
+	#
 	# give_technology = { tech = tech_fe_assembly_2 }
-
+	#
 	# give_technology = { tech = tech_fe_clinic_2 }
-
+	#
 	# give_technology = { tech = tech_fe_market_2 }
-
+	#
 	# give_technology = { tech = tech_fe_silo_2 }
-
+	#
 	# give_technology = { tech = tech_fe_entertainment_2 }
-
+	#
 	# give_technology = { tech = tech_fe_lab_2 }
-
+	#
 	# give_technology = { tech = tech_fe_mine_2 }
 
 	give_technology = { tech = tech_mineral_purification_1 }

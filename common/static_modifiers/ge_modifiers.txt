@@ -854,4 +854,9 @@ leader_trait_roz_shinku_hollye_commander_fleet_enemy_modifier = {
 	ship_damage_reduction_mult = -1.1
 }
 
+roz_diplo_weight_debuff = {
+	icon = gfx/interface/icons/modifiers/mod_diplo_weight_mult.dds
+	diplo_weight_mult = -1
+	diplo_weight_naval_mult = -10
+}
 

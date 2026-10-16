@@ -420,7 +420,31 @@ roz_graygoo_enable_edict = {
 	}
 }
 
+roz_diplp_weight_debuff_add_edict = {
+	length = -1
+	icon = GFX_tech_gateway
+	potential = {
+		always = yes
+		#diplomacy_weight < 0
+	}
 
+	effect = {
+		add_modifier = { modifier = roz_diplo_weight_debuff }
+	}
+}
+
+roz_diplp_weight_debuff_remove_edict = {
+	length = -1
+	icon = GFX_tech_gateway
+	potential = {
+		always = yes
+		#diplomacy_weight < 0
+	}
+
+	effect = {
+		remove_modifier = roz_diplo_weight_debuff
+	}
+}
 
 #@educ=3
 #research_edicts = {

@@ -3425,6 +3425,10 @@ country_event = {	#战斗结束
             add_situation_progress = -25
         }
         every_situation = { limit = { is_situation_type = kirakishou_battle_field_situation } destroy_situation = this }
+        if = {
+            limit = { has_country_flag = roz_krks_invision_begin_flag }
+            remove_country_flag = roz_krks_invision_begin_flag
+        }
     }
     picture = GFX_evt_large_explosion
     option = {
