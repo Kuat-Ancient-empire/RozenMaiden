@@ -21,7 +21,7 @@ roz_arkship_T_battery = {
 		is_nomadic = yes
 	}
 
-	fits_on_slots = { spinal_mount_1 spinal_mount_2 spinal_mount_3 spinal_mount_4 }
+	fits_on_slots = { spinal_mount_1 spinal_mount_2 }
 
 
 	resources = {
@@ -76,7 +76,7 @@ roz_arkship_capital_shipyard = {
 		is_nomadic = yes
 	}
 
-	cannot_fit_on_slots = { spinal_mount_1 }
+	cannot_fit_on_slots = { spinal_mount_1 spinal_mount_2 }
 
 	resources = {
 		category = starbase_arkship_upgrades

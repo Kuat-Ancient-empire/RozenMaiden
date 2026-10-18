@@ -566,20 +566,29 @@ ge_communication.201.cc.response:0 "§M...那只是只需要它的时候它装�
 
 ge_communication.201.zz:0 "Can you help us explore N-Gebiet?"
 ge_communication.201.zz.response:0 "§MAs you wish.§!\n\n\n§BNew ascensions were unlocked§!"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ ### Global Settings - Other Settings: edict function buttons
+ roz_start.7777.diplo_weight_add:0 "§MAdd Diplomatic Weight Balance§!"
+ roz_start.7777.diplo_weight_add.ct:0 "Applies the §MDiplomatic Weight Balance§! modifier to your empire to reduce excessive diplomatic weight."
+ roz_start.7777.diplo_weight_remove:0 "§2Remove Diplomatic Weight Balance§!"
+ roz_start.7777.diplo_weight_remove.ct:0 "Removes the §MDiplomatic Weight Balance§! modifier."
+ roz_start.7777.lgate_disable:0 "§RSeal L-Gates§!"
+ roz_start.7777.lgate_disable.ct:0 "§RSeals every L-Gate in the L-Cluster§! by rebuilding them as inactive gates, cutting the cluster off from the galaxy."
+ roz_start.7777.lgate_enable:0 "§GOpen L-Gates§!"
+ roz_start.7777.lgate_enable.ct:0 "§GActivates every L-Gate in the L-Cluster§!, reconnecting it to the galaxy."
+ roz_start.7777.mp_tech:0 "§BVoid Tech for Clients§!"
+ roz_start.7777.mp_tech.ct:0 "§BMultiplayer utility§!: grants Void Technology to every §Hhuman player§! who has not yet obtained Void Reactor technology."
+ roz_start.7777.site_star:0 "§YClaim Relic System§!"
+ roz_start.7777.site_star.ct:0 "Builds an outpost in the system holding Suigintou's archaeological site and §Ygrants you control of that system§!."
+ ### Other Settings: second batch of edict-derived buttons (ge_site_edicts / ge_restart_boost_plan_edicts / OGAS contact / ge_civic_edicts) ###
+ roz_start.7777.ge_site:0 "§RSpawn Relic Site§!"
+ roz_start.7777.ge_site.ct:0 "Fires the event of the former 'Spawn Relic Site' edict, spawning an archaeological site in an isolated system. If the site already exists, clicking again does nothing."
+ roz_start.7777.ge_site.fail:0 "§RUnavailable:§! Suigintou has already been acquired, or this feature has already been used."
+ roz_start.7777.restart_boost_plan:0 "§BRestart Void Plan§!"
+ roz_start.7777.restart_boost_plan.ct:0 "Fires the event of the former 'Restart Void Plan' edict and records the restart flag to prevent repeat triggers. We cannot wait for the so-called dark matter reactor any longer - let us gamble on the zero-point reactor!"
+ roz_start.7777.restart_boost_plan.fail:0 "§RUnavailable:§! Requires: waiting for dark matter technology, void research not abandoned and zero-point reactor not yet acquired, and no restart plan currently active."
+ roz_start.7777.ogas_contact:0 "§MContact N-Field§!"
+ roz_start.7777.ogas_contact.ct:0 "When OGAS is enabled and Suigintou cannot be contacted through the diplomacy interface, this is the fallback option."
+ roz_start.7777.ogas_contact.fail:0 "§RUnavailable:§! Requires: Crisis Coalition installed, Suigintou acquired, and neither an N-Field diplomacy contact nor a busy Suigintou currently active."
+ roz_start.7777.civic_restore:0 "Restore Civics"
+ roz_start.7777.civic_restore.ct:0 "Forcibly removes and re-adds the ascension civics, fixing cases where the game itself wiped them out."
+ roz_start.7777.civic_restore.fail:0 "§RUnavailable:§! Requires: Suigintou acquired, ascension perk ap_ge_2, zero-point reactor technology and the ge_ap2_complate flag, and neither Celestial Military nor Time Honored civics currently active."

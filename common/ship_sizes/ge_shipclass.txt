@@ -1041,13 +1041,16 @@ roz_ultra_arkship_tier_X = {
 	entity = military_arkship_01_stage_3_entity
 	section_slots = {
 		"mid"				=	{ locator = "part1" }
-		"1"					=	{ locator = "part1" }
-		"2"					=	{ locator = "part1" }
-		"3"					=	{ locator = "part1" }
-		"4"					=	{ locator = "part1" }
-		"5"					=	{ locator = "part1" }
-		"6"					=	{ locator = "part1" }
-		"spinal_mount_1"		=	{ locator = "part1" }
+		"1"					=	{ locator = "module_01" }
+		"2"					=	{ locator = "module_02" }
+		"3"					=	{ locator = "module_03" }
+		"4"					=	{ locator = "module_04" }
+		"5"					=	{ locator = "module_05" }
+		"6"					=	{ locator = "module_06" }
+		"7"					=	{ locator = "module_01" }	# vanilla mesh exposes no module_07 locator, so reuse module_01
+		"8"					=	{ locator = "module_02" }	# vanilla mesh exposes no module_08 locator, so reuse module_02
+		"spinal_mount_1"		=	{ locator = "spinal_mount" }
+		"spinal_mount_2"		=	{ locator = "spinal_mount" }	# vanilla mesh exposes only one spinal_mount locator, so reuse it
 	}
 
 	# Ship setup
@@ -1068,7 +1071,7 @@ roz_ultra_arkship_tier_X = {
 		ship_cloaking_strength_add = 16
 		ship_cloaking_detection_add = 16
 		starbase_module_capacity_add = 8
-		starbase_building_capacity_add = 12
+		starbase_building_capacity_add = 16
 		planet_max_districts_add = 10
 		planet_storm_devastation_mult = -0.5
 		planet_jobs_produces_mult = 0.1

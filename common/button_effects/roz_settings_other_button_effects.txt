@@ -1,0 +1,317 @@
+#全局设置窗口“其他设置”面板按钮效果
+#由原法令整合而来（第一批）：roz_diplp_weight_debuff_add_edict、roz_diplp_weight_debuff_remove_edict、
+#roz_lgate_enable_edict、roz_lgate_disable_edict、roz_mutiplayer_tech_edict、get_suigintou_site_star_edicts
+#由原法令整合而来（第二批）：ge_site_edicts、ge_restart_boost_plan_edicts、
+#roz_suigintou_transmission_when_OGAS_enable_edicts、ge_civic_edicts
+#
+#界面位置（interface/roz_settings_event_ui.gui，其他设置分组 x=18..1125 宽 1107、y=495..675 高 180；主窗口 1200x800）：
+#  第 1 行 y=515：x=36 王座战力（互斥）/ x=254 领袖名称（互斥）/ x=472 L星团启动 / x=690 外交权重添加 / x=908 外交权重移除
+#  第 2 行 y=550：x=36 L星门（同坐标互斥）/ x=254 客机虚空科技 / x=472 遗迹星系控制权 / x=690 孤立星系刷坟 / x=908 重启虚空计划
+#  第 3 行 y=585：x=36 联系N之领域 / x=254 国民性添加
+#  布局核对：按钮行 y 区间 515..619 全部落在分组 495..675 内（第 3 行底边 619），无需加高主窗口或子窗口。
+#  显隐与可用性分工：potential 决定“是否显示”（为假则整块按钮被引擎隐藏）；allow 决定“是否可点”（为假则按钮变灰）。
+#  条件提示：allow 内的条件统一包在 custom_tooltip = { fail_text = 键 … } 中，失败提示走本地化
+#  （范式来源：原版 common/button_effects/behemoth_effects.txt 的 fail_text 用法）。
+
+#装饰性分组底板按钮（仅用于界面背景与标题，点击无实际效果）
+roz_settings_group_button = {
+    potential = { always = yes }
+    allow = { always = yes }
+    effect = { }
+}
+
+#实用功能：外交权重平衡修正（添加）——常驻按钮，与“移除”按钮同时显示，非互斥
+roz_settings_diplo_weight_add = {
+    potential = { always = yes }
+    allow = { always = yes }
+    effect = {
+        custom_tooltip = roz_start.7777.diplo_weight_add.ct
+        hidden_effect = {
+            from? = {
+                add_modifier = { modifier = roz_diplo_weight_debuff }
+            }
+        }
+    }
+}
+#实用功能：外交权重平衡修正（移除）——常驻按钮，与“添加”按钮同时显示，非互斥
+roz_settings_diplo_weight_remove = {
+    potential = { always = yes }
+    allow = { always = yes }
+    effect = {
+        custom_tooltip = roz_start.7777.diplo_weight_remove.ct
+        hidden_effect = {
+            from? = {
+                remove_modifier = roz_diplo_weight_debuff
+            }
+        }
+    }
+}
+
+#实用功能：L星门封锁（布尔按钮·封锁态；与启用态同坐标互斥）
+#  下方 every_system / every_system_megastructure 的 limit = { … } 是引擎过滤器关键字（非 scripted 定义），用于仅命中 L 星团星门。
+roz_settings_lgate_disable = {
+    potential = {
+        from? = {
+            is_ai = no
+            has_country_flag = roz_lgate_spawn
+            has_country_flag = roz_lgate_enable
+            NOT = { has_country_flag = roz_lgate_disable }
+        }
+    }
+    allow = { always = yes }
+    effect = {
+        custom_tooltip = roz_start.7777.lgate_disable.ct
+        hidden_effect = {
+            from? = {
+                set_country_flag = roz_lgate_disable
+                remove_country_flag = roz_lgate_enable
+                every_system = {
+                    if = {
+                        limit = {
+                            has_star_flag = lcluster1
+                            has_star_flag = lcluster_lgate
+                        }
+                        every_system_megastructure = {
+                            if = {
+                                limit = {
+                                    is_megastructure_type = lgate_base
+                                }
+                                remove_megastructure = this
+                            }
+                        }
+                        spawn_megastructure = {
+                            type = lgate_base
+                            orbit_angle = 225
+                            orbit_distance = 360
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#实用功能：L星门启用（布尔按钮·启用态）
+roz_settings_lgate_enable = {
+    potential = {
+        from? = {
+            is_ai = no
+            has_country_flag = roz_lgate_spawn
+            has_country_flag = roz_lgate_disable
+            NOT = { has_country_flag = roz_lgate_enable }
+        }
+    }
+    allow = { always = yes }
+    effect = {
+        custom_tooltip = roz_start.7777.lgate_enable.ct
+        hidden_effect = {
+            from? = {
+                set_country_flag = roz_lgate_enable
+                remove_country_flag = roz_lgate_disable
+                every_system = {
+                    if = {
+                        limit = {
+                            has_star_flag = lcluster1
+                            has_star_flag = lcluster_lgate
+                        }
+                        every_system_megastructure = {
+                            if = {
+                                limit = {
+                                    is_megastructure_type = lgate_base
+                                    NOT = { has_megastructure_flag = lgate_activated }
+                                }
+                                activate_gateway = this
+                                set_megastructure_flag = lgate_activated
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#实用功能：客机玩家获得虚空科技
+roz_settings_mutiplayer_tech = {
+    #按钮恒显示：原法令的多人/剧情门槛下沉到 allow（potential 只决定显隐），条件不满足时按钮变灰不可点
+    potential = { always = yes }
+    allow = {
+        from? = {
+            has_country_flag = roz_leader_suigintou_get
+            has_country_flag = ge_tech_reactor_get
+            is_multiplayer = yes
+        }
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.mp_tech.ct
+        hidden_effect = {
+            from? = {
+                every_country = {
+                    if = {
+                        limit = {
+                            is_ai = no
+                            NOT = { has_country_flag = ge_tech_reactor_get }
+                        }
+                        country_event = {
+                            id = ge_test_event.100
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#实用功能：获得考古遗迹所在星系的控制权
+roz_settings_site_star = {
+    #按钮恒显示：原法令的多人/剧情门槛下沉到 allow，条件不满足时按钮变灰不可点
+    potential = { always = yes }
+    allow = {
+        from? = {
+            has_country_flag = ge_sgt_site_owner_flag_for_multiplayer
+            NOR = {
+                is_nomadic = yes
+                has_country_flag = roz_leader_suigintou_get
+                has_country_flag = get_suigintou_site_star_edicts_used
+                any_owned_starbase = {
+                    solar_system? = {
+                        has_star_flag = ge_suigintou_site_star_flag@root
+                    }
+                }
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.site_star.ct
+        hidden_effect = {
+            from? = {
+                country_event = { id = ge_sites.3 }
+                set_country_flag = get_suigintou_site_star_edicts_used
+            }
+        }
+    }
+}
+
+#实用功能：孤立星系刷坟（原法令 ge_site_edicts）
+#按钮恒显示：原法令的 NOR 条件下沉到 allow，条件不满足时按钮变灰并显示本地化失败提示
+roz_settings_ge_site = {
+    potential = { always = yes }
+    allow = {
+        from? = {
+            custom_tooltip = {
+                fail_text = roz_start.7777.ge_site.fail
+                NOR = {
+                    has_country_flag = ge_sgt_site_find_2_flag
+                    has_country_flag = roz_leader_suigintou_get
+                }
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.ge_site.ct
+        hidden_effect = {
+            from? = {
+                country_event = { id = ge_sites.200 }
+            }
+        }
+    }
+}
+
+#实用功能：重启虚空计划（原法令 ge_restart_boost_plan_edicts）
+roz_settings_restart_boost_plan = {
+    potential = { always = yes }
+    allow = {
+        from? = {
+            custom_tooltip = {
+                fail_text = roz_start.7777.restart_boost_plan.fail
+                has_country_flag = ge_wait_tech_dark_matter
+                NOT = {
+                    has_country_flag = abandon_ge_research
+                    has_technology = GE_tech_reactor
+                }
+                NOT = { has_country_flag = ge_rbp_activity_flag }
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.restart_boost_plan.ct
+        hidden_effect = {
+            from? = {
+                country_event = { id = ge_event.470 }
+                set_country_flag = ge_rbp_activity_flag
+            }
+        }
+    }
+}
+
+#实用功能：联系N之领域（原法令 roz_suigintou_transmission_when_OGAS_enable_edicts）
+roz_settings_ogas_contact = {
+    potential = { always = yes }
+    allow = {
+        from? = {
+            custom_tooltip = {
+                fail_text = roz_start.7777.ogas_contact.fail
+                has_global_flag = GF_Stellairs_Crisis_Coalition_Installed
+                has_country_flag = roz_leader_suigintou_get
+                NOR = {
+                    has_country_flag = ge_nfield_diplomacy_activated
+                    has_country_flag = ge_sgt_busy
+                }
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.ogas_contact.ct
+        hidden_effect = {
+            from? = {
+                country_event = { id = ge_communication.133 }
+            }
+        }
+    }
+}
+
+#实用功能：国民性添加（原法令 ge_civic_edicts）
+#  强制移除再写回国策的顺序与次数与原法令完全一致，请勿“优化”成单次调用。
+roz_settings_civic_restore = {
+    potential = { always = yes }
+    allow = {
+        from? = {
+            custom_tooltip = {
+                fail_text = roz_start.7777.civic_restore.fail
+                has_country_flag = roz_leader_suigintou_get
+                has_ascension_perk = ap_ge_2
+                has_technology = GE_tech_reactor
+                has_country_flag = ge_ap2_complate
+                NOR = {
+                    has_civic = civic_cor_celestial_military
+                    has_civic = civic_cor_time_honored
+                }
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = roz_start.7777.civic_restore.ct
+        hidden_effect = {
+            from? = {
+                force_remove_civic = civic_cor_celestial_military
+                force_remove_civic = civic_cor_time_honored
+                force_remove_civic = civic_cor_celestial_military
+
+                force_add_civic = civic_cor_celestial_military
+                force_add_civic = civic_cor_time_honored
+                force_add_civic = civic_cor_celestial_military
+            }
+        }
+    }
+}
+
+#维护约定：
+#  1. roz_settings_diplo_weight_add 与 roz_settings_diplo_weight_remove 是“常驻并列”按钮：
+#     potential 恒为 always = yes，两者始终同时显示、同时可点击；效果为幂等操作（重复点击不会叠加修正）。
+#  2. 只有 roz_settings_lgate_disable / roz_settings_lgate_enable 构成同坐标互斥布尔按钮（靠 potential 切换显隐）。
+#  3. roz_settings_mutiplayer_tech 与 roz_settings_site_star 的 potential 恒为 always = yes（永远显示），
+#     原法令的多人/剧情门槛写在 allow 内：条件不满足时按钮显示为灰色不可点，条件满足后才能执行效果。
+#  4. 第二批整合按钮（roz_settings_ge_site / roz_settings_restart_boost_plan / roz_settings_ogas_contact /
+#     roz_settings_civic_restore）遵循同一约定：potential 恒为 always = yes 保证常驻显示，
+#     原法令 potential 的条件原样搬进 allow，并包在 custom_tooltip = { fail_text = … } 里输出本地化提示。
+#  5. 效果块内的语句顺序是对原法令 effect 的逐行搬迁，尤其 roz_settings_civic_restore 的
+#     三次 force_remove_civic / 三次 force_add_civic 不要合并或去重，否则国策重排行为可能与法令不一致。

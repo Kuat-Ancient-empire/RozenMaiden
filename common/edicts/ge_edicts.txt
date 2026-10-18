@@ -29,7 +29,6 @@ roz_suigintou_transmission_when_OGAS_enable_edicts = {
 	length = -1
 	icon = GFX_sgt_edit_icon_1
 	potential = {
-		always = no #还是兼容不了少前，摸了
 
 		has_global_flag = GF_Stellairs_Crisis_Coalition_Installed
 		has_country_flag = roz_leader_suigintou_get
@@ -196,7 +195,7 @@ ge_site_edicts = {
 
 
 
-ge_civic_edicts = {
+ge_civic_edicts = { #辅助功能：国民性添加
 	length = 1
 	icon = GFX_edict_type_policy
 	potential = {
@@ -248,138 +247,138 @@ ge_HTEP_edicts = {	#hyper_transmit_electricity_protocol
 }
 
 #获得考古遗迹所在星系的控制权
-get_suigintou_site_star_edicts = {
-	length = 1
-	icon = GFX_sgt_edit_icon_1
-	potential = {
-		NOR = {
-			is_nomadic = yes
-			has_country_flag = roz_leader_suigintou_get
-			has_country_flag = get_suigintou_site_star_edicts_used
-			any_owned_starbase = {
-				solar_system? = {
-					has_star_flag = ge_suigintou_site_star_flag@root
-				}			
-			}
-		}
-		has_country_flag = ge_sgt_site_owner_flag_for_multiplayer
-	}
-	effect = {
-		country_event = {
-			id = ge_sites.3
-		}
-		hidden_effect = {
-			set_country_flag = get_suigintou_site_star_edicts_used
-		}
-	}
-	resources = {
-		category = edicts
-		cost = {
-			influence = -50
-		}
-	}
-}
+# get_suigintou_site_star_edicts = {
+# 	length = 1
+# 	icon = GFX_sgt_edit_icon_1
+# 	potential = {
+# 		NOR = {
+# 			is_nomadic = yes
+# 			has_country_flag = roz_leader_suigintou_get
+# 			has_country_flag = get_suigintou_site_star_edicts_used
+# 			any_owned_starbase = {
+# 				solar_system? = {
+# 					has_star_flag = ge_suigintou_site_star_flag@root
+# 				}			
+# 			}
+# 		}
+# 		has_country_flag = ge_sgt_site_owner_flag_for_multiplayer
+# 	}
+# 	effect = {
+# 		country_event = {
+# 			id = ge_sites.3
+# 		}
+# 		hidden_effect = {
+# 			set_country_flag = get_suigintou_site_star_edicts_used
+# 		}
+# 	}
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 			influence = -50
+# 		}
+# 	}
+# }
 
-roz_mutiplayer_tech_edict = {
-	length = 1
-	icon = GFX_tech_gateway
-	#icon = GFX_sgt_edit_icon_1
-	potential = {
-		has_country_flag = roz_leader_suigintou_get
-		has_country_flag = ge_tech_reactor_get
-		is_multiplayer = yes
-	}
-	effect = {
-		hidden_effect = {
-			every_country = {
-				limit = {
-					is_ai = no
-					NOT = {
-						has_country_flag = ge_tech_reactor_get
-					}
-				}
-				country_event = {
-					id = ge_test_event.100
-				}
-			}
+# roz_mutiplayer_tech_edict = {
+# 	length = 1
+# 	icon = GFX_tech_gateway
+# 	#icon = GFX_sgt_edit_icon_1
+# 	potential = {
+# 		has_country_flag = roz_leader_suigintou_get
+# 		has_country_flag = ge_tech_reactor_get
+# 		is_multiplayer = yes
+# 	}
+# 	effect = {
+# 		hidden_effect = {
+# 			every_country = {
+# 				limit = {
+# 					is_ai = no
+# 					NOT = {
+# 						has_country_flag = ge_tech_reactor_get
+# 					}
+# 				}
+# 				country_event = {
+# 					id = ge_test_event.100
+# 				}
+# 			}
 			
 
-		}
-	}
-	resources = {
-		category = edicts
-		cost = {
-			influence = -50
-			sr_void_core = 10
-		}
-	}
-}
+# 		}
+# 	}
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 			influence = -50
+# 			sr_void_core = 10
+# 		}
+# 	}
+# }
 
 
 
-roz_lgate_disable_edict = {
-	length = 1
-	icon = GFX_tech_gateway
-	potential = {
-		is_ai = no
-		#host_has_dlc = "distant stars story pack"
-		has_country_flag = roz_lgate_spawn
-		has_country_flag = roz_lgate_enable
-		NOT = { has_country_flag = roz_lgate_disable }
-	}
-	effect = {
-		set_country_flag = roz_lgate_disable
-		remove_country_flag = roz_lgate_enable
-		every_system = {
-			limit = {
-				has_star_flag = lcluster1
-				has_star_flag = lcluster_lgate
-			}
-			every_system_megastructure = {
-				limit = {
-					is_megastructure_type = lgate_base
-				}
-				remove_megastructure = this
-			}
+# roz_lgate_disable_edict = {
+# 	length = 1
+# 	icon = GFX_tech_gateway
+# 	potential = {
+# 		is_ai = no
+# 		#host_has_dlc = "distant stars story pack"
+# 		has_country_flag = roz_lgate_spawn
+# 		has_country_flag = roz_lgate_enable
+# 		NOT = { has_country_flag = roz_lgate_disable }
+# 	}
+# 	effect = {
+# 		set_country_flag = roz_lgate_disable
+# 		remove_country_flag = roz_lgate_enable
+# 		every_system = {
+# 			limit = {
+# 				has_star_flag = lcluster1
+# 				has_star_flag = lcluster_lgate
+# 			}
+# 			every_system_megastructure = {
+# 				limit = {
+# 					is_megastructure_type = lgate_base
+# 				}
+# 				remove_megastructure = this
+# 			}
 
-			spawn_megastructure = {
-				type = lgate_base
-				orbit_angle = 225
-				orbit_distance = 360
-			}
-		}
-	}
-}
+# 			spawn_megastructure = {
+# 				type = lgate_base
+# 				orbit_angle = 225
+# 				orbit_distance = 360
+# 			}
+# 		}
+# 	}
+# }
 
-roz_lgate_enable_edict = {
-	length = 1
-	icon = GFX_tech_gateway
-	potential = {
-		is_ai = no
-		#host_has_dlc = "distant stars story pack"
-		has_country_flag = roz_lgate_spawn
-		has_country_flag = roz_lgate_disable
-		NOT = { has_country_flag = roz_lgate_enable }
-	}
-	effect = {
-		set_country_flag = roz_lgate_enable
-		remove_country_flag = roz_lgate_disable
-		every_system = {
-			limit = {
-				has_star_flag = lcluster1
-				has_star_flag = lcluster_lgate
-			}
-			every_system_megastructure = {
-				limit = {
-					is_megastructure_type = lgate_base
-					NOT = { has_megastructure_flag = lgate_activated }
-				}
-				activate_gateway = this
-				set_megastructure_flag = lgate_activated
-			}
-		}
-	}
-}
+# roz_lgate_enable_edict = {
+# 	length = 1
+# 	icon = GFX_tech_gateway
+# 	potential = {
+# 		is_ai = no
+# 		#host_has_dlc = "distant stars story pack"
+# 		has_country_flag = roz_lgate_spawn
+# 		has_country_flag = roz_lgate_disable
+# 		NOT = { has_country_flag = roz_lgate_enable }
+# 	}
+# 	effect = {
+# 		set_country_flag = roz_lgate_enable
+# 		remove_country_flag = roz_lgate_disable
+# 		every_system = {
+# 			limit = {
+# 				has_star_flag = lcluster1
+# 				has_star_flag = lcluster_lgate
+# 			}
+# 			every_system_megastructure = {
+# 				limit = {
+# 					is_megastructure_type = lgate_base
+# 					NOT = { has_megastructure_flag = lgate_activated }
+# 				}
+# 				activate_gateway = this
+# 				set_megastructure_flag = lgate_activated
+# 			}
+# 		}
+# 	}
+# }
 
 
 roz_graygoo_enable_edict = {
@@ -420,31 +419,31 @@ roz_graygoo_enable_edict = {
 	}
 }
 
-roz_diplp_weight_debuff_add_edict = {
-	length = -1
-	icon = GFX_tech_gateway
-	potential = {
-		always = yes
-		#diplomacy_weight < 0
-	}
+# roz_diplp_weight_debuff_add_edict = {
+# 	length = -1
+# 	icon = GFX_tech_gateway
+# 	potential = {
+# 		always = yes
+# 		#diplomacy_weight < 0
+# 	}
 
-	effect = {
-		add_modifier = { modifier = roz_diplo_weight_debuff }
-	}
-}
+# 	effect = {
+# 		add_modifier = { modifier = roz_diplo_weight_debuff }
+# 	}
+# }
 
-roz_diplp_weight_debuff_remove_edict = {
-	length = -1
-	icon = GFX_tech_gateway
-	potential = {
-		always = yes
-		#diplomacy_weight < 0
-	}
+# roz_diplp_weight_debuff_remove_edict = {
+# 	length = -1
+# 	icon = GFX_tech_gateway
+# 	potential = {
+# 		always = yes
+# 		#diplomacy_weight < 0
+# 	}
 
-	effect = {
-		remove_modifier = roz_diplo_weight_debuff
-	}
-}
+# 	effect = {
+# 		remove_modifier = roz_diplo_weight_debuff
+# 	}
+# }
 
 #@educ=3
 #research_edicts = {

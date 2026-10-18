@@ -14,7 +14,7 @@ roz_engineering_bay = {
 
     possible = {
     }
-    cannot_fit_on_slots = { spinal_mount_1 }
+    cannot_fit_on_slots = { spinal_mount_1 spinal_mount_2 }
 
     resources = {
         category = starbase_arkship_upgrades
@@ -63,7 +63,7 @@ roz_grand_archive = {
         has_starbase_size = roz_ultra_arkship_tier_X
     }
 
-    cannot_fit_on_slots = { spinal_mount_1 }
+    cannot_fit_on_slots = { spinal_mount_1 spinal_mount_2 }
 
     resources = {
         category = starbase_arkship_upgrades
@@ -118,7 +118,7 @@ roz_docking_bay = {
     potential = {
         has_starbase_size = roz_ultra_arkship_tier_X
     }
-    cannot_fit_on_slots = { spinal_mount_1 }
+    cannot_fit_on_slots = { spinal_mount_1 spinal_mount_2 }
 
     resources = {
         category = starbase_arkship_upgrades

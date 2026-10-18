@@ -162,7 +162,7 @@ country_event = {
 }
 
 ##new setup ui
-country_event = {
+country_event = { ###mod设置窗口事件
 	id = ge_event.7777
 	title = ge_event.7777.title
 	desc = ge_event.7777.desc

@@ -21,7 +21,7 @@ roz_arkship_pd_battery = {
 		is_nomadic = yes
 	}
 
-	cannot_fit_on_slots = { spinal_mount_1 }
+	cannot_fit_on_slots = { spinal_mount_1 spinal_mount_2 }
 
 	resources = {
 		category = starbase_arkship_upgrades
@@ -64,7 +64,7 @@ roz_arkship_laser_battery = {
 		is_nomadic = yes
 	}
 
-	cannot_fit_on_slots = { spinal_mount_1 }
+	cannot_fit_on_slots = { spinal_mount_1 spinal_mount_2 }
 
 	resources = {
 		category = starbase_arkship_upgrades
@@ -117,7 +117,7 @@ roz_arkship_burst_battery = {
 		is_nomadic = yes
 	}
 
-	cannot_fit_on_slots = { spinal_mount_1 }
+	cannot_fit_on_slots = { spinal_mount_1 spinal_mount_2 }
 
 	resources = {
 		category = starbase_arkship_upgrades
@@ -170,7 +170,7 @@ roz_arkship_xl_battery = {
 		is_nomadic = yes
 	}
 
-	cannot_fit_on_slots = { spinal_mount_1 }
+	cannot_fit_on_slots = { spinal_mount_1 spinal_mount_2 }
 
 	resources = {
 		category = starbase_arkship_upgrades
@@ -220,7 +220,7 @@ roz_arkship_pd_battery_lowtech = {
 		is_nomadic = yes
 	}
 
-	cannot_fit_on_slots = { spinal_mount_1 }
+	cannot_fit_on_slots = { spinal_mount_1 spinal_mount_2 }
 
 	resources = {
 		category = starbase_arkship_upgrades
@@ -258,7 +258,7 @@ roz_arkship_hangar_bay_lowtech = {
 		is_nomadic = yes
 	}
 
-	cannot_fit_on_slots = { spinal_mount_1 }
+	cannot_fit_on_slots = { spinal_mount_1 spinal_mount_2 }
 
 	resources = {
 		category = starbase_arkship_upgrades

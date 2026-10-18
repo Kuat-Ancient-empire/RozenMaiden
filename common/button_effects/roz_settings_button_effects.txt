@@ -870,6 +870,8 @@ roz_settings_lgate_effect = {
     }
 }
 
+#实用功能按钮定义已迁移至 common/button_effects/roz_settings_other_button_effects.txt
+
 roz_settings_reload_menu_effect = {
     potential = { always = yes }
     allow = { always = yes }

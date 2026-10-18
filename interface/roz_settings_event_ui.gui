@@ -31,7 +31,7 @@ guiTypes = {
     # main gui
     containerWindowType = {
         name = "roz_mod_settings_ui"
-        size = { width = 1200 height = 720 }
+        size = { width = 1200 height = 800 }
         moveable = yes
         orientation = center
         origo = center
@@ -82,6 +82,16 @@ guiTypes = {
         @button_y_line7 = 515
         @button_y_line8 = 565
         @button_y_line9 = 620
+        @button_y_line_other2 = 550
+        @button_y_line_other3 = 585
+        # 第 3 行 y=585：供“联系N之领域”“国民性添加”两枚按钮引用（按钮底边 619 < 分组底边 675）
+        # “其他设置”分组已向左扩展为 x=18..1125（宽 1107），按钮改为 5 列布局
+        # 列坐标间距 218、按钮宽 200：36 / 254 / 472 / 690 / 908，左右留白约 18
+        @other_x1 = 36
+        @other_x2 = 254
+        @other_x3 = 472
+        @other_x4 = 690
+        @other_x5 = 908
         # 强度调整
         effectButtonType = {
             name = "roz_settings_difficult_group"
@@ -443,12 +453,12 @@ guiTypes = {
             effect = "roz_settings_abyss_challenge_disable_effect"
         }
         # 实用功能页
-        # 448+2*d+53=610, d=109
+        # 其他设置分组：x=18..1125（宽 1107），y=495..675（高 180），按钮分两行排布
         effectButtonType = {
             name = "roz_settings_other_group"
             quadTextureSprite = "GFX_tiles_light_area_cut_8"
-            size = { width = 630 height = 180 }
-            position = { x = 495 y = 495 }
+            size = { width = 1107 height = 180 }
+            position = { x = 18 y = 495 }
             no_clicksound = yes
             effect = "roz_settings_group_button"
         }
@@ -459,7 +469,7 @@ guiTypes = {
             text = "roz_start.7777.settings"
             #tooltipText = "roz_start.7777.crisis.tooltip"
             textureFile = "gfx/interface/tiles/tooltip.dds"
-            position = { x = 508 y = 495 }
+            position = { x = 31 y = 495 }
             maxWidth = 144
             maxHeight = 40
             fixedSize = yes
@@ -489,7 +499,7 @@ guiTypes = {
         effectButtonType = {
             name = "roz_settings_im1"
             quadTextureSprite = "GFX_standard_button_200_34_button"
-            position = { x = @button_x_left y = @button_y_line7 }
+            position = { x = @other_x1 y = @button_y_line7 }
             clicksound = ui_queuing_terraforming
             font = "cg_16b"
             text = "roz_start.7777.im1"
@@ -498,7 +508,7 @@ guiTypes = {
         effectButtonType = {
             name = "roz_settings_im2"
             quadTextureSprite = "GFX_standard_button_200_34_button"
-            position = { x = @button_x_left y = @button_y_line7 }
+            position = { x = @other_x1 y = @button_y_line7 }
             clicksound = ui_queuing_terraforming
             font = "cg_16b"
             text = "roz_start.7777.im2"
@@ -509,7 +519,7 @@ guiTypes = {
         effectButtonType = {
             name = "roz_settings_leader_name_jp"
             quadTextureSprite = "GFX_standard_button_200_34_button"
-            position = { x = 698 y = @button_y_line7 }
+            position = { x = @other_x2 y = @button_y_line7 }
             clicksound = decrement_click
             font = "cg_16b"
             text = "roz_start.7777.leader_name_jp"
@@ -518,7 +528,7 @@ guiTypes = {
         effectButtonType = {
             name = "roz_settings_leader_name_sc"
             quadTextureSprite = "GFX_standard_button_200_34_button"
-            position = { x = 698 y = @button_y_line7 }
+            position = { x = @other_x2 y = @button_y_line7 }
             clicksound = decrement_click
             font = "cg_16b"
             text = "roz_start.7777.leader_name_sc"
@@ -529,14 +539,119 @@ guiTypes = {
         effectButtonType = {
             name = "roz_settings_lgate"
             quadTextureSprite = "GFX_standard_button_200_34_button"
-            position = { x = 901 y = @button_y_line7 }
+            position = { x = @other_x3 y = @button_y_line7 }
             clicksound = ui_queuing_terraforming
             font = "cg_16b"
             text = "roz_start.7777.lgate"
             effect = "roz_settings_lgate_effect"
         }
 
-        # 刷新窗口#后面弄个二维码吧
+        # ===== 其他设置：由法令整合的实用功能按钮（效果定义见 common/button_effects/roz_settings_other_button_effects.txt） =====
+        # 外交权重：add / remove 是两个常驻并列按钮（potential 恒为 yes），永远同时显示，不是互斥布尔按钮
+        # 客机虚空科技 / 遗迹星系控制权 / 孤立星系刷坟 / 重启虚空计划 / 联系N之领域 / 国民性添加：
+        #   potential 恒为 yes 保证常显，原法令门槛写在 allow 内并以 custom_tooltip + fail_text 给出本地化失败提示
+        # 布局核对：分组 x=18..1125（宽 1107）、y=495..675（高 180）；
+        #   第 1 行 y=515、第 2 行 y=550、第 3 行 y=585，按钮高 34，最低到 y=619，均在分组内
+        # 事件选项（完成调整 / 刷新窗口）在窗口底部 y=690 起，不与第 3 行按钮重叠
+        effectButtonType = {
+            name = "roz_settings_diplo_weight_add"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = @other_x4 y = @button_y_line7 }
+            clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.diplo_weight_add"
+            effect = "roz_settings_diplo_weight_add"
+        }
+        effectButtonType = {
+            name = "roz_settings_diplo_weight_remove"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = @other_x5 y = @button_y_line7 }
+            clicksound = ui_deselect
+            font = "cg_16b"
+            text = "roz_start.7777.diplo_weight_remove"
+            effect = "roz_settings_diplo_weight_remove"
+        }
+        # 实用功能：L星门开闭（布尔按钮，互斥显示于同一位置）
+        effectButtonType = {
+            name = "roz_settings_lgate_disable"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = @other_x1 y = @button_y_line_other2 }
+            clicksound = ui_deselect
+            font = "cg_16b"
+            text = "roz_start.7777.lgate_disable"
+            effect = "roz_settings_lgate_disable"
+        }
+        effectButtonType = {
+            name = "roz_settings_lgate_enable"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = @other_x1 y = @button_y_line_other2 }
+            clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.lgate_enable"
+            effect = "roz_settings_lgate_enable"
+        }
+        # 实用功能：客机玩家获得虚空科技 / 获得遗迹星系控制权
+        effectButtonType = {
+            name = "roz_settings_mutiplayer_tech"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = @other_x2 y = @button_y_line_other2 }
+            clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.mp_tech"
+            effect = "roz_settings_mutiplayer_tech"
+        }
+        effectButtonType = {
+            name = "roz_settings_site_star"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = @other_x3 y = @button_y_line_other2 }
+            clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.site_star"
+            effect = "roz_settings_site_star"
+        }
+
+        # 由法令整合的第二批实用功能按钮（效果定义见 roz_settings_other_button_effects.txt）
+        # 孤立星系刷坟（原 ge_site_edicts）/ 重启虚空计划（原 ge_restart_boost_plan_edicts）
+        effectButtonType = {
+            name = "roz_settings_ge_site"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = @other_x4 y = @button_y_line_other2 }
+            clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.ge_site"
+            effect = "roz_settings_ge_site"
+        }
+        effectButtonType = {
+            name = "roz_settings_restart_boost_plan"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = @other_x5 y = @button_y_line_other2 }
+            clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.restart_boost_plan"
+            effect = "roz_settings_restart_boost_plan"
+        }
+        # 第 3 行 y=585（@button_y_line_other3）：按钮底边 619 < 分组底边 675，不与事件选项（y=690 起）重叠
+        # 联系N之领域（原 roz_suigintou_transmission_when_OGAS_enable_edicts）/ 国民性添加（原 ge_civic_edicts）
+        effectButtonType = {
+            name = "roz_settings_ogas_contact"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = @other_x1 y = @button_y_line_other3 }
+            clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.ogas_contact"
+            effect = "roz_settings_ogas_contact"
+        }
+        effectButtonType = {
+            name = "roz_settings_civic_restore"
+            quadTextureSprite = "GFX_standard_button_200_34_button"
+            position = { x = @other_x2 y = @button_y_line_other3 }
+            clicksound = select_click
+            font = "cg_16b"
+            text = "roz_start.7777.civic_restore"
+            effect = "roz_settings_civic_restore"
+        }
+
+        # 刷新窗口
         # ui_back
         # effectButtonType = {
         #     name = "roz_settings_reload_menu"
@@ -760,9 +875,10 @@ guiTypes = {
             alwaysTransparent = yes
         }
         # event desc
+        # 事件描述文本框：高度由 444 缩短到 250（225..475），让“其他设置”分组可以向左扩展到 x=18
         buttonType = {
             name = "alien_message_background"
-            size = { x = 454 y = 444 }
+            size = { x = 454 y = 250 }
             position = { x = 18 y = 225 }
             spriteType = "GFX_tiles_dark_area_cut_8_hover"
             alwaysTransparent = yes
@@ -774,7 +890,7 @@ guiTypes = {
             textureFile = "gfx/interface/tiles/diplomacy_textbox_positive.dds"
             position = { x = 25 y = 236 }
             maxWidth = 440
-            maxHeight = 420
+            maxHeight = 226
             format = left
             scrollbartype = "standardlistbox_slider"
             text_color_code = "B"
@@ -808,10 +924,11 @@ guiTypes = {
             }
             #######################################################
             # option pos
+            # 事件选项（完成调整 / 刷新窗口）移动到窗口最底部：绝对坐标 (332, 690)，两项纵向排列 690..722、734..766
             listboxType = {
                 name = "option_list"
-                position = { x = -66 y = 514 }
-                size = { x=480 y=56 }
+                position = { x = -268 y = 590 }
+                size = { x=480 y=76 }
                 spacing = 12
                 scrollbartype = "standardlistbox_slider"
                 borderSize = { x = 0 y = 0 }
